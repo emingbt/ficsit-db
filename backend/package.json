@@ -2,11 +2,9 @@
   "name": "ficsit-db",
   "version": "1.0.0",
   "description": "A satisfactory encyclopedia that helps you while building systems.",
-  "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -18,6 +16,14 @@
     "url": "https://github.com/emingbt/ficsit-db/issues"
   },
   "homepage": "https://github.com/emingbt/ficsit-db#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "express": "^4.18.1",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
   "devDependencies": {
     "eslint": "^8.17.0",
     "eslint-config-airbnb": "^19.0.4",
