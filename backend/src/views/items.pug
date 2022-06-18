@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1 The number of the items is  #{items.length}
+    each item in items
+        h2 #{item.name} 
+        h2 #{item.description}
+        h2 #{item.details}
