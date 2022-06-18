@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/emingbt/ficsit-db/issues"
   },
-  "homepage": "https://github.com/emingbt/ficsit-db#readme"
+  "homepage": "https://github.com/emingbt/ficsit-db#readme",
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.7.1"
+  }
 }
