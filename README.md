@@ -1,5 +1,4 @@
-@@ -1,2 +1,26 @@
-# ficsit-db
+# FICSIT DB
 A satisfactory encyclopedia that helps you while building systems 🚧 It is a fun project also I need a full-stack project to put into my CV 😄
 # LICENSE
 ```
