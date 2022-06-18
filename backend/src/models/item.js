@@ -1,4 +1,4 @@
-class Item { 
+class Item {
   constructor(name, description, image, details, recipes, usagesAsIngredient, usagesForBuildings) {
     this.name = name
     this.description = description
