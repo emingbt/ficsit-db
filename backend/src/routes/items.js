@@ -9,14 +9,14 @@ router.get('/', async (req, res, next) => {
   const allItems = await Item.find({})
 
   console.log('alogg')
-  res.render('items', {allItems})
+  res.render('items', { allItems })
 })
 
 router.post('/', async (req, res, next) => {
   await Item.create({
     name: 'Iron Ore',
     description: 'Used for crafting. The most essential basic resource.',
-    image:"images/blabla",
+    image: "images/blabla",
     details: {
       sinkPoints: 1,
       stackSize: 100,
@@ -27,7 +27,7 @@ router.post('/', async (req, res, next) => {
   await Item.create({
     name: 'Copper Ore',
     description: 'Used for crafting. Basic resource mainly used for electricity',
-    image:"images/blabla",
+    image: "images/blabla",
     details: {
       sinkPoints: 3,
       stackSize: 100,
@@ -38,7 +38,7 @@ router.post('/', async (req, res, next) => {
   await Item.create({
     name: 'Limestone',
     description: 'Used for crafting. Basic resource mainly used for stable foundations',
-    image:"images/blabla",
+    image: "images/blabla",
     details: {
       sinkPoints: 2,
       stackSize: 100,
@@ -49,7 +49,7 @@ router.post('/', async (req, res, next) => {
   await Item.create({
     name: 'Limestone',
     description: 'Used for crafting. Basic resource mainly used for stable foundations',
-    image:"images/blabla",
+    image: "images/blabla",
     details: {
       sinkPoints: 2,
       stackSize: 100,
@@ -60,7 +60,7 @@ router.post('/', async (req, res, next) => {
   await Item.create({
     name: 'Iron Ingot',
     description: 'Used for crafting. Crafted into the most basic parts.',
-    image:"images/blabla",
+    image: "images/blabla",
     details: {
       sinkPoints: 2,
       stackSize: 100,
@@ -71,7 +71,7 @@ router.post('/', async (req, res, next) => {
   await Item.create({
     name: 'Copper Ingot',
     description: 'Used for crafting. Crafted into the most basic parts.',
-    image:"images/blabla",
+    image: "images/blabla",
     details: {
       sinkPoints: 6,
       stackSize: 100,
@@ -82,7 +82,7 @@ router.post('/', async (req, res, next) => {
   const wire = await Item.create({
     name: 'Wire',
     description: 'Used for crafting. One of the most basic parts.',
-    image:"images/blabla",
+    image: "images/blabla",
     details: {
       sinkPoints: 6,
       stackSize: 500,
@@ -93,7 +93,7 @@ router.post('/', async (req, res, next) => {
   const ironRod = await Item.create({
     name: 'Iron Rod',
     description: 'Used for crafting. One of the most basic parts.',
-    image:"images/blabla",
+    image: "images/blabla",
     details: {
       sinkPoints: 4,
       stackSize: 200,
@@ -116,7 +116,7 @@ router.post('/', async (req, res, next) => {
         item: wire
       }
     ],
-    details:{
+    details: {
       powerConsumption: 4
     }
   })
