@@ -2,19 +2,25 @@ import React from "react"
 import styled from "styled-components"
 
 const Wrapper = styled.div({
-  marginTop: 80
+  marginTop: 80,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100%'
 })
 
 const StyledText = styled.p({
   color: '#ffffff',
-  margin: 32
+  margin: 32,
+  fontSize: 24
 })
 
 const Footer = () => {
   return (
     <Wrapper>
-      <div style={{flex: 1, height: '1px', backgroundColor: '#E5AF07'}} />
-      <StyledText>Built by <span style={{color: '#E5AF07'}}>❤</span> by <a href="https://github.com/emingbt" style={{color: '#D79845'}}>@emingbt</a></StyledText>
+      <div style={{height: '1px', backgroundColor: '#E5AF07', width: '100%'}} />
+      <StyledText>Built with <span style={{color: '#E5AF07'}}>❤</span> by <a href="https://github.com/emingbt" style={{color: '#D79845'}}>@emingbt</a></StyledText>
     </Wrapper>
   )
 }
