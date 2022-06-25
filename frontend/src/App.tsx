@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from './pages/Home';
+import InProgress from './pages/InProgress';
 
 function App() {
   return (
     <div>
-      <Home />
+      <InProgress />
     </div>
   );
 }
