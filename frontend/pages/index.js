@@ -2,9 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/footer'
 import Header from '../components/header'
-import styles from '../styles/Home.module.css'
 import { Container, Main } from '../components/sharedstyles'
 import styled from 'styled-components'
+import bannerImg from '/public/images/banner.jpeg'
+import itemsBg from '/public/images/items-bg.jpg'
+import buildingBg from '/public/images/buildings-bg.jpg'
 
 export default function Home() {
   return (
@@ -19,11 +21,21 @@ export default function Home() {
 
       <Main>
         <StyledBannerSection>
-          <Image src="/images/banner.jpeg" alt="me" layout='fill' />
+          <StyledBanner image={bannerImg} />
           <StyledBannerText>
             Improve your production line
           </StyledBannerText>
         </StyledBannerSection>
+        <StyledNavSection>
+          <StyledNavItem>
+            <StyledNavImage image={itemsBg} />
+            <StyledNavText>Items</StyledNavText>
+          </StyledNavItem>
+          <StyledNavItem>
+            <StyledNavImage image={buildingBg} />
+            <StyledNavText>Buildings</StyledNavText>
+          </StyledNavItem>
+        </StyledNavSection>
       </Main>
 
       <Footer />
@@ -36,68 +48,68 @@ const StyledBannerSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 64;
+  margin-top: 48px;
   height: 50%;
   width: 100%;
-  position: relative;
 `
 
 const StyledBanner = styled.div`
   height: 40vh;
   width: 80%;
-  background-image: url(./banner.jpeg);
+  background-image: url(${props => props.image.src});
   background-position: center;
   background-size: cover;
   border-radius: 16px;
+  background-color: #141518;
 `
 
 const StyledBannerText = styled.div`
   height: 10vh;
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 8;
+  padding: 0.25rem 2rem ;
   background-color: #43454B;
-  margin-top: -64;
-  border-width: 2;
-  border-radius: 24;
+  margin-top: -48px;
+  border-width: 2px;
+  border-radius: 1rem;
   border-color: #F2C800;
   border-style: solid;
   text-align: center;
   color: white;
-  font-size: 42;
+  font-size: 2.5rem;
 `
 
 const StyledNavSection = styled.nav`
-  display:'flex';
-  flex-direction: 'row';
-  align-items: 'center';
-  justify-content: 'space-around';
-  width: '100%';
-  height: '75vh';
-  background-color: '#141518';
-  margin-top: 64;
-  position: 'relative';
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 75vh;
+  background-color: #141518;
+  margin-top: 64px;
+  position: relative;
 `
 
-const StyledNavItem = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '36%',
-  cursor: 'pointer'
-})
+const StyledNavItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 36%;
+  cursor: pointer;
+`
 
-const StyledNavImage = styled(Image)`
+const StyledNavImage = styled.div`
   height: 48vh;
   width: 100%;
   border-radius: 8px;
-  background-image: url(${(props)=>props.imgUrl});
+  background-image: url(${(props) => props.image.src});
   background-size: cover;
   background-position: center;
   opacity: 0.8;
+  background-color: #141518;
 `
 
 const StyledNavText = styled.div({
