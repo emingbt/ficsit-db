@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { StyledLine } from "./sharedstyles"
 
 const Wrapper = styled.footer({
   marginTop: 80,
@@ -18,7 +19,7 @@ const StyledText = styled.p({
 const Footer = () => {
   return (
     <Wrapper>
-      <div style={{height: '1px', backgroundColor: '#E5AF07', width: '100%'}} />
+      <StyledLine color="#E5AF07" />
       <StyledText>Built with <span style={{color: '#E5AF07'}}>❤</span> by <a href="https://github.com/emingbt" style={{color: '#D79845'}}>@emingbt</a></StyledText>
     </Wrapper>
   )

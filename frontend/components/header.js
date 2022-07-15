@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { StyledLine } from './sharedstyles'
 
 const Wrapper = styled.header({
   width: '100%',
@@ -65,7 +66,7 @@ function Header() {
           <StyledLink>Buildings</StyledLink>
         </StyledNav>
       </HeaderBar>
-      <div style={{flex: 1, height: '1px', backgroundColor: '#E5AF07'}} />
+      <StyledLine color={'#E5AF07'}/>
     </Wrapper>
   )
 }
