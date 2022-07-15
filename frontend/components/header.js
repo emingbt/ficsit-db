@@ -1,60 +1,7 @@
 import styled from 'styled-components'
 import { StyledLine } from './sharedstyles'
 
-const Wrapper = styled.header({
-  width: '100%',
-})
-
-const HeaderBar = styled.div({
-  height: 100,
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center'
-})
-
-const Logo = styled.text({
-  color: 'white',
-  fontSize: 40,
-  paddingLeft: 64,
-  fontFamily: 'Industrial Branding',
-  cursor: 'pointer'
-})
-
-const StyledNav = styled.nav({
-  width: '50%',
-  display: 'flex',
-  justifyContent: 'space-evenly',
-  alignItems: 'center',
-  color: '#9BA3A9',
-  fontSize: 24,
-  fontWeight: 500,
-  paddingBottom: 8
-})
-
-const StyledInput = styled.input({
-  color: '#CCCCCC',
-  fontSize: 16,
-  backgroundColor: '#202125',
-  borderWidth: 1,
-  borderColor: '#F2C800',
-  borderRadius: 4,
-  height: 52,
-  width: 300,
-  boxShadow: 'none',
-  borderStyle: 'solid',
-  paddingLeft: 16,
-  outline: 'none'
-})
-
-const StyledLink = styled.a({
-  ":hover": {
-    color: '#CCCCCC',
-    cursor: 'pointer'
-  }
-})
-
-function Header() {
+export default function Header() {
   return (
     <Wrapper>
       <HeaderBar>
@@ -71,4 +18,58 @@ function Header() {
   )
 }
 
-export default Header;
+const Wrapper = styled.header`
+  width: 100%;
+`
+
+const HeaderBar = styled.div`
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const Logo = styled.text`
+  color: white;
+  font-size: 40px;
+  padding-left: 64px;
+  font-family: Industrial Branding;
+  cursor: pointer;
+  user-select: none;
+`
+
+const StyledNav = styled.nav`
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #9BA3A9;
+  font-size: 24px;
+  font-weight: 500px;
+`
+
+const StyledInput = styled.input`
+  color: #CCCCCC;
+  font-size: 16px;
+  background-color: #202125;
+  border-width: 1px;
+  border-color: #E5AF07;
+  border-radius: 4px;
+  height: 52px;
+  width: 300px;
+  box-shadow: none;
+  border-style: solid;
+  padding-left: 16px;
+  outline: none;
+  &:focus {
+    border-color: #D79845;
+  }
+`
+
+const StyledLink = styled.a`
+  &:hover {
+    color: #CCCCCC;
+    cursor: pointer;
+  }
+`

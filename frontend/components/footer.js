@@ -1,22 +1,7 @@
 import styled from "styled-components"
 import { StyledLine } from "./sharedstyles"
 
-const Wrapper = styled.footer({
-  marginTop: 80,
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '100%'
-})
-
-const StyledText = styled.p({
-  color: '#ffffff',
-  margin: 32,
-  fontSize: 20
-})
-
-const Footer = () => {
+export default function Footer() {
   return (
     <Wrapper>
       <StyledLine color="#E5AF07" />
@@ -25,4 +10,22 @@ const Footer = () => {
   )
 }
 
-export default Footer
+const Wrapper = styled.footer`
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`
+
+const StyledText = styled.p`
+  color: #ffffff;
+  margin: 32px;
+  font-size: 20px;
+  a {
+    :hover {
+      text-decoration: underline;
+    }
+  }
+`
