@@ -6,7 +6,6 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
 `
 
 const Main = styled.main`
@@ -19,4 +18,10 @@ const Main = styled.main`
   height: 100%;
 `
 
-export { Container, Main }
+const StyledLine = styled.div`
+  height: 1px;
+  width: 100%;
+  background-color: ${props => props.color};
+`
+
+export { Container, Main, StyledLine }
