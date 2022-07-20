@@ -4,6 +4,8 @@ import Footer from '../components/footer'
 import Header from '../components/header'
 import { Container, Main } from '../components/sharedstyles'
 import styled from 'styled-components'
+import Link from 'next/link'
+
 import bannerImg from '/public/images/banner.jpeg'
 import itemsBg from '/public/images/items-bg.jpg'
 import buildingBg from '/public/images/buildings-bg.jpg'
@@ -27,10 +29,12 @@ export default function Home() {
           </StyledBannerText>
         </StyledBannerSection>
         <StyledNavSection>
-          <StyledNavItem>
-            <StyledNavImage image={itemsBg} />
-            <StyledNavText>Items</StyledNavText>
-          </StyledNavItem>
+          <Link href="/items">
+            <StyledNavItem>
+              <StyledNavImage image={itemsBg} />
+              <StyledNavText>Items</StyledNavText>
+            </StyledNavItem>
+          </Link>
           <StyledNavItem>
             <StyledNavImage image={buildingBg} />
             <StyledNavText>Buildings</StyledNavText>
