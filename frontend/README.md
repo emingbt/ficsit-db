@@ -1,6 +1,6 @@
 
 # FICSIT DB
-A satisfactory encyclopedia that helps you while building systems 🚧 It is a fun project also I need a full-stack project to put into my CV 😄
+A [satisfactory](https://www.satisfactorygame.com) encyclopedia that helps you while building systems 🚧 It is a fun project also I need a full-stack project to put into my CV 😄
 
 Update : Right now, I have free time and I have decided to change frontend framework with Next.js. After that I will change database with Neo4j 🤔
 
