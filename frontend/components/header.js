@@ -1,19 +1,26 @@
 import styled from 'styled-components'
 import { StyledLine } from './sharedstyles'
+import Link from 'next/link'
 
 export default function Header() {
   return (
     <Wrapper>
       <HeaderBar>
-        <Logo>FiCS<span style={{color: '#4DACF0'}}>I</span><span style={{color: '#D79845'}}>T</span>DB</Logo>
+        <Link href="/">
+          <Logo>FiCS<span style={{ color: '#4DACF0' }}>I</span><span style={{ color: '#D79845' }}>T</span>DB</Logo>
+        </Link>
         <StyledNav>
-          <StyledInput placeholder='Search items'/>
-          <StyledLink>Home</StyledLink>
-          <StyledLink>Items</StyledLink>
+          <StyledInput placeholder='Search items' />
+          <Link href="/">
+            <StyledLink>Home</StyledLink>
+          </Link>
+          <Link href="/items">
+            <StyledLink>Items</StyledLink>
+          </Link>
           <StyledLink>Buildings</StyledLink>
         </StyledNav>
       </HeaderBar>
-      <StyledLine color={'#E5AF07'}/>
+      <StyledLine color={'#E5AF07'} />
     </Wrapper>
   )
 }
