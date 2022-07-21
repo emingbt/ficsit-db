@@ -114,9 +114,9 @@ export default function items() {
           <StyledText>Items</StyledText>
           <StyledLine color='#E5AF07' />
           <StyledItemsContainer>
-            {mockData.map((e) => {
+            {mockData.map((e, i) => {
               return (
-                <StyledItem>
+                <StyledItem key={i}>
                   <StyledItemImage />
                   <StyledItemName>
                     {e.name}
