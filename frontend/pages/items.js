@@ -3,101 +3,24 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import { Container, Main, StyledLine } from '../components/sharedstyles'
 import styled from 'styled-components'
+import Link from 'next/link'
+import fsPromises from 'fs/promises'
+import path from 'path'
 
-export default function items() {
-  const mockData = [{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    },{
-      name: 'Adaptive Control Unit'
-    },{
-      name: 'AI Limiter'
-    }]
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'json/data.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const gameData = JSON.parse(jsonData);
+  const items = gameData.items
+
+  return {
+    props: items
+  }
+}
+
+export default function Items( items ) {
+  const allItems = Object.values(items)
+  allItems.sort((a,b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
 
   return (
     <Container>
@@ -114,14 +37,16 @@ export default function items() {
           <StyledText>Items</StyledText>
           <StyledLine color='#E5AF07' />
           <StyledItemsContainer>
-            {mockData.map((e, i) => {
+            {allItems.map((e, i) => {
               return (
-                <StyledItem key={i}>
-                  <StyledItemImage />
-                  <StyledItemName>
-                    {e.name}
-                  </StyledItemName>
-                </StyledItem>
+                <Link href={`/items/${e.name}`} key={i} >
+                  <StyledItem>
+                    <StyledItemImage />
+                    <StyledItemName>
+                      {e.name}
+                    </StyledItemName>
+                  </StyledItem>
+                </Link>
               )
             })}
           </StyledItemsContainer>
@@ -168,6 +93,7 @@ const StyledItem = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `
 
 const StyledItemImage = styled.div`
