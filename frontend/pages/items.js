@@ -4,23 +4,10 @@ import Footer from '../components/footer'
 import { Container, Main, StyledLine } from '../components/sharedstyles'
 import styled from 'styled-components'
 import Link from 'next/link'
-import fsPromises from 'fs/promises'
-import path from 'path'
-
-export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'json/data.json');
-  const jsonData = await fsPromises.readFile(filePath);
-  const gameData = JSON.parse(jsonData);
-  const items = gameData.items
-
-  return {
-    props: items
-  }
-}
+import { getAllItems } from '../lib/api'
 
 export default function Items( items ) {
-  const allItems = Object.values(items)
-  allItems.sort((a,b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
+  const sortedItems = Object.values(items).sort((a,b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
 
   return (
     <Container>
@@ -37,11 +24,11 @@ export default function Items( items ) {
           <StyledText>Items</StyledText>
           <StyledLine color='#E5AF07' />
           <StyledItemsContainer>
-            {allItems.map((e, i) => {
+            {sortedItems.map((e, i) => {
               return (
-                <Link href={`/items/${e.name}`} key={i} >
+                <Link href={`/items/${e.slug}`} key={i} >
                   <StyledItem>
-                    <StyledItemImage />
+                    <StyledItemImage name={e.slug} />
                     <StyledItemName>
                       {e.name}
                     </StyledItemName>
@@ -56,6 +43,14 @@ export default function Items( items ) {
       <Footer />
     </Container>
   )
+}
+
+export async function getStaticProps() {
+  const items = getAllItems()
+
+  return {
+    props: items
+  }
 }
 
 const StyledContainer = styled.div`
@@ -100,9 +95,10 @@ const StyledItemImage = styled.div`
   width: 100%;
   height: 10vw;
   background-color: #9BA3A9;
-  background-image: url('/images/Adaptive_Control_Unit.png');
+  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/'+ props.name +'_256.png'});
   background-position: center;
-  background-size: cover;
+  background-size: 90%;
+  background-repeat: no-repeat;
 `
 
 const StyledItemName = styled.div`
