@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import { Container, Main } from '../components/sharedstyles'
