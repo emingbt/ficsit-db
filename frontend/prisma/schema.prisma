@@ -1,0 +1,190 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Item {
+  id            String      @id @default(auto()) @map("_id") @db.ObjectId
+  slug          String      @unique
+  name          String
+  description   String
+  stackSize     Int
+  sinkPoints    Int
+  isFluid       Boolean
+  isFuel        Boolean
+  isBiomass     Boolean
+  isRadioactive Boolean
+  isEquipment   Boolean
+  meta          ItemMeta[]
+  event         Event       @default(NONE)
+}
+
+model ItemMeta {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  slot              String?
+  healthGain        Int?
+  filterDuration    Int?
+  energyConsumption String?
+  sawDownTreeTime   Int?
+  sprintSpeedFactor Int?
+  jumpSpeedFactor   Int?
+  reloadTime        Int?
+  attackDistance    Int?
+  detectionRange    Int?
+  radioactiveDecay  Int?
+  energyValue       Int?
+  fluidColor        Int[]
+  item              Item    @relation(fields: [itemId], references: [id])
+  itemId            String  @db.ObjectId
+}
+
+
+
+enum EquipmentSlotType {
+  HAND
+  BODY
+  UNDEFINED
+}
+
+enum Event {
+  NONE
+  FICSMAS
+}
+
+model Buildable {
+  id                  String          @id @default(auto()) @map("_id") @db.ObjectId
+  slug                String          @unique
+  name                String
+  description         String
+  categories          Categories
+  isPowered           Boolean
+  isOverclockable     Boolean
+  isProduction        Boolean
+  isResourceExtractor Boolean
+  isGenerator         Boolean
+  isVehicle           Boolean
+  meta                BuildableMeta[]
+  event               Event           @default(NONE)
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+}
+
+enum Categories {
+  Floors
+  Workstations
+  ConverPole
+  HyperTubes
+  PipeSupport
+  ConveyorAttachments
+  PowerPoles
+  ConveyorBelts
+  ConveyLift
+  Vehicles
+  Towers
+  JumpPads
+  Lights
+  Inverted
+  Ramps
+  Frames
+  QuatPipes
+  OilProduction
+  Generators
+  Attach
+  Special
+  Manufacturers
+  Smelters
+  Storage
+  Pipes
+  WallPoles
+  Trains
+  Miners  
+  Walkways
+  Catwalks
+  Walls
+  ConveyorConnections
+  Doors
+  Windows
+  AngularWalls
+  UpperDiagonalWalls
+  DiagonalWalls
+  Beams
+  Pillars
+  Roofs
+  Signs
+}
+
+model BuildableMeta {
+  id                    String    @id @default(auto()) @map("_id") @db.ObjectId
+  size                  Int[]
+  beltSpeed             Int?
+  powerConsumption      Int?
+  inventorySize         Int?
+  overclockExponent     Int?
+  allowedResources      String[]
+  resourceExtractSpeed  Int?
+  powerProduction       Int?
+  fuel                  Fuel[]
+  buildable             Buildable @relation(fields: [buildableId], references: [id])
+  buildableId           String    @db.ObjectId
+}
+
+model Fuel {
+  id              String        @id @default(auto()) @map("_id") @db.ObjectId
+  fuelName        String
+  fuelRate        Int
+  supplementName  String?
+  supplementRate  Int?
+  buildableMeta   BuildableMeta @relation(fields: [buildableMetaId], references: [id])
+  buildableMetaId String        @db.ObjectId
+}
+
+model ProductionRecipe {
+  id                    String        @id @default(auto()) @map("_id") @db.ObjectId
+  slug                  String
+  name                  String
+  craftTime             Int
+  manunalCraftMultiplier Int
+  isAlternate           Boolean
+  handCraftable         Boolean
+  workshopCraftable     Boolean
+  machineCraftable      Boolean
+  ingredients           Ingredient[]
+  products              Product[]
+  producedIn            ProducedIn    @default(NONE)
+  event                 Event         @default(NONE)
+}
+
+model Ingredient {
+  id                 String  @id @default(auto()) @map("_id") @db.ObjectId
+  ingredientName     String
+  ingredientQuantity Int
+  productionRecipe   ProductionRecipe @relation(fields: [productionRecipeId], references: [id])
+  productionRecipeId String           @db.ObjectId
+}
+
+model Product {
+  id                 String           @id @default(auto()) @map("_id") @db.ObjectId
+  productName        String
+  productQuantity    Int
+  productionRecipe   ProductionRecipe @relation(fields: [productionRecipeId], references: [id])
+  productionRecipeId String           @db.ObjectId
+}
+
+enum ProducedIn {
+  NONE
+  constructor
+  assembler
+  manufacturer
+  packager
+  refiner
+  blender
+  smelter
+  foundry
+}
