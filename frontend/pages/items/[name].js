@@ -4,7 +4,7 @@ import Footer from '../../components/footer'
 import styled from 'styled-components'
 import { Container, Main, StyledLine } from '../../components/sharedstyles'
 import { getItemByItemName } from '../../lib/api'
-
+import Recipe from '../../components/sections/recipe'
 
 
 export default function Item({ item }) {
@@ -45,10 +45,7 @@ export default function Item({ item }) {
               {item.description}
             </StyledDetail>
           </StyledDetailContainer>
-          <div>
-            <div></div>
-            <div></div>
-          </div>
+          <Recipe />
           <div></div>
           <div></div>
         </StyledContainer>
@@ -88,12 +85,12 @@ const StyledTitle = styled.div`
 
 const StyledContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 90%;
-  height: 100vh;
   background-color: #131416;
   margin-top: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
 `
 
 const StyledDetailContainer = styled.section`
@@ -102,6 +99,7 @@ const StyledDetailContainer = styled.section`
   align-items: center;
   width: 100%;
   height: 250px;
+  margin-bottom: 40px;
 `
 
 const StyledImage = styled.div`
