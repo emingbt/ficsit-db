@@ -145,6 +145,7 @@ export default function Recipe() {
 const StyledSection = styled.section`
   width: 100%;
   background-color: #9BA3A9;
+  margin-bottom: 2.5rem;
 `
 
 const StyledTitle = styled.div`
