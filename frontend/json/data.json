@@ -1,6 +1,6 @@
 {
   "items": {
-    "Berry": {
+    "paleberry": {
       "slug": "paleberry",
       "name": "Paleberry",
       "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore one health segment.",
@@ -19,7 +19,7 @@
       },
       "event": "NONE"
     },
-    "Shroom": {
+    "bacon-agaric": {
       "slug": "bacon-agaric",
       "name": "Bacon Agaric",
       "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore two health segments.",
@@ -38,7 +38,7 @@
       },
       "event": "NONE"
     },
-    "Nut": {
+    "beryl-nut": {
       "slug": "beryl-nut",
       "name": "Beryl Nut",
       "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore half a health segment.",
@@ -57,7 +57,7 @@
       },
       "event": "NONE"
     },
-    "Medkit": {
+    "medicinal-inhaler": {
       "slug": "medicinal-inhaler",
       "name": "Medicinal Inhaler",
       "description": "Fully restores health when used.\n\nThe FICSIT Medicinal Inhaler can be produced from a variety of different ingredients.",
@@ -76,7 +76,7 @@
       },
       "event": "NONE"
     },
-    "Beacon": {
+    "beacon": {
       "slug": "beacon",
       "name": "Beacon",
       "description": "PENDING REMOVAL\nThis item will (likely) be removed in a future update.\n\nCurrently only used as an ingredient in an alternative recipe.",
@@ -94,7 +94,7 @@
       },
       "event": "NONE"
     },
-    "Parachute": {
+    "parachute": {
       "slug": "parachute",
       "name": "Parachute",
       "description": "Slot: Body\nConsumable\n\nSlows down your fall when activated in mid-air.",
@@ -112,7 +112,7 @@
       },
       "event": "NONE"
     },
-    "Gasmask": {
+    "gas-mask": {
       "slug": "gas-mask",
       "name": "Gas Mask",
       "description": "Allows Pioneers to breathe normally while in toxic gas areas.\nConsumes Gas Filters from the inventory when in use.",
@@ -131,7 +131,7 @@
       },
       "event": "NONE"
     },
-    "JetPack": {
+    "jetpack": {
       "slug": "jetpack",
       "name": "Jetpack",
       "description": "The Jetpack allows Pioneers to travel through the air with increased control.\nConsumes Fuel when used and automatically refills the Fuel from the inventory, when on the ground.",
@@ -149,7 +149,7 @@
       },
       "event": "NONE"
     },
-    "Chainsaw": {
+    "chainsaw": {
       "slug": "chainsaw",
       "name": "Chainsaw",
       "description": "Slot: Hands\nFuel: Biofuel\n\nUsed to clear an area of flora that is too difficult to remove by hand.",
@@ -169,7 +169,7 @@
       },
       "event": "NONE"
     },
-    "GolfCart": {
+    "factory-cart": {
       "slug": "factory-cart",
       "name": "Factory Cart™",
       "description": "The one and only FICSIT Factory Cart™\nNow with special - FICSIT Foundation only - Grip Wheels, for an even smoother and faster factory floor experience!",
@@ -187,7 +187,7 @@
       },
       "event": "NONE"
     },
-    "HazmatSuit": {
+    "hazmat-suit": {
       "slug": "hazmat-suit",
       "name": "Hazmat Suit",
       "description": "Shields Pioneers from the adverse effects of radiation. \nConsumes Iodine Infused Filters from the inventory while worn in radioactive areas.",
@@ -206,7 +206,7 @@
       },
       "event": "NONE"
     },
-    "JumpingStilts": {
+    "blade-runners": {
       "slug": "blade-runners",
       "name": "Blade Runners",
       "description": "An exoskeleton for the lower legs that assists movement, allowing Pioneers to sprint faster and jump higher.\nAlso dampens the impact of landing.",
@@ -226,7 +226,7 @@
       },
       "event": "NONE"
     },
-    "RebarGunProjectile": {
+    "rebar-gun": {
       "slug": "rebar-gun",
       "name": "Rebar Gun",
       "description": "Improvised ranged weapon for self-defense. Has to be reloaded after each use.",
@@ -245,7 +245,7 @@
       },
       "event": "NONE"
     },
-    "Rifle": {
+    "rifle": {
       "slug": "rifle",
       "name": "Rifle",
       "description": "A long-range, rapid fire weapon. Specifically designed to deliver adequate performance within the designated work area.",
@@ -264,7 +264,7 @@
       },
       "event": "NONE"
     },
-    "ShockShank": {
+    "xeno-zapper": {
       "slug": "xeno-zapper",
       "name": "Xeno-Zapper",
       "description": "Standard issue electroshock self-defense weapon for melee range.",
@@ -283,7 +283,7 @@
       },
       "event": "NONE"
     },
-    "StunSpear": {
+    "xeno-basher": {
       "slug": "xeno-basher",
       "name": "Xeno-Basher",
       "description": "Heavy electroshock self-defense weapon for melee range.",
@@ -302,7 +302,7 @@
       },
       "event": "NONE"
     },
-    "NobeliskDetonator": {
+    "nobelisk-detonator": {
       "slug": "nobelisk-detonator",
       "name": "Nobelisk Detonator",
       "description": "A remote-control device used to handle and detonate Nobelisks.",
@@ -321,7 +321,7 @@
       },
       "event": "NONE"
     },
-    "PortableMiner": {
+    "portable-miner": {
       "slug": "portable-miner",
       "name": "Portable Miner",
       "description": "Can be set up on a resource node to automatically extract the resource. Note that it has limited storage space.",
@@ -339,7 +339,7 @@
       },
       "event": "NONE"
     },
-    "ObjectScanner": {
+    "object-scanner": {
       "slug": "object-scanner",
       "name": "Object Scanner",
       "description": "Slot: Hands\n\nScans the area for a set item. Beeps at a rate proportional to proximity and direction.",
@@ -358,7 +358,7 @@
       },
       "event": "NONE"
     },
-    "HoverPack": {
+    "hover-pack": {
       "slug": "hover-pack",
       "name": "Hover Pack",
       "description": "Power consumption: 100 MW\n\nAllows for vertical movement and hovering in mid-air to improve building efficiency and factory traversal. Wirelessly connects to nearby power connections, such as Power Poles and Buildings, for power consumption.\n\nSlow-fall: Hold {Jump_Drift} after losing connection mid-air.\nDisable Hoverpack: Double tap {Crouch} while hovering.",
@@ -376,7 +376,7 @@
       },
       "event": "NONE"
     },
-    "ZipLine": {
+    "zipline": {
       "slug": "zipline",
       "name": "Zipline",
       "description": "Slot: Hand\n\nProvides faster traversal in factories by allowing Pioneers to zip along Power lines.\nActivate the Zipline and aim at a nearby Power Line to connect to it.",
@@ -394,7 +394,7 @@
       },
       "event": "NONE"
     },
-    "GolfCartGold": {
+    "golden-factory-cart": {
       "slug": "golden-factory-cart",
       "name": "Golden Factory Cart™",
       "description": "The one and only Golden FICSIT Factory Cart™\n\nYou have now officially ascended. \nGo forth now, Master of Spaghetti, God of the Factory, Sinker of Cups, Employee of the Planet... travel in STYLE!",
@@ -412,7 +412,7 @@
       },
       "event": "NONE"
     },
-    "NuclearWaste": {
+    "uranium-waste": {
       "slug": "uranium-waste",
       "name": "Uranium Waste",
       "description": "The by-product of consuming Uranium Fuel Rods in the Nuclear Power Plant.\nNon-fissible Uranium can be extracted. Handle with caution.\n\nCaution: HIGHLY Radioactive.",
@@ -428,7 +428,7 @@
       },
       "event": "NONE"
     },
-    "PlutoniumWaste": {
+    "plutonium-waste": {
       "slug": "plutonium-waste",
       "name": "Plutonium Waste",
       "description": "The by-product of consuming Plutonium Fuel Rods in the Nuclear Power Plant.\nNeeds to be stored in a safe location. Handle with caution.\n\nCaution: EXTREMELY Radioactive.",
@@ -444,7 +444,7 @@
       },
       "event": "NONE"
     },
-    "Filter": {
+    "gas-filter": {
       "slug": "gas-filter",
       "name": "Gas Filter",
       "description": "Used in the Gas Mask to filter out toxics and pollutants from the air.",
@@ -458,7 +458,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "AluminumPlate": {
+    "alclad-aluminum-sheet": {
       "slug": "alclad-aluminum-sheet",
       "name": "Alclad Aluminum Sheet",
       "description": "Thin, lightweight, and highly durable sheets that are mainly used for products that require high heat conduction or a high specific strength.",
@@ -472,7 +472,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Battery": {
+    "battery": {
       "slug": "battery",
       "name": "Battery",
       "description": "Primarily used as fuel for Drones and Vehicles.",
@@ -488,7 +488,7 @@
       },
       "event": "NONE"
     },
-    "Plastic": {
+    "plastic": {
       "slug": "plastic",
       "name": "Plastic",
       "description": "A versatile and easy to manufacture material that can be used for a lot of things.",
@@ -502,7 +502,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wire": {
+    "wire": {
       "slug": "wire",
       "name": "Wire",
       "description": "Used for crafting.\nOne of the most basic parts.",
@@ -516,7 +516,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "AluminumIngot": {
+    "aluminum-ingot": {
       "slug": "aluminum-ingot",
       "name": "Aluminum Ingot",
       "description": "Aluminum Ingots are made from Aluminum Scrap, which is refined from Alumina Solution.\nUsed to produce specialized aluminum-based parts.",
@@ -530,7 +530,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Fuel": {
+    "packaged-fuel": {
       "slug": "packaged-fuel",
       "name": "Packaged Fuel",
       "description": "Fuel, packaged for alternative transport. Can be used as fuel for Vehicles or the Jetpack.",
@@ -546,7 +546,7 @@
       },
       "event": "NONE"
     },
-    "NonFissibleUranium": {
+    "non-fissile-uranium": {
       "slug": "non-fissile-uranium",
       "name": "Non-fissile Uranium",
       "description": "The isotope Uranium-238 is non-fissile, meaning it cannot be used for nuclear fission. It can, however, be conversed into fissile Plutonium in the Particle Accelerator.\n\nCaution: Mildly Radioactive.",
@@ -562,7 +562,7 @@
       },
       "event": "NONE"
     },
-    "PlutoniumPellet": {
+    "plutonium-pellet": {
       "slug": "plutonium-pellet",
       "name": "Plutonium Pellet",
       "description": "Produced in the Particle Accelerator through conversion of Non-fissile Uranium.\nUsed to produce Encased Plutonium Cells for Plutonium Fuel Rods.\n\nPower Usage: 250-750 MW (500 MW average).\nCaution: Moderately Radioactive.",
@@ -578,7 +578,7 @@
       },
       "event": "NONE"
     },
-    "PlutoniumCell": {
+    "encased-plutonium-cell": {
       "slug": "encased-plutonium-cell",
       "name": "Encased Plutonium Cell",
       "description": "Plutonium Cells are concrete encased Plutonium Pellets.\nUsed to produce Plutonium Fuel Rods for Nuclear Power production.\n\nCaution: Moderately Radioactive.",
@@ -594,7 +594,7 @@
       },
       "event": "NONE"
     },
-    "Cement": {
+    "concrete": {
       "slug": "concrete",
       "name": "Concrete",
       "description": "Used for building.\nGood for stable foundations.",
@@ -608,7 +608,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Silica": {
+    "silica": {
       "slug": "silica",
       "name": "Silica",
       "description": "Derived from Raw Quartz. Commonly used to create glass structures, advanced refinement processes, and alternative production of electronics.",
@@ -622,7 +622,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "IronPlate": {
+    "iron-plate": {
       "slug": "iron-plate",
       "name": "Iron Plate",
       "description": "Used for crafting.\nOne of the most basic parts.",
@@ -636,7 +636,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelPlate": {
+    "steel-beam": {
       "slug": "steel-beam",
       "name": "Steel Beam",
       "description": "Steel Beams are used most often when constructing a little more advanced buildings.",
@@ -650,7 +650,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "IronRod": {
+    "iron-rod": {
       "slug": "iron-rod",
       "name": "Iron Rod",
       "description": "Used for crafting.\nOne of the most basic parts.",
@@ -664,7 +664,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "IronScrew": {
+    "screw": {
       "slug": "screw",
       "name": "Screw",
       "description": "Used for crafting.\nOne of the most basic parts.",
@@ -678,7 +678,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Crystal": {
+    "blue-power-slug": {
       "slug": "blue-power-slug",
       "name": "Blue Power Slug",
       "description": "A strange slug radiating a weak strange power.",
@@ -692,7 +692,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Crystal_mk2": {
+    "yellow-power-slug": {
       "slug": "yellow-power-slug",
       "name": "Yellow Power Slug",
       "description": "A strange slug radiating a strange power.",
@@ -706,7 +706,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Crystal_mk3": {
+    "purple-power-slug": {
       "slug": "purple-power-slug",
       "name": "Purple Power Slug",
       "description": "A strange slug radiating a powerful strange power.",
@@ -720,7 +720,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "TurboFuel": {
+    "packaged-turbofuel": {
       "slug": "packaged-turbofuel",
       "name": "Packaged Turbofuel",
       "description": "Turbofuel, packaged for alternative transport. Can be used as fuel for Vehicles.",
@@ -736,7 +736,7 @@
       },
       "event": "NONE"
     },
-    "HazmatFilter": {
+    "iodine-infused-filter": {
       "slug": "iodine-infused-filter",
       "name": "Iodine Infused Filter",
       "description": "Used in the Hazmat Suit to absorb radioactive particles.",
@@ -750,7 +750,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Cable": {
+    "cable": {
       "slug": "cable",
       "name": "Cable",
       "description": "Used for crafting.\nPrimarily used to build power lines.",
@@ -764,7 +764,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CrystalShard": {
+    "power-shard": {
       "slug": "power-shard",
       "name": "Power Shard",
       "description": "Mucus from the power slugs compressed into a solid crystal-like shard. \nIt radiates a strange power.",
@@ -778,7 +778,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "ColorCartridge": {
+    "color-cartridge": {
       "slug": "color-cartridge",
       "name": "Color Cartridge",
       "description": "Used for applying Patterns to structures with the Customizer.\n\n(Patterns can be purchased in the AWESOME Shop.)",
@@ -794,7 +794,7 @@
       },
       "event": "NONE"
     },
-    "HUBParts": {
+    "hub-parts": {
       "slug": "hub-parts",
       "name": "HUB Parts",
       "description": "The parts required to build the basic structure of the HUB.",
@@ -808,7 +808,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "IronPlateReinforced": {
+    "reinforced-iron-plate": {
       "slug": "reinforced-iron-plate",
       "name": "Reinforced Iron Plate",
       "description": "Used for crafting.\nA sturdier and more durable Iron Plate.",
@@ -822,7 +822,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CopperIngot": {
+    "copper-ingot": {
       "slug": "copper-ingot",
       "name": "Copper Ingot",
       "description": "Used for crafting.\nCrafted into the most basic parts.",
@@ -836,7 +836,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "ModularFrameFused": {
+    "fused-modular-frame": {
       "slug": "fused-modular-frame",
       "name": "Fused Modular Frame",
       "description": "A corrosion resistant, nitride hardened, highly robust, yet lightweight modular frame.",
@@ -850,7 +850,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CircuitBoard": {
+    "circuit-board": {
       "slug": "circuit-board",
       "name": "Circuit Board",
       "description": "Circuit Boards are advanced electronics that are used in a plethora of different ways.",
@@ -864,7 +864,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CopperSheet": {
+    "copper-sheet": {
       "slug": "copper-sheet",
       "name": "Copper Sheet",
       "description": "Used for crafting.\nPrimarily used for pipelines due to its high corrosion resistance.",
@@ -878,7 +878,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CrystalOscillator": {
+    "crystal-oscillator": {
       "slug": "crystal-oscillator",
       "name": "Crystal Oscillator",
       "description": "A crystal oscillator is an electronic oscillator circuit that uses the mechanical resonance of a vibrating crystal to create an electrical signal with a precise frequency.",
@@ -892,7 +892,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SpaceElevatorPart_1": {
+    "smart-plating": {
       "slug": "smart-plating",
       "name": "Smart Plating",
       "description": "Project Part #1. Ship with the Space Elevator to complete phases of Project Assembly.",
@@ -906,7 +906,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SpaceElevatorPart_2": {
+    "versatile-framework": {
       "slug": "versatile-framework",
       "name": "Versatile Framework",
       "description": "Project Part #2. Ship with the Space Elevator to complete phases of Project Assembly.",
@@ -920,7 +920,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SpaceElevatorPart_3": {
+    "automated-wiring": {
       "slug": "automated-wiring",
       "name": "Automated Wiring",
       "description": "Project Part #3. Ship with the Space Elevator to complete phases of Project Assembly.",
@@ -934,7 +934,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SpaceElevatorPart_4": {
+    "modular-engine": {
       "slug": "modular-engine",
       "name": "Modular Engine",
       "description": "Project Part #4. Ship with the Space Elevator to complete phases of Project Assembly.",
@@ -948,7 +948,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PackagedWater": {
+    "packaged-water": {
       "slug": "packaged-water",
       "name": "Packaged Water",
       "description": "Water, packaged for alternative transport.",
@@ -962,7 +962,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "AlienDNACapsule": {
+    "organic-data-capsule": {
       "slug": "organic-data-capsule",
       "name": "Organic Data Capsule",
       "description": "This data capsule translates organic chemicals into readable alien genetics information.\nUsed for researching alien organisms.",
@@ -976,7 +976,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "HighSpeedConnector": {
+    "high-speed-connector": {
       "slug": "high-speed-connector",
       "name": "High-Speed Connector",
       "description": "The high-speed connector connects several cables and wires in a very efficient way. Uses a standard pattern so its applications are many and varied.",
@@ -990,7 +990,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Motor": {
+    "motor": {
       "slug": "motor",
       "name": "Motor",
       "description": "The Motor creates a mechanical force that is used to move things from machines to vehicles.",
@@ -1004,7 +1004,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SpaceElevatorPart_5": {
+    "adaptive-control-unit": {
       "slug": "adaptive-control-unit",
       "name": "Adaptive Control Unit",
       "description": "Project Part #5. Ship with the Space Elevator to complete phases of Project Assembly.",
@@ -1018,7 +1018,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SpaceElevatorPart_6": {
+    "magnetic-field-generator": {
       "slug": "magnetic-field-generator",
       "name": "Magnetic Field Generator",
       "description": "Project Part #7. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThese modular generators use superconducting magnets and vast amounts of electricity to produce an easily expandable and powerful magnetic field.",
@@ -1032,7 +1032,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SpaceElevatorPart_7": {
+    "assembly-director-system": {
       "slug": "assembly-director-system",
       "name": "Assembly Director System",
       "description": "Project Part #6. Ship with the Space Elevator to complete phases of Project Assembly.\n\nThis extremely fast and precise computing system is specifically designed to direct the Project Assembly: Assembly Phase.",
@@ -1046,7 +1046,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SpaceElevatorPart_8": {
+    "thermal-propulsion-rocket": {
       "slug": "thermal-propulsion-rocket",
       "name": "Thermal Propulsion Rocket",
       "description": "Project Part #8. Ship with the Space Elevator to complete phases of Project Assembly.\n\nUses extreme heat to produce the high pressure plasma required to get Project Assembly into motion.",
@@ -1060,7 +1060,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SpaceElevatorPart_9": {
+    "nuclear-pasta": {
       "slug": "nuclear-pasta",
       "name": "Nuclear Pasta",
       "description": "Project Part #9. Ship with the Space Elevator to complete phases of Project Assembly.\nPower Usage: 500-1500 MW (1000 MW average).\n\nNuclear Pasta is extremely dense degenerate matter, formed when extreme pressure forces protons and electrons together into neutrons. It is theorized to exist naturally within the crust of neutron stars.",
@@ -1074,7 +1074,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "IronIngot": {
+    "iron-ingot": {
       "slug": "iron-ingot",
       "name": "Iron Ingot",
       "description": "Used for crafting.\nCrafted into the most basic parts.",
@@ -1088,7 +1088,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Rotor": {
+    "rotor": {
       "slug": "rotor",
       "name": "Rotor",
       "description": "Used for crafting.\nThe moving parts of a motor.",
@@ -1102,7 +1102,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Rubber": {
+    "rubber": {
       "slug": "rubber",
       "name": "Rubber",
       "description": "Rubber is a material that is very flexible and has a lot of friction.",
@@ -1116,7 +1116,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelPlateReinforced": {
+    "encased-industrial-beam": {
       "slug": "encased-industrial-beam",
       "name": "Encased Industrial Beam",
       "description": "Encased Industrial Beams utilizes the compressive strength of concrete and tensile strength of steel simultaneously.\nMostly used as a stable basis for constructing buildings.",
@@ -1130,7 +1130,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelPipe": {
+    "steel-pipe": {
       "slug": "steel-pipe",
       "name": "Steel Pipe",
       "description": "Steel Pipes are used most often when constructing a little more advanced buildings.",
@@ -1144,7 +1144,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "LiquidFuel": {
+    "fuel": {
       "slug": "fuel",
       "name": "Fuel",
       "description": "Fuel can be used to generate power or packaged to be used as fuel for Vehicles or the Jetpack.",
@@ -1165,7 +1165,7 @@
       },
       "event": "NONE"
     },
-    "PolymerResin": {
+    "polymer-resin": {
       "slug": "polymer-resin",
       "name": "Polymer Resin",
       "description": "Used for crafting.\nA by-product of oil refinement into fuel. Commonly used to manufacture plastics.",
@@ -1179,7 +1179,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "HeavyOilResidue": {
+    "heavy-oil-residue": {
       "slug": "heavy-oil-residue",
       "name": "Heavy Oil Residue",
       "description": "A by-product of Plastic and Rubber production. Can be further refined into Fuel and Petroleum Coke.",
@@ -1200,7 +1200,7 @@
       },
       "event": "NONE"
     },
-    "PetroleumCoke": {
+    "petroleum-coke": {
       "slug": "petroleum-coke",
       "name": "Petroleum Coke",
       "description": "Used for crafting.\nA carbon-rich material distilled from Heavy Oil Residue. \nUsed as a less efficient coal replacement or for aluminum refinement.",
@@ -1216,7 +1216,7 @@
       },
       "event": "NONE"
     },
-    "ModularFrame": {
+    "modular-frame": {
       "slug": "modular-frame",
       "name": "Modular Frame",
       "description": "Used for crafting.\nMulti-purpose building block.",
@@ -1230,7 +1230,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "FluidCanister": {
+    "empty-canister": {
       "slug": "empty-canister",
       "name": "Empty Canister",
       "description": "Used to package fluids for transportation.",
@@ -1244,7 +1244,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "ModularFrameHeavy": {
+    "heavy-modular-frame": {
       "slug": "heavy-modular-frame",
       "name": "Heavy Modular Frame",
       "description": "A more robust multi-purpose frame.",
@@ -1258,7 +1258,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PackagedOil": {
+    "packaged-oil": {
       "slug": "packaged-oil",
       "name": "Packaged Oil",
       "description": "Crude Oil, packaged for alternative transport. Can be used as fuel for Vehicles.",
@@ -1274,7 +1274,7 @@
       },
       "event": "NONE"
     },
-    "PackagedOilResidue": {
+    "packaged-heavy-oil-residue": {
       "slug": "packaged-heavy-oil-residue",
       "name": "Packaged Heavy Oil Residue",
       "description": "Heavy Oil Residue, packaged for alternative transport. Can be used as fuel for Vehicles.",
@@ -1290,7 +1290,7 @@
       },
       "event": "NONE"
     },
-    "SteelIngot": {
+    "steel-ingot": {
       "slug": "steel-ingot",
       "name": "Steel Ingot",
       "description": "Steel Ingots are made from Iron Ore that's been smelted with Coal. They are made into several parts used in building construction.",
@@ -1304,7 +1304,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "AluminaSolution": {
+    "alumina-solution": {
       "slug": "alumina-solution",
       "name": "Alumina Solution",
       "description": "Dissolved Alumina, extracted from Bauxite. Can be further refined into Aluminum Scrap for Aluminum Ingot production.",
@@ -1324,7 +1324,7 @@
       },
       "event": "NONE"
     },
-    "AluminumScrap": {
+    "aluminum-scrap": {
       "slug": "aluminum-scrap",
       "name": "Aluminum Scrap",
       "description": "Aluminum Scrap is pure aluminum refined from Alumina. Can be smelted down to Aluminum Ingots for industrial usage.",
@@ -1338,7 +1338,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SulfuricAcid": {
+    "sulfuric-acid": {
       "slug": "sulfuric-acid",
       "name": "Sulfuric Acid",
       "description": "A mineral acid produced by combining Sulfur and Water in a complex reaction. Primarily used in refinement processes and Battery production.",
@@ -1358,7 +1358,7 @@
       },
       "event": "NONE"
     },
-    "UraniumCell": {
+    "encased-uranium-cell": {
       "slug": "encased-uranium-cell",
       "name": "Encased Uranium Cell",
       "description": "Uranium Cells are produced from Uranium Ore. \nUsed to produce Uranium Fuel Rods for Nuclear Power production.\n\nCaution: Mildly Radioactive.",
@@ -1374,7 +1374,7 @@
       },
       "event": "NONE"
     },
-    "AluminumPlateReinforced": {
+    "heat-sink": {
       "slug": "heat-sink",
       "name": "Heat Sink",
       "description": "Used to dissipate heat faster.",
@@ -1388,7 +1388,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CoolingSystem": {
+    "cooling-system": {
       "slug": "cooling-system",
       "name": "Cooling System",
       "description": "Used to keep temperatures of advanced parts and buildings from exceeding to inefficient levels.",
@@ -1402,7 +1402,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "NitricAcid": {
+    "nitric-acid": {
       "slug": "nitric-acid",
       "name": "Nitric Acid",
       "description": "Produced by reaction of Nitrogen Gas with Water. Its high corrosiveness and oxidizing properties make it an excellent choice for refinement and fuel production processes.",
@@ -1422,7 +1422,7 @@
       },
       "event": "NONE"
     },
-    "AluminumCasing": {
+    "aluminum-casing": {
       "slug": "aluminum-casing",
       "name": "Aluminum Casing",
       "description": "A versatile container cast from Aluminum Ingots.",
@@ -1436,7 +1436,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "ModularFrameLightweight": {
+    "radio-control-unit": {
       "slug": "radio-control-unit",
       "name": "Radio Control Unit",
       "description": "Enhances and directs radio signals.",
@@ -1450,7 +1450,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Computer": {
+    "computer": {
       "slug": "computer",
       "name": "Computer",
       "description": "A Computer is a complex logic machine that is used to control advanced behaviour in machines.",
@@ -1464,7 +1464,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "QuartzCrystal": {
+    "quartz-crystal": {
       "slug": "quartz-crystal",
       "name": "Quartz Crystal",
       "description": "Derived from Raw Quartz. Used in the production of advanced radar technology and high-quality display screens.",
@@ -1478,7 +1478,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "GoldIngot": {
+    "caterium-ingot": {
       "slug": "caterium-ingot",
       "name": "Caterium Ingot",
       "description": "Caterium Ingots are smelted from Caterium Ore. Caterium Ingots are mostly used for advanced electronics.",
@@ -1492,7 +1492,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Stator": {
+    "stator": {
       "slug": "stator",
       "name": "Stator",
       "description": "Used for crafting.\nThe static parts of a motor.",
@@ -1506,7 +1506,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CircuitBoardHighSpeed": {
+    "ai-limiter": {
       "slug": "ai-limiter",
       "name": "AI Limiter",
       "description": "AI Limiters are super advanced electronics that are used to control AIs and keep them from evolving in malicious ways.",
@@ -1520,7 +1520,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "HighSpeedWire": {
+    "quickwire": {
       "slug": "quickwire",
       "name": "Quickwire",
       "description": "Caterium's high conductivity and resistance to corrosion makes it ideal for small, advanced electronics.",
@@ -1534,7 +1534,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CompactedCoal": {
+    "compacted-coal": {
       "slug": "compacted-coal",
       "name": "Compacted Coal",
       "description": "A much more efficient alternative for Coal. Used as fuel for vehicles & coal generators.",
@@ -1550,7 +1550,7 @@
       },
       "event": "NONE"
     },
-    "LiquidTurboFuel": {
+    "turbofuel": {
       "slug": "turbofuel",
       "name": "Turbofuel",
       "description": "A more efficient alternative to Fuel. Can be used to generate power or packaged to be used as fuel for Vehicles.",
@@ -1571,7 +1571,7 @@
       },
       "event": "NONE"
     },
-    "ComputerSuper": {
+    "supercomputer": {
       "slug": "supercomputer",
       "name": "Supercomputer",
       "description": "The supercomputer is the next-gen version of the computer.",
@@ -1585,7 +1585,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "GasTank": {
+    "empty-fluid-tank": {
       "slug": "empty-fluid-tank",
       "name": "Empty Fluid Tank",
       "description": "Used to package gases and volatile liquids for transportation.",
@@ -1599,7 +1599,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "ElectromagneticControlRod": {
+    "electromagnetic-control-rod": {
       "slug": "electromagnetic-control-rod",
       "name": "Electromagnetic Control Rod",
       "description": "Control Rods regulate power output via electromagnetism.",
@@ -1613,7 +1613,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PressureConversionCube": {
+    "pressure-conversion-cube": {
       "slug": "pressure-conversion-cube",
       "name": "Pressure Conversion Cube",
       "description": "Converts outgoing force into internal pressure. Required to contain unstable, high-energy matter.",
@@ -1627,7 +1627,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "MotorLightweight": {
+    "turbo-motor": {
       "slug": "turbo-motor",
       "name": "Turbo Motor",
       "description": "The Turbo Motor is a more complex, and more powerful, version of the regular Motor.",
@@ -1641,7 +1641,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CopperDust": {
+    "copper-powder": {
       "slug": "copper-powder",
       "name": "Copper Powder",
       "description": "Ground down Copper Ingots.\nThe high natural density of Copper, combined with the granularity of the powder, make this part fit for producing Nuclear Pasta in the Particle Accelerator.",
@@ -1655,7 +1655,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Gunpowder": {
+    "black-powder": {
       "slug": "black-powder",
       "name": "Black Powder",
       "description": "An explosive powder that is commonly used to produce simple explosives.",
@@ -1669,7 +1669,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "AlienProtein": {
+    "alien-protein": {
       "slug": "alien-protein",
       "name": "Alien Protein",
       "description": "Ground down Alien Remains in a neat little package.\nUsed for medical purposed and to research alien organisms.",
@@ -1683,7 +1683,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "GunpowderMK2": {
+    "smokeless-powder": {
       "slug": "smokeless-powder",
       "name": "Smokeless Powder",
       "description": "An explosive powder that is commonly used to produce modern firearms.",
@@ -1697,7 +1697,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "HogParts": {
+    "hog-remains": {
       "slug": "hog-remains",
       "name": "Hog Remains",
       "description": "The carapace of the alien Hog creature.\nUsed for MAM research.",
@@ -1713,7 +1713,7 @@
       },
       "event": "NONE"
     },
-    "SpitterParts": {
+    "plasma-spitter-remains": {
       "slug": "plasma-spitter-remains",
       "name": "Plasma Spitter Remains",
       "description": "The remains of a plasma spitting alien creature.\nUsed for MAM research.",
@@ -1729,7 +1729,7 @@
       },
       "event": "NONE"
     },
-    "FlowerPetals": {
+    "flower-petals": {
       "slug": "flower-petals",
       "name": "Flower Petals",
       "description": "Used for crafting.\nColorful native flower petals.",
@@ -1745,7 +1745,7 @@
       },
       "event": "NONE"
     },
-    "Leaves": {
+    "leaves": {
       "slug": "leaves",
       "name": "Leaves",
       "description": "Primarily used as fuel.\nBiomass Burners and vehicles can use it for power.",
@@ -1761,7 +1761,7 @@
       },
       "event": "NONE"
     },
-    "Mycelia": {
+    "mycelia": {
       "slug": "mycelia",
       "name": "Mycelia",
       "description": "Used for crafting.\nBiomass Burners and vehicles can use it for power.",
@@ -1777,7 +1777,7 @@
       },
       "event": "NONE"
     },
-    "Wood": {
+    "wood": {
       "slug": "wood",
       "name": "Wood",
       "description": "Primarily used as fuel.\nBiomass Burners and vehicles can use it for power.",
@@ -1793,7 +1793,7 @@
       },
       "event": "NONE"
     },
-    "Biofuel": {
+    "solid-biofuel": {
       "slug": "solid-biofuel",
       "name": "Solid Biofuel",
       "description": "The most energy-efficient form of solid biomass. Can be used as fuel for the Chainsaw.",
@@ -1809,7 +1809,7 @@
       },
       "event": "NONE"
     },
-    "PackagedBiofuel": {
+    "packaged-liquid-biofuel": {
       "slug": "packaged-liquid-biofuel",
       "name": "Packaged Liquid Biofuel",
       "description": "Liquid Biofuel, packaged for alternative transport. Can be used as fuel for Vehicles.",
@@ -1825,7 +1825,7 @@
       },
       "event": "NONE"
     },
-    "GenericBiomass": {
+    "biomass": {
       "slug": "biomass",
       "name": "Biomass",
       "description": "Primarily used as fuel.\nBiomass burners and vehicles can use it for power.\nBiomass is much more energy-efficient than raw biological matter.",
@@ -1841,7 +1841,7 @@
       },
       "event": "NONE"
     },
-    "LiquidBiofuel": {
+    "liquid-biofuel": {
       "slug": "liquid-biofuel",
       "name": "Liquid Biofuel",
       "description": "Liquid Biofuel can be used to generate power or packaged to be used as fuel for Vehicles.",
@@ -1862,7 +1862,7 @@
       },
       "event": "NONE"
     },
-    "PackagedAlumina": {
+    "packaged-alumina-solution": {
       "slug": "packaged-alumina-solution",
       "name": "Packaged Alumina Solution",
       "description": "Alumina Solution, packaged for alternative transport.",
@@ -1876,7 +1876,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PackagedSulfuricAcid": {
+    "packaged-sulfuric-acid": {
       "slug": "packaged-sulfuric-acid",
       "name": "Packaged Sulfuric Acid",
       "description": "Sulfuric Acid, packaged for alternative transport.",
@@ -1890,7 +1890,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PackagedNitrogenGas": {
+    "packaged-nitrogen-gas": {
       "slug": "packaged-nitrogen-gas",
       "name": "Packaged Nitrogen Gas",
       "description": "Nitrogen Gas, packaged for alternative transport.",
@@ -1904,7 +1904,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PackagedNitricAcid": {
+    "packaged-nitric-acid": {
       "slug": "packaged-nitric-acid",
       "name": "Packaged Nitric Acid",
       "description": "Nitric Acid, packaged for alternative transport.",
@@ -1918,7 +1918,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Fabric": {
+    "fabric": {
       "slug": "fabric",
       "name": "Fabric",
       "description": "Used for equipment crafting.\nFlexible but durable fabric.",
@@ -1934,7 +1934,7 @@
       },
       "event": "NONE"
     },
-    "HatcherParts": {
+    "hatcher-remains": {
       "slug": "hatcher-remains",
       "name": "Hatcher Remains",
       "description": "The shell-like remains an alien... thing.\nUsed for MAM research.",
@@ -1950,7 +1950,7 @@
       },
       "event": "NONE"
     },
-    "StingerParts": {
+    "stinger-remains": {
       "slug": "stinger-remains",
       "name": "Stinger Remains",
       "description": "The remains of whatever that creepy thing was.\nUsed for MAM research.",
@@ -1966,7 +1966,7 @@
       },
       "event": "NONE"
     },
-    "NuclearFuelRod": {
+    "uranium-fuel-rod": {
       "slug": "uranium-fuel-rod",
       "name": "Uranium Fuel Rod",
       "description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces radioactive Uranium Waste when consumed.\nCaution: Moderately Radioactive.",
@@ -1983,7 +1983,7 @@
       },
       "event": "NONE"
     },
-    "PlutoniumFuelRod": {
+    "plutonium-fuel-rod": {
       "slug": "plutonium-fuel-rod",
       "name": "Plutonium Fuel Rod",
       "description": "Used as fuel for the Nuclear Power Plant.\n\nCaution: Produces radioactive Plutonium Waste when consumed.\nCaution: HIGHLY Radioactive.",
@@ -2000,7 +2000,7 @@
       },
       "event": "NONE"
     },
-    "Sulfur": {
+    "sulfur": {
       "slug": "sulfur",
       "name": "Sulfur",
       "description": "Sulfur is primarily used for Black Powder.",
@@ -2014,7 +2014,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Coal": {
+    "coal": {
       "slug": "coal",
       "name": "Coal",
       "description": "Mainly used as fuel for vehicles & coal generators and for steel production.",
@@ -2030,7 +2030,7 @@
       },
       "event": "NONE"
     },
-    "OreCopper": {
+    "copper-ore": {
       "slug": "copper-ore",
       "name": "Copper Ore",
       "description": "Used for crafting.\nBasic resource mainly used for electricity.",
@@ -2044,7 +2044,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "OreGold": {
+    "caterium-ore": {
       "slug": "caterium-ore",
       "name": "Caterium Ore",
       "description": "Caterium Ore is smelted into Caterium Ingots. Caterium Ingots are mostly used for advanced electronics.",
@@ -2058,7 +2058,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "OreIron": {
+    "iron-ore": {
       "slug": "iron-ore",
       "name": "Iron Ore",
       "description": "Used for crafting.\nThe most essential basic resource.",
@@ -2072,7 +2072,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RawQuartz": {
+    "raw-quartz": {
       "slug": "raw-quartz",
       "name": "Raw Quartz",
       "description": "Raw Quartz can be processed into Quartz Crystals and Silica, which both offer a variety of applications.",
@@ -2086,7 +2086,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Stone": {
+    "limestone": {
       "slug": "limestone",
       "name": "Limestone",
       "description": "Used for crafting.\nBasic resource mainly used for stable foundations.",
@@ -2100,7 +2100,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Water": {
+    "water": {
       "slug": "water",
       "name": "Water",
       "description": "It's water.",
@@ -2120,7 +2120,7 @@
       },
       "event": "NONE"
     },
-    "LiquidOil": {
+    "crude-oil": {
       "slug": "crude-oil",
       "name": "Crude Oil",
       "description": "Crude Oil is refined into all kinds of Oil-based resources, like Fuel and Plastic.",
@@ -2141,7 +2141,7 @@
       },
       "event": "NONE"
     },
-    "OreBauxite": {
+    "bauxite": {
       "slug": "bauxite",
       "name": "Bauxite",
       "description": "Bauxite is used to produce Alumina, which can be further refined into the Aluminum Scrap required to produce Aluminum Ingots.",
@@ -2155,7 +2155,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "OreUranium": {
+    "uranium": {
       "slug": "uranium",
       "name": "Uranium",
       "description": "Uranium is a radioactive element. \nUsed to produce Encased Uranium Cells for Uranium Fuel Rods.\n\nCaution: Moderately Radioactive.",
@@ -2171,7 +2171,7 @@
       },
       "event": "NONE"
     },
-    "NitrogenGas": {
+    "nitrogen-gas": {
       "slug": "nitrogen-gas",
       "name": "Nitrogen Gas",
       "description": "Nitrogen can be used in a variety of ways, such as metallurgy, cooling, and Nitric Acid production. On Massage-2(AB)b, it can be extracted from underground gas wells.",
@@ -2191,7 +2191,7 @@
       },
       "event": "NONE"
     },
-    "CartridgeChaos": {
+    "turbo-rifle-ammo": {
       "slug": "turbo-rifle-ammo",
       "name": "Turbo Rifle Ammo",
       "description": "Lightweight, compact, and volatile. These rounds provide extreme capacity and fire rates, at the cost of accuracy.",
@@ -2205,7 +2205,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CartridgeStandard": {
+    "rifle-ammo": {
       "slug": "rifle-ammo",
       "name": "Rifle Ammo",
       "description": "Standard issue Rifle ammunition, useful for establishing dominance.",
@@ -2219,7 +2219,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Rebar_Explosive": {
+    "explosive-rebar": {
       "slug": "explosive-rebar",
       "name": "Explosive Rebar",
       "description": "Explodes on impact, dealing heavy damage.",
@@ -2233,7 +2233,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Rebar_Stunshot": {
+    "stun-rebar": {
       "slug": "stun-rebar",
       "name": "Stun Rebar",
       "description": "Electrocutes the target on impact, stunning it for a short time.\n\nStun duration: 5 seconds",
@@ -2247,7 +2247,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SpikedRebar": {
+    "iron-rebar": {
       "slug": "iron-rebar",
       "name": "Iron Rebar",
       "description": "A simple iron rebar that can be shot using the Rebar Gun, for self-defense purposes.",
@@ -2261,7 +2261,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CartridgeSmartProjectile": {
+    "homing-rifle-ammo": {
       "slug": "homing-rifle-ammo",
       "name": "Homing Rifle Ammo",
       "description": "The bullet guidance system, build into this ammunition, allows it to accurately hit any target within the reticle area.\nEspecially useful when dealing with agile threats, or for Pioneers who can't be bothered to aim properly.",
@@ -2275,7 +2275,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "NobeliskCluster": {
+    "cluster-nobelisk": {
       "slug": "cluster-nobelisk",
       "name": "Cluster Nobelisk",
       "description": "A Nobelisk that detonates into multiple smaller explosions. Practical when clearing out large areas of vegetation and other inconveniences.",
@@ -2289,7 +2289,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "NobeliskExplosive": {
+    "nobelisk": {
       "slug": "nobelisk",
       "name": "Nobelisk",
       "description": "A simple explosive, useful for clearing boulders, vegetation, and other obstacles.",
@@ -2303,7 +2303,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "NobeliskGas": {
+    "gas-nobelisk": {
       "slug": "gas-nobelisk",
       "name": "Gas Nobelisk",
       "description": "Instead of a regular explosion, this Nobelisk creates a deadly gas cloud.",
@@ -2317,7 +2317,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "NobeliskNuke": {
+    "nuke-nobelisk": {
       "slug": "nuke-nobelisk",
       "name": "Nuke Nobelisk",
       "description": "This Nobelisk uses a nuclear fission reaction to generate a massive explosion.\n\nWARNING: Ensure all FICSIT property is clear of the blast zone before detonation.\n",
@@ -2331,7 +2331,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "NobeliskShockwave": {
+    "pulse-nobelisk": {
       "slug": "pulse-nobelisk",
       "name": "Pulse Nobelisk",
       "description": "Instead of a regular explosion, this Nobelisk generates a powerful shockwave.",
@@ -2345,7 +2345,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Rebar_Spreadshot": {
+    "shatter-rebar": {
       "slug": "shatter-rebar",
       "name": "Shatter Rebar",
       "description": "This rebar fractures when shot, launching deadly debris in a wide spread but with limited range.",
@@ -2361,8 +2361,8 @@
     }
   },
   "resources": {
-    "Sulfur": {
-      "itemClass": "Sulfur",
+    "sulfur": {
+      "itemClass": "sulfur",
       "form": "RF_SOLID",
       "nodes": {
         "impure": 1,
@@ -2378,8 +2378,8 @@
       "collectionSpeed": 1,
       "event": "NONE"
     },
-    "Coal": {
-      "itemClass": "Coal",
+    "coal": {
+      "itemClass": "coal",
       "form": "RF_SOLID",
       "nodes": {
         "impure": 6,
@@ -2395,8 +2395,8 @@
       "collectionSpeed": 1,
       "event": "NONE"
     },
-    "OreCopper": {
-      "itemClass": "OreCopper",
+    "ore-copper": {
+      "itemClass": "ore-copper",
       "form": "RF_SOLID",
       "nodes": {
         "impure": 9,
@@ -2412,8 +2412,8 @@
       "collectionSpeed": 1,
       "event": "NONE"
     },
-    "OreGold": {
-      "itemClass": "OreGold",
+    "ore-gold": {
+      "itemClass": "ore-gold",
       "form": "RF_SOLID",
       "nodes": {
         "impure": 0,
@@ -2429,8 +2429,8 @@
       "collectionSpeed": 1,
       "event": "NONE"
     },
-    "OreIron": {
-      "itemClass": "OreIron",
+    "ore-iron": {
+      "itemClass": "ore-iron",
       "form": "RF_SOLID",
       "nodes": {
         "impure": 33,
@@ -2575,7 +2575,7 @@
     }
   },
   "buildables": {
-    "WorkBench": {
+    "craft-bench": {
       "slug": "craft-bench",
       "name": "Craft Bench",
       "description": "Allows you to manually craft a large range of different parts. \nThese parts can then be used in construction of different factory buildings, vehicles and equipment.",
@@ -2598,7 +2598,7 @@
       },
       "event": "NONE"
     },
-    "Workshop": {
+    "equipment-workshop": {
       "slug": "equipment-workshop",
       "name": "Equipment Workshop",
       "description": "Used to manually craft equipment.",
@@ -2621,41 +2621,7 @@
       },
       "event": "NONE"
     },
-    "XMassTree": {
-      "slug": "giant-ficsmas-tree",
-      "name": "Giant FICSMAS Tree",
-      "description": "This special delivery gigantic FICSMAS Tree is decorated by progressing the FICSMAS Holiday Event MAM Tree.",
-      "categories": [
-        "Event"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "FICSMAS"
-    },
-    "WreathDecor": {
-      "slug": "ficsmas-wreath",
-      "name": "FICSMAS Wreath",
-      "description": "Can be attached to walls. Pretty.",
-      "categories": [
-        "Event"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "FICSMAS"
-    },
-    "ConveyorPoleWall": {
+    "conveyor-wall-mount": {
       "slug": "conveyor-wall-mount",
       "name": "Conveyor Wall Mount",
       "description": "Can be attached to walls and is used as a connection for conveyor belts.\nUseful to route conveyor belts in a more controlled manner and over long distances.",
@@ -2672,7 +2638,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "HyperTubeWallHole": {
+    "hypertube-wall-hole": {
       "slug": "hypertube-wall-hole",
       "name": "Hypertube Wall Hole",
       "description": "Can be attached to walls to allow Hypertubes to pass through them.",
@@ -2689,7 +2655,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "HyperTubeWallSupport": {
+    "hypertube-wall-support": {
       "slug": "hypertube-wall-support",
       "name": "Hypertube Wall Support",
       "description": "Can be attached to walls. \nSupports for Hypertubes to allow for longer distances.",
@@ -2706,7 +2672,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PipelineSupportWall": {
+    "pipeline-wall-support": {
       "slug": "pipeline-wall-support",
       "name": "Pipeline Wall Support",
       "description": "Can be attached to walls.\nUsed to connect Pipelines over longer distances.",
@@ -2723,7 +2689,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PipelineSupportWallHole": {
+    "pipeline-wall-hole": {
       "slug": "pipeline-wall-hole",
       "name": "Pipeline Wall Hole",
       "description": "Can be attached to walls, allowing Pipelines to pass through them.",
@@ -2740,7 +2706,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "ConveyorAttachmentMerger": {
+    "conveyor-merger": {
       "slug": "conveyor-merger",
       "name": "Conveyor Merger",
       "description": "Merges up to three conveyor belts into one.",
@@ -2757,7 +2723,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "ConveyorAttachmentSplitter": {
+    "conveyor-splitter": {
       "slug": "conveyor-splitter",
       "name": "Conveyor Splitter",
       "description": "Splits conveyor belts in three. \nUseful to move parts and resources from oversaturated conveyor belts.",
@@ -2774,7 +2740,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerSwitch": {
+    "power-switch": {
       "slug": "power-switch",
       "name": "Power Switch",
       "description": "Can be switched ON/OFF to enable/disable the connection between two Power Grids.\n\nNote the location of the A and B connection.",
@@ -2791,7 +2757,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "ConveyorBeltMk1": {
+    "conveyor-belt-mk-1": {
       "slug": "conveyor-belt-mk-1",
       "name": "Conveyor Belt Mk.1",
       "description": "Transports up to 60 resources per minute. Used to move resources between buildings.",
@@ -2810,7 +2776,7 @@
       },
       "event": "NONE"
     },
-    "ConveyorBeltMk5": {
+    "conveyor-belt-mk-5": {
       "slug": "conveyor-belt-mk-5",
       "name": "Conveyor Belt Mk.5",
       "description": "Transports up to 780 resources per minute. Used to move resources between buildings.",
@@ -2829,7 +2795,7 @@
       },
       "event": "NONE"
     },
-    "ConveyorBeltMk2": {
+    "conveyor-belt-mk-2": {
       "slug": "conveyor-belt-mk-2",
       "name": "Conveyor Belt Mk.2",
       "description": "Transports up to 120 resources per minute. Used to move resources between buildings.",
@@ -2848,7 +2814,7 @@
       },
       "event": "NONE"
     },
-    "ConveyorBeltMk3": {
+    "conveyor-belt-mk-3": {
       "slug": "conveyor-belt-mk-3",
       "name": "Conveyor Belt Mk.3",
       "description": "Transports up to 270 resources per minute. Used to move resources between buildings.",
@@ -2867,7 +2833,7 @@
       },
       "event": "NONE"
     },
-    "ConveyorBeltMk4": {
+    "conveyor-belt-mk-4": {
       "slug": "conveyor-belt-mk-4",
       "name": "Conveyor Belt Mk.4",
       "description": "Transports up to 480 resources per minute. Used to move resources between buildings.",
@@ -2886,7 +2852,7 @@
       },
       "event": "NONE"
     },
-    "ConveyorLiftMk1": {
+    "conveyor-lift-mk-1": {
       "slug": "conveyor-lift-mk-1",
       "name": "Conveyor Lift Mk.1",
       "description": "Transports up to 60 resources per minute. Used to move resources between floors.",
@@ -2905,7 +2871,7 @@
       },
       "event": "NONE"
     },
-    "ConveyorLiftMk5": {
+    "conveyor-lift-mk-5": {
       "slug": "conveyor-lift-mk-5",
       "name": "Conveyor Lift Mk.5",
       "description": "Transports up to 780 resources per minute. Used to move resources between floors.",
@@ -2924,7 +2890,7 @@
       },
       "event": "NONE"
     },
-    "ConveyorLiftMk2": {
+    "conveyor-lift-mk-2": {
       "slug": "conveyor-lift-mk-2",
       "name": "Conveyor Lift Mk.2",
       "description": "Transports up to 120 resources per minute. Used to move resources between floors.",
@@ -2943,7 +2909,7 @@
       },
       "event": "NONE"
     },
-    "ConveyorLiftMk3": {
+    "conveyor-lift-mk-3": {
       "slug": "conveyor-lift-mk-3",
       "name": "Conveyor Lift Mk.3",
       "description": "Transports up to 270 resources per minute. Used to move resources between floors.",
@@ -2962,7 +2928,7 @@
       },
       "event": "NONE"
     },
-    "ConveyorLiftMk4": {
+    "conveyor-lift-mk-4": {
       "slug": "conveyor-lift-mk-4",
       "name": "Conveyor Lift Mk.4",
       "description": "Transports up to 480 resources per minute. Used to move resources between floors.",
@@ -2981,7 +2947,7 @@
       },
       "event": "NONE"
     },
-    "TruckStation": {
+    "truck-station": {
       "slug": "truck-station",
       "name": "Truck Station",
       "description": "Either send or receive resources to vehicles. Has an inventory with 48 slots.\nTransfers up to 120 stacks per minute to/from docked vehicle. \nAlways refuels vehicles if it has access to a matching fuel type.\n",
@@ -3003,7 +2969,7 @@
       },
       "event": "NONE"
     },
-    "DroneStation": {
+    "drone-port": {
       "slug": "drone-port",
       "name": "Drone Port",
       "description": "Drone Ports can have one other Port assigned as their transport destination.\nEach Drone Port can contain a single Drone, which transports available input back and forth between its home and destination Ports.\n\nThe Drone Port interface provides delivery details and allows management of Port connections.",
@@ -3028,7 +2994,7 @@
       },
       "event": "NONE"
     },
-    "LookoutTower": {
+    "lookout-tower": {
       "slug": "lookout-tower",
       "name": "Lookout Tower",
       "description": "Provides a good overview which makes factory construction easier.",
@@ -3051,7 +3017,7 @@
       },
       "event": "NONE"
     },
-    "LandingPad": {
+    "u-jelly-landing-pad": {
       "slug": "u-jelly-landing-pad",
       "name": "U-Jelly Landing Pad",
       "description": "Generates a speed dampening jelly.\nGuarantees a safe landing.",
@@ -3072,7 +3038,7 @@
       },
       "event": "NONE"
     },
-    "FloodlightPole": {
+    "flood-light-tower": {
       "slug": "flood-light-tower",
       "name": "Flood Light Tower",
       "description": "A tall light tower, specifically designed for illuminating large or outdoor spaces.\n\nLight color and intensity can be modified.\nAllows up to two Power Line connections.",
@@ -3093,7 +3059,7 @@
       },
       "event": "NONE"
     },
-    "FloodlightWall": {
+    "wall-mounted-flood-light": {
       "slug": "wall-mounted-flood-light",
       "name": "Wall Mounted Flood Light",
       "description": "Can be attached to Walls and Foundations to illuminate large spaces.\n\nLight color and intensity can be modified.\nAllows up to two Power Line connections.",
@@ -3114,7 +3080,7 @@
       },
       "event": "NONE"
     },
-    "Foundation_Asphalt_8x1": {
+    "foundation-1m-asphalt": {
       "slug": "foundation-1m-asphalt",
       "name": "Foundation 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3131,7 +3097,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundation_Asphalt_8x2": {
+    "foundation-2m-asphalt": {
       "slug": "foundation-2m-asphalt",
       "name": "Foundation 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3148,7 +3114,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundation_Asphalt_8x4": {
+    "foundation-4m-asphalt": {
       "slug": "foundation-4m-asphalt",
       "name": "Foundation 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3165,7 +3131,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorner_Asphalt_8x1": {
+    "inv-down-corner-1m-asphalt": {
       "slug": "inv-down-corner-1m-asphalt",
       "name": "Inv. Down Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3182,7 +3148,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorner_Asphalt_8x2": {
+    "inv-down-corner-2m-asphalt": {
       "slug": "inv-down-corner-2m-asphalt",
       "name": "Inv. Down Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3199,7 +3165,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorner_Asphalt_8x4": {
+    "inv-down-corner-4m-asphalt": {
       "slug": "inv-down-corner-4m-asphalt",
       "name": "Inv. Down Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3216,7 +3182,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorner_Asphalt_8x1": {
+    "inv-up-corner-1m-asphalt": {
       "slug": "inv-up-corner-1m-asphalt",
       "name": "Inv. Up Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3233,7 +3199,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorner_Asphalt_8x2": {
+    "inv-up-corner-2m-asphalt": {
       "slug": "inv-up-corner-2m-asphalt",
       "name": "Inv. Up Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3250,7 +3216,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorner_Asphalt_8x4": {
+    "inv-up-corner-4m-asphalt": {
       "slug": "inv-up-corner-4m-asphalt",
       "name": "Inv. Up Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3267,7 +3233,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorner_Asphalt_8x1": {
+    "down-corner-ramp-1m-asphalt": {
       "slug": "down-corner-ramp-1m-asphalt",
       "name": "Down Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3284,7 +3250,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorner_Asphalt_8x2": {
+    "down-corner-ramp-2m-asphalt": {
       "slug": "down-corner-ramp-2m-asphalt",
       "name": "Down Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3301,7 +3267,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorner_Asphalt_8x4": {
+    "down-corner-ramp-4m-asphalt": {
       "slug": "down-corner-ramp-4m-asphalt",
       "name": "Down Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3318,7 +3284,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorner_Asphalt_8x1": {
+    "up-corner-ramp-1m-asphalt": {
       "slug": "up-corner-ramp-1m-asphalt",
       "name": "Up Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3335,7 +3301,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorner_Asphalt_8x2": {
+    "up-corner-ramp-2m-asphalt": {
       "slug": "up-corner-ramp-2m-asphalt",
       "name": "Up Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3352,7 +3318,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorner_Asphalt_8x4": {
+    "up-corner-ramp-4m-asphalt": {
       "slug": "up-corner-ramp-4m-asphalt",
       "name": "Up Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3369,7 +3335,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundationoncrete_8x1": {
+    "foundation-1m-concrete": {
       "slug": "foundation-1m-concrete",
       "name": "Foundation 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3386,7 +3352,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundationoncrete_8x2": {
+    "foundation-2m-concrete": {
       "slug": "foundation-2m-concrete",
       "name": "Foundation 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3403,7 +3369,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundationoncrete_8x4": {
+    "foundation-4m-concrete": {
       "slug": "foundation-4m-concrete",
       "name": "Foundation 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3420,7 +3386,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorneroncrete_8x1": {
+    "inv-down-corner-1m-concrete": {
       "slug": "inv-down-corner-1m-concrete",
       "name": "Inv. Down Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3437,7 +3403,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorneroncrete_8x2": {
+    "inv-down-corner-2m-concrete": {
       "slug": "inv-down-corner-2m-concrete",
       "name": "Inv. Down Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3454,7 +3420,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorneroncrete_8x4": {
+    "inv-down-corner-4m-concrete": {
       "slug": "inv-down-corner-4m-concrete",
       "name": "Inv. Down Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3471,7 +3437,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorneroncrete_8x1": {
+    "inv-up-corner-1m-concrete": {
       "slug": "inv-up-corner-1m-concrete",
       "name": "Inv. Up Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3488,7 +3454,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorneroncrete_8x2": {
+    "inv-up-corner-2m-concrete": {
       "slug": "inv-up-corner-2m-concrete",
       "name": "Inv. Up Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3505,7 +3471,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorneroncrete_8x4": {
+    "inv-up-corner-4m-concrete": {
       "slug": "inv-up-corner-4m-concrete",
       "name": "Inv. Up Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3522,7 +3488,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorneroncrete_8x1": {
+    "down-corner-ramp-1m-concrete": {
       "slug": "down-corner-ramp-1m-concrete",
       "name": "Down Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3539,7 +3505,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorneroncrete_8x2": {
+    "down-corner-ramp-2m-concrete": {
       "slug": "down-corner-ramp-2m-concrete",
       "name": "Down Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3556,7 +3522,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorneroncrete_8x4": {
+    "down-corner-ramp-4m-concrete": {
       "slug": "down-corner-ramp-4m-concrete",
       "name": "Down Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3573,7 +3539,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorneroncrete_8x1": {
+    "up-corner-ramp-1m-concrete": {
       "slug": "up-corner-ramp-1m-concrete",
       "name": "Up Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3590,7 +3556,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorneroncrete_8x2": {
+    "up-corner-ramp-2m-concrete": {
       "slug": "up-corner-ramp-2m-concrete",
       "name": "Up Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3607,7 +3573,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorneroncrete_8x4": {
+    "up-corner-ramp-4m-concrete": {
       "slug": "up-corner-ramp-4m-concrete",
       "name": "Up Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3624,7 +3590,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundation_Metal_8x1": {
+    "foundation-1m-metal": {
       "slug": "foundation-1m-metal",
       "name": "Foundation 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3641,7 +3607,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundation_Metal_8x2": {
+    "foundation-2m-metal": {
       "slug": "foundation-2m-metal",
       "name": "Foundation 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3658,7 +3624,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundation_Metal_8x4": {
+    "foundation-4m-metal": {
       "slug": "foundation-4m-metal",
       "name": "Foundation 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3675,7 +3641,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorner_Metal_8x1": {
+    "inv-down-corner-1m-metal": {
       "slug": "inv-down-corner-1m-metal",
       "name": "Inv. Down Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3692,7 +3658,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorner_Metal_8x2": {
+    "inv-down-corner-2m-metal": {
       "slug": "inv-down-corner-2m-metal",
       "name": "Inv. Down Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3709,7 +3675,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorner_Metal_8x4": {
+    "inv-down-corner-4m-metal": {
       "slug": "inv-down-corner-4m-metal",
       "name": "Inv. Down Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3726,7 +3692,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorner_Metal_8x1": {
+    "inv-up-corner-1m-metal": {
       "slug": "inv-up-corner-1m-metal",
       "name": "Inv. Up Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3743,7 +3709,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorner_Metal_8x2": {
+    "inv-up-corner-2m-metal": {
       "slug": "inv-up-corner-2m-metal",
       "name": "Inv. Up Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3760,7 +3726,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorner_Metal_8x4": {
+    "inv-up-corner-4m-metal": {
       "slug": "inv-up-corner-4m-metal",
       "name": "Inv. Up Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3777,7 +3743,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorner_Metal_8x1": {
+    "down-corner-ramp-1m-metal": {
       "slug": "down-corner-ramp-1m-metal",
       "name": "Down Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3794,7 +3760,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorner_Metal_8x2": {
+    "down-corner-ramp-2m-metal": {
       "slug": "down-corner-ramp-2m-metal",
       "name": "Down Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3811,7 +3777,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorner_Metal_8x4": {
+    "down-corner-ramp-4m-metal": {
       "slug": "down-corner-ramp-4m-metal",
       "name": "Down Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3828,7 +3794,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorner_Metal_8x1": {
+    "up-corner-ramp-1m-metal": {
       "slug": "up-corner-ramp-1m-metal",
       "name": "Up Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3845,7 +3811,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorner_Metal_8x2": {
+    "up-corner-ramp-2m-metal": {
       "slug": "up-corner-ramp-2m-metal",
       "name": "Up Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3862,7 +3828,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorner_Metal_8x4": {
+    "up-corner-ramp-4m-metal": {
       "slug": "up-corner-ramp-4m-metal",
       "name": "Up Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3879,7 +3845,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "FoundationoncretePolished_8x1": {
+    "foundation-1m-polished": {
       "slug": "foundation-1m-polished",
       "name": "Foundation 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3896,7 +3862,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "FoundationoncretePolished_8x2": {
+    "foundation-2m-polished": {
       "slug": "foundation-2m-polished",
       "name": "Foundation 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3913,7 +3879,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "FoundationoncretePolished_8x4": {
+    "foundation-4m-polished": {
       "slug": "foundation-4m-polished",
       "name": "Foundation 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3930,7 +3896,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorner_Polished_8x1": {
+    "inv-down-corner-1m-polished": {
       "slug": "inv-down-corner-1m-polished",
       "name": "Inv. Down Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3947,7 +3913,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorner_Polished_8x2": {
+    "inv-down-corner-2m-polished": {
       "slug": "inv-down-corner-2m-polished",
       "name": "Inv. Down Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -3964,7 +3930,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_DCorner_Polished_8x4": {
+    "inv-down-corner-4m-polished": {
       "slug": "inv-down-corner-4m-polished",
       "name": "Inv. Down Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -3981,7 +3947,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorner_Polished_8x1": {
+    "inv-up-corner-1m-polished": {
       "slug": "inv-up-corner-1m-polished",
       "name": "Inv. Up Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -3998,7 +3964,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorner_Polished_8x2": {
+    "inv-up-corner-2m-polished": {
       "slug": "inv-up-corner-2m-polished",
       "name": "Inv. Up Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -4015,7 +3981,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_UCorner_Polished_8x4": {
+    "inv-up-corner-4m-polished": {
       "slug": "inv-up-corner-4m-polished",
       "name": "Inv. Up Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -4032,7 +3998,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorner_Polished_8x1": {
+    "down-corner-ramp-1m-polished": {
       "slug": "down-corner-ramp-1m-polished",
       "name": "Down Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -4049,7 +4015,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorner_Polished_8x2": {
+    "down-corner-ramp-2m-polished": {
       "slug": "down-corner-ramp-2m-polished",
       "name": "Down Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -4066,7 +4032,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_DownCorner_Polished_8x4": {
+    "down-corner-ramp-4m-polished": {
       "slug": "down-corner-ramp-4m-polished",
       "name": "Down Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -4083,7 +4049,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorner_Polished_8x1": {
+    "up-corner-ramp-1m-polished": {
       "slug": "up-corner-ramp-1m-polished",
       "name": "Up Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -4100,7 +4066,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorner_Polished_8x2": {
+    "up-corner-ramp-2m-polished": {
       "slug": "up-corner-ramp-2m-polished",
       "name": "Up Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -4117,7 +4083,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_UpCorner_Polished_8x4": {
+    "up-corner-ramp-4m-polished": {
       "slug": "up-corner-ramp-4m-polished",
       "name": "Up Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -4134,7 +4100,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundation_8x2_01": {
+    "foundation-2m": {
       "slug": "foundation-2m",
       "name": "Foundation 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -4151,7 +4117,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundation_8x4_01": {
+    "foundation-4m": {
       "slug": "foundation-4m",
       "name": "Foundation 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -4168,7 +4134,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Diagonal_8x1_01": {
+    "down-corner-ramp-1m": {
       "slug": "down-corner-ramp-1m",
       "name": "Down Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -4185,7 +4151,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Diagonal_8x1_02": {
+    "up-corner-ramp-1m": {
       "slug": "up-corner-ramp-1m",
       "name": "Up Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -4202,7 +4168,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Diagonal_8x2_01": {
+    "down-corner-ramp-2m": {
       "slug": "down-corner-ramp-2m",
       "name": "Down Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -4219,7 +4185,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Diagonal_8x2_02": {
+    "up-corner-ramp-2m": {
       "slug": "up-corner-ramp-2m",
       "name": "Up Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -4236,7 +4202,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Diagonal_8x4_01": {
+    "down-corner-ramp-4m": {
       "slug": "down-corner-ramp-4m",
       "name": "Down Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -4253,7 +4219,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Diagonal_8x4_02": {
+    "up-corner-ramp-4m": {
       "slug": "up-corner-ramp-4m",
       "name": "Up Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -4270,7 +4236,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampInverted_8x1orner_01": {
+    "inv-up-corner-1m": {
       "slug": "inv-up-corner-1m",
       "name": "Inv. Up Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -4287,7 +4253,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampInverted_8x1orner_02": {
+    "inv-down-corner-1m": {
       "slug": "inv-down-corner-1m",
       "name": "Inv. Down Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -4304,7 +4270,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampInverted_8x2orner_01": {
+    "inv-up-corner-2m": {
       "slug": "inv-up-corner-2m",
       "name": "Inv. Up Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -4321,7 +4287,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampInverted_8x2orner_02": {
+    "inv-down-corner-2m": {
       "slug": "inv-down-corner-2m",
       "name": "Inv. Down Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -4338,7 +4304,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampInverted_8x4orner_01": {
+    "inv-up-corner-4m": {
       "slug": "inv-up-corner-4m",
       "name": "Inv. Up Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -4355,7 +4321,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampInverted_8x4orner_02": {
+    "inv-down-corner-4m": {
       "slug": "inv-down-corner-4m",
       "name": "Inv. Down Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -4372,7 +4338,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundation_8x1_01": {
+    "foundation-1m": {
       "slug": "foundation-1m",
       "name": "Foundation 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -4389,7 +4355,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Flat_Frame_01": {
+    "frame-floor": {
       "slug": "frame-floor",
       "name": "Frame Floor",
       "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 0.5m",
@@ -4406,7 +4372,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Foundation_Frame_01": {
+    "frame-foundation": {
       "slug": "frame-foundation",
       "name": "Frame Foundation",
       "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
@@ -4423,7 +4389,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "FoundationGlass_01": {
+    "glass-frame-foundation": {
       "slug": "glass-frame-foundation",
       "name": "Glass Frame Foundation",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -4440,7 +4406,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "QuarterPipe": {
+    "quarter-pipe": {
       "slug": "quarter-pipe",
       "name": "Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
@@ -4457,7 +4423,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "QuarterPipe_02": {
+    "inverted-quarter-pipe": {
       "slug": "inverted-quarter-pipe",
       "name": "Inverted Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
@@ -4474,7 +4440,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "QuarterPipeCorner_01": {
+    "inner-corner-quarter-pipe": {
       "slug": "inner-corner-quarter-pipe",
       "name": "Inner Corner Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
@@ -4491,7 +4457,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "QuarterPipeCorner_02": {
+    "inverted-inner-corner-quarter-pipe": {
       "slug": "inverted-inner-corner-quarter-pipe",
       "name": "Inverted Inner Corner Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
@@ -4508,7 +4474,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "QuarterPipeCorner_03": {
+    "outer-corner-quarter-pipe": {
       "slug": "outer-corner-quarter-pipe",
       "name": "Outer Corner Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
@@ -4525,7 +4491,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "QuarterPipeCorner_04": {
+    "inverted-outer-corner-quarter-pipe": {
       "slug": "inverted-outer-corner-quarter-pipe",
       "name": "Inverted Outer Corner Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
@@ -4542,7 +4508,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "FrackingSmasher": {
+    "resource-well-pressurizer": {
       "slug": "resource-well-pressurizer",
       "name": "Resource Well Pressurizer",
       "description": "Can be placed on a Resource Well to activate it by pressurizing the underground resource.\nOnce activated, Resource Well Extractors can be placed on the surrounding sub-nodes to extract the resource.\nRequires Power. Overclocking increases the output potential of the entire Resource Well.",
@@ -4584,7 +4550,7 @@
       },
       "event": "NONE"
     },
-    "FrackingExtractor": {
+    "resource-well-extractor": {
       "slug": "resource-well-extractor",
       "name": "Resource Well Extractor",
       "description": "Normal extraction rate: 60m³ fluid per minute.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nCan be placed on the activated sub-nodes of a Resource Well to collect the pressurized resources. Does not require Power.",
@@ -4622,7 +4588,7 @@
       },
       "event": "NONE"
     },
-    "GeneratorBiomass": {
+    "biomass-burner": {
       "slug": "biomass-burner",
       "name": "Biomass Burner",
       "description": "Burns various forms of biomass to generate electricity for the power grid.\nHas no input and must therefore be fed biomass manually.\n\nResource consumption will automatically be lowered to meet power demands.",
@@ -4731,7 +4697,7 @@
       },
       "event": "NONE"
     },
-    "GeneratorCoal": {
+    "coal-generator": {
       "slug": "coal-generator",
       "name": "Coal Generator",
       "description": "Burns Coal to boil Water, the produced steam rotates turbines to generate electricity for the power grid.\nHas a Conveyor Belt and Pipe input, so both the Coal and Water supply can be automated.\n\nCaution: Always generates at the set clock speed. Shuts down if fuel requirements are not met.",
@@ -4792,7 +4758,7 @@
       },
       "event": "NONE"
     },
-    "GeneratorFuel": {
+    "fuel-generator": {
       "slug": "fuel-generator",
       "name": "Fuel Generator",
       "description": "Consumes Fuel to generate electricity for the power grid.\nHas a Pipe input so the Fuel supply can be automated.\n\nCaution: Always generates at the set clock speed. Shuts down if fuel requirements are not met.",
@@ -4841,7 +4807,7 @@
       },
       "event": "NONE"
     },
-    "GeneratorGeoThermal": {
+    "geothermal-generator": {
       "slug": "geothermal-generator",
       "name": "Geothermal Generator",
       "description": "Has to be built on a Geyser. Generates power.\n\nCaution: Power production fluctuates.\n\nPower Production:\nImpure 50-150 MW (100 MW average)\nNormal 100-300 MW (200 MW average)\nPure 200-600 MW (400 MW average)",
@@ -4873,7 +4839,7 @@
       },
       "event": "NONE"
     },
-    "GeneratorNuclear": {
+    "nuclear-power-plant": {
       "slug": "nuclear-power-plant",
       "name": "Nuclear Power Plant",
       "description": "Consumes Nuclear Fuel Rods and Water to produce electricity for the power grid.\n\nProduces Nuclear Waste, which is extracted from the conveyor belt output.\n\nCaution: Always generates at the set clock speed. Shuts down if fuel requirements are not met.",
@@ -4932,7 +4898,7 @@
       },
       "event": "NONE"
     },
-    "JumpPadAdjustable": {
+    "jump-pad": {
       "slug": "jump-pad",
       "name": "Jump Pad",
       "description": "Used for quick, vertical traversal.\nThe launch angle can be adjusted while building.\nCaution: Be sure to land safely!",
@@ -4953,7 +4919,7 @@
       },
       "event": "NONE"
     },
-    "Ladder": {
+    "ladder": {
       "slug": "ladder",
       "name": "Ladder",
       "description": "A ladder with a default height of 2 meters, which can be extended while building. Snaps to walls and foundations.",
@@ -4970,7 +4936,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CeilingLight": {
+    "ceiling-light": {
       "slug": "ceiling-light",
       "name": "Ceiling Light",
       "description": "Can be placed on ceilings to light up indoor factory spaces.\n\nLight color and intensity can be modified.\nAllows up to two Power Line connections.",
@@ -4991,7 +4957,7 @@
       },
       "event": "NONE"
     },
-    "StreetLight": {
+    "street-light": {
       "slug": "street-light",
       "name": "Street Light",
       "description": "A small Street Light, perfect for lighting up factory pathways and roads.\n\nLight color and intensity can be modified.\nAllows up to two Power Line connections.",
@@ -5012,7 +4978,7 @@
       },
       "event": "NONE"
     },
-    "LightsControlPanel": {
+    "lights-control-panel": {
       "slug": "lights-control-panel",
       "name": "Lights Control Panel",
       "description": "Useful for sectioning and modifying many lights at once.\n\nControls all Lights connected to the Power Grid attached to the 'Light Power Connector'.\n(Other Control Panels and Power Switches interrupt the connection.)",
@@ -5029,7 +4995,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Mam": {
+    "mam": {
       "slug": "mam",
       "name": "MAM",
       "description": "The Molecular Analysis Machine is used to analyse new and exotic materials found on alien planets.\nR&D will assist Pioneers through the MAM to turn any valuable data into usable research options and new technologies.",
@@ -5052,7 +5018,7 @@
       },
       "event": "NONE"
     },
-    "ConstructorMk1": {
+    "constructor": {
       "slug": "constructor",
       "name": "Constructor",
       "description": "Crafts one part into another part.\n\nCan be automated by feeding parts into it with a conveyor belt connected to the input. The produced parts can be automatically extracted by connecting a conveyor belt to the output.",
@@ -5081,7 +5047,7 @@
       },
       "event": "NONE"
     },
-    "SmelterMk1": {
+    "smelter": {
       "slug": "smelter",
       "name": "Smelter",
       "description": "Smelts ore into ingots.\n\nCan be automated by feeding ore into it with a conveyor belt connected to the input. The produced ingots can be automatically extracted by connecting a conveyor belt to the output.",
@@ -5110,7 +5076,7 @@
       },
       "event": "NONE"
     },
-    "FoundryMk1": {
+    "foundry": {
       "slug": "foundry",
       "name": "Foundry",
       "description": "Smelts two resources into alloy ingots.\n\nCan be automated by feeding ore into it with a conveyor belt connected to the inputs. The produced ingots can be automatically extracted by connecting a conveyor belt to the output.",
@@ -5139,7 +5105,7 @@
       },
       "event": "NONE"
     },
-    "OilRefinery": {
+    "refinery": {
       "slug": "refinery",
       "name": "Refinery",
       "description": "Refines fluid and/or solid parts into other parts.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nContains both a Conveyor Belt and Pipe input and output, to allow for the automation of various recipes.",
@@ -5168,7 +5134,7 @@
       },
       "event": "NONE"
     },
-    "AssemblerMk1": {
+    "assembler": {
       "slug": "assembler",
       "name": "Assembler",
       "description": "Crafts two parts into another part.\n\nCan be automated by feeding parts into it with a conveyor belt connected to the input. The produced parts can be automatically extracted by connecting a conveyor belt to the output.",
@@ -5197,7 +5163,7 @@
       },
       "event": "NONE"
     },
-    "Packager": {
+    "packager": {
       "slug": "packager",
       "name": "Packager",
       "description": "Used for the packaging and unpacking of fluids.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nContains both a Conveyor Belt and Pipe input and output, to allow for the automation of various recipes.",
@@ -5226,7 +5192,7 @@
       },
       "event": "NONE"
     },
-    "Blender": {
+    "blender": {
       "slug": "blender",
       "name": "Blender",
       "description": "The Blender is capable of blending fluids and combining them with solid parts in various processes.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards).\n\nContains both Conveyor Belt and Pipe inputs and outputs.",
@@ -5255,7 +5221,7 @@
       },
       "event": "NONE"
     },
-    "ManufacturerMk1": {
+    "manufacturer": {
       "slug": "manufacturer",
       "name": "Manufacturer",
       "description": "Crafts three or four parts into another part.\n\nCan be automated by feeding parts into it with a conveyor belt connected to the input. The produced parts can be automatically extracted by connecting a conveyor belt to the output.",
@@ -5284,7 +5250,7 @@
       },
       "event": "NONE"
     },
-    "HadronCollider": {
+    "particle-accelerator": {
       "slug": "particle-accelerator",
       "name": "Particle Accelerator",
       "description": "The FICSIT Particle Accelerator uses electromagnetic fields to propel particles to very high speeds and energies. The specific design allows for a variety of processes, such as matter generation and conversion.\n\nWarning: Power usage is extremely high, unstable, and varies per recipe.",
@@ -5318,7 +5284,7 @@
       },
       "event": "NONE"
     },
-    "PipeHyper": {
+    "hypertube": {
       "slug": "hypertube",
       "name": "Hypertube",
       "description": "Tubes for transporting FICSIT employees.\nA Hypertube Entrance needs to be attached to power and enter a Hypertube system.",
@@ -5335,7 +5301,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PipeStorageTank": {
+    "fluid-buffer": {
       "slug": "fluid-buffer",
       "name": "Fluid Buffer",
       "description": "Can contain up to 400m³ of fluid.\nHas an input and output for pipes.",
@@ -5359,7 +5325,7 @@
       },
       "event": "NONE"
     },
-    "IndustrialTank": {
+    "industrial-fluid-buffer": {
       "slug": "industrial-fluid-buffer",
       "name": "Industrial Fluid Buffer",
       "description": "Can contain up to 2400m³ of fluid.\nHas an input and output for pipes.",
@@ -5383,7 +5349,7 @@
       },
       "event": "NONE"
     },
-    "Pipeline": {
+    "pipeline-mk-1": {
       "slug": "pipeline-mk-1",
       "name": "Pipeline Mk.1",
       "description": "Outside indicators show volume, flow rate and direction.\nTransports up to 300m³ of fluid per minute.\nUsed to transport fluids.",
@@ -5402,7 +5368,7 @@
       },
       "event": "NONE"
     },
-    "PipelineMK2": {
+    "pipeline-mk-2": {
       "slug": "pipeline-mk-2",
       "name": "Pipeline Mk.2",
       "description": "Outside indicators show volume, flow rate and direction.\nTransports up to 600m³ of fluid per minute.\nUsed to transport fluids.",
@@ -5421,7 +5387,7 @@
       },
       "event": "NONE"
     },
-    "PipelineJunctionross": {
+    "pipeline-junction-cross": {
       "slug": "pipeline-junction-cross",
       "name": "Pipeline Junction Cross",
       "description": "Can be attached to a pipeline to split it 4-way.",
@@ -5438,7 +5404,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Valve": {
+    "valve": {
       "slug": "valve",
       "name": "Valve",
       "description": "Used to limit Pipeline flow rates.\nCan be attached to a Pipeline.\n\nNOTE: Has an in- and output direction.",
@@ -5455,7 +5421,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PipelinePump": {
+    "pipeline-pump-mk-1": {
       "slug": "pipeline-pump-mk-1",
       "name": "Pipeline Pump Mk.1",
       "description": "Can be attached to a Pipeline to apply Head Lift.\nMaximum Head Lift: 20 meters\n(Allows fluids to be transported 20 meters upwards.)\n\nNOTE: Has an in- and output direction.\nNOTE: Head Lift does not stack, so space between Pumps is recommended.",
@@ -5478,7 +5444,7 @@
       },
       "event": "NONE"
     },
-    "PipelinePumpMk2": {
+    "pipeline-pump-mk-2": {
       "slug": "pipeline-pump-mk-2",
       "name": "Pipeline Pump Mk.2",
       "description": "Can be attached to a Pipeline to apply Head Lift.\nMaximum Head Lift: 50 meters\n(Allows fluids to be transported 50 meters upwards.)\n\nNOTE: Has an in- and output direction.\nNOTE: Head Lift does not stack, so space between Pumps is recommended.",
@@ -5501,7 +5467,7 @@
       },
       "event": "NONE"
     },
-    "PipelineSupport": {
+    "pipeline-support": {
       "slug": "pipeline-support",
       "name": "Pipeline Support",
       "description": "Can be used as a connection for pipelines. The height of the support can be adjusted.\nUseful to route pipelines in a more controlled manner and over long distances.",
@@ -5518,7 +5484,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "HyperPoleStackable": {
+    "stackable-hypertube-support": {
       "slug": "stackable-hypertube-support",
       "name": "Stackable Hypertube Support",
       "description": "Support for Hypertubes. Can be stacked on other stackable supports.",
@@ -5535,7 +5501,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PipeHyperSupport": {
+    "hypertube-support": {
       "slug": "hypertube-support",
       "name": "Hypertube Support",
       "description": "Supports for Hypertubes to allow for longer distances.",
@@ -5552,7 +5518,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PipeSupportStackable": {
+    "stackable-pipeline-support": {
       "slug": "stackable-pipeline-support",
       "name": "Stackable Pipeline Support",
       "description": "Support for pipelines. Can be stacked on other stackable supports.",
@@ -5569,7 +5535,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "ConveyorPole": {
+    "conveyor-pole": {
       "slug": "conveyor-pole",
       "name": "Conveyor Pole",
       "description": "Can be used as a connection for conveyor belts. The height of the pole can be adjusted.\nUseful to route conveyor belts in a more controlled manner and over long distances.",
@@ -5586,7 +5552,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerPoleMk1": {
+    "power-pole-mk-1": {
       "slug": "power-pole-mk-1",
       "name": "Power Pole Mk.1",
       "description": "Can handle up to 4 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
@@ -5603,7 +5569,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerPoleWall": {
+    "wall-outlet-mk-1": {
       "slug": "wall-outlet-mk-1",
       "name": "Wall Outlet Mk.1",
       "description": "Power Pole that attaches to a wall.\n\nCan handle up to 4 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
@@ -5620,7 +5586,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerPoleMk2": {
+    "power-pole-mk-2": {
       "slug": "power-pole-mk-2",
       "name": "Power Pole Mk.2",
       "description": "Can handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
@@ -5637,7 +5603,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerPoleMk3": {
+    "power-pole-mk-3": {
       "slug": "power-pole-mk-3",
       "name": "Power Pole Mk.3",
       "description": "Can handle up to 10 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
@@ -5654,7 +5620,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerPoleWallDouble": {
+    "double-wall-outlet-mk-1": {
       "slug": "double-wall-outlet-mk-1",
       "name": "Double Wall Outlet Mk.1",
       "description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 4 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
@@ -5671,7 +5637,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerPoleWallDoubleMk2": {
+    "double-wall-outlet-mk-2": {
       "slug": "double-wall-outlet-mk-2",
       "name": "Double Wall Outlet Mk.2",
       "description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
@@ -5688,7 +5654,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerPoleWallMk2": {
+    "wall-outlet-mk-2": {
       "slug": "wall-outlet-mk-2",
       "name": "Wall Outlet Mk.2",
       "description": "Power Pole that attaches to a wall.\n\nCan handle up to 7 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
@@ -5705,7 +5671,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerPoleWallDoubleMk3": {
+    "double-wall-outlet-mk-3": {
       "slug": "double-wall-outlet-mk-3",
       "name": "Double Wall Outlet Mk.3",
       "description": "Power Pole that attaches to a wall. Has one connector on each side of the wall.\n\nCan handle up to 10 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
@@ -5722,7 +5688,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerPoleWallMk3": {
+    "wall-outlet-mk-3": {
       "slug": "wall-outlet-mk-3",
       "name": "Wall Outlet Mk.3",
       "description": "Power Pole that attaches to a wall.\n\nCan handle up to 10 Power Line connections.\n\nConnect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.",
@@ -5739,7 +5705,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PowerStorageMk1": {
+    "power-storage": {
       "slug": "power-storage",
       "name": "Power Storage",
       "description": "Storage Capacity: 100 MWh (100 MW for 1 hour)\nMax Charge Rate: 100 MW\nMax Discharge Rate: Unlimited \n\nCan be connected to a Power Grid to store excess power production. The stored power can be used later in cases of high consumption.",
@@ -5763,7 +5729,7 @@
       },
       "event": "NONE"
     },
-    "RadarTower": {
+    "radar-tower": {
       "slug": "radar-tower",
       "name": "Radar Tower",
       "description": "Radar Towers scan their surrounding area to display additional information on the Map.\n\nThe information revealed on the Map includes:\n- Resource Node locations\n- Terrain data\n- Flora & fauna information\n- Notable signal readings",
@@ -5795,7 +5761,7 @@
       },
       "event": "NONE"
     },
-    "TrainStation": {
+    "train-station": {
       "slug": "train-station",
       "name": "Train Station",
       "description": "Locomotives can be set to drive to and stop at the Train Station.\nYou can connect power to the train station to power up the trains on the railway as well as transport the power to other stations.",
@@ -5821,7 +5787,7 @@
       },
       "event": "NONE"
     },
-    "RailroadTrack": {
+    "railway": {
       "slug": "railway",
       "name": "Railway",
       "description": "Used to transport trains in a reliable and fast manner.\nHas a wide turn angle so make sure to plan it out properly.",
@@ -5838,7 +5804,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "MinerMk1": {
+    "miner-mk-1": {
       "slug": "miner-mk-1",
       "name": "Miner Mk.1",
       "description": "Extracts solid resources from the resource node it is built on. \nThe normal extraction rate is 60 resources per minute. \nThe extraction rate is modified depending on resource node purity. Outputs all extracted resources onto connected conveyor belts.",
@@ -5884,7 +5850,7 @@
       },
       "event": "NONE"
     },
-    "OilPump": {
+    "oil-extractor": {
       "slug": "oil-extractor",
       "name": "Oil Extractor",
       "description": "Normal extraction rate: 120m³ oil per minute.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nCan be built on an Oil Node to extract Crude Oil. Extraction rates depend on node purity.",
@@ -5922,7 +5888,7 @@
       },
       "event": "NONE"
     },
-    "MinerMk2": {
+    "miner-mk-2": {
       "slug": "miner-mk-2",
       "name": "Miner Mk.2",
       "description": "Extracts solid resources from the resource node it is built on. \nThe normal extraction rate is 120 resources per minute. \nThe extraction rate is modified depending on resource node purity. Outputs all extracted resources onto connected conveyor belts.",
@@ -5968,7 +5934,7 @@
       },
       "event": "NONE"
     },
-    "MinerMk3": {
+    "miner-mk-3": {
       "slug": "miner-mk-3",
       "name": "Miner Mk.3",
       "description": "Extracts solid resources from the resource node it is built on. \nThe normal extraction rate is 240 resources per minute. \nThe extraction rate is modified depending on resource node purity. Outputs all extracted resources onto connected conveyor belts.",
@@ -6014,7 +5980,7 @@
       },
       "event": "NONE"
     },
-    "ResourceSink": {
+    "awesome-sink": {
       "slug": "awesome-sink",
       "name": "AWESOME Sink",
       "description": "Got excess resources? Fear not, for FICSIT does not waste! The newly developed AWESOME Sink turns any useful part straight into research data, as fast as you can supply it! \nParticipating pioneers will be compensated with Coupons to be spend at the AWESOME Shop.",
@@ -6040,7 +6006,7 @@
       },
       "event": "NONE"
     },
-    "ResourceSinkShop": {
+    "awesome-shop": {
       "slug": "awesome-shop",
       "name": "AWESOME Shop",
       "description": "Redeem your FICSIT Coupons here! \nFor those employees going the extra kilometer we have set aside special bonus milestones and rewards! Get your Coupons in the AWESOME Sink program now!\n\n*No refunds possible.",
@@ -6063,24 +6029,7 @@
       },
       "event": "NONE"
     },
-    "SnowDispenser": {
-      "slug": "ficsmas-snow-dispenser",
-      "name": "FICSMAS Snow Dispenser",
-      "description": "Makes it snow!\nCan be attached to walls and ceilings.",
-      "categories": [
-        "Event"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "FICSMAS"
-    },
-    "SpaceElevator": {
+    "space-elevator": {
       "slug": "space-elevator",
       "name": "Space Elevator",
       "description": "Requires deliveries of special Project Parts to complete Phases of Project Assembly.\nCompleting Phases in the Space Elevator will unlock new Tiers in the HUB Terminal.",
@@ -6103,7 +6052,7 @@
       },
       "event": "NONE"
     },
-    "ConveyorAttachmentSplitterSmart": {
+    "smart-splitter": {
       "slug": "smart-splitter",
       "name": "Smart Splitter",
       "description": "Splits conveyor belts in three.\nYou can set a rule for each output to decide exactly what part should go there.",
@@ -6120,7 +6069,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "ConveyorAttachmentSplitterProgrammable": {
+    "programmable-splitter": {
       "slug": "programmable-splitter",
       "name": "Programmable Splitter",
       "description": "Splits conveyor belts in three. \nYou can set rules for each output to decide exactly where each part should go.",
@@ -6137,7 +6086,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Stairs_Left_01": {
+    "stairs-left": {
       "slug": "stairs-left",
       "name": "Stairs Left",
       "description": "Snaps to foundations.\nMakes it easier to get to other floors of your structures.",
@@ -6154,7 +6103,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Stairs_Right_01": {
+    "stairs-right": {
       "slug": "stairs-right",
       "name": "Stairs Right",
       "description": "Snaps to foundations.\nMakes it easier to get to other floors of your structures.",
@@ -6171,7 +6120,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StorageContainerMk1": {
+    "storage-container": {
       "slug": "storage-container",
       "name": "Storage Container",
       "description": "Contains 24 slots for storing large amounts of items.\nHas an input and output for conveyor belts.",
@@ -6195,7 +6144,7 @@
       },
       "event": "NONE"
     },
-    "StoragePlayer": {
+    "personal-storage-box": {
       "slug": "personal-storage-box",
       "name": "Personal Storage Box",
       "description": "Contains 25 slots for storing large amounts of items.",
@@ -6214,7 +6163,7 @@
       },
       "event": "NONE"
     },
-    "StorageContainerMk2": {
+    "industrial-storage-container": {
       "slug": "industrial-storage-container",
       "name": "Industrial Storage Container",
       "description": "Contains 48 slots for storing large amounts of items.\nHas two inputs and outputs for conveyor belts.",
@@ -6238,7 +6187,7 @@
       },
       "event": "NONE"
     },
-    "StorageHazard": {
+    "hazard-storage-box": {
       "slug": "hazard-storage-box",
       "name": "Hazard Storage Box",
       "description": "Contains 25 slots for storing large amounts of items.",
@@ -6257,7 +6206,7 @@
       },
       "event": "NONE"
     },
-    "StorageMedkit": {
+    "medical-storage-box": {
       "slug": "medical-storage-box",
       "name": "Medical Storage Box",
       "description": "Contains 25 slots for storing large amounts of items.",
@@ -6276,7 +6225,7 @@
       },
       "event": "NONE"
     },
-    "TradingPost": {
+    "the-hub": {
       "slug": "the-hub",
       "name": "The HUB",
       "description": "The heart of your factory. This is where you complete FICSIT milestones to unlock additional blueprints of buildings, vehicles, parts, equipment etc.",
@@ -6299,7 +6248,7 @@
       },
       "event": "NONE"
     },
-    "TrainDockingStation": {
+    "freight-platform": {
       "slug": "freight-platform",
       "name": "Freight Platform",
       "description": "Freight Cars that stop at the Freight Platform will be loaded or unloaded by the Freight Platform.\nLoading and unloading options can be set inside the building.\nSnaps to other Platforms and Stations.\nNeeds to be connected to a powered Railway to function.",
@@ -6326,7 +6275,7 @@
       },
       "event": "NONE"
     },
-    "TrainDockingStationLiquid": {
+    "fluid-freight-platform": {
       "slug": "fluid-freight-platform",
       "name": "Fluid Freight Platform",
       "description": "Freight Cars that stop at the Freight Platform will be loaded or unloaded by the Freight Platform.\nLoading and unloading options can be set inside the building.\nSnaps to other Platforms and Stations.\nNeeds to be connected to a powered Railway to function.",
@@ -6353,7 +6302,7 @@
       },
       "event": "NONE"
     },
-    "TrainPlatformEmpty": {
+    "empty-platform": {
       "slug": "empty-platform",
       "name": "Empty Platform",
       "description": "An empty train platform for when you need to create some empty space.",
@@ -6376,7 +6325,7 @@
       },
       "event": "NONE"
     },
-    "TrainPlatformEmpty_02": {
+    "empty-platform-with-catwalk": {
       "slug": "empty-platform-with-catwalk",
       "name": "Empty Platform With Catwalk",
       "description": "An empty train platform for when you need to create some empty space.",
@@ -6399,7 +6348,7 @@
       },
       "event": "NONE"
     },
-    "WalkwayCross": {
+    "walkway-crossing": {
       "slug": "walkway-crossing",
       "name": "Walkway Crossing",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6416,7 +6365,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "WalkwayRamp": {
+    "walkway-ramp": {
       "slug": "walkway-ramp",
       "name": "Walkway Ramp",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6433,7 +6382,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "WalkwayStraight": {
+    "walkway-straight": {
       "slug": "walkway-straight",
       "name": "Walkway Straight",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6450,7 +6399,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "WalkwayT": {
+    "walkway-t-crossing": {
       "slug": "walkway-t-crossing",
       "name": "Walkway T-Crossing",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6467,7 +6416,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "WalkwayTurn": {
+    "walkway-turn": {
       "slug": "walkway-turn",
       "name": "Walkway Turn",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6484,7 +6433,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CatwalkCross": {
+    "catwalk-crossing": {
       "slug": "catwalk-crossing",
       "name": "Catwalk Crossing",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6501,7 +6450,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CatwalkRamp": {
+    "catwalk-ramp": {
       "slug": "catwalk-ramp",
       "name": "Catwalk Ramp",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6518,7 +6467,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CatwalkStairs": {
+    "catwalk-stairs": {
       "slug": "catwalk-stairs",
       "name": "Catwalk Stairs",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6535,7 +6484,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CatwalkStraight": {
+    "catwalk-straight": {
       "slug": "catwalk-straight",
       "name": "Catwalk Straight",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6552,7 +6501,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CatwalkT": {
+    "catwalk-t-crossing": {
       "slug": "catwalk-t-crossing",
       "name": "Catwalk T-Crossing",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6569,7 +6518,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "CatwalkTurn": {
+    "catwalk-corner": {
       "slug": "catwalk-corner",
       "name": "Catwalk Corner",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
@@ -6586,7 +6535,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_8x4_01": {
+    "basic-wall-4m-ficsit": {
       "slug": "basic-wall-4m-ficsit",
       "name": "Basic Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -6603,7 +6552,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_8x4_02": {
+    "basic-wall-4m-steel": {
       "slug": "basic-wall-4m-steel",
       "name": "Basic Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -6620,7 +6569,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wallonveyor_8x4_01": {
+    "conveyor-wall-x3": {
       "slug": "conveyor-wall-x3",
       "name": "Conveyor Wall x3",
       "description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -6637,7 +6586,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wallonveyor_8x4_01_Steel": {
+    "conveyor-wall-x3-steel": {
       "slug": "conveyor-wall-x3-steel",
       "name": "Conveyor Wall x3",
       "description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -6654,7 +6603,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wallonveyor_8x4_02": {
+    "conveyor-wall-x2": {
       "slug": "conveyor-wall-x2",
       "name": "Conveyor Wall x2",
       "description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -6671,7 +6620,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wallonveyor_8x4_02_Steel": {
+    "conveyor-wall-x2-steel": {
       "slug": "conveyor-wall-x2-steel",
       "name": "Conveyor Wall x2",
       "description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -6688,7 +6637,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wallonveyor_8x4_03": {
+    "conveyor-wall-x1": {
       "slug": "conveyor-wall-x1",
       "name": "Conveyor Wall x1",
       "description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -6705,7 +6654,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wallonveyor_8x4_03_Steel": {
+    "conveyor-wall-x1-steel": {
       "slug": "conveyor-wall-x1-steel",
       "name": "Conveyor Wall x1",
       "description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -6722,7 +6671,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Gate_8x4_01": {
+    "gate-hole-wall": {
       "slug": "gate-hole-wall",
       "name": "Gate Hole Wall",
       "description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
@@ -6739,7 +6688,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Window_8x4_01": {
+    "single-window": {
       "slug": "single-window",
       "name": "Single Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -6756,7 +6705,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Window_8x4_02": {
+    "frame-window": {
       "slug": "frame-window",
       "name": "Frame Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -6773,7 +6722,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Window_8x4_03": {
+    "panel-window": {
       "slug": "panel-window",
       "name": "Panel Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -6790,7 +6739,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Window_8x4_04": {
+    "reinforced-window": {
       "slug": "reinforced-window",
       "name": "Reinforced Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -6807,7 +6756,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x1": {
+    "basic-wall-1m-concrete": {
       "slug": "basic-wall-1m-concrete",
       "name": "Basic Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
@@ -6824,7 +6773,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4": {
+    "basic-wall-4m-concrete": {
       "slug": "basic-wall-4m-concrete",
       "name": "Basic Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -6841,7 +6790,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4onveyorHole_01": {
+    "conveyor-wall-x1-concrete": {
       "slug": "conveyor-wall-x1-concrete",
       "name": "Conveyor Wall x1",
       "description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -6858,7 +6807,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4onveyorHole_02": {
+    "conveyor-wall-x2-concrete": {
       "slug": "conveyor-wall-x2-concrete",
       "name": "Conveyor Wall x2",
       "description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -6875,7 +6824,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4onveyorHole_03": {
+    "conveyor-wall-x3-concrete": {
       "slug": "conveyor-wall-x3-concrete",
       "name": "Conveyor Wall x3",
       "description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -6892,7 +6841,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4_Window_01": {
+    "single-window-concrete": {
       "slug": "single-window-concrete",
       "name": "Single Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -6909,7 +6858,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4_Window_02": {
+    "frame-window-concrete": {
       "slug": "frame-window-concrete",
       "name": "Frame Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -6926,7 +6875,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4_Window_03": {
+    "panel-window-concrete": {
       "slug": "panel-window-concrete",
       "name": "Panel Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -6943,7 +6892,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4_Window_04": {
+    "reinforced-window-concrete": {
       "slug": "reinforced-window-concrete",
       "name": "Reinforced Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -6960,7 +6909,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_Angular_8x4": {
+    "tilted-wall-4m-concrete": {
       "slug": "tilted-wall-4m-concrete",
       "name": "Tilted Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -6977,7 +6926,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_Angular_8x8": {
+    "tilted-wall-8m-concrete": {
       "slug": "tilted-wall-8m-concrete",
       "name": "Tilted Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -6994,7 +6943,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x1_FlipTris": {
+    "inv-ramp-wall-1m-concrete": {
       "slug": "inv-ramp-wall-1m-concrete",
       "name": "Inv. Ramp Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
@@ -7011,7 +6960,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x2_FlipTris": {
+    "inv-ramp-wall-2m-concrete": {
       "slug": "inv-ramp-wall-2m-concrete",
       "name": "Inv. Ramp Wall 2m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
@@ -7028,7 +6977,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4_FlipTris": {
+    "inv-ramp-wall-4m-concrete": {
       "slug": "inv-ramp-wall-4m-concrete",
       "name": "Inv. Ramp Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7045,7 +6994,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x8_FlipTris": {
+    "inv-ramp-wall-8m-concrete": {
       "slug": "inv-ramp-wall-8m-concrete",
       "name": "Inv. Ramp Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7062,7 +7011,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_Gate_8x4": {
+    "gate-hole-wall-concrete": {
       "slug": "gate-hole-wall-concrete",
       "name": "Gate Hole Wall",
       "description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
@@ -7079,7 +7028,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x1_Tris": {
+    "ramp-wall-1m-concrete": {
       "slug": "ramp-wall-1m-concrete",
       "name": "Ramp Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
@@ -7096,7 +7045,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x2_Tris": {
+    "ramp-wall-2m-concrete": {
       "slug": "ramp-wall-2m-concrete",
       "name": "Ramp Wall 2m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
@@ -7113,7 +7062,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4_Tris": {
+    "ramp-wall-4m-concrete": {
       "slug": "ramp-wall-4m-concrete",
       "name": "Ramp Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7130,7 +7079,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x8_Tris": {
+    "ramp-wall-8m-concrete": {
       "slug": "ramp-wall-8m-concrete",
       "name": "Ramp Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7147,7 +7096,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x1": {
+    "basic-wall-1m-ficsit": {
       "slug": "basic-wall-1m-ficsit",
       "name": "Basic Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
@@ -7164,7 +7113,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_Angular_8x4": {
+    "tilted-wall-4m-ficsit": {
       "slug": "tilted-wall-4m-ficsit",
       "name": "Tilted Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7181,7 +7130,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_Angular_8x8": {
+    "tilted-wall-8m-ficsit": {
       "slug": "tilted-wall-8m-ficsit",
       "name": "Tilted Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7198,7 +7147,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x1_FlipTris": {
+    "inv-ramp-wall-1m-ficsit": {
       "slug": "inv-ramp-wall-1m-ficsit",
       "name": "Inv. Ramp Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
@@ -7215,7 +7164,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x2_FlipTris": {
+    "inv-ramp-wall-2m-ficsit": {
       "slug": "inv-ramp-wall-2m-ficsit",
       "name": "Inv. Ramp Wall 2m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
@@ -7232,7 +7181,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x4_FlipTris": {
+    "inv-ramp-wall-4m-ficsit": {
       "slug": "inv-ramp-wall-4m-ficsit",
       "name": "Inv. Ramp Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7249,7 +7198,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x8_FlipTris": {
+    "inv-ramp-wall-8m-ficsit": {
       "slug": "inv-ramp-wall-8m-ficsit",
       "name": "Inv. Ramp Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7266,7 +7215,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x1_Tris": {
+    "ramp-wall-1m-ficsit": {
       "slug": "ramp-wall-1m-ficsit",
       "name": "Ramp Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
@@ -7283,7 +7232,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x2_Tris": {
+    "ramp-wall-2m-ficsit": {
       "slug": "ramp-wall-2m-ficsit",
       "name": "Ramp Wall 2m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
@@ -7300,7 +7249,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x4_Tris": {
+    "ramp-wall-4m-ficsit": {
       "slug": "ramp-wall-4m-ficsit",
       "name": "Ramp Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7317,7 +7266,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x8_Tris": {
+    "ramp-wall-8m-ficsit": {
       "slug": "ramp-wall-8m-ficsit",
       "name": "Ramp Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7334,7 +7283,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_8x1": {
+    "basic-wall-1m-steel": {
       "slug": "basic-wall-1m-steel",
       "name": "Basic Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
@@ -7351,7 +7300,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_8x4_Gate_01": {
+    "gate-hole-wall-steel": {
       "slug": "gate-hole-wall-steel",
       "name": "Gate Hole Wall",
       "description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
@@ -7368,7 +7317,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_8x4_Window_01": {
+    "single-window-steel": {
       "slug": "single-window-steel",
       "name": "Single Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -7385,7 +7334,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_8x4_Window_02": {
+    "reinforced-window-steel": {
       "slug": "reinforced-window-steel",
       "name": "Reinforced Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -7402,7 +7351,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_8x4_Window_03": {
+    "frame-window-steel": {
       "slug": "frame-window-steel",
       "name": "Frame Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -7419,7 +7368,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_8x4_Window_04": {
+    "panel-window-steel": {
       "slug": "panel-window-steel",
       "name": "Panel Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -7436,7 +7385,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_FlipTris_8x1": {
+    "inv-ramp-wall-1m-steel": {
       "slug": "inv-ramp-wall-1m-steel",
       "name": "Inv. Ramp Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
@@ -7453,7 +7402,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_FlipTris_8x2": {
+    "inv-ramp-wall-2m-steel": {
       "slug": "inv-ramp-wall-2m-steel",
       "name": "Inv. Ramp Wall 2m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
@@ -7470,7 +7419,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_FlipTris_8x4": {
+    "inv-ramp-wall-4m-steel": {
       "slug": "inv-ramp-wall-4m-steel",
       "name": "Inv. Ramp Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7487,7 +7436,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_FlipTris_8x8": {
+    "inv-ramp-wall-8m-steel": {
       "slug": "inv-ramp-wall-8m-steel",
       "name": "Inv. Ramp Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7504,7 +7453,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_Tris_8x1": {
+    "ramp-wall-1m-steel": {
       "slug": "ramp-wall-1m-steel",
       "name": "Ramp Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
@@ -7521,7 +7470,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_Tris_8x2": {
+    "ramp-wall-2m-steel": {
       "slug": "ramp-wall-2m-steel",
       "name": "Ramp Wall 2m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
@@ -7538,7 +7487,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_Tris_8x4": {
+    "ramp-wall-4m-steel": {
       "slug": "ramp-wall-4m-steel",
       "name": "Ramp Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7555,7 +7504,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "SteelWall_Tris_8x8": {
+    "ramp-wall-8m-steel": {
       "slug": "ramp-wall-8m-steel",
       "name": "Ramp Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7572,7 +7521,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "WallSet_Steel_Angular_8x4": {
+    "tilted-wall-4m-steel": {
       "slug": "tilted-wall-4m-steel",
       "name": "Tilted Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7589,7 +7538,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "WallSet_Steel_Angular_8x8": {
+    "tilted-wall-8m-steel": {
       "slug": "tilted-wall-8m-steel",
       "name": "Tilted Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7606,7 +7555,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Fence_01": {
+    "industrial-railing": {
       "slug": "industrial-railing",
       "name": "Industrial Railing",
       "description": "Railings can be built on Foundations to create a safer working environment.",
@@ -7623,7 +7572,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wallonveyor_8x4_04": {
+    "wall-conveyor-perpendicular": {
       "slug": "wall-conveyor-perpendicular",
       "name": "Wall Conveyor Perpendicular",
       "description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4 m",
@@ -7640,7 +7589,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wallonveyor_8x4_04_Steel": {
+    "wall-conveyor-perpendicular-steel": {
       "slug": "wall-conveyor-perpendicular-steel",
       "name": "Wall Conveyor Perpendicular",
       "description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4 m",
@@ -7657,7 +7606,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Frame_01": {
+    "frame-wall": {
       "slug": "frame-wall",
       "name": "Frame Wall",
       "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
@@ -7674,7 +7623,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Railing_01": {
+    "modern-railing": {
       "slug": "modern-railing",
       "name": "Modern Railing",
       "description": "Railings can be built on Foundations to create a safer working environment.\n\nThis particular Railing is 4 meters long and angles automatically when built on Ramps.",
@@ -7691,7 +7640,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Concrete_Barrier_01": {
+    "road-barrier-concrete": {
       "slug": "road-barrier-concrete",
       "name": "Road Barrier",
       "description": "A concrete Barrier, used to create a safer working environment.",
@@ -7708,7 +7657,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Window_Thin_8x4_01": {
+    "full-frame-window": {
       "slug": "full-frame-window",
       "name": "Full Frame Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -7725,7 +7674,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Window_Thin_8x4_02": {
+    "hex-frame-window": {
       "slug": "hex-frame-window",
       "name": "Hex Frame Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
@@ -7742,7 +7691,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "WaterPump": {
+    "water-extractor": {
       "slug": "water-extractor",
       "name": "Water Extractor",
       "description": "Default extraction rate: 120m³ water per minute.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nExtracts water from the body of water it is built on.\nNote that the water needs to be deep enough and that rivers do not commonly suffice.",
@@ -7780,7 +7729,7 @@
       },
       "event": "NONE"
     },
-    "PowerLine": {
+    "power-line": {
       "slug": "power-line",
       "name": "Power Line",
       "description": "Used to connect Power Poles, Power Generators and Factory buildings.",
@@ -7797,24 +7746,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "xmassLights": {
-      "slug": "ficsmas-power-light",
-      "name": "FICSMAS Power Light",
-      "description": "Used to connect Power Poles, Power Generators and Factory buildings. Has pretty lights to boot!",
-      "categories": [
-        "Event"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "FICSMAS"
-    },
-    "ConveyorPoleStackable": {
+    "stackable-conveyor-pole": {
       "slug": "stackable-conveyor-pole",
       "name": "Stackable Conveyor Pole",
       "description": "Support for conveyor belts. Can be stacked on other stackable supports.",
@@ -7831,7 +7763,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PipeHyperStart": {
+    "hypertube-entrance": {
       "slug": "hypertube-entrance",
       "name": "Hypertube Entrance",
       "description": "Used to enter and power a Hypertube.",
@@ -7852,7 +7784,7 @@
       },
       "event": "NONE"
     },
-    "Beam": {
+    "metal-beam": {
       "slug": "metal-beam",
       "name": "Metal Beam",
       "description": "Snaps to other Beams and various other structural buildings.\nBeams support multiple build modes for different use cases.",
@@ -7869,7 +7801,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Beam_Painted": {
+    "painted-beam": {
       "slug": "painted-beam",
       "name": "Painted Beam",
       "description": "Snaps to other Beams and various other structural buildings.\nBeams support multiple build modes for different use cases.",
@@ -7886,7 +7818,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x4orner_01": {
+    "tilted-corner-wall-4m-concrete": {
       "slug": "tilted-corner-wall-4m-concrete",
       "name": "Tilted Corner Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7903,7 +7835,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_8x8orner_01": {
+    "tilted-corner-wall-8m-concrete": {
       "slug": "tilted-corner-wall-8m-concrete",
       "name": "Tilted Corner Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7920,7 +7852,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x4orner_01": {
+    "tilted-corner-wall-4m-ficsit": {
       "slug": "tilted-corner-wall-4m-ficsit",
       "name": "Tilted Corner Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7937,7 +7869,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Orange_8x8orner_01": {
+    "tilted-corner-wall-8m-ficsit": {
       "slug": "tilted-corner-wall-8m-ficsit",
       "name": "Tilted Corner Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7954,7 +7886,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Steel_8x4orner_01": {
+    "tilted-corner-wall-4m-steel": {
       "slug": "tilted-corner-wall-4m-steel",
       "name": "Tilted Corner Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
@@ -7971,7 +7903,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Steel_8x8orner_01": {
+    "tilted-corner-wall-8m-steel": {
       "slug": "tilted-corner-wall-8m-steel",
       "name": "Tilted Corner Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
@@ -7988,7 +7920,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Door_8x4_01": {
+    "center-door-wall": {
       "slug": "center-door-wall",
       "name": "Center Door Wall",
       "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -8005,7 +7937,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Door_8x4_01_Steel": {
+    "center-door-wall-steel": {
       "slug": "center-door-wall-steel",
       "name": "Center Door Wall",
       "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -8022,7 +7954,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Door_8x4_03": {
+    "side-door-wall": {
       "slug": "side-door-wall",
       "name": "Side Door Wall",
       "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -8039,7 +7971,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Wall_Door_8x4_03_Steel": {
+    "side-door-wall-steel": {
       "slug": "side-door-wall-steel",
       "name": "Side Door Wall",
       "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -8056,7 +7988,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "WalloncreteDoor_8x4": {
+    "center-door-wall-concrete": {
       "slug": "center-door-wall-concrete",
       "name": "Center Door Wall",
       "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -8073,7 +8005,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Walloncrete_SDoor_8x4": {
+    "side-door-wall-concrete": {
       "slug": "side-door-wall-concrete",
       "name": "Side Door Wall",
       "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
@@ -8090,7 +8022,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Gate_Automated_8x4": {
+    "automated-gate": {
       "slug": "automated-gate",
       "name": "Automated Gate",
       "description": "Automatically opens when living beings or vehicles approach it.\nGate settings can be configured.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
@@ -8107,7 +8039,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Beamonnector": {
+    "beam-connector": {
       "slug": "beam-connector",
       "name": "Beam Connector",
       "description": "Can be connected to Beams to hide seams and generally make connections look more appealing.",
@@ -8124,7 +8056,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Beamonnector_Double": {
+    "beam-connector-double": {
       "slug": "beam-connector-double",
       "name": "Beam Connector Double",
       "description": "Can be connected to Beams to hide seams and generally make connections look more appealing.",
@@ -8141,7 +8073,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Beam_Support": {
+    "beam-support": {
       "slug": "beam-support",
       "name": "Beam Support",
       "description": "Snaps to Beams and various other structural buildings.\nUsed to aesthetically connect beams to surfaces.",
@@ -8158,7 +8090,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "FoundationPassthrough_Pipe": {
+    "pipeline-floor-hole": {
       "slug": "pipeline-floor-hole",
       "name": "Pipeline Floor Hole",
       "description": "Can be attached to Foundations, allowing Pipelines to pass through them.",
@@ -8175,7 +8107,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "FoundationPassthrough_Lift": {
+    "conveyor-lift-floor-hole": {
       "slug": "conveyor-lift-floor-hole",
       "name": "Conveyor Lift Floor Hole",
       "description": "Can be attached to Foundations, allowing Conveyor Lifts to pass through them.",
@@ -8192,7 +8124,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "FoundationPassthrough_Hypertube": {
+    "hypertube-floor-hole": {
       "slug": "hypertube-floor-hole",
       "name": "Hypertube Floor Hole",
       "description": "Can be attached to Foundations, allowing Hypertubes to pass through them.",
@@ -8209,7 +8141,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Pillar_Small_Metal": {
+    "small-metal-pillar-metal": {
       "slug": "small-metal-pillar-metal",
       "name": "Small Metal Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 2m x 4m",
@@ -8226,7 +8158,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PillarTop": {
+    "pillar-top": {
       "slug": "pillar-top",
       "name": "Pillar Top",
       "description": "Pillar Top",
@@ -8243,7 +8175,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PillarBase_Small": {
+    "small-pillar-support": {
       "slug": "small-pillar-support",
       "name": "Small Pillar Support",
       "description": "The Pillar Support snaps to Pillars and can be placed on, for example, Foundations and Walls.",
@@ -8260,7 +8192,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PillarBase": {
+    "big-pillar-support": {
       "slug": "big-pillar-support",
       "name": "Big Pillar Support",
       "description": "The Pillar Support snaps to Pillars and can be placed on, for example, Foundations and Walls.",
@@ -8277,7 +8209,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PillarMiddle": {
+    "big-metal-pillar": {
       "slug": "big-metal-pillar",
       "name": "Big Metal Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 4m x 4m",
@@ -8294,7 +8226,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Pillar_Smalloncrete": {
+    "small-concrete-pillar-concrete": {
       "slug": "small-concrete-pillar-concrete",
       "name": "Small Concrete Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 2m x 4m",
@@ -8311,7 +8243,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PillarMiddleoncrete": {
+    "big-concrete-pillar-concrete": {
       "slug": "big-concrete-pillar-concrete",
       "name": "Big Concrete Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 4m x 4m",
@@ -8328,7 +8260,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Pillar_Small_Frame": {
+    "small-frame-pillar": {
       "slug": "small-frame-pillar",
       "name": "Small Frame Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 2m x 4m",
@@ -8345,7 +8277,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "PillarMiddle_Frame": {
+    "big-frame-pillar": {
       "slug": "big-frame-pillar",
       "name": "Big Frame Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 4m x 4m",
@@ -8362,7 +8294,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RailroadBlockSignal": {
+    "block-signal": {
       "slug": "block-signal",
       "name": "Block Signal",
       "description": "Train Signals are used to direct the movement of Trains to avoid collisions and bottlenecks.\n\nBlock Signals can be placed on Railways to create 'Blocks' between each other. When a Train is occupying such a Block, other Trains will be unable to enter it.\n\nCaution: Signals are directional! Trains are unable to move against this direction, so be sure to set up Signals in both directions for bi-directional Railways.",
@@ -8379,7 +8311,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RailroadPathSignal": {
+    "path-signal": {
       "slug": "path-signal",
       "name": "Path Signal",
       "description": "Train Signals are used to direct the movement of Trains to avoid collisions and bottlenecks.\n\nPath Signals are advanced signals that are especially useful for bi-directional Railways and complex intersections. They function similarly to Block Signals but rather than occupying the entire Block, Trains can reserve a specific path through it and will only enter the Block if their path allows them to fully pass through it.\n\nCaution: Signals are directional! Trains are unable to move against this direction, so be sure to set up Signals in both directions for bi-directional Railways.",
@@ -8396,7 +8328,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_Asphalt_8x1": {
+    "inv-ramp-1m-asphalt": {
       "slug": "inv-ramp-1m-asphalt",
       "name": "Inv. Ramp 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -8413,7 +8345,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_Asphalt_8x2": {
+    "inv-ramp-2m-asphalt": {
       "slug": "inv-ramp-2m-asphalt",
       "name": "Inv. Ramp 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8430,7 +8362,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_Asphalt_8x4": {
+    "inv-ramp-4m-asphalt": {
       "slug": "inv-ramp-4m-asphalt",
       "name": "Inv. Ramp 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8447,7 +8379,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Asphalt_8x1": {
+    "ramp-1m-asphalt": {
       "slug": "ramp-1m-asphalt",
       "name": "Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -8464,7 +8396,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Asphalt_8x2": {
+    "ramp-2m-asphalt": {
       "slug": "ramp-2m-asphalt",
       "name": "Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8481,7 +8413,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Asphalt_8x4": {
+    "ramp-4m-asphalt": {
       "slug": "ramp-4m-asphalt",
       "name": "Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8498,7 +8430,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble_Asphalt_8x1": {
+    "double-ramp-2m-asphalt": {
       "slug": "double-ramp-2m-asphalt",
       "name": "Double Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8515,7 +8447,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble_Asphalt_8x2": {
+    "double-ramp-4m-asphalt": {
       "slug": "double-ramp-4m-asphalt",
       "name": "Double Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8532,7 +8464,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble_Asphalt_8x4": {
+    "double-ramp-8m-asphalt": {
       "slug": "double-ramp-8m-asphalt",
       "name": "Double Ramp 8m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8549,7 +8481,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamponcrete_8x1": {
+    "inv-ramp-1m-concrete": {
       "slug": "inv-ramp-1m-concrete",
       "name": "Inv. Ramp 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -8566,7 +8498,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamponcrete_8x2": {
+    "inv-ramp-2m-concrete": {
       "slug": "inv-ramp-2m-concrete",
       "name": "Inv. Ramp 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8583,7 +8515,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamponcrete_8x4": {
+    "inv-ramp-4m-concrete": {
       "slug": "inv-ramp-4m-concrete",
       "name": "Inv. Ramp 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8600,7 +8532,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramponcrete_8x1": {
+    "ramp-1m-concrete": {
       "slug": "ramp-1m-concrete",
       "name": "Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -8617,7 +8549,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramponcrete_8x2": {
+    "ramp-2m-concrete": {
       "slug": "ramp-2m-concrete",
       "name": "Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8634,7 +8566,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramponcrete_8x4": {
+    "ramp-4m-concrete": {
       "slug": "ramp-4m-concrete",
       "name": "Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8651,7 +8583,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDoubleoncrete_8x1": {
+    "double-ramp-2m-concrete": {
       "slug": "double-ramp-2m-concrete",
       "name": "Double Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8668,7 +8600,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDoubleoncrete_8x2": {
+    "double-ramp-4m-concrete": {
       "slug": "double-ramp-4m-concrete",
       "name": "Double Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8685,7 +8617,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDoubleoncrete_8x4": {
+    "double-ramp-8m-concrete": {
       "slug": "double-ramp-8m-concrete",
       "name": "Double Ramp 8m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8702,7 +8634,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_Metal_8x1": {
+    "inv-ramp-1m-metal": {
       "slug": "inv-ramp-1m-metal",
       "name": "Inv. Ramp 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -8719,7 +8651,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_Metal_8x2": {
+    "inv-ramp-2m-metal": {
       "slug": "inv-ramp-2m-metal",
       "name": "Inv. Ramp 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8736,7 +8668,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_Metal_8x4": {
+    "inv-ramp-4m-metal": {
       "slug": "inv-ramp-4m-metal",
       "name": "Inv. Ramp 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8753,7 +8685,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Metal_8x1": {
+    "ramp-1m-metal": {
       "slug": "ramp-1m-metal",
       "name": "Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -8770,7 +8702,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Metal_8x2": {
+    "ramp-2m-metal": {
       "slug": "ramp-2m-metal",
       "name": "Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8787,7 +8719,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Metal_8x4": {
+    "ramp-4m-metal": {
       "slug": "ramp-4m-metal",
       "name": "Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8804,7 +8736,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble_Metal_8x1": {
+    "double-ramp-2m-metal": {
       "slug": "double-ramp-2m-metal",
       "name": "Double Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8821,7 +8753,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble_Metal_8x2": {
+    "double-ramp-4m-metal": {
       "slug": "double-ramp-4m-metal",
       "name": "Double Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8838,7 +8770,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble_Metal_8x4": {
+    "double-ramp-8m-metal": {
       "slug": "double-ramp-8m-metal",
       "name": "Double Ramp 8m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8855,7 +8787,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_Polished_8x1": {
+    "inv-ramp-1m-polished": {
       "slug": "inv-ramp-1m-polished",
       "name": "Inv. Ramp 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -8872,7 +8804,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_Polished_8x2": {
+    "inv-ramp-2m-polished": {
       "slug": "inv-ramp-2m-polished",
       "name": "Inv. Ramp 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8889,7 +8821,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "InvertedRamp_Polished_8x4": {
+    "inv-ramp-4m-polished": {
       "slug": "inv-ramp-4m-polished",
       "name": "Inv. Ramp 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8906,7 +8838,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Polished_8x1": {
+    "ramp-1m-polished": {
       "slug": "ramp-1m-polished",
       "name": "Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -8923,7 +8855,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Polished_8x2": {
+    "ramp-2m-polished": {
       "slug": "ramp-2m-polished",
       "name": "Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8940,7 +8872,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Polished_8x4": {
+    "ramp-4m-polished": {
       "slug": "ramp-4m-polished",
       "name": "Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8957,7 +8889,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble_Polished_8x1": {
+    "double-ramp-2m-polished": {
       "slug": "double-ramp-2m-polished",
       "name": "Double Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -8974,7 +8906,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble_Polished_8x2": {
+    "double-ramp-4m-polished": {
       "slug": "double-ramp-4m-polished",
       "name": "Double Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -8991,7 +8923,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble_Polished_8x4": {
+    "double-ramp-8m-polished": {
       "slug": "double-ramp-8m-polished",
       "name": "Double Ramp 8m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -9008,7 +8940,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_8x1_01": {
+    "ramp-1m": {
       "slug": "ramp-1m",
       "name": "Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -9025,7 +8957,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_8x2_01": {
+    "ramp-2m": {
       "slug": "ramp-2m",
       "name": "Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -9042,7 +8974,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_8x4_01": {
+    "ramp-4m": {
       "slug": "ramp-4m",
       "name": "Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -9059,7 +8991,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_8x4_Inverted_01": {
+    "inv-ramp-4m": {
       "slug": "inv-ramp-4m",
       "name": "Inv. Ramp 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -9076,7 +9008,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_8x8x8": {
+    "double-ramp-8m": {
       "slug": "double-ramp-8m",
       "name": "Double Ramp 8m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 8m",
@@ -9093,7 +9025,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble": {
+    "double-ramp-4m": {
       "slug": "double-ramp-4m",
       "name": "Double Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
@@ -9110,7 +9042,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampDouble_8x1": {
+    "double-ramp-2m": {
       "slug": "double-ramp-2m",
       "name": "Double Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -9127,7 +9059,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampInverted_8x1": {
+    "inv-ramp-1m": {
       "slug": "inv-ramp-1m",
       "name": "Inv. Ramp 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
@@ -9144,7 +9076,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "RampInverted_8x2_01": {
+    "inv-ramp-2m": {
       "slug": "inv-ramp-2m",
       "name": "Inv. Ramp 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
@@ -9161,7 +9093,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Frame_01": {
+    "frame-ramp": {
       "slug": "frame-ramp",
       "name": "Frame Ramp",
       "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
@@ -9178,7 +9110,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Ramp_Frame_Inverted_01": {
+    "inverted-frame-ramp": {
       "slug": "inverted-frame-ramp",
       "name": "Inverted Frame Ramp",
       "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
@@ -9195,7 +9127,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_A_01": {
+    "metal-roof-flat": {
       "slug": "metal-roof-flat",
       "name": "Metal Roof Flat",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
@@ -9212,7 +9144,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_A_02": {
+    "metal-roof-1m": {
       "slug": "metal-roof-1m",
       "name": "Metal Roof 1m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
@@ -9229,7 +9161,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_A_03": {
+    "metal-roof-2m": {
       "slug": "metal-roof-2m",
       "name": "Metal Roof 2m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
@@ -9246,7 +9178,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_A_04": {
+    "metal-roof-4m": {
       "slug": "metal-roof-4m",
       "name": "Metal Roof 4m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
@@ -9263,7 +9195,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Tar_01": {
+    "tar-roof-flat": {
       "slug": "tar-roof-flat",
       "name": "Tar Roof Flat",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
@@ -9280,7 +9212,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Tar_02": {
+    "tar-roof-1m": {
       "slug": "tar-roof-1m",
       "name": "Tar Roof 1m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
@@ -9297,7 +9229,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Tar_03": {
+    "tar-roof-2m": {
       "slug": "tar-roof-2m",
       "name": "Tar Roof 2m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
@@ -9314,7 +9246,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Tar_04": {
+    "tar-roof-4m": {
       "slug": "tar-roof-4m",
       "name": "Tar Roof 4m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
@@ -9331,7 +9263,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Window_01": {
+    "glass-roof-flat": {
       "slug": "glass-roof-flat",
       "name": "Glass Roof Flat",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
@@ -9348,7 +9280,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Window_02": {
+    "glass-roof-1m": {
       "slug": "glass-roof-1m",
       "name": "Glass Roof 1m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
@@ -9365,7 +9297,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Window_03": {
+    "glass-roof-2m": {
       "slug": "glass-roof-2m",
       "name": "Glass Roof 2m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
@@ -9382,7 +9314,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Window_04": {
+    "glass-roof-4m": {
       "slug": "glass-roof-4m",
       "name": "Glass Roof 4m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
@@ -9399,7 +9331,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Orange_02": {
+    "ficsit-roof-1m-ficsit": {
       "slug": "ficsit-roof-1m-ficsit",
       "name": "FICSIT Roof 1m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
@@ -9416,7 +9348,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Orange_03": {
+    "ficsit-roof-2m-ficsit": {
       "slug": "ficsit-roof-2m-ficsit",
       "name": "FICSIT Roof 2m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
@@ -9433,7 +9365,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Orange_04": {
+    "ficsit-roof-4m-ficsit": {
       "slug": "ficsit-roof-4m-ficsit",
       "name": "FICSIT Roof 4m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
@@ -9450,7 +9382,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Roof_Orange_01": {
+    "ficsit-roof-flat-ficsit": {
       "slug": "ficsit-roof-flat-ficsit",
       "name": "FICSIT Roof Flat",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
@@ -9467,7 +9399,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StandaloneWidgetSign_Huge": {
+    "large-billboard": {
       "slug": "large-billboard",
       "name": "Large Billboard",
       "description": "Signs can be customized with different elements, such as icons and text, to improve factory organization.\n\nCan be placed freely, on Walls, or attached to a variety of buildings, such as Storage Containers.\n\nSize: 16m x 8m",
@@ -9484,7 +9416,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StandaloneWidgetSign_Large": {
+    "small-billboard": {
       "slug": "small-billboard",
       "name": "Small Billboard",
       "description": "Signs can be customized with different elements, such as icons and text, to improve factory organization.\n\nCan be placed freely, on Walls, or attached to a variety of buildings, such as Storage Containers.\n\nSize: 8m x 4m",
@@ -9501,7 +9433,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StandaloneWidgetSign_Medium": {
+    "display-sign": {
       "slug": "display-sign",
       "name": "Display Sign",
       "description": "Signs can be customized with different elements, such as icons and text, to improve factory organization.\n\nCan be placed freely, on Walls, or attached to a variety of buildings, such as Storage Containers.\n\nSize: 2m x 1m",
@@ -9518,7 +9450,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StandaloneWidgetSign_Portrait": {
+    "portrait-sign": {
       "slug": "portrait-sign",
       "name": "Portrait Sign",
       "description": "Signs can be customized with different elements, such as icons and text, to improve factory organization.\n\nCan be placed freely, on Walls, or attached to a variety of buildings, such as Storage Containers.\n\nSize: 2m x 3m",
@@ -9535,7 +9467,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StandaloneWidgetSign_Square": {
+    "square-sign-2m": {
       "slug": "square-sign-2m",
       "name": "Square Sign 2m",
       "description": "Signs can be customized with different elements, such as icons and text, to improve factory organization.\n\nCan be placed freely, on Walls, or attached to a variety of buildings, such as Storage Containers.\n\nSize: 2m x 2m",
@@ -9552,7 +9484,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StandaloneWidgetSign_Square_Small": {
+    "square-sign-1m": {
       "slug": "square-sign-1m",
       "name": "Square Sign 1m",
       "description": "Signs can be customized with different elements, such as icons and text, to improve factory organization.\n\nCan be placed freely, on Walls, or attached to a variety of buildings, such as Storage Containers.\n\nSize: 1m x 1m",
@@ -9569,7 +9501,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StandaloneWidgetSign_Small": {
+    "label-sign-2m": {
       "slug": "label-sign-2m",
       "name": "Label Sign 2m",
       "description": "Signs can be customized with different elements, such as icons and text, to improve factory organization.\n\nCan be placed freely, on Walls, or attached to a variety of buildings, such as Storage Containers.\n\nSize: 2m x 0.5m",
@@ -9586,7 +9518,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StandaloneWidgetSign_SmallVeryWide": {
+    "label-sign-4m": {
       "slug": "label-sign-4m",
       "name": "Label Sign 4m",
       "description": "Signs can be customized with different elements, such as icons and text, to improve factory organization.\n\nCan be placed freely, on Walls, or attached to a variety of buildings, such as Storage Containers.\n\nSize: 4m x 0.5m",
@@ -9603,7 +9535,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StandaloneWidgetSign_SmallWide": {
+    "label-sign-3m": {
       "slug": "label-sign-3m",
       "name": "Label Sign 3m",
       "description": "Signs can be customized with different elements, such as icons and text, to improve factory organization.\n\nCan be placed freely, on Walls, or attached to a variety of buildings, such as Storage Containers.\n\nSize: 3m x 0.5m",
@@ -9620,7 +9552,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "StandaloneWidgetSign_Square_Tiny": {
+    "square-sign-0-5m": {
       "slug": "square-sign-0-5m",
       "name": "Square Sign 0.5m",
       "description": "Signs can be customized with different elements, such as icons and text, to improve factory organization.\n\nCan be placed freely, on Walls, or attached to a variety of buildings, such as Storage Containers.\n\nSize: 0.5m x 0.5m",
@@ -9637,7 +9569,7 @@
       "meta": {},
       "event": "NONE"
     },
-    "Truck": {
+    "truck": {
       "slug": "truck",
       "name": "Truck",
       "description": "Fuel: Any fuel type\n\n48-slot inventory. Has a built-in craft bench.\nCan be automated to pick up and deliver resources at truck stations.\n\nNicknamed the Unit by FICSIT pioneers because of its massive frame.",
@@ -9659,7 +9591,7 @@
       },
       "event": "NONE"
     },
-    "DroneTransport": {
+    "drone": {
       "slug": "drone",
       "name": "Drone",
       "description": "Has to be built on a Drone Port.\n\nFuel: Batteries, based on travel distance.\nRefuels at any of its connected Ports, if able.\n\n9-slot inventory.\n\nTransports available input back and forth between its home and destination Ports. Drone Status and other details are shown on its home Drone Port.",
@@ -9681,7 +9613,7 @@
       },
       "event": "NONE"
     },
-    "Tractor": {
+    "tractor": {
       "slug": "tractor",
       "name": "Tractor",
       "description": "Fuel: Any fuel type\n\n25-slot inventory. Has a built-in craft bench.\nCan be automated to pick up and deliver resources at truck stations.\n\nNicknamed the Sugarcube by FICSIT pioneers with the justification “It’s pretty sweet, y’know”.",
@@ -9703,7 +9635,7 @@
       },
       "event": "NONE"
     },
-    "FreightWagon": {
+    "freight-car": {
       "slug": "freight-car",
       "name": "Freight Car",
       "description": "The Freight Car can be built on Railways and attached to an Electric Locomotive or other Freight Car to transport resources. \nResources are loaded and unloaded at Freight Platforms.\nHas a 1600m³ or 32 slot capacity, depending on the resources.",
@@ -9725,7 +9657,7 @@
       },
       "event": "NONE"
     },
-    "Locomotive": {
+    "electric-locomotive": {
       "slug": "electric-locomotive",
       "name": "Electric Locomotive",
       "description": "The Locomotive is used to move Freight Cars from station to station.\nRequires between 25-110 MW of power to drive. \nMust be built on railway.\n\nNicknamed 'Leif' by FICSIT pioneers because of its reliability.",
@@ -9754,7 +9686,7 @@
       },
       "event": "NONE"
     },
-    "Explorer": {
+    "explorer": {
       "slug": "explorer",
       "name": "Explorer",
       "description": "Fuel: Any fuel type\n\n24-slot inventory. Has a built-in craft bench.\n\nFast and nimble exploration vehicle. Tuned for really rough terrain and able to climb almost vertical surfaces.",
@@ -9776,7 +9708,7 @@
       },
       "event": "NONE"
     },
-    "CyberWagon": {
+    "cyber-wagon": {
       "slug": "cyber-wagon",
       "name": "Cyber Wagon",
       "description": "Absolutely indestructible.\nNeeds no further introduction.",
