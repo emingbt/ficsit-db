@@ -24,4 +24,14 @@ const StyledLine = styled.div`
   background-color: ${props => props.color};
 `
 
-export { Container, Main, StyledLine }
+const StyledTitle = styled.div`
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-size: 2.5rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+`
+
+export { Container, Main, StyledLine, StyledTitle }
