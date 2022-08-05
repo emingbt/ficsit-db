@@ -59,7 +59,7 @@ export default function Item({ item }) {
 export async function getServerSideProps(context) {
   var name = context.query.name
   const item = getItemByItemName(name)
-  console.log('item is here!@! ->', item)
+
   return {
     props: { item }
   }

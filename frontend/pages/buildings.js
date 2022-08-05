@@ -73,8 +73,6 @@ export default function Buildings() {
     ]
   }
 
-  console.log('entries', Object.entries(mockBuildingsData))
-
   mockBuildingsData = Object.entries(mockBuildingsData)
 
   return (
