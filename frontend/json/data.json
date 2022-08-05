@@ -2626,7 +2626,7 @@
       "name": "Conveyor Wall Mount",
       "description": "Can be attached to walls and is used as a connection for conveyor belts.\nUseful to route conveyor belts in a more controlled manner and over long distances.",
       "categories": [
-        "SConverPole"
+        "ConverPole"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2711,7 +2711,7 @@
       "name": "Conveyor Merger",
       "description": "Merges up to three conveyor belts into one.",
       "categories": [
-        "SConveyorAttachments"
+        "ConveyorAttachments"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2728,7 +2728,7 @@
       "name": "Conveyor Splitter",
       "description": "Splits conveyor belts in three. \nUseful to move parts and resources from oversaturated conveyor belts.",
       "categories": [
-        "SConveyorAttachments"
+        "ConveyorAttachments"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2762,7 +2762,7 @@
       "name": "Conveyor Belt Mk.1",
       "description": "Transports up to 60 resources per minute. Used to move resources between buildings.",
       "categories": [
-        "SConveyorBelts"
+        "ConveyorBelts"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2781,7 +2781,7 @@
       "name": "Conveyor Belt Mk.5",
       "description": "Transports up to 780 resources per minute. Used to move resources between buildings.",
       "categories": [
-        "SConveyorBelts"
+        "ConveyorBelts"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2800,7 +2800,7 @@
       "name": "Conveyor Belt Mk.2",
       "description": "Transports up to 120 resources per minute. Used to move resources between buildings.",
       "categories": [
-        "SConveyorBelts"
+        "ConveyorBelts"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2819,7 +2819,7 @@
       "name": "Conveyor Belt Mk.3",
       "description": "Transports up to 270 resources per minute. Used to move resources between buildings.",
       "categories": [
-        "SConveyorBelts"
+        "ConveyorBelts"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2838,7 +2838,7 @@
       "name": "Conveyor Belt Mk.4",
       "description": "Transports up to 480 resources per minute. Used to move resources between buildings.",
       "categories": [
-        "SConveyorBelts"
+        "ConveyorBelts"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2857,7 +2857,7 @@
       "name": "Conveyor Lift Mk.1",
       "description": "Transports up to 60 resources per minute. Used to move resources between floors.",
       "categories": [
-        "SConveyLift"
+        "ConveyLift"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2876,7 +2876,7 @@
       "name": "Conveyor Lift Mk.5",
       "description": "Transports up to 780 resources per minute. Used to move resources between floors.",
       "categories": [
-        "SConveyLift"
+        "ConveyLift"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2895,7 +2895,7 @@
       "name": "Conveyor Lift Mk.2",
       "description": "Transports up to 120 resources per minute. Used to move resources between floors.",
       "categories": [
-        "SConveyLift"
+        "ConveyLift"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2914,7 +2914,7 @@
       "name": "Conveyor Lift Mk.3",
       "description": "Transports up to 270 resources per minute. Used to move resources between floors.",
       "categories": [
-        "SConveyLift"
+        "ConveyLift"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2933,7 +2933,7 @@
       "name": "Conveyor Lift Mk.4",
       "description": "Transports up to 480 resources per minute. Used to move resources between floors.",
       "categories": [
-        "SConveyLift"
+        "ConveyLift"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5540,7 +5540,7 @@
       "name": "Conveyor Pole",
       "description": "Can be used as a connection for conveyor belts. The height of the pole can be adjusted.\nUseful to route conveyor belts in a more controlled manner and over long distances.",
       "categories": [
-        "SConverPole"
+        "ConverPole"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6057,7 +6057,7 @@
       "name": "Smart Splitter",
       "description": "Splits conveyor belts in three.\nYou can set a rule for each output to decide exactly what part should go there.",
       "categories": [
-        "SConveyorAttachments"
+        "ConveyorAttachments"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6074,7 +6074,7 @@
       "name": "Programmable Splitter",
       "description": "Splits conveyor belts in three. \nYou can set rules for each output to decide exactly where each part should go.",
       "categories": [
-        "SConveyorAttachments"
+        "ConveyorAttachments"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6438,7 +6438,7 @@
       "name": "Catwalk Crossing",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
-        "SCatwalks"
+        "Catwalks"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6455,7 +6455,7 @@
       "name": "Catwalk Ramp",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
-        "SCatwalks"
+        "Catwalks"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6472,7 +6472,7 @@
       "name": "Catwalk Stairs",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
-        "SCatwalks"
+        "Catwalks"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6489,7 +6489,7 @@
       "name": "Catwalk Straight",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
-        "SCatwalks"
+        "Catwalks"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6506,7 +6506,7 @@
       "name": "Catwalk T-Crossing",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
-        "SCatwalks"
+        "Catwalks"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6523,7 +6523,7 @@
       "name": "Catwalk Corner",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
-        "SCatwalks"
+        "Catwalks"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6574,7 +6574,7 @@
       "name": "Conveyor Wall x3",
       "description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6591,7 +6591,7 @@
       "name": "Conveyor Wall x3",
       "description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6608,7 +6608,7 @@
       "name": "Conveyor Wall x2",
       "description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6625,7 +6625,7 @@
       "name": "Conveyor Wall x2",
       "description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6642,7 +6642,7 @@
       "name": "Conveyor Wall x1",
       "description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6659,7 +6659,7 @@
       "name": "Conveyor Wall x1",
       "description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6795,7 +6795,7 @@
       "name": "Conveyor Wall x1",
       "description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6812,7 +6812,7 @@
       "name": "Conveyor Wall x2",
       "description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6829,7 +6829,7 @@
       "name": "Conveyor Wall x3",
       "description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7577,7 +7577,7 @@
       "name": "Wall Conveyor Perpendicular",
       "description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4 m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7594,7 +7594,7 @@
       "name": "Wall Conveyor Perpendicular",
       "description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4 m",
       "categories": [
-        "SConveyorConnections"
+        "ConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7751,7 +7751,7 @@
       "name": "Stackable Conveyor Pole",
       "description": "Support for conveyor belts. Can be stacked on other stackable supports.",
       "categories": [
-        "SConverPole"
+        "ConverPole"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8112,7 +8112,7 @@
       "name": "Conveyor Lift Floor Hole",
       "description": "Can be attached to Foundations, allowing Conveyor Lifts to pass through them.",
       "categories": [
-        "SConverPole"
+        "ConverPole"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
