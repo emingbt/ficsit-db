@@ -2626,7 +2626,7 @@
       "name": "Conveyor Wall Mount",
       "description": "Can be attached to walls and is used as a connection for conveyor belts.\nUseful to route conveyor belts in a more controlled manner and over long distances.",
       "categories": [
-        "ConverPole"
+        "ConveyorSupports"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2643,7 +2643,7 @@
       "name": "Hypertube Wall Hole",
       "description": "Can be attached to walls to allow Hypertubes to pass through them.",
       "categories": [
-        "HyperTubes"
+        "Hypertubes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2660,7 +2660,7 @@
       "name": "Hypertube Wall Support",
       "description": "Can be attached to walls. \nSupports for Hypertubes to allow for longer distances.",
       "categories": [
-        "HyperTubes"
+        "Hypertubes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2677,7 +2677,7 @@
       "name": "Pipeline Wall Support",
       "description": "Can be attached to walls.\nUsed to connect Pipelines over longer distances.",
       "categories": [
-        "PipeSupport"
+        "PipelineSupports"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2694,7 +2694,7 @@
       "name": "Pipeline Wall Hole",
       "description": "Can be attached to walls, allowing Pipelines to pass through them.",
       "categories": [
-        "PipeSupport"
+        "PipelineSupports"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2711,7 +2711,7 @@
       "name": "Conveyor Merger",
       "description": "Merges up to three conveyor belts into one.",
       "categories": [
-        "ConveyorAttachments"
+        "Sorting"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2728,7 +2728,7 @@
       "name": "Conveyor Splitter",
       "description": "Splits conveyor belts in three. \nUseful to move parts and resources from oversaturated conveyor belts.",
       "categories": [
-        "ConveyorAttachments"
+        "Sorting"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2857,7 +2857,7 @@
       "name": "Conveyor Lift Mk.1",
       "description": "Transports up to 60 resources per minute. Used to move resources between floors.",
       "categories": [
-        "ConveyLift"
+        "ConveyorLifts"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2876,7 +2876,7 @@
       "name": "Conveyor Lift Mk.5",
       "description": "Transports up to 780 resources per minute. Used to move resources between floors.",
       "categories": [
-        "ConveyLift"
+        "ConveyorLifts"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2895,7 +2895,7 @@
       "name": "Conveyor Lift Mk.2",
       "description": "Transports up to 120 resources per minute. Used to move resources between floors.",
       "categories": [
-        "ConveyLift"
+        "ConveyorLifts"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2914,7 +2914,7 @@
       "name": "Conveyor Lift Mk.3",
       "description": "Transports up to 270 resources per minute. Used to move resources between floors.",
       "categories": [
-        "ConveyLift"
+        "ConveyorLifts"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2933,7 +2933,7 @@
       "name": "Conveyor Lift Mk.4",
       "description": "Transports up to 480 resources per minute. Used to move resources between floors.",
       "categories": [
-        "ConveyLift"
+        "ConveyorLifts"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -2952,7 +2952,7 @@
       "name": "Truck Station",
       "description": "Either send or receive resources to vehicles. Has an inventory with 48 slots.\nTransfers up to 120 stacks per minute to/from docked vehicle. \nAlways refuels vehicles if it has access to a matching fuel type.\n",
       "categories": [
-        "Vehicles"
+        "VehicleTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": true,
@@ -2974,7 +2974,7 @@
       "name": "Drone Port",
       "description": "Drone Ports can have one other Port assigned as their transport destination.\nEach Drone Port can contain a single Drone, which transports available input back and forth between its home and destination Ports.\n\nThe Drone Port interface provides delivery details and allows management of Port connections.",
       "categories": [
-        "Vehicles"
+        "VehicleTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": true,
@@ -3238,7 +3238,7 @@
       "name": "Down Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3255,7 +3255,7 @@
       "name": "Down Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3272,7 +3272,7 @@
       "name": "Down Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3289,7 +3289,7 @@
       "name": "Up Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3306,7 +3306,7 @@
       "name": "Up Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3323,7 +3323,7 @@
       "name": "Up Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3493,7 +3493,7 @@
       "name": "Down Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3510,7 +3510,7 @@
       "name": "Down Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3527,7 +3527,7 @@
       "name": "Down Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3544,7 +3544,7 @@
       "name": "Up Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3561,7 +3561,7 @@
       "name": "Up Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3578,7 +3578,7 @@
       "name": "Up Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3748,7 +3748,7 @@
       "name": "Down Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3765,7 +3765,7 @@
       "name": "Down Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3782,7 +3782,7 @@
       "name": "Down Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3799,7 +3799,7 @@
       "name": "Up Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3816,7 +3816,7 @@
       "name": "Up Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -3833,7 +3833,7 @@
       "name": "Up Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4003,7 +4003,7 @@
       "name": "Down Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4020,7 +4020,7 @@
       "name": "Down Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4037,7 +4037,7 @@
       "name": "Down Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4054,7 +4054,7 @@
       "name": "Up Corner Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4071,7 +4071,7 @@
       "name": "Up Corner Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4088,7 +4088,7 @@
       "name": "Up Corner Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4105,7 +4105,7 @@
       "name": "Foundation 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Floors"
+        "Foundations"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4122,7 +4122,7 @@
       "name": "Foundation 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Floors"
+        "Foundations"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4241,7 +4241,7 @@
       "name": "Inv. Up Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Inverted"
+        "InvertedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4258,7 +4258,7 @@
       "name": "Inv. Down Corner 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Inverted"
+        "InvertedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4275,7 +4275,7 @@
       "name": "Inv. Up Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Inverted"
+        "InvertedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4292,7 +4292,7 @@
       "name": "Inv. Down Corner 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Inverted"
+        "InvertedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4309,7 +4309,7 @@
       "name": "Inv. Up Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Inverted"
+        "InvertedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4326,7 +4326,7 @@
       "name": "Inv. Down Corner 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Inverted"
+        "InvertedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4343,7 +4343,7 @@
       "name": "Foundation 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Floors"
+        "Foundations"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4411,7 +4411,7 @@
       "name": "Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
       "categories": [
-        "QuatPipes"
+        "QuarterPipes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4428,7 +4428,7 @@
       "name": "Inverted Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
       "categories": [
-        "QuatPipes"
+        "QuarterPipes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4445,7 +4445,7 @@
       "name": "Inner Corner Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
       "categories": [
-        "QuatPipes"
+        "QuarterPipes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4462,7 +4462,7 @@
       "name": "Inverted Inner Corner Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
       "categories": [
-        "QuatPipes"
+        "QuarterPipes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4479,7 +4479,7 @@
       "name": "Outer Corner Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
       "categories": [
-        "QuatPipes"
+        "QuarterPipes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4496,7 +4496,7 @@
       "name": "Inverted Outer Corner Quarter Pipe",
       "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
       "categories": [
-        "QuatPipes"
+        "QuarterPipes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -4513,9 +4513,9 @@
       "name": "Resource Well Pressurizer",
       "description": "Can be placed on a Resource Well to activate it by pressurizing the underground resource.\nOnce activated, Resource Well Extractors can be placed on the surrounding sub-nodes to extract the resource.\nRequires Power. Overclocking increases the output potential of the entire Resource Well.",
       "categories": [
-        "OilProduction"
+        "FluidExtractors"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": false,
@@ -4555,9 +4555,9 @@
       "name": "Resource Well Extractor",
       "description": "Normal extraction rate: 60m³ fluid per minute.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nCan be placed on the activated sub-nodes of a Resource Well to collect the pressurized resources. Does not require Power.",
       "categories": [
-        "OilProduction"
+        "FluidExtractors"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": true,
       "isProduction": false,
@@ -5025,7 +5025,7 @@
       "categories": [
         "Manufacturers"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": true,
@@ -5054,7 +5054,7 @@
       "categories": [
         "Smelters"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": true,
@@ -5083,7 +5083,7 @@
       "categories": [
         "Smelters"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": true,
@@ -5112,7 +5112,7 @@
       "categories": [
         "Manufacturers"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": true,
@@ -5141,7 +5141,7 @@
       "categories": [
         "Manufacturers"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": true,
@@ -5170,7 +5170,7 @@
       "categories": [
         "Manufacturers"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": true,
@@ -5199,7 +5199,7 @@
       "categories": [
         "Manufacturers"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": true,
@@ -5228,7 +5228,7 @@
       "categories": [
         "Manufacturers"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": true,
@@ -5257,7 +5257,7 @@
       "categories": [
         "Manufacturers"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 7,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": true,
@@ -5289,7 +5289,7 @@
       "name": "Hypertube",
       "description": "Tubes for transporting FICSIT employees.\nA Hypertube Entrance needs to be attached to power and enter a Hypertube system.",
       "categories": [
-        "HyperTubes"
+        "Hypertubes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5354,7 +5354,7 @@
       "name": "Pipeline Mk.1",
       "description": "Outside indicators show volume, flow rate and direction.\nTransports up to 300m³ of fluid per minute.\nUsed to transport fluids.",
       "categories": [
-        "Pipes"
+        "Pipelines"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5373,7 +5373,7 @@
       "name": "Pipeline Mk.2",
       "description": "Outside indicators show volume, flow rate and direction.\nTransports up to 600m³ of fluid per minute.\nUsed to transport fluids.",
       "categories": [
-        "Pipes"
+        "Pipelines"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5392,7 +5392,7 @@
       "name": "Pipeline Junction Cross",
       "description": "Can be attached to a pipeline to split it 4-way.",
       "categories": [
-        "Pipes"
+        "Pipelines"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5409,7 +5409,7 @@
       "name": "Valve",
       "description": "Used to limit Pipeline flow rates.\nCan be attached to a Pipeline.\n\nNOTE: Has an in- and output direction.",
       "categories": [
-        "Pipes"
+        "Pipelines"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5426,7 +5426,7 @@
       "name": "Pipeline Pump Mk.1",
       "description": "Can be attached to a Pipeline to apply Head Lift.\nMaximum Head Lift: 20 meters\n(Allows fluids to be transported 20 meters upwards.)\n\nNOTE: Has an in- and output direction.\nNOTE: Head Lift does not stack, so space between Pumps is recommended.",
       "categories": [
-        "Pipes"
+        "Pipelines"
       ],
       "buildMenuPriority": null,
       "isPowered": true,
@@ -5449,7 +5449,7 @@
       "name": "Pipeline Pump Mk.2",
       "description": "Can be attached to a Pipeline to apply Head Lift.\nMaximum Head Lift: 50 meters\n(Allows fluids to be transported 50 meters upwards.)\n\nNOTE: Has an in- and output direction.\nNOTE: Head Lift does not stack, so space between Pumps is recommended.",
       "categories": [
-        "Pipes"
+        "Pipelines"
       ],
       "buildMenuPriority": null,
       "isPowered": true,
@@ -5472,7 +5472,7 @@
       "name": "Pipeline Support",
       "description": "Can be used as a connection for pipelines. The height of the support can be adjusted.\nUseful to route pipelines in a more controlled manner and over long distances.",
       "categories": [
-        "PipeSupport"
+        "PipelineSupports"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5489,7 +5489,7 @@
       "name": "Stackable Hypertube Support",
       "description": "Support for Hypertubes. Can be stacked on other stackable supports.",
       "categories": [
-        "HyperTubes"
+        "Hypertubes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5506,7 +5506,7 @@
       "name": "Hypertube Support",
       "description": "Supports for Hypertubes to allow for longer distances.",
       "categories": [
-        "HyperTubes"
+        "Hypertubes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5523,7 +5523,7 @@
       "name": "Stackable Pipeline Support",
       "description": "Support for pipelines. Can be stacked on other stackable supports.",
       "categories": [
-        "PipeSupport"
+        "PipelineSupports"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5540,7 +5540,7 @@
       "name": "Conveyor Pole",
       "description": "Can be used as a connection for conveyor belts. The height of the pole can be adjusted.\nUseful to route conveyor belts in a more controlled manner and over long distances.",
       "categories": [
-        "ConverPole"
+        "ConveyorSupports"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5766,7 +5766,7 @@
       "name": "Train Station",
       "description": "Locomotives can be set to drive to and stop at the Train Station.\nYou can connect power to the train station to power up the trains on the railway as well as transport the power to other stations.",
       "categories": [
-        "Trains"
+        "RailwayTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": true,
@@ -5792,7 +5792,7 @@
       "name": "Railway",
       "description": "Used to transport trains in a reliable and fast manner.\nHas a wide turn angle so make sure to plan it out properly.",
       "categories": [
-        "Trains"
+        "RailwayTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -5811,7 +5811,7 @@
       "categories": [
         "Miners"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": false,
@@ -5855,9 +5855,9 @@
       "name": "Oil Extractor",
       "description": "Normal extraction rate: 120m³ oil per minute.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nCan be built on an Oil Node to extract Crude Oil. Extraction rates depend on node purity.",
       "categories": [
-        "OilProduction"
+        "FluidExtractors"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": false,
@@ -5895,7 +5895,7 @@
       "categories": [
         "Miners"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": false,
@@ -5941,7 +5941,7 @@
       "categories": [
         "Miners"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": false,
@@ -6057,7 +6057,7 @@
       "name": "Smart Splitter",
       "description": "Splits conveyor belts in three.\nYou can set a rule for each output to decide exactly what part should go there.",
       "categories": [
-        "ConveyorAttachments"
+        "Sorting"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6074,7 +6074,7 @@
       "name": "Programmable Splitter",
       "description": "Splits conveyor belts in three. \nYou can set rules for each output to decide exactly where each part should go.",
       "categories": [
-        "ConveyorAttachments"
+        "Sorting"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6253,7 +6253,7 @@
       "name": "Freight Platform",
       "description": "Freight Cars that stop at the Freight Platform will be loaded or unloaded by the Freight Platform.\nLoading and unloading options can be set inside the building.\nSnaps to other Platforms and Stations.\nNeeds to be connected to a powered Railway to function.",
       "categories": [
-        "Trains"
+        "RailwayTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": true,
@@ -6280,7 +6280,7 @@
       "name": "Fluid Freight Platform",
       "description": "Freight Cars that stop at the Freight Platform will be loaded or unloaded by the Freight Platform.\nLoading and unloading options can be set inside the building.\nSnaps to other Platforms and Stations.\nNeeds to be connected to a powered Railway to function.",
       "categories": [
-        "Trains"
+        "RailwayTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": true,
@@ -6307,7 +6307,7 @@
       "name": "Empty Platform",
       "description": "An empty train platform for when you need to create some empty space.",
       "categories": [
-        "Trains"
+        "RailwayTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6330,7 +6330,7 @@
       "name": "Empty Platform With Catwalk",
       "description": "An empty train platform for when you need to create some empty space.",
       "categories": [
-        "Trains"
+        "RailwayTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6540,7 +6540,7 @@
       "name": "Basic Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
       "categories": [
-        "Walls"
+        "BasicWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6591,7 +6591,7 @@
       "name": "Conveyor Wall x3",
       "description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "ConveyorConnections"
+        "CustomizedConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6625,7 +6625,7 @@
       "name": "Conveyor Wall x2",
       "description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "ConveyorConnections"
+        "CustomizedConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6659,7 +6659,7 @@
       "name": "Conveyor Wall x1",
       "description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "ConveyorConnections"
+        "CustomizedConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6795,7 +6795,7 @@
       "name": "Conveyor Wall x1",
       "description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "ConveyorConnections"
+        "CustomizedConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6812,7 +6812,7 @@
       "name": "Conveyor Wall x2",
       "description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "ConveyorConnections"
+        "CustomizedConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6829,7 +6829,7 @@
       "name": "Conveyor Wall x3",
       "description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "ConveyorConnections"
+        "CustomizedConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6846,7 +6846,7 @@
       "name": "Single Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
       "categories": [
-        "Windows"
+        "CustomizedWindows"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6863,7 +6863,7 @@
       "name": "Frame Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
       "categories": [
-        "Windows"
+        "CustomizedWindows"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6880,7 +6880,7 @@
       "name": "Panel Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
       "categories": [
-        "Windows"
+        "CustomizedWindows"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6897,7 +6897,7 @@
       "name": "Reinforced Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
       "categories": [
-        "Windows"
+        "CustomizedWindows"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7016,7 +7016,7 @@
       "name": "Gate Hole Wall",
       "description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
       "categories": [
-        "Doors"
+        "CustomizedDoors"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7101,7 +7101,7 @@
       "name": "Basic Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
       "categories": [
-        "Walls"
+        "BasicWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7118,7 +7118,7 @@
       "name": "Tilted Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
       "categories": [
-        "AngularWalls"
+        "TiltedWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7135,7 +7135,7 @@
       "name": "Tilted Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
       "categories": [
-        "AngularWalls"
+        "TiltedWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7152,7 +7152,7 @@
       "name": "Inv. Ramp Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
       "categories": [
-        "UpperDiagonalWalls"
+        "InvertedRampWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7169,7 +7169,7 @@
       "name": "Inv. Ramp Wall 2m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
       "categories": [
-        "UpperDiagonalWalls"
+        "InvertedRampWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7186,7 +7186,7 @@
       "name": "Inv. Ramp Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
       "categories": [
-        "UpperDiagonalWalls"
+        "InvertedRampWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7203,7 +7203,7 @@
       "name": "Inv. Ramp Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
       "categories": [
-        "UpperDiagonalWalls"
+        "InvertedRampWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7220,7 +7220,7 @@
       "name": "Ramp Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
       "categories": [
-        "DiagonalWalls"
+        "RampWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7237,7 +7237,7 @@
       "name": "Ramp Wall 2m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
       "categories": [
-        "DiagonalWalls"
+        "RampWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7254,7 +7254,7 @@
       "name": "Ramp Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
       "categories": [
-        "DiagonalWalls"
+        "RampWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7271,7 +7271,7 @@
       "name": "Ramp Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
       "categories": [
-        "DiagonalWalls"
+        "RampWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7305,7 +7305,7 @@
       "name": "Gate Hole Wall",
       "description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
       "categories": [
-        "Doors"
+        "CustomizedDoors"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7322,7 +7322,7 @@
       "name": "Single Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
       "categories": [
-        "Windows"
+        "CustomizedWindows"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7339,7 +7339,7 @@
       "name": "Reinforced Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
       "categories": [
-        "Windows"
+        "CustomizedWindows"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7356,7 +7356,7 @@
       "name": "Frame Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
       "categories": [
-        "Windows"
+        "CustomizedWindows"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7373,7 +7373,7 @@
       "name": "Panel Window",
       "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
       "categories": [
-        "Windows"
+        "CustomizedWindows"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7594,7 +7594,7 @@
       "name": "Wall Conveyor Perpendicular",
       "description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4 m",
       "categories": [
-        "ConveyorConnections"
+        "CustomizedConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7696,9 +7696,9 @@
       "name": "Water Extractor",
       "description": "Default extraction rate: 120m³ water per minute.\nHead Lift: 10 meters.\n(Allows fluids to be transported 10 meters upwards.)\n\nExtracts water from the body of water it is built on.\nNote that the water needs to be deep enough and that rivers do not commonly suffice.",
       "categories": [
-        "OilProduction"
+        "FluidExtractors"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": false,
@@ -7751,7 +7751,7 @@
       "name": "Stackable Conveyor Pole",
       "description": "Support for conveyor belts. Can be stacked on other stackable supports.",
       "categories": [
-        "ConverPole"
+        "ConveyorSupports"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7768,7 +7768,7 @@
       "name": "Hypertube Entrance",
       "description": "Used to enter and power a Hypertube.",
       "categories": [
-        "HyperTubes"
+        "Hypertubes"
       ],
       "buildMenuPriority": null,
       "isPowered": true,
@@ -7857,7 +7857,7 @@
       "name": "Tilted Corner Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
       "categories": [
-        "AngularWalls"
+        "TiltedWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7874,7 +7874,7 @@
       "name": "Tilted Corner Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
       "categories": [
-        "AngularWalls"
+        "TiltedWalls"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7942,7 +7942,7 @@
       "name": "Center Door Wall",
       "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "Doors"
+        "CustomizedDoors"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7976,7 +7976,7 @@
       "name": "Side Door Wall",
       "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "Doors"
+        "CustomizedDoors"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -7993,7 +7993,7 @@
       "name": "Center Door Wall",
       "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "Doors"
+        "CustomizedDoors"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8010,7 +8010,7 @@
       "name": "Side Door Wall",
       "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
       "categories": [
-        "Doors"
+        "CustomizedDoors"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8095,7 +8095,7 @@
       "name": "Pipeline Floor Hole",
       "description": "Can be attached to Foundations, allowing Pipelines to pass through them.",
       "categories": [
-        "PipeSupport"
+        "PipelineSupports"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8112,7 +8112,7 @@
       "name": "Conveyor Lift Floor Hole",
       "description": "Can be attached to Foundations, allowing Conveyor Lifts to pass through them.",
       "categories": [
-        "ConverPole"
+        "ConveyorSupports"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8129,7 +8129,7 @@
       "name": "Hypertube Floor Hole",
       "description": "Can be attached to Foundations, allowing Hypertubes to pass through them.",
       "categories": [
-        "HyperTubes"
+        "Hypertubes"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8299,7 +8299,7 @@
       "name": "Block Signal",
       "description": "Train Signals are used to direct the movement of Trains to avoid collisions and bottlenecks.\n\nBlock Signals can be placed on Railways to create 'Blocks' between each other. When a Train is occupying such a Block, other Trains will be unable to enter it.\n\nCaution: Signals are directional! Trains are unable to move against this direction, so be sure to set up Signals in both directions for bi-directional Railways.",
       "categories": [
-        "Trains"
+        "RailwayTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8316,7 +8316,7 @@
       "name": "Path Signal",
       "description": "Train Signals are used to direct the movement of Trains to avoid collisions and bottlenecks.\n\nPath Signals are advanced signals that are especially useful for bi-directional Railways and complex intersections. They function similarly to Block Signals but rather than occupying the entire Block, Trains can reserve a specific path through it and will only enter the Block if their path allows them to fully pass through it.\n\nCaution: Signals are directional! Trains are unable to move against this direction, so be sure to set up Signals in both directions for bi-directional Railways.",
       "categories": [
-        "Trains"
+        "RailwayTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8384,7 +8384,7 @@
       "name": "Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8401,7 +8401,7 @@
       "name": "Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8418,7 +8418,7 @@
       "name": "Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8435,7 +8435,7 @@
       "name": "Double Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8452,7 +8452,7 @@
       "name": "Double Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8469,7 +8469,7 @@
       "name": "Double Ramp 8m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8537,7 +8537,7 @@
       "name": "Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8554,7 +8554,7 @@
       "name": "Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8571,7 +8571,7 @@
       "name": "Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8588,7 +8588,7 @@
       "name": "Double Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8605,7 +8605,7 @@
       "name": "Double Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8622,7 +8622,7 @@
       "name": "Double Ramp 8m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8690,7 +8690,7 @@
       "name": "Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8707,7 +8707,7 @@
       "name": "Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8724,7 +8724,7 @@
       "name": "Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8741,7 +8741,7 @@
       "name": "Double Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8758,7 +8758,7 @@
       "name": "Double Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8775,7 +8775,7 @@
       "name": "Double Ramp 8m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8843,7 +8843,7 @@
       "name": "Ramp 1m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8860,7 +8860,7 @@
       "name": "Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8877,7 +8877,7 @@
       "name": "Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8894,7 +8894,7 @@
       "name": "Double Ramp 2m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8911,7 +8911,7 @@
       "name": "Double Ramp 4m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8928,7 +8928,7 @@
       "name": "Double Ramp 8m",
       "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Ramps"
+        "CustomizedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -8996,7 +8996,7 @@
       "name": "Inv. Ramp 4m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
       "categories": [
-        "Inverted"
+        "InvertedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -9064,7 +9064,7 @@
       "name": "Inv. Ramp 1m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
-        "Inverted"
+        "InvertedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -9081,7 +9081,7 @@
       "name": "Inv. Ramp 2m",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
       "categories": [
-        "Inverted"
+        "InvertedRamps"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -9574,7 +9574,7 @@
       "name": "Truck",
       "description": "Fuel: Any fuel type\n\n48-slot inventory. Has a built-in craft bench.\nCan be automated to pick up and deliver resources at truck stations.\n\nNicknamed the Unit by FICSIT pioneers because of its massive frame.",
       "categories": [
-        "Vehicles"
+        "VehicleTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -9596,7 +9596,7 @@
       "name": "Drone",
       "description": "Has to be built on a Drone Port.\n\nFuel: Batteries, based on travel distance.\nRefuels at any of its connected Ports, if able.\n\n9-slot inventory.\n\nTransports available input back and forth between its home and destination Ports. Drone Status and other details are shown on its home Drone Port.",
       "categories": [
-        "Vehicles"
+        "VehicleTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -9618,7 +9618,7 @@
       "name": "Tractor",
       "description": "Fuel: Any fuel type\n\n25-slot inventory. Has a built-in craft bench.\nCan be automated to pick up and deliver resources at truck stations.\n\nNicknamed the Sugarcube by FICSIT pioneers with the justification “It’s pretty sweet, y’know”.",
       "categories": [
-        "Vehicles"
+        "VehicleTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -9640,7 +9640,7 @@
       "name": "Freight Car",
       "description": "The Freight Car can be built on Railways and attached to an Electric Locomotive or other Freight Car to transport resources. \nResources are loaded and unloaded at Freight Platforms.\nHas a 1600m³ or 32 slot capacity, depending on the resources.",
       "categories": [
-        "Trains"
+        "RailwayTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -9662,7 +9662,7 @@
       "name": "Electric Locomotive",
       "description": "The Locomotive is used to move Freight Cars from station to station.\nRequires between 25-110 MW of power to drive. \nMust be built on railway.\n\nNicknamed 'Leif' by FICSIT pioneers because of its reliability.",
       "categories": [
-        "Trains"
+        "RailwayTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": true,
@@ -9691,7 +9691,7 @@
       "name": "Explorer",
       "description": "Fuel: Any fuel type\n\n24-slot inventory. Has a built-in craft bench.\n\nFast and nimble exploration vehicle. Tuned for really rough terrain and able to climb almost vertical surfaces.",
       "categories": [
-        "Vehicles"
+        "VehicleTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -9713,7 +9713,7 @@
       "name": "Cyber Wagon",
       "description": "Absolutely indestructible.\nNeeds no further introduction.",
       "categories": [
-        "Vehicles"
+        "VehicleTransport"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
