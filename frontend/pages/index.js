@@ -34,7 +34,7 @@ export default function Home() {
               <StyledNavText>Items</StyledNavText>
             </StyledNavItem>
           </Link>
-          <Link href="/buildings">
+          <Link href="/buildings/production">
             <StyledNavItem>
               <StyledNavImage image={buildingBg} />
               <StyledNavText>Buildings</StyledNavText>
