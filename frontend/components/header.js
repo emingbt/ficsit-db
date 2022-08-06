@@ -17,7 +17,7 @@ export default function Header() {
           <Link href="/items">
             <StyledLink>Items</StyledLink>
           </Link>
-          <Link href="/buildings">
+          <Link href="/buildings/production">
             <StyledLink>Buildings</StyledLink>
           </Link>
         </StyledNav>
