@@ -1,11 +1,16 @@
 import Head from 'next/head'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import { Container, Main, StyledLine, StyledTitle } from '../components/sharedstyles'
+import Header from '../../../components/header'
+import Footer from '../../../components/footer'
+import { Container, Main, StyledLine, StyledTitle } from '../../../components/sharedstyles'
 import styled from 'styled-components'
 import Link from 'next/link'
+import Image from 'next/image'
+import { getBuildingsByCategory } from '../../../lib/api'
+import { useRouter } from 'next/router'
 
-export default function Buildings() {
+export default function Buildings({ buildings }) {
+  const router = useRouter()
+
   let mockBuildingsData = {
     Manufacturers: [
       {
@@ -73,7 +78,17 @@ export default function Buildings() {
     ]
   }
 
-  mockBuildingsData = Object.entries(mockBuildingsData)
+  mockBuildingsData = Object.entries(buildings)
+
+  const BuildingCategories = [
+    'Production',
+    'Power',
+    'Logistics',
+    'Organisation',
+    'Transportation',
+    'Foundations',
+    'Walls'
+  ]
 
   return (
     <Container>
@@ -90,21 +105,24 @@ export default function Buildings() {
           <StyledTitle>Buildings</StyledTitle>
           <StyledLine color='#E5AF07' />
           <StyledCategoiresContainer>
-            <StyledCategory></StyledCategory>
-            <StyledCategory></StyledCategory>
-            <StyledCategory></StyledCategory>
-            <StyledCategory></StyledCategory>
-            <StyledCategory></StyledCategory>
-            <StyledCategory></StyledCategory>
-            <StyledCategory></StyledCategory>
+            {BuildingCategories.map((e) => {
+              return (
+                <Link href={`/buildings/${e.toLowerCase()}`} key={e}>
+                  <StyledCategory selected={router.query.category == e.toLowerCase()}>
+                    <Image src={`/icons/ResIcon_${e}.png`} width={64} height={64} placeholder={e.toLowerCase()} />
+                    <div>{e}</div>
+                  </StyledCategory>
+                </Link>
+              )
+            })}
           </StyledCategoiresContainer>
           <StyledLine color='#E5AF07' />
         </StyledHeaderSection>
         <StyledBuildingsSection>
           {mockBuildingsData.map((e, i) => {
             return (
-              <StyledBuildingsContainer hasTooManyBuildings={!(e[1].length <= 6)}>
-              <StyledCategoryTitle>{i + 1}. {e[0]}</StyledCategoryTitle>
+              <StyledBuildingsContainer key={e[0]}>
+                <StyledCategoryTitle>{i + 1}. {e[0].split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
                 {e[1].map((j) => {
                   return (
                     <StyledBuilding key={j.slug}>
@@ -122,6 +140,15 @@ export default function Buildings() {
       <Footer />
     </Container>
   )
+}
+
+export async function getServerSideProps(context) {
+  var category = context.query.category
+  const buildings = getBuildingsByCategory(category)
+
+  return {
+    props: { buildings }
+  }
 }
 
 const StyledHeaderSection = styled.section`
@@ -145,9 +172,14 @@ const StyledCategory = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: ${props => props.primary ? "#D79845" : "#43454B"};
+  justify-content: space-evenly;
+  background-color: ${props => props.selected ? "#D79845" : "#43454B"};
+  color: white;
   margin: 0.5rem 0.25rem;
+  cursor: pointer;
+  :hover {
+    background-color: ${props => props.selected ? "#D79845" : "#141518"};
+  }
 `
 
 const StyledBuildingsSection = styled.section`
@@ -189,6 +221,7 @@ const StyledBuilding = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  cursor: pointer;
 `
 
 const StyledBuildingImage = styled.div`
@@ -203,11 +236,13 @@ const StyledBuildingImage = styled.div`
 
 const StyledBuildingName = styled.div`
   width: 180px;
+  height: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #43454B;
   color: white;
-  padding: 1rem 0;
+  padding: 1rem;
+  text-align: center;
   margin-top: 0.05rem;
 `
