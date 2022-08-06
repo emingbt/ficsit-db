@@ -8,7 +8,6 @@ const Building = require('../models/building')
 router.get('/', async (req, res, next) => {
   const allItems = await Item.find({})
 
-  console.log('alogg')
   res.render('items', { allItems })
 })
 
