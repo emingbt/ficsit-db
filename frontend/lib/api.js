@@ -77,22 +77,19 @@ export function getBuildingsByCategory( category ) {
   const buildables = Object.values(gameData.buildables)
   let buildings = {}
 
-  for (let i=0; i<buildables.length; i++) {
+  for (let i = 0; i < categories[`${category}`].length; i++) {
+    buildings[`${categories[`${category}`][i]}`] = []
+  }
+
+  for (let i = 0; i < buildables.length; i++) {
     if (categories[`${category}`].includes(...buildables[i].categories)) {
-      if (buildables[i].categories in buildings) {
-        buildings[`${buildables[i].categories}`].push({
-          slug: buildables[i].slug,
-          name: buildables[i].name
-        })
-      }
-      else {
-        buildings[`${buildables[i].categories}`] = [{
-          slug: buildables[i].slug,
-          name: buildables[i].name
-        }]
-      }
+      buildings[`${buildables[i].categories}`].push(buildables[i])
     }
   }
+
+  Object.keys(buildings).map((e) => {
+    return { [`${e}`]: buildings[`${e}`].sort((a, b) => a.buildMenuPriority - b.buildMenuPriority) }
+  })
 
   return buildings
 }
