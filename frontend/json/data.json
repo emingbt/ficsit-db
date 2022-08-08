@@ -2628,7 +2628,7 @@
       "categories": [
         "ConveyorSupports"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2645,7 +2645,7 @@
       "categories": [
         "Hypertubes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2662,7 +2662,7 @@
       "categories": [
         "Hypertubes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2679,7 +2679,7 @@
       "categories": [
         "PipelineSupports"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2696,7 +2696,7 @@
       "categories": [
         "PipelineSupports"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2713,7 +2713,7 @@
       "categories": [
         "Sorting"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2730,7 +2730,7 @@
       "categories": [
         "Sorting"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2747,7 +2747,7 @@
       "categories": [
         "PowerPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2764,7 +2764,7 @@
       "categories": [
         "ConveyorBelts"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2783,7 +2783,7 @@
       "categories": [
         "ConveyorBelts"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2802,7 +2802,7 @@
       "categories": [
         "ConveyorBelts"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2821,7 +2821,7 @@
       "categories": [
         "ConveyorBelts"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2840,7 +2840,7 @@
       "categories": [
         "ConveyorBelts"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2859,7 +2859,7 @@
       "categories": [
         "ConveyorLifts"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2878,7 +2878,7 @@
       "categories": [
         "ConveyorLifts"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2897,7 +2897,7 @@
       "categories": [
         "ConveyorLifts"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2916,7 +2916,7 @@
       "categories": [
         "ConveyorLifts"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2935,7 +2935,7 @@
       "categories": [
         "ConveyorLifts"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2954,7 +2954,7 @@
       "categories": [
         "VehicleTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -2976,7 +2976,7 @@
       "categories": [
         "VehicleTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": true,
       "isOverclockable": true,
       "isProduction": false,
@@ -3001,7 +3001,7 @@
       "categories": [
         "Towers"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -3024,7 +3024,7 @@
       "categories": [
         "JumpPads"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -3045,7 +3045,7 @@
       "categories": [
         "Lights"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -3066,7 +3066,7 @@
       "categories": [
         "Lights"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -4107,7 +4107,7 @@
       "categories": [
         "Foundations"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4124,7 +4124,7 @@
       "categories": [
         "Foundations"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4141,7 +4141,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 7,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4158,7 +4158,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4175,7 +4175,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 8,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4192,7 +4192,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4209,7 +4209,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 9,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4226,7 +4226,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4243,7 +4243,7 @@
       "categories": [
         "InvertedRamps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4260,7 +4260,7 @@
       "categories": [
         "InvertedRamps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 7,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4277,7 +4277,7 @@
       "categories": [
         "InvertedRamps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4294,7 +4294,7 @@
       "categories": [
         "InvertedRamps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 8,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4311,7 +4311,7 @@
       "categories": [
         "InvertedRamps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4328,7 +4328,7 @@
       "categories": [
         "InvertedRamps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 9,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4345,7 +4345,7 @@
       "categories": [
         "Foundations"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4413,7 +4413,7 @@
       "categories": [
         "QuarterPipes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4430,7 +4430,7 @@
       "categories": [
         "QuarterPipes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4447,7 +4447,7 @@
       "categories": [
         "QuarterPipes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4464,7 +4464,7 @@
       "categories": [
         "QuarterPipes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4481,7 +4481,7 @@
       "categories": [
         "QuarterPipes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4498,7 +4498,7 @@
       "categories": [
         "QuarterPipes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4595,7 +4595,7 @@
       "categories": [
         "Generators"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": true,
       "isProduction": false,
@@ -4704,7 +4704,7 @@
       "categories": [
         "Generators"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": true,
       "isProduction": false,
@@ -4765,7 +4765,7 @@
       "categories": [
         "Generators"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": true,
       "isProduction": false,
@@ -4814,7 +4814,7 @@
       "categories": [
         "Generators"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4846,7 +4846,7 @@
       "categories": [
         "Generators"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": true,
       "isProduction": false,
@@ -4905,7 +4905,7 @@
       "categories": [
         "JumpPads"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -4943,7 +4943,7 @@
       "categories": [
         "Lights"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -4964,7 +4964,7 @@
       "categories": [
         "Lights"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -4985,7 +4985,7 @@
       "categories": [
         "Lights"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5291,7 +5291,7 @@
       "categories": [
         "Hypertubes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5308,7 +5308,7 @@
       "categories": [
         "Storage"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5332,7 +5332,7 @@
       "categories": [
         "Storage"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 7,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5356,7 +5356,7 @@
       "categories": [
         "Pipelines"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5375,7 +5375,7 @@
       "categories": [
         "Pipelines"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5394,7 +5394,7 @@
       "categories": [
         "Pipelines"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5411,7 +5411,7 @@
       "categories": [
         "Pipelines"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5428,7 +5428,7 @@
       "categories": [
         "Pipelines"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -5451,7 +5451,7 @@
       "categories": [
         "Pipelines"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -5474,7 +5474,7 @@
       "categories": [
         "PipelineSupports"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5491,7 +5491,7 @@
       "categories": [
         "Hypertubes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 7,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5508,7 +5508,7 @@
       "categories": [
         "Hypertubes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5520,12 +5520,12 @@
     },
     "stackable-pipeline-support": {
       "slug": "stackable-pipeline-support",
-      "name": "Stackable Pipeline Support",
+      "name": "Stackable Pipeline",
       "description": "Support for pipelines. Can be stacked on other stackable supports.",
       "categories": [
         "PipelineSupports"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5542,7 +5542,7 @@
       "categories": [
         "ConveyorSupports"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5559,7 +5559,7 @@
       "categories": [
         "PowerPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5576,7 +5576,7 @@
       "categories": [
         "WallPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5593,7 +5593,7 @@
       "categories": [
         "PowerPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5610,7 +5610,7 @@
       "categories": [
         "PowerPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5627,7 +5627,7 @@
       "categories": [
         "WallPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5644,7 +5644,7 @@
       "categories": [
         "WallPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5661,7 +5661,7 @@
       "categories": [
         "WallPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5678,7 +5678,7 @@
       "categories": [
         "WallPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5695,7 +5695,7 @@
       "categories": [
         "WallPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5712,7 +5712,7 @@
       "categories": [
         "Generators"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5736,7 +5736,7 @@
       "categories": [
         "Towers"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -5768,7 +5768,7 @@
       "categories": [
         "RailwayTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -5794,7 +5794,7 @@
       "categories": [
         "RailwayTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 8,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6059,7 +6059,7 @@
       "categories": [
         "Sorting"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6076,7 +6076,7 @@
       "categories": [
         "Sorting"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6127,7 +6127,7 @@
       "categories": [
         "Storage"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6151,7 +6151,7 @@
       "categories": [
         "Storage"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6165,12 +6165,12 @@
     },
     "industrial-storage-container": {
       "slug": "industrial-storage-container",
-      "name": "Industrial Storage Container",
+      "name": "Industrial Storage",
       "description": "Contains 48 slots for storing large amounts of items.\nHas two inputs and outputs for conveyor belts.",
       "categories": [
         "Storage"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6194,7 +6194,7 @@
       "categories": [
         "Storage"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6213,7 +6213,7 @@
       "categories": [
         "Storage"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6255,7 +6255,7 @@
       "categories": [
         "RailwayTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -6282,7 +6282,7 @@
       "categories": [
         "RailwayTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -6309,7 +6309,7 @@
       "categories": [
         "RailwayTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6332,7 +6332,7 @@
       "categories": [
         "RailwayTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 7,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6535,14 +6535,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "basic-wall-4m-ficsit": {
-      "slug": "basic-wall-4m-ficsit",
+    "basic-wall-4m": {
+      "slug": "basic-wall-4m",
       "name": "Basic Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
       "categories": [
         "BasicWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6678,7 +6678,7 @@
       "categories": [
         "Doors"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6695,7 +6695,7 @@
       "categories": [
         "Windows"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6712,7 +6712,7 @@
       "categories": [
         "Windows"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6729,7 +6729,7 @@
       "categories": [
         "Windows"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6746,7 +6746,7 @@
       "categories": [
         "Windows"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7096,14 +7096,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "basic-wall-1m-ficsit": {
-      "slug": "basic-wall-1m-ficsit",
+    "basic-wall-1m": {
+      "slug": "basic-wall-1m",
       "name": "Basic Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
       "categories": [
         "BasicWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7113,14 +7113,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "tilted-wall-4m-ficsit": {
-      "slug": "tilted-wall-4m-ficsit",
+    "tilted-wall-4m": {
+      "slug": "tilted-wall-4m",
       "name": "Tilted Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
       "categories": [
         "TiltedWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7130,14 +7130,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "tilted-wall-8m-ficsit": {
-      "slug": "tilted-wall-8m-ficsit",
+    "tilted-wall-8m": {
+      "slug": "tilted-wall-8m",
       "name": "Tilted Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
       "categories": [
         "TiltedWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7147,14 +7147,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "inv-ramp-wall-1m-ficsit": {
-      "slug": "inv-ramp-wall-1m-ficsit",
+    "inv-ramp-wall-1m": {
+      "slug": "inv-ramp-wall-1m",
       "name": "Inv. Ramp Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
       "categories": [
         "InvertedRampWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7164,14 +7164,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "inv-ramp-wall-2m-ficsit": {
-      "slug": "inv-ramp-wall-2m-ficsit",
+    "inv-ramp-wall-2m": {
+      "slug": "inv-ramp-wall-2m",
       "name": "Inv. Ramp Wall 2m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
       "categories": [
         "InvertedRampWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7181,14 +7181,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "inv-ramp-wall-4m-ficsit": {
-      "slug": "inv-ramp-wall-4m-ficsit",
+    "inv-ramp-wall-4m": {
+      "slug": "inv-ramp-wall-4m",
       "name": "Inv. Ramp Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
       "categories": [
         "InvertedRampWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7198,14 +7198,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "inv-ramp-wall-8m-ficsit": {
-      "slug": "inv-ramp-wall-8m-ficsit",
+    "inv-ramp-wall-8m": {
+      "slug": "inv-ramp-wall-8m",
       "name": "Inv. Ramp Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
       "categories": [
         "InvertedRampWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7215,14 +7215,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "ramp-wall-1m-ficsit": {
-      "slug": "ramp-wall-1m-ficsit",
+    "ramp-wall-1m": {
+      "slug": "ramp-wall-1m",
       "name": "Ramp Wall 1m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
       "categories": [
         "RampWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7232,14 +7232,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "ramp-wall-2m-ficsit": {
-      "slug": "ramp-wall-2m-ficsit",
+    "ramp-wall-2m": {
+      "slug": "ramp-wall-2m",
       "name": "Ramp Wall 2m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
       "categories": [
         "RampWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7249,14 +7249,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "ramp-wall-4m-ficsit": {
-      "slug": "ramp-wall-4m-ficsit",
+    "ramp-wall-4m": {
+      "slug": "ramp-wall-4m",
       "name": "Ramp Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
       "categories": [
         "RampWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7266,14 +7266,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "ramp-wall-8m-ficsit": {
-      "slug": "ramp-wall-8m-ficsit",
+    "ramp-wall-8m": {
+      "slug": "ramp-wall-8m",
       "name": "Ramp Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
       "categories": [
         "RampWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7664,7 +7664,7 @@
       "categories": [
         "Windows"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7681,7 +7681,7 @@
       "categories": [
         "Windows"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7736,7 +7736,7 @@
       "categories": [
         "PowerPoles"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7753,7 +7753,7 @@
       "categories": [
         "ConveyorSupports"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7770,7 +7770,7 @@
       "categories": [
         "Hypertubes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -7852,14 +7852,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "tilted-corner-wall-4m-ficsit": {
-      "slug": "tilted-corner-wall-4m-ficsit",
+    "tilted-corner-wall-4m": {
+      "slug": "tilted-corner-wall-4m",
       "name": "Tilted Corner Wall 4m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
       "categories": [
         "TiltedWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7869,14 +7869,14 @@
       "meta": {},
       "event": "NONE"
     },
-    "tilted-corner-wall-8m-ficsit": {
-      "slug": "tilted-corner-wall-8m-ficsit",
+    "tilted-corner-wall-8m": {
+      "slug": "tilted-corner-wall-8m",
       "name": "Tilted Corner Wall 8m",
       "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
       "categories": [
         "TiltedWalls"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7927,7 +7927,7 @@
       "categories": [
         "Doors"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7961,7 +7961,7 @@
       "categories": [
         "Doors"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8029,7 +8029,7 @@
       "categories": [
         "Doors"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8097,7 +8097,7 @@
       "categories": [
         "PipelineSupports"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8114,7 +8114,7 @@
       "categories": [
         "ConveyorSupports"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8131,7 +8131,7 @@
       "categories": [
         "Hypertubes"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8301,7 +8301,7 @@
       "categories": [
         "RailwayTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 9,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8318,7 +8318,7 @@
       "categories": [
         "RailwayTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 10,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8947,7 +8947,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8964,7 +8964,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8981,7 +8981,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8998,7 +8998,7 @@
       "categories": [
         "InvertedRamps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9015,7 +9015,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 12,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9032,7 +9032,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 11,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9049,7 +9049,7 @@
       "categories": [
         "Ramps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 10,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9066,7 +9066,7 @@
       "categories": [
         "InvertedRamps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9083,7 +9083,7 @@
       "categories": [
         "InvertedRamps"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9331,8 +9331,8 @@
       "meta": {},
       "event": "NONE"
     },
-    "ficsit-roof-1m-ficsit": {
-      "slug": "ficsit-roof-1m-ficsit",
+    "ficsit-roof-1m": {
+      "slug": "ficsit-roof-1m",
       "name": "FICSIT Roof 1m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
       "categories": [
@@ -9348,8 +9348,8 @@
       "meta": {},
       "event": "NONE"
     },
-    "ficsit-roof-2m-ficsit": {
-      "slug": "ficsit-roof-2m-ficsit",
+    "ficsit-roof-2m": {
+      "slug": "ficsit-roof-2m",
       "name": "FICSIT Roof 2m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
       "categories": [
@@ -9365,8 +9365,8 @@
       "meta": {},
       "event": "NONE"
     },
-    "ficsit-roof-4m-ficsit": {
-      "slug": "ficsit-roof-4m-ficsit",
+    "ficsit-roof-4m": {
+      "slug": "ficsit-roof-4m",
       "name": "FICSIT Roof 4m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
       "categories": [
@@ -9382,8 +9382,8 @@
       "meta": {},
       "event": "NONE"
     },
-    "ficsit-roof-flat-ficsit": {
-      "slug": "ficsit-roof-flat-ficsit",
+    "ficsit-roof-flat": {
+      "slug": "ficsit-roof-flat",
       "name": "FICSIT Roof Flat",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
       "categories": [
@@ -9406,7 +9406,7 @@
       "categories": [
         "Signs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 10,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9423,7 +9423,7 @@
       "categories": [
         "Signs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 9,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9440,7 +9440,7 @@
       "categories": [
         "Signs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9457,7 +9457,7 @@
       "categories": [
         "Signs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9474,7 +9474,7 @@
       "categories": [
         "Signs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 8,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9491,7 +9491,7 @@
       "categories": [
         "Signs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 7,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9508,7 +9508,7 @@
       "categories": [
         "Signs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9525,7 +9525,7 @@
       "categories": [
         "Signs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9542,7 +9542,7 @@
       "categories": [
         "Signs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9559,7 +9559,7 @@
       "categories": [
         "Signs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9576,7 +9576,7 @@
       "categories": [
         "VehicleTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9598,7 +9598,7 @@
       "categories": [
         "VehicleTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 7,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9620,7 +9620,7 @@
       "categories": [
         "VehicleTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9642,7 +9642,7 @@
       "categories": [
         "RailwayTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9664,7 +9664,7 @@
       "categories": [
         "RailwayTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -9693,7 +9693,7 @@
       "categories": [
         "VehicleTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9715,7 +9715,7 @@
       "categories": [
         "VehicleTransport"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -17195,7 +17195,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_8x4_01": {
-      "slug": "basic-wall-4m-ficsit-recipe",
+      "slug": "basic-wall-4m-recipe",
       "name": "Basic Wall 4m",
       "ingredients": [
         {
@@ -17279,7 +17279,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_8x1": {
-      "slug": "basic-wall-1m-ficsit-recipe",
+      "slug": "basic-wall-1m-recipe",
       "name": "Basic Wall 1m",
       "ingredients": [
         {
@@ -17291,7 +17291,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_8x4orner_01": {
-      "slug": "tilted-corner-wall-4m-ficsit-recipe",
+      "slug": "tilted-corner-wall-4m-recipe",
       "name": "Tilted Corner Wall 4m",
       "ingredients": [
         {
@@ -17303,7 +17303,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_8x8orner_01": {
-      "slug": "tilted-corner-wall-8m-ficsit-recipe",
+      "slug": "tilted-corner-wall-8m-recipe",
       "name": "Tilted Corner Wall 8m",
       "ingredients": [
         {
@@ -17315,7 +17315,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_Angular_8x4": {
-      "slug": "tilted-wall-4m-ficsit-recipe",
+      "slug": "tilted-wall-4m-recipe",
       "name": "Tilted Wall 4m",
       "ingredients": [
         {
@@ -17327,7 +17327,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_Angular_8x8": {
-      "slug": "tilted-wall-8m-ficsit-recipe",
+      "slug": "tilted-wall-8m-recipe",
       "name": "Tilted Wall 8m",
       "ingredients": [
         {
@@ -17339,7 +17339,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_FlipTris_8x1": {
-      "slug": "inv-ramp-wall-1m-ficsit-recipe",
+      "slug": "inv-ramp-wall-1m-recipe",
       "name": "Inv. Ramp Wall 1m",
       "ingredients": [
         {
@@ -17351,7 +17351,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_FlipTris_8x2": {
-      "slug": "inv-ramp-wall-2m-ficsit-recipe",
+      "slug": "inv-ramp-wall-2m-recipe",
       "name": "Inv. Ramp Wall 2m",
       "ingredients": [
         {
@@ -17363,7 +17363,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_FlipTris_8x4": {
-      "slug": "inv-ramp-wall-4m-ficsit-recipe",
+      "slug": "inv-ramp-wall-4m-recipe",
       "name": "Inv. Ramp Wall 4m",
       "ingredients": [
         {
@@ -17375,7 +17375,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_FlipTris_8x8": {
-      "slug": "inv-ramp-wall-8m-ficsit-recipe",
+      "slug": "inv-ramp-wall-8m-recipe",
       "name": "Inv. Ramp Wall 8m",
       "ingredients": [
         {
@@ -17387,7 +17387,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_Tris_8x1": {
-      "slug": "ramp-wall-1m-ficsit-recipe",
+      "slug": "ramp-wall-1m-recipe",
       "name": "Ramp Wall 1m",
       "ingredients": [
         {
@@ -17399,7 +17399,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_Tris_8x2": {
-      "slug": "ramp-wall-2m-ficsit-recipe",
+      "slug": "ramp-wall-2m-recipe",
       "name": "Ramp Wall 2m",
       "ingredients": [
         {
@@ -17411,7 +17411,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_Tris_8x4": {
-      "slug": "ramp-wall-4m-ficsit-recipe",
+      "slug": "ramp-wall-4m-recipe",
       "name": "Ramp Wall 4m",
       "ingredients": [
         {
@@ -17423,7 +17423,7 @@
       "event": "NONE"
     },
     "Recipe_Wall_Orange_Tris_8x8": {
-      "slug": "ramp-wall-8m-ficsit-recipe",
+      "slug": "ramp-wall-8m-recipe",
       "name": "Ramp Wall 8m",
       "ingredients": [
         {
@@ -21951,7 +21951,7 @@
       "event": "NONE"
     },
     "Recipe_Roof_Orange_01": {
-      "slug": "ficsit-roof-flat-ficsit-recipe",
+      "slug": "ficsit-roof-flat-recipe",
       "name": "FICSIT Roof Flat",
       "ingredients": [
         {
@@ -21963,7 +21963,7 @@
       "event": "NONE"
     },
     "Recipe_Roof_Orange_02": {
-      "slug": "ficsit-roof-1m-ficsit-recipe",
+      "slug": "ficsit-roof-1m-recipe",
       "name": "FICSIT Roof 1m",
       "ingredients": [
         {
@@ -21975,7 +21975,7 @@
       "event": "NONE"
     },
     "Recipe_Roof_Orange_03": {
-      "slug": "ficsit-roof-2m-ficsit-recipe",
+      "slug": "ficsit-roof-2m-recipe",
       "name": "FICSIT Roof 2m",
       "ingredients": [
         {
@@ -21987,7 +21987,7 @@
       "event": "NONE"
     },
     "Recipe_Roof_Orange_04": {
-      "slug": "ficsit-roof-4m-ficsit-recipe",
+      "slug": "ficsit-roof-4m-recipe",
       "name": "FICSIT Roof 4m",
       "ingredients": [
         {
