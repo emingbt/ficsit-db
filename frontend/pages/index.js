@@ -34,10 +34,12 @@ export default function Home() {
               <StyledNavText>Items</StyledNavText>
             </StyledNavItem>
           </Link>
-          <StyledNavItem>
-            <StyledNavImage image={buildingBg} />
-            <StyledNavText>Buildings</StyledNavText>
-          </StyledNavItem>
+          <Link href="/buildings/production">
+            <StyledNavItem>
+              <StyledNavImage image={buildingBg} />
+              <StyledNavText>Buildings</StyledNavText>
+            </StyledNavItem>
+          </Link>
         </StyledNavSection>
       </Main>
 

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import { Container, Main, StyledLine } from '../components/sharedstyles'
+import { Container, Main, StyledLine, StyledTitle } from '../components/sharedstyles'
 import styled from 'styled-components'
 import Link from 'next/link'
 import { getAllItems } from '../lib/api'
@@ -21,7 +21,7 @@ export default function Items( items ) {
 
       <Main>
         <StyledContainer>
-          <StyledText>Items</StyledText>
+          <StyledTitle>Items</StyledTitle>
           <StyledLine color='#E5AF07' />
           <StyledItemsContainer>
             {sortedItems.map((e, i) => {
@@ -59,16 +59,6 @@ const StyledContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 90%;
-`
-
-const StyledText = styled.div`
-  width: 100%;
-  text-align: left;
-  padding: 1rem 1.5rem;
-  color: white;
-  font-size: 2.5rem;
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
 `
 
 const StyledItemsContainer = styled.div`

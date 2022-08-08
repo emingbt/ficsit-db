@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import styled from 'styled-components'
-import { Container, Main, StyledLine } from '../../components/sharedstyles'
+import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import { getItemByItemName } from '../../lib/api'
 import Recipe from '../../components/sections/recipe'
 import UsagesAsIngredient from '../../components/sections/usagesAsIngredient'
@@ -59,7 +59,7 @@ export default function Item({ item }) {
 export async function getServerSideProps(context) {
   var name = context.query.name
   const item = getItemByItemName(name)
-  console.log('item is here!@! ->', item)
+
   return {
     props: { item }
   }
@@ -71,16 +71,6 @@ const StyledTitleSection = styled.div`
   align-items: center;
   justify-content: center;
   width: 80%;
-`
-
-const StyledTitle = styled.div`
-  width: 100%;
-  text-align: left;
-  padding: 1rem 1.5rem;
-  color: white;
-  font-size: 2.5rem;
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
 `
 
 const StyledContainer = styled.div`

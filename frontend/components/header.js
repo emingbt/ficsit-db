@@ -17,7 +17,9 @@ export default function Header() {
           <Link href="/items">
             <StyledLink>Items</StyledLink>
           </Link>
-          <StyledLink>Buildings</StyledLink>
+          <Link href="/buildings/production">
+            <StyledLink>Buildings</StyledLink>
+          </Link>
         </StyledNav>
       </HeaderBar>
       <StyledLine color={'#E5AF07'} />
