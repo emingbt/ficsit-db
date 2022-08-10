@@ -8,7 +8,7 @@ import Recipe from '../../components/sections/recipe'
 import UsagesAsIngredient from '../../components/sections/usagesAsIngredient'
 
 
-export default function Item({ item }) {
+export default function Item({ item, recipes }) {
   return (
     <Container>
       <Head>
@@ -46,7 +46,7 @@ export default function Item({ item }) {
               {item.description}
             </StyledDetail>
           </StyledDetailContainer>
-          <Recipe />
+          <Recipe recipes={recipes}/>
           <UsagesAsIngredient />
         </StyledContainer>
       </Main>
@@ -58,10 +58,10 @@ export default function Item({ item }) {
 
 export async function getServerSideProps(context) {
   var name = context.query.name
-  const item = getItemByItemName(name)
+  const { item, recipes } = getItemByItemName(name)
 
   return {
-    props: { item }
+    props: { item, recipes }
   }
 }
 
