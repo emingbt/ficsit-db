@@ -16,8 +16,9 @@ export function getItemByItemName( name ) {
   const gameData = JSON.parse(jsonData)
 
   const item = gameData.items[name]
+  const recipes = getRecipesByItemName( name )
 
-  return item
+  return { item, recipes }
 }
 
 export function getBuildingsByCategory( category ) {
@@ -92,4 +93,22 @@ export function getBuildingsByCategory( category ) {
   })
 
   return buildings
+}
+
+export function getRecipesByItemName ( name ) {
+  const filePath = join(process.cwd(), 'json/data.json')
+  const jsonData = fs.readFileSync(filePath, 'utf-8')
+  const gameData = JSON.parse(jsonData)
+
+  const allRecipes = Object.values(gameData.productionRecipes)
+
+  let itemRecipes = []
+
+  allRecipes.map((recipe) => {
+    if (recipe.products.some(item => item.itemClass.toLowerCase() == `${name}`)) {
+      itemRecipes.push(recipe)
+    }
+  })
+
+  return itemRecipes
 }

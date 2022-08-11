@@ -1,99 +1,12 @@
 import Link from "next/link"
 import styled from "styled-components"
 
-export default function Recipe() {
-  const mockRecipeData = [
-    {
-      slug: 'rotor-recipe',
-      name: 'Rotor',
-      craftTime: 15,
-      maunalCraftMultiplier: 0.8,
-      isAlternate: false,
-      handCraftable: true,
-      workshopCraftable: false,
-      machineCraftable: true,
-      ingredients: [
-        {
-          itemClass: 'iron-rod',
-          quantity: 5
-        },
-        {
-          itemClass: 'screw',
-          quantity: 25
-        }
-      ],
-      products: [
-        {
-          itemClass: 'rotor',
-          quantity: 1
-        }
-      ],
-      producedIn: 'assembler',
-      event: 'NONE'
-    },
-    {
-      slug: 'alternate-copper-rotor-recipe',
-      name: 'Alternate: Copper Rotor',
-      craftTime: 16,
-      maunalCraftMultiplier: 1,
-      isAlternate: true,
-      handCraftable: false,
-      workshopCraftable: false,
-      machineCraftable: true,
-      ingredients: [
-        {
-          itemClass: 'copper-sheet',
-          quantity: 6
-        },
-        {
-          itemClass: 'screw',
-          quantity: 52
-        }
-      ],
-      products: [
-        {
-          itemClass: 'rotor',
-          quantity: 3
-        }
-      ],
-      producedIn: 'assembler',
-      event: 'NONE'
-    },
-    {
-      slug: 'alternate-steel-rotor-recipe',
-      name: 'Alternate: Steel Rotor',
-      craftTime: 12,
-      maunalCraftMultiplier: 1,
-      isAlternate: true,
-      handCraftable: false,
-      workshopCraftable: false,
-      machineCraftable: true,
-      ingredients: [
-        {
-          itemClass: 'steel-pipe',
-          quantity: 2
-        },
-        {
-          itemClass: 'wire',
-          quantity: 6
-        }
-      ],
-      products: [
-        {
-          itemClass: 'rotor',
-          quantity: 1
-        }
-      ],
-      producedIn: 'assembler',
-      event: 'NONE'
-    }
-  ]
-
+export default function Recipe({recipes}) {
   return (
     <StyledSection>
       <StyledTitle>Recipes</StyledTitle>
       <StyledRecipeContainer>
-        {mockRecipeData.map((e) => {
+        {recipes.map((e) => {
           return (
             <StyledRecipe key={e.slug}>
               <StyledContainer flexDirection="row">
