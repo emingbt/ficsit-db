@@ -17,8 +17,9 @@ export function getItemByItemName( name ) {
 
   const item = gameData.items[name]
   const recipes = getRecipesByItemName( name )
+  const usagesAsIngredient = getUsagesAsIngredientByItemName( name )
 
-  return { item, recipes }
+  return { item, recipes, usagesAsIngredient }
 }
 
 export function getBuildingsByCategory( category ) {
@@ -105,10 +106,28 @@ export function getRecipesByItemName ( name ) {
   let itemRecipes = []
 
   allRecipes.map((recipe) => {
-    if (recipe.products.some(item => item.itemClass.toLowerCase() == `${name}`)) {
+    if (recipe.products.some(item => item.itemClass == `${name}`)) {
       itemRecipes.push(recipe)
     }
   })
 
   return itemRecipes
+}
+
+export function getUsagesAsIngredientByItemName ( name ) {
+  const filePath = join(process.cwd(), 'json/data.json')
+  const jsonData = fs.readFileSync(filePath, 'utf-8')
+  const gameData = JSON.parse(jsonData)
+
+  const allRecipes = Object.values(gameData.productionRecipes)
+
+  let usagesAsIngredient = []
+
+  allRecipes.map((recipe) => {
+    if(recipe.ingredients.some(item => item.itemClass == `${name}`)) {
+      usagesAsIngredient.push(recipe)
+    }
+  })
+
+  return usagesAsIngredient
 }
