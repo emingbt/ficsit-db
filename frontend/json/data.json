@@ -11807,7 +11807,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass": "high-speed-connector",
+          "itemClass": "automated-wiring",
           "quantity": 15
         },
         {
