@@ -131,3 +131,26 @@ export function getUsagesAsIngredientByItemName ( name ) {
 
   return usagesAsIngredient
 }
+
+export function getBuildableByName ( name ) {
+  const filePath = join(process.cwd(), 'json/data.json')
+  const jsonData = fs.readFileSync(filePath, 'utf-8')
+  const gameData = JSON.parse(jsonData)
+
+  const buildable = gameData.buildables[`${name}`]
+
+  let ingredients = getBuildableRecipeByName(name)
+  buildable.cost = ingredients
+
+  return buildable
+}
+
+export function getBuildableRecipeByName ( name ) {
+  const filePath = join(process.cwd(), 'json/data.json')
+  const jsonData = fs.readFileSync(filePath, 'utf-8')
+  const gameData = JSON.parse(jsonData)
+
+  const buildableRecipe = gameData.buildableRecipes[`${name}-recipe`]
+
+  return buildableRecipe.ingredients
+}
