@@ -31,7 +31,7 @@ export default function UsagesAsIngredient({ usagesAsIngredient }) {
                     return (
                       <StyledItem product key={j.itemClass}>
                         <StyledItemQuantity>{j.quantity}x</StyledItemQuantity>
-                        <StyledContainer flexDirection="column" style={{maxWidth: '80px'}}>
+                        <StyledContainer flexDirection="column" style={{ maxWidth: '80px' }}>
                           <Link href={`/items/${j.itemClass}`}>
                             <StyledItemImage name={j.itemClass} />
                           </Link>
@@ -43,7 +43,9 @@ export default function UsagesAsIngredient({ usagesAsIngredient }) {
                 </StyledContainer>
                 <StyledVerticalLine isAlternate={e.isAlternate} />
                 <StyledBuildingContainer>
-                  <StyledBuildingImage producedIn={e.producedIn} />
+                  <Link href={`/buildings/production/${e.producedIn}`}>
+                    <StyledBuildingImage producedIn={e.producedIn} />
+                  </Link>
                   <StyledCraftTime>{e.craftTime}sn</StyledCraftTime>
                 </StyledBuildingContainer>
               </StyledContainer>
