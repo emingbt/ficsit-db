@@ -43,7 +43,9 @@ export default function Recipe({ recipes }) {
                 </StyledContainer>
                 <StyledVerticalLine isAlternate={e.isAlternate} />
                 <StyledBuildingContainer>
-                  <StyledBuildingImage producedIn={e.producedIn} />
+                  <Link href={`/buildings/production/${e.producedIn}`}>
+                    <StyledBuildingImage producedIn={e.producedIn} />
+                  </Link>
                   <StyledCraftTime>{e.craftTime}sn</StyledCraftTime>
                 </StyledBuildingContainer>
               </StyledContainer>
