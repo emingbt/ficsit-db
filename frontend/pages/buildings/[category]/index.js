@@ -12,8 +12,6 @@ export default function Buildings({ buildings }) {
   const router = useRouter()
   const { category } = router.query
 
-  console.log(category)
-
   const buildingsData = Object.entries(buildings)
 
   const BuildingCategories = [
