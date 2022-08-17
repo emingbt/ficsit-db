@@ -2,7 +2,7 @@ import Link from "next/link"
 import styled from "styled-components"
 
 export default function Recipe({ recipes }) {
-  return (
+  return recipes.length > 0 && (
     <StyledSection>
       <StyledTitle>Recipes</StyledTitle>
       <StyledRecipeContainer>
