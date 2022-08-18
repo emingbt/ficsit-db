@@ -4,11 +4,12 @@ import Footer from '../../../components/footer'
 import styled from 'styled-components'
 import { Container, Main, StyledLine, StyledTitle } from '../../../components/sharedstyles'
 import { useRouter } from 'next/router'
-import { getBuildableByName } from '../../../lib/api'
+import { getBuildableByName, getRecipesByBuildingName } from '../../../lib/api'
 import Link from 'next/link'
 import { useState } from 'react'
+import Recipe from '../../../components/sections/recipe'
 
-export default function Building({ buildable }) {
+export default function Building({ buildable, recipes }) {
   const router = useRouter()
   const { category } = router.query
 
@@ -79,7 +80,7 @@ export default function Building({ buildable }) {
               </StyledClockspeedContainer>
             </StyledConsumptionContainer>
           }
-
+          <Recipe recipes={recipes}/>
         </StyledContainer>
       </Main>
 
@@ -91,9 +92,9 @@ export default function Building({ buildable }) {
 export function getServerSideProps(context) {
   const name = context.query.building
   const buildable = getBuildableByName(name)
-
+  const recipes = getRecipesByBuildingName(name)
   return {
-    props: { buildable }
+    props: { buildable, recipes }
   }
 }
 
@@ -210,6 +211,7 @@ const StyledConsumptionContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1.75rem;
 `
 
 const StyledEnergyContainer = styled.div`
