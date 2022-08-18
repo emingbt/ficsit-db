@@ -15643,7 +15643,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass": "hatcher-parts",
+          "itemClass": "hatcher-remains",
           "quantity": 1
         }
       ],
