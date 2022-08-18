@@ -6,10 +6,14 @@ import { Container, Main, StyledLine, StyledTitle } from '../../../components/sh
 import { useRouter } from 'next/router'
 import { getBuildableByName } from '../../../lib/api'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Building({ buildable }) {
   const router = useRouter()
   const { category } = router.query
+
+  const [clockspeed, setClockspeed] = useState(100)
+  let energyConsumption = (buildable.meta?.powerInfo?.consumption * (clockspeed / 100) ** buildable.meta?.powerInfo?.consumption).toFixed(3)
 
   return (
     <Container>
@@ -49,6 +53,33 @@ export default function Building({ buildable }) {
               {buildable.description}
             </StyledDetail>
           </StyledDetailContainer>
+          {
+            buildable.isOverclockable &&
+            <StyledConsumptionContainer>
+              <StyledEnergyContainer>
+                <div>{clockspeed}%</div>
+                <StyledVerticalLine />
+                <div>{parseFloat(energyConsumption)}MW</div>
+              </StyledEnergyContainer>
+              <StyledClockspeedContainer>
+                <StyledClockspeedInput
+                  type="range"
+                  min={1}
+                  max={250}
+                  step={1}
+                  onChange={e => { setClockspeed(e.currentTarget.value); }}
+                  value={clockspeed}
+                />
+                <StyledClockspeedTextContainer>
+                  <StyledClockspeedText overclocked={100 <= clockspeed} onClick={() => setClockspeed(100)}>100%</StyledClockspeedText>
+                  <StyledClockspeedText overclocked={150 <= clockspeed} onClick={() => setClockspeed(150)}>150%</StyledClockspeedText>
+                  <StyledClockspeedText overclocked={200 <= clockspeed} onClick={() => setClockspeed(200)}>200%</StyledClockspeedText>
+                  <StyledClockspeedText overclocked={250 <= clockspeed} onClick={() => setClockspeed(250)}>250%</StyledClockspeedText>
+                </StyledClockspeedTextContainer>
+              </StyledClockspeedContainer>
+            </StyledConsumptionContainer>
+          }
+
         </StyledContainer>
       </Main>
 
@@ -90,7 +121,6 @@ const StyledDetailContainer = styled.section`
   align-items: center;
   width: 100%;
   height: 250px;
-  margin-bottom: 2.5rem;
 `
 
 const StyledImage = styled.div`
@@ -171,4 +201,83 @@ const StyledCostItemImage = styled.div`
   border-radius: 0.5rem;
   margin: 0 0.25rem;
   cursor: pointer;
+`
+
+const StyledConsumptionContainer = styled.div`
+  height: 75px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`
+
+const StyledEnergyContainer = styled.div`
+  height: 100%;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #43454B;
+  color: white;
+  font-size: 1.5rem;
+`
+
+const StyledVerticalLine = styled.div`
+  height: 100%;
+  width: 2px;
+  justify-self: center;
+  background-color: #F1C700;
+`
+
+const StyledClockspeedContainer = styled.div`
+  height: 100%;
+  width: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #9BA3A9;
+`
+
+const StyledClockspeedInput = styled.input`
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-size: 50px;
+  cursor: pointer;
+  width: 79%;
+  ::-webkit-slider-runnable-track {
+    height: 30px;
+    background-color: #43454B;
+    background: linear-gradient(90deg, #E39744 0%, #F7DE50 100%);
+  }
+  ::-moz-range-track {
+    height: 30px;
+    background-color: #43454B;
+    background: linear-gradient(90deg, #E39744 0%, #F7DE50 100%);
+  }
+  ::-webkit-slider-thumb {
+     -webkit-appearance: none;
+     appearance: none;
+     background-color: #43454B;
+     height: 30px;
+     width: 2px;
+  }
+`
+
+const StyledClockspeedTextContainer = styled.div`
+  width: 79%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+`
+
+const StyledClockspeedText = styled.div`
+  text-align: right;
+  cursor: pointer;
+  color: ${props => props.overclocked ? '#FFE9a5' : '#141518'};
+  margin-left: 6rem;
 `
