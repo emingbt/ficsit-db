@@ -154,4 +154,21 @@ export function getBuildableRecipeByName(name) {
 
   return buildableRecipe.ingredients
 }
+
+export function getRecipesByBuildingName(name) {
+  const filePath = join(process.cwd(), 'json/data.json')
+  const jsonData = fs.readFileSync(filePath, 'utf-8')
+  const gameData = JSON.parse(jsonData)
+
+  const allRecipes = Object.values(gameData.productionRecipes)
+
+  let recipes = []
+
+  allRecipes.map((e) => {
+    if (e.producedIn == name) {
+      recipes.push(e)
+    }
+  })
+
+  return recipes
 }
