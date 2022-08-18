@@ -10,19 +10,19 @@ export function getAllItems() {
   return allItems
 }
 
-export function getItemByItemName( name ) {
+export function getItemByItemName(name) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
   const item = gameData.items[name]
-  const recipes = getRecipesByItemName( name )
-  const usagesAsIngredient = getUsagesAsIngredientByItemName( name )
+  const recipes = getRecipesByItemName(name)
+  const usagesAsIngredient = getUsagesAsIngredientByItemName(name)
 
   return { item, recipes, usagesAsIngredient }
 }
 
-export function getBuildingsByCategory( category ) {
+export function getBuildingsByCategory(category) {
   const categories = {
     production: [
       'Manufacturers',
@@ -96,7 +96,7 @@ export function getBuildingsByCategory( category ) {
   return buildings
 }
 
-export function getRecipesByItemName ( name ) {
+export function getRecipesByItemName(name) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
@@ -114,7 +114,7 @@ export function getRecipesByItemName ( name ) {
   return itemRecipes
 }
 
-export function getUsagesAsIngredientByItemName ( name ) {
+export function getUsagesAsIngredientByItemName(name) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
@@ -124,10 +124,51 @@ export function getUsagesAsIngredientByItemName ( name ) {
   let usagesAsIngredient = []
 
   allRecipes.map((recipe) => {
-    if(recipe.ingredients.some(item => item.itemClass == `${name}`)) {
+    if (recipe.ingredients.some(item => item.itemClass == `${name}`)) {
       usagesAsIngredient.push(recipe)
     }
   })
 
   return usagesAsIngredient
+}
+
+export function getBuildableByName(name) {
+  const filePath = join(process.cwd(), 'json/data.json')
+  const jsonData = fs.readFileSync(filePath, 'utf-8')
+  const gameData = JSON.parse(jsonData)
+
+  const buildable = gameData.buildables[`${name}`]
+
+  let ingredients = getBuildableRecipeByName(name)
+  buildable.cost = ingredients
+
+  return buildable
+}
+
+export function getBuildableRecipeByName(name) {
+  const filePath = join(process.cwd(), 'json/data.json')
+  const jsonData = fs.readFileSync(filePath, 'utf-8')
+  const gameData = JSON.parse(jsonData)
+
+  const buildableRecipe = gameData.buildableRecipes[`${name}-recipe`]
+
+  return buildableRecipe.ingredients
+}
+
+export function getRecipesByBuildingName(name) {
+  const filePath = join(process.cwd(), 'json/data.json')
+  const jsonData = fs.readFileSync(filePath, 'utf-8')
+  const gameData = JSON.parse(jsonData)
+
+  const allRecipes = Object.values(gameData.productionRecipes)
+
+  let recipes = []
+
+  allRecipes.map((e) => {
+    if (e.producedIn == name) {
+      recipes.push(e)
+    }
+  })
+
+  return recipes
 }

@@ -9992,114 +9992,6 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Fireworks_01": {
-      "slug": "sweet-fireworks-recipe",
-      "name": "Sweet Fireworks",
-      "craftTime": 24,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": true,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "XmasBranch",
-          "quantity": 6
-        },
-        {
-          "itemClass": "CandyCane",
-          "quantity": 3
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "Fireworks_Projectile_01",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "assembler",
-      "event": "NONE"
-    },
-    "Recipe_Fireworks_02": {
-      "slug": "fancy-fireworks-recipe",
-      "name": "Fancy Fireworks",
-      "craftTime": 24,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": true,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "XmasBranch",
-          "quantity": 4
-        },
-        {
-          "itemClass": "XmasBow",
-          "quantity": 3
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "Fireworks_Projectile_02",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "assembler",
-      "event": "NONE"
-    },
-    "Recipe_Fireworks_03": {
-      "slug": "sparkly-fireworks-recipe",
-      "name": "Sparkly Fireworks",
-      "craftTime": 24,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": true,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "XmasBranch",
-          "quantity": 3
-        },
-        {
-          "itemClass": "Snow",
-          "quantity": 2
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "Fireworks_Projectile_03",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "assembler",
-      "event": "NONE"
-    },
-    "Recipe_XmasBranch": {
-      "slug": "ficsmas-tree-branch-recipe",
-      "name": "FICSMAS Tree Branch",
-      "craftTime": 6,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "Gift",
-          "quantity": 1
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "XmasBranch",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "constructor",
-      "event": "FICSMAS"
-    },
     "Recipe_IronPlate": {
       "slug": "iron-plate-recipe",
       "name": "Iron Plate",
@@ -11807,7 +11699,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass": "high-speed-connector",
+          "itemClass": "automated-wiring",
           "quantity": 15
         },
         {
@@ -15643,7 +15535,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass": "hatcher-parts",
+          "itemClass": "hatcher-remains",
           "quantity": 1
         }
       ],
@@ -16524,322 +16416,6 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "RecipeandyCane": {
-      "slug": "candy-cane-recipe",
-      "name": "Candy Cane",
-      "craftTime": 12,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "Gift",
-          "quantity": 3
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "CandyCane",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "constructor",
-      "event": "FICSMAS"
-    },
-    "RecipeandyCaneBasher": {
-      "slug": "candy-cane-basher-recipe",
-      "name": "Candy Cane Basher",
-      "craftTime": 80,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": true,
-      "machineCraftable": false,
-      "ingredients": [
-        {
-          "itemClass": "xeno-zapper",
-          "quantity": 2
-        },
-        {
-          "itemClass": "CandyCane",
-          "quantity": 25
-        },
-        {
-          "itemClass": "Gift",
-          "quantity": 15
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "CandyCane",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "equipment-workshop",
-      "event": "FICSMAS"
-    },
-    "Recipe_XmasBow": {
-      "slug": "ficsmas-bow-recipe",
-      "name": "FICSMAS Bow",
-      "craftTime": 12,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "Gift",
-          "quantity": 2
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "XmasBow",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "constructor",
-      "event": "FICSMAS"
-    },
-    "Recipe_Snow": {
-      "slug": "actual-snow-recipe",
-      "name": "Actual Snow",
-      "craftTime": 12,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "Gift",
-          "quantity": 5
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "Snow",
-          "quantity": 2
-        }
-      ],
-      "producedIn": "constructor",
-      "event": "FICSMAS"
-    },
-    "Recipe_XmasBall3": {
-      "slug": "copper-ficsmas-ornament-recipe",
-      "name": "Copper FICSMAS Ornament",
-      "craftTime": 12,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "XmasBall1",
-          "quantity": 2
-        },
-        {
-          "itemClass": "copper-ingot",
-          "quantity": 2
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "XmasBall3",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "foundry",
-      "event": "FICSMAS"
-    },
-    "Recipe_XmasBall4": {
-      "slug": "iron-ficsmas-ornament-recipe",
-      "name": "Iron FICSMAS Ornament",
-      "craftTime": 12,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "XmasBall2",
-          "quantity": 3
-        },
-        {
-          "itemClass": "iron-rod",
-          "quantity": 3
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "XmasBall4",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "foundry",
-      "event": "FICSMAS"
-    },
-    "Recipe_XmasBall1": {
-      "slug": "red-ficsmas-ornament-recipe",
-      "name": "Red FICSMAS Ornament",
-      "craftTime": 12,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "Gift",
-          "quantity": 1
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "XmasBall1",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "smelter",
-      "event": "FICSMAS"
-    },
-    "Recipe_XmasBall2": {
-      "slug": "blue-ficsmas-ornament-recipe",
-      "name": "Blue FICSMAS Ornament",
-      "craftTime": 12,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "Gift",
-          "quantity": 1
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "XmasBall2",
-          "quantity": 2
-        }
-      ],
-      "producedIn": "smelter",
-      "event": "FICSMAS"
-    },
-    "Recipe_XmasBallCluster": {
-      "slug": "ficsmas-ornament-bundle-recipe",
-      "name": "FICSMAS Ornament Bundle",
-      "craftTime": 12,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "XmasBall3",
-          "quantity": 1
-        },
-        {
-          "itemClass": "XmasBall4",
-          "quantity": 1
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "XmasBallCluster",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "assembler",
-      "event": "FICSMAS"
-    },
-    "Recipe_XmasWreath": {
-      "slug": "ficsmas-decoration-recipe",
-      "name": "FICSMAS Decoration",
-      "craftTime": 60,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "XmasBranch",
-          "quantity": 15
-        },
-        {
-          "itemClass": "XmasBallCluster",
-          "quantity": 6
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "XmasWreath",
-          "quantity": 2
-        }
-      ],
-      "producedIn": "assembler",
-      "event": "FICSMAS"
-    },
-    "Recipe_XmasStar": {
-      "slug": "ficsmas-wonder-star-recipe",
-      "name": "FICSMAS Wonder Star",
-      "craftTime": 60,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "XmasWreath",
-          "quantity": 5
-        },
-        {
-          "itemClass": "CandyCane",
-          "quantity": 20
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "XmasStar",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "assembler",
-      "event": "FICSMAS"
-    },
-    "Recipe_Snowball": {
-      "slug": "snowball-recipe",
-      "name": "Snowball",
-      "craftTime": 12,
-      "maunalCraftMultiplier": 1,
-      "isAlternate": false,
-      "handCraftable": false,
-      "workshopCraftable": false,
-      "machineCraftable": true,
-      "ingredients": [
-        {
-          "itemClass": "Snow",
-          "quantity": 3
-        }
-      ],
-      "products": [
-        {
-          "itemClass": "SnowballProjectile",
-          "quantity": 1
-        }
-      ],
-      "producedIn": "constructor",
-      "event": "FICSMAS"
-    },
     "Recipe_FactoryCart": {
       "slug": "factory-cart-recipe",
       "name": "Factory Cart™",
@@ -16906,7 +16482,7 @@
     }
   },
   "buildableRecipes": {
-    "Recipe_Walloncrete_8x1": {
+    "basic-wall-1m-concrete-recipe": {
       "slug": "basic-wall-1m-concrete-recipe",
       "name": "Basic Wall 1m",
       "ingredients": [
@@ -16918,7 +16494,7 @@
       "product": "Walloncrete_8x1",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_8x4": {
+    "basic-wall-4m-concrete-recipe": {
       "slug": "basic-wall-4m-concrete-recipe",
       "name": "Basic Wall 4m",
       "ingredients": [
@@ -16930,7 +16506,7 @@
       "product": "Walloncrete_8x4",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_8x4onveyorHole_01": {
+    "conveyor-wall-x1-concrete-recipe": {
       "slug": "conveyor-wall-x1-concrete-recipe",
       "name": "Conveyor Wall x1",
       "ingredients": [
@@ -16942,7 +16518,7 @@
       "product": "Walloncrete_8x4onveyorHole_01",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_8x4onveyorHole_02": {
+    "conveyor-wall-x2-concrete-recipe": {
       "slug": "conveyor-wall-x2-concrete-recipe",
       "name": "Conveyor Wall x2",
       "ingredients": [
@@ -16954,7 +16530,7 @@
       "product": "Walloncrete_8x4onveyorHole_02",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_8x4onveyorHole_03": {
+    "conveyor-wall-x3-concrete-recipe": {
       "slug": "conveyor-wall-x3-concrete-recipe",
       "name": "Conveyor Wall x3",
       "ingredients": [
@@ -16966,7 +16542,7 @@
       "product": "Walloncrete_8x4onveyorHole_03",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_8x4orner_01": {
+    "tilted-corner-wall-4m-concrete-recipe": {
       "slug": "tilted-corner-wall-4m-concrete-recipe",
       "name": "Tilted Corner Wall 4m",
       "ingredients": [
@@ -16978,7 +16554,7 @@
       "product": "Walloncrete_8x4orner_01",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_8x4_Window_01": {
+    "single-window-concrete-recipe": {
       "slug": "single-window-concrete-recipe",
       "name": "Single Window",
       "ingredients": [
@@ -16990,7 +16566,7 @@
       "product": "Walloncrete_8x4_Window_01",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_8x4_Window_02": {
+    "frame-window-concrete-recipe": {
       "slug": "frame-window-concrete-recipe",
       "name": "Frame Window",
       "ingredients": [
@@ -17002,7 +16578,7 @@
       "product": "Walloncrete_8x4_Window_02",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_8x4_Window_03": {
+    "panel-window-concrete-recipe": {
       "slug": "panel-window-concrete-recipe",
       "name": "Panel Window",
       "ingredients": [
@@ -17014,7 +16590,7 @@
       "product": "Walloncrete_8x4_Window_03",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_8x4_Window_04": {
+    "reinforced-window-concrete-recipe": {
       "slug": "reinforced-window-concrete-recipe",
       "name": "Reinforced Window",
       "ingredients": [
@@ -17026,7 +16602,7 @@
       "product": "Walloncrete_8x4_Window_04",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_8x8orner_01": {
+    "tilted-corner-wall-8m-concrete-recipe": {
       "slug": "tilted-corner-wall-8m-concrete-recipe",
       "name": "Tilted Corner Wall 8m",
       "ingredients": [
@@ -17038,7 +16614,7 @@
       "product": "Walloncrete_8x8orner_01",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_Angular_8x4": {
+    "tilted-wall-4m-concrete-recipe": {
       "slug": "tilted-wall-4m-concrete-recipe",
       "name": "Tilted Wall 4m",
       "ingredients": [
@@ -17050,7 +16626,7 @@
       "product": "Walloncrete_Angular_8x4",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_Angular_8x8": {
+    "tilted-wall-8m-concrete-recipe": {
       "slug": "tilted-wall-8m-concrete-recipe",
       "name": "Tilted Wall 8m",
       "ingredients": [
@@ -17062,7 +16638,7 @@
       "product": "Walloncrete_Angular_8x8",
       "event": "NONE"
     },
-    "Recipe_WalloncreteDoor_8x4": {
+    "center-door-wall-concrete-recipe": {
       "slug": "center-door-wall-concrete-recipe",
       "name": "Center Door Wall",
       "ingredients": [
@@ -17074,7 +16650,7 @@
       "product": "WalloncreteDoor_8x4",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_FlipTris_8x1": {
+    "inv-ramp-wall-1m-concrete-recipe": {
       "slug": "inv-ramp-wall-1m-concrete-recipe",
       "name": "Inv. Ramp Wall 1m",
       "ingredients": [
@@ -17086,7 +16662,7 @@
       "product": "Walloncrete_8x1_FlipTris",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_FlipTris_8x2": {
+    "inv-ramp-wall-2m-concrete-recipe": {
       "slug": "inv-ramp-wall-2m-concrete-recipe",
       "name": "Inv. Ramp Wall 2m",
       "ingredients": [
@@ -17098,7 +16674,7 @@
       "product": "Walloncrete_8x2_FlipTris",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_FlipTris_8x4": {
+    "inv-ramp-wall-4m-concrete-recipe": {
       "slug": "inv-ramp-wall-4m-concrete-recipe",
       "name": "Inv. Ramp Wall 4m",
       "ingredients": [
@@ -17110,7 +16686,7 @@
       "product": "Walloncrete_8x4_FlipTris",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_FlipTris_8x8": {
+    "inv-ramp-wall-8m-concrete-recipe": {
       "slug": "inv-ramp-wall-8m-concrete-recipe",
       "name": "Inv. Ramp Wall 8m",
       "ingredients": [
@@ -17122,7 +16698,7 @@
       "product": "Walloncrete_8x8_FlipTris",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_Gate_8x4": {
+    "gate-hole-wall-concrete-recipe": {
       "slug": "gate-hole-wall-concrete-recipe",
       "name": "Gate Hole Wall",
       "ingredients": [
@@ -17134,7 +16710,7 @@
       "product": "Walloncrete_Gate_8x4",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_SDoor_8x4": {
+    "side-door-wall-concrete-recipe": {
       "slug": "side-door-wall-concrete-recipe",
       "name": "Side Door Wall",
       "ingredients": [
@@ -17146,7 +16722,7 @@
       "product": "Walloncrete_SDoor_8x4",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_Tris_8x1": {
+    "ramp-wall-1m-concrete-recipe": {
       "slug": "ramp-wall-1m-concrete-recipe",
       "name": "Ramp Wall 1m",
       "ingredients": [
@@ -17158,7 +16734,7 @@
       "product": "Walloncrete_8x1_Tris",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_Tris_8x2": {
+    "ramp-wall-2m-concrete-recipe": {
       "slug": "ramp-wall-2m-concrete-recipe",
       "name": "Ramp Wall 2m",
       "ingredients": [
@@ -17170,7 +16746,7 @@
       "product": "Walloncrete_8x2_Tris",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_Tris_8x4": {
+    "ramp-wall-4m-concrete-recipe": {
       "slug": "ramp-wall-4m-concrete-recipe",
       "name": "Ramp Wall 4m",
       "ingredients": [
@@ -17182,7 +16758,7 @@
       "product": "Walloncrete_8x4_Tris",
       "event": "NONE"
     },
-    "Recipe_Walloncrete_Tris_8x8": {
+    "ramp-wall-8m-concrete-recipe": {
       "slug": "ramp-wall-8m-concrete-recipe",
       "name": "Ramp Wall 8m",
       "ingredients": [
@@ -17194,7 +16770,7 @@
       "product": "Walloncrete_8x8_Tris",
       "event": "NONE"
     },
-    "Recipe_Wall_8x4_01": {
+    "basic-wall-4m-recipe": {
       "slug": "basic-wall-4m-recipe",
       "name": "Basic Wall 4m",
       "ingredients": [
@@ -17206,7 +16782,7 @@
       "product": "Wall_8x4_01",
       "event": "NONE"
     },
-    "Recipe_Wallonveyor_8x4_01": {
+    "conveyor-wall-x3-recipe": {
       "slug": "conveyor-wall-x3-recipe",
       "name": "Conveyor Wall x3",
       "ingredients": [
@@ -17218,7 +16794,7 @@
       "product": "Wallonveyor_8x4_01",
       "event": "NONE"
     },
-    "Recipe_Wallonveyor_8x4_02": {
+    "conveyor-wall-x2-recipe": {
       "slug": "conveyor-wall-x2-recipe",
       "name": "Conveyor Wall x2",
       "ingredients": [
@@ -17230,7 +16806,7 @@
       "product": "Wallonveyor_8x4_02",
       "event": "NONE"
     },
-    "Recipe_Wallonveyor_8x4_03": {
+    "conveyor-wall-x1-recipe": {
       "slug": "conveyor-wall-x1-recipe",
       "name": "Conveyor Wall x1",
       "ingredients": [
@@ -17242,7 +16818,7 @@
       "product": "Wallonveyor_8x4_03",
       "event": "NONE"
     },
-    "Recipe_Wall_Door_8x4_01": {
+    "center-door-wall-recipe": {
       "slug": "center-door-wall-recipe",
       "name": "Center Door Wall",
       "ingredients": [
@@ -17254,7 +16830,7 @@
       "product": "Wall_Door_8x4_01",
       "event": "NONE"
     },
-    "Recipe_Wall_Door_8x4_03": {
+    "side-door-wall-recipe": {
       "slug": "side-door-wall-recipe",
       "name": "Side Door Wall",
       "ingredients": [
@@ -17266,7 +16842,7 @@
       "product": "Wall_Door_8x4_03",
       "event": "NONE"
     },
-    "Recipe_Wall_Gate_8x4_01": {
+    "gate-hole-wall-recipe": {
       "slug": "gate-hole-wall-recipe",
       "name": "Gate Hole Wall",
       "ingredients": [
@@ -17278,7 +16854,7 @@
       "product": "Wall_Gate_8x4_01",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_8x1": {
+    "basic-wall-1m-recipe": {
       "slug": "basic-wall-1m-recipe",
       "name": "Basic Wall 1m",
       "ingredients": [
@@ -17290,7 +16866,7 @@
       "product": "Wall_Orange_8x1",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_8x4orner_01": {
+    "tilted-corner-wall-4m-recipe": {
       "slug": "tilted-corner-wall-4m-recipe",
       "name": "Tilted Corner Wall 4m",
       "ingredients": [
@@ -17302,7 +16878,7 @@
       "product": "Wall_Orange_8x4orner_01",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_8x8orner_01": {
+    "tilted-corner-wall-8m-recipe": {
       "slug": "tilted-corner-wall-8m-recipe",
       "name": "Tilted Corner Wall 8m",
       "ingredients": [
@@ -17314,7 +16890,7 @@
       "product": "Wall_Orange_8x8orner_01",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_Angular_8x4": {
+    "tilted-wall-4m-recipe": {
       "slug": "tilted-wall-4m-recipe",
       "name": "Tilted Wall 4m",
       "ingredients": [
@@ -17326,7 +16902,7 @@
       "product": "Wall_Orange_Angular_8x4",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_Angular_8x8": {
+    "tilted-wall-8m-recipe": {
       "slug": "tilted-wall-8m-recipe",
       "name": "Tilted Wall 8m",
       "ingredients": [
@@ -17338,7 +16914,7 @@
       "product": "Wall_Orange_Angular_8x8",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_FlipTris_8x1": {
+    "inv-ramp-wall-1m-recipe": {
       "slug": "inv-ramp-wall-1m-recipe",
       "name": "Inv. Ramp Wall 1m",
       "ingredients": [
@@ -17350,7 +16926,7 @@
       "product": "Wall_Orange_8x1_FlipTris",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_FlipTris_8x2": {
+    "inv-ramp-wall-2m-recipe": {
       "slug": "inv-ramp-wall-2m-recipe",
       "name": "Inv. Ramp Wall 2m",
       "ingredients": [
@@ -17362,7 +16938,7 @@
       "product": "Wall_Orange_8x2_FlipTris",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_FlipTris_8x4": {
+    "inv-ramp-wall-4m-recipe": {
       "slug": "inv-ramp-wall-4m-recipe",
       "name": "Inv. Ramp Wall 4m",
       "ingredients": [
@@ -17374,7 +16950,7 @@
       "product": "Wall_Orange_8x4_FlipTris",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_FlipTris_8x8": {
+    "inv-ramp-wall-8m-recipe": {
       "slug": "inv-ramp-wall-8m-recipe",
       "name": "Inv. Ramp Wall 8m",
       "ingredients": [
@@ -17386,7 +16962,7 @@
       "product": "Wall_Orange_8x8_FlipTris",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_Tris_8x1": {
+    "ramp-wall-1m-recipe": {
       "slug": "ramp-wall-1m-recipe",
       "name": "Ramp Wall 1m",
       "ingredients": [
@@ -17398,7 +16974,7 @@
       "product": "Wall_Orange_8x1_Tris",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_Tris_8x2": {
+    "ramp-wall-2m-recipe": {
       "slug": "ramp-wall-2m-recipe",
       "name": "Ramp Wall 2m",
       "ingredients": [
@@ -17410,7 +16986,7 @@
       "product": "Wall_Orange_8x2_Tris",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_Tris_8x4": {
+    "ramp-wall-4m-recipe": {
       "slug": "ramp-wall-4m-recipe",
       "name": "Ramp Wall 4m",
       "ingredients": [
@@ -17422,7 +16998,7 @@
       "product": "Wall_Orange_8x4_Tris",
       "event": "NONE"
     },
-    "Recipe_Wall_Orange_Tris_8x8": {
+    "ramp-wall-8m-recipe": {
       "slug": "ramp-wall-8m-recipe",
       "name": "Ramp Wall 8m",
       "ingredients": [
@@ -17434,7 +17010,7 @@
       "product": "Wall_Orange_8x8_Tris",
       "event": "NONE"
     },
-    "Recipe_Wall_Window_8x4_01": {
+    "single-window-recipe": {
       "slug": "single-window-recipe",
       "name": "Single Window",
       "ingredients": [
@@ -17446,7 +17022,7 @@
       "product": "Wall_Window_8x4_01",
       "event": "NONE"
     },
-    "Recipe_Wall_Window_8x4_02": {
+    "frame-window-recipe": {
       "slug": "frame-window-recipe",
       "name": "Frame Window",
       "ingredients": [
@@ -17458,7 +17034,7 @@
       "product": "Wall_Window_8x4_02",
       "event": "NONE"
     },
-    "Recipe_Wall_Window_8x4_03": {
+    "panel-window-recipe": {
       "slug": "panel-window-recipe",
       "name": "Panel Window",
       "ingredients": [
@@ -17470,7 +17046,7 @@
       "product": "Wall_Window_8x4_03",
       "event": "NONE"
     },
-    "Recipe_Wall_Window_8x4_04": {
+    "reinforced-window-recipe": {
       "slug": "reinforced-window-recipe",
       "name": "Reinforced Window",
       "ingredients": [
@@ -17482,7 +17058,7 @@
       "product": "Wall_Window_8x4_04",
       "event": "NONE"
     },
-    "Recipe_SteelWall_8x4_Gate_01": {
+    "gate-hole-wall-steel-recipe": {
       "slug": "gate-hole-wall-steel-recipe",
       "name": "Gate Hole Wall",
       "ingredients": [
@@ -17494,7 +17070,7 @@
       "product": "SteelWall_8x4_Gate_01",
       "event": "NONE"
     },
-    "Recipe_SteelWall_8x4_Window_01": {
+    "single-window-steel-recipe": {
       "slug": "single-window-steel-recipe",
       "name": "Single Window",
       "ingredients": [
@@ -17506,7 +17082,7 @@
       "product": "SteelWall_8x4_Window_01",
       "event": "NONE"
     },
-    "Recipe_SteelWall_8x4_Window_02": {
+    "reinforced-window-steel-recipe": {
       "slug": "reinforced-window-steel-recipe",
       "name": "Reinforced Window",
       "ingredients": [
@@ -17518,7 +17094,7 @@
       "product": "SteelWall_8x4_Window_02",
       "event": "NONE"
     },
-    "Recipe_SteelWall_8x4_Window_03": {
+    "frame-window-steel-recipe": {
       "slug": "frame-window-steel-recipe",
       "name": "Frame Window",
       "ingredients": [
@@ -17530,7 +17106,7 @@
       "product": "SteelWall_8x4_Window_03",
       "event": "NONE"
     },
-    "Recipe_SteelWall_8x4_Window_04": {
+    "panel-window-steel-recipe": {
       "slug": "panel-window-steel-recipe",
       "name": "Panel Window",
       "ingredients": [
@@ -17542,7 +17118,7 @@
       "product": "SteelWall_8x4_Window_04",
       "event": "NONE"
     },
-    "Recipe_Wall_Steel_8x4orner_01": {
+    "tilted-corner-wall-4m-steel-recipe": {
       "slug": "tilted-corner-wall-4m-steel-recipe",
       "name": "Tilted Corner Wall 4m",
       "ingredients": [
@@ -17554,7 +17130,7 @@
       "product": "Wall_Steel_8x4orner_01",
       "event": "NONE"
     },
-    "Recipe_Wall_Steel_8x8orner_01": {
+    "tilted-corner-wall-8m-steel-recipe": {
       "slug": "tilted-corner-wall-8m-steel-recipe",
       "name": "Tilted Corner Wall 8m",
       "ingredients": [
@@ -17566,7 +17142,7 @@
       "product": "Wall_Steel_8x8orner_01",
       "event": "NONE"
     },
-    "Recipe_SteelWall_8x1": {
+    "basic-wall-1m-steel-recipe": {
       "slug": "basic-wall-1m-steel-recipe",
       "name": "Basic Wall 1m",
       "ingredients": [
@@ -17578,7 +17154,7 @@
       "product": "SteelWall_8x1",
       "event": "NONE"
     },
-    "Recipe_SteelWall_FlipTris_8x1": {
+    "inv-ramp-wall-1m-steel-recipe": {
       "slug": "inv-ramp-wall-1m-steel-recipe",
       "name": "Inv. Ramp Wall 1m",
       "ingredients": [
@@ -17590,7 +17166,7 @@
       "product": "SteelWall_FlipTris_8x1",
       "event": "NONE"
     },
-    "Recipe_SteelWall_FlipTris_8x2": {
+    "inv-ramp-wall-2m-steel-recipe": {
       "slug": "inv-ramp-wall-2m-steel-recipe",
       "name": "Inv. Ramp Wall 2m",
       "ingredients": [
@@ -17602,7 +17178,7 @@
       "product": "SteelWall_FlipTris_8x2",
       "event": "NONE"
     },
-    "Recipe_SteelWall_FlipTris_8x4": {
+    "inv-ramp-wall-4m-steel-recipe": {
       "slug": "inv-ramp-wall-4m-steel-recipe",
       "name": "Inv. Ramp Wall 4m",
       "ingredients": [
@@ -17614,7 +17190,7 @@
       "product": "SteelWall_FlipTris_8x4",
       "event": "NONE"
     },
-    "Recipe_SteelWall_FlipTris_8x8": {
+    "inv-ramp-wall-8m-steel-recipe": {
       "slug": "inv-ramp-wall-8m-steel-recipe",
       "name": "Inv. Ramp Wall 8m",
       "ingredients": [
@@ -17626,7 +17202,7 @@
       "product": "SteelWall_FlipTris_8x8",
       "event": "NONE"
     },
-    "Recipe_SteelWall_Tris_8x1": {
+    "ramp-wall-1m-steel-recipe": {
       "slug": "ramp-wall-1m-steel-recipe",
       "name": "Ramp Wall 1m",
       "ingredients": [
@@ -17638,7 +17214,7 @@
       "product": "SteelWall_Tris_8x1",
       "event": "NONE"
     },
-    "Recipe_SteelWall_Tris_8x2": {
+    "ramp-wall-2m-steel-recipe": {
       "slug": "ramp-wall-2m-steel-recipe",
       "name": "Ramp Wall 2m",
       "ingredients": [
@@ -17650,7 +17226,7 @@
       "product": "SteelWall_Tris_8x2",
       "event": "NONE"
     },
-    "Recipe_SteelWall_Tris_8x4": {
+    "ramp-wall-4m-steel-recipe": {
       "slug": "ramp-wall-4m-steel-recipe",
       "name": "Ramp Wall 4m",
       "ingredients": [
@@ -17662,7 +17238,7 @@
       "product": "SteelWall_Tris_8x4",
       "event": "NONE"
     },
-    "Recipe_SteelWall_Tris_8x8": {
+    "ramp-wall-8m-steel-recipe": {
       "slug": "ramp-wall-8m-steel-recipe",
       "name": "Ramp Wall 8m",
       "ingredients": [
@@ -17674,7 +17250,7 @@
       "product": "SteelWall_Tris_8x8",
       "event": "NONE"
     },
-    "Recipe_Wall_8x4_02": {
+    "basic-wall-4m-steel-recipe": {
       "slug": "basic-wall-4m-steel-recipe",
       "name": "Basic Wall 4m",
       "ingredients": [
@@ -17686,7 +17262,7 @@
       "product": "Wall_8x4_02",
       "event": "NONE"
     },
-    "Recipe_Wallonveyor_8x4_01_Steel": {
+    "conveyor-wall-x3-steel-recipe": {
       "slug": "conveyor-wall-x3-steel-recipe",
       "name": "Conveyor Wall x3",
       "ingredients": [
@@ -17698,7 +17274,7 @@
       "product": "Wallonveyor_8x4_01_Steel",
       "event": "NONE"
     },
-    "Recipe_Wallonveyor_8x4_02_Steel": {
+    "conveyor-wall-x2-steel-recipe": {
       "slug": "conveyor-wall-x2-steel-recipe",
       "name": "Conveyor Wall x2",
       "ingredients": [
@@ -17710,7 +17286,7 @@
       "product": "Wallonveyor_8x4_02_Steel",
       "event": "NONE"
     },
-    "Recipe_Wallonveyor_8x4_03_Steel": {
+    "conveyor-wall-x1-steel-recipe": {
       "slug": "conveyor-wall-x1-steel-recipe",
       "name": "Conveyor Wall x1",
       "ingredients": [
@@ -17722,7 +17298,7 @@
       "product": "Wallonveyor_8x4_03_Steel",
       "event": "NONE"
     },
-    "Recipe_Wall_Door_8x4_01_Steel": {
+    "center-door-wall-steel-recipe": {
       "slug": "center-door-wall-steel-recipe",
       "name": "Center Door Wall",
       "ingredients": [
@@ -17734,7 +17310,7 @@
       "product": "Wall_Door_8x4_01_Steel",
       "event": "NONE"
     },
-    "Recipe_Wall_Door_8x4_03_Steel": {
+    "side-door-wall-steel-recipe": {
       "slug": "side-door-wall-steel-recipe",
       "name": "Side Door Wall",
       "ingredients": [
@@ -17746,7 +17322,7 @@
       "product": "Wall_Door_8x4_03_Steel",
       "event": "NONE"
     },
-    "Recipe_WallSet_Steel_Angular_8x4": {
+    "tilted-wall-4m-steel-recipe": {
       "slug": "tilted-wall-4m-steel-recipe",
       "name": "Tilted Wall 4m",
       "ingredients": [
@@ -17758,7 +17334,7 @@
       "product": "WallSet_Steel_Angular_8x4",
       "event": "NONE"
     },
-    "Recipe_WallSet_Steel_Angular_8x8": {
+    "tilted-wall-8m-steel-recipe": {
       "slug": "tilted-wall-8m-steel-recipe",
       "name": "Tilted Wall 8m",
       "ingredients": [
@@ -17770,7 +17346,7 @@
       "product": "WallSet_Steel_Angular_8x8",
       "event": "NONE"
     },
-    "RecipeonveyorPole": {
+    "conveyor-pole-recipe": {
       "slug": "conveyor-pole-recipe",
       "name": "Conveyor Pole",
       "ingredients": [
@@ -17790,7 +17366,7 @@
       "product": "ConveyorPole",
       "event": "NONE"
     },
-    "RecipeonveyorBeltMk1": {
+    "conveyor-belt-mk-1-recipe": {
       "slug": "conveyor-belt-mk-1-recipe",
       "name": "Conveyor Belt Mk.1",
       "ingredients": [
@@ -17802,7 +17378,7 @@
       "product": "ConveyorBeltMk1",
       "event": "NONE"
     },
-    "Recipe_PowerLine": {
+    "power-line-recipe": {
       "slug": "power-line-recipe",
       "name": "Power Line",
       "ingredients": [
@@ -17814,7 +17390,7 @@
       "product": "PowerLine",
       "event": "NONE"
     },
-    "Recipe_PowerPoleMk1": {
+    "power-pole-mk-1-recipe": {
       "slug": "power-pole-mk-1-recipe",
       "name": "Power Pole Mk.1",
       "ingredients": [
@@ -17834,7 +17410,7 @@
       "product": "PowerPoleMk1",
       "event": "NONE"
     },
-    "Recipe_PowerPoleWall": {
+    "wall-outlet-mk-1-recipe": {
       "slug": "wall-outlet-mk-1-recipe",
       "name": "Wall Outlet Mk.1",
       "ingredients": [
@@ -17850,7 +17426,7 @@
       "product": "PowerPoleWall",
       "event": "NONE"
     },
-    "RecipeonstructorMk1": {
+    "constructor-recipe": {
       "slug": "constructor-recipe",
       "name": "Constructor",
       "ingredients": [
@@ -17866,7 +17442,7 @@
       "product": "ConstructorMk1",
       "event": "NONE"
     },
-    "Recipe_MinerMk1": {
+    "miner-mk-1-recipe": {
       "slug": "miner-mk-1-recipe",
       "name": "Miner Mk.1",
       "ingredients": [
@@ -17886,7 +17462,7 @@
       "product": "MinerMk1",
       "event": "NONE"
     },
-    "Recipe_SmelterBasicMk1": {
+    "smelter-recipe": {
       "slug": "smelter-recipe",
       "name": "Smelter",
       "ingredients": [
@@ -17902,7 +17478,7 @@
       "product": "SmelterMk1",
       "event": "NONE"
     },
-    "Recipe_StorageContainerMk1": {
+    "storage-container-recipe": {
       "slug": "storage-container-recipe",
       "name": "Storage Container",
       "ingredients": [
@@ -17918,7 +17494,7 @@
       "product": "StorageContainerMk1",
       "event": "NONE"
     },
-    "Recipe_WorkBench": {
+    "craft-bench-recipe": {
       "slug": "craft-bench-recipe",
       "name": "Craft Bench",
       "ingredients": [
@@ -17934,7 +17510,7 @@
       "product": "WorkBench",
       "event": "NONE"
     },
-    "Recipe_Workshop": {
+    "equipment-workshop-recipe": {
       "slug": "equipment-workshop-recipe",
       "name": "Equipment Workshop",
       "ingredients": [
@@ -17950,7 +17526,7 @@
       "product": "Workshop",
       "event": "NONE"
     },
-    "Recipe_GeneratorBiomass": {
+    "biomass-burner-recipe": {
       "slug": "biomass-burner-recipe",
       "name": "Biomass Burner",
       "ingredients": [
@@ -17970,7 +17546,7 @@
       "product": "GeneratorBiomass",
       "event": "NONE"
     },
-    "Recipe_SpaceElevator": {
+    "space-elevator-recipe": {
       "slug": "space-elevator-recipe",
       "name": "Space Elevator",
       "ingredients": [
@@ -17994,27 +17570,7 @@
       "product": "SpaceElevator",
       "event": "NONE"
     },
-    "Recipe_XMassTree": {
-      "slug": "giant-ficsmas-tree-recipe",
-      "name": "Giant FICSMAS Tree",
-      "ingredients": [
-        {
-          "itemClass": "XmasBranch",
-          "quantity": 100
-        },
-        {
-          "itemClass": "reinforced-iron-plate",
-          "quantity": 50
-        },
-        {
-          "itemClass": "concrete",
-          "quantity": 500
-        }
-      ],
-      "product": "XMassTree",
-      "event": "FICSMAS"
-    },
-    "Recipe_TradingPost": {
+    "the-hub-recipe": {
       "slug": "the-hub-recipe",
       "name": "The HUB",
       "ingredients": [
@@ -18026,7 +17582,7 @@
       "product": "TradingPost",
       "event": "NONE"
     },
-    "Recipe_Fence_01": {
+    "industrial-railing-recipe": {
       "slug": "industrial-railing-recipe",
       "name": "Industrial Railing",
       "ingredients": [
@@ -18038,7 +17594,7 @@
       "product": "Fence_01",
       "event": "NONE"
     },
-    "Recipe_Walkwayross": {
+    "walkway-crossing-recipe": {
       "slug": "walkway-crossing-recipe",
       "name": "Walkway Crossing",
       "ingredients": [
@@ -18054,7 +17610,7 @@
       "product": "WalkwayCross",
       "event": "NONE"
     },
-    "Recipe_Walkway_Ramp": {
+    "walkway-ramp-recipe": {
       "slug": "walkway-ramp-recipe",
       "name": "Walkway Ramp",
       "ingredients": [
@@ -18070,7 +17626,7 @@
       "product": "WalkwayRamp",
       "event": "NONE"
     },
-    "Recipe_Walkway_Straight": {
+    "walkway-straight-recipe": {
       "slug": "walkway-straight-recipe",
       "name": "Walkway Straight",
       "ingredients": [
@@ -18086,7 +17642,7 @@
       "product": "WalkwayStraight",
       "event": "NONE"
     },
-    "Recipe_Walkway_T": {
+    "walkway-t-crossing-recipe": {
       "slug": "walkway-t-crossing-recipe",
       "name": "Walkway T-Crossing",
       "ingredients": [
@@ -18102,7 +17658,7 @@
       "product": "WalkwayT",
       "event": "NONE"
     },
-    "Recipe_Walkway_Turn": {
+    "walkway-turn-recipe": {
       "slug": "walkway-turn-recipe",
       "name": "Walkway Turn",
       "ingredients": [
@@ -18118,7 +17674,7 @@
       "product": "WalkwayTurn",
       "event": "NONE"
     },
-    "Recipe_Wallonveyor_8x4_04": {
+    "wall-conveyor-perpendicular-recipe": {
       "slug": "wall-conveyor-perpendicular-recipe",
       "name": "Wall Conveyor Perpendicular",
       "ingredients": [
@@ -18134,7 +17690,7 @@
       "product": "Wallonveyor_8x4_04",
       "event": "NONE"
     },
-    "Recipe_Wallonveyor_8x4_04_Steel": {
+    "wall-conveyor-perpendicular-steel-recipe": {
       "slug": "wall-conveyor-perpendicular-steel-recipe",
       "name": "Wall Conveyor Perpendicular",
       "ingredients": [
@@ -18150,7 +17706,7 @@
       "product": "Wallonveyor_8x4_04_Steel",
       "event": "NONE"
     },
-    "Recipe_OilPump": {
+    "oil-extractor-recipe": {
       "slug": "oil-extractor-recipe",
       "name": "Oil Extractor",
       "ingredients": [
@@ -18170,7 +17726,7 @@
       "product": "OilPump",
       "event": "NONE"
     },
-    "Recipe_OilRefinery": {
+    "refinery-recipe": {
       "slug": "refinery-recipe",
       "name": "Refinery",
       "ingredients": [
@@ -18194,7 +17750,7 @@
       "product": "OilRefinery",
       "event": "NONE"
     },
-    "Recipe_Valve": {
+    "valve-recipe": {
       "slug": "valve-recipe",
       "name": "Valve",
       "ingredients": [
@@ -18210,7 +17766,7 @@
       "product": "Valve",
       "event": "NONE"
     },
-    "Recipe_AssemblerMk1": {
+    "assembler-recipe": {
       "slug": "assembler-recipe",
       "name": "Assembler",
       "ingredients": [
@@ -18230,7 +17786,7 @@
       "product": "AssemblerMk1",
       "event": "NONE"
     },
-    "Recipe_GeneratorCoal": {
+    "coal-generator-recipe": {
       "slug": "coal-generator-recipe",
       "name": "Coal Generator",
       "ingredients": [
@@ -18250,7 +17806,7 @@
       "product": "GeneratorCoal",
       "event": "NONE"
     },
-    "Recipe_PipeSupport": {
+    "pipeline-support-recipe": {
       "slug": "pipeline-support-recipe",
       "name": "Pipeline Support",
       "ingredients": [
@@ -18266,7 +17822,7 @@
       "product": "PipelineSupport",
       "event": "NONE"
     },
-    "Recipe_Pipeline": {
+    "pipeline-mk-1-recipe": {
       "slug": "pipeline-mk-1-recipe",
       "name": "Pipeline Mk.1",
       "ingredients": [
@@ -18278,7 +17834,7 @@
       "product": "Pipeline",
       "event": "NONE"
     },
-    "Recipe_PipelineJunctionross": {
+    "pipeline-junction-cross-recipe": {
       "slug": "pipeline-junction-cross-recipe",
       "name": "Pipeline Junction Cross",
       "ingredients": [
@@ -18290,7 +17846,7 @@
       "product": "PipelineJunctionross",
       "event": "NONE"
     },
-    "Recipe_PipelinePump": {
+    "pipeline-pump-mk-1-recipe": {
       "slug": "pipeline-pump-mk-1-recipe",
       "name": "Pipeline Pump Mk.1",
       "ingredients": [
@@ -18306,7 +17862,7 @@
       "product": "PipelinePump",
       "event": "NONE"
     },
-    "Recipe_PipeStorageTank": {
+    "fluid-buffer-recipe": {
       "slug": "fluid-buffer-recipe",
       "name": "Fluid Buffer",
       "ingredients": [
@@ -18322,7 +17878,7 @@
       "product": "PipeStorageTank",
       "event": "NONE"
     },
-    "Recipe_WaterPump": {
+    "water-extractor-recipe": {
       "slug": "water-extractor-recipe",
       "name": "Water Extractor",
       "ingredients": [
@@ -18342,7 +17898,7 @@
       "product": "WaterPump",
       "event": "NONE"
     },
-    "Recipe_ResourceSink": {
+    "awesome-sink-recipe": {
       "slug": "awesome-sink-recipe",
       "name": "AWESOME Sink",
       "ingredients": [
@@ -18362,7 +17918,7 @@
       "product": "ResourceSink",
       "event": "NONE"
     },
-    "Recipe_ResourceSinkShop": {
+    "awesome-shop-recipe": {
       "slug": "awesome-shop-recipe",
       "name": "AWESOME Shop",
       "ingredients": [
@@ -18382,7 +17938,7 @@
       "product": "ResourceSinkShop",
       "event": "NONE"
     },
-    "Recipe_IndustrialTank": {
+    "industrial-fluid-buffer-recipe": {
       "slug": "industrial-fluid-buffer-recipe",
       "name": "Industrial Fluid Buffer",
       "ingredients": [
@@ -18398,7 +17954,7 @@
       "product": "IndustrialTank",
       "event": "NONE"
     },
-    "Recipe_Packager": {
+    "packager-recipe": {
       "slug": "packager-recipe",
       "name": "Packager",
       "ingredients": [
@@ -18418,7 +17974,7 @@
       "product": "Packager",
       "event": "NONE"
     },
-    "Recipe_Blender": {
+    "blender-recipe": {
       "slug": "blender-recipe",
       "name": "Blender",
       "ingredients": [
@@ -18442,7 +17998,7 @@
       "product": "Blender",
       "event": "NONE"
     },
-    "Recipe_ManufacturerMk1": {
+    "manufacturer-recipe": {
       "slug": "manufacturer-recipe",
       "name": "Manufacturer",
       "ingredients": [
@@ -18466,7 +18022,7 @@
       "product": "ManufacturerMk1",
       "event": "NONE"
     },
-    "Recipe_Truck": {
+    "truck-recipe": {
       "slug": "truck-recipe",
       "name": "Truck",
       "ingredients": [
@@ -18494,7 +18050,7 @@
       "product": "Truck",
       "event": "NONE"
     },
-    "Recipe_MinerMk2": {
+    "miner-mk-2-recipe": {
       "slug": "miner-mk-2-recipe",
       "name": "Miner Mk.2",
       "ingredients": [
@@ -18518,7 +18074,7 @@
       "product": "MinerMk2",
       "event": "NONE"
     },
-    "Recipe_SmelterMk1": {
+    "foundry-recipe": {
       "slug": "foundry-recipe",
       "name": "Foundry",
       "ingredients": [
@@ -18538,7 +18094,7 @@
       "product": "FoundryMk1",
       "event": "NONE"
     },
-    "Recipe_DroneStation": {
+    "drone-port-recipe": {
       "slug": "drone-port-recipe",
       "name": "Drone Port",
       "ingredients": [
@@ -18566,7 +18122,7 @@
       "product": "DroneStation",
       "event": "NONE"
     },
-    "Recipe_DroneTransport": {
+    "drone-recipe": {
       "slug": "drone-recipe",
       "name": "Drone",
       "ingredients": [
@@ -18594,7 +18150,7 @@
       "product": "DroneTransport",
       "event": "NONE"
     },
-    "Recipe_FrackingExtractor": {
+    "resource-well-extractor-recipe": {
       "slug": "resource-well-extractor-recipe",
       "name": "Resource Well Extractor",
       "ingredients": [
@@ -18610,7 +18166,7 @@
       "product": "FrackingExtractor",
       "event": "NONE"
     },
-    "Recipe_FrackingSmasher": {
+    "resource-well-pressurizer-recipe": {
       "slug": "resource-well-pressurizer-recipe",
       "name": "Resource Well Pressurizer",
       "ingredients": [
@@ -18634,7 +18190,7 @@
       "product": "FrackingSmasher",
       "event": "NONE"
     },
-    "Recipe_HadronCollider": {
+    "particle-accelerator-recipe": {
       "slug": "particle-accelerator-recipe",
       "name": "Particle Accelerator",
       "ingredients": [
@@ -18666,7 +18222,7 @@
       "product": "HadronCollider",
       "event": "NONE"
     },
-    "Recipe_GeneratorNuclear": {
+    "nuclear-power-plant-recipe": {
       "slug": "nuclear-power-plant-recipe",
       "name": "Nuclear Power Plant",
       "ingredients": [
@@ -18694,7 +18250,7 @@
       "product": "GeneratorNuclear",
       "event": "NONE"
     },
-    "RecipeonveyorBeltMk5": {
+    "conveyor-belt-mk-5-recipe": {
       "slug": "conveyor-belt-mk-5-recipe",
       "name": "Conveyor Belt Mk.5",
       "ingredients": [
@@ -18706,7 +18262,7 @@
       "product": "ConveyorBeltMk5",
       "event": "NONE"
     },
-    "RecipeonveyorLiftMk5": {
+    "conveyor-lift-mk-5-recipe": {
       "slug": "conveyor-lift-mk-5-recipe",
       "name": "Conveyor Lift Mk.5",
       "ingredients": [
@@ -18718,7 +18274,7 @@
       "product": "ConveyorLiftMk5",
       "event": "NONE"
     },
-    "Recipe_MinerMk3": {
+    "miner-mk-3-recipe": {
       "slug": "miner-mk-3-recipe",
       "name": "Miner Mk.3",
       "ingredients": [
@@ -18746,7 +18302,7 @@
       "product": "MinerMk3",
       "event": "NONE"
     },
-    "Recipe_Foundation_8x1_01": {
+    "foundation-1m-recipe": {
       "slug": "foundation-1m-recipe",
       "name": "Foundation 1m",
       "ingredients": [
@@ -18758,7 +18314,7 @@
       "product": "Foundation_8x1_01",
       "event": "NONE"
     },
-    "Recipe_Foundation_8x2_01": {
+    "foundation-2m-recipe": {
       "slug": "foundation-2m-recipe",
       "name": "Foundation 2m",
       "ingredients": [
@@ -18770,7 +18326,7 @@
       "product": "Foundation_8x2_01",
       "event": "NONE"
     },
-    "Recipe_Foundation_8x4_01": {
+    "foundation-4m-recipe": {
       "slug": "foundation-4m-recipe",
       "name": "Foundation 4m",
       "ingredients": [
@@ -18782,7 +18338,7 @@
       "product": "Foundation_8x4_01",
       "event": "NONE"
     },
-    "Recipe_Ramp_8x1_01": {
+    "ramp-1m-recipe": {
       "slug": "ramp-1m-recipe",
       "name": "Ramp 1m",
       "ingredients": [
@@ -18794,7 +18350,7 @@
       "product": "Ramp_8x1_01",
       "event": "NONE"
     },
-    "Recipe_Ramp_8x2_01": {
+    "ramp-2m-recipe": {
       "slug": "ramp-2m-recipe",
       "name": "Ramp 2m",
       "ingredients": [
@@ -18806,7 +18362,7 @@
       "product": "Ramp_8x2_01",
       "event": "NONE"
     },
-    "Recipe_Ramp_8x4_01": {
+    "ramp-4m-recipe": {
       "slug": "ramp-4m-recipe",
       "name": "Ramp 4m",
       "ingredients": [
@@ -18818,7 +18374,7 @@
       "product": "Ramp_8x4_01",
       "event": "NONE"
     },
-    "Recipe_Ramp_8x4_Inverted_01": {
+    "inv-ramp-4m-recipe": {
       "slug": "inv-ramp-4m-recipe",
       "name": "Inv. Ramp 4m",
       "ingredients": [
@@ -18830,7 +18386,7 @@
       "product": "Ramp_8x4_Inverted_01",
       "event": "NONE"
     },
-    "Recipe_Ramp_8x8x8": {
+    "double-ramp-8m-recipe": {
       "slug": "double-ramp-8m-recipe",
       "name": "Double Ramp 8m",
       "ingredients": [
@@ -18842,7 +18398,7 @@
       "product": "Ramp_8x8x8",
       "event": "NONE"
     },
-    "Recipe_Ramp_Diagonal_8x1_01": {
+    "down-corner-ramp-1m-recipe": {
       "slug": "down-corner-ramp-1m-recipe",
       "name": "Down Corner Ramp 1m",
       "ingredients": [
@@ -18854,7 +18410,7 @@
       "product": "Ramp_Diagonal_8x1_01",
       "event": "NONE"
     },
-    "Recipe_Ramp_Diagonal_8x1_02": {
+    "up-corner-ramp-1m-recipe": {
       "slug": "up-corner-ramp-1m-recipe",
       "name": "Up Corner Ramp 1m",
       "ingredients": [
@@ -18866,7 +18422,7 @@
       "product": "Ramp_Diagonal_8x1_02",
       "event": "NONE"
     },
-    "Recipe_Ramp_Diagonal_8x2_01": {
+    "down-corner-ramp-2m-recipe": {
       "slug": "down-corner-ramp-2m-recipe",
       "name": "Down Corner Ramp 2m",
       "ingredients": [
@@ -18878,7 +18434,7 @@
       "product": "Ramp_Diagonal_8x2_01",
       "event": "NONE"
     },
-    "Recipe_Ramp_Diagonal_8x2_02": {
+    "up-corner-ramp-2m-recipe": {
       "slug": "up-corner-ramp-2m-recipe",
       "name": "Up Corner Ramp 2m",
       "ingredients": [
@@ -18890,7 +18446,7 @@
       "product": "Ramp_Diagonal_8x2_02",
       "event": "NONE"
     },
-    "Recipe_Ramp_Diagonal_8x4_01": {
+    "down-corner-ramp-4m-recipe": {
       "slug": "down-corner-ramp-4m-recipe",
       "name": "Down Corner Ramp 4m",
       "ingredients": [
@@ -18902,7 +18458,7 @@
       "product": "Ramp_Diagonal_8x4_01",
       "event": "NONE"
     },
-    "Recipe_Ramp_Diagonal_8x4_02": {
+    "up-corner-ramp-4m-recipe": {
       "slug": "up-corner-ramp-4m-recipe",
       "name": "Up Corner Ramp 4m",
       "ingredients": [
@@ -18914,7 +18470,7 @@
       "product": "Ramp_Diagonal_8x4_02",
       "event": "NONE"
     },
-    "Recipe_RampDouble": {
+    "double-ramp-4m-recipe": {
       "slug": "double-ramp-4m-recipe",
       "name": "Double Ramp 4m",
       "ingredients": [
@@ -18926,7 +18482,7 @@
       "product": "RampDouble",
       "event": "NONE"
     },
-    "Recipe_RampDouble_8x1": {
+    "double-ramp-2m-recipe": {
       "slug": "double-ramp-2m-recipe",
       "name": "Double Ramp 2m",
       "ingredients": [
@@ -18938,7 +18494,7 @@
       "product": "RampDouble_8x1",
       "event": "NONE"
     },
-    "Recipe_RampInverted_8x1": {
+    "inv-ramp-1m-recipe": {
       "slug": "inv-ramp-1m-recipe",
       "name": "Inv. Ramp 1m",
       "ingredients": [
@@ -18950,7 +18506,7 @@
       "product": "RampInverted_8x1",
       "event": "NONE"
     },
-    "Recipe_RampInverted_8x1orner_01": {
+    "inv-up-corner-1m-recipe": {
       "slug": "inv-up-corner-1m-recipe",
       "name": "Inv. Up Corner 1m",
       "ingredients": [
@@ -18962,7 +18518,7 @@
       "product": "RampInverted_8x1orner_01",
       "event": "NONE"
     },
-    "Recipe_RampInverted_8x1orner_02": {
+    "inv-down-corner-1m-recipe": {
       "slug": "inv-down-corner-1m-recipe",
       "name": "Inv. Down Corner 1m",
       "ingredients": [
@@ -18974,7 +18530,7 @@
       "product": "RampInverted_8x1orner_02",
       "event": "NONE"
     },
-    "Recipe_RampInverted_8x2_01": {
+    "inv-ramp-2m-recipe": {
       "slug": "inv-ramp-2m-recipe",
       "name": "Inv. Ramp 2m",
       "ingredients": [
@@ -18986,7 +18542,7 @@
       "product": "RampInverted_8x2_01",
       "event": "NONE"
     },
-    "Recipe_RampInverted_8x2orner_01": {
+    "inv-up-corner-2m-recipe": {
       "slug": "inv-up-corner-2m-recipe",
       "name": "Inv. Up Corner 2m",
       "ingredients": [
@@ -18998,7 +18554,7 @@
       "product": "RampInverted_8x2orner_01",
       "event": "NONE"
     },
-    "Recipe_RampInverted_8x2orner_02": {
+    "inv-down-corner-2m-recipe": {
       "slug": "inv-down-corner-2m-recipe",
       "name": "Inv. Down Corner 2m",
       "ingredients": [
@@ -19010,7 +18566,7 @@
       "product": "RampInverted_8x2orner_02",
       "event": "NONE"
     },
-    "Recipe_RampInverted_8x4orner_01": {
+    "inv-up-corner-4m-recipe": {
       "slug": "inv-up-corner-4m-recipe",
       "name": "Inv. Up Corner 4m",
       "ingredients": [
@@ -19022,7 +18578,7 @@
       "product": "RampInverted_8x4orner_01",
       "event": "NONE"
     },
-    "Recipe_RampInverted_8x4orner_02": {
+    "inv-down-corner-4m-recipe": {
       "slug": "inv-down-corner-4m-recipe",
       "name": "Inv. Down Corner 4m",
       "ingredients": [
@@ -19034,7 +18590,7 @@
       "product": "RampInverted_8x4orner_02",
       "event": "NONE"
     },
-    "Recipe_LookoutTower": {
+    "lookout-tower-recipe": {
       "slug": "lookout-tower-recipe",
       "name": "Lookout Tower",
       "ingredients": [
@@ -19050,7 +18606,7 @@
       "product": "LookoutTower",
       "event": "NONE"
     },
-    "RecipeonveyorAttachmentMerger": {
+    "conveyor-merger-recipe": {
       "slug": "conveyor-merger-recipe",
       "name": "Conveyor Merger",
       "ingredients": [
@@ -19066,7 +18622,7 @@
       "product": "ConveyorAttachmentMerger",
       "event": "NONE"
     },
-    "RecipeonveyorAttachmentSplitter": {
+    "conveyor-splitter-recipe": {
       "slug": "conveyor-splitter-recipe",
       "name": "Conveyor Splitter",
       "ingredients": [
@@ -19082,7 +18638,7 @@
       "product": "ConveyorAttachmentSplitter",
       "event": "NONE"
     },
-    "RecipeonveyorLiftMk1": {
+    "conveyor-lift-mk-1-recipe": {
       "slug": "conveyor-lift-mk-1-recipe",
       "name": "Conveyor Lift Mk.1",
       "ingredients": [
@@ -19094,7 +18650,7 @@
       "product": "ConveyorLiftMk1",
       "event": "NONE"
     },
-    "Recipe_Mam": {
+    "mam-recipe": {
       "slug": "mam-recipe",
       "name": "MAM",
       "ingredients": [
@@ -19114,7 +18670,7 @@
       "product": "Mam",
       "event": "NONE"
     },
-    "Recipe_StoragePlayer": {
+    "personal-storage-box-recipe": {
       "slug": "personal-storage-box-recipe",
       "name": "Personal Storage Box",
       "ingredients": [
@@ -19130,7 +18686,7 @@
       "product": "StoragePlayer",
       "event": "NONE"
     },
-    "Recipe_JumpPadAdjustable": {
+    "jump-pad-recipe": {
       "slug": "jump-pad-recipe",
       "name": "Jump Pad",
       "ingredients": [
@@ -19150,7 +18706,7 @@
       "product": "JumpPadAdjustable",
       "event": "NONE"
     },
-    "Recipe_UJellyLandingPad": {
+    "u-jelly-landing-pad-recipe": {
       "slug": "u-jelly-landing-pad-recipe",
       "name": "U-Jelly Landing Pad",
       "ingredients": [
@@ -19170,7 +18726,7 @@
       "product": "LandingPad",
       "event": "NONE"
     },
-    "RecipeonveyorBeltMk2": {
+    "conveyor-belt-mk-2-recipe": {
       "slug": "conveyor-belt-mk-2-recipe",
       "name": "Conveyor Belt Mk.2",
       "ingredients": [
@@ -19182,7 +18738,7 @@
       "product": "ConveyorBeltMk2",
       "event": "NONE"
     },
-    "RecipeonveyorLiftMk2": {
+    "conveyor-lift-mk-2-recipe": {
       "slug": "conveyor-lift-mk-2-recipe",
       "name": "Conveyor Lift Mk.2",
       "ingredients": [
@@ -19194,7 +18750,7 @@
       "product": "ConveyorLiftMk2",
       "event": "NONE"
     },
-    "RecipeonveyorPoleStackable": {
+    "stackable-conveyor-pole-recipe": {
       "slug": "stackable-conveyor-pole-recipe",
       "name": "Stackable Conveyor Pole",
       "ingredients": [
@@ -19214,7 +18770,7 @@
       "product": "ConveyorPoleStackable",
       "event": "NONE"
     },
-    "Recipe_TruckStation": {
+    "truck-station-recipe": {
       "slug": "truck-station-recipe",
       "name": "Truck Station",
       "ingredients": [
@@ -19234,7 +18790,7 @@
       "product": "TruckStation",
       "event": "NONE"
     },
-    "Recipe_Tractor": {
+    "tractor-recipe": {
       "slug": "tractor-recipe",
       "name": "Tractor",
       "ingredients": [
@@ -19254,7 +18810,7 @@
       "product": "Tractor",
       "event": "NONE"
     },
-    "Recipe_PipeHyperStart": {
+    "hypertube-entrance-recipe": {
       "slug": "hypertube-entrance-recipe",
       "name": "Hypertube Entrance",
       "ingredients": [
@@ -19274,7 +18830,7 @@
       "product": "PipeHyperStart",
       "event": "NONE"
     },
-    "Recipe_HyperPoleStackable": {
+    "stackable-hypertube-support-recipe": {
       "slug": "stackable-hypertube-support-recipe",
       "name": "Stackable Hypertube Support",
       "ingredients": [
@@ -19294,7 +18850,7 @@
       "product": "HyperPoleStackable",
       "event": "NONE"
     },
-    "Recipe_PipeHyperSupport": {
+    "hypertube-support-recipe": {
       "slug": "hypertube-support-recipe",
       "name": "Hypertube Support",
       "ingredients": [
@@ -19310,7 +18866,7 @@
       "product": "PipeHyperSupport",
       "event": "NONE"
     },
-    "Recipe_PipeHyper": {
+    "hypertube-recipe": {
       "slug": "hypertube-recipe",
       "name": "Hypertube",
       "ingredients": [
@@ -19326,7 +18882,7 @@
       "product": "PipeHyper",
       "event": "NONE"
     },
-    "RecipeonveyorBeltMk3": {
+    "conveyor-belt-mk-3-recipe": {
       "slug": "conveyor-belt-mk-3-recipe",
       "name": "Conveyor Belt Mk.3",
       "ingredients": [
@@ -19338,7 +18894,7 @@
       "product": "ConveyorBeltMk3",
       "event": "NONE"
     },
-    "RecipeonveyorLiftMk3": {
+    "conveyor-lift-mk-3-recipe": {
       "slug": "conveyor-lift-mk-3-recipe",
       "name": "Conveyor Lift Mk.3",
       "ingredients": [
@@ -19350,7 +18906,7 @@
       "product": "ConveyorLiftMk3",
       "event": "NONE"
     },
-    "Recipe_PipeSupportStackable": {
+    "stackable-pipeline-support-recipe": {
       "slug": "stackable-pipeline-support-recipe",
       "name": "Stackable Pipeline Support",
       "ingredients": [
@@ -19370,7 +18926,7 @@
       "product": "PipeSupportStackable",
       "event": "NONE"
     },
-    "Recipe_PowerStorageMk1": {
+    "power-storage-recipe": {
       "slug": "power-storage-recipe",
       "name": "Power Storage",
       "ingredients": [
@@ -19390,7 +18946,7 @@
       "product": "PowerStorageMk1",
       "event": "NONE"
     },
-    "Recipe_StorageContainerMk2": {
+    "industrial-storage-container-recipe": {
       "slug": "industrial-storage-container-recipe",
       "name": "Industrial Storage Container",
       "ingredients": [
@@ -19406,7 +18962,7 @@
       "product": "StorageContainerMk2",
       "event": "NONE"
     },
-    "RecipeonveyorBeltMk4": {
+    "conveyor-belt-mk-4-recipe": {
       "slug": "conveyor-belt-mk-4-recipe",
       "name": "Conveyor Belt Mk.4",
       "ingredients": [
@@ -19418,7 +18974,7 @@
       "product": "ConveyorBeltMk4",
       "event": "NONE"
     },
-    "RecipeonveyorLiftMk4": {
+    "conveyor-lift-mk-4-recipe": {
       "slug": "conveyor-lift-mk-4-recipe",
       "name": "Conveyor Lift Mk.4",
       "ingredients": [
@@ -19430,7 +18986,7 @@
       "product": "ConveyorLiftMk4",
       "event": "NONE"
     },
-    "Recipe_GeneratorFuel": {
+    "fuel-generator-recipe": {
       "slug": "fuel-generator-recipe",
       "name": "Fuel Generator",
       "ingredients": [
@@ -19458,7 +19014,7 @@
       "product": "GeneratorFuel",
       "event": "NONE"
     },
-    "Recipe_RailroadBlockSignal": {
+    "block-signal-recipe": {
       "slug": "block-signal-recipe",
       "name": "Block Signal",
       "ingredients": [
@@ -19478,7 +19034,7 @@
       "product": "RailroadBlockSignal",
       "event": "NONE"
     },
-    "Recipe_RailroadPathSignal": {
+    "path-signal-recipe": {
       "slug": "path-signal-recipe",
       "name": "Path Signal",
       "ingredients": [
@@ -19498,7 +19054,7 @@
       "product": "RailroadPathSignal",
       "event": "NONE"
     },
-    "Recipe_TrainDockingStation": {
+    "freight-platform-recipe": {
       "slug": "freight-platform-recipe",
       "name": "Freight Platform",
       "ingredients": [
@@ -19526,7 +19082,7 @@
       "product": "TrainDockingStation",
       "event": "NONE"
     },
-    "Recipe_TrainDockingStationLiquid": {
+    "fluid-freight-platform-recipe": {
       "slug": "fluid-freight-platform-recipe",
       "name": "Fluid Freight Platform",
       "ingredients": [
@@ -19554,7 +19110,7 @@
       "product": "TrainDockingStationLiquid",
       "event": "NONE"
     },
-    "Recipe_TrainPlatformEmpty": {
+    "empty-platform-recipe": {
       "slug": "empty-platform-recipe",
       "name": "Empty Platform",
       "ingredients": [
@@ -19570,7 +19126,7 @@
       "product": "TrainPlatformEmpty",
       "event": "NONE"
     },
-    "Recipe_TrainPlatformEmpty_02": {
+    "empty-platform-with-catwalk-recipe": {
       "slug": "empty-platform-with-catwalk-recipe",
       "name": "Empty Platform With Catwalk",
       "ingredients": [
@@ -19586,7 +19142,7 @@
       "product": "TrainPlatformEmpty_02",
       "event": "NONE"
     },
-    "Recipe_TrainStation": {
+    "train-station-recipe": {
       "slug": "train-station-recipe",
       "name": "Train Station",
       "ingredients": [
@@ -19610,7 +19166,7 @@
       "product": "TrainStation",
       "event": "NONE"
     },
-    "Recipe_RailroadTrack": {
+    "railway-recipe": {
       "slug": "railway-recipe",
       "name": "Railway",
       "ingredients": [
@@ -19626,7 +19182,7 @@
       "product": "RailroadTrack",
       "event": "NONE"
     },
-    "Recipe_FreightWagon": {
+    "freight-car-recipe": {
       "slug": "freight-car-recipe",
       "name": "Freight Car",
       "ingredients": [
@@ -19642,7 +19198,7 @@
       "product": "FreightWagon",
       "event": "NONE"
     },
-    "Recipe_Locomotive": {
+    "electric-locomotive-recipe": {
       "slug": "electric-locomotive-recipe",
       "name": "Electric Locomotive",
       "ingredients": [
@@ -19666,7 +19222,7 @@
       "product": "Locomotive",
       "event": "NONE"
     },
-    "Recipe_PipelineMK2": {
+    "pipeline-mk-2-recipe": {
       "slug": "pipeline-mk-2-recipe",
       "name": "Pipeline Mk.2",
       "ingredients": [
@@ -19682,7 +19238,7 @@
       "product": "PipelineMK2",
       "event": "NONE"
     },
-    "Recipe_PipelinePumpMK2": {
+    "pipeline-pump-mk-2-recipe": {
       "slug": "pipeline-pump-mk-2-recipe",
       "name": "Pipeline Pump Mk.2",
       "ingredients": [
@@ -19702,7 +19258,7 @@
       "product": "PipelinePumpMk2",
       "event": "NONE"
     },
-    "RecipeonveyorAttachmentSplitterSmart": {
+    "smart-splitter-recipe": {
       "slug": "smart-splitter-recipe",
       "name": "Smart Splitter",
       "ingredients": [
@@ -19722,7 +19278,7 @@
       "product": "ConveyorAttachmentSplitterSmart",
       "event": "NONE"
     },
-    "Recipe_PowerSwitch": {
+    "power-switch-recipe": {
       "slug": "power-switch-recipe",
       "name": "Power Switch",
       "ingredients": [
@@ -19742,7 +19298,7 @@
       "product": "PowerSwitch",
       "event": "NONE"
     },
-    "Recipe_PowerPoleMk2": {
+    "power-pole-mk-2-recipe": {
       "slug": "power-pole-mk-2-recipe",
       "name": "Power Pole Mk.2",
       "ingredients": [
@@ -19762,7 +19318,7 @@
       "product": "PowerPoleMk2",
       "event": "NONE"
     },
-    "Recipe_PowerPoleMk3": {
+    "power-pole-mk-3-recipe": {
       "slug": "power-pole-mk-3-recipe",
       "name": "Power Pole Mk.3",
       "ingredients": [
@@ -19782,7 +19338,7 @@
       "product": "PowerPoleMk3",
       "event": "NONE"
     },
-    "RecipeonveyorAttachmentSplitterProgrammable": {
+    "programmable-splitter-recipe": {
       "slug": "programmable-splitter-recipe",
       "name": "Programmable Splitter",
       "ingredients": [
@@ -19802,7 +19358,7 @@
       "product": "ConveyorAttachmentSplitterProgrammable",
       "event": "NONE"
     },
-    "Recipe_GeneratorGeoThermal": {
+    "geothermal-generator-recipe": {
       "slug": "geothermal-generator-recipe",
       "name": "Geothermal Generator",
       "ingredients": [
@@ -19830,7 +19386,7 @@
       "product": "GeneratorGeoThermal",
       "event": "NONE"
     },
-    "Recipe_Explorer": {
+    "explorer-recipe": {
       "slug": "explorer-recipe",
       "name": "Explorer",
       "ingredients": [
@@ -19854,7 +19410,7 @@
       "product": "Explorer",
       "event": "NONE"
     },
-    "Recipe_RadarTower": {
+    "radar-tower-recipe": {
       "slug": "radar-tower-recipe",
       "name": "Radar Tower",
       "ingredients": [
@@ -19878,127 +19434,7 @@
       "product": "RadarTower",
       "event": "NONE"
     },
-    "RecipeandyCaneDecor": {
-      "slug": "candy-cane-decor-recipe",
-      "name": "Candy Cane",
-      "ingredients": [
-        {
-          "itemClass": "CandyCane",
-          "quantity": 10
-        },
-        {
-          "itemClass": "XmasBow",
-          "quantity": 1
-        }
-      ],
-      "product": "CandyCaneDecor",
-      "event": "FICSMAS"
-    },
-    "Recipe_Snowman": {
-      "slug": "snowman-recipe",
-      "name": "Snowman",
-      "ingredients": [
-        {
-          "itemClass": "Snow",
-          "quantity": 50
-        },
-        {
-          "itemClass": "CandyCane",
-          "quantity": 3
-        },
-        {
-          "itemClass": "XmasBow",
-          "quantity": 1
-        },
-        {
-          "itemClass": "XmasBall1",
-          "quantity": 3
-        },
-        {
-          "itemClass": "XmasBall2",
-          "quantity": 2
-        }
-      ],
-      "product": "Snowman",
-      "event": "FICSMAS"
-    },
-    "Recipe_TreeGiftProducer": {
-      "slug": "ficsmas-gift-tree-recipe",
-      "name": "FICSMAS Gift Tree",
-      "ingredients": [
-        {
-          "itemClass": "Gift",
-          "quantity": 50
-        },
-        {
-          "itemClass": "XmasBranch",
-          "quantity": 100
-        },
-        {
-          "itemClass": "XmasBall3",
-          "quantity": 20
-        },
-        {
-          "itemClass": "XmasBall4",
-          "quantity": 20
-        }
-      ],
-      "product": "TreeGiftProducer",
-      "event": "FICSMAS"
-    },
-    "Recipe_xmassLights": {
-      "slug": "ficsmas-power-light-recipe",
-      "name": "FICSMAS Power Light",
-      "ingredients": [
-        {
-          "itemClass": "cable",
-          "quantity": 1
-        },
-        {
-          "itemClass": "XmasBallCluster",
-          "quantity": 1
-        }
-      ],
-      "product": "xmassLights",
-      "event": "FICSMAS"
-    },
-    "Recipe_SnowDispenser": {
-      "slug": "ficsmas-snow-dispenser-recipe",
-      "name": "FICSMAS Snow Dispenser",
-      "ingredients": [
-        {
-          "itemClass": "CandyCane",
-          "quantity": 10
-        },
-        {
-          "itemClass": "Snow",
-          "quantity": 100
-        },
-        {
-          "itemClass": "XmasWreath",
-          "quantity": 2
-        }
-      ],
-      "product": "SnowDispenser",
-      "event": "FICSMAS"
-    },
-    "Recipe_WreathDecor": {
-      "slug": "ficsmas-wreath-recipe",
-      "name": "FICSMAS Wreath",
-      "ingredients": [
-        {
-          "itemClass": "XmasWreath",
-          "quantity": 1
-        },
-        {
-          "itemClass": "XmasBow",
-          "quantity": 1
-        }
-      ],
-      "product": "WreathDecor",
-      "event": "FICSMAS"
-    },
-    "Recipe_Beam": {
+    "metal-beam-recipe": {
       "slug": "metal-beam-recipe",
       "name": "Metal Beam",
       "ingredients": [
@@ -20010,7 +19446,7 @@
       "product": "Beam",
       "event": "NONE"
     },
-    "Recipe_Beamonnector": {
+    "beam-connector-recipe": {
       "slug": "beam-connector-recipe",
       "name": "Beam Connector",
       "ingredients": [
@@ -20022,7 +19458,7 @@
       "product": "Beamonnector",
       "event": "NONE"
     },
-    "Recipe_Beamonnector_Double": {
+    "beam-connector-double-recipe": {
       "slug": "beam-connector-double-recipe",
       "name": "Beam Connector Double",
       "ingredients": [
@@ -20034,7 +19470,7 @@
       "product": "Beamonnector_Double",
       "event": "NONE"
     },
-    "Recipe_Beam_Painted": {
+    "painted-beam-recipe": {
       "slug": "painted-beam-recipe",
       "name": "Painted Beam",
       "ingredients": [
@@ -20046,7 +19482,7 @@
       "product": "Beam_Painted",
       "event": "NONE"
     },
-    "Recipe_Beam_Support": {
+    "beam-support-recipe": {
       "slug": "beam-support-recipe",
       "name": "Beam Support",
       "ingredients": [
@@ -20058,7 +19494,7 @@
       "product": "Beam_Support",
       "event": "NONE"
     },
-    "Recipe_StandaloneWidgetSign_Huge": {
+    "large-billboard-recipe": {
       "slug": "large-billboard-recipe",
       "name": "Large Billboard",
       "ingredients": [
@@ -20078,7 +19514,7 @@
       "product": "StandaloneWidgetSign_Huge",
       "event": "NONE"
     },
-    "Recipe_StandaloneWidgetSign_Large": {
+    "small-billboard-recipe": {
       "slug": "small-billboard-recipe",
       "name": "Small Billboard",
       "ingredients": [
@@ -20098,7 +19534,7 @@
       "product": "StandaloneWidgetSign_Large",
       "event": "NONE"
     },
-    "Recipeatwalkross": {
+    "catwalk-crossing-recipe": {
       "slug": "catwalk-crossing-recipe",
       "name": "Catwalk Crossing",
       "ingredients": [
@@ -20114,7 +19550,7 @@
       "product": "CatwalkCross",
       "event": "NONE"
     },
-    "Recipeatwalk_Ramp": {
+    "catwalk-ramp-recipe": {
       "slug": "catwalk-ramp-recipe",
       "name": "Catwalk Ramp",
       "ingredients": [
@@ -20130,7 +19566,7 @@
       "product": "CatwalkRamp",
       "event": "NONE"
     },
-    "Recipeatwalk_Stairs": {
+    "catwalk-stairs-recipe": {
       "slug": "catwalk-stairs-recipe",
       "name": "Catwalk Stairs",
       "ingredients": [
@@ -20146,7 +19582,7 @@
       "product": "CatwalkStairs",
       "event": "NONE"
     },
-    "Recipeatwalk_Straight": {
+    "catwalk-straight-recipe": {
       "slug": "catwalk-straight-recipe",
       "name": "Catwalk Straight",
       "ingredients": [
@@ -20162,7 +19598,7 @@
       "product": "CatwalkStraight",
       "event": "NONE"
     },
-    "Recipeatwalk_T": {
+    "catwalk-t-crossing-recipe": {
       "slug": "catwalk-t-crossing-recipe",
       "name": "Catwalk T-Crossing",
       "ingredients": [
@@ -20178,7 +19614,7 @@
       "product": "CatwalkT",
       "event": "NONE"
     },
-    "Recipeatwalk_Turn": {
+    "catwalk-corner-recipe": {
       "slug": "catwalk-corner-recipe",
       "name": "Catwalk Corner",
       "ingredients": [
@@ -20194,7 +19630,7 @@
       "product": "CatwalkTurn",
       "event": "NONE"
     },
-    "RecipeeilingLight": {
+    "ceiling-light-recipe": {
       "slug": "ceiling-light-recipe",
       "name": "Ceiling Light",
       "ingredients": [
@@ -20214,7 +19650,7 @@
       "product": "CeilingLight",
       "event": "NONE"
     },
-    "Recipe_Flat_Frame_01": {
+    "frame-floor-recipe": {
       "slug": "frame-floor-recipe",
       "name": "Frame Floor",
       "ingredients": [
@@ -20226,7 +19662,7 @@
       "product": "Flat_Frame_01",
       "event": "NONE"
     },
-    "Recipe_Foundation_Frame_01": {
+    "frame-foundation-recipe": {
       "slug": "frame-foundation-recipe",
       "name": "Frame Foundation",
       "ingredients": [
@@ -20238,7 +19674,7 @@
       "product": "Foundation_Frame_01",
       "event": "NONE"
     },
-    "Recipe_FoundationGlass_01": {
+    "glass-frame-foundation-recipe": {
       "slug": "glass-frame-foundation-recipe",
       "name": "Glass Frame Foundation",
       "ingredients": [
@@ -20254,7 +19690,7 @@
       "product": "FoundationGlass_01",
       "event": "NONE"
     },
-    "Recipe_Ramp_Frame_01": {
+    "frame-ramp-recipe": {
       "slug": "frame-ramp-recipe",
       "name": "Frame Ramp",
       "ingredients": [
@@ -20266,7 +19702,7 @@
       "product": "Ramp_Frame_01",
       "event": "NONE"
     },
-    "Recipe_Ramp_Frame_Inverted_01": {
+    "inverted-frame-ramp-recipe": {
       "slug": "inverted-frame-ramp-recipe",
       "name": "Inverted Frame Ramp",
       "ingredients": [
@@ -20278,7 +19714,7 @@
       "product": "Ramp_Frame_Inverted_01",
       "event": "NONE"
     },
-    "Recipe_Wall_Frame_01": {
+    "frame-wall-recipe": {
       "slug": "frame-wall-recipe",
       "name": "Frame Wall",
       "ingredients": [
@@ -20290,7 +19726,7 @@
       "product": "Wall_Frame_01",
       "event": "NONE"
     },
-    "Recipe_Railing_01": {
+    "modern-railing-recipe": {
       "slug": "modern-railing-recipe",
       "name": "Modern Railing",
       "ingredients": [
@@ -20302,7 +19738,7 @@
       "product": "Railing_01",
       "event": "NONE"
     },
-    "Recipe_Pillar_Small_Metal": {
+    "small-metal-pillar-metal-recipe": {
       "slug": "small-metal-pillar-metal-recipe",
       "name": "Small Metal Pillar",
       "ingredients": [
@@ -20318,7 +19754,7 @@
       "product": "Pillar_Small_Metal",
       "event": "NONE"
     },
-    "Recipe_PillarBase_Small": {
+    "small-pillar-support-recipe": {
       "slug": "small-pillar-support-recipe",
       "name": "Small Pillar Support",
       "ingredients": [
@@ -20330,7 +19766,7 @@
       "product": "PillarBase_Small",
       "event": "NONE"
     },
-    "Recipe_PillarBase": {
+    "big-pillar-support-recipe": {
       "slug": "big-pillar-support-recipe",
       "name": "Big Pillar Support",
       "ingredients": [
@@ -20342,7 +19778,7 @@
       "product": "PillarBase",
       "event": "NONE"
     },
-    "Recipe_PillarMiddle": {
+    "big-metal-pillar-recipe": {
       "slug": "big-metal-pillar-recipe",
       "name": "Big Metal Pillar",
       "ingredients": [
@@ -20358,7 +19794,7 @@
       "product": "PillarMiddle",
       "event": "NONE"
     },
-    "Recipe_Ladder": {
+    "ladder-recipe": {
       "slug": "ladder-recipe",
       "name": "Ladder",
       "ingredients": [
@@ -20370,7 +19806,7 @@
       "product": "Ladder",
       "event": "NONE"
     },
-    "Recipe_FoundationoncretePolished_8x1": {
+    "foundation-1m-polished-recipe": {
       "slug": "foundation-1m-polished-recipe",
       "name": "Foundation 1m",
       "ingredients": [
@@ -20382,7 +19818,7 @@
       "product": "FoundationoncretePolished_8x1",
       "event": "NONE"
     },
-    "Recipe_FoundationoncretePolished_8x2": {
+    "foundation-2m-polished-recipe": {
       "slug": "foundation-2m-polished-recipe",
       "name": "Foundation 2m",
       "ingredients": [
@@ -20394,7 +19830,7 @@
       "product": "FoundationoncretePolished_8x2",
       "event": "NONE"
     },
-    "Recipe_FoundationoncretePolished_8x4": {
+    "foundation-4m-polished-recipe": {
       "slug": "foundation-4m-polished-recipe",
       "name": "Foundation 4m",
       "ingredients": [
@@ -20406,7 +19842,7 @@
       "product": "FoundationoncretePolished_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorner_Polished_8x1": {
+    "inv-down-corner-1m-polished-recipe": {
       "slug": "inv-down-corner-1m-polished-recipe",
       "name": "Inv. Down Corner 1m",
       "ingredients": [
@@ -20418,7 +19854,7 @@
       "product": "InvertedRamp_DCorner_Polished_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorner_Polished_8x2": {
+    "inv-down-corner-2m-polished-recipe": {
       "slug": "inv-down-corner-2m-polished-recipe",
       "name": "Inv. Down Corner 2m",
       "ingredients": [
@@ -20430,7 +19866,7 @@
       "product": "InvertedRamp_DCorner_Polished_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorner_Polished_8x4": {
+    "inv-down-corner-4m-polished-recipe": {
       "slug": "inv-down-corner-4m-polished-recipe",
       "name": "Inv. Down Corner 4m",
       "ingredients": [
@@ -20442,7 +19878,7 @@
       "product": "InvertedRamp_DCorner_Polished_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_Polished_8x1": {
+    "inv-ramp-1m-polished-recipe": {
       "slug": "inv-ramp-1m-polished-recipe",
       "name": "Inv. Ramp 1m",
       "ingredients": [
@@ -20454,7 +19890,7 @@
       "product": "InvertedRamp_Polished_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_Polished_8x2": {
+    "inv-ramp-2m-polished-recipe": {
       "slug": "inv-ramp-2m-polished-recipe",
       "name": "Inv. Ramp 2m",
       "ingredients": [
@@ -20466,7 +19902,7 @@
       "product": "InvertedRamp_Polished_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_Polished_8x4": {
+    "inv-ramp-4m-polished-recipe": {
       "slug": "inv-ramp-4m-polished-recipe",
       "name": "Inv. Ramp 4m",
       "ingredients": [
@@ -20478,7 +19914,7 @@
       "product": "InvertedRamp_Polished_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorner_Polished_8x1": {
+    "inv-up-corner-1m-polished-recipe": {
       "slug": "inv-up-corner-1m-polished-recipe",
       "name": "Inv. Up Corner 1m",
       "ingredients": [
@@ -20490,7 +19926,7 @@
       "product": "InvertedRamp_UCorner_Polished_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorner_Polished_8x2": {
+    "inv-up-corner-2m-polished-recipe": {
       "slug": "inv-up-corner-2m-polished-recipe",
       "name": "Inv. Up Corner 2m",
       "ingredients": [
@@ -20502,7 +19938,7 @@
       "product": "InvertedRamp_UCorner_Polished_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorner_Polished_8x4": {
+    "inv-up-corner-4m-polished-recipe": {
       "slug": "inv-up-corner-4m-polished-recipe",
       "name": "Inv. Up Corner 4m",
       "ingredients": [
@@ -20514,7 +19950,7 @@
       "product": "InvertedRamp_UCorner_Polished_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorner_Polished_8x1": {
+    "down-corner-ramp-1m-polished-recipe": {
       "slug": "down-corner-ramp-1m-polished-recipe",
       "name": "Down Corner Ramp 1m",
       "ingredients": [
@@ -20526,7 +19962,7 @@
       "product": "Ramp_DownCorner_Polished_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorner_Polished_8x2": {
+    "down-corner-ramp-2m-polished-recipe": {
       "slug": "down-corner-ramp-2m-polished-recipe",
       "name": "Down Corner Ramp 2m",
       "ingredients": [
@@ -20538,7 +19974,7 @@
       "product": "Ramp_DownCorner_Polished_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorner_Polished_8x4": {
+    "down-corner-ramp-4m-polished-recipe": {
       "slug": "down-corner-ramp-4m-polished-recipe",
       "name": "Down Corner Ramp 4m",
       "ingredients": [
@@ -20550,7 +19986,7 @@
       "product": "Ramp_DownCorner_Polished_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_Polished_8x1": {
+    "ramp-1m-polished-recipe": {
       "slug": "ramp-1m-polished-recipe",
       "name": "Ramp 1m",
       "ingredients": [
@@ -20562,7 +19998,7 @@
       "product": "Ramp_Polished_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_Polished_8x2": {
+    "ramp-2m-polished-recipe": {
       "slug": "ramp-2m-polished-recipe",
       "name": "Ramp 2m",
       "ingredients": [
@@ -20574,7 +20010,7 @@
       "product": "Ramp_Polished_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_Polished_8x4": {
+    "ramp-4m-polished-recipe": {
       "slug": "ramp-4m-polished-recipe",
       "name": "Ramp 4m",
       "ingredients": [
@@ -20586,7 +20022,7 @@
       "product": "Ramp_Polished_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorner_Polished_8x1": {
+    "up-corner-ramp-1m-polished-recipe": {
       "slug": "up-corner-ramp-1m-polished-recipe",
       "name": "Up Corner Ramp 1m",
       "ingredients": [
@@ -20598,7 +20034,7 @@
       "product": "Ramp_UpCorner_Polished_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorner_Polished_8x2": {
+    "up-corner-ramp-2m-polished-recipe": {
       "slug": "up-corner-ramp-2m-polished-recipe",
       "name": "Up Corner Ramp 2m",
       "ingredients": [
@@ -20610,7 +20046,7 @@
       "product": "Ramp_UpCorner_Polished_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorner_Polished_8x4": {
+    "up-corner-ramp-4m-polished-recipe": {
       "slug": "up-corner-ramp-4m-polished-recipe",
       "name": "Up Corner Ramp 4m",
       "ingredients": [
@@ -20622,7 +20058,7 @@
       "product": "Ramp_UpCorner_Polished_8x4",
       "event": "NONE"
     },
-    "Recipe_RampDouble_Polished_8x1": {
+    "double-ramp-2m-polished-recipe": {
       "slug": "double-ramp-2m-polished-recipe",
       "name": "Double Ramp 2m",
       "ingredients": [
@@ -20634,7 +20070,7 @@
       "product": "RampDouble_Polished_8x1",
       "event": "NONE"
     },
-    "Recipe_RampDouble_Polished_8x2": {
+    "double-ramp-4m-polished-recipe": {
       "slug": "double-ramp-4m-polished-recipe",
       "name": "Double Ramp 4m",
       "ingredients": [
@@ -20646,7 +20082,7 @@
       "product": "RampDouble_Polished_8x2",
       "event": "NONE"
     },
-    "Recipe_RampDouble_Polished_8x4": {
+    "double-ramp-8m-polished-recipe": {
       "slug": "double-ramp-8m-polished-recipe",
       "name": "Double Ramp 8m",
       "ingredients": [
@@ -20658,7 +20094,7 @@
       "product": "RampDouble_Polished_8x4",
       "event": "NONE"
     },
-    "Recipe_Foundationoncrete_8x1": {
+    "foundation-1m-concrete-recipe": {
       "slug": "foundation-1m-concrete-recipe",
       "name": "Foundation 1m",
       "ingredients": [
@@ -20670,7 +20106,7 @@
       "product": "Foundationoncrete_8x1",
       "event": "NONE"
     },
-    "Recipe_Foundationoncrete_8x2": {
+    "foundation-2m-concrete-recipe": {
       "slug": "foundation-2m-concrete-recipe",
       "name": "Foundation 2m",
       "ingredients": [
@@ -20682,7 +20118,7 @@
       "product": "Foundationoncrete_8x2",
       "event": "NONE"
     },
-    "Recipe_Foundationoncrete_8x4": {
+    "foundation-4m-concrete-recipe": {
       "slug": "foundation-4m-concrete-recipe",
       "name": "Foundation 4m",
       "ingredients": [
@@ -20694,7 +20130,7 @@
       "product": "Foundationoncrete_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamponcrete_8x1": {
+    "inv-ramp-1m-concrete-recipe": {
       "slug": "inv-ramp-1m-concrete-recipe",
       "name": "Inv. Ramp 1m",
       "ingredients": [
@@ -20706,7 +20142,7 @@
       "product": "InvertedRamponcrete_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamponcrete_8x2": {
+    "inv-ramp-2m-concrete-recipe": {
       "slug": "inv-ramp-2m-concrete-recipe",
       "name": "Inv. Ramp 2m",
       "ingredients": [
@@ -20718,7 +20154,7 @@
       "product": "InvertedRamponcrete_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamponcrete_8x4": {
+    "inv-ramp-4m-concrete-recipe": {
       "slug": "inv-ramp-4m-concrete-recipe",
       "name": "Inv. Ramp 4m",
       "ingredients": [
@@ -20730,7 +20166,7 @@
       "product": "InvertedRamponcrete_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorneroncrete_8x1": {
+    "inv-down-corner-1m-concrete-recipe": {
       "slug": "inv-down-corner-1m-concrete-recipe",
       "name": "Inv. Down Corner 1m",
       "ingredients": [
@@ -20742,7 +20178,7 @@
       "product": "InvertedRamp_DCorneroncrete_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorneroncrete_8x2": {
+    "inv-down-corner-2m-concrete-recipe": {
       "slug": "inv-down-corner-2m-concrete-recipe",
       "name": "Inv. Down Corner 2m",
       "ingredients": [
@@ -20754,7 +20190,7 @@
       "product": "InvertedRamp_DCorneroncrete_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorneroncrete_8x4": {
+    "inv-down-corner-4m-concrete-recipe": {
       "slug": "inv-down-corner-4m-concrete-recipe",
       "name": "Inv. Down Corner 4m",
       "ingredients": [
@@ -20766,7 +20202,7 @@
       "product": "InvertedRamp_DCorneroncrete_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorneroncrete_8x1": {
+    "inv-up-corner-1m-concrete-recipe": {
       "slug": "inv-up-corner-1m-concrete-recipe",
       "name": "Inv. Up Corner 1m",
       "ingredients": [
@@ -20778,7 +20214,7 @@
       "product": "InvertedRamp_UCorneroncrete_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorneroncrete_8x2": {
+    "inv-up-corner-2m-concrete-recipe": {
       "slug": "inv-up-corner-2m-concrete-recipe",
       "name": "Inv. Up Corner 2m",
       "ingredients": [
@@ -20790,7 +20226,7 @@
       "product": "InvertedRamp_UCorneroncrete_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorneroncrete_8x4": {
+    "inv-up-corner-4m-concrete-recipe": {
       "slug": "inv-up-corner-4m-concrete-recipe",
       "name": "Inv. Up Corner 4m",
       "ingredients": [
@@ -20802,7 +20238,7 @@
       "product": "InvertedRamp_UCorneroncrete_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramponcrete_8x1": {
+    "ramp-1m-concrete-recipe": {
       "slug": "ramp-1m-concrete-recipe",
       "name": "Ramp 1m",
       "ingredients": [
@@ -20814,7 +20250,7 @@
       "product": "Ramponcrete_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramponcrete_8x2": {
+    "ramp-2m-concrete-recipe": {
       "slug": "ramp-2m-concrete-recipe",
       "name": "Ramp 2m",
       "ingredients": [
@@ -20826,7 +20262,7 @@
       "product": "Ramponcrete_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramponcrete_8x4": {
+    "ramp-4m-concrete-recipe": {
       "slug": "ramp-4m-concrete-recipe",
       "name": "Ramp 4m",
       "ingredients": [
@@ -20838,7 +20274,7 @@
       "product": "Ramponcrete_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorneroncrete_8x1": {
+    "down-corner-ramp-1m-concrete-recipe": {
       "slug": "down-corner-ramp-1m-concrete-recipe",
       "name": "Down Corner Ramp 1m",
       "ingredients": [
@@ -20850,7 +20286,7 @@
       "product": "Ramp_DownCorneroncrete_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorneroncrete_8x2": {
+    "down-corner-ramp-2m-concrete-recipe": {
       "slug": "down-corner-ramp-2m-concrete-recipe",
       "name": "Down Corner Ramp 2m",
       "ingredients": [
@@ -20862,7 +20298,7 @@
       "product": "Ramp_DownCorneroncrete_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorneroncrete_8x4": {
+    "down-corner-ramp-4m-concrete-recipe": {
       "slug": "down-corner-ramp-4m-concrete-recipe",
       "name": "Down Corner Ramp 4m",
       "ingredients": [
@@ -20874,7 +20310,7 @@
       "product": "Ramp_DownCorneroncrete_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorneroncrete_8x1": {
+    "up-corner-ramp-1m-concrete-recipe": {
       "slug": "up-corner-ramp-1m-concrete-recipe",
       "name": "Up Corner Ramp 1m",
       "ingredients": [
@@ -20886,7 +20322,7 @@
       "product": "Ramp_UpCorneroncrete_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorneroncrete_8x2": {
+    "up-corner-ramp-2m-concrete-recipe": {
       "slug": "up-corner-ramp-2m-concrete-recipe",
       "name": "Up Corner Ramp 2m",
       "ingredients": [
@@ -20898,7 +20334,7 @@
       "product": "Ramp_UpCorneroncrete_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorneroncrete_8x4": {
+    "up-corner-ramp-4m-concrete-recipe": {
       "slug": "up-corner-ramp-4m-concrete-recipe",
       "name": "Up Corner Ramp 4m",
       "ingredients": [
@@ -20910,7 +20346,7 @@
       "product": "Ramp_UpCorneroncrete_8x4",
       "event": "NONE"
     },
-    "Recipe_RampDoubleoncrete_8x1": {
+    "double-ramp-2m-concrete-recipe": {
       "slug": "double-ramp-2m-concrete-recipe",
       "name": "Double Ramp 2m",
       "ingredients": [
@@ -20922,7 +20358,7 @@
       "product": "RampDoubleoncrete_8x1",
       "event": "NONE"
     },
-    "Recipe_RampDoubleoncrete_8x2": {
+    "double-ramp-4m-concrete-recipe": {
       "slug": "double-ramp-4m-concrete-recipe",
       "name": "Double Ramp 4m",
       "ingredients": [
@@ -20934,7 +20370,7 @@
       "product": "RampDoubleoncrete_8x2",
       "event": "NONE"
     },
-    "Recipe_RampDoubleoncrete_8x4": {
+    "double-ramp-8m-concrete-recipe": {
       "slug": "double-ramp-8m-concrete-recipe",
       "name": "Double Ramp 8m",
       "ingredients": [
@@ -20946,7 +20382,7 @@
       "product": "RampDoubleoncrete_8x4",
       "event": "NONE"
     },
-    "Recipe_Foundation_Metal_8x1": {
+    "foundation-1m-metal-recipe": {
       "slug": "foundation-1m-metal-recipe",
       "name": "Foundation 1m",
       "ingredients": [
@@ -20958,7 +20394,7 @@
       "product": "Foundation_Metal_8x1",
       "event": "NONE"
     },
-    "Recipe_Foundation_Metal_8x2": {
+    "foundation-2m-metal-recipe": {
       "slug": "foundation-2m-metal-recipe",
       "name": "Foundation 2m",
       "ingredients": [
@@ -20970,7 +20406,7 @@
       "product": "Foundation_Metal_8x2",
       "event": "NONE"
     },
-    "Recipe_Foundation_Metal_8x4": {
+    "foundation-4m-metal-recipe": {
       "slug": "foundation-4m-metal-recipe",
       "name": "Foundation 4m",
       "ingredients": [
@@ -20982,7 +20418,7 @@
       "product": "Foundation_Metal_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorner_Metal_8x1": {
+    "inv-down-corner-1m-metal-recipe": {
       "slug": "inv-down-corner-1m-metal-recipe",
       "name": "Inv. Down Corner 1m",
       "ingredients": [
@@ -20994,7 +20430,7 @@
       "product": "InvertedRamp_DCorner_Metal_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorner_Metal_8x2": {
+    "inv-down-corner-2m-metal-recipe": {
       "slug": "inv-down-corner-2m-metal-recipe",
       "name": "Inv. Down Corner 2m",
       "ingredients": [
@@ -21006,7 +20442,7 @@
       "product": "InvertedRamp_DCorner_Metal_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorner_Metal_8x4": {
+    "inv-down-corner-4m-metal-recipe": {
       "slug": "inv-down-corner-4m-metal-recipe",
       "name": "Inv. Down Corner 4m",
       "ingredients": [
@@ -21018,7 +20454,7 @@
       "product": "InvertedRamp_DCorner_Metal_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_Metal_8x1": {
+    "inv-ramp-1m-metal-recipe": {
       "slug": "inv-ramp-1m-metal-recipe",
       "name": "Inv. Ramp 1m",
       "ingredients": [
@@ -21030,7 +20466,7 @@
       "product": "InvertedRamp_Metal_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_Metal_8x2": {
+    "inv-ramp-2m-metal-recipe": {
       "slug": "inv-ramp-2m-metal-recipe",
       "name": "Inv. Ramp 2m",
       "ingredients": [
@@ -21042,7 +20478,7 @@
       "product": "InvertedRamp_Metal_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_Metal_8x4": {
+    "inv-ramp-4m-metal-recipe": {
       "slug": "inv-ramp-4m-metal-recipe",
       "name": "Inv. Ramp 4m",
       "ingredients": [
@@ -21054,7 +20490,7 @@
       "product": "InvertedRamp_Metal_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorner_Metal_8x1": {
+    "inv-up-corner-1m-metal-recipe": {
       "slug": "inv-up-corner-1m-metal-recipe",
       "name": "Inv. Up Corner 1m",
       "ingredients": [
@@ -21066,7 +20502,7 @@
       "product": "InvertedRamp_UCorner_Metal_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorner_Metal_8x2": {
+    "inv-up-corner-2m-metal-recipe": {
       "slug": "inv-up-corner-2m-metal-recipe",
       "name": "Inv. Up Corner 2m",
       "ingredients": [
@@ -21078,7 +20514,7 @@
       "product": "InvertedRamp_UCorner_Metal_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorner_Metal_8x4": {
+    "inv-up-corner-4m-metal-recipe": {
       "slug": "inv-up-corner-4m-metal-recipe",
       "name": "Inv. Up Corner 4m",
       "ingredients": [
@@ -21090,7 +20526,7 @@
       "product": "InvertedRamp_UCorner_Metal_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorner_Metal_8x1": {
+    "down-corner-ramp-1m-metal-recipe": {
       "slug": "down-corner-ramp-1m-metal-recipe",
       "name": "Down Corner Ramp 1m",
       "ingredients": [
@@ -21102,7 +20538,7 @@
       "product": "Ramp_DownCorner_Metal_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorner_Metal_8x2": {
+    "down-corner-ramp-2m-metal-recipe": {
       "slug": "down-corner-ramp-2m-metal-recipe",
       "name": "Down Corner Ramp 2m",
       "ingredients": [
@@ -21114,7 +20550,7 @@
       "product": "Ramp_DownCorner_Metal_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorner_Metal_8x4": {
+    "down-corner-ramp-4m-metal-recipe": {
       "slug": "down-corner-ramp-4m-metal-recipe",
       "name": "Down Corner Ramp 4m",
       "ingredients": [
@@ -21126,7 +20562,7 @@
       "product": "Ramp_DownCorner_Metal_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_Metal_8x1": {
+    "ramp-1m-metal-recipe": {
       "slug": "ramp-1m-metal-recipe",
       "name": "Ramp 1m",
       "ingredients": [
@@ -21138,7 +20574,7 @@
       "product": "Ramp_Metal_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_Metal_8x2": {
+    "ramp-2m-metal-recipe": {
       "slug": "ramp-2m-metal-recipe",
       "name": "Ramp 2m",
       "ingredients": [
@@ -21150,7 +20586,7 @@
       "product": "Ramp_Metal_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_Metal_8x4": {
+    "ramp-4m-metal-recipe": {
       "slug": "ramp-4m-metal-recipe",
       "name": "Ramp 4m",
       "ingredients": [
@@ -21162,7 +20598,7 @@
       "product": "Ramp_Metal_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorner_Metal_8x1": {
+    "up-corner-ramp-1m-metal-recipe": {
       "slug": "up-corner-ramp-1m-metal-recipe",
       "name": "Up Corner Ramp 1m",
       "ingredients": [
@@ -21174,7 +20610,7 @@
       "product": "Ramp_UpCorner_Metal_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorner_Metal_8x2": {
+    "up-corner-ramp-2m-metal-recipe": {
       "slug": "up-corner-ramp-2m-metal-recipe",
       "name": "Up Corner Ramp 2m",
       "ingredients": [
@@ -21186,7 +20622,7 @@
       "product": "Ramp_UpCorner_Metal_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorner_Metal_8x4": {
+    "up-corner-ramp-4m-metal-recipe": {
       "slug": "up-corner-ramp-4m-metal-recipe",
       "name": "Up Corner Ramp 4m",
       "ingredients": [
@@ -21198,7 +20634,7 @@
       "product": "Ramp_UpCorner_Metal_8x4",
       "event": "NONE"
     },
-    "Recipe_RampDouble_Metal_8x1": {
+    "double-ramp-2m-metal-recipe": {
       "slug": "double-ramp-2m-metal-recipe",
       "name": "Double Ramp 2m",
       "ingredients": [
@@ -21210,7 +20646,7 @@
       "product": "RampDouble_Metal_8x1",
       "event": "NONE"
     },
-    "Recipe_RampDouble_Metal_8x2": {
+    "double-ramp-4m-metal-recipe": {
       "slug": "double-ramp-4m-metal-recipe",
       "name": "Double Ramp 4m",
       "ingredients": [
@@ -21222,7 +20658,7 @@
       "product": "RampDouble_Metal_8x2",
       "event": "NONE"
     },
-    "Recipe_RampDouble_Metal_8x4": {
+    "double-ramp-8m-metal-recipe": {
       "slug": "double-ramp-8m-metal-recipe",
       "name": "Double Ramp 8m",
       "ingredients": [
@@ -21234,7 +20670,7 @@
       "product": "RampDouble_Metal_8x4",
       "event": "NONE"
     },
-    "Recipe_Stairs_Left_01": {
+    "stairs-left-recipe": {
       "slug": "stairs-left-recipe",
       "name": "Stairs Left",
       "ingredients": [
@@ -21250,7 +20686,7 @@
       "product": "Stairs_Left_01",
       "event": "NONE"
     },
-    "Recipe_Stairs_Right_01": {
+    "stairs-right-recipe": {
       "slug": "stairs-right-recipe",
       "name": "Stairs Right",
       "ingredients": [
@@ -21266,7 +20702,7 @@
       "product": "Stairs_Right_01",
       "event": "NONE"
     },
-    "Recipe_FloodlightPole": {
+    "flood-light-tower-recipe": {
       "slug": "flood-light-tower-recipe",
       "name": "Flood Light Tower",
       "ingredients": [
@@ -21286,7 +20722,7 @@
       "product": "FloodlightPole",
       "event": "NONE"
     },
-    "Recipe_FloodlightWall": {
+    "wall-mounted-flood-light-recipe": {
       "slug": "wall-mounted-flood-light-recipe",
       "name": "Wall Mounted Flood Light",
       "ingredients": [
@@ -21306,7 +20742,7 @@
       "product": "FloodlightWall",
       "event": "NONE"
     },
-    "Recipe_StreetLight": {
+    "street-light-recipe": {
       "slug": "street-light-recipe",
       "name": "Street Light",
       "ingredients": [
@@ -21326,7 +20762,7 @@
       "product": "StreetLight",
       "event": "NONE"
     },
-    "Recipe_PowerPoleWallDouble": {
+    "double-wall-outlet-mk-1-recipe": {
       "slug": "double-wall-outlet-mk-1-recipe",
       "name": "Double Wall Outlet Mk.1",
       "ingredients": [
@@ -21342,7 +20778,7 @@
       "product": "PowerPoleWallDouble",
       "event": "NONE"
     },
-    "RecipeonveyorPoleWall": {
+    "conveyor-wall-mount-recipe": {
       "slug": "conveyor-wall-mount-recipe",
       "name": "Conveyor Wall Mount",
       "ingredients": [
@@ -21362,7 +20798,7 @@
       "product": "ConveyorPoleWall",
       "event": "NONE"
     },
-    "Recipe_HyperTubeWallHole": {
+    "hypertube-wall-hole-recipe": {
       "slug": "hypertube-wall-hole-recipe",
       "name": "Hypertube Wall Hole",
       "ingredients": [
@@ -21378,7 +20814,7 @@
       "product": "HyperTubeWallHole",
       "event": "NONE"
     },
-    "Recipe_HyperTubeWallSupport": {
+    "hypertube-wall-support-recipe": {
       "slug": "hypertube-wall-support-recipe",
       "name": "Hypertube Wall Support",
       "ingredients": [
@@ -21394,7 +20830,7 @@
       "product": "HyperTubeWallSupport",
       "event": "NONE"
     },
-    "Recipe_PipeSupportWall": {
+    "pipeline-wall-support-recipe": {
       "slug": "pipeline-wall-support-recipe",
       "name": "Pipeline Wall Support",
       "ingredients": [
@@ -21414,7 +20850,7 @@
       "product": "PipelineSupportWall",
       "event": "NONE"
     },
-    "Recipe_PipeSupportWallHole": {
+    "pipeline-wall-hole-recipe": {
       "slug": "pipeline-wall-hole-recipe",
       "name": "Pipeline Wall Hole",
       "ingredients": [
@@ -21434,7 +20870,7 @@
       "product": "PipelineSupportWallHole",
       "event": "NONE"
     },
-    "Recipe_FoundationPassthrough_Pipe": {
+    "pipeline-floor-hole-recipe": {
       "slug": "pipeline-floor-hole-recipe",
       "name": "Pipeline Floor Hole",
       "ingredients": [
@@ -21454,7 +20890,7 @@
       "product": "FoundationPassthrough_Pipe",
       "event": "NONE"
     },
-    "Recipe_PowerPoleWallDoubleMk2": {
+    "double-wall-outlet-mk-2-recipe": {
       "slug": "double-wall-outlet-mk-2-recipe",
       "name": "Double Wall Outlet Mk.2",
       "ingredients": [
@@ -21470,7 +20906,7 @@
       "product": "PowerPoleWallDoubleMk2",
       "event": "NONE"
     },
-    "Recipe_PowerPoleWallMk2": {
+    "wall-outlet-mk-2-recipe": {
       "slug": "wall-outlet-mk-2-recipe",
       "name": "Wall Outlet Mk.2",
       "ingredients": [
@@ -21486,7 +20922,7 @@
       "product": "PowerPoleWallMk2",
       "event": "NONE"
     },
-    "Recipe_PowerPoleWallDoubleMk3": {
+    "double-wall-outlet-mk-3-recipe": {
       "slug": "double-wall-outlet-mk-3-recipe",
       "name": "Double Wall Outlet Mk.3",
       "ingredients": [
@@ -21502,7 +20938,7 @@
       "product": "PowerPoleWallDoubleMk3",
       "event": "NONE"
     },
-    "Recipe_PowerPoleWallMk3": {
+    "wall-outlet-mk-3-recipe": {
       "slug": "wall-outlet-mk-3-recipe",
       "name": "Wall Outlet Mk.3",
       "ingredients": [
@@ -21518,7 +20954,7 @@
       "product": "PowerPoleWallMk3",
       "event": "NONE"
     },
-    "Recipe_Gate_Automated_8x4": {
+    "automated-gate-recipe": {
       "slug": "automated-gate-recipe",
       "name": "Automated Gate",
       "ingredients": [
@@ -21530,7 +20966,7 @@
       "product": "Gate_Automated_8x4",
       "event": "NONE"
     },
-    "Recipe_Pillar_Smalloncrete": {
+    "small-concrete-pillar-concrete-recipe": {
       "slug": "small-concrete-pillar-concrete-recipe",
       "name": "Small Concrete Pillar",
       "ingredients": [
@@ -21542,7 +20978,7 @@
       "product": "Pillar_Smalloncrete",
       "event": "NONE"
     },
-    "Recipe_PillarMiddleoncrete": {
+    "big-concrete-pillar-concrete-recipe": {
       "slug": "big-concrete-pillar-concrete-recipe",
       "name": "Big Concrete Pillar",
       "ingredients": [
@@ -21554,7 +20990,7 @@
       "product": "PillarMiddleoncrete",
       "event": "NONE"
     },
-    "Recipe_FoundationPassthrough_Lift": {
+    "conveyor-lift-floor-hole-recipe": {
       "slug": "conveyor-lift-floor-hole-recipe",
       "name": "Conveyor Lift Floor Hole",
       "ingredients": [
@@ -21574,7 +21010,7 @@
       "product": "FoundationPassthrough_Lift",
       "event": "NONE"
     },
-    "Recipe_QuarterPipe": {
+    "quarter-pipe-recipe": {
       "slug": "quarter-pipe-recipe",
       "name": "Quarter Pipe",
       "ingredients": [
@@ -21590,7 +21026,7 @@
       "product": "QuarterPipe",
       "event": "NONE"
     },
-    "Recipe_QuarterPipe_02": {
+    "inverted-quarter-pipe-recipe": {
       "slug": "inverted-quarter-pipe-recipe",
       "name": "Inverted Quarter Pipe",
       "ingredients": [
@@ -21606,7 +21042,7 @@
       "product": "QuarterPipe_02",
       "event": "NONE"
     },
-    "Recipe_QuarterPipeCorner_01": {
+    "inner-corner-quarter-pipe-recipe": {
       "slug": "inner-corner-quarter-pipe-recipe",
       "name": "Inner Corner Quarter Pipe",
       "ingredients": [
@@ -21622,7 +21058,7 @@
       "product": "QuarterPipeCorner_01",
       "event": "NONE"
     },
-    "Recipe_QuarterPipeCorner_02": {
+    "inverted-inner-corner-quarter-pipe-recipe": {
       "slug": "inverted-inner-corner-quarter-pipe-recipe",
       "name": "Inverted Inner Corner Quarter Pipe",
       "ingredients": [
@@ -21638,7 +21074,7 @@
       "product": "QuarterPipeCorner_02",
       "event": "NONE"
     },
-    "Recipe_QuarterPipeCorner_03": {
+    "outer-corner-quarter-pipe-recipe": {
       "slug": "outer-corner-quarter-pipe-recipe",
       "name": "Outer Corner Quarter Pipe",
       "ingredients": [
@@ -21654,7 +21090,7 @@
       "product": "QuarterPipeCorner_03",
       "event": "NONE"
     },
-    "Recipe_QuarterPipeCorner_04": {
+    "inverted-outer-corner-quarter-pipe-recipe": {
       "slug": "inverted-outer-corner-quarter-pipe-recipe",
       "name": "Inverted Outer Corner Quarter Pipe",
       "ingredients": [
@@ -21670,7 +21106,7 @@
       "product": "QuarterPipeCorner_04",
       "event": "NONE"
     },
-    "RecipeyberWagon": {
+    "cyber-wagon-recipe": {
       "slug": "cyber-wagon-recipe",
       "name": "Cyber Wagon",
       "ingredients": [
@@ -21682,7 +21118,7 @@
       "product": "CyberWagon",
       "event": "NONE"
     },
-    "Recipe_StandaloneWidgetSign_Medium": {
+    "display-sign-recipe": {
       "slug": "display-sign-recipe",
       "name": "Display Sign",
       "ingredients": [
@@ -21698,7 +21134,7 @@
       "product": "StandaloneWidgetSign_Medium",
       "event": "NONE"
     },
-    "Recipe_StandaloneWidgetSign_Portrait": {
+    "portrait-sign-recipe": {
       "slug": "portrait-sign-recipe",
       "name": "Portrait Sign",
       "ingredients": [
@@ -21714,7 +21150,7 @@
       "product": "StandaloneWidgetSign_Portrait",
       "event": "NONE"
     },
-    "Recipe_StandaloneWidgetSign_Square": {
+    "square-sign-2m-recipe": {
       "slug": "square-sign-2m-recipe",
       "name": "Square Sign 2m",
       "ingredients": [
@@ -21730,7 +21166,7 @@
       "product": "StandaloneWidgetSign_Square",
       "event": "NONE"
     },
-    "Recipe_StandaloneWidgetSign_Square_Small": {
+    "square-sign-1m-recipe": {
       "slug": "square-sign-1m-recipe",
       "name": "Square Sign 1m",
       "ingredients": [
@@ -21746,7 +21182,7 @@
       "product": "StandaloneWidgetSign_Square_Small",
       "event": "NONE"
     },
-    "Recipeoncrete_Barrier_01": {
+    "road-barrier-concrete-recipe": {
       "slug": "road-barrier-concrete-recipe",
       "name": "Road Barrier",
       "ingredients": [
@@ -21758,7 +21194,7 @@
       "product": "Concrete_Barrier_01",
       "event": "NONE"
     },
-    "Recipe_Pillar_Small_Frame": {
+    "small-frame-pillar-recipe": {
       "slug": "small-frame-pillar-recipe",
       "name": "Small Frame Pillar",
       "ingredients": [
@@ -21770,7 +21206,7 @@
       "product": "Pillar_Small_Frame",
       "event": "NONE"
     },
-    "Recipe_PillarMiddle_Frame": {
+    "big-frame-pillar-recipe": {
       "slug": "big-frame-pillar-recipe",
       "name": "Big Frame Pillar",
       "ingredients": [
@@ -21782,7 +21218,7 @@
       "product": "PillarMiddle_Frame",
       "event": "NONE"
     },
-    "Recipe_Wall_Window_Thin_8x4_01": {
+    "full-frame-window-recipe": {
       "slug": "full-frame-window-recipe",
       "name": "Full Frame Window",
       "ingredients": [
@@ -21798,7 +21234,7 @@
       "product": "Wall_Window_Thin_8x4_01",
       "event": "NONE"
     },
-    "Recipe_Wall_Window_Thin_8x4_02": {
+    "hex-frame-window-recipe": {
       "slug": "hex-frame-window-recipe",
       "name": "Hex Frame Window",
       "ingredients": [
@@ -21814,7 +21250,7 @@
       "product": "Wall_Window_Thin_8x4_02",
       "event": "NONE"
     },
-    "Recipe_StorageHazard": {
+    "hazard-storage-box-recipe": {
       "slug": "hazard-storage-box-recipe",
       "name": "Hazard Storage Box",
       "ingredients": [
@@ -21830,7 +21266,7 @@
       "product": "StorageHazard",
       "event": "NONE"
     },
-    "Recipe_FoundationPassthrough_Hypertube": {
+    "hypertube-floor-hole-recipe": {
       "slug": "hypertube-floor-hole-recipe",
       "name": "Hypertube Floor Hole",
       "ingredients": [
@@ -21850,7 +21286,7 @@
       "product": "FoundationPassthrough_Hypertube",
       "event": "NONE"
     },
-    "Recipe_StandaloneWidgetSign_Small": {
+    "label-sign-2m-recipe": {
       "slug": "label-sign-2m-recipe",
       "name": "Label Sign 2m",
       "ingredients": [
@@ -21866,7 +21302,7 @@
       "product": "StandaloneWidgetSign_Small",
       "event": "NONE"
     },
-    "Recipe_StandaloneWidgetSign_SmallVeryWide": {
+    "label-sign-4m-recipe": {
       "slug": "label-sign-4m-recipe",
       "name": "Label Sign 4m",
       "ingredients": [
@@ -21882,7 +21318,7 @@
       "product": "StandaloneWidgetSign_SmallVeryWide",
       "event": "NONE"
     },
-    "Recipe_StandaloneWidgetSign_SmallWide": {
+    "label-sign-3m-recipe": {
       "slug": "label-sign-3m-recipe",
       "name": "Label Sign 3m",
       "ingredients": [
@@ -21898,7 +21334,7 @@
       "product": "StandaloneWidgetSign_SmallWide",
       "event": "NONE"
     },
-    "Recipe_StandaloneWidgetSign_Square_Tiny": {
+    "square-sign-0-5m-recipe": {
       "slug": "square-sign-0-5m-recipe",
       "name": "Square Sign 0.5m",
       "ingredients": [
@@ -21914,7 +21350,7 @@
       "product": "StandaloneWidgetSign_Square_Tiny",
       "event": "NONE"
     },
-    "Recipe_LightsControlPanel": {
+    "lights-control-panel-recipe": {
       "slug": "lights-control-panel-recipe",
       "name": "Lights Control Panel",
       "ingredients": [
@@ -21934,7 +21370,7 @@
       "product": "LightsControlPanel",
       "event": "NONE"
     },
-    "Recipe_StorageMedkit": {
+    "medical-storage-box-recipe": {
       "slug": "medical-storage-box-recipe",
       "name": "Medical Storage Box",
       "ingredients": [
@@ -21950,7 +21386,7 @@
       "product": "StorageMedkit",
       "event": "NONE"
     },
-    "Recipe_Roof_Orange_01": {
+    "ficsit-roof-flat-recipe": {
       "slug": "ficsit-roof-flat-recipe",
       "name": "FICSIT Roof Flat",
       "ingredients": [
@@ -21962,7 +21398,7 @@
       "product": "Roof_Orange_01",
       "event": "NONE"
     },
-    "Recipe_Roof_Orange_02": {
+    "ficsit-roof-1m-recipe": {
       "slug": "ficsit-roof-1m-recipe",
       "name": "FICSIT Roof 1m",
       "ingredients": [
@@ -21974,7 +21410,7 @@
       "product": "Roof_Orange_02",
       "event": "NONE"
     },
-    "Recipe_Roof_Orange_03": {
+    "ficsit-roof-2m-recipe": {
       "slug": "ficsit-roof-2m-recipe",
       "name": "FICSIT Roof 2m",
       "ingredients": [
@@ -21986,7 +21422,7 @@
       "product": "Roof_Orange_03",
       "event": "NONE"
     },
-    "Recipe_Roof_Orange_04": {
+    "ficsit-roof-4m-recipe": {
       "slug": "ficsit-roof-4m-recipe",
       "name": "FICSIT Roof 4m",
       "ingredients": [
@@ -21998,7 +21434,7 @@
       "product": "Roof_Orange_04",
       "event": "NONE"
     },
-    "Recipe_Foundation_Asphalt_8x1": {
+    "foundation-1m-asphalt-recipe": {
       "slug": "foundation-1m-asphalt-recipe",
       "name": "Foundation 1m",
       "ingredients": [
@@ -22010,7 +21446,7 @@
       "product": "Foundation_Asphalt_8x1",
       "event": "NONE"
     },
-    "Recipe_Foundation_Asphalt_8x2": {
+    "foundation-2m-asphalt-recipe": {
       "slug": "foundation-2m-asphalt-recipe",
       "name": "Foundation 2m",
       "ingredients": [
@@ -22022,7 +21458,7 @@
       "product": "Foundation_Asphalt_8x2",
       "event": "NONE"
     },
-    "Recipe_Foundation_Asphalt_8x4": {
+    "foundation-4m-asphalt-recipe": {
       "slug": "foundation-4m-asphalt-recipe",
       "name": "Foundation 4m",
       "ingredients": [
@@ -22034,7 +21470,7 @@
       "product": "Foundation_Asphalt_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_Asphalt_8x1": {
+    "inv-ramp-1m-asphalt-recipe": {
       "slug": "inv-ramp-1m-asphalt-recipe",
       "name": "Inv. Ramp 1m",
       "ingredients": [
@@ -22046,7 +21482,7 @@
       "product": "InvertedRamp_Asphalt_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_Asphalt_8x2": {
+    "inv-ramp-2m-asphalt-recipe": {
       "slug": "inv-ramp-2m-asphalt-recipe",
       "name": "Inv. Ramp 2m",
       "ingredients": [
@@ -22058,7 +21494,7 @@
       "product": "InvertedRamp_Asphalt_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_Asphalt_8x4": {
+    "inv-ramp-4m-asphalt-recipe": {
       "slug": "inv-ramp-4m-asphalt-recipe",
       "name": "Inv. Ramp 4m",
       "ingredients": [
@@ -22070,7 +21506,7 @@
       "product": "InvertedRamp_Asphalt_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorner_Asphalt_8x1": {
+    "inv-down-corner-1m-asphalt-recipe": {
       "slug": "inv-down-corner-1m-asphalt-recipe",
       "name": "Inv. Down Corner 1m",
       "ingredients": [
@@ -22082,7 +21518,7 @@
       "product": "InvertedRamp_DCorner_Asphalt_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorner_Asphalt_8x2": {
+    "inv-down-corner-2m-asphalt-recipe": {
       "slug": "inv-down-corner-2m-asphalt-recipe",
       "name": "Inv. Down Corner 2m",
       "ingredients": [
@@ -22094,7 +21530,7 @@
       "product": "InvertedRamp_DCorner_Asphalt_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_DCorner_Asphalt_8x4": {
+    "inv-down-corner-4m-asphalt-recipe": {
       "slug": "inv-down-corner-4m-asphalt-recipe",
       "name": "Inv. Down Corner 4m",
       "ingredients": [
@@ -22106,7 +21542,7 @@
       "product": "InvertedRamp_DCorner_Asphalt_8x4",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorner_Asphalt_8x1": {
+    "inv-up-corner-1m-asphalt-recipe": {
       "slug": "inv-up-corner-1m-asphalt-recipe",
       "name": "Inv. Up Corner 1m",
       "ingredients": [
@@ -22118,7 +21554,7 @@
       "product": "InvertedRamp_UCorner_Asphalt_8x1",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorner_Asphalt_8x2": {
+    "inv-up-corner-2m-asphalt-recipe": {
       "slug": "inv-up-corner-2m-asphalt-recipe",
       "name": "Inv. Up Corner 2m",
       "ingredients": [
@@ -22130,7 +21566,7 @@
       "product": "InvertedRamp_UCorner_Asphalt_8x2",
       "event": "NONE"
     },
-    "Recipe_InvertedRamp_UCorner_Asphalt_8x4": {
+    "inv-up-corner-4m-asphalt-recipe": {
       "slug": "inv-up-corner-4m-asphalt-recipe",
       "name": "Inv. Up Corner 4m",
       "ingredients": [
@@ -22142,7 +21578,7 @@
       "product": "InvertedRamp_UCorner_Asphalt_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_Asphalt_8x1": {
+    "ramp-1m-asphalt-recipe": {
       "slug": "ramp-1m-asphalt-recipe",
       "name": "Ramp 1m",
       "ingredients": [
@@ -22154,7 +21590,7 @@
       "product": "Ramp_Asphalt_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_Asphalt_8x2": {
+    "ramp-2m-asphalt-recipe": {
       "slug": "ramp-2m-asphalt-recipe",
       "name": "Ramp 2m",
       "ingredients": [
@@ -22166,7 +21602,7 @@
       "product": "Ramp_Asphalt_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_Asphalt_8x4": {
+    "ramp-4m-asphalt-recipe": {
       "slug": "ramp-4m-asphalt-recipe",
       "name": "Ramp 4m",
       "ingredients": [
@@ -22178,7 +21614,7 @@
       "product": "Ramp_Asphalt_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorner_Asphalt_8x1": {
+    "down-corner-ramp-1m-asphalt-recipe": {
       "slug": "down-corner-ramp-1m-asphalt-recipe",
       "name": "Down Corner Ramp 1m",
       "ingredients": [
@@ -22190,7 +21626,7 @@
       "product": "Ramp_DownCorner_Asphalt_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorner_Asphalt_8x2": {
+    "down-corner-ramp-2m-asphalt-recipe": {
       "slug": "down-corner-ramp-2m-asphalt-recipe",
       "name": "Down Corner Ramp 2m",
       "ingredients": [
@@ -22202,7 +21638,7 @@
       "product": "Ramp_DownCorner_Asphalt_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_DownCorner_Asphalt_8x4": {
+    "down-corner-ramp-4m-asphalt-recipe": {
       "slug": "down-corner-ramp-4m-asphalt-recipe",
       "name": "Down Corner Ramp 4m",
       "ingredients": [
@@ -22214,7 +21650,7 @@
       "product": "Ramp_DownCorner_Asphalt_8x4",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorner_Asphalt_8x1": {
+    "up-corner-ramp-1m-asphalt-recipe": {
       "slug": "up-corner-ramp-1m-asphalt-recipe",
       "name": "Up Corner Ramp 1m",
       "ingredients": [
@@ -22226,7 +21662,7 @@
       "product": "Ramp_UpCorner_Asphalt_8x1",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorner_Asphalt_8x2": {
+    "up-corner-ramp-2m-asphalt-recipe": {
       "slug": "up-corner-ramp-2m-asphalt-recipe",
       "name": "Up Corner Ramp 2m",
       "ingredients": [
@@ -22238,7 +21674,7 @@
       "product": "Ramp_UpCorner_Asphalt_8x2",
       "event": "NONE"
     },
-    "Recipe_Ramp_UpCorner_Asphalt_8x4": {
+    "up-corner-ramp-4m-asphalt-recipe": {
       "slug": "up-corner-ramp-4m-asphalt-recipe",
       "name": "Up Corner Ramp 4m",
       "ingredients": [
@@ -22250,7 +21686,7 @@
       "product": "Ramp_UpCorner_Asphalt_8x4",
       "event": "NONE"
     },
-    "Recipe_RampDouble_Asphalt_8x1": {
+    "double-ramp-2m-asphalt-recipe": {
       "slug": "double-ramp-2m-asphalt-recipe",
       "name": "Double Ramp 2m",
       "ingredients": [
@@ -22262,7 +21698,7 @@
       "product": "RampDouble_Asphalt_8x1",
       "event": "NONE"
     },
-    "Recipe_RampDouble_Asphalt_8x2": {
+    "double-ramp-4m-asphalt-recipe": {
       "slug": "double-ramp-4m-asphalt-recipe",
       "name": "Double Ramp 4m",
       "ingredients": [
@@ -22274,7 +21710,7 @@
       "product": "RampDouble_Asphalt_8x2",
       "event": "NONE"
     },
-    "Recipe_RampDouble_Asphalt_8x4": {
+    "double-ramp-8m-asphalt-recipe": {
       "slug": "double-ramp-8m-asphalt-recipe",
       "name": "Double Ramp 8m",
       "ingredients": [
@@ -22286,7 +21722,7 @@
       "product": "RampDouble_Asphalt_8x4",
       "event": "NONE"
     },
-    "Recipe_Roof_Window_01": {
+    "glass-roof-flat-recipe": {
       "slug": "glass-roof-flat-recipe",
       "name": "Glass Roof Flat",
       "ingredients": [
@@ -22298,7 +21734,7 @@
       "product": "Roof_Window_01",
       "event": "NONE"
     },
-    "Recipe_Roof_Window_02": {
+    "glass-roof-1m-recipe": {
       "slug": "glass-roof-1m-recipe",
       "name": "Glass Roof 1m",
       "ingredients": [
@@ -22310,7 +21746,7 @@
       "product": "Roof_Window_02",
       "event": "NONE"
     },
-    "Recipe_Roof_Window_03": {
+    "glass-roof-2m-recipe": {
       "slug": "glass-roof-2m-recipe",
       "name": "Glass Roof 2m",
       "ingredients": [
@@ -22322,7 +21758,7 @@
       "product": "Roof_Window_03",
       "event": "NONE"
     },
-    "Recipe_Roof_Window_04": {
+    "glass-roof-4m-recipe": {
       "slug": "glass-roof-4m-recipe",
       "name": "Glass Roof 4m",
       "ingredients": [
@@ -22334,7 +21770,7 @@
       "product": "Roof_Window_04",
       "event": "NONE"
     },
-    "Recipe_Roof_A_01": {
+    "metal-roof-flat-recipe": {
       "slug": "metal-roof-flat-recipe",
       "name": "Metal Roof Flat",
       "ingredients": [
@@ -22346,7 +21782,7 @@
       "product": "Roof_A_01",
       "event": "NONE"
     },
-    "Recipe_Roof_A_02": {
+    "metal-roof-1m-recipe": {
       "slug": "metal-roof-1m-recipe",
       "name": "Metal Roof 1m",
       "ingredients": [
@@ -22358,7 +21794,7 @@
       "product": "Roof_A_02",
       "event": "NONE"
     },
-    "Recipe_Roof_A_03": {
+    "metal-roof-2m-recipe": {
       "slug": "metal-roof-2m-recipe",
       "name": "Metal Roof 2m",
       "ingredients": [
@@ -22370,7 +21806,7 @@
       "product": "Roof_A_03",
       "event": "NONE"
     },
-    "Recipe_Roof_A_04": {
+    "metal-roof-4m-recipe": {
       "slug": "metal-roof-4m-recipe",
       "name": "Metal Roof 4m",
       "ingredients": [
@@ -22382,7 +21818,7 @@
       "product": "Roof_A_04",
       "event": "NONE"
     },
-    "Recipe_Roof_Tar_01": {
+    "tar-roof-flat-recipe": {
       "slug": "tar-roof-flat-recipe",
       "name": "Tar Roof Flat",
       "ingredients": [
@@ -22394,7 +21830,7 @@
       "product": "Roof_Tar_01",
       "event": "NONE"
     },
-    "Recipe_Roof_Tar_02": {
+    "tar-roof-1m-recipe": {
       "slug": "tar-roof-1m-recipe",
       "name": "Tar Roof 1m",
       "ingredients": [
@@ -22406,7 +21842,7 @@
       "product": "Roof_Tar_02",
       "event": "NONE"
     },
-    "Recipe_Roof_Tar_03": {
+    "tar-roof-2m-recipe": {
       "slug": "tar-roof-2m-recipe",
       "name": "Tar Roof 2m",
       "ingredients": [
@@ -22418,7 +21854,7 @@
       "product": "Roof_Tar_03",
       "event": "NONE"
     },
-    "Recipe_Roof_Tar_04": {
+    "tar-roof-4m-recipe": {
       "slug": "tar-roof-4m-recipe",
       "name": "Tar Roof 4m",
       "ingredients": [

@@ -10,75 +10,9 @@ import { useRouter } from 'next/router'
 
 export default function Buildings({ buildings }) {
   const router = useRouter()
+  const { category } = router.query
 
-  let mockBuildingsData = {
-    Manufacturers: [
-      {
-        slug: "constructor",
-        name: "Constructor"
-      },
-      {
-        slug: "assembler",
-        name: "Assembler"
-      },
-      {
-        slug: "manufacturer",
-        name: "Manufacturer"
-      },
-      {
-        slug: "packager",
-        name: "Packager"
-      },
-      {
-        slug: "refinery",
-        name: "Refinery"
-      },
-      {
-        slug: "blender",
-        name: "Blender"
-      },
-      {
-        slug: "particle-accelerator",
-        name: "Particle Accelerator"
-      }
-    ],
-    Smelters: [
-      {
-        slug: "smelter",
-        name: "Smelter"
-      },
-      {
-        slug: "foundry",
-        name: "Foundry"
-      }
-    ],
-    Miners: [
-      {
-        slug: "miner-mk-1",
-        name: "Miner Mk.1"
-      },
-      {
-        slug: "miner-mk-1",
-        name: "Miner Mk.2"
-      },
-      {
-        slug: "miner-mk-1",
-        name: "Miner Mk.3"
-      }
-    ],
-    FluidExtractors: [
-      {
-        slug: "water-extractor",
-        name: "Water Extractor"
-      },
-      {
-        slug: "oil-extractor",
-        name: "Oil Extractor"
-      }
-    ]
-  }
-
-  mockBuildingsData = Object.entries(buildings)
+  const buildingsData = Object.entries(buildings)
 
   const BuildingCategories = [
     'Production',
@@ -109,7 +43,7 @@ export default function Buildings({ buildings }) {
               return (
                 <Link href={`/buildings/${e.toLowerCase()}`} key={e}>
                   <StyledCategory selected={router.query.category == e.toLowerCase()}>
-                    <Image src={`/icons/ResIcon_${e}.png`} width={64} height={64} placeholder={e.toLowerCase()} />
+                    <Image src={`/icons/ResIcon_${e}.png`} width={64} height={64} placeholder={e.toLowerCase()} alt={e.toLowerCase()}/>
                     <div>{e}</div>
                   </StyledCategory>
                 </Link>
@@ -119,16 +53,18 @@ export default function Buildings({ buildings }) {
           <StyledLine color='#E5AF07' />
         </StyledHeaderSection>
         <StyledBuildingsSection>
-          {mockBuildingsData.map((e, i) => {
+          {buildingsData.map((e, i) => {
             return (
               <StyledBuildingsContainer key={e[0]}>
                 <StyledCategoryTitle>{i + 1}. {e[0].split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
                 {e[1].map((j) => {
                   return (
-                    <StyledBuilding key={j.slug}>
-                      <StyledBuildingImage name={j.slug} />
-                      <StyledBuildingName>{j.name}</StyledBuildingName>
-                    </StyledBuilding>
+                    <Link href={`/buildings/${category}/${j.slug}`} key={j.slug}>
+                      <StyledBuilding key={j.slug}>
+                        <StyledBuildingImage name={j.slug} />
+                        <StyledBuildingName>{j.name}</StyledBuildingName>
+                      </StyledBuilding>
+                    </Link>
                   )
                 })}
               </StyledBuildingsContainer>

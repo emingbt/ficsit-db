@@ -1,8 +1,8 @@
 import Link from "next/link"
 import styled from "styled-components"
 
-export default function Recipe({recipes}) {
-  return (
+export default function Recipe({ recipes }) {
+  return recipes.length > 0 && (
     <StyledSection>
       <StyledTitle>Recipes</StyledTitle>
       <StyledRecipeContainer>
@@ -18,7 +18,7 @@ export default function Recipe({recipes}) {
                         <Link href={`/items/${i.itemClass}`}>
                           <StyledItemImage name={i.itemClass} />
                         </Link>
-                        <StyledUsePerMin>{60 / e.craftTime * i.quantity}/min</StyledUsePerMin>
+                        <StyledUsePerMin>{parseFloat((60 / e.craftTime * i.quantity).toFixed(3))}/min</StyledUsePerMin>
                       </StyledContainer>
                     </StyledItem>
                   )
@@ -31,11 +31,11 @@ export default function Recipe({recipes}) {
                     return (
                       <StyledItem product key={j.itemClass}>
                         <StyledItemQuantity>{j.quantity}x</StyledItemQuantity>
-                        <StyledContainer flexDirection="column" style={{maxWidth: '80px'}}>
+                        <StyledContainer flexDirection="column" style={{ maxWidth: '80px' }}>
                           <Link href={`/items/${j.itemClass}`}>
                             <StyledItemImage name={j.itemClass} />
                           </Link>
-                          <StyledUsePerMin>{60 / e.craftTime * j.quantity}/min</StyledUsePerMin>
+                          <StyledUsePerMin>{parseFloat((60 / e.craftTime * j.quantity).toFixed(3))}/min</StyledUsePerMin>
                         </StyledContainer>
                       </StyledItem>
                     )
@@ -43,7 +43,9 @@ export default function Recipe({recipes}) {
                 </StyledContainer>
                 <StyledVerticalLine isAlternate={e.isAlternate} />
                 <StyledBuildingContainer>
-                  <StyledBuildingImage producedIn={e.producedIn} />
+                  <Link href={`/buildings/production/${e.producedIn}`}>
+                    <StyledBuildingImage producedIn={e.producedIn} />
+                  </Link>
                   <StyledCraftTime>{e.craftTime}sn</StyledCraftTime>
                 </StyledBuildingContainer>
               </StyledContainer>
