@@ -59,7 +59,7 @@ export default function Buildings({ buildings }) {
                 <StyledCategoryTitle>{i + 1}. {e[0].split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
                 {e[1].map((j) => {
                   return (
-                    <Link href={`/buildings/${category}/${j.slug}`}>
+                    <Link href={`/buildings/${category}/${j.slug}`} key={j.slug}>
                       <StyledBuilding key={j.slug}>
                         <StyledBuildingImage name={j.slug} />
                         <StyledBuildingName>{j.name}</StyledBuildingName>
