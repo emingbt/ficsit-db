@@ -13,7 +13,7 @@ export default function Building({ buildable }) {
   const { category } = router.query
 
   const [clockspeed, setClockspeed] = useState(100)
-  let energyConsumption = (buildable.meta?.powerInfo?.consumption * (clockspeed / 100) ** buildable.meta?.powerInfo?.consumption).toFixed(3)
+  let energyConsumption = (buildable.meta?.powerInfo?.consumption * (clockspeed / 100) ** buildable.meta?.overclockInfo?.exponent).toFixed(3)
 
   return (
     <Container>
