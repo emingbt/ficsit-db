@@ -39,7 +39,7 @@ export default function Building({ buildable }) {
               <StyledCostContainer>
                 {buildable.cost.map((e) => {
                   return (
-                    <StyledCostItem>
+                    <StyledCostItem key={e.itemClass}>
                       <StyledText>{e.quantity}x</StyledText>
                       <Link href={`/items/${e.itemClass}`}>
                         <StyledCostItemImage item={e.itemClass} />
