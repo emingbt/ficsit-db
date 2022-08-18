@@ -18,7 +18,7 @@ export default function Recipe({ recipes }) {
                         <Link href={`/items/${i.itemClass}`}>
                           <StyledItemImage name={i.itemClass} />
                         </Link>
-                        <StyledUsePerMin>{60 / e.craftTime * i.quantity}/min</StyledUsePerMin>
+                        <StyledUsePerMin>{parseFloat((60 / e.craftTime * i.quantity).toFixed(3))}/min</StyledUsePerMin>
                       </StyledContainer>
                     </StyledItem>
                   )
@@ -35,7 +35,7 @@ export default function Recipe({ recipes }) {
                           <Link href={`/items/${j.itemClass}`}>
                             <StyledItemImage name={j.itemClass} />
                           </Link>
-                          <StyledUsePerMin>{60 / e.craftTime * j.quantity}/min</StyledUsePerMin>
+                          <StyledUsePerMin>{parseFloat((60 / e.craftTime * j.quantity).toFixed(3))}/min</StyledUsePerMin>
                         </StyledContainer>
                       </StyledItem>
                     )
