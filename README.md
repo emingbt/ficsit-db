@@ -31,6 +31,7 @@ yarn install
 yarn dev
 ```
 
+For the people who want to see the design: <https://www.figma.com/file/uSV9tOqODwKJhsmSQiTlnl/FICSIT-DB?node-id=0%3A1>
 
 ## LICENSE
 ```
