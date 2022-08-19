@@ -1,11 +1,38 @@
 # FICSIT DB
-A [satisfactory](https://www.satisfactorygame.com/) encyclopedia that helps you while building systems 🚧 It is a fun project also I need a full-stack project to put into my CV 😄
+A [Satisfactory](https://www.satisfactorygame.com/) Encyclopedia that helps you while building systems 🚧
 
-Update : Right now, I have free time and I have decided to change frontend framework with Next.js. After that I will change database with Neo4j 🤔
+![ficsitdb-banner](https://user-images.githubusercontent.com/73133276/185584869-fc718861-a32c-4969-b615-28e0d064ca38.png)
 
-I have used Next.js for once, but never used Neo4j, so lets see what is going to happen 😅
+(It is a fun project also I need a full-stack project to put into my CV 😄)
 
-# LICENSE
+
+## Project setup
+
+Fork the repository.
+
+In the directory you would like to have the project, clone the repository
+
+```
+git clone git@github.com:emingbt/ficsit-db.git
+```
+
+
+
+
+### Install the dependencies
+
+```
+yarn install
+```
+
+### Run the project
+
+```
+yarn dev
+```
+
+
+## LICENSE
 ```
 MIT License
 
