@@ -144,7 +144,7 @@ const StyledDetail = styled.div`
   background-color: #202125;
   text-align: center;
   color: white;
-  font-size: ${props => props.description ? '1rem' : '1.5rem'};
+  font-size: ${props => props.description ? '1.25rem' : '1.5rem'};
   ${props => props.description && 'padding: 2rem;'}
 `
 
