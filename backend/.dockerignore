@@ -1,6 +1,0 @@
-node_modules
-.history
-.eslintrc.json
-.prettierignore
-.prettierrc
-Dockerfile 
