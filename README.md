@@ -1,7 +1,7 @@
 # FICSIT DB
 A [Satisfactory](https://www.satisfactorygame.com/) Encyclopedia that helps you while building systems 🚧
 
-![ficsitdb_banner](https://user-images.githubusercontent.com/73133276/185582782-b5dbe1d9-eb68-4263-b0a7-876ad9c769fb.png)
+![ficsitdb-banner](https://user-images.githubusercontent.com/73133276/185584869-fc718861-a32c-4969-b615-28e0d064ca38.png)
 
 (It is a fun project also I need a full-stack project to put into my CV 😄)
 
