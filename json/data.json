@@ -4540,7 +4540,8 @@
             "NitrogenGas",
             "Water"
           ],
-          "resourceExtractSpeed": 0
+          "resourceExtractSpeed": 0,
+          "isDependsPurity": false
         },
         "size": {
           "width": 20,
@@ -4578,7 +4579,8 @@
             "NitrogenGas",
             "Water"
           ],
-          "resourceExtractSpeed": 60
+          "resourceExtractSpeed": 60,
+          "isDependsPurity": false
         },
         "size": {
           "width": 4,
@@ -5840,7 +5842,8 @@
             "OreBauxite",
             "OreUranium"
           ],
-          "resourceExtractSpeed": 60
+          "resourceExtractSpeed": 60,
+          "isDependsPurity": true
         },
         "size": {
           "width": 6,
@@ -5878,7 +5881,8 @@
           "allowedResources": [
             "LiquidOil"
           ],
-          "resourceExtractSpeed": 120
+          "resourceExtractSpeed": 120,
+          "isDependsPurity": true
         },
         "size": {
           "width": 12,
@@ -5924,7 +5928,8 @@
             "OreBauxite",
             "OreUranium"
           ],
-          "resourceExtractSpeed": 120
+          "resourceExtractSpeed": 120,
+          "isDependsPurity": true
         },
         "size": {
           "width": 6,
@@ -5970,7 +5975,8 @@
             "OreBauxite",
             "OreUranium"
           ],
-          "resourceExtractSpeed": 240
+          "resourceExtractSpeed": 240,
+          "isDependsPurity": true
         },
         "size": {
           "width": 6,
@@ -7719,7 +7725,8 @@
           "allowedResources": [
             "Water"
           ],
-          "resourceExtractSpeed": 120
+          "resourceExtractSpeed": 120,
+          "isDependsPurity": false
         },
         "size": {
           "width": 20,
