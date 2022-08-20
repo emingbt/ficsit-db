@@ -5834,13 +5834,13 @@
           "allowedResources": [
             "Sulfur",
             "Coal",
-            "OreCopper",
-            "OreGold",
-            "OreIron",
-            "RawQuartz",
-            "Stone",
-            "OreBauxite",
-            "OreUranium"
+            "Copper Ore",
+            "Caterium Ore",
+            "Iron Ore",
+            "Raw Quartz",
+            "Limestone",
+            "Bauxite",
+            "Uranium"
           ],
           "resourceExtractSpeed": 60,
           "isDependsPurity": true
@@ -5879,7 +5879,7 @@
             "RF_LIQUID"
           ],
           "allowedResources": [
-            "LiquidOil"
+            "Crude Oil"
           ],
           "resourceExtractSpeed": 120,
           "isDependsPurity": true
@@ -5920,13 +5920,13 @@
           "allowedResources": [
             "Sulfur",
             "Coal",
-            "OreCopper",
-            "OreGold",
-            "OreIron",
-            "RawQuartz",
-            "Stone",
-            "OreBauxite",
-            "OreUranium"
+            "Copper Ore",
+            "Caterium Ore",
+            "Iron Ore",
+            "Raw Quartz",
+            "Limestone",
+            "Bauxite",
+            "Uranium"
           ],
           "resourceExtractSpeed": 120,
           "isDependsPurity": true
@@ -5967,13 +5967,13 @@
           "allowedResources": [
             "Sulfur",
             "Coal",
-            "OreCopper",
-            "OreGold",
-            "OreIron",
-            "RawQuartz",
-            "Stone",
-            "OreBauxite",
-            "OreUranium"
+            "Copper Ore",
+            "Caterium Ore",
+            "Iron Ore",
+            "Raw Quartz",
+            "Limestone",
+            "Bauxite",
+            "Uranium"
           ],
           "resourceExtractSpeed": 240,
           "isDependsPurity": true
