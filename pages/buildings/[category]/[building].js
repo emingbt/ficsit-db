@@ -16,6 +16,9 @@ export default function Building({ buildable, recipes }) {
   const [clockspeed, setClockspeed] = useState(100)
   let energyConsumption = (buildable.meta?.powerInfo?.consumption * (clockspeed / 100) ** buildable.meta?.overclockInfo?.exponent).toFixed(3)
 
+  const [purity, setPurity] = useState(1)
+  let extractionRate = buildable.meta?.extractorInfo?.resourceExtractSpeed * purity * clockspeed / 100
+
   return (
     <Container>
       <Head>
@@ -32,55 +35,69 @@ export default function Building({ buildable, recipes }) {
           <StyledLine color='#E5AF07' />
         </StyledTitleSection>
         <StyledContainer>
-          <StyledDetailContainer>
-            <StyledImage name={buildable.slug} />
-            <StyledDetail>
-              <StyledName>{buildable.name}</StyledName>
-              <StyledCostTitle>Cost :</StyledCostTitle>
-              <StyledCostContainer>
-                {buildable.cost.map((e) => {
-                  return (
-                    <StyledCostItem key={e.itemClass}>
-                      <StyledText>{e.quantity}x</StyledText>
-                      <Link href={`/items/${e.itemClass}`}>
-                        <StyledCostItemImage item={e.itemClass} />
-                      </Link>
-                    </StyledCostItem>
-                  )
-                })}
-              </StyledCostContainer>
-            </StyledDetail>
-            <StyledDetail description>
-              {buildable.description}
-            </StyledDetail>
-          </StyledDetailContainer>
-          {
-            buildable.isOverclockable &&
-            <StyledConsumptionContainer>
-              <StyledEnergyContainer>
-                <div>{clockspeed}%</div>
+          <StyledSection>
+            <StyledDetailContainer>
+              <StyledImage name={buildable.slug} />
+              <StyledDetail>
+                <StyledName>{buildable.name}</StyledName>
+                <StyledCostTitle>Cost :</StyledCostTitle>
+                <StyledCostContainer>
+                  {buildable.cost.map((e) => {
+                    return (
+                      <StyledCostItem key={e.itemClass}>
+                        <StyledText>{e.quantity}x</StyledText>
+                        <Link href={`/items/${e.itemClass}`}>
+                          <StyledCostItemImage item={e.itemClass} />
+                        </Link>
+                      </StyledCostItem>
+                    )
+                  })}
+                </StyledCostContainer>
+              </StyledDetail>
+              <StyledDetail description>
+                {buildable.description}
+              </StyledDetail>
+            </StyledDetailContainer>
+            {
+              buildable.isOverclockable &&
+              <StyledConsumptionContainer>
+                <StyledEnergyContainer>
+                  <div>{clockspeed}%</div>
+                  <StyledVerticalLine />
+                  <div>{parseFloat(energyConsumption)}MW</div>
+                </StyledEnergyContainer>
+                <StyledClockspeedContainer>
+                  <StyledClockspeedInput
+                    type="range"
+                    min={1}
+                    max={250}
+                    step={1}
+                    onChange={e => { setClockspeed(e.currentTarget.value); }}
+                    value={clockspeed}
+                  />
+                  <StyledClockspeedTextContainer>
+                    <StyledClockspeedText overclocked={100 <= clockspeed} onClick={() => setClockspeed(100)}>100%</StyledClockspeedText>
+                    <StyledClockspeedText overclocked={150 <= clockspeed} onClick={() => setClockspeed(150)}>150%</StyledClockspeedText>
+                    <StyledClockspeedText overclocked={200 <= clockspeed} onClick={() => setClockspeed(200)}>200%</StyledClockspeedText>
+                    <StyledClockspeedText overclocked={250 <= clockspeed} onClick={() => setClockspeed(250)}>250%</StyledClockspeedText>
+                  </StyledClockspeedTextContainer>
+                </StyledClockspeedContainer>
+              </StyledConsumptionContainer>
+            }
+            {
+              (buildable.isResourceExtractor && buildable.meta.extractorInfo?.isDependsPurity) &&
+              <StyledExtractionContainer>
+                <StyledExtractionRate>{extractionRate}/min</StyledExtractionRate>
                 <StyledVerticalLine />
-                <div>{parseFloat(energyConsumption)}MW</div>
-              </StyledEnergyContainer>
-              <StyledClockspeedContainer>
-                <StyledClockspeedInput
-                  type="range"
-                  min={1}
-                  max={250}
-                  step={1}
-                  onChange={e => { setClockspeed(e.currentTarget.value); }}
-                  value={clockspeed}
-                />
-                <StyledClockspeedTextContainer>
-                  <StyledClockspeedText overclocked={100 <= clockspeed} onClick={() => setClockspeed(100)}>100%</StyledClockspeedText>
-                  <StyledClockspeedText overclocked={150 <= clockspeed} onClick={() => setClockspeed(150)}>150%</StyledClockspeedText>
-                  <StyledClockspeedText overclocked={200 <= clockspeed} onClick={() => setClockspeed(200)}>200%</StyledClockspeedText>
-                  <StyledClockspeedText overclocked={250 <= clockspeed} onClick={() => setClockspeed(250)}>250%</StyledClockspeedText>
-                </StyledClockspeedTextContainer>
-              </StyledClockspeedContainer>
-            </StyledConsumptionContainer>
-          }
-          <Recipe recipes={recipes}/>
+                <StyledPurityContainer>
+                  <StyledPurity selected={purity == 0.5} onClick={() => setPurity(0.5)}>Impure</StyledPurity>
+                  <StyledPurity selected={purity == 1} onClick={() => setPurity(1)}>Normal</StyledPurity>
+                  <StyledPurity selected={purity == 2} onClick={() => setPurity(2)}>Pure</StyledPurity>
+                </StyledPurityContainer>
+              </StyledExtractionContainer>
+            }
+          </StyledSection>
+          <Recipe recipes={recipes} />
         </StyledContainer>
       </Main>
 
@@ -114,6 +131,15 @@ const StyledContainer = styled.div`
   background-color: #131416;
   margin-top: 1rem;
   padding: 1.5rem;
+`
+
+const StyledSection = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
 `
 
 const StyledDetailContainer = styled.section`
@@ -211,7 +237,6 @@ const StyledConsumptionContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.75rem;
 `
 
 const StyledEnergyContainer = styled.div`
@@ -282,4 +307,46 @@ const StyledClockspeedText = styled.div`
   cursor: pointer;
   color: ${props => props.overclocked ? '#FFE9a5' : '#141518'};
   margin-left: 6rem;
+`
+
+const StyledExtractionContainer = styled.div`
+  width: 100%;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  background-color: #202125;
+`
+
+const StyledExtractionRate = styled.div`
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+`
+
+const StyledPurityContainer = styled.div`
+  width: calc(100% - 252px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`
+
+const StyledPurity = styled.div`
+  width: 9rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3.25rem;
+  background-color: ${props => props.selected ? "#D79845" : "#43454B"};
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 `
