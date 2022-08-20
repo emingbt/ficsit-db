@@ -8,6 +8,7 @@ import { getBuildableByName, getRecipesByBuildingName } from '../../../lib/api'
 import Link from 'next/link'
 import { useState } from 'react'
 import Recipe from '../../../components/sections/recipe'
+import ExtractableResources from '../../../components/sections/extractableResources'
 
 export default function Building({ buildable, recipes }) {
   const router = useRouter()
@@ -98,6 +99,7 @@ export default function Building({ buildable, recipes }) {
             }
           </StyledSection>
           <Recipe recipes={recipes} />
+          <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
         </StyledContainer>
       </Main>
 
