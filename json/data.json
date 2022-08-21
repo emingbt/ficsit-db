@@ -4536,8 +4536,8 @@
             "RF_HEAT"
           ],
           "allowedResources": [
-            "LiquidOil",
-            "NitrogenGas",
+            "Crude Oil",
+            "Nitrogen Gas",
             "Water"
           ],
           "resourceExtractSpeed": 0,
@@ -4575,8 +4575,8 @@
             "RF_GAS"
           ],
           "allowedResources": [
-            "LiquidOil",
-            "NitrogenGas",
+            "Crude Oil",
+            "Nitrogen Gas",
             "Water"
           ],
           "resourceExtractSpeed": 60,
