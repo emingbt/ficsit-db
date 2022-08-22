@@ -31,7 +31,7 @@ export default function Recipe({ recipes }) {
                     return (
                       <StyledItem product key={j.itemClass}>
                         <StyledItemQuantity>{j.quantity}x</StyledItemQuantity>
-                        <StyledContainer flexDirection="column" style={{ maxWidth: '80px' }}>
+                        <StyledContainer flexDirection="column">
                           <Link href={`/items/${j.itemClass}`}>
                             <StyledItemImage name={j.itemClass} />
                           </Link>
