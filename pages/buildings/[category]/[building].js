@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import Recipe from '../../../components/sections/recipe'
 import ExtractableResources from '../../../components/sections/extractableResources'
+import Fuel from '../../../components/sections/fuel'
 
 export default function Building({ buildable, recipes }) {
   const router = useRouter()
@@ -16,6 +17,9 @@ export default function Building({ buildable, recipes }) {
 
   const [clockspeed, setClockspeed] = useState(100)
   let energyConsumption = (buildable.meta?.powerInfo?.consumption * (clockspeed / 100) ** buildable.meta?.overclockInfo?.exponent).toFixed(3)
+
+  let powerProduction = (buildable.meta?.generatorInfo?.powerProduction * Math.pow((clockspeed / 100), 1 / buildable.meta?.overclockInfo?.exponent)).toFixed(3)
+  let operatingRate = Math.pow((clockspeed / 100), 1 / buildable.meta?.overclockInfo?.exponent) * 100
 
   const [purity, setPurity] = useState(1)
   let extractionRate = buildable.meta?.extractorInfo?.resourceExtractSpeed * purity * clockspeed / 100
@@ -65,7 +69,7 @@ export default function Building({ buildable, recipes }) {
                 <StyledEnergyContainer>
                   <div>{clockspeed}%</div>
                   <StyledVerticalLine />
-                  <div>{parseFloat(energyConsumption)}MW</div>
+                  <div>{parseFloat(buildable.isGenerator ? powerProduction : energyConsumption)}MW</div>
                 </StyledEnergyContainer>
                 <StyledClockspeedContainer>
                   <StyledClockspeedInput
@@ -100,6 +104,7 @@ export default function Building({ buildable, recipes }) {
           </StyledSection>
           <Recipe recipes={recipes} />
           <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
+          <Fuel fuels={buildable.meta?.generatorInfo?.fuels} operatingRate={operatingRate} />
         </StyledContainer>
       </Main>
 
