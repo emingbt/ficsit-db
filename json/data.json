@@ -4560,7 +4560,7 @@
       ],
       "buildMenuPriority": 4,
       "isPowered": false,
-      "isOverclockable": true,
+      "isOverclockable": false,
       "isProduction": false,
       "isResourceExtractor": true,
       "isGenerator": false,
@@ -4679,7 +4679,7 @@
             },
             {
               "fuel": {
-                "itemClass": "hatcher-parts",
+                "itemClass": "hatcher-remains",
                 "rate": 7.2
               }
             },
@@ -26186,7 +26186,7 @@
       "techTier": 3,
       "cost": [
         {
-          "itemClass": "hatcher-parts",
+          "itemClass": "hatcher-remains",
           "quantity": 1
         }
       ],
