@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import { Container, Main, StyledLine, StyledTitle } from '../components/sharedstyles'
+import Header from '../../../components/header'
+import Footer from '../../../components/footer'
+import { Container, Main, StyledLine, StyledTitle } from '../../../components/sharedstyles'
 import styled from 'styled-components'
 import Link from 'next/link'
-import { getAllItems } from '../lib/api'
+import { getAllItems } from '../../../lib/api'
 
 export default function Items( items ) {
   const sortedItems = Object.values(items).sort((a,b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
