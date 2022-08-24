@@ -1,11 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: Roboto;
-    src: url("https://use.typekit.net/let8ssp.css") format("css")
-  }
-
   html,
   body {
     padding: 0;
@@ -22,6 +17,16 @@ const GlobalStyle = createGlobalStyle`
   
   * {
     box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: Industrial Branding;
+    src: url('/fonts/INDUSTRIAL-BRANDING.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: Roboto;
+    src: url("https://use.typekit.net/let8ssp.css") format("css")
   }
 `
 
