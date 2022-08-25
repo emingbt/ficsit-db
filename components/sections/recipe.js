@@ -1,10 +1,10 @@
 import Link from "next/link"
 import styled from "styled-components"
 
-export default function Recipe({ recipes }) {
+export default function Recipe({ recipes, title }) {
   return recipes.length > 0 && (
     <StyledSection>
-      <StyledTitle>Recipes</StyledTitle>
+      <StyledTitle>{title}</StyledTitle>
       <StyledRecipeContainer>
         {recipes.map((e) => {
           return (
@@ -60,7 +60,7 @@ export default function Recipe({ recipes }) {
 const StyledSection = styled.section`
   width: 100%;
   background-color: #9BA3A9;
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 `
 
 const StyledTitle = styled.div`
