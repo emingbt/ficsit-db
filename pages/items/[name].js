@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import { getItemByItemName } from '../../lib/api'
 import Recipe from '../../components/sections/recipe'
-import UsagesAsIngredient from '../../components/sections/usagesAsIngredient'
 
 
 export default function Item({ item, recipes, usagesAsIngredient }) {
@@ -46,8 +45,8 @@ export default function Item({ item, recipes, usagesAsIngredient }) {
               {item.description}
             </StyledDetail>
           </StyledDetailContainer>
-          <Recipe recipes={recipes}/>
-          <UsagesAsIngredient usagesAsIngredient={usagesAsIngredient}/>
+          <Recipe recipes={recipes} title={"Recipes"}/>
+          <Recipe recipes={usagesAsIngredient} title={"Usages as Ingredient"}/>
         </StyledContainer>
       </Main>
 
@@ -89,7 +88,6 @@ const StyledDetailContainer = styled.section`
   align-items: center;
   width: 100%;
   height: 250px;
-  margin-bottom: 2.5rem;
 `
 
 const StyledImage = styled.div`
