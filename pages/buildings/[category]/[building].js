@@ -102,7 +102,7 @@ export default function Building({ buildable, recipes }) {
               </StyledExtractionContainer>
             }
           </StyledSection>
-          <Recipe recipes={recipes} />
+          <Recipe recipes={recipes} title={"Recipes"}/>
           <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
           <Fuel fuels={buildable.meta?.generatorInfo?.fuels} operatingRate={operatingRate} />
         </StyledContainer>
@@ -146,7 +146,6 @@ const StyledSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.75rem;
 `
 
 const StyledDetailContainer = styled.section`
@@ -323,7 +322,6 @@ const StyledExtractionContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.75rem;
   background-color: #202125;
 `
 

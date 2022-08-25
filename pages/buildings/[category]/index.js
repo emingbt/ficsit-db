@@ -43,7 +43,7 @@ export default function Buildings({ buildings }) {
               return (
                 <Link href={`/buildings/${e.toLowerCase()}`} key={e}>
                   <StyledCategory selected={router.query.category == e.toLowerCase()}>
-                    <Image src={`/icons/ResIcon_${e}.png`} width={64} height={64} placeholder={e.toLowerCase()} alt={e.toLowerCase()}/>
+                    <Image src={`/icons/ResIcon_${e}.png`} width={64} height={64} placeholder={e.toLowerCase()} alt={e.toLowerCase()} />
                     <div>{e}</div>
                   </StyledCategory>
                 </Link>
@@ -55,19 +55,21 @@ export default function Buildings({ buildings }) {
         <StyledBuildingsSection>
           {buildingsData.map((e, i) => {
             return (
-              <StyledBuildingsContainer key={e[0]}>
+              <>
                 <StyledCategoryTitle>{i + 1}. {e[0].split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
-                {e[1].map((j) => {
-                  return (
-                    <Link href={`/buildings/${category}/${j.slug}`} key={j.slug}>
-                      <StyledBuilding key={j.slug}>
-                        <StyledBuildingImage name={j.slug} />
-                        <StyledBuildingName>{j.name}</StyledBuildingName>
-                      </StyledBuilding>
-                    </Link>
-                  )
-                })}
-              </StyledBuildingsContainer>
+                <StyledBuildingsContainer key={e[0]}>
+                  {e[1].map((j) => {
+                    return (
+                      <Link href={`/buildings/${category}/${j.slug}`} key={j.slug}>
+                        <StyledBuilding key={j.slug}>
+                          <StyledBuildingImage name={j.slug} />
+                          <StyledBuildingName>{j.name}</StyledBuildingName>
+                        </StyledBuilding>
+                      </Link>
+                    )
+                  })}
+                </StyledBuildingsContainer>
+              </>
             )
           })}
         </StyledBuildingsSection>
@@ -130,17 +132,16 @@ const StyledBuildingsSection = styled.section`
 
 const StyledBuildingsContainer = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  align-items: center;
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 4rem;
 `
 
 const StyledCategoryTitle = styled.div`
   width: 100%;
   height: 2rem;
-  grid-column: 1 / 7;
   display: flex;
   align-items: center;
   background-color: #43454B;
@@ -152,16 +153,19 @@ const StyledCategoryTitle = styled.div`
 `
 
 const StyledBuilding = styled.div`
+  width: calc(100% / 6.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 0.5rem;
   margin-bottom: 1rem;
+  min-width: 9rem;
   cursor: pointer;
 `
 
 const StyledBuildingImage = styled.div`
-  height: 180px;
+  width: 100%;
   aspect-ratio: 1 / 1;
   background-color: #43454B;
   background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.name + '_256.png'});
@@ -171,7 +175,7 @@ const StyledBuildingImage = styled.div`
 `
 
 const StyledBuildingName = styled.div`
-  width: 180px;
+  width: 100%;
   height: 54px;
   display: flex;
   justify-content: center;
