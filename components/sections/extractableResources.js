@@ -29,6 +29,7 @@ const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
   background-color: #9BA3A9;
+  margin-top: 2.5rem;
 `
 
 const StyledTitle = styled.div`
