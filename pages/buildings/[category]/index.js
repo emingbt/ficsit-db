@@ -55,9 +55,9 @@ export default function Buildings({ buildings }) {
         <StyledBuildingsSection>
           {buildingsData.map((e, i) => {
             return (
-              <>
+              <React.Fragment key={e[0]}>
                 <StyledCategoryTitle>{i + 1}. {e[0].split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
-                <StyledBuildingsContainer key={e[0]}>
+                <StyledBuildingsContainer>
                   {e[1].map((j) => {
                     return (
                       <Link href={`/buildings/${category}/${j.slug}`} key={j.slug}>
@@ -69,7 +69,7 @@ export default function Buildings({ buildings }) {
                     )
                   })}
                 </StyledBuildingsContainer>
-              </>
+              </React.Fragment>
             )
           })}
         </StyledBuildingsSection>
