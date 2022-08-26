@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
@@ -55,9 +56,9 @@ export default function Buildings({ buildings }) {
         <StyledBuildingsSection>
           {buildingsData.map((e, i) => {
             return (
-              <>
+              <React.Fragment key={e[0]}>
                 <StyledCategoryTitle>{i + 1}. {e[0].split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
-                <StyledBuildingsContainer key={e[0]}>
+                <StyledBuildingsContainer>
                   {e[1].map((j) => {
                     return (
                       <Link href={`/buildings/${category}/${j.slug}`} key={j.slug}>
@@ -69,7 +70,7 @@ export default function Buildings({ buildings }) {
                     )
                   })}
                 </StyledBuildingsContainer>
-              </>
+              </React.Fragment>
             )
           })}
         </StyledBuildingsSection>
@@ -140,7 +141,7 @@ const StyledBuildingsContainer = styled.div`
 `
 
 const StyledCategoryTitle = styled.div`
-  width: 100%;
+  width: calc(100% - 1rem);
   height: 2rem;
   display: flex;
   align-items: center;

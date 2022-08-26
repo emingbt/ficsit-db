@@ -1,7 +1,7 @@
 import Link from "next/link"
 import styled from "styled-components"
 
-export default function Recipe({ recipes, title }) {
+export default function Recipe({ recipes, title, clockspeed = 100 }) {
   return recipes.length > 0 && (
     <StyledSection>
       <StyledTitle>{title}</StyledTitle>
@@ -18,7 +18,7 @@ export default function Recipe({ recipes, title }) {
                         <Link href={`/items/${i.itemClass}`}>
                           <StyledItemImage name={i.itemClass} />
                         </Link>
-                        <StyledUsePerMin>{parseFloat((60 / e.craftTime * i.quantity).toFixed(3))}/min</StyledUsePerMin>
+                        <StyledUsePerMin>{parseFloat((60 / e.craftTime * i.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
                       </StyledContainer>
                     </StyledItem>
                   )
@@ -35,7 +35,7 @@ export default function Recipe({ recipes, title }) {
                           <Link href={`/items/${j.itemClass}`}>
                             <StyledItemImage name={j.itemClass} />
                           </Link>
-                          <StyledUsePerMin>{parseFloat((60 / e.craftTime * j.quantity).toFixed(3))}/min</StyledUsePerMin>
+                          <StyledUsePerMin>{parseFloat((60 / e.craftTime * j.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
                         </StyledContainer>
                       </StyledItem>
                     )
@@ -46,7 +46,7 @@ export default function Recipe({ recipes, title }) {
                   <Link href={`/buildings/production/${e.producedIn}`}>
                     <StyledBuildingImage producedIn={e.producedIn} />
                   </Link>
-                  <StyledCraftTime>{e.craftTime}sn</StyledCraftTime>
+                  <StyledCraftTime>{parseFloat((e.craftTime / clockspeed * 100).toFixed(3))}sn</StyledCraftTime>
                 </StyledBuildingContainer>
               </StyledContainer>
             </StyledRecipe>
