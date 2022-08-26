@@ -81,6 +81,7 @@ export default function Building({ buildable, recipes }) {
                     value={clockspeed}
                   />
                   <StyledClockspeedTextContainer>
+                    <StyledClockspeedText></StyledClockspeedText>
                     <StyledClockspeedText overclocked={100 <= clockspeed} onClick={() => setClockspeed(100)}>100%</StyledClockspeedText>
                     <StyledClockspeedText overclocked={150 <= clockspeed} onClick={() => setClockspeed(150)}>150%</StyledClockspeedText>
                     <StyledClockspeedText overclocked={200 <= clockspeed} onClick={() => setClockspeed(200)}>200%</StyledClockspeedText>
@@ -309,10 +310,11 @@ const StyledClockspeedTextContainer = styled.div`
 `
 
 const StyledClockspeedText = styled.div`
+  width: 20%;
   text-align: right;
   cursor: pointer;
   color: ${props => props.overclocked ? '#FFE9a5' : '#141518'};
-  margin-left: 6rem;
+  /* margin-left: 6rem; */
 `
 
 const StyledExtractionContainer = styled.div`
