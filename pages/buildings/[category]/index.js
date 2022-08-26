@@ -153,7 +153,7 @@ const StyledCategoryTitle = styled.div`
 `
 
 const StyledBuilding = styled.div`
-  width: calc(100% / 6.5);
+  width: calc(100% / 6.6);
   display: flex;
   flex-direction: column;
   align-items: center;
