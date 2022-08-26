@@ -310,11 +310,11 @@ const StyledClockspeedTextContainer = styled.div`
 `
 
 const StyledClockspeedText = styled.div`
-  width: 20%;
+  width: 5%;
   text-align: right;
   cursor: pointer;
   color: ${props => props.overclocked ? '#FFE9a5' : '#141518'};
-  /* margin-left: 6rem; */
+  margin-left: 15%;
 `
 
 const StyledExtractionContainer = styled.div`
