@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
@@ -140,7 +141,7 @@ const StyledBuildingsContainer = styled.div`
 `
 
 const StyledCategoryTitle = styled.div`
-  width: 100%;
+  width: calc(100% - 1rem);
   height: 2rem;
   display: flex;
   align-items: center;
