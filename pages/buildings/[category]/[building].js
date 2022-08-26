@@ -103,7 +103,7 @@ export default function Building({ buildable, recipes }) {
               </StyledExtractionContainer>
             }
           </StyledSection>
-          <Recipe recipes={recipes} title={"Recipes"}/>
+          <Recipe recipes={recipes} title={"Recipes"} clockspeed={clockspeed}/>
           <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
           <Fuel fuels={buildable.meta?.generatorInfo?.fuels} operatingRate={operatingRate} />
         </StyledContainer>
