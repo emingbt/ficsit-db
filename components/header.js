@@ -1,9 +1,16 @@
 import styled from 'styled-components'
 import { StyledLine } from './sharedstyles'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import SearchIcon from './searchIcon'
 
 export default function Header() {
+  const router = useRouter()
+
+  const handleSubmit = (e) => {
+    router.push(`/search/${e.target.itemName.value}`)
+  }
+
   return (
     <Wrapper>
       <HeaderBar>
