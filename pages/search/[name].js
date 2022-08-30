@@ -24,7 +24,7 @@ export default function Items({ items }) {
 
       <Main>
         <StyledContainer>
-          <StyledTitle>Search results for : "<StyledSpan>{name}</StyledSpan>"</StyledTitle>
+          <StyledTitle>Search results for : &quot;<StyledSpan>{name}</StyledSpan>&quot;</StyledTitle>
           <StyledLine color='#E5AF07' />
           {sortedItems.length == 0 ?
             <StyledText>Nothing found.</StyledText> :
