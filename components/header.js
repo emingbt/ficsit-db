@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { StyledLine } from './sharedstyles'
 import Link from 'next/link'
+import SearchIcon from './searchIcon'
 
 export default function Header() {
   return (
@@ -10,7 +11,12 @@ export default function Header() {
           <Logo>FiCS<span style={{ color: '#4DACF0' }}>I</span><span style={{ color: '#D79845' }}>T</span>DB</Logo>
         </Link>
         <StyledNav>
-          <StyledInput placeholder='Search items' />
+          <StyledForm onSubmit={handleSubmit}>
+            <StyledInput id='itemName' placeholder='Search items' />
+            <StyledButton type="submit">
+              <SearchIcon />
+            </StyledButton>
+          </StyledForm>
           <Link href="/">
             <StyledLink>Home</StyledLink>
           </Link>
@@ -58,21 +64,51 @@ const StyledNav = styled.nav`
   font-weight: 500px;
 `
 
+const StyledForm = styled.form`
+  height: 3.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`
+
 const StyledInput = styled.input`
   color: #CCCCCC;
   font-size: 16px;
   background-color: #202125;
   border-width: 1px;
+  border-right-width: 0px;
   border-color: #E5AF07;
-  border-radius: 4px;
-  height: 52px;
-  width: 300px;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  height: 100%;
+  width: 275px;
   box-shadow: none;
   border-style: solid;
   padding-left: 16px;
   outline: none;
   &:focus {
     border-color: #D79845;
+  }
+`
+
+const StyledButton = styled.button`
+  color: #CCCCCC;
+  background-color: #D79845;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0 0.25rem;
+  background-color: #202125;
+  border-width: 1px;
+  border-color: #E5AF07;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-style: solid;
+  outline: none;
+  box-shadow: none;
+  &:hover {
+    background-color: #E5AF07;
+    color: #202125;
   }
 `
 
