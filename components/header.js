@@ -3,13 +3,11 @@ import { StyledLine } from './sharedstyles'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import SearchIcon from './searchIcon'
+import { useState } from 'react'
 
 export default function Header() {
   const router = useRouter()
-
-  const handleSubmit = (e) => {
-    router.push(`/search/${e.target.itemName.value}`)
-  }
+  const [searchValue, setSearchValue] = useState('')
 
   return (
     <Wrapper>
@@ -18,9 +16,12 @@ export default function Header() {
           <Logo>FiCS<span style={{ color: '#4DACF0' }}>I</span><span style={{ color: '#D79845' }}>T</span>DB</Logo>
         </Link>
         <StyledNav>
-          <StyledForm onSubmit={handleSubmit}>
-            <StyledInput id='itemName' placeholder='Search items' />
-            <StyledButton type="submit">
+          <StyledForm>
+            <StyledInput id='itemName' placeholder='Search items' onChange={(e) => setSearchValue(e.target.value)} />
+            <StyledButton onClick={(e) => {
+              e.preventDefault()
+              router.push(`/search?name=${searchValue}`)
+            }}>
               <SearchIcon />
             </StyledButton>
           </StyledForm>
