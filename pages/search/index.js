@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import { getFilteredItemsByName } from '../../lib/api'
 import Link from 'next/link'
 
-export default function Items({ items }) {
+export default function Search({ items }) {
   const sortedItems = Object.values(items).sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
   const router = useRouter()
   const { name } = router.query
