@@ -62,9 +62,9 @@ const StyledContainer = styled.div`
 `
 
 const StyledItemsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(8, auto);
-  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -72,18 +72,19 @@ const StyledItemsContainer = styled.div`
 `
 
 const StyledItem = styled.div`
-  width: 10vw;
-  height: 13vw;
+  width: 11.25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0.5rem;
+  min-width: 7rem;
   cursor: pointer;
 `
 
 const StyledItemImage = styled.div`
   width: 100%;
-  height: 10vw;
+  aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
   background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/'+ props.name +'_256.png'});
   background-position: center;
@@ -97,8 +98,10 @@ const StyledItemName = styled.div`
   justify-content: center;
   width: 100%;
   height: 3vw;
+  min-height: 2.5rem;
   background-color: #43454B;
   padding: 0.25rem;
   color: white;
   text-align: center;
+  font-size: 100%;
 `
