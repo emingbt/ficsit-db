@@ -31,8 +31,8 @@ export default function Items( items ) {
                   <StyledItem>
                     <StyledItemImage
                       src={`/images/items/${e.slug}.png`}
-                      width={250}
-                      height={250}
+                      width={256}
+                      height={256}
                       alt={e.name}
                     />
                     <StyledItemName>
@@ -107,4 +107,5 @@ const StyledItemName = styled.div`
   color: white;
   text-align: center;
   font-size: 100%;
+  z-index: 2;
 `
