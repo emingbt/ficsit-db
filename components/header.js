@@ -21,7 +21,7 @@ export default function Header() {
             <StyledButton onClick={(e) => {
               e.preventDefault()
               router.push(`/search?name=${searchValue}`)
-            }}>
+            }} >
               <SearchIcon />
             </StyledButton>
           </StyledForm>
