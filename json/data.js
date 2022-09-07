@@ -1,4 +1,4 @@
-{
+export const data = {
   "items": {
     "paleberry": {
       "slug": "paleberry",
