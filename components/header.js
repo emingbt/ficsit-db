@@ -20,7 +20,9 @@ export default function Header() {
             <StyledInput id='itemName' placeholder='Search items' onChange={(e) => setSearchValue(e.target.value)} />
             <StyledButton onClick={(e) => {
               e.preventDefault()
-              router.push(`/search?name=${searchValue}`)
+              if (searchValue.length > 0 ) {
+                router.push(`/search?name=${searchValue}`)
+              }
             }} >
               <SearchIcon />
             </StyledButton>
@@ -118,9 +120,10 @@ const StyledButton = styled.button`
     background-color: #E5AF07;
     color: #202125;
   }
+  cursor: pointer;
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled.p`
   &:hover {
     color: #CCCCCC;
     cursor: pointer;
