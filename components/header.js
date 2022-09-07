@@ -23,7 +23,9 @@ export default function Header() {
               if (searchValue.length > 0 ) {
                 router.push(`/search?name=${searchValue}`)
               }
-            }} >
+              }}
+              aria-label="Search"
+              >
               <SearchIcon />
             </StyledButton>
           </StyledForm>
