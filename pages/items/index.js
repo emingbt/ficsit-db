@@ -5,6 +5,7 @@ import { Container, Main, StyledLine, StyledTitle } from '../../components/share
 import styled from 'styled-components'
 import Link from 'next/link'
 import { getAllItems } from '../../lib/api'
+import Image from 'next/image'
 
 export default function Items( items ) {
   const sortedItems = Object.values(items).sort((a,b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
@@ -28,7 +29,12 @@ export default function Items( items ) {
               return (
                 <Link href={`/items/${e.slug}`} key={i} >
                   <StyledItem>
-                    <StyledItemImage name={e.slug} />
+                    <StyledItemImage
+                      src={`/images/items/${e.slug}.png`}
+                      width={250}
+                      height={250}
+                      alt={e.name}
+                    />
                     <StyledItemName>
                       {e.name}
                     </StyledItemName>
@@ -82,14 +88,11 @@ const StyledItem = styled.div`
   cursor: pointer;
 `
 
-const StyledItemImage = styled.div`
+const StyledItemImage = styled(Image)`
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/'+ props.name +'_256.png'});
-  background-position: center;
-  background-size: 90%;
-  background-repeat: no-repeat;
+  padding: 1rem;
 `
 
 const StyledItemName = styled.div`
