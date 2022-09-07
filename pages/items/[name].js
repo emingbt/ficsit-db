@@ -3,11 +3,23 @@ import Header from '../../components/header'
 import Footer from '../../components/footer'
 import styled from 'styled-components'
 import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
-import { getItemByItemName } from '../../lib/api'
+// import { getItemByItemName } from '../../lib/api'
 import Recipe from '../../components/sections/recipe'
+import { getAllProductionRecipes, getItemByName } from '../../utils/database'
 
 
-export default function Item({ item, recipes, usagesAsIngredient }) {
+export default function Item({ item, allRecipes }) {
+  let recipes = []
+  let usagesAsIngredient = []
+  allRecipes.forEach((recipe) => {
+    if(recipe.products.some(e => e.itemClass == item.slug)) {
+      recipes.push(recipe)
+    }
+    else if(recipe.ingredients.some(e => e.itemClass == item.slug)) {
+      usagesAsIngredient.push(recipe)
+    }
+  })
+
   return (
     <Container>
       <Head>
@@ -25,7 +37,7 @@ export default function Item({ item, recipes, usagesAsIngredient }) {
         </StyledTitleSection>
         <StyledContainer>
           <StyledDetailContainer>
-            <StyledImage name={item.slug} />
+            <StyledImage url={item.imageUrl256} />
             <StyledDetail>
               <StyledName>{item.name}</StyledName>
               <StyledText>
@@ -57,10 +69,10 @@ export default function Item({ item, recipes, usagesAsIngredient }) {
 
 export async function getServerSideProps(context) {
   var name = context.query.name
-  const { item, recipes, usagesAsIngredient } = getItemByItemName(name)
-
+  const item = await getItemByName(name)
+  const allRecipes = await getAllProductionRecipes()
   return {
-    props: { item, recipes, usagesAsIngredient }
+    props: { item, allRecipes }
   }
 }
 
@@ -94,7 +106,7 @@ const StyledImage = styled.div`
   height: 100%;
   aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.name + '_256.png'});
+  background-image: url(${props => props.url + '.png'});
   background-position: center;
   background-size: 96%;
   background-repeat: no-repeat;
@@ -107,7 +119,7 @@ const StyledDetail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #202125;
+  background-color: ${props => props.description ? '#202125' : '#101010'};
   text-align: center;
   color: white;
   font-size: ${props => props.description ? '1.25rem' : '1.5rem'};

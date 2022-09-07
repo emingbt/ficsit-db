@@ -16,7 +16,7 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                       <StyledItemQuantity>{i.quantity}x</StyledItemQuantity>
                       <StyledContainer flexDirection="column">
                         <Link href={`/items/${i.itemClass}`}>
-                          <StyledItemImage name={i.itemClass} />
+                          <StyledItemImage url={i.imageUrl64}  />
                         </Link>
                         <StyledUsePerMin>{parseFloat((60 / e.craftTime * i.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
                       </StyledContainer>
@@ -33,7 +33,7 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                         <StyledItemQuantity>{j.quantity}x</StyledItemQuantity>
                         <StyledContainer flexDirection="column">
                           <Link href={`/items/${j.itemClass}`}>
-                            <StyledItemImage name={j.itemClass} />
+                            <StyledItemImage url={j.imageUrl64} />
                           </Link>
                           <StyledUsePerMin>{parseFloat((60 / e.craftTime * j.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
                         </StyledContainer>
@@ -124,7 +124,7 @@ const StyledItemImage = styled.div`
   aspect-ratio: 1 / 1;
   background-color: #202125;
   border-radius: 8px;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.name + '_256.png'});
+  background-image: url(${props => props.url + '.png'});
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
