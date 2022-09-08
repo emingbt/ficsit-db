@@ -6,6 +6,7 @@ import styled from "styled-components"
 import { useRouter } from 'next/router'
 import { getFilteredItemsByName } from '../../lib/api'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Search({ items }) {
   const sortedItems = Object.values(items).sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
@@ -31,15 +32,20 @@ export default function Search({ items }) {
             <StyledItemsContainer>
               {sortedItems.map((e, i) => {
                 return (
-              <Link href={`/items/${e.slug}`} key={i} >
-                <StyledItem>
-                  <StyledItemImage name={e.slug} />
-                  <StyledItemName>
-                    {e.name}
-                  </StyledItemName>
-                </StyledItem>
-              </Link>
-              )
+                  <Link href={`/items/${e.slug}`} key={i} >
+                    <StyledItem>
+                      <StyledItemImage
+                        src={`/images/items/${e.slug}.png`}
+                        width={256}
+                        height={256}
+                        alt={e.name}
+                      />
+                      <StyledItemName>
+                        {e.name}
+                      </StyledItemName>
+                    </StyledItem>
+                  </Link>
+                )
               })}
             </StyledItemsContainer>
           }
@@ -103,14 +109,11 @@ const StyledItem = styled.div`
   cursor: pointer;
 `
 
-const StyledItemImage = styled.div`
+const StyledItemImage = styled(Image)`
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/'+ props.name +'_256.png'});
-  background-position: center;
-  background-size: 90%;
-  background-repeat: no-repeat;
+  padding: 1rem;
 `
 
 const StyledItemName = styled.div`
