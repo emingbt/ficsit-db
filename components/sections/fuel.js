@@ -1,5 +1,6 @@
 import Link from "next/link"
 import styled from 'styled-components'
+import { StyledImage } from "../sharedstyles"
 
 export default function Fuel({ fuels, operatingRate }) {
   return fuels?.length > 0 && (
@@ -13,7 +14,13 @@ export default function Fuel({ fuels, operatingRate }) {
                 <StyledItem>
                   <StyledContainer flexDirection="column">
                     <Link href={`/items/${e.fuel.itemClass}`}>
-                      <StyledItemImage name={e.fuel.itemClass} />
+                      <StyledImage
+                        src={`/images/items/${e.fuel.itemClass}.png`}
+                        width={80}
+                        height={80}
+                        alt={e.fuel.itemClass}
+                        quality={40}
+                      />
                     </Link>
                     <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.fuel.rate).toFixed(3))}/min</StyledUsePerMin>
                   </StyledContainer>
@@ -23,7 +30,13 @@ export default function Fuel({ fuels, operatingRate }) {
                   <StyledItem>
                     <StyledContainer flexDirection="column">
                       <Link href={`/items/${e.supplement.itemClass}`}>
-                        <StyledItemImage name={e.supplement.itemClass} />
+                        <StyledImage
+                          src={`/images/items/${e.supplement.itemClass}.png`}
+                          width={80}
+                          height={80}
+                          alt={e.supplement.itemClass}
+                          quality={40}
+                        />
                       </Link>
                       <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.supplement.rate).toFixed(3))}/min</StyledUsePerMin>
                     </StyledContainer>
@@ -37,7 +50,13 @@ export default function Fuel({ fuels, operatingRate }) {
                     <StyledItem product>
                       <StyledContainer flexDirection="column" style={{ maxWidth: '80px' }}>
                         <Link href={`/items/${e.byproduct.itemClass}`}>
-                          <StyledItemImage name={e.byproduct.itemClass} />
+                          <StyledImage
+                            src={`/images/items/${e.byproduct.itemClass}.png`}
+                            width={80}
+                            height={80}
+                            alt={e.byproduct.itemClass}
+                            quality={40}
+                          />
                         </Link>
                         <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.byproduct.rate).toFixed(3))}/min</StyledUsePerMin>
                       </StyledContainer>

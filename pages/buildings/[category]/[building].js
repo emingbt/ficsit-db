@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
+import Link from 'next/link'
+import Image from 'next/image'
 import styled from 'styled-components'
-import { Container, Main, StyledLine, StyledTitle } from '../../../components/sharedstyles'
+import { Container, Main, StyledLine, StyledTitle, StyledImageContainer, StyledImage } from '../../../components/sharedstyles'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { getBuildableByName, getRecipesByBuildingName } from '../../../lib/api'
-import Link from 'next/link'
-import { useState } from 'react'
+
 import Recipe from '../../../components/sections/recipe'
 import ExtractableResources from '../../../components/sections/extractableResources'
 import Fuel from '../../../components/sections/fuel'
@@ -42,7 +44,17 @@ export default function Building({ buildable, recipes }) {
         <StyledContainer>
           <StyledSection>
             <StyledDetailContainer>
-              <StyledImage name={buildable.slug} />
+              <StyledImageContainer>
+                <Image
+                  name={buildable.slug}
+                  src={`/images/buildables/${buildable.slug}.png`}
+                  width={250}
+                  height={250}
+                  priority
+                  quality={100}
+                  alt={buildable.name}
+                />
+              </StyledImageContainer>
               <StyledDetail>
                 <StyledName>{buildable.name}</StyledName>
                 <StyledCostTitle>Cost :</StyledCostTitle>
@@ -52,7 +64,13 @@ export default function Building({ buildable, recipes }) {
                       <StyledCostItem key={e.itemClass}>
                         <StyledText>{e.quantity}x</StyledText>
                         <Link href={`/items/${e.itemClass}`}>
-                          <StyledCostItemImage item={e.itemClass} />
+                          <StyledImage
+                            src={`/images/items/${e.itemClass}.png`}
+                            width={64}
+                            height={64}
+                            alt={e.itemClass}
+                            quality={40}
+                          />
                         </Link>
                       </StyledCostItem>
                     )
@@ -103,7 +121,7 @@ export default function Building({ buildable, recipes }) {
               </StyledExtractionContainer>
             }
           </StyledSection>
-          <Recipe recipes={recipes} title={"Recipes"} clockspeed={clockspeed}/>
+          <Recipe recipes={recipes} title={"Recipes"} clockspeed={clockspeed} />
           <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
           <Fuel fuels={buildable.meta?.generatorInfo?.fuels} operatingRate={operatingRate} />
         </StyledContainer>
@@ -157,16 +175,6 @@ const StyledDetailContainer = styled.section`
   height: 250px;
 `
 
-const StyledImage = styled.div`
-  height: 100%;
-  aspect-ratio: 1 / 1;
-  background-color: #9BA3A9;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.name + '_256.png'});
-  background-position: center;
-  background-size: 96%;
-  background-repeat: no-repeat;
-`
-
 const StyledDetail = styled.div`
   height: 100%;
   width: calc(50% - 125px);
@@ -187,7 +195,7 @@ const StyledName = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: 101010;
+  background-color: #101010;
   color: white;
   text-align: center;
   font-size: 2rem;
@@ -221,20 +229,7 @@ const StyledCostItem = styled.div`
 `
 
 const StyledText = styled.p`
-  margin: 0;
-`
-
-const StyledCostItemImage = styled.div`
-  width: 60px;
-  aspect-ratio: 1 / 1;
-  background-color: #202125;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.item + '_256.png'});
-  background-position: center;
-  background-size: 96%;
-  background-repeat: no-repeat;
-  border-radius: 0.5rem;
   margin: 0 0.25rem;
-  cursor: pointer;
 `
 
 const StyledConsumptionContainer = styled.div`
@@ -265,7 +260,7 @@ const StyledVerticalLine = styled.div`
   background-color: #F1C700;
 `
 
-const StyledClockspeedContainer = styled.div`
+const StyledClockspeedContainer = styled.label`
   height: 100%;
   width: calc(100% - 250px);
   display: flex;
@@ -313,7 +308,8 @@ const StyledClockspeedText = styled.div`
   width: 5%;
   text-align: right;
   cursor: pointer;
-  color: ${props => props.overclocked ? '#FFE9a5' : '#141518'};
+  color: ${props => props.overclocked ? '#fffeee' : '#141518'};
+  font-style: ${props => props.overclocked ? 'normal' : 'italic'};
   margin-left: 15%;
 `
 

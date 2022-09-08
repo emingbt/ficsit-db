@@ -44,7 +44,12 @@ export default function Buildings({ buildings }) {
               return (
                 <Link href={`/buildings/${e.toLowerCase()}`} key={e}>
                   <StyledCategory selected={router.query.category == e.toLowerCase()}>
-                    <Image src={`/icons/ResIcon_${e}.png`} width={64} height={64} placeholder={e.toLowerCase()} alt={e.toLowerCase()} />
+                    <Image
+                      src={`/icons/ResIcon_${e}.png`}
+                      width={64}
+                      height={64}
+                      alt={e.toLowerCase()}
+                    />
                     <div>{e}</div>
                   </StyledCategory>
                 </Link>
@@ -63,7 +68,14 @@ export default function Buildings({ buildings }) {
                     return (
                       <Link href={`/buildings/${category}/${j.slug}`} key={j.slug}>
                         <StyledBuilding key={j.slug}>
-                          <StyledBuildingImage name={j.slug} />
+                          <StyledBuildingImage>
+                            <Image
+                              src={`/images/buildables/${j.slug}.png`}
+                              width={256}
+                              height={256}
+                              alt={j.name}
+                            />
+                          </StyledBuildingImage>
                           <StyledBuildingName>{j.name}</StyledBuildingName>
                         </StyledBuilding>
                       </Link>
@@ -106,14 +118,14 @@ const StyledCategoiresContainer = styled.div`
 `
 
 const StyledCategory = styled.div`
-  height: 120px;
+  width: 120px;
   aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   background-color: ${props => props.selected ? "#D79845" : "#43454B"};
-  color: white;
+  color: #eeeeee;
   margin: 0.5rem 0.25rem;
   cursor: pointer;
   :hover {
@@ -169,10 +181,7 @@ const StyledBuildingImage = styled.div`
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: #43454B;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.name + '_256.png'});
-  background-size: 90%;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 0.25rem;
 `
 
 const StyledBuildingName = styled.div`
