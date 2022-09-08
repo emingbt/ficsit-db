@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
             rel="preload"
             href="/fonts/INDUSTRIAL-BRANDING.ttf"
             as="font"
-            type="font/ttf"
+            crossOrigin='anonymous'
           />
         </Head>
         <body>
