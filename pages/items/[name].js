@@ -26,16 +26,16 @@ export default function Item({ item, recipes, usagesAsIngredient }) {
         </StyledTitleSection>
         <StyledContainer>
           <StyledDetailContainer>
-              <StyledImageContainer>
-                <Image
-                  name={item.slug}
-                  src={`/images/items/${item.slug}.png`}
-                  width={250}
-                  height={250}
-                  priority
-                  quality={100}
-                />
-              </StyledImageContainer>
+            <StyledImageContainer>
+              <Image
+                name={item.slug}
+                src={`/images/items/${item.slug}.png`}
+                width={250}
+                height={250}
+                priority
+                quality={100}
+              />
+            </StyledImageContainer>
             <StyledDetail>
               <StyledName>{item.name}</StyledName>
               <StyledText>
@@ -55,8 +55,8 @@ export default function Item({ item, recipes, usagesAsIngredient }) {
               {item.description}
             </StyledDetail>
           </StyledDetailContainer>
-          <Recipe recipes={recipes} title={"Recipes"}/>
-          <Recipe recipes={usagesAsIngredient} title={"Usages as Ingredient"}/>
+          <Recipe recipes={recipes} title={"Recipes"} />
+          <Recipe recipes={usagesAsIngredient} title={"Usages as Ingredient"} />
         </StyledContainer>
       </Main>
 
