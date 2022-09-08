@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styled from "styled-components"
-import Image from "next/image"
+import { StyledImage } from "../sharedstyles"
 
 export default function Recipe({ recipes, title, clockspeed = 100 }) {
   return recipes.length > 0 && (
@@ -136,15 +136,6 @@ const StyledItem = styled.div`
 const StyledItemQuantity = styled.div`
   font-size: 2rem;
   margin-top: 1rem;
-`
-
-const StyledImage = styled(Image)`
-  height: 80px;
-  aspect-ratio: 1 / 1;
-  background-color: #202125;
-  border-radius: 8px;
-  padding: 0.25rem;
-  cursor: pointer;
 `
 
 const StyledUsePerMin = styled.p`
