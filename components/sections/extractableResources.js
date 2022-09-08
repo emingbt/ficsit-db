@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import React from 'react'
 import styled from 'styled-components'
+import { StyledImage } from '../sharedstyles'
+import Image from 'next/image'
 
 export default function ExtractableResources({ extractableResources }) {
   return extractableResources?.length > 0 && (
@@ -11,7 +12,14 @@ export default function ExtractableResources({ extractableResources }) {
           return (
             <Link href={`/items/${e.split(' ').join('-').toLowerCase()}`} key={e}>
               <StyledResource>
-                <StyledResourceImage name={e.split(' ').join('-').toLowerCase()} />
+                <StyledResourceImage>
+                  <Image
+                    src={`/images/items/${e.split(' ').join('-').toLowerCase()}.png`}
+                    width={120}
+                    height={120}
+                    alt={e}
+                  />
+                </StyledResourceImage>
                 <StyledResourceName>{e}</StyledResourceName>
               </StyledResource>
             </Link>
@@ -68,10 +76,7 @@ const StyledResourceImage = styled.div`
   width: 120px;
   aspect-ratio: 1 / 1;
   background-color: #43454B;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.name + '_256.png'});
-  background-position: center;
-  background-size: 90%;
-  background-repeat: no-repeat;
+  padding: 0.25rem;
 `
 
 const StyledResourceName = styled.div`
