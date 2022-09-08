@@ -1,13 +1,14 @@
 import Head from 'next/head'
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
+import Link from 'next/link'
+import Image from 'next/image'
 import styled from 'styled-components'
-import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../../components/sharedstyles'
+import { Container, Main, StyledLine, StyledTitle, StyledImageContainer, StyledImage } from '../../../components/sharedstyles'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { getBuildableByName, getRecipesByBuildingName } from '../../../lib/api'
-import Link from 'next/link'
-import { useState } from 'react'
-import Image from 'next/image'
+
 import Recipe from '../../../components/sections/recipe'
 import ExtractableResources from '../../../components/sections/extractableResources'
 import Fuel from '../../../components/sections/fuel'
@@ -62,7 +63,13 @@ export default function Building({ buildable, recipes }) {
                       <StyledCostItem key={e.itemClass}>
                         <StyledText>{e.quantity}x</StyledText>
                         <Link href={`/items/${e.itemClass}`}>
-                          <StyledCostItemImage item={e.itemClass} />
+                          <StyledImage
+                            src={`/images/items/${e.itemClass}.png`}
+                            width={64}
+                            height={64}
+                            alt={e.itemClass}
+                            quality={40}
+                          />
                         </Link>
                       </StyledCostItem>
                     )
@@ -221,20 +228,7 @@ const StyledCostItem = styled.div`
 `
 
 const StyledText = styled.p`
-  margin: 0;
-`
-
-const StyledCostItemImage = styled.div`
-  width: 60px;
-  aspect-ratio: 1 / 1;
-  background-color: #202125;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.item + '_256.png'});
-  background-position: center;
-  background-size: 96%;
-  background-repeat: no-repeat;
-  border-radius: 0.5rem;
   margin: 0 0.25rem;
-  cursor: pointer;
 `
 
 const StyledConsumptionContainer = styled.div`
