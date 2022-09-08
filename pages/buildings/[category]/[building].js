@@ -52,6 +52,7 @@ export default function Building({ buildable, recipes }) {
                   height={250}
                   priority
                   quality={100}
+                  alt={buildable.name}
                 />
               </StyledImageContainer>
               <StyledDetail>

@@ -34,6 +34,7 @@ export default function Item({ item, recipes, usagesAsIngredient }) {
                 height={250}
                 priority
                 quality={100}
+                alt={item.name}
               />
             </StyledImageContainer>
             <StyledDetail>

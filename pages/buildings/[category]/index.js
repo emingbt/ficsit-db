@@ -44,7 +44,12 @@ export default function Buildings({ buildings }) {
               return (
                 <Link href={`/buildings/${e.toLowerCase()}`} key={e}>
                   <StyledCategory selected={router.query.category == e.toLowerCase()}>
-                    <Image src={`/icons/ResIcon_${e}.png`} width={64} height={64} placeholder={e.toLowerCase()} alt={e.toLowerCase()} />
+                    <Image
+                      src={`/icons/ResIcon_${e}.png`}
+                      width={64}
+                      height={64}
+                      alt={e.toLowerCase()}
+                    />
                     <div>{e}</div>
                   </StyledCategory>
                 </Link>
