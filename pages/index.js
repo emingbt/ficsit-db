@@ -4,6 +4,7 @@ import Header from '../components/header'
 import { Container, Main } from '../components/sharedstyles'
 import styled from 'styled-components'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import bannerImg from '/public/images/banner.jpeg'
 import itemsBg from '/public/images/items-bg.jpg'
@@ -22,7 +23,14 @@ export default function Home() {
 
       <Main>
         <StyledBannerSection>
-          <StyledBanner image={bannerImg} />
+          <StyledBannerContainer>
+            <StyledBackgroundImage
+              src={bannerImg}
+              layout="fill"
+              objectFit='cover'
+              alt="Banner"
+            />
+          </StyledBannerContainer>
           <StyledBannerText>
             Improve your production line
           </StyledBannerText>
@@ -30,13 +38,27 @@ export default function Home() {
         <StyledNavSection>
           <Link href="/items">
             <StyledNavItem>
-              <StyledNavImage image={itemsBg} />
+              <StyledNavImage>
+                <StyledBackgroundImage
+                  src={itemsBg}
+                  layout="fill"
+                  objectFit='cover'
+                  alt="Items"
+                />
+              </StyledNavImage>
               <StyledNavText>Items</StyledNavText>
             </StyledNavItem>
           </Link>
           <Link href="/buildings/production">
             <StyledNavItem>
-              <StyledNavImage image={buildingBg} />
+              <StyledNavImage>
+                <StyledBackgroundImage
+                  src={buildingBg}
+                  layout="fill"
+                  objectFit='cover'
+                  alt="Buildings"
+                />
+              </StyledNavImage>
               <StyledNavText>Buildings</StyledNavText>
             </StyledNavItem>
           </Link>
@@ -58,14 +80,17 @@ const StyledBannerSection = styled.section`
   width: 100%;
 `
 
-const StyledBanner = styled.div`
+const StyledBannerContainer = styled.div`
   height: 40vh;
   width: 80%;
-  background-image: url(${props => props.image.src});
-  background-position: center;
-  background-size: cover;
-  border-radius: 16px;
-  background-color: #141518;
+  position: relative;
+  background-color: #224d61;
+  border-radius: 0.5rem;
+  object-position: center;
+`
+
+const StyledBackgroundImage = styled(Image)`
+  border-radius: 0.5rem;
 `
 
 const StyledBannerText = styled.div`
@@ -77,12 +102,13 @@ const StyledBannerText = styled.div`
   background-color: #43454B;
   margin-top: -48px;
   border-width: 2px;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   border-color: #F2C800;
   border-style: solid;
   text-align: center;
   color: white;
   font-size: 2.5rem;
+  z-index: 4;
 `
 
 const StyledNavSection = styled.nav`
@@ -109,12 +135,10 @@ const StyledNavItem = styled.div`
 const StyledNavImage = styled.div`
   height: 48vh;
   width: 100%;
+  position: relative;
   border-radius: 8px;
-  background-image: url(${(props) => props.image.src});
-  background-size: cover;
-  background-position: center;
   opacity: 0.8;
-  background-color: #141518;
+  background-color: #be7c37;
 `
 
 const StyledNavText = styled.div({
