@@ -1,5 +1,6 @@
 import Link from "next/link"
 import styled from "styled-components"
+import Image from "next/image"
 
 export default function Recipe({ recipes, title, clockspeed = 100 }) {
   return recipes.length > 0 && (
@@ -16,7 +17,13 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                       <StyledItemQuantity>{i.quantity}x</StyledItemQuantity>
                       <StyledContainer flexDirection="column">
                         <Link href={`/items/${i.itemClass}`}>
-                          <StyledItemImage name={i.itemClass} />
+                          <StyledImage
+                            src={`/images/items/${i.itemClass}.png`}
+                            width={80}
+                            height={80}
+                            alt={i.itemClass}
+                            quality={40}
+                          />
                         </Link>
                         <StyledUsePerMin>{parseFloat((60 / e.craftTime * i.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
                       </StyledContainer>
@@ -33,7 +40,13 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                         <StyledItemQuantity>{j.quantity}x</StyledItemQuantity>
                         <StyledContainer flexDirection="column">
                           <Link href={`/items/${j.itemClass}`}>
-                            <StyledItemImage name={j.itemClass} />
+                            <StyledImage
+                              src={`/images/items/${j.itemClass}.png`}
+                              width={80}
+                              height={80}
+                              alt={j.itemClass}
+                              quality={40}
+                            />
                           </Link>
                           <StyledUsePerMin>{parseFloat((60 / e.craftTime * j.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
                         </StyledContainer>
@@ -44,7 +57,13 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                 <StyledVerticalLine isAlternate={e.isAlternate} />
                 <StyledBuildingContainer>
                   <Link href={`/buildings/production/${e.producedIn}`}>
-                    <StyledBuildingImage producedIn={e.producedIn} />
+                    <StyledImage
+                      src={`/images/buildables/${e.producedIn}.png`}
+                      width={80}
+                      height={80}
+                      alt={e.producedIn}
+                      quality={40}
+                    />
                   </Link>
                   <StyledCraftTime>{parseFloat((e.craftTime / clockspeed * 100).toFixed(3))}sn</StyledCraftTime>
                 </StyledBuildingContainer>
@@ -119,15 +138,12 @@ const StyledItemQuantity = styled.div`
   margin-top: 1rem;
 `
 
-const StyledItemImage = styled.div`
+const StyledImage = styled(Image)`
   height: 80px;
   aspect-ratio: 1 / 1;
   background-color: #202125;
   border-radius: 8px;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.name + '_256.png'});
-  background-size: 90%;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 0.25rem;
   cursor: pointer;
 `
 
