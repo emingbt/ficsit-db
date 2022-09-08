@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
 import styled from 'styled-components'
-import { Container, Main, StyledLine, StyledTitle } from '../../../components/sharedstyles'
+import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../../components/sharedstyles'
 import { useRouter } from 'next/router'
 import { getBuildableByName, getRecipesByBuildingName } from '../../../lib/api'
 import Link from 'next/link'
@@ -165,13 +165,6 @@ const StyledDetailContainer = styled.section`
   align-items: center;
   width: 100%;
   height: 250px;
-`
-
-const StyledImageContainer = styled.div`
-  height: 100%;
-  aspect-ratio: 1 / 1;
-  background-color: #9BA3A9;
-  padding: 0.25rem;
 `
 
 const StyledDetail = styled.div`
