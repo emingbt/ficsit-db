@@ -43,12 +43,16 @@ export default function Building({ buildable, recipes }) {
         <StyledContainer>
           <StyledSection>
             <StyledDetailContainer>
-              <StyledImage
-                name={buildable.slug}
-                src={`/images/buildables/${buildable.slug}.png`}
-                width={256}
-                height={256}
-              />
+              <StyledImageContainer>
+                <Image
+                  name={buildable.slug}
+                  src={`/images/buildables/${buildable.slug}.png`}
+                  width={250}
+                  height={250}
+                  priority
+                  quality={100}
+                />
+              </StyledImageContainer>
               <StyledDetail>
                 <StyledName>{buildable.name}</StyledName>
                 <StyledCostTitle>Cost :</StyledCostTitle>
@@ -163,10 +167,11 @@ const StyledDetailContainer = styled.section`
   height: 250px;
 `
 
-const StyledImage = styled(Image)`
+const StyledImageContainer = styled.div`
   height: 100%;
   aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
+  padding: 0.25rem;
 `
 
 const StyledDetail = styled.div`

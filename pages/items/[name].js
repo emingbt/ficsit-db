@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import styled from 'styled-components'
+import Image from 'next/image'
 import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import { getItemByItemName } from '../../lib/api'
 import Recipe from '../../components/sections/recipe'
@@ -25,7 +26,16 @@ export default function Item({ item, recipes, usagesAsIngredient }) {
         </StyledTitleSection>
         <StyledContainer>
           <StyledDetailContainer>
-            <StyledImage name={item.slug} />
+              <StyledImageContainer>
+                <Image
+                  name={item.slug}
+                  src={`/images/items/${item.slug}.png`}
+                  width={250}
+                  height={250}
+                  priority
+                  quality={100}
+                />
+              </StyledImageContainer>
             <StyledDetail>
               <StyledName>{item.name}</StyledName>
               <StyledText>
@@ -90,14 +100,11 @@ const StyledDetailContainer = styled.section`
   height: 250px;
 `
 
-const StyledImage = styled.div`
+const StyledImageContainer = styled.div`
   height: 100%;
   aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.name + '_256.png'});
-  background-position: center;
-  background-size: 96%;
-  background-repeat: no-repeat;
+  padding: 0.25rem;
 `
 
 const StyledDetail = styled.div`
