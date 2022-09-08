@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: Industrial Branding;
     src: url('/fonts/INDUSTRIAL-BRANDING.ttf') format('truetype');
-    font-display: swap;
+    font-display: optional;
   }
 
   @font-face {
