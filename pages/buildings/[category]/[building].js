@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 import { getBuildableByName, getRecipesByBuildingName } from '../../../lib/api'
 import Link from 'next/link'
 import { useState } from 'react'
+import Image from 'next/image'
 import Recipe from '../../../components/sections/recipe'
 import ExtractableResources from '../../../components/sections/extractableResources'
 import Fuel from '../../../components/sections/fuel'
@@ -42,7 +43,12 @@ export default function Building({ buildable, recipes }) {
         <StyledContainer>
           <StyledSection>
             <StyledDetailContainer>
-              <StyledImage name={buildable.slug} />
+              <StyledImage
+                name={buildable.slug}
+                src={`/images/buildables/${buildable.slug}.png`}
+                width={256}
+                height={256}
+              />
               <StyledDetail>
                 <StyledName>{buildable.name}</StyledName>
                 <StyledCostTitle>Cost :</StyledCostTitle>
@@ -103,7 +109,7 @@ export default function Building({ buildable, recipes }) {
               </StyledExtractionContainer>
             }
           </StyledSection>
-          <Recipe recipes={recipes} title={"Recipes"} clockspeed={clockspeed}/>
+          <Recipe recipes={recipes} title={"Recipes"} clockspeed={clockspeed} />
           <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
           <Fuel fuels={buildable.meta?.generatorInfo?.fuels} operatingRate={operatingRate} />
         </StyledContainer>
@@ -157,14 +163,10 @@ const StyledDetailContainer = styled.section`
   height: 250px;
 `
 
-const StyledImage = styled.div`
+const StyledImage = styled(Image)`
   height: 100%;
   aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.name + '_256.png'});
-  background-position: center;
-  background-size: 96%;
-  background-repeat: no-repeat;
 `
 
 const StyledDetail = styled.div`
