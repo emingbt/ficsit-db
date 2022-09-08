@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Image from "next/image"
 
 const Container = styled.div`
   display: flex;
@@ -35,4 +36,20 @@ const StyledTitle = styled.div`
   font-weight: 400;
 `
 
-export { Container, Main, StyledLine, StyledTitle }
+const StyledImageContainer = styled.div`
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #9BA3A9;
+  padding: 0.25rem;
+`
+
+const StyledImage = styled(Image)`
+  height: 80px;
+  aspect-ratio: 1 / 1;
+  background-color: #202125;
+  border-radius: 8px;
+  padding: 0.25rem;
+  cursor: pointer;
+`
+
+export { Container, Main, StyledLine, StyledTitle, StyledImageContainer, StyledImage }
