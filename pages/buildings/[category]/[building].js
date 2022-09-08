@@ -260,7 +260,7 @@ const StyledVerticalLine = styled.div`
   background-color: #F1C700;
 `
 
-const StyledClockspeedContainer = styled.div`
+const StyledClockspeedContainer = styled.label`
   height: 100%;
   width: calc(100% - 250px);
   display: flex;
@@ -308,7 +308,8 @@ const StyledClockspeedText = styled.div`
   width: 5%;
   text-align: right;
   cursor: pointer;
-  color: ${props => props.overclocked ? '#FFE9a5' : '#141518'};
+  color: ${props => props.overclocked ? '#fffeee' : '#141518'};
+  font-style: ${props => props.overclocked ? 'normal' : 'italic'};
   margin-left: 15%;
 `
 
