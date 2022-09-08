@@ -194,7 +194,7 @@ const StyledName = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: 101010;
+  background-color: #101010;
   color: white;
   text-align: center;
   font-size: 2rem;
