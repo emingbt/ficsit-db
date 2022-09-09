@@ -1,4 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
+import Head from 'next/head'
+import Footer from '../components/footer'
+import Header from '../components/header'
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -34,8 +37,16 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>FICSIT DB</title>
+        <meta name="description" content="Satisfactory Encyclopedia" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Header />
       <GlobalStyle />
       <Component {...pageProps} />
+      <Footer />
     </>
   )
 }
