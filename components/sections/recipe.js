@@ -160,18 +160,6 @@ const StyledBuildingContainer = styled.div`
   margin-top: 1rem;
 `
 
-const StyledBuildingImage = styled.div`
-  height: 80px;
-  aspect-ratio: 1 / 1;
-  background-color: #202125;
-  border-radius: 8px;
-  background-image: url(${props => 'https://u6.satisfactorytools.com/assets/images/items/' + props.producedIn + '_256.png'});
-  background-size: 90%;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-`
-
 const StyledCraftTime = styled.div`
   font-size: 1.25rem;
   margin: 0.5rem;
