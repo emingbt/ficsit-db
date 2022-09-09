@@ -87,7 +87,7 @@ const StyledBannerText = styled.div`
   align-items: center;
   padding: 0.25rem 2rem ;
   background-color: #43454B;
-  margin-top: -48px;
+  margin-top: -2.5rem;
   border-width: 2px;
   border-radius: 0.5rem;
   border-color: #F2C800;
@@ -134,15 +134,15 @@ const StyledNavText = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -32;
+  margin-top: -2rem;
   background-color: #43454B;
-  border-width: 3;
-  border-radius: 8;
+  border-width: 3px;
+  border-radius: 8px;
   border-color: #F2C800;
   border-style: solid;
   text-align: center;
   vertical-align: center;
   color: white;
-  font-size: 32;
+  font-size: 2rem;
   z-index: 1;
 `
