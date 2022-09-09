@@ -141,21 +141,21 @@ const StyledNavImage = styled.div`
   background-color: #be7c37;
 `
 
-const StyledNavText = styled.div({
-  height: "8vh",
-  width: '50%',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  marginTop: -32,
-  backgroundColor: '#43454B',
-  borderWidth: 3,
-  borderRadius: 8,
-  borderColor: "#F2C800",
-  borderStyle: 'solid',
-  textAlign: 'center',
-  verticalAlign: 'center',
-  color: 'white',
-  fontSize: 32,
-  zIndex: 1
-})
+const StyledNavText = styled.div`
+  height: 8vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -32;
+  background-color: #43454B;
+  border-width: 3;
+  border-radius: 8;
+  border-color: #F2C800;
+  border-style: solid;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+  font-size: 32;
+  z-index: 1;
+`
