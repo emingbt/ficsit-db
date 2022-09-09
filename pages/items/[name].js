@@ -1,6 +1,3 @@
-import Head from 'next/head'
-import Header from '../../components/header'
-import Footer from '../../components/footer'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../components/sharedstyles'

@@ -1,6 +1,3 @@
-import Head from 'next/head'
-import Footer from '../components/footer'
-import Header from '../components/header'
 import { Container, Main } from '../components/sharedstyles'
 import styled from 'styled-components'
 import Link from 'next/link'
