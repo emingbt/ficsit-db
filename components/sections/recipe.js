@@ -14,8 +14,8 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                 {e.ingredients.map((i) => {
                   return (
                     <StyledItem key={i.itemClass}>
-                      <StyledItemQuantity>{i.quantity}x</StyledItemQuantity>
-                      <StyledContainer flexDirection="column">
+                      <StyledItemHeader>
+                        <StyledItemQuantity>{i.quantity}x</StyledItemQuantity>
                         <Link href={`/items/${i.itemClass}`}>
                           <StyledImage
                             src={`/images/items/${i.itemClass}.png`}
@@ -25,20 +25,20 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                             quality={40}
                           />
                         </Link>
-                        <StyledUsePerMin>{parseFloat((60 / e.craftTime * i.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
-                      </StyledContainer>
+                      </StyledItemHeader>
+                      <StyledUsePerMin>{parseFloat((60 / e.craftTime * i.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
                     </StyledItem>
                   )
                 })}
               </StyledContainer>
               <StyledContainer>
                 <StyledVerticalLine isAlternate={e.isAlternate} />
-                <StyledContainer flexDirection="row">
+                <StyledContainer product flexDirection="row">
                   {e.products.map((j) => {
                     return (
-                      <StyledItem product key={j.itemClass}>
-                        <StyledItemQuantity>{j.quantity}x</StyledItemQuantity>
-                        <StyledContainer flexDirection="column">
+                      <StyledItem key={j.itemClass}>
+                        <StyledItemHeader>
+                          <StyledItemQuantity>{j.quantity}x</StyledItemQuantity>
                           <Link href={`/items/${j.itemClass}`}>
                             <StyledImage
                               src={`/images/items/${j.itemClass}.png`}
@@ -48,8 +48,8 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                               quality={40}
                             />
                           </Link>
-                          <StyledUsePerMin>{parseFloat((60 / e.craftTime * j.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
-                        </StyledContainer>
+                        </StyledItemHeader>
+                        <StyledUsePerMin>{parseFloat((60 / e.craftTime * j.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
                       </StyledItem>
                     )
                   })}
@@ -121,26 +121,39 @@ const StyledContainer = styled.div`
   flex-direction: ${props => props.flexDirection};
   justify-content: center;
   align-items: center;
+  padding-left: 0.5rem;
+  ${props => props.product && 'margin-right: 1.5rem;'}
 `
 
 const StyledItem = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 0 1rem;
-  min-width: 180px;
+  flex-direction: column;
+  justify-content: end;
+  padding: 0 1rem 0 0;
+  min-width: 160px;
   margin-top: 1rem;
-  ${props => props.product && 'margin-right: 2rem;'}
+`
+
+const StyledItemHeader = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
 `
 
 const StyledItemQuantity = styled.div`
   font-size: 2rem;
-  margin-top: 1rem;
+  margin-right: 0.5rem;
 `
 
 const StyledUsePerMin = styled.p`
   font-size: 1.25rem;
-  margin: 0.5rem;
+  margin: 0;
+  margin-top: 0.5rem;
+  width: 80px;
+  text-align: center;
+  align-self: end;
 `
 
 const StyledVerticalLine = styled.div`
