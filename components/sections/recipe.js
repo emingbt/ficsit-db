@@ -143,7 +143,8 @@ const StyledItemHeader = styled.div`
 `
 
 const StyledItemQuantity = styled.div`
-  font-size: 2rem;
+  max-width: 3.5rem;
+  font-size: 1.75rem;
   margin-right: 0.5rem;
 `
 
