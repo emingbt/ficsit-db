@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import Head from 'next/head'
 import Footer from '../components/footer'
 import Header from '../components/header'
-import Script from 'next/script'
+import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -38,20 +38,6 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-JSTXP7VT57');
-          `}
-      </Script>
-
       <Head>
         <title>FICSIT DB</title>
         <meta name="description" content="Satisfactory Encyclopedia" />
@@ -60,6 +46,7 @@ function MyApp({ Component, pageProps }) {
 
       <Header />
       <GlobalStyle />
+      <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
       <Footer />
     </>
