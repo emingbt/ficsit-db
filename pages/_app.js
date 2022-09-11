@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
 
       <Head>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-V0ENMPG75B"
+          src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }) {
             function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-V0ENMPG75B');
+            gtag('config', 'G-JSTXP7VT57');
           `}
         </Script>
         <title>FICSIT DB</title>
