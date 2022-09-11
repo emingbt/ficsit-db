@@ -38,22 +38,21 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-
-      <Head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', 'G-JSTXP7VT57');
           `}
-        </Script>
+      </Script>
+
+      <Head>
         <title>FICSIT DB</title>
         <meta name="description" content="Satisfactory Encyclopedia" />
         <link rel="icon" href="/favicon.ico" />
