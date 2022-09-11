@@ -38,19 +38,18 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-V0ENMPG75B"
+        src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-          gtag('config', 'G-V0ENMPG75B');
-        `}
+            gtag('config', 'G-JSTXP7VT57');
+          `}
       </Script>
 
       <Head>
