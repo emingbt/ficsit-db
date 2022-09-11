@@ -39,21 +39,21 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-V0ENMPG75B"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-V0ENMPG75B');
-        `}
-      </Script>
 
       <Head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-V0ENMPG75B"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-V0ENMPG75B');
+          `}
+        </Script>
         <title>FICSIT DB</title>
         <meta name="description" content="Satisfactory Encyclopedia" />
         <link rel="icon" href="/favicon.ico" />
