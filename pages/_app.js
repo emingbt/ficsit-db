@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import Head from 'next/head'
 import Footer from '../components/footer'
 import Header from '../components/header'
+import Script from 'next/script'
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -37,6 +38,21 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-V0ENMPG75B"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-V0ENMPG75B');
+        `}
+      </Script>
+
       <Head>
         <title>FICSIT DB</title>
         <meta name="description" content="Satisfactory Encyclopedia" />
