@@ -24,13 +24,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: Industrial Branding;
-    src: url('/fonts/INDUSTRIAL-BRANDING.ttf') format('truetype');
-    font-display: optional;
+    font-family: "Industrial Branding";
+    src: url('/fonts/INDUSTRIAL-BRANDING.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
-    font-family: Roboto;
+    font-family: "Roboto";
     src: url("https://use.typekit.net/let8ssp.css") format("css")
   }
 `
