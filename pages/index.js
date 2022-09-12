@@ -18,6 +18,7 @@ export default function Home() {
               layout="fill"
               objectFit='cover'
               alt="Banner"
+              priority
             />
           </StyledBannerContainer>
           <StyledBannerText>
