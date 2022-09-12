@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: #202125;
   }
@@ -24,14 +24,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: Industrial Branding;
-    src: url('/fonts/INDUSTRIAL-BRANDING.ttf') format('truetype');
-    font-display: optional;
-  }
-
-  @font-face {
-    font-family: Roboto;
-    src: url("https://use.typekit.net/let8ssp.css") format("css")
+    font-family: "Industrial Branding";
+    src: url('/fonts/INDUSTRIAL-BRANDING.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
 `
 
