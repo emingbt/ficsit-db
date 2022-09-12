@@ -18,6 +18,7 @@ export default function Home() {
               layout="fill"
               objectFit='cover'
               alt="Banner"
+              priority
             />
           </StyledBannerContainer>
           <StyledBannerText>
@@ -62,7 +63,7 @@ const StyledBannerSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 48px;
+  margin-top: 3rem;
   height: 50%;
   width: 100%;
 `
@@ -72,12 +73,12 @@ const StyledBannerContainer = styled.div`
   width: 80%;
   position: relative;
   background-color: #224d61;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   object-position: center;
 `
 
 const StyledBackgroundImage = styled(Image)`
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 `
 
 const StyledBannerText = styled.div`
@@ -85,11 +86,12 @@ const StyledBannerText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0.25rem 2rem ;
   background-color: #43454B;
   margin-top: -2.5rem;
   border-width: 2px;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   border-color: #F2C800;
   border-style: solid;
   text-align: center;
@@ -106,7 +108,7 @@ const StyledNavSection = styled.nav`
   width: 100%;
   height: 75vh;
   background-color: #141518;
-  margin-top: 64px;
+  margin-top: 4rem;
   position: relative;
 `
 
@@ -123,7 +125,7 @@ const StyledNavImage = styled.div`
   height: 48vh;
   width: 100%;
   position: relative;
-  border-radius: 8px;
+  border-radius: 0.25rem;
   opacity: 0.8;
   background-color: #be7c37;
 `
@@ -137,7 +139,7 @@ const StyledNavText = styled.div`
   margin-top: -2rem;
   background-color: #43454B;
   border-width: 3px;
-  border-radius: 8px;
+  border-radius: 0.25rem;
   border-color: #F2C800;
   border-style: solid;
   text-align: center;

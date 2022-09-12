@@ -91,8 +91,6 @@ const StyledInput = styled.input`
   border-width: 1px;
   border-right-width: 0px;
   border-color: #E5AF07;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
   height: 100%;
   width: 275px;
   box-shadow: none;
@@ -113,8 +111,6 @@ const StyledButton = styled.button`
   background-color: #202125;
   border-width: 1px;
   border-color: #E5AF07;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
   border-style: solid;
   outline: none;
   box-shadow: none;
