@@ -5,13 +5,13 @@ export default function Footer() {
   return (
     <Wrapper>
       <StyledLine color="#E5AF07" />
-      <StyledText>Built with <span style={{color: '#E5AF07'}}>❤</span> by <a href="https://github.com/emingbt" style={{color: '#D79845'}}>@emingbt</a></StyledText>
+      <StyledText>Built by <StyledAnchor href="https://github.com/emingbt">@emingbt</StyledAnchor></StyledText>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.footer`
-  margin-top: 60px;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,11 +21,14 @@ const Wrapper = styled.footer`
 
 const StyledText = styled.p`
   color: #ffffff;
-  margin: 32px;
-  font-size: 20px;
-  a {
-    :hover {
+  margin: 2rem;
+  font-size: 1.25rem;
+`
+
+const StyledAnchor = styled.a`
+  color: #9BA3A9;
+  :hover {
+    color: #E5AF07;
       text-decoration: underline;
-    }
   }
 `
