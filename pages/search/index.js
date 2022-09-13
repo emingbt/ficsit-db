@@ -56,7 +56,7 @@ export function getServerSideProps(context) {
   const name = context.query.name
 
   const { items, buildables } = getFilteredItemsByName(name)
-  console.log(items)
+
   return {
     props: { items, buildables }
   }
