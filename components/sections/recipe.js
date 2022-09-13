@@ -12,68 +12,68 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
           return (
             <StyledRecipeContainer>
               <StyledRecipeTitleContainer>
-                  {recipe.name.split(':')[recipe.isAlternate ? 1 : 0] } {recipe.isAlternate && (<span style={{color: '#E5AF07'}}>Alternate</span>)}
+                {recipe.name.split(':')[recipe.isAlternate ? 1 : 0]} {recipe.isAlternate && (<span style={{ color: '#E5AF07' }}>Alternate</span>)}
               </StyledRecipeTitleContainer>
-            <StyledRecipe key={recipe.slug}>
-              <StyledContainer flexDirection="row">
-                {recipe.ingredients.map((ingredient) => {
-                  return (
-                    <StyledItem key={ingredient.itemClass}>
-                      <StyledItemHeader>
-                        <StyledItemQuantity>{ingredient.quantity}x</StyledItemQuantity>
-                        <Link href={`/items/${ingredient.itemClass}`}>
-                          <StyledImage
-                            src={`/images/items/${ingredient.itemClass}.png`}
-                            width={80}
-                            height={80}
-                            alt={ingredient.itemClass}
-                            quality={40}
-                          />
-                        </Link>
-                      </StyledItemHeader>
-                      <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * ingredient.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
-                    </StyledItem>
-                  )
-                })}
-              </StyledContainer>
-              <StyledContainer>
-                <StyledVerticalLine isAlternate={recipe.isAlternate} />
-                <StyledContainer product flexDirection="row">
-                  {recipe.products.map((product) => {
+              <StyledRecipe key={recipe.slug}>
+                <StyledContainer flexDirection="row">
+                  {recipe.ingredients.map((ingredient) => {
                     return (
-                      <StyledItem key={product.itemClass}>
+                      <StyledItem key={ingredient.itemClass}>
                         <StyledItemHeader>
-                          <StyledItemQuantity>{product.quantity}x</StyledItemQuantity>
-                          <Link href={`/items/${product.itemClass}`}>
+                          <StyledItemQuantity>{ingredient.quantity}x</StyledItemQuantity>
+                          <Link href={`/items/${ingredient.itemClass}`}>
                             <StyledImage
-                              src={`/images/items/${product.itemClass}.png`}
+                              src={`/images/items/${ingredient.itemClass}.png`}
                               width={80}
                               height={80}
-                              alt={product.itemClass}
+                              alt={ingredient.itemClass}
                               quality={40}
                             />
                           </Link>
                         </StyledItemHeader>
-                        <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * product.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
+                        <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * ingredient.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
                       </StyledItem>
                     )
                   })}
                 </StyledContainer>
-                <StyledVerticalLine isAlternate={recipe.isAlternate} />
-                <StyledBuildingContainer>
-                  <Link href={`/buildings/production/${recipe.producedIn}`}>
-                    <StyledImage
-                      src={`/images/buildables/${recipe.producedIn}.png`}
-                      width={80}
-                      height={80}
-                      alt={recipe.producedIn}
-                      quality={40}
-                    />
-                  </Link>
-                  <StyledCraftTime>{parseFloat((recipe.craftTime / clockspeed * 100).toFixed(3))}sn</StyledCraftTime>
-                </StyledBuildingContainer>
-              </StyledContainer>
-            </StyledRecipe>
+                <StyledContainer>
+                  <StyledVerticalLine isAlternate={recipe.isAlternate} />
+                  <StyledContainer product flexDirection="row">
+                    {recipe.products.map((product) => {
+                      return (
+                        <StyledItem key={product.itemClass}>
+                          <StyledItemHeader>
+                            <StyledItemQuantity>{product.quantity}x</StyledItemQuantity>
+                            <Link href={`/items/${product.itemClass}`}>
+                              <StyledImage
+                                src={`/images/items/${product.itemClass}.png`}
+                                width={80}
+                                height={80}
+                                alt={product.itemClass}
+                                quality={40}
+                              />
+                            </Link>
+                          </StyledItemHeader>
+                          <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * product.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
+                        </StyledItem>
+                      )
+                    })}
+                  </StyledContainer>
+                  <StyledVerticalLine isAlternate={recipe.isAlternate} />
+                  <StyledBuildingContainer>
+                    <Link href={`/buildings/production/${recipe.producedIn}`}>
+                      <StyledImage
+                        src={`/images/buildables/${recipe.producedIn}.png`}
+                        width={80}
+                        height={80}
+                        alt={recipe.producedIn}
+                        quality={40}
+                      />
+                    </Link>
+                    <StyledCraftTime>{parseFloat((recipe.craftTime / clockspeed * 100).toFixed(3))}sn</StyledCraftTime>
+                  </StyledBuildingContainer>
+                </StyledContainer>
+              </StyledRecipe>
             </StyledRecipeContainer>
           )
         })}
