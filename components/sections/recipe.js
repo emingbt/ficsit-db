@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { StyledImage } from "../sharedstyles"
 
 export default function Recipe({ recipes, title, clockspeed = 100 }) {
-  console.log(recipes)
   return recipes.length > 0 && (
     <StyledSection>
       <StyledTitle>{title}</StyledTitle>
