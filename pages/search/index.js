@@ -19,8 +19,8 @@ export default function Search({ items, buildables }) {
           <StyledHeader>
             <StyledTitle>Search results for : &quot;<StyledSpan>{name}</StyledSpan>&quot;</StyledTitle>
             <StyledCategoryContainer>
-              <StyledCategory selected={selectedCategory == 'items'} onClick={() => setSelectedCategory('items')}>Items</StyledCategory>
-              <StyledCategory selected={selectedCategory == 'buildables'} onClick={() => setSelectedCategory('buildables')}>Buildings</StyledCategory>
+              <StyledCategory selected={selectedCategory == 'items'} onClick={() => setSelectedCategory('items')}>Items ({items.length})</StyledCategory>
+              <StyledCategory selected={selectedCategory == 'buildables'} onClick={() => setSelectedCategory('buildables')}>Buildings ({buildables.length})</StyledCategory>
             </StyledCategoryContainer>
           </StyledHeader>
           <StyledLine color='#E5AF07' />
@@ -89,7 +89,7 @@ const StyledCategoryContainer = styled.div`
 `
 
 const StyledCategory = styled.div`
-  width: 6rem;
+  min-width: 8rem;
   height: 2.5rem;
   background-color: ${props => props.selected ? '#D79845' : '#43454B'};
   margin-left: 1rem;
