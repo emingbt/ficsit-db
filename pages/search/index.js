@@ -29,7 +29,7 @@ export default function Search({ items, buildables }) {
             <StyledItemsContainer>
               {sortedData.map((e, i) => {
                 return (
-                  <Link href={`/${selectedCategory == items ? 'items' : `buildings/${e.category}`}/${e.slug}`} key={i} >
+                  <Link href={`/${selectedCategory == 'items' ? 'items' : `buildings/${e.categories[0]}`}/${e.slug}`} key={i} >
                     <StyledItem>
                       <StyledItemImage
                         src={`/images/${selectedCategory}/${e.slug}.png`}
