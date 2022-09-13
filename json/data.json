@@ -3106,1026 +3106,6 @@
       },
       "event": "NONE"
     },
-    "foundation-1m-asphalt": {
-      "slug": "foundation-1m-asphalt",
-      "name": "Foundation 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-2m-asphalt": {
-      "slug": "foundation-2m-asphalt",
-      "name": "Foundation 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-4m-asphalt": {
-      "slug": "foundation-4m-asphalt",
-      "name": "Foundation 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-1m-asphalt": {
-      "slug": "inv-down-corner-1m-asphalt",
-      "name": "Inv. Down Corner 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-2m-asphalt": {
-      "slug": "inv-down-corner-2m-asphalt",
-      "name": "Inv. Down Corner 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-4m-asphalt": {
-      "slug": "inv-down-corner-4m-asphalt",
-      "name": "Inv. Down Corner 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-1m-asphalt": {
-      "slug": "inv-up-corner-1m-asphalt",
-      "name": "Inv. Up Corner 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-2m-asphalt": {
-      "slug": "inv-up-corner-2m-asphalt",
-      "name": "Inv. Up Corner 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-4m-asphalt": {
-      "slug": "inv-up-corner-4m-asphalt",
-      "name": "Inv. Up Corner 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-1m-asphalt": {
-      "slug": "down-corner-ramp-1m-asphalt",
-      "name": "Down Corner Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-2m-asphalt": {
-      "slug": "down-corner-ramp-2m-asphalt",
-      "name": "Down Corner Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-4m-asphalt": {
-      "slug": "down-corner-ramp-4m-asphalt",
-      "name": "Down Corner Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-1m-asphalt": {
-      "slug": "up-corner-ramp-1m-asphalt",
-      "name": "Up Corner Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-2m-asphalt": {
-      "slug": "up-corner-ramp-2m-asphalt",
-      "name": "Up Corner Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-4m-asphalt": {
-      "slug": "up-corner-ramp-4m-asphalt",
-      "name": "Up Corner Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-1m-concrete": {
-      "slug": "foundation-1m-concrete",
-      "name": "Foundation 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-2m-concrete": {
-      "slug": "foundation-2m-concrete",
-      "name": "Foundation 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-4m-concrete": {
-      "slug": "foundation-4m-concrete",
-      "name": "Foundation 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-1m-concrete": {
-      "slug": "inv-down-corner-1m-concrete",
-      "name": "Inv. Down Corner 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-2m-concrete": {
-      "slug": "inv-down-corner-2m-concrete",
-      "name": "Inv. Down Corner 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-4m-concrete": {
-      "slug": "inv-down-corner-4m-concrete",
-      "name": "Inv. Down Corner 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-1m-concrete": {
-      "slug": "inv-up-corner-1m-concrete",
-      "name": "Inv. Up Corner 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-2m-concrete": {
-      "slug": "inv-up-corner-2m-concrete",
-      "name": "Inv. Up Corner 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-4m-concrete": {
-      "slug": "inv-up-corner-4m-concrete",
-      "name": "Inv. Up Corner 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-1m-concrete": {
-      "slug": "down-corner-ramp-1m-concrete",
-      "name": "Down Corner Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-2m-concrete": {
-      "slug": "down-corner-ramp-2m-concrete",
-      "name": "Down Corner Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-4m-concrete": {
-      "slug": "down-corner-ramp-4m-concrete",
-      "name": "Down Corner Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-1m-concrete": {
-      "slug": "up-corner-ramp-1m-concrete",
-      "name": "Up Corner Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-2m-concrete": {
-      "slug": "up-corner-ramp-2m-concrete",
-      "name": "Up Corner Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-4m-concrete": {
-      "slug": "up-corner-ramp-4m-concrete",
-      "name": "Up Corner Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-1m-metal": {
-      "slug": "foundation-1m-metal",
-      "name": "Foundation 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-2m-metal": {
-      "slug": "foundation-2m-metal",
-      "name": "Foundation 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-4m-metal": {
-      "slug": "foundation-4m-metal",
-      "name": "Foundation 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-1m-metal": {
-      "slug": "inv-down-corner-1m-metal",
-      "name": "Inv. Down Corner 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-2m-metal": {
-      "slug": "inv-down-corner-2m-metal",
-      "name": "Inv. Down Corner 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-4m-metal": {
-      "slug": "inv-down-corner-4m-metal",
-      "name": "Inv. Down Corner 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-1m-metal": {
-      "slug": "inv-up-corner-1m-metal",
-      "name": "Inv. Up Corner 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-2m-metal": {
-      "slug": "inv-up-corner-2m-metal",
-      "name": "Inv. Up Corner 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-4m-metal": {
-      "slug": "inv-up-corner-4m-metal",
-      "name": "Inv. Up Corner 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-1m-metal": {
-      "slug": "down-corner-ramp-1m-metal",
-      "name": "Down Corner Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-2m-metal": {
-      "slug": "down-corner-ramp-2m-metal",
-      "name": "Down Corner Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-4m-metal": {
-      "slug": "down-corner-ramp-4m-metal",
-      "name": "Down Corner Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-1m-metal": {
-      "slug": "up-corner-ramp-1m-metal",
-      "name": "Up Corner Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-2m-metal": {
-      "slug": "up-corner-ramp-2m-metal",
-      "name": "Up Corner Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-4m-metal": {
-      "slug": "up-corner-ramp-4m-metal",
-      "name": "Up Corner Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-1m-polished": {
-      "slug": "foundation-1m-polished",
-      "name": "Foundation 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-2m-polished": {
-      "slug": "foundation-2m-polished",
-      "name": "Foundation 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "foundation-4m-polished": {
-      "slug": "foundation-4m-polished",
-      "name": "Foundation 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Floors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-1m-polished": {
-      "slug": "inv-down-corner-1m-polished",
-      "name": "Inv. Down Corner 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-2m-polished": {
-      "slug": "inv-down-corner-2m-polished",
-      "name": "Inv. Down Corner 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-down-corner-4m-polished": {
-      "slug": "inv-down-corner-4m-polished",
-      "name": "Inv. Down Corner 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-1m-polished": {
-      "slug": "inv-up-corner-1m-polished",
-      "name": "Inv. Up Corner 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-2m-polished": {
-      "slug": "inv-up-corner-2m-polished",
-      "name": "Inv. Up Corner 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-up-corner-4m-polished": {
-      "slug": "inv-up-corner-4m-polished",
-      "name": "Inv. Up Corner 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-1m-polished": {
-      "slug": "down-corner-ramp-1m-polished",
-      "name": "Down Corner Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-2m-polished": {
-      "slug": "down-corner-ramp-2m-polished",
-      "name": "Down Corner Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "down-corner-ramp-4m-polished": {
-      "slug": "down-corner-ramp-4m-polished",
-      "name": "Down Corner Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-1m-polished": {
-      "slug": "up-corner-ramp-1m-polished",
-      "name": "Up Corner Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-2m-polished": {
-      "slug": "up-corner-ramp-2m-polished",
-      "name": "Up Corner Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "up-corner-ramp-4m-polished": {
-      "slug": "up-corner-ramp-4m-polished",
-      "name": "Up Corner Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
     "foundation-2m": {
       "slug": "foundation-2m",
       "name": "Foundation 2m",
@@ -4401,9 +3381,10 @@
       "name": "Frame Floor",
       "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 0.5m",
       "categories": [
+        "Architecture",
         "Frames"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4418,9 +3399,10 @@
       "name": "Frame Foundation",
       "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
       "categories": [
+        "Architecture",
         "Frames"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4435,9 +3417,10 @@
       "name": "Glass Frame Foundation",
       "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
       "categories": [
+        "Architecture",
         "Frames"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -4981,9 +3964,10 @@
       "name": "Ladder",
       "description": "A ladder with a default height of 2 meters, which can be extended while building. Snaps to walls and foundations.",
       "categories": [
-        "Attach"
+        "Architecture",
+        "Attachments"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -5060,9 +4044,10 @@
       "name": "MAM",
       "description": "The Molecular Analysis Machine is used to analyse new and exotic materials found on alien planets.\nR&D will assist Pioneers through the MAM to turn any valuable data into usable research options and new technologies.",
       "categories": [
+        "Special",
         "Special"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6089,9 +5074,10 @@
       "name": "AWESOME Sink",
       "description": "Got excess resources? Fear not, for FICSIT does not waste! The newly developed AWESOME Sink turns any useful part straight into research data, as fast as you can supply it! \nParticipating pioneers will be compensated with Coupons to be spend at the AWESOME Shop.",
       "categories": [
+        "Special",
         "Special"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": true,
       "isOverclockable": false,
       "isProduction": false,
@@ -6115,9 +5101,10 @@
       "name": "AWESOME Shop",
       "description": "Redeem your FICSIT Coupons here! \nFor those employees going the extra kilometer we have set aside special bonus milestones and rewards! Get your Coupons in the AWESOME Sink program now!\n\n*No refunds possible.",
       "categories": [
+        "Special",
         "Special"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6138,9 +5125,10 @@
       "name": "Space Elevator",
       "description": "Requires deliveries of special Project Parts to complete Phases of Project Assembly.\nCompleting Phases in the Space Elevator will unlock new Tiers in the HUB Terminal.",
       "categories": [
+        "Special",
         "Special"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6197,9 +5185,10 @@
       "name": "Stairs Left",
       "description": "Snaps to foundations.\nMakes it easier to get to other floors of your structures.",
       "categories": [
-        "Attach"
+        "Architecture",
+        "Attachments"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6214,9 +5203,10 @@
       "name": "Stairs Right",
       "description": "Snaps to foundations.\nMakes it easier to get to other floors of your structures.",
       "categories": [
-        "Attach"
+        "Architecture",
+        "Attachments"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6341,9 +5331,10 @@
       "name": "The HUB",
       "description": "The heart of your factory. This is where you complete FICSIT milestones to unlock additional blueprints of buildings, vehicles, parts, equipment etc.",
       "categories": [
+        "Special",
         "Special"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6468,9 +5459,10 @@
       "name": "Walkway Crossing",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Walkways"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6485,9 +5477,10 @@
       "name": "Walkway Ramp",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Walkways"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6502,9 +5495,10 @@
       "name": "Walkway Straight",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Walkways"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6519,9 +5513,10 @@
       "name": "Walkway T-Crossing",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Walkways"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6536,9 +5531,10 @@
       "name": "Walkway Turn",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Walkways"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6553,9 +5549,10 @@
       "name": "Catwalk Crossing",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Catwalks"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6570,9 +5567,10 @@
       "name": "Catwalk Ramp",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Catwalks"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6587,9 +5585,10 @@
       "name": "Catwalk Stairs",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Catwalks"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6604,9 +5603,10 @@
       "name": "Catwalk Straight",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Catwalks"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6621,9 +5621,10 @@
       "name": "Catwalk T-Crossing",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Catwalks"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6638,9 +5639,10 @@
       "name": "Catwalk Corner",
       "description": "Snaps to foundations and other walkways.\nSpecifically made for humans to walk on.",
       "categories": [
+        "Architecture",
         "Catwalks"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -6668,23 +5670,6 @@
       "meta": {},
       "event": "NONE"
     },
-    "basic-wall-4m-steel": {
-      "slug": "basic-wall-4m-steel",
-      "name": "Basic Wall 4m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
-      "categories": [
-        "Walls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
     "conveyor-wall-x3": {
       "slug": "conveyor-wall-x3",
       "name": "Conveyor Wall x3",
@@ -6692,23 +5677,6 @@
       "categories": [
         "Walls",
         "ConveyorConnections"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "conveyor-wall-x3-steel": {
-      "slug": "conveyor-wall-x3-steel",
-      "name": "Conveyor Wall x3",
-      "description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6738,23 +5706,6 @@
       "meta": {},
       "event": "NONE"
     },
-    "conveyor-wall-x2-steel": {
-      "slug": "conveyor-wall-x2-steel",
-      "name": "Conveyor Wall x2",
-      "description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedConveyorConnections"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
     "conveyor-wall-x1": {
       "slug": "conveyor-wall-x1",
       "name": "Conveyor Wall x1",
@@ -6762,23 +5713,6 @@
       "categories": [
         "Walls",
         "ConveyorConnections"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "conveyor-wall-x1-steel": {
-      "slug": "conveyor-wall-x1-steel",
-      "name": "Conveyor Wall x1",
-      "description": "Has 1 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedConveyorConnections"
       ],
       "buildMenuPriority": null,
       "isPowered": false,
@@ -6871,346 +5805,6 @@
         "Windows"
       ],
       "buildMenuPriority": 4,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "basic-wall-1m-concrete": {
-      "slug": "basic-wall-1m-concrete",
-      "name": "Basic Wall 1m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
-      "categories": [
-        "Walls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "basic-wall-4m-concrete": {
-      "slug": "basic-wall-4m-concrete",
-      "name": "Basic Wall 4m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
-      "categories": [
-        "Walls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "conveyor-wall-x1-concrete": {
-      "slug": "conveyor-wall-x1-concrete",
-      "name": "Conveyor Wall x1",
-      "description": "Has 1 Conveyor Belt connection.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedConveyorConnections"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "conveyor-wall-x2-concrete": {
-      "slug": "conveyor-wall-x2-concrete",
-      "name": "Conveyor Wall x2",
-      "description": "Has 2 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedConveyorConnections"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "conveyor-wall-x3-concrete": {
-      "slug": "conveyor-wall-x3-concrete",
-      "name": "Conveyor Wall x3",
-      "description": "Has 3 Conveyor Belt connections.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedConveyorConnections"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "single-window-concrete": {
-      "slug": "single-window-concrete",
-      "name": "Single Window",
-      "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedWindows"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "frame-window-concrete": {
-      "slug": "frame-window-concrete",
-      "name": "Frame Window",
-      "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedWindows"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "panel-window-concrete": {
-      "slug": "panel-window-concrete",
-      "name": "Panel Window",
-      "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedWindows"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "reinforced-window-concrete": {
-      "slug": "reinforced-window-concrete",
-      "name": "Reinforced Window",
-      "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedWindows"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "tilted-wall-4m-concrete": {
-      "slug": "tilted-wall-4m-concrete",
-      "name": "Tilted Wall 4m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
-      "categories": [
-        "AngularWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "tilted-wall-8m-concrete": {
-      "slug": "tilted-wall-8m-concrete",
-      "name": "Tilted Wall 8m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
-      "categories": [
-        "AngularWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-wall-1m-concrete": {
-      "slug": "inv-ramp-wall-1m-concrete",
-      "name": "Inv. Ramp Wall 1m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
-      "categories": [
-        "UpperDiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-wall-2m-concrete": {
-      "slug": "inv-ramp-wall-2m-concrete",
-      "name": "Inv. Ramp Wall 2m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
-      "categories": [
-        "UpperDiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-wall-4m-concrete": {
-      "slug": "inv-ramp-wall-4m-concrete",
-      "name": "Inv. Ramp Wall 4m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
-      "categories": [
-        "UpperDiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-wall-8m-concrete": {
-      "slug": "inv-ramp-wall-8m-concrete",
-      "name": "Inv. Ramp Wall 8m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
-      "categories": [
-        "UpperDiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "gate-hole-wall-concrete": {
-      "slug": "gate-hole-wall-concrete",
-      "name": "Gate Hole Wall",
-      "description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedDoors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-wall-1m-concrete": {
-      "slug": "ramp-wall-1m-concrete",
-      "name": "Ramp Wall 1m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
-      "categories": [
-        "DiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-wall-2m-concrete": {
-      "slug": "ramp-wall-2m-concrete",
-      "name": "Ramp Wall 2m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
-      "categories": [
-        "DiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-wall-4m-concrete": {
-      "slug": "ramp-wall-4m-concrete",
-      "name": "Ramp Wall 4m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
-      "categories": [
-        "DiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-wall-8m-concrete": {
-      "slug": "ramp-wall-8m-concrete",
-      "name": "Ramp Wall 8m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
-      "categories": [
-        "DiagonalWalls"
-      ],
-      "buildMenuPriority": null,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7418,286 +6012,15 @@
       "meta": {},
       "event": "NONE"
     },
-    "basic-wall-1m-steel": {
-      "slug": "basic-wall-1m-steel",
-      "name": "Basic Wall 1m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
-      "categories": [
-        "Walls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "gate-hole-wall-steel": {
-      "slug": "gate-hole-wall-steel",
-      "name": "Gate Hole Wall",
-      "description": "The gate allows Pioneers to pass through the wall.\nSnaps to foundations and other walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedDoors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "single-window-steel": {
-      "slug": "single-window-steel",
-      "name": "Single Window",
-      "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedWindows"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "reinforced-window-steel": {
-      "slug": "reinforced-window-steel",
-      "name": "Reinforced Window",
-      "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedWindows"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "frame-window-steel": {
-      "slug": "frame-window-steel",
-      "name": "Frame Window",
-      "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedWindows"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "panel-window-steel": {
-      "slug": "panel-window-steel",
-      "name": "Panel Window",
-      "description": "Snaps to Foundations and other Walls.\nThe windows allow Pioneers to see through the wall.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedWindows"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-wall-1m-steel": {
-      "slug": "inv-ramp-wall-1m-steel",
-      "name": "Inv. Ramp Wall 1m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
-      "categories": [
-        "UpperDiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-wall-2m-steel": {
-      "slug": "inv-ramp-wall-2m-steel",
-      "name": "Inv. Ramp Wall 2m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
-      "categories": [
-        "UpperDiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-wall-4m-steel": {
-      "slug": "inv-ramp-wall-4m-steel",
-      "name": "Inv. Ramp Wall 4m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
-      "categories": [
-        "UpperDiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-wall-8m-steel": {
-      "slug": "inv-ramp-wall-8m-steel",
-      "name": "Inv. Ramp Wall 8m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
-      "categories": [
-        "UpperDiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-wall-1m-steel": {
-      "slug": "ramp-wall-1m-steel",
-      "name": "Ramp Wall 1m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 1m",
-      "categories": [
-        "DiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-wall-2m-steel": {
-      "slug": "ramp-wall-2m-steel",
-      "name": "Ramp Wall 2m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 2m",
-      "categories": [
-        "DiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-wall-4m-steel": {
-      "slug": "ramp-wall-4m-steel",
-      "name": "Ramp Wall 4m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
-      "categories": [
-        "DiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-wall-8m-steel": {
-      "slug": "ramp-wall-8m-steel",
-      "name": "Ramp Wall 8m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
-      "categories": [
-        "DiagonalWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "tilted-wall-4m-steel": {
-      "slug": "tilted-wall-4m-steel",
-      "name": "Tilted Wall 4m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
-      "categories": [
-        "AngularWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "tilted-wall-8m-steel": {
-      "slug": "tilted-wall-8m-steel",
-      "name": "Tilted Wall 8m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
-      "categories": [
-        "AngularWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
     "industrial-railing": {
       "slug": "industrial-railing",
       "name": "Industrial Railing",
       "description": "Railings can be built on Foundations to create a safer working environment.",
       "categories": [
-        "Attach"
+        "Architecture",
+        "Attachments"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7725,31 +6048,15 @@
       "meta": {},
       "event": "NONE"
     },
-    "wall-conveyor-perpendicular-steel": {
-      "slug": "wall-conveyor-perpendicular-steel",
-      "name": "Wall Conveyor Perpendicular",
-      "description": "Walls connect to other Walls and Floors. Use these to make buildings with several floors.\nHas 1 conveyor belt connection perpendicular to the wall.\nHeight: 4 m",
-      "categories": [
-        "CustomizedConveyorConnections"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
     "frame-wall": {
       "slug": "frame-wall",
       "name": "Frame Wall",
       "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
       "categories": [
+        "Architecture",
         "Frames"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7764,9 +6071,10 @@
       "name": "Modern Railing",
       "description": "Railings can be built on Foundations to create a safer working environment.\n\nThis particular Railing is 4 meters long and angles automatically when built on Ramps.",
       "categories": [
-        "Attach"
+        "Architecture",
+        "Attachments"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7781,9 +6089,10 @@
       "name": "Road Barrier",
       "description": "A concrete Barrier, used to create a safer working environment.",
       "categories": [
-        "Attach"
+        "Architecture",
+        "Attachments"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7932,9 +6241,10 @@
       "name": "Metal Beam",
       "description": "Snaps to other Beams and various other structural buildings.\nBeams support multiple build modes for different use cases.",
       "categories": [
+        "Architecture",
         "Beams"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -7949,43 +6259,10 @@
       "name": "Painted Beam",
       "description": "Snaps to other Beams and various other structural buildings.\nBeams support multiple build modes for different use cases.",
       "categories": [
+        "Architecture",
         "Beams"
       ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "tilted-corner-wall-4m-concrete": {
-      "slug": "tilted-corner-wall-4m-concrete",
-      "name": "Tilted Corner Wall 4m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
-      "categories": [
-        "AngularWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "tilted-corner-wall-8m-concrete": {
-      "slug": "tilted-corner-wall-8m-concrete",
-      "name": "Tilted Corner Wall 8m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
-      "categories": [
-        "AngularWalls"
-      ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8031,40 +6308,6 @@
       "meta": {},
       "event": "NONE"
     },
-    "tilted-corner-wall-4m-steel": {
-      "slug": "tilted-corner-wall-4m-steel",
-      "name": "Tilted Corner Wall 4m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 4m",
-      "categories": [
-        "AngularWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "tilted-corner-wall-8m-steel": {
-      "slug": "tilted-corner-wall-8m-steel",
-      "name": "Tilted Corner Wall 8m",
-      "description": "Snaps to foundations and other walls.\nUseful for building multi-floor structures.\n\nSize: 8m x 8m",
-      "categories": [
-        "AngularWalls"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
     "center-door-wall": {
       "slug": "center-door-wall",
       "name": "Center Door Wall",
@@ -8083,23 +6326,6 @@
       "meta": {},
       "event": "NONE"
     },
-    "center-door-wall-steel": {
-      "slug": "center-door-wall-steel",
-      "name": "Center Door Wall",
-      "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedDoors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
     "side-door-wall": {
       "slug": "side-door-wall",
       "name": "Side Door Wall",
@@ -8109,57 +6335,6 @@
         "Doors"
       ],
       "buildMenuPriority": 2,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "side-door-wall-steel": {
-      "slug": "side-door-wall-steel",
-      "name": "Side Door Wall",
-      "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedDoors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "center-door-wall-concrete": {
-      "slug": "center-door-wall-concrete",
-      "name": "Center Door Wall",
-      "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedDoors"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "side-door-wall-concrete": {
-      "slug": "side-door-wall-concrete",
-      "name": "Side Door Wall",
-      "description": "The door allows Pioneers to pass through the wall.\nDoor settings can be configured.\nSnaps to Foundations and other Walls.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedDoors"
-      ],
-      "buildMenuPriority": null,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8192,9 +6367,10 @@
       "name": "Beam Connector",
       "description": "Can be connected to Beams to hide seams and generally make connections look more appealing.",
       "categories": [
+        "Architecture",
         "Beams"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8206,12 +6382,13 @@
     },
     "beam-connector-double": {
       "slug": "beam-connector-double",
-      "name": "Beam Connector Double",
+      "name": "Beam Connector",
       "description": "Can be connected to Beams to hide seams and generally make connections look more appealing.",
       "categories": [
+        "Architecture",
         "Beams"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8226,9 +6403,10 @@
       "name": "Beam Support",
       "description": "Snaps to Beams and various other structural buildings.\nUsed to aesthetically connect beams to surfaces.",
       "categories": [
+        "Architecture",
         "Beams"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8292,31 +6470,15 @@
       "meta": {},
       "event": "NONE"
     },
-    "small-metal-pillar-metal": {
-      "slug": "small-metal-pillar-metal",
+    "small-metal-pillar": {
+      "slug": "small-metal-pillar",
       "name": "Small Metal Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 2m x 4m",
       "categories": [
+        "Architecture",
         "Pillars"
       ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "pillar-top": {
-      "slug": "pillar-top",
-      "name": "Pillar Top",
-      "description": "Pillar Top",
-      "categories": [
-        "Pillars"
-      ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 6,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8331,9 +6493,10 @@
       "name": "Small Pillar Support",
       "description": "The Pillar Support snaps to Pillars and can be placed on, for example, Foundations and Walls.",
       "categories": [
+        "Architecture",
         "Pillars"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8348,9 +6511,10 @@
       "name": "Big Pillar Support",
       "description": "The Pillar Support snaps to Pillars and can be placed on, for example, Foundations and Walls.",
       "categories": [
+        "Architecture",
         "Pillars"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8365,9 +6529,10 @@
       "name": "Big Metal Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 4m x 4m",
       "categories": [
+        "Architecture",
         "Pillars"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8377,14 +6542,15 @@
       "meta": {},
       "event": "NONE"
     },
-    "small-concrete-pillar-concrete": {
-      "slug": "small-concrete-pillar-concrete",
+    "small-concrete-pillar": {
+      "slug": "small-concrete-pillar",
       "name": "Small Concrete Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 2m x 4m",
       "categories": [
+        "Architecture",
         "Pillars"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 7,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8394,14 +6560,15 @@
       "meta": {},
       "event": "NONE"
     },
-    "big-concrete-pillar-concrete": {
-      "slug": "big-concrete-pillar-concrete",
+    "big-concrete-pillar": {
+      "slug": "big-concrete-pillar",
       "name": "Big Concrete Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 4m x 4m",
       "categories": [
+        "Architecture",
         "Pillars"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8416,9 +6583,10 @@
       "name": "Small Frame Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 2m x 4m",
       "categories": [
+        "Architecture",
         "Pillars"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 8,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8433,9 +6601,10 @@
       "name": "Big Frame Pillar",
       "description": "Snaps to other Pillars and can be placed on, for example, Foundations and Walls.\n\nSize: 4m x 4m",
       "categories": [
+        "Architecture",
         "Pillars"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -8472,618 +6641,6 @@
         "RailwayTransport"
       ],
       "buildMenuPriority": 10,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-1m-asphalt": {
-      "slug": "inv-ramp-1m-asphalt",
-      "name": "Inv. Ramp 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-2m-asphalt": {
-      "slug": "inv-ramp-2m-asphalt",
-      "name": "Inv. Ramp 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-4m-asphalt": {
-      "slug": "inv-ramp-4m-asphalt",
-      "name": "Inv. Ramp 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-1m-asphalt": {
-      "slug": "ramp-1m-asphalt",
-      "name": "Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-2m-asphalt": {
-      "slug": "ramp-2m-asphalt",
-      "name": "Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-4m-asphalt": {
-      "slug": "ramp-4m-asphalt",
-      "name": "Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-2m-asphalt": {
-      "slug": "double-ramp-2m-asphalt",
-      "name": "Double Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-4m-asphalt": {
-      "slug": "double-ramp-4m-asphalt",
-      "name": "Double Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-8m-asphalt": {
-      "slug": "double-ramp-8m-asphalt",
-      "name": "Double Ramp 8m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-1m-concrete": {
-      "slug": "inv-ramp-1m-concrete",
-      "name": "Inv. Ramp 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-2m-concrete": {
-      "slug": "inv-ramp-2m-concrete",
-      "name": "Inv. Ramp 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-4m-concrete": {
-      "slug": "inv-ramp-4m-concrete",
-      "name": "Inv. Ramp 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-1m-concrete": {
-      "slug": "ramp-1m-concrete",
-      "name": "Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-2m-concrete": {
-      "slug": "ramp-2m-concrete",
-      "name": "Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-4m-concrete": {
-      "slug": "ramp-4m-concrete",
-      "name": "Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-2m-concrete": {
-      "slug": "double-ramp-2m-concrete",
-      "name": "Double Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-4m-concrete": {
-      "slug": "double-ramp-4m-concrete",
-      "name": "Double Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-8m-concrete": {
-      "slug": "double-ramp-8m-concrete",
-      "name": "Double Ramp 8m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-1m-metal": {
-      "slug": "inv-ramp-1m-metal",
-      "name": "Inv. Ramp 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-2m-metal": {
-      "slug": "inv-ramp-2m-metal",
-      "name": "Inv. Ramp 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-4m-metal": {
-      "slug": "inv-ramp-4m-metal",
-      "name": "Inv. Ramp 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-1m-metal": {
-      "slug": "ramp-1m-metal",
-      "name": "Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-2m-metal": {
-      "slug": "ramp-2m-metal",
-      "name": "Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-4m-metal": {
-      "slug": "ramp-4m-metal",
-      "name": "Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-2m-metal": {
-      "slug": "double-ramp-2m-metal",
-      "name": "Double Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-4m-metal": {
-      "slug": "double-ramp-4m-metal",
-      "name": "Double Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-8m-metal": {
-      "slug": "double-ramp-8m-metal",
-      "name": "Double Ramp 8m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-1m-polished": {
-      "slug": "inv-ramp-1m-polished",
-      "name": "Inv. Ramp 1m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-2m-polished": {
-      "slug": "inv-ramp-2m-polished",
-      "name": "Inv. Ramp 2m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "inv-ramp-4m-polished": {
-      "slug": "inv-ramp-4m-polished",
-      "name": "Inv. Ramp 4m",
-      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "Inverted"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-1m-polished": {
-      "slug": "ramp-1m-polished",
-      "name": "Ramp 1m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-2m-polished": {
-      "slug": "ramp-2m-polished",
-      "name": "Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ramp-4m-polished": {
-      "slug": "ramp-4m-polished",
-      "name": "Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-2m-polished": {
-      "slug": "double-ramp-2m-polished",
-      "name": "Double Ramp 2m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-4m-polished": {
-      "slug": "double-ramp-4m-polished",
-      "name": "Double Ramp 4m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "double-ramp-8m-polished": {
-      "slug": "double-ramp-8m-polished",
-      "name": "Double Ramp 8m",
-      "description": "Snaps to foundations and makes it easier to get on top of them.\n\nBuildings on top of the ramp are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
-      "categories": [
-        "CustomizedRamps"
-      ],
-      "buildMenuPriority": null,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9260,9 +6817,10 @@
       "name": "Frame Ramp",
       "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
       "categories": [
+        "Architecture",
         "Frames"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9277,9 +6835,10 @@
       "name": "Inverted Frame Ramp",
       "description": "Snaps to other structural buildings.\nFrames provide a more open factory aesthetic.\n\nSize: 8m x 4m",
       "categories": [
+        "Architecture",
         "Frames"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 5,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9289,31 +6848,15 @@
       "meta": {},
       "event": "NONE"
     },
-    "metal-roof-flat": {
-      "slug": "metal-roof-flat",
-      "name": "Metal Roof Flat",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "metal-roof-1m": {
-      "slug": "metal-roof-1m",
-      "name": "Metal Roof 1m",
+    "roof-1m": {
+      "slug": "roof-1m",
+      "name": "Roof 1m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
       "categories": [
+        "Architecture",
         "Roofs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 3,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9323,14 +6866,15 @@
       "meta": {},
       "event": "NONE"
     },
-    "metal-roof-2m": {
-      "slug": "metal-roof-2m",
-      "name": "Metal Roof 2m",
+    "roof-2m": {
+      "slug": "roof-2m",
+      "name": "Roof 2m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
       "categories": [
+        "Architecture",
         "Roofs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9340,14 +6884,15 @@
       "meta": {},
       "event": "NONE"
     },
-    "metal-roof-4m": {
-      "slug": "metal-roof-4m",
-      "name": "Metal Roof 4m",
+    "roof-4m": {
+      "slug": "roof-4m",
+      "name": "Roof 4m",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
       "categories": [
+        "Architecture",
         "Roofs"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -9357,201 +6902,15 @@
       "meta": {},
       "event": "NONE"
     },
-    "tar-roof-flat": {
-      "slug": "tar-roof-flat",
-      "name": "Tar Roof Flat",
+    "roof-flat": {
+      "slug": "roof-flat",
+      "name": "Roof Flat",
       "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
       "categories": [
+        "Architecture",
         "Roofs"
       ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "tar-roof-1m": {
-      "slug": "tar-roof-1m",
-      "name": "Tar Roof 1m",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "tar-roof-2m": {
-      "slug": "tar-roof-2m",
-      "name": "Tar Roof 2m",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "tar-roof-4m": {
-      "slug": "tar-roof-4m",
-      "name": "Tar Roof 4m",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "glass-roof-flat": {
-      "slug": "glass-roof-flat",
-      "name": "Glass Roof Flat",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "glass-roof-1m": {
-      "slug": "glass-roof-1m",
-      "name": "Glass Roof 1m",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "glass-roof-2m": {
-      "slug": "glass-roof-2m",
-      "name": "Glass Roof 2m",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "glass-roof-4m": {
-      "slug": "glass-roof-4m",
-      "name": "Glass Roof 4m",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ficsit-roof-1m": {
-      "slug": "ficsit-roof-1m",
-      "name": "FICSIT Roof 1m",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 1m",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ficsit-roof-2m": {
-      "slug": "ficsit-roof-2m",
-      "name": "FICSIT Roof 2m",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 2m",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ficsit-roof-4m": {
-      "slug": "ficsit-roof-4m",
-      "name": "FICSIT Roof 4m",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x 4m",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
-      "isPowered": false,
-      "isOverclockable": false,
-      "isProduction": false,
-      "isResourceExtractor": false,
-      "isGenerator": false,
-      "isVehicle": false,
-      "meta": {},
-      "event": "NONE"
-    },
-    "ficsit-roof-flat": {
-      "slug": "ficsit-roof-flat",
-      "name": "FICSIT Roof Flat",
-      "description": "Snaps to Foundations, Walls, and other Roofs.\n\nSize: 8m x flat",
-      "categories": [
-        "Roofs"
-      ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 4,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -17754,7 +15113,7 @@
       "name": "The HUB",
       "ingredients": [
         {
-          "itemClass": "HUBParts",
+          "itemClass": "hub-parts",
           "quantity": 1
         }
       ],
@@ -19917,8 +17276,8 @@
       "product": "Railing_01",
       "event": "NONE"
     },
-    "small-metal-pillar-metal-recipe": {
-      "slug": "small-metal-pillar-metal-recipe",
+    "small-metal-pillar-recipe": {
+      "slug": "small-metal-pillar-recipe",
       "name": "Small Metal Pillar",
       "ingredients": [
         {
@@ -21145,8 +18504,8 @@
       "product": "Gate_Automated_8x4",
       "event": "NONE"
     },
-    "small-concrete-pillar-concrete-recipe": {
-      "slug": "small-concrete-pillar-concrete-recipe",
+    "small-concrete-pillar-recipe": {
+      "slug": "small-concrete-pillar-recipe",
       "name": "Small Concrete Pillar",
       "ingredients": [
         {
@@ -21157,8 +18516,8 @@
       "product": "Pillar_Smalloncrete",
       "event": "NONE"
     },
-    "big-concrete-pillar-concrete-recipe": {
-      "slug": "big-concrete-pillar-concrete-recipe",
+    "big-concrete-pillar-recipe": {
+      "slug": "big-concrete-pillar-recipe",
       "name": "Big Concrete Pillar",
       "ingredients": [
         {
