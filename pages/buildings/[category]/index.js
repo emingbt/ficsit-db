@@ -13,13 +13,15 @@ export default function Buildings({ buildings }) {
   const buildingsData = Object.entries(buildings)
 
   const BuildingCategories = [
+    'Special',
     'Production',
     'Power',
     'Logistics',
     'Organisation',
     'Transportation',
     'Foundations',
-    'Walls'
+    'Walls',
+    'Architecture'
   ]
 
   return (
