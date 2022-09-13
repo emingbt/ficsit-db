@@ -10,11 +10,11 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
       <StyledRecipeSection>
         {recipes.map((recipe) => {
           return (
-            <StyledRecipeContainer>
+            <StyledRecipeContainer key={recipe.slug}>
               <StyledRecipeTitleContainer>
                 {recipe.name.split(':')[recipe.isAlternate ? 1 : 0]} {recipe.isAlternate && (<span style={{ color: '#E5AF07' }}>Alternate</span>)}
               </StyledRecipeTitleContainer>
-              <StyledRecipe key={recipe.slug}>
+              <StyledRecipe>
                 <StyledContainer flexDirection="row">
                   {recipe.ingredients.map((ingredient) => {
                     return (
