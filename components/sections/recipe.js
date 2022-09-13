@@ -7,9 +7,13 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
   return recipes.length > 0 && (
     <StyledSection>
       <StyledTitle>{title}</StyledTitle>
-      <StyledRecipeContainer>
+      <StyledRecipeSection>
         {recipes.map((recipe) => {
           return (
+            <StyledRecipeContainer>
+              <StyledRecipeTitleContainer>
+                  {recipe.name.split(':')[recipe.isAlternate ? 1 : 0] } {recipe.isAlternate && (<span style={{color: '#E5AF07'}}>Alternate</span>)}
+              </StyledRecipeTitleContainer>
             <StyledRecipe key={recipe.slug}>
               <StyledContainer flexDirection="row">
                 {recipe.ingredients.map((ingredient) => {
@@ -70,9 +74,10 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                 </StyledBuildingContainer>
               </StyledContainer>
             </StyledRecipe>
+            </StyledRecipeContainer>
           )
         })}
-      </StyledRecipeContainer>
+      </StyledRecipeSection>
     </StyledSection>
   )
 }
@@ -97,11 +102,30 @@ const StyledTitle = styled.div`
   margin-bottom: 36px;
 `
 
+const StyledRecipeSection = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 const StyledRecipeContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+const StyledRecipeTitleContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #34363b;
+  color: white;
+  font-size: 1.25rem;
 `
 
 const StyledRecipe = styled.div`
