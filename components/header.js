@@ -17,7 +17,7 @@ export default function Header() {
         </Link>
         <StyledNav>
           <StyledForm>
-            <StyledInput id='itemName' placeholder='Search items' onChange={(e) => setSearchValue(e.target.value)} />
+            <StyledInput id='itemName' placeholder='Search items or buildings' onChange={(e) => setSearchValue(e.target.value)} />
             <StyledButton onClick={(e) => {
               e.preventDefault()
               if (searchValue.length > 0 ) {
