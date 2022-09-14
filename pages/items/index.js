@@ -72,6 +72,7 @@ const StyledItem = styled.div`
   justify-content: center;
   margin: 0.5rem;
   min-width: 7rem;
+  max-width: 160px;
   cursor: pointer;
 `
 
@@ -93,6 +94,5 @@ const StyledItemName = styled.div`
   padding: 0.25rem;
   color: white;
   text-align: center;
-  font-size: 100%;
   z-index: 2;
 `
