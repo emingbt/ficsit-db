@@ -102,6 +102,7 @@ const StyledHeaderSection = styled.section`
 const StyledCategoiresContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 `
@@ -163,6 +164,7 @@ const StyledBuilding = styled.div`
   margin: 0 0.5rem;
   margin-bottom: 1rem;
   min-width: 9rem;
+  max-width: 16rem;
   cursor: pointer;
 `
 
