@@ -17,15 +17,18 @@ export default function Header() {
         </Link>
         <StyledNav>
           <StyledForm>
-            <StyledInput id='itemName' placeholder='Search items or buildings' onChange={(e) => setSearchValue(e.target.value)} />
+            <StyledInput
+              placeholder='Search items or buildings'
+              onChange={(e) => setSearchValue(e.target.value)}
+            />
             <StyledButton onClick={(e) => {
               e.preventDefault()
-              if (searchValue.length > 0 ) {
+              if (searchValue.length > 0) {
                 router.push(`/search?name=${searchValue}`)
               }
-              }}
+            }}
               aria-label="Search"
-              >
+            >
               <SearchIcon />
             </StyledButton>
           </StyledForm>
@@ -51,6 +54,7 @@ const Wrapper = styled.header`
 
 const HeaderBar = styled.div`
   height: 80px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -59,21 +63,19 @@ const HeaderBar = styled.div`
 
 const Logo = styled.text`
   color: white;
-  font-size: 40px;
-  padding-left: 64px;
+  font-size: 2rem;
+  padding-left: 3rem;
   font-family: Industrial Branding;
   cursor: pointer;
   user-select: none;
 `
 
 const StyledNav = styled.nav`
-  width: 50%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: end;
   align-items: center;
+  margin-right: 1rem;
   color: #9BA3A9;
-  font-size: 24px;
-  font-weight: 500px;
 `
 
 const StyledForm = styled.form`
@@ -82,6 +84,7 @@ const StyledForm = styled.form`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-right: 1rem;
 `
 
 const StyledInput = styled.input`
@@ -122,6 +125,8 @@ const StyledButton = styled.button`
 `
 
 const StyledLink = styled.p`
+  font-size: 1.25rem;
+  margin-right: 1rem;
   &:hover {
     color: #CCCCCC;
     cursor: pointer;
