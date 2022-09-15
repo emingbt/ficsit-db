@@ -95,6 +95,8 @@ const Logo = styled.text`
 const StyledHamburgerButton = styled.button`
   background: transparent;
   border: 0;
+  padding: 0;
+  cursor: pointer;
 
   @media (min-width: 1024px) {
     display: none;
@@ -143,9 +145,10 @@ const StyledInput = styled.input`
   background-color: #202125;
   border-width: 1px;
   border-right-width: 0px;
+  border-radius: 0;
   border-color: #E5AF07;
   height: 100%;
-  width: 100%;
+  width: calc(100% - 3rem);
   box-shadow: none;
   border-style: solid;
   padding: 0.75rem 1rem;
@@ -159,7 +162,7 @@ const StyledSearchButton = styled.button`
   color: #CCCCCC;
   background-color: #D79845;
   height: 100%;
-  aspect-ratio: 1 / 1;
+  width: 3rem;
   padding: 0 0.25rem;
   background-color: #202125;
   border-width: 1px;
