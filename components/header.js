@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { StyledLine } from './sharedstyles'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SearchIcon from '../assets/searchIcon.svg'
 import HamburgerIcon from '../assets/hamburgerIcon.svg'
 import CloseIcon from '../assets/closeIcon.svg'
@@ -11,6 +11,10 @@ export default function Header() {
   const router = useRouter()
   const [searchValue, setSearchValue] = useState('')
   const [active, setActive] = useState(false)
+
+  useEffect(() => {
+    setActive(false)
+  }, [router.asPath])
 
   return (
     <Wrapper>
