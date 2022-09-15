@@ -10,7 +10,7 @@ const Container = styled.div`
 `
 
 const Main = styled.main`
-  padding-top: 2rem;
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -29,11 +29,11 @@ const StyledLine = styled.div`
 const StyledTitle = styled.div`
   width: 100%;
   text-align: left;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
   color: white;
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 3vw, 2rem);
   font-family: Roboto, sans-serif;
-  font-weight: 400;
+
 `
 
 const StyledImageContainer = styled.div`
