@@ -102,18 +102,20 @@ const StyledCategory = styled.div`
   color: white;
   margin-bottom: 0.25rem;
   padding: 0.25rem;
-  font-size: clamp(0.5rem, 1.25vw, 1rem);
+  font-size: 0.5rem;
   user-select: none;
   cursor: pointer;
 
   @media (min-width: 768px) {
     min-width: 6rem;
+    font-size: 0.75rem;
   }
 
   @media (min-width: 1024px) {
     margin-left: 1rem;
     min-width: 8rem;
     padding: 0.5rem 0.25rem;
+    font-size: 1rem;
   }
 `
 
