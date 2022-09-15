@@ -63,11 +63,11 @@ export function getServerSideProps(context) {
 }
 
 const StyledContainer = styled.div`
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
 `
 
 const StyledHeader = styled.div`
@@ -84,21 +84,37 @@ const StyledSpan = styled.span`
 
 const StyledCategoryContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 `
 
 const StyledCategory = styled.div`
-  min-width: 8rem;
-  height: 2.5rem;
-  background-color: ${props => props.selected ? '#D79845' : '#43454B'};
-  margin-left: 1rem;
+  min-width: 4.5rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: ${props => props.selected ? '#D79845' : '#43454B'};
   color: white;
+  margin-bottom: 0.25rem;
+  padding: 0.25rem;
+  font-size: clamp(0.5rem, 1.25vw, 1rem);
   user-select: none;
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    min-width: 6rem;
+  }
+
+  @media (min-width: 1024px) {
+    margin-left: 1rem;
+    min-width: 8rem;
+    padding: 0.5rem 0.25rem;
+  }
 `
 
 
@@ -119,7 +135,7 @@ const StyledItemsContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 `
 
 const StyledItem = styled.div`
@@ -129,7 +145,8 @@ const StyledItem = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0.5rem;
-  min-width: 7rem;
+  min-width: 4rem;
+  max-width: 160px;
   cursor: pointer;
 `
 
@@ -141,15 +158,23 @@ const StyledItemImage = styled(Image)`
 `
 
 const StyledItemName = styled.div`
+  width: 100%;
+  min-height: 2.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 3vw;
-  min-height: 2.5rem;
   background-color: #43454B;
-  padding: 0.25rem;
   color: white;
+  padding: 0 0.25rem;
   text-align: center;
-  font-size: 100%;
+  font-size: 0.5rem;
+  z-index: 2;
+
+  @media (min-width: 768px) {
+    font-size: clamp(0.65rem, 1vw, 1rem);
+  }
+
+  @media (min-width: 1024px) {
+    min-height: 3rem;
+  }
 `
