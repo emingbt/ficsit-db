@@ -145,6 +145,7 @@ const StyledNavImage = styled.div`
 `
 
 const StyledNavText = styled.div`
+  min-width: 36%;
   display: flex;
   justify-content: center;
   align-items: center;
