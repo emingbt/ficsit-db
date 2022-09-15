@@ -21,7 +21,7 @@ const Wrapper = styled.footer`
 
 const StyledText = styled.p`
   color: #ffffff;
-  margin: 2rem;
+  margin: 1.5rem;
   font-size: 1.25rem;
 `
 
