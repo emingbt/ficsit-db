@@ -22,7 +22,10 @@ export default function Header() {
         <Link href="/">
           <Logo>FiCS<span style={{ color: '#4DACF0' }}>I</span><span style={{ color: '#D79845' }}>T</span>DB</Logo>
         </Link>
-        <StyledHamburgerButton onClick={() => setActive(!active)}>
+        <StyledHamburgerButton
+          onClick={() => setActive(!active)}
+          aria-label="Navbar"
+        >
           {active ?
             <StyledCloseIcon/> :
             <StyledHamburgerIcon/>
