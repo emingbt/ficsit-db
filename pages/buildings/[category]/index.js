@@ -40,6 +40,7 @@ export default function Buildings({ buildings }) {
                       width={64}
                       height={64}
                       alt={e.toLowerCase()}
+                      placeholder='empty'
                     />
                     <div>{e}</div>
                   </StyledCategory>
@@ -108,18 +109,32 @@ const StyledCategoiresContainer = styled.div`
 `
 
 const StyledCategory = styled.div`
-  width: 120px;
-  aspect-ratio: 1 / 1;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: ${props => props.selected ? "#D79845" : "#43454B"};
   color: #eeeeee;
-  margin: 0.5rem 0.25rem;
+  margin: 0.25rem 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.5rem;
   cursor: pointer;
   :hover {
     background-color: ${props => props.selected ? "#D79845" : "#141518"};
+  }
+
+  @media (min-width: 768px) {
+    width: 7.5vw;
+  }
+
+  @media (min-width: 1024px) {
+    width: 8vw;
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 1rem;
   }
 `
 
