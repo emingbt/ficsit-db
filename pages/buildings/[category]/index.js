@@ -93,11 +93,11 @@ export async function getServerSideProps(context) {
 }
 
 const StyledHeaderSection = styled.section`
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
 `
 
 const StyledCategoiresContainer = styled.div`
@@ -139,13 +139,13 @@ const StyledCategory = styled.div`
 `
 
 const StyledBuildingsSection = styled.section`
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
   background-color: #131416;
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 1rem;
 `
 
 const StyledBuildingsContainer = styled.div`
@@ -159,28 +159,34 @@ const StyledBuildingsContainer = styled.div`
 
 const StyledCategoryTitle = styled.div`
   width: calc(100% - 1rem);
-  height: 2rem;
   display: flex;
   align-items: center;
   background-color: #43454B;
   color: white;
-  padding-left: 1rem;
+  padding: 0.25rem 0.5rem;
   margin-bottom: 1rem;
   grid-gap: 3rem;
-  font-size: 1.25rem;
+  font-size: 0.75rem;
 `
 
 const StyledBuilding = styled.div`
-  width: calc(100% / 6.6);
+  width: 42%;
+  max-width: 16rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 0.5rem;
   margin-bottom: 1rem;
-  min-width: 9rem;
-  max-width: 16rem;
   cursor: pointer;
+
+  @media (min-width: 425px) {
+    width: 28%;
+  }
+
+  @media (min-width: 768px) {
+    width: calc(100% / 6.6);
+  }
 `
 
 const StyledBuildingImage = styled.div`
@@ -192,13 +198,19 @@ const StyledBuildingImage = styled.div`
 
 const StyledBuildingName = styled.div`
   width: 100%;
-  height: 54px;
+  min-height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #43454B;
   color: white;
-  padding: 1rem;
-  text-align: center;
+  padding: 0.25rem 0.5rem;
   margin-top: 0.05rem;
+  text-align: center;
+  font-size: 0.5rem;
+
+  @media (min-width: 1024px) {
+    min-height: 3rem;
+    font-size: 1rem;
+  }
 `
