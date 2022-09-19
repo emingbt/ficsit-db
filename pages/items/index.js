@@ -80,7 +80,6 @@ const StyledItemImage = styled(Image)`
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
-  padding: 1rem;
 `
 
 const StyledItemName = styled.div`
