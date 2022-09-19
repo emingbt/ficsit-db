@@ -37,8 +37,8 @@ export default function Building({ buildable, recipes }) {
                 <Image
                   name={buildable.slug}
                   src={`/images/buildables/${buildable.slug}.png`}
-                  width={250}
-                  height={250}
+                  width={256}
+                  height={256}
                   priority
                   quality={100}
                   alt={buildable.name}
@@ -53,22 +53,26 @@ export default function Building({ buildable, recipes }) {
                       <StyledCostItem key={e.itemClass}>
                         <StyledText>{e.quantity}x</StyledText>
                         <Link href={`/items/${e.itemClass}`}>
-                          <StyledImage
-                            src={`/images/items/${e.itemClass}.png`}
-                            width={64}
-                            height={64}
-                            alt={e.itemClass}
-                            quality={40}
-                          />
+                          <StyledCostItemImage>
+                            <Image
+                              src={`/images/items/${e.itemClass}.png`}
+                              width={64}
+                              height={64}
+                              layout="fill"
+                              objectFit='cover'
+                              alt={e.itemClass}
+                              quality={40}
+                            />
+                          </StyledCostItemImage>
                         </Link>
                       </StyledCostItem>
                     )
                   })}
                 </StyledCostContainer>
               </StyledDetail>
-              <StyledDetail description>
+              {/* <StyledDetail description>
                 {buildable.description}
-              </StyledDetail>
+              </StyledDetail> */}
             </StyledDetailContainer>
             {
               buildable.isOverclockable &&
@@ -133,17 +137,17 @@ const StyledTitleSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 90%;
 `
 
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 90%;
   background-color: #131416;
   margin-top: 1rem;
-  padding: 1.5rem;
+  padding: 0.75rem;
 `
 
 const StyledSection = styled.section`
@@ -159,12 +163,15 @@ const StyledDetailContainer = styled.section`
   flex-direction: row;
   align-items: center;
   width: 100%;
-  height: 250px;
+  height: 6rem;
+  @media (min-width: 768px) {
+    height: 8rem;
+  }
 `
 
 const StyledDetail = styled.div`
+  width: calc(100% - 6rem);
   height: 100%;
-  width: calc(50% - 125px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,28 +185,30 @@ const StyledDetail = styled.div`
 
 const StyledName = styled.div`
   width: 100%;
-  height: 70px;
+  height: 28%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #101010;
   color: white;
+  padding: 0.25rem 0.5rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 0.75rem;
 `
 
 const StyledCostTitle = styled.div`
   width: 100%;
-  height: 30px;
+  height: 12%;
   color: white;
   background-color: #D79845;
   text-align: left;
   padding-left: 2rem;
+  font-size: 0.5rem;
 `
 
 const StyledCostContainer = styled.div`
   width: 100%;
-  height: 150px;
+  height: 70%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -208,15 +217,26 @@ const StyledCostContainer = styled.div`
 `
 
 const StyledCostItem = styled.div`
+  height: 42%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 0 0.5rem;
+  margin: 0 0.75rem;
 `
 
 const StyledText = styled.p`
   margin: 0 0.25rem;
+  font-size: 0.5rem;
+`
+
+const StyledCostItemImage = styled.div`
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  padding: 0.125rem;
+  background-color: #202125;
+  border-radius: 0.25rem;
 `
 
 const StyledConsumptionContainer = styled.div`

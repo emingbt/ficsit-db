@@ -38,17 +38,19 @@ const StyledTitle = styled.div`
 
 const StyledImageContainer = styled.div`
   height: 100%;
+  /* width: 6rem; */
   aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
   padding: 0.25rem;
 `
 
 const StyledImage = styled(Image)`
-  height: 80px;
+  height: 100%;
+  min-height: 1.5rem;
+  max-height: 4rem;
   aspect-ratio: 1 / 1;
   background-color: #202125;
-  border-radius: 8px;
-  padding: 0.25rem;
+  border-radius: 0.25rem;
   cursor: pointer;
 `
 
