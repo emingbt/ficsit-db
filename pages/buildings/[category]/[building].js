@@ -33,46 +33,48 @@ export default function Building({ buildable, recipes }) {
         <StyledContainer>
           <StyledSection>
             <StyledDetailContainer>
-              <StyledImageContainer>
-                <Image
-                  name={buildable.slug}
-                  src={`/images/buildables/${buildable.slug}.png`}
-                  width={256}
-                  height={256}
-                  priority
-                  quality={100}
-                  alt={buildable.name}
-                />
-              </StyledImageContainer>
-              <StyledDetail>
-                <StyledName>{buildable.name}</StyledName>
-                <StyledCostTitle>Cost :</StyledCostTitle>
-                <StyledCostContainer>
-                  {buildable.cost.map((e) => {
-                    return (
-                      <StyledCostItem key={e.itemClass}>
-                        <StyledText>{e.quantity}x</StyledText>
-                        <Link href={`/items/${e.itemClass}`}>
-                          <StyledCostItemImage>
-                            <Image
-                              src={`/images/items/${e.itemClass}.png`}
-                              width={64}
-                              height={64}
-                              layout="fill"
-                              objectFit='cover'
-                              alt={e.itemClass}
-                              quality={40}
-                            />
-                          </StyledCostItemImage>
-                        </Link>
-                      </StyledCostItem>
-                    )
-                  })}
-                </StyledCostContainer>
-              </StyledDetail>
-              {/* <StyledDetail description>
+                <StyledDetailHeader>
+                <StyledImageContainer>
+                  <Image
+                    name={buildable.slug}
+                    src={`/images/buildables/${buildable.slug}.png`}
+                    width={256}
+                    height={256}
+                    priority
+                    quality={100}
+                    alt={buildable.name}
+                  />
+                </StyledImageContainer>
+                <StyledDetail>
+                  <StyledName>{buildable.name}</StyledName>
+                  <StyledCostTitle>Cost :</StyledCostTitle>
+                  <StyledCostContainer>
+                    {buildable.cost.map((e) => {
+                      return (
+                        <StyledCostItem key={e.itemClass}>
+                          <StyledText>{e.quantity}x</StyledText>
+                          <Link href={`/items/${e.itemClass}`}>
+                            <StyledCostItemImage>
+                              <Image
+                                src={`/images/items/${e.itemClass}.png`}
+                                // width={64}
+                                // height={64}
+                                layout="fill"
+                                objectFit='cover'
+                                alt={e.itemClass}
+                                quality={40}
+                              />
+                            </StyledCostItemImage>
+                          </Link>
+                        </StyledCostItem>
+                      )
+                    })}
+                  </StyledCostContainer>
+                </StyledDetail>
+              </StyledDetailHeader>
+              <StyledDescription>
                 {buildable.description}
-              </StyledDetail> */}
+              </StyledDescription>
             </StyledDetailContainer>
             {
               buildable.isOverclockable &&
@@ -160,10 +162,15 @@ const StyledSection = styled.section`
 
 const StyledDetailContainer = styled.section`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   width: 100%;
+const StyledDetailHeader = styled.div`
   height: 6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
   @media (min-width: 768px) {
     height: 8rem;
   }
@@ -202,7 +209,7 @@ const StyledCostTitle = styled.div`
   color: white;
   background-color: #D79845;
   text-align: left;
-  padding-left: 2rem;
+  padding-left: 1rem;
   font-size: 0.5rem;
 `
 
@@ -218,11 +225,12 @@ const StyledCostContainer = styled.div`
 
 const StyledCostItem = styled.div`
   height: 42%;
+  min-width: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 0 0.75rem;
+  margin: 0 0.25rem;
 `
 
 const StyledText = styled.p`
@@ -239,8 +247,19 @@ const StyledCostItemImage = styled.div`
   border-radius: 0.25rem;
 `
 
+const StyledDescription = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 0.5rem;
+  background-color: #202125;
+`
+
 const StyledConsumptionContainer = styled.div`
-  height: 75px;
+  height: 2rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -250,26 +269,27 @@ const StyledConsumptionContainer = styled.div`
 
 const StyledEnergyContainer = styled.div`
   height: 100%;
-  width: 250px;
+  width: 6rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   background-color: #43454B;
   color: white;
-  font-size: 1.5rem;
+  font-size: 0.5rem;
+
 `
 
 const StyledVerticalLine = styled.div`
   height: 100%;
-  width: 2px;
+  width: 1px;
   justify-self: center;
   background-color: #F1C700;
 `
 
 const StyledClockspeedContainer = styled.label`
   height: 100%;
-  width: calc(100% - 250px);
+  width: calc(100% - 6rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -284,13 +304,15 @@ const StyledClockspeedInput = styled.input`
   background-size: 50px;
   cursor: pointer;
   width: 79%;
+  height: 60%;
+  user-select: none;
   ::-webkit-slider-runnable-track {
-    height: 30px;
+    height: 60%;
     background-color: #43454B;
     background: linear-gradient(90deg, #E39744 0%, #F7DE50 100%);
   }
   ::-moz-range-track {
-    height: 30px;
+    height: 60%;
     background-color: #43454B;
     background: linear-gradient(90deg, #E39744 0%, #F7DE50 100%);
   }
@@ -298,17 +320,19 @@ const StyledClockspeedInput = styled.input`
      -webkit-appearance: none;
      appearance: none;
      background-color: #43454B;
-     height: 30px;
+     height: 100%;
      width: 2px;
+     z-index: 4;
   }
 `
 
 const StyledClockspeedTextContainer = styled.div`
   width: 79%;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: end;
+  transform: translateY(-25%);
 `
 
 const StyledClockspeedText = styled.div`
@@ -318,6 +342,7 @@ const StyledClockspeedText = styled.div`
   color: ${props => props.overclocked ? '#fffeee' : '#141518'};
   font-style: ${props => props.overclocked ? 'normal' : 'italic'};
   margin-left: 15%;
+  font-size: 0.5rem;
 `
 
 const StyledExtractionContainer = styled.div`
