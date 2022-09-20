@@ -150,6 +150,10 @@ const StyledContainer = styled.div`
   background-color: #131416;
   margin-top: 1rem;
   padding: 0.75rem;
+
+  @media (min-width: 1024px) {
+    padding: 1rem;
+  }
 `
 
 const StyledSection = styled.section`
@@ -165,6 +169,12 @@ const StyledDetailContainer = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`
+
 const StyledDetailHeader = styled.div`
   height: 6rem;
   width: 100%;
@@ -173,6 +183,10 @@ const StyledDetailHeader = styled.div`
 
   @media (min-width: 768px) {
     height: 8rem;
+  }
+
+  @media (min-width: 1024px) {
+    height: 12rem;
   }
 `
 
@@ -201,6 +215,10 @@ const StyledName = styled.div`
   padding: 0.25rem 0.5rem;
   text-align: center;
   font-size: 0.75rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `
 
 const StyledCostTitle = styled.div`
@@ -211,6 +229,10 @@ const StyledCostTitle = styled.div`
   text-align: left;
   padding-left: 1rem;
   font-size: 0.5rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+  }
 `
 
 const StyledCostContainer = styled.div`
@@ -231,11 +253,20 @@ const StyledCostItem = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 0.25rem;
+
+  @media (min-width: 1024px) {
+    min-width: 5rem;
+    height: 36%;
+  }
 `
 
 const StyledText = styled.p`
   margin: 0 0.25rem;
   font-size: 0.5rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+  }
 `
 
 const StyledCostItemImage = styled.div`
@@ -256,6 +287,17 @@ const StyledDescription = styled.div`
   color: white;
   font-size: 0.5rem;
   background-color: #202125;
+
+  @media (min-width: 768px) {
+    width: 80%;
+    min-height: 8rem;
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 1024px) {
+    min-height: 12rem;
+    font-size: 1rem;
+  }
 `
 
 const StyledConsumptionContainer = styled.div`
@@ -265,6 +307,10 @@ const StyledConsumptionContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 1024px) {
+    height: 3rem;
+  }
 `
 
 const StyledEnergyContainer = styled.div`
@@ -278,6 +324,15 @@ const StyledEnergyContainer = styled.div`
   color: white;
   font-size: 0.5rem;
 
+  @media (min-width: 768px) {
+    width: 8rem;
+    font-size: 0.6rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 12rem;
+    font-size: 1rem;
+  }
 `
 
 const StyledVerticalLine = styled.div`
@@ -295,6 +350,14 @@ const StyledClockspeedContainer = styled.label`
   align-items: center;
   justify-content: center;
   background-color: #9BA3A9;
+
+  @media (min-width: 768px) {
+    width: calc(100% - 8rem);
+  }
+
+  @media (min-width: 1024px) {
+    width: calc(100% - 12rem);
+  }
 `
 
 const StyledClockspeedInput = styled.input`
@@ -333,6 +396,10 @@ const StyledClockspeedTextContainer = styled.div`
   align-items: center;
   justify-content: end;
   transform: translateY(-25%);
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `
 
 const StyledClockspeedText = styled.div`
@@ -343,6 +410,10 @@ const StyledClockspeedText = styled.div`
   font-style: ${props => props.overclocked ? 'normal' : 'italic'};
   margin-left: 15%;
   font-size: 0.5rem;
+
+  @media (min-width: 1024px) {
+    font-size: 0.75rem;
+  }
 `
 
 const StyledExtractionContainer = styled.div`
