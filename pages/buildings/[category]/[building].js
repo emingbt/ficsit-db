@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
-import { Container, Main, StyledLine, StyledTitle, StyledImageContainer, StyledImage } from '../../../components/sharedstyles'
+import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../../components/sharedstyles'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { getBuildableByName, getRecipesByBuildingName } from '../../../lib/api'
