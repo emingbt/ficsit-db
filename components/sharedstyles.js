@@ -38,7 +38,6 @@ const StyledTitle = styled.div`
 
 const StyledImageContainer = styled.div`
   height: 100%;
-  /* width: 6rem; */
   aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
   padding: 0.25rem;
