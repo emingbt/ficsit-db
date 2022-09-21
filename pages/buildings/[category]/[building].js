@@ -33,7 +33,7 @@ export default function Building({ buildable, recipes }) {
         <StyledContainer>
           <StyledSection>
             <StyledDetailContainer>
-                <StyledDetailHeader>
+              <StyledDetailHeader>
                 <StyledImageContainer>
                   <Image
                     name={buildable.slug}
@@ -135,18 +135,18 @@ export function getServerSideProps(context) {
 }
 
 const StyledTitleSection = styled.div`
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
 `
 
 const StyledContainer = styled.div`
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
   background-color: #131416;
   margin-top: 1rem;
   padding: 0.75rem;
@@ -165,10 +165,10 @@ const StyledSection = styled.section`
 `
 
 const StyledDetailContainer = styled.section`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -200,8 +200,7 @@ const StyledDetail = styled.div`
   background-color: #202125;
   text-align: center;
   color: white;
-  font-size: ${props => props.description ? '1.25rem' : '1.5rem'};
-  ${props => props.description && 'padding: 2rem;'}
+  font-size: 1.5rem;
 `
 
 const StyledName = styled.div`
