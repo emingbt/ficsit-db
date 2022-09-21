@@ -14,37 +14,39 @@ export default function Item({ item, recipes, usagesAsIngredient }) {
           <StyledLine color='#E5AF07' />
         </StyledTitleSection>
         <StyledContainer>
-          <StyledDetailContainer>
-            <StyledImageContainer>
-              <Image
-                name={item.slug}
-                src={`/images/items/${item.slug}.png`}
-                width={250}
-                height={250}
-                priority
-                quality={100}
-                alt={item.name}
-              />
-            </StyledImageContainer>
-            <StyledDetail>
-              <StyledName>{item.name}</StyledName>
-              <StyledText>
-                <p>Stack Size:</p>
-                <p>{item.stackSize}</p>
-              </StyledText>
-              <StyledText primary>
-                <p>Sink Value:</p>
-                <p>{item.sinkPoints}</p>
-              </StyledText>
-              <StyledText>
-                <p>Radioactive:</p>
-                <p>{item.isRadioactive ? 'Yes' : 'No'}</p>
-              </StyledText>
-            </StyledDetail>
-            <StyledDetail description>
+          <StyledSection>
+            <StyledDetailHeader>
+              <StyledImageContainer>
+                <Image
+                  name={item.slug}
+                  src={`/images/items/${item.slug}.png`}
+                  width={256}
+                  height={256}
+                  priority
+                  quality={100}
+                  alt={item.name}
+                />
+              </StyledImageContainer>
+              <StyledDetail>
+                <StyledName>{item.name}</StyledName>
+                <StyledText>
+                  <p>Stack Size:</p>
+                  <p>{item.stackSize}</p>
+                </StyledText>
+                <StyledText primary>
+                  <p>Sink Value:</p>
+                  <p>{item.sinkPoints}</p>
+                </StyledText>
+                <StyledText>
+                  <p>Radioactive:</p>
+                  <p>{item.isRadioactive ? 'Yes' : 'No'}</p>
+                </StyledText>
+              </StyledDetail>
+            </StyledDetailHeader>
+            <StyledDescription>
               {item.description}
-            </StyledDetail>
-          </StyledDetailContainer>
+            </StyledDescription>
+          </StyledSection>
           <Recipe recipes={recipes} title={"Recipes"} />
           <Recipe recipes={usagesAsIngredient} title={"Usages as Ingredient"} />
         </StyledContainer>
@@ -63,34 +65,56 @@ export async function getServerSideProps(context) {
 }
 
 const StyledTitleSection = styled.div`
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
 `
 
 const StyledContainer = styled.div`
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
   background-color: #131416;
   margin-top: 1rem;
-  padding: 1.5rem;
+  padding: 0.75rem;
+
+  @media (min-width: 1024px) {
+    padding: 1rem;
+  }
 `
 
-const StyledDetailContainer = styled.section`
+const StyledSection = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`
+
+const StyledDetailHeader = styled.div`
+  height: 6rem;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 250px;
+
+  @media (min-width: 768px) {
+    height: 8rem;
+  }
+
+  @media (min-width: 1024px) {
+    height: 12rem;
+  }
 `
 
 const StyledDetail = styled.div`
+  width: calc(100% - 6rem);
   height: 100%;
-  width: calc(50% - 125px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,25 +122,29 @@ const StyledDetail = styled.div`
   background-color: #202125;
   text-align: center;
   color: white;
-  font-size: ${props => props.description ? '1.25rem' : '1.5rem'};
-  ${props => props.description && 'padding: 2rem;'}
+  font-size: 1.5rem;
 `
 
 const StyledName = styled.div`
   width: 100%;
-  height: 70px;
+  height: 28%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: 101010;
+  background-color: #101010;
   color: white;
+  padding: 0.25rem 0.5rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 0.75rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `
 
 const StyledText = styled.div`
   width: 100%;
-  height: 60px;
+  height: 24%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -125,4 +153,35 @@ const StyledText = styled.div`
   text-align: center;
   color: white;
   background-color: ${props => props.primary ? '#43454B' : '#46484E'};
+  font-size: 0.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+  }
+`
+
+const StyledDescription = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 0.5rem;
+  background-color: #202125;
+
+  @media (min-width: 768px) {
+    width: 80%;
+    min-height: 8rem;
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 1024px) {
+    min-height: 12rem;
+    font-size: 1rem;
+  }
 `
