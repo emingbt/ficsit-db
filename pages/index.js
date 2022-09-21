@@ -136,7 +136,6 @@ const StyledNavImage = styled.div`
   width: 100%;
   position: relative;
   border-radius: 0.25rem;
-  /* opacity: 0.8; */
   background-color: #be7c37;
 
   @media (min-width: 768px) {
