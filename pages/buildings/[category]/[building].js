@@ -269,12 +269,20 @@ const StyledText = styled.p`
 `
 
 const StyledCostItemImage = styled.div`
+  min-width: 1.5rem;
   height: 100%;
   aspect-ratio: 1 / 1;
   position: relative;
-  padding: 0.125rem;
   background-color: #202125;
   border-radius: 0.25rem;
+
+  @media (min-width: 768px) {
+    min-width: 2.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    min-width: 2.65rem;
+  }
 `
 
 const StyledDescription = styled.div`
@@ -382,8 +390,9 @@ const StyledClockspeedInput = styled.input`
      -webkit-appearance: none;
      appearance: none;
      background-color: #43454B;
-     height: 100%;
-     width: 2px;
+     height: 150%;
+     width: 0.25rem;
+     transform: translateY(-15%);
      z-index: 4;
   }
 `
