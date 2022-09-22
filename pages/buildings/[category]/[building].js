@@ -426,7 +426,8 @@ const StyledClockspeedText = styled.div`
 
 const StyledExtractionContainer = styled.div`
   width: 100%;
-  height: 75px;
+  height: 100%;
+  min-height: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -435,32 +436,33 @@ const StyledExtractionContainer = styled.div`
 `
 
 const StyledExtractionRate = styled.div`
-  width: 250px;
+  width: 6rem;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 0.5rem;
   color: white;
 `
 
 const StyledPurityContainer = styled.div`
-  width: calc(100% - 252px);
+  width: calc(100% - 6rem);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
 `
 
 const StyledPurity = styled.div`
-  width: 9rem;
-  height: 3rem;
+  min-width: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 3.25rem;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
   background-color: ${props => props.selected ? "#D79845" : "#43454B"};
   color: white;
-  font-size: 1.5rem;
+  font-size: 0.5rem;
   cursor: pointer;
 `
