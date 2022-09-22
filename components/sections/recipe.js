@@ -10,9 +10,9 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
         {recipes.map((recipe) => {
           return (
             <StyledRecipeContainer key={recipe.slug}>
-              <StyledRecipeTitleContainer>
+              <StyledRecipeTitle>
                 {recipe.name.split(':')[recipe.isAlternate ? 1 : 0]} {recipe.isAlternate && (<span style={{ color: '#E5AF07' }}>Alternate</span>)}
-              </StyledRecipeTitleContainer>
+              </StyledRecipeTitle>
               <StyledRecipe>
                 <StyledContainer flexDirection="row">
                   {recipe.ingredients.map((ingredient) => {
@@ -115,7 +115,7 @@ const StyledRecipeContainer = styled.div`
   align-items: center;
 `
 
-const StyledRecipeTitleContainer = styled.div`
+const StyledRecipeTitle = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
