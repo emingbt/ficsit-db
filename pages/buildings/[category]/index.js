@@ -207,7 +207,7 @@ const StyledBuildingName = styled.div`
   padding: 0.25rem 0.5rem;
   margin-top: 0.05rem;
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 0.65rem;
 
   @media (min-width: 1024px) {
     min-height: 3rem;
