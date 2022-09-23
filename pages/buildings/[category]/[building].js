@@ -426,13 +426,17 @@ const StyledClockspeedText = styled.div`
 
 const StyledExtractionContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 2rem;
   min-height: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: #202125;
+
+  @media (min-width: 1024px) {
+    height: 3rem;
+  }
 `
 
 const StyledExtractionRate = styled.div`
@@ -443,6 +447,16 @@ const StyledExtractionRate = styled.div`
   align-items: center;
   font-size: 0.5rem;
   color: white;
+
+  @media (min-width: 768px) {
+    width: 8rem;
+    font-size: 0.6rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 12rem;
+    font-size: 1rem;
+  }
 `
 
 const StyledPurityContainer = styled.div`
@@ -452,10 +466,18 @@ const StyledPurityContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media (min-width: 768px) {
+    width: calc(100% - 8rem);
+  }
+
+  @media (min-width: 1024px) {
+    width: calc(100% - 12rem);
+  }
 `
 
 const StyledPurity = styled.div`
-  min-width: 3rem;
+  min-width: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -465,4 +487,11 @@ const StyledPurity = styled.div`
   color: white;
   font-size: 0.5rem;
   cursor: pointer;
+
+  @media (min-width: 1024px) {
+    min-width: 6rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+  }
 `
