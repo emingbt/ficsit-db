@@ -42,16 +42,18 @@ const StyledSection = styled.section`
 
 const StyledTitle = styled.div`
   width: 100%;
-  height: 80px;
   display: flex;
   align-items: center;
   background-color: #D79845;
   color: white;
-  padding-left: 1.5rem;
-  padding-bottom: 0.25rem;
-  font-size: 2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
   font-family: 'Roboto', sans-serif;
-  margin-bottom: 36px;
+
+  @media (min-width: 1024px) {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
 `
 
 const StyledResourceContainer = styled.div`
@@ -59,32 +61,52 @@ const StyledResourceContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0 1rem;
+  padding: 0.5rem 0 0 0.5rem;
+
+  @media (min-width: 1024px) {
+    padding: 1rem 0 0 1rem;
+  }
 `
 
 const StyledResource = styled.div`
+  width: 30%;
+  max-width: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 1.25rem;
-  margin-bottom: 1rem;
+  margin: 0 0.5rem 0.5rem 0;
   cursor: pointer;
+
+  @media (min-width: 1024px) {
+    min-width: 8rem;
+    margin: 0 1rem 1rem 0;
+  }
 `
 
 const StyledResourceImage = styled.div`
-  width: 120px;
+  width: 100%;
   aspect-ratio: 1 / 1;
-  background-color: #43454B;
   padding: 0.25rem;
+  background-color: #43454B;
 `
 
 const StyledResourceName = styled.div`
   width: 100%;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  padding: 0.25rem;
   background-color: #202125;
+  color: white;
+  font-size: 0.5rem;
+
+  @media (min-width: 425px) {
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
 `
