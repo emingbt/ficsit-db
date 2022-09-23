@@ -12,7 +12,6 @@ export default function Fuel({ fuels, operatingRate }) {
             <StyledRecipe key={e}>
               <StyledContainer flexDirection="row">
                 <StyledItem>
-                  <StyledContainer flexDirection="column">
                     <Link href={`/items/${e.fuel.itemClass}`}>
                       <StyledImage
                         src={`/images/items/${e.fuel.itemClass}.png`}
@@ -23,12 +22,10 @@ export default function Fuel({ fuels, operatingRate }) {
                       />
                     </Link>
                     <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.fuel.rate).toFixed(3))}/min</StyledUsePerMin>
-                  </StyledContainer>
                 </StyledItem>
                 {
                   e.supplement &&
                   <StyledItem>
-                    <StyledContainer flexDirection="column">
                       <Link href={`/items/${e.supplement.itemClass}`}>
                         <StyledImage
                           src={`/images/items/${e.supplement.itemClass}.png`}
@@ -39,7 +36,6 @@ export default function Fuel({ fuels, operatingRate }) {
                         />
                       </Link>
                       <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.supplement.rate).toFixed(3))}/min</StyledUsePerMin>
-                    </StyledContainer>
                   </StyledItem>
                 }
               </StyledContainer>
@@ -48,7 +44,6 @@ export default function Fuel({ fuels, operatingRate }) {
                   <StyledContainer flexDirection="row">
                     <StyledVerticalLine isAlternate={e.isAlternate} />
                     <StyledItem product>
-                      <StyledContainer flexDirection="column" style={{ maxWidth: '80px' }}>
                         <Link href={`/items/${e.byproduct.itemClass}`}>
                           <StyledImage
                             src={`/images/items/${e.byproduct.itemClass}.png`}
@@ -59,7 +54,6 @@ export default function Fuel({ fuels, operatingRate }) {
                           />
                         </Link>
                         <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.byproduct.rate).toFixed(3))}/min</StyledUsePerMin>
-                      </StyledContainer>
                     </StyledItem>
                   </StyledContainer>
                 }
@@ -80,16 +74,19 @@ const StyledSection = styled.section`
 
 const StyledTitle = styled.div`
   width: 100%;
-  height: 80px;
   display: flex;
   align-items: center;
   background-color: #D79845;
   color: white;
-  padding-left: 1.5rem;
-  padding-bottom: 0.25rem;
-  font-size: 2rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
   font-family: 'Roboto', sans-serif;
-  margin-bottom: 36px;
+
+  @media (min-width: 1024px) {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
 `
 
 const StyledRecipeContainer = styled.div`
@@ -101,14 +98,20 @@ const StyledRecipeContainer = styled.div`
 
 const StyledRecipe = styled.div`
   width: 100%;
-  height: 150px;
+  height: 4rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: #43454B;
-  margin-bottom: 36px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
   color: white;
+
+  @media (min-width: 1024px) {
+    height: 8rem;
+    padding: 1rem;
+  }
 `
 
 const StyledContainer = styled.div`
@@ -120,23 +123,38 @@ const StyledContainer = styled.div`
 `
 
 const StyledItem = styled.div`
+  width: 3rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 0 1rem;
-  min-width: 160px;
-  margin: 0 1rem;
-  margin-top: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin: 0 0.75rem;
+
+  @media (min-width: 1024px) {
+    width: 5rem;
+    margin: 0 0.75rem;
+    ${props => props.product && "margin-left: 2rem;"}
+  }
 `
 
 const StyledUsePerMin = styled.p`
-  font-size: 1.25rem;
-  margin: 0.5rem;
+  font-size: 0.5rem;
+  margin: 0;
+  margin-top: 0.5rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+  }
 `
 
 const StyledVerticalLine = styled.div`
-  height: 100%;
-  width: 3px;
+  height: 4rem;
+  width: 1px;
   background-color: #D79845;
   ${props => props.isAlternate && 'background: repeating-linear-gradient(-35deg,#E5AF07,#E5AF07 10px,#202125 10px,#202125 20px)'}
+
+  @media (min-width: 1024px) {
+    height: 8rem;
+  }
 `
