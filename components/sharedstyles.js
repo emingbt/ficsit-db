@@ -45,8 +45,6 @@ const StyledImageContainer = styled.div`
 
 const StyledImage = styled(Image)`
   height: 100%;
-  min-height: 1.5rem;
-  max-height: 4rem;
   aspect-ratio: 1 / 1;
   background-color: #202125;
   border-radius: 0.25rem;
