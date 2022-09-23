@@ -246,16 +246,16 @@ const StyledCostContainer = styled.div`
 
 const StyledCostItem = styled.div`
   height: 42%;
-  min-width: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 0 0.25rem;
+  margin: 0 0.125rem;
 
   @media (min-width: 1024px) {
     min-width: 5rem;
     height: 36%;
+    margin: 0 0.5rem;
   }
 `
 
@@ -275,6 +275,7 @@ const StyledCostItemImage = styled.div`
   position: relative;
   background-color: #202125;
   border-radius: 0.25rem;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     min-width: 2.25rem;
