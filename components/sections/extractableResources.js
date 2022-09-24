@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import { StyledImage } from '../sharedstyles'
 import Image from 'next/image'
 
 export default function ExtractableResources({ extractableResources }) {
