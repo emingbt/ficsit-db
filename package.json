@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^6.3.1",
     "@types/styled-components": "^5.1.25",
     "next": "12.2.2",
     "nextjs-google-analytics": "^2.1.0",

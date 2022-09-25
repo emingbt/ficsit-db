@@ -2583,7 +2583,7 @@
         "Production",
         "Workstations"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 1,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -2607,7 +2607,7 @@
         "Production",
         "Workstations"
       ],
-      "buildMenuPriority": null,
+      "buildMenuPriority": 2,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,

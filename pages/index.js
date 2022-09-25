@@ -63,18 +63,21 @@ const StyledBannerSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
-  height: 50%;
+  margin: 0.5rem 0;
   width: 100%;
 `
 
 const StyledBannerContainer = styled.div`
-  height: 40vh;
+  height: 20vh;
   width: 80%;
   position: relative;
   background-color: #224d61;
   border-radius: 0.25rem;
   object-position: center;
+
+  @media (min-width: 1024px) {
+    height: 40vh;
+  }
 `
 
 const StyledBackgroundImage = styled(Image)`
@@ -82,34 +85,37 @@ const StyledBackgroundImage = styled(Image)`
 `
 
 const StyledBannerText = styled.div`
-  height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem 2rem ;
+  padding: 0.5rem 1rem ;
   background-color: #43454B;
-  margin-top: -2.5rem;
+  transform: translateY(-50%);
   border-width: 2px;
   border-radius: 0.25rem;
   border-color: #F2C800;
   border-style: solid;
   text-align: center;
   color: white;
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 2vw, 2rem);
   z-index: 4;
 `
 
 const StyledNavSection = styled.nav`
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
-  height: 75vh;
+  padding: 2.5rem 0 1rem 0;
   background-color: #141518;
-  margin-top: 4rem;
   position: relative;
+  background: repeating-linear-gradient(-35deg,#141518,#141518 10px,#131416 10px,#131416 20px);
+
+  @media (min-width: 465px) {
+    flex-direction: row;
+  }
 `
 
 const StyledNavItem = styled.div`
@@ -117,34 +123,41 @@ const StyledNavItem = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 36%;
+  width: 75%;
   cursor: pointer;
+
+  @media (min-width: 465px) {
+    width: 36%;
+  }
 `
 
 const StyledNavImage = styled.div`
-  height: 48vh;
+  height: 20vh;
   width: 100%;
   position: relative;
   border-radius: 0.25rem;
-  opacity: 0.8;
   background-color: #be7c37;
+
+  @media (min-width: 768px) {
+    height: 40vh;
+  }
 `
 
 const StyledNavText = styled.div`
-  height: 8vh;
-  width: 50%;
+  min-width: 36%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -2rem;
+  padding: 0.5rem 2rem ;
+  transform: translateY(-50%);
   background-color: #43454B;
-  border-width: 3px;
+  border-width: 2px;
   border-radius: 0.25rem;
   border-color: #F2C800;
   border-style: solid;
   text-align: center;
   vertical-align: center;
   color: white;
-  font-size: 2rem;
+  font-size: clamp(1rem, 2vw, 2rem);
   z-index: 1;
 `

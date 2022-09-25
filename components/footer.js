@@ -11,7 +11,7 @@ export default function Footer() {
 }
 
 const Wrapper = styled.footer`
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,8 +21,8 @@ const Wrapper = styled.footer`
 
 const StyledText = styled.p`
   color: #ffffff;
-  margin: 2rem;
-  font-size: 1.25rem;
+  margin: 1.5rem;
+  font-size: clamp(0.5rem, 2vw, 1.25rem);
 `
 
 const StyledAnchor = styled.a`

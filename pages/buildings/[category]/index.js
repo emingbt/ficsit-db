@@ -40,6 +40,7 @@ export default function Buildings({ buildings }) {
                       width={64}
                       height={64}
                       alt={e.toLowerCase()}
+                      placeholder='empty'
                     />
                     <div>{e}</div>
                   </StyledCategory>
@@ -92,44 +93,59 @@ export async function getServerSideProps(context) {
 }
 
 const StyledHeaderSection = styled.section`
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
 `
 
 const StyledCategoiresContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 `
 
 const StyledCategory = styled.div`
-  width: 120px;
-  aspect-ratio: 1 / 1;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: ${props => props.selected ? "#D79845" : "#43454B"};
   color: #eeeeee;
-  margin: 0.5rem 0.25rem;
+  margin: 0.25rem 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.5rem;
   cursor: pointer;
   :hover {
     background-color: ${props => props.selected ? "#D79845" : "#141518"};
   }
+
+  @media (min-width: 768px) {
+    width: 7.5vw;
+  }
+
+  @media (min-width: 1024px) {
+    width: 8vw;
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 1rem;
+  }
 `
 
 const StyledBuildingsSection = styled.section`
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
   background-color: #131416;
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 1rem;
 `
 
 const StyledBuildingsContainer = styled.div`
@@ -143,27 +159,34 @@ const StyledBuildingsContainer = styled.div`
 
 const StyledCategoryTitle = styled.div`
   width: calc(100% - 1rem);
-  height: 2rem;
   display: flex;
   align-items: center;
   background-color: #43454B;
   color: white;
-  padding-left: 1rem;
+  padding: 0.25rem 0.5rem;
   margin-bottom: 1rem;
   grid-gap: 3rem;
-  font-size: 1.25rem;
+  font-size: 0.75rem;
 `
 
 const StyledBuilding = styled.div`
-  width: calc(100% / 6.6);
+  width: 42%;
+  max-width: 16rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 0.5rem;
   margin-bottom: 1rem;
-  min-width: 9rem;
   cursor: pointer;
+
+  @media (min-width: 425px) {
+    width: 28%;
+  }
+
+  @media (min-width: 768px) {
+    width: calc(100% / 6.6);
+  }
 `
 
 const StyledBuildingImage = styled.div`
@@ -175,13 +198,19 @@ const StyledBuildingImage = styled.div`
 
 const StyledBuildingName = styled.div`
   width: 100%;
-  height: 54px;
+  min-height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #43454B;
   color: white;
-  padding: 1rem;
-  text-align: center;
+  padding: 0.25rem 0.5rem;
   margin-top: 0.05rem;
+  text-align: center;
+  font-size: 0.65rem;
+
+  @media (min-width: 1024px) {
+    min-height: 3rem;
+    font-size: 1rem;
+  }
 `

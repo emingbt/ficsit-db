@@ -61,7 +61,7 @@ const StyledItemsContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 `
 
 const StyledItem = styled.div`
@@ -71,7 +71,8 @@ const StyledItem = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0.5rem;
-  min-width: 7rem;
+  min-width: 4rem;
+  max-width: 10rem;
   cursor: pointer;
 `
 
@@ -79,20 +80,26 @@ const StyledItemImage = styled(Image)`
   width: 100%;
   aspect-ratio: 1 / 1;
   background-color: #9BA3A9;
-  padding: 1rem;
 `
 
 const StyledItemName = styled.div`
+  width: 100%;
+  min-height: 2.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 3vw;
-  min-height: 2.5rem;
   background-color: #43454B;
-  padding: 0.25rem;
   color: white;
+  padding: 0 0.25rem;
   text-align: center;
-  font-size: 100%;
+  font-size: 0.5rem;
   z-index: 2;
+
+  @media (min-width: 768px) {
+    font-size: clamp(0.65rem, 1vw, 1rem);
+  }
+
+  @media (min-width: 1024px) {
+    min-height: 3rem;
+  }
 `
