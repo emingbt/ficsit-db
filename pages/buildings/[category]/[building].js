@@ -21,7 +21,7 @@ export default function Building({ buildable, recipes }) {
   let operatingRate = Math.pow((clockspeed / 100), 1 / buildable.meta?.overclockInfo?.exponent) * 100
 
   const [purity, setPurity] = useState(1)
-  let extractionRate = buildable.meta?.extractorInfo?.resourceExtractSpeed * purity * clockspeed / 100
+  let extractionRate = parseFloat((buildable.meta?.extractorInfo?.resourceExtractSpeed * purity * clockspeed / 100).toFixed(2))
 
   return (
     <Container>
