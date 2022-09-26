@@ -167,6 +167,11 @@ const StyledCategoryTitle = styled.div`
   margin-bottom: 1rem;
   grid-gap: 3rem;
   font-size: 0.75rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1.25rem;
+    padding: 0.25rem 0.75rem;
+  }
 `
 
 const StyledBuilding = styled.div`
