@@ -12,7 +12,8 @@ export default function Fuel({ fuels, operatingRate }) {
             <StyledRecipe key={i}>
               <StyledContainer flexDirection="row">
                 <StyledItem>
-                    <Link href={`/items/${e.fuel.itemClass}`}>
+                  <Link href={`/items/${e.fuel.itemClass}`}>
+                    <a>
                       <StyledImage
                         src={`/images/items/${e.fuel.itemClass}.png`}
                         width={80}
@@ -20,13 +21,15 @@ export default function Fuel({ fuels, operatingRate }) {
                         alt={e.fuel.itemClass}
                         quality={40}
                       />
-                    </Link>
-                    <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.fuel.rate).toFixed(3))}/min</StyledUsePerMin>
+                    </a>
+                  </Link>
+                  <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.fuel.rate).toFixed(3))}/min</StyledUsePerMin>
                 </StyledItem>
                 {
                   e.supplement &&
                   <StyledItem>
-                      <Link href={`/items/${e.supplement.itemClass}`}>
+                    <Link href={`/items/${e.supplement.itemClass}`}>
+                      <a>
                         <StyledImage
                           src={`/images/items/${e.supplement.itemClass}.png`}
                           width={80}
@@ -34,8 +37,9 @@ export default function Fuel({ fuels, operatingRate }) {
                           alt={e.supplement.itemClass}
                           quality={40}
                         />
-                      </Link>
-                      <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.supplement.rate).toFixed(3))}/min</StyledUsePerMin>
+                      </a>
+                    </Link>
+                    <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.supplement.rate).toFixed(3))}/min</StyledUsePerMin>
                   </StyledItem>
                 }
               </StyledContainer>
@@ -44,7 +48,8 @@ export default function Fuel({ fuels, operatingRate }) {
                   <StyledContainer flexDirection="row">
                     <StyledVerticalLine isAlternate={e.isAlternate} />
                     <StyledItem product>
-                        <Link href={`/items/${e.byproduct.itemClass}`}>
+                      <Link href={`/items/${e.byproduct.itemClass}`}>
+                        <a>
                           <StyledImage
                             src={`/images/items/${e.byproduct.itemClass}.png`}
                             width={80}
@@ -52,8 +57,9 @@ export default function Fuel({ fuels, operatingRate }) {
                             alt={e.byproduct.itemClass}
                             quality={40}
                           />
-                        </Link>
-                        <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.byproduct.rate).toFixed(3))}/min</StyledUsePerMin>
+                        </a>
+                      </Link>
+                      <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.byproduct.rate).toFixed(3))}/min</StyledUsePerMin>
                     </StyledItem>
                   </StyledContainer>
                 }

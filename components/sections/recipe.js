@@ -53,7 +53,7 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                                   width={48}
                                   height={48}
                                   alt={product.itemClass}
-                                  quality={40}
+                                  quality={50}
                                 />
                               </StyledItemImage>
                             </Link>
@@ -66,13 +66,15 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                   <StyledVerticalLine isAlternate={recipe.isAlternate} />
                   <StyledBuildingContainer>
                     <Link href={`/buildings/production/${recipe.producedIn}`}>
-                      <StyledImage
-                        src={`/images/buildables/${recipe.producedIn}.png`}
-                        width={80}
-                        height={80}
-                        alt={recipe.producedIn}
-                        quality={40}
-                      />
+                      <a>
+                        <StyledImage
+                          src={`/images/buildables/${recipe.producedIn}.png`}
+                          width={80}
+                          height={80}
+                          alt={recipe.producedIn}
+                          quality={40}
+                        />
+                      </a>
                     </Link>
                     <StyledCraftTime>{parseFloat((recipe.craftTime / clockspeed * 100).toFixed(3))}sn</StyledCraftTime>
                   </StyledBuildingContainer>
