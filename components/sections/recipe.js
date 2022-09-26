@@ -243,7 +243,7 @@ const StyledBuildingContainer = styled.div`
 `
 
 const StyledCraftTime = styled.div`
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   font-size: 0.5rem;
 
   @media (min-width: 768px) {
