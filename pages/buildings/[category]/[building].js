@@ -100,7 +100,7 @@ export default function Building({ buildable, recipes }) {
                     /> %
                   </StyledClockspeedInputContainer>
                   <StyledVerticalLine />
-                  <div>{parseFloat(buildable.isGenerator ? powerProduction : energyConsumption)}MW</div>
+                  <StyledEnergyConsumption>{parseFloat(buildable.isGenerator ? powerProduction : energyConsumption)}MW</StyledEnergyConsumption>
                 </StyledEnergyContainer>
                 <StyledClockspeedContainer>
                   <StyledClockspeedBar
@@ -407,6 +407,14 @@ const StyledVerticalLine = styled.div`
   width: 1px;
   justify-self: center;
   background-color: #F1C700;
+`
+
+const StyledEnergyConsumption = styled.div`
+  padding: 0.125rem;
+
+  @media (min-width: 1024px) {
+    padding: 0.5rem;
+  }
 `
 
 const StyledClockspeedContainer = styled.label`
