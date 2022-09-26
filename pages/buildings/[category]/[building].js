@@ -57,8 +57,6 @@ export default function Building({ buildable, recipes }) {
                             <StyledCostItemImage>
                               <Image
                                 src={`/images/items/${e.itemClass}.png`}
-                                // width={64}
-                                // height={64}
                                 layout="fill"
                                 objectFit='cover'
                                 alt={e.itemClass}
