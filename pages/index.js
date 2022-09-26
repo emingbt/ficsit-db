@@ -85,17 +85,16 @@ const StyledBackgroundImage = styled(Image)`
 `
 
 const StyledBannerText = styled.div`
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1rem ;
   background-color: #43454B;
-  transform: translateY(-50%);
-  border-width: 2px;
-  border-radius: 0.25rem;
-  border-color: #F2C800;
-  border-style: solid;
+  transform: translateY(-100%);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
   text-align: center;
   color: white;
   font-size: clamp(1rem, 2vw, 2rem);
