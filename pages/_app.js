@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>FICSIT DB</title>
+        <title>Ficsit DB</title>
         <meta name="description" content="Satisfactory Encyclopedia" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
