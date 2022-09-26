@@ -9,7 +9,7 @@ export default function Fuel({ fuels, operatingRate }) {
       <StyledRecipeContainer>
         {fuels.map((e, i) => {
           return (
-            <StyledRecipe key={e}>
+            <StyledRecipe key={i}>
               <StyledContainer flexDirection="row">
                 <StyledItem>
                     <Link href={`/items/${e.fuel.itemClass}`}>
