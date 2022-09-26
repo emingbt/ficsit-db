@@ -83,12 +83,12 @@ export default function Building({ buildable, recipes }) {
                   <div>{parseFloat(buildable.isGenerator ? powerProduction : energyConsumption)}MW</div>
                 </StyledEnergyContainer>
                 <StyledClockspeedContainer>
-                  <StyledClockspeedInput
+                  <StyledClockspeedBar
                     type="range"
                     min={1}
                     max={250}
                     step={1}
-                    onChange={e => { setClockspeed(e.currentTarget.value); }}
+                    onChange={e => { setClockspeed(e.currentTarget.value) }}
                     value={clockspeed}
                   />
                   <StyledClockspeedTextContainer>
@@ -366,7 +366,7 @@ const StyledClockspeedContainer = styled.label`
   }
 `
 
-const StyledClockspeedInput = styled.input`
+const StyledClockspeedBar = styled.input`
   -webkit-appearance: none;
   appearance: none;
   background: transparent;
