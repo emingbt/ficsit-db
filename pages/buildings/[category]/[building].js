@@ -78,7 +78,27 @@ export default function Building({ buildable, recipes }) {
               buildable.isOverclockable &&
               <StyledConsumptionContainer>
                 <StyledEnergyContainer>
-                  <div>{clockspeed}%</div>
+                  <StyledClockspeedInputContainer>
+                    <StyledClockspeedInput
+                      type="number"
+                      min={1}
+                      max={250}
+                      pattern="\d*"
+                      onClick={e => e.target.select()}
+                      onChange={e => {
+                        if (e.target.value > 250) {
+                          setClockspeed(250)
+                        }
+                        else if (e.target.value < 1) {
+                          setClockspeed(1)
+                        }
+                        else {
+                          setClockspeed(e.target.value)
+                        }
+                      }}
+                      value={clockspeed}
+                    /> %
+                  </StyledClockspeedInputContainer>
                   <StyledVerticalLine />
                   <div>{parseFloat(buildable.isGenerator ? powerProduction : energyConsumption)}MW</div>
                 </StyledEnergyContainer>
@@ -337,6 +357,47 @@ const StyledEnergyContainer = styled.div`
 
   @media (min-width: 1024px) {
     width: 12rem;
+    font-size: 1rem;
+  }
+`
+
+const StyledClockspeedInputContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`
+
+const StyledClockspeedInput = styled.input`
+  -moz-appearance: textfield;
+  appearance: none;
+  height: 50%;
+  border-radius: 0.125rem;
+  border: none;
+  outline: none;
+  padding: 0 0.25rem;
+  margin-right: 0.125rem;
+  background-color: #202125;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.5rem;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    border: none;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 0.6rem;
+  }
+
+  @media (min-width: 1024px) {
     font-size: 1rem;
   }
 `
