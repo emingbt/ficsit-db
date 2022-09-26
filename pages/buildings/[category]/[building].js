@@ -21,7 +21,7 @@ export default function Building({ buildable, recipes }) {
   let operatingRate = Math.pow((clockspeed / 100), 1 / buildable.meta?.overclockInfo?.exponent) * 100
 
   const [purity, setPurity] = useState(1)
-  let extractionRate = buildable.meta?.extractorInfo?.resourceExtractSpeed * purity * clockspeed / 100
+  let extractionRate = parseFloat((buildable.meta?.extractorInfo?.resourceExtractSpeed * purity * clockspeed / 100).toFixed(2))
 
   return (
     <Container>
@@ -57,8 +57,6 @@ export default function Building({ buildable, recipes }) {
                             <StyledCostItemImage>
                               <Image
                                 src={`/images/items/${e.itemClass}.png`}
-                                // width={64}
-                                // height={64}
                                 layout="fill"
                                 objectFit='cover'
                                 alt={e.itemClass}
@@ -80,17 +78,37 @@ export default function Building({ buildable, recipes }) {
               buildable.isOverclockable &&
               <StyledConsumptionContainer>
                 <StyledEnergyContainer>
-                  <div>{clockspeed}%</div>
+                  <StyledClockspeedInputContainer>
+                    <StyledClockspeedInput
+                      type="number"
+                      min={1}
+                      max={250}
+                      pattern="\d*"
+                      onClick={e => e.target.select()}
+                      onChange={e => {
+                        if (e.target.value > 250) {
+                          setClockspeed(250)
+                        }
+                        else if (e.target.value < 1) {
+                          setClockspeed(1)
+                        }
+                        else {
+                          setClockspeed(e.target.value)
+                        }
+                      }}
+                      value={clockspeed}
+                    /> %
+                  </StyledClockspeedInputContainer>
                   <StyledVerticalLine />
                   <div>{parseFloat(buildable.isGenerator ? powerProduction : energyConsumption)}MW</div>
                 </StyledEnergyContainer>
                 <StyledClockspeedContainer>
-                  <StyledClockspeedInput
+                  <StyledClockspeedBar
                     type="range"
                     min={1}
                     max={250}
                     step={1}
-                    onChange={e => { setClockspeed(e.currentTarget.value); }}
+                    onChange={e => { setClockspeed(e.currentTarget.value) }}
                     value={clockspeed}
                   />
                   <StyledClockspeedTextContainer>
@@ -343,6 +361,47 @@ const StyledEnergyContainer = styled.div`
   }
 `
 
+const StyledClockspeedInputContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`
+
+const StyledClockspeedInput = styled.input`
+  -moz-appearance: textfield;
+  appearance: none;
+  height: 50%;
+  border-radius: 0.125rem;
+  border: none;
+  outline: none;
+  padding: 0 0.25rem;
+  margin-right: 0.125rem;
+  background-color: #202125;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.5rem;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    border: none;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 0.6rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+  }
+`
+
 const StyledVerticalLine = styled.div`
   height: 100%;
   width: 1px;
@@ -368,11 +427,10 @@ const StyledClockspeedContainer = styled.label`
   }
 `
 
-const StyledClockspeedInput = styled.input`
+const StyledClockspeedBar = styled.input`
   -webkit-appearance: none;
   appearance: none;
   background: transparent;
-  background-size: 50px;
   cursor: pointer;
   width: 79%;
   height: 60%;
