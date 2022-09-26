@@ -3142,6 +3142,60 @@
       "meta": {},
       "event": "NONE"
     },
+    "half-1m-foundation": {
+      "slug": "half-1m-foundation",
+      "name": "Half 1m Foundation",
+      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 1m",
+      "categories": [
+        "Foundations",
+        "Foundations"
+      ],
+      "buildMenuPriority": 4,
+      "isPowered": false,
+      "isOverclockable": false,
+      "isProduction": false,
+      "isResourceExtractor": false,
+      "isGenerator": false,
+      "isVehicle": false,
+      "meta": {},
+      "event": "NONE"
+    },
+    "half-2m-foundation": {
+      "slug": "half-2m-foundation",
+      "name": "Half 2m Foundation",
+      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 2m",
+      "categories": [
+        "Foundations",
+        "Foundations"
+      ],
+      "buildMenuPriority": 5,
+      "isPowered": false,
+      "isOverclockable": false,
+      "isProduction": false,
+      "isResourceExtractor": false,
+      "isGenerator": false,
+      "isVehicle": false,
+      "meta": {},
+      "event": "NONE"
+    },
+    "half-4m-foundation": {
+      "slug": "half-4m-foundation",
+      "name": "Half 4m Foundation",
+      "description": "Provides a flat floor to build your factory on.\n\nBuildings on top of the foundation are adjusted to a grid, to make it easier to line them up to each other.\n\nSize: 8m x 4m",
+      "categories": [
+        "Foundations",
+        "Foundations"
+      ],
+      "buildMenuPriority": 6,
+      "isPowered": false,
+      "isOverclockable": false,
+      "isProduction": false,
+      "isResourceExtractor": false,
+      "isGenerator": false,
+      "isVehicle": false,
+      "meta": {},
+      "event": "NONE"
+    },
     "down-corner-ramp-1m": {
       "slug": "down-corner-ramp-1m",
       "name": "Down Corner Ramp 1m",
@@ -3367,6 +3421,111 @@
         "Foundations"
       ],
       "buildMenuPriority": 1,
+      "isPowered": false,
+      "isOverclockable": false,
+      "isProduction": false,
+      "isResourceExtractor": false,
+      "isGenerator": false,
+      "isVehicle": false,
+      "meta": {},
+      "event": "NONE"
+    },
+    "Desc_QuarterPipeMiddleInCorner_Ficsit_8x1_C": {
+      "slug": "inner-corner-extension-1m",
+      "name": "Inner Corner Extension 1m",
+      "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 1m",
+      "categories": [
+        "SC_QuatPipes_C"
+      ],
+      "buildMenuPriority": null,
+      "isPowered": false,
+      "isOverclockable": false,
+      "isProduction": false,
+      "isResourceExtractor": false,
+      "isGenerator": false,
+      "isVehicle": false,
+      "meta": {},
+      "event": "NONE"
+    },
+    "Desc_QuarterPipeMiddleInCorner_Ficsit_8x2_C": {
+      "slug": "inner-corner-extension-2m",
+      "name": "Inner Corner Extension 2m",
+      "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 2m",
+      "categories": [
+        "SC_QuatPipes_C"
+      ],
+      "buildMenuPriority": null,
+      "isPowered": false,
+      "isOverclockable": false,
+      "isProduction": false,
+      "isResourceExtractor": false,
+      "isGenerator": false,
+      "isVehicle": false,
+      "meta": {},
+      "event": "NONE"
+    },
+    "Desc_QuarterPipeMiddleInCorner_Ficsit_8x4_C": {
+      "slug": "inner-corner-extension-4m",
+      "name": "Inner Corner Extension 4m",
+      "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 8m x 4m",
+      "categories": [
+        "SC_QuatPipes_C"
+      ],
+      "buildMenuPriority": null,
+      "isPowered": false,
+      "isOverclockable": false,
+      "isProduction": false,
+      "isResourceExtractor": false,
+      "isGenerator": false,
+      "isVehicle": false,
+      "meta": {},
+      "event": "NONE"
+    },
+    "outer-corner-extension-1m": {
+      "slug": "outer-corner-extension-1m",
+      "name": "Outer Corner Extension 1m",
+      "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 4m x 1m",
+      "categories": [
+        "Foundations",
+        "QuarterPipes"
+      ],
+      "buildMenuPriority": null,
+      "isPowered": false,
+      "isOverclockable": false,
+      "isProduction": false,
+      "isResourceExtractor": false,
+      "isGenerator": false,
+      "isVehicle": false,
+      "meta": {},
+      "event": "NONE"
+    },
+    "outer-corner-extension-2m": {
+      "slug": "outer-corner-extension-2m",
+      "name": "Outer Corner Extension 2m",
+      "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 4m x 2m",
+      "categories": [
+        "Foundations",
+        "QuarterPipes"
+      ],
+      "buildMenuPriority": null,
+      "isPowered": false,
+      "isOverclockable": false,
+      "isProduction": false,
+      "isResourceExtractor": false,
+      "isGenerator": false,
+      "isVehicle": false,
+      "meta": {},
+      "event": "NONE"
+    },
+    "outer-corner-extension-4m": {
+      "slug": "outer-corner-extension-4m",
+      "name": "Outer Corner Extension 4m",
+      "description": "Provides an optional factory look that is smoother and offers possibilities for recreational activities. \nStill utilizes the standard foundation building grid for improved building placement.\n\nSize: 4m x 4m",
+      "categories": [
+        "Foundations",
+        "QuarterPipes"
+      ],
+      "buildMenuPriority": null,
       "isPowered": false,
       "isOverclockable": false,
       "isProduction": false,
@@ -16126,6 +16285,114 @@
         }
       ],
       "product": "RampInverted_8x4orner_02",
+      "event": "NONE"
+    },
+    "half-1m-foundation-recipe": {
+      "slug": "half-1m-foundation-recipe",
+      "name": "Half 1m Foundation",
+      "ingredients": [
+        {
+          "itemClass": "concrete",
+          "quantity": 5
+        }
+      ],
+      "product": "Desc_QuarterPipeMiddle_Ficsit_4x1_C",
+      "event": "NONE"
+    },
+    "half-2m-foundation-recipe": {
+      "slug": "half-2m-foundation-recipe",
+      "name": "Half 2m Foundation",
+      "ingredients": [
+        {
+          "itemClass": "concrete",
+          "quantity": 5
+        }
+      ],
+      "product": "Desc_QuarterPipeMiddle_Ficsit_4x2_C",
+      "event": "NONE"
+    },
+    "half-4m-foundation-recipe": {
+      "slug": "half-4m-foundation-recipe",
+      "name": "Half 4m Foundation",
+      "ingredients": [
+        {
+          "itemClass": "concrete",
+          "quantity": 5
+        }
+      ],
+      "product": "Desc_QuarterPipeMiddle_Ficsit_4x4_C",
+      "event": "NONE"
+    },
+    "inner-corner-extension-1m-recipe": {
+      "slug": "inner-corner-extension-1m-recipe",
+      "name": "Inner Corner Extension 1m",
+      "ingredients": [
+        {
+          "itemClass": "concrete",
+          "quantity": 5
+        }
+      ],
+      "product": "Desc_QuarterPipeMiddleInCorner_Ficsit_8x1_C",
+      "event": "NONE"
+    },
+    "inner-corner-extension-2m-recipe": {
+      "slug": "inner-corner-extension-2m-recipe",
+      "name": "Inner Corner Extension 2m",
+      "ingredients": [
+        {
+          "itemClass": "concrete",
+          "quantity": 5
+        }
+      ],
+      "product": "Desc_QuarterPipeMiddleInCorner_Ficsit_8x2_C",
+      "event": "NONE"
+    },
+    "inner-corner-extension-4m-recipe": {
+      "slug": "inner-corner-extension-4m-recipe",
+      "name": "Inner Corner Extension 4m",
+      "ingredients": [
+        {
+          "itemClass": "concrete",
+          "quantity": 5
+        }
+      ],
+      "product": "Desc_QuarterPipeMiddleInCorner_Ficsit_8x4_C",
+      "event": "NONE"
+    },
+    "outer-corner-extension-1m-recipe": {
+      "slug": "outer-corner-extension-1m-recipe",
+      "name": "Outer Corner Extension 1m",
+      "ingredients": [
+        {
+          "itemClass": "concrete",
+          "quantity": 5
+        }
+      ],
+      "product": "Desc_QuarterPipeMiddleOutCorner_Ficsit_4x1_C",
+      "event": "NONE"
+    },
+    "outer-corner-extension-2m-recipe": {
+      "slug": "outer-corner-extension-2m-recipe",
+      "name": "Outer Corner Extension 2m",
+      "ingredients": [
+        {
+          "itemClass": "concrete",
+          "quantity": 5
+        }
+      ],
+      "product": "Desc_QuarterPipeMiddleOutCorner_Ficsit_4x2_C",
+      "event": "NONE"
+    },
+    "outer-corner-extension-4m-recipe": {
+      "slug": "outer-corner-extension-4m-recipe",
+      "name": "Outer Corner Extension 4m",
+      "ingredients": [
+        {
+          "itemClass": "concrete",
+          "quantity": 5
+        }
+      ],
+      "product": "Desc_QuarterPipeMiddleOutCorner_Ficsit_4x4_C",
       "event": "NONE"
     },
     "lookout-tower-recipe": {
