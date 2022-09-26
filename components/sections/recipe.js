@@ -15,7 +15,7 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                 {recipe.name.split(':')[recipe.isAlternate ? 1 : 0]} {recipe.isAlternate && (<span style={{ color: '#E5AF07' }}>Alternate</span>)}
               </StyledRecipeTitle>
               <StyledRecipe>
-                <StyledContainer wrap={recipe.ingredients.length >= 3}>
+                <StyledContainer>
                   {recipe.ingredients.map((ingredient) => {
                     return (
                       <StyledItem key={ingredient.itemClass}>
@@ -38,9 +38,9 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                     )
                   })}
                 </StyledContainer>
-                <StyledContainer>
+                <StyledContainer cannotWrap>
                   <StyledVerticalLine isAlternate={recipe.isAlternate} />
-                  <StyledContainer product wrap={recipe.products.length >= 2}>
+                  <StyledContainer product>
                     {recipe.products.map((product) => {
                       return (
                         <StyledItem key={product.itemClass}>
@@ -154,10 +154,10 @@ const StyledContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: ${props => props.cannotWrap ? 'nowrap' : 'wrap'};
   justify-content: center;
   align-items: center;
   ${props => props.product && ('margin-right: 0.25rem;')}
-  ${props => props.wrap && 'flex-wrap: wrap;'}
 `
 
 const StyledItem = styled.div`
