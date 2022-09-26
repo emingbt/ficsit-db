@@ -370,7 +370,6 @@ const StyledClockspeedInput = styled.input`
   -webkit-appearance: none;
   appearance: none;
   background: transparent;
-  background-size: 50px;
   cursor: pointer;
   width: 79%;
   height: 60%;
