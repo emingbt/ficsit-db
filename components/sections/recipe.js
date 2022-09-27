@@ -76,7 +76,7 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                         />
                       </a>
                     </Link>
-                    <StyledCraftTime>{parseFloat((recipe.craftTime / clockspeed * 100).toFixed(3))}sn</StyledCraftTime>
+                    <StyledCraftTime>{parseFloat((recipe.craftTime / clockspeed * 100).toFixed(3))}s</StyledCraftTime>
                   </StyledBuildingContainer>
                 </StyledContainer>
               </StyledRecipe>
