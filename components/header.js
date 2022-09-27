@@ -124,7 +124,8 @@ const StyledNav = styled.nav`
   @media (min-width: 1024px) {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
     position: static;
     gap: 1.5rem;
     padding: 0;
