@@ -11,8 +11,8 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
         {recipes.map((recipe) => {
           return (
             <StyledRecipeContainer key={recipe.slug}>
-              <StyledRecipeTitle>
-                {recipe.name.split(':')[recipe.isAlternate ? 1 : 0]} {recipe.isAlternate && (<span style={{ color: '#E5AF07' }}>Alternate</span>)}
+              <StyledRecipeTitle isAlternate={recipe.isAlternate}>
+                {recipe.isAlternate ? `${recipe.name} (Alternate)` : `${recipe.name}`}
               </StyledRecipeTitle>
               <StyledRecipe>
                 <StyledContainer>
@@ -130,10 +130,10 @@ const StyledRecipeTitle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0.25rem 0.5rem;
   background-color: #34363b;
-  color: white;
+  color: ${props => props.isAlternate ? '#D79845' : '#ffffff'};
   font-size: 0.75rem;
   
   @media (min-width: 768px) {
