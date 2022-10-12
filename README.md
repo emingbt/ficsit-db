@@ -3,7 +3,6 @@ A [Satisfactory](https://www.satisfactorygame.com/) Encyclopedia that helps you 
 
 ![ficsitdb-banner](https://user-images.githubusercontent.com/73133276/185584869-fc718861-a32c-4969-b615-28e0d064ca38.png)
 
-(It is a fun project also I need a full-stack project to put into my CV 😄)
 
 
 ## Project setup
