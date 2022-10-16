@@ -11,9 +11,11 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
         {recipes.map((recipe) => {
           return (
             <StyledRecipeContainer key={recipe.slug}>
-              <StyledRecipeTitle isAlternate={recipe.isAlternate}>
-                {recipe.isAlternate ? `${recipe.name} (Alternate)` : `${recipe.name}`}
-              </StyledRecipeTitle>
+              <Link href={`/recipes/${recipe.slug}`}>
+                <StyledRecipeTitle isAlternate={recipe.isAlternate}>
+                  {recipe.isAlternate ? `${recipe.name} (Alternate)` : `${recipe.name}`}
+                </StyledRecipeTitle>
+              </Link>
               <StyledRecipe>
                 <StyledContainer>
                   {recipe.ingredients.map((ingredient) => {
