@@ -242,7 +242,6 @@ const StyledItemContainer = styled.div`
 
 const StyledItem = styled.div`
   width: 100%;
-  /* height: 3rem; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -270,8 +269,6 @@ const StyledItemImage = styled.div`
 `
 
 const StyledItemDetail = styled.div`
-  /* height: 100%;
-  width: 70%; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
