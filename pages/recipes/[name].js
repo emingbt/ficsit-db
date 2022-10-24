@@ -24,7 +24,7 @@ export default function Recipe({ recipe }) {
                 <StyledItemLine primary />
                 {recipe.ingredients.map((ingredient) => {
                   return (
-                    <StyledItemContainer>
+                    <StyledItemContainer key={ingredient.slug}>
                       <StyledItem>
                         <StyledItemImage>
                           <Image
@@ -54,7 +54,7 @@ export default function Recipe({ recipe }) {
                 <StyledItemLine primary />
                 {recipe.products.map((product) => {
                   return (
-                    <StyledItemContainer>
+                    <StyledItemContainer key={product.slug}>
                       <StyledItem>
                         <StyledItemImage>
                           <Image
