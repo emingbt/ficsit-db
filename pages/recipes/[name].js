@@ -123,15 +123,23 @@ const StyledRecipeTitleContainer = styled.div`
   justify-content: center;
   background-color: #1a1a1a;
   padding: 0.5rem 0;
-  font-size: 1rem;
+  font-size: 0.75rem;
+
+  @media (min-width: 1440px) {
+    font-size: 1rem;
+  }
 `
 
 const StyledRecipeTitle = styled.div`
   width: 100%;
   color: white;
   font-family: Roboto, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-align: center;
+
+  @media (min-width: 1440px) {
+    font-size: 1.25rem;
+  }
 `
 
 const StyledItemsSection = styled.section`
