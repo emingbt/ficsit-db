@@ -161,7 +161,11 @@ const StyledItemsContainer = styled.div`
   justify-content: center;
 
   @media (min-width: 768px) {
-    max-width: 24rem;
+    max-width: 16rem;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 20rem;
   }
 `
 
