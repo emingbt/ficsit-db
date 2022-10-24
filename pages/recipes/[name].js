@@ -5,7 +5,6 @@ import { Container, Main, StyledTitle, StyledLine } from '../../components/share
 import Image from 'next/image'
 
 export default function Recipe({ recipe }) {
-  console.log(recipe)
   return (
     <Container>
       <Main>
