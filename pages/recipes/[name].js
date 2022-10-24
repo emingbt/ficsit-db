@@ -132,7 +132,7 @@ const StyledRecipeTitleContainer = styled.div`
 const StyledRecipeTitle = styled.div`
   width: 100%;
   color: white;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, -apple-system, sans-serif;
   font-size: 1rem;
   text-align: center;
 
@@ -216,7 +216,7 @@ const StyledItemsContainerTitle = styled.div`
   border-radius: 0.25rem;
   font-weight: 600;
   font-size: 0.5rem;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, -apple-system, sans-serif;
   color: #7b7b7c;
   text-align: center;
 
@@ -274,7 +274,7 @@ const StyledItemDetail = styled.div`
   align-items: flex-start;
   justify-content: center;
   color: #696969;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, -apple-system, sans-serif;
 `
 
 const StyledItemName = styled.div`
