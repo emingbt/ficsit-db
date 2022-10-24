@@ -25,7 +25,7 @@ export default function Recipe({ recipe }) {
                   return (
                     <StyledItemContainer key={ingredient.slug}>
                       <StyledItem>
-                        <StyledItemImage>
+                        <StyledItemImage isFluid={ingredient.isFluid}>
                           <Image
                             src={`/images/items/${ingredient.slug}.png`}
                             width={64}
@@ -55,7 +55,7 @@ export default function Recipe({ recipe }) {
                   return (
                     <StyledItemContainer key={product.slug}>
                       <StyledItem>
-                        <StyledItemImage>
+                        <StyledItemImage isFluid={product.isFluid}>
                           <Image
                             src={`/images/items/${product.slug}.png`}
                             width={64}
@@ -245,7 +245,7 @@ const StyledItemImage = styled.div`
   background-color: #CCCBCB;
   padding: 0.125rem;
   margin: 0.25rem 0.25rem 0.25rem 0;
-  border-radius: 0.125rem;
+  border-radius: ${props => props.isFluid ? '50%' : '0.125rem'};
 
   @media (min-width: 768px) {
     height: 3rem;
