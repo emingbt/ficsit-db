@@ -149,6 +149,10 @@ const StyledItemsSection = styled.section`
   justify-content: center;
   margin-top: 0.75rem;
   gap: 1rem;
+
+  @media (min-width: 1440px) {
+    gap: 4rem;
+  }
 `
 
 const StyledItemsContainer = styled.div`
@@ -186,7 +190,8 @@ const StyledItemsList = styled.div`
   }
 
   @media (min-width: 1440px) {
-    min-height: 23rem;
+    min-height: 24rem;
+    border-width: 0.45rem;
   }
 `
 
@@ -214,6 +219,11 @@ const StyledItemsContainerTitle = styled.div`
   font-family: Roboto, sans-serif;
   color: #7b7b7c;
   text-align: center;
+
+  @media (min-width: 1440px) {
+    min-width: 6rem;
+    font-size: 0.75rem;
+  }
 `
 
 const StyledItemLine = styled.div`
@@ -241,17 +251,19 @@ const StyledItem = styled.div`
 
 const StyledItemImage = styled.div`
   height: 36px;
-  aspect-ratio: 1 / 1;
+  width: 36px;
   background-color: #CCCBCB;
   padding: 0.125rem;
   margin: 0.25rem 0.25rem 0.25rem 0;
   border-radius: ${props => props.isFluid ? '50%' : '0.125rem'};
 
   @media (min-width: 768px) {
+    width: 3rem;
     height: 3rem;
   }
 
   @media (min-width: 1440px) {
+    width: 4rem;
     height: 4rem;
     margin: 0.5rem 0.5rem 0.5rem 0;
   }
