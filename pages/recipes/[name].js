@@ -44,10 +44,7 @@ export default function Recipe({ recipe }) {
                   )
                 })}
               </StyledItemsList>
-              <StyledTitleContainer>
-                <StyledVerticalLine />
-                <StyledItemsContainerTitle>INPUT</StyledItemsContainerTitle>
-              </StyledTitleContainer>
+              <StyledTitleContainer>INPUT</StyledTitleContainer>
             </StyledItemsContainer>
             <StyledItemsContainer>
               <StyledItemsList>
@@ -75,10 +72,7 @@ export default function Recipe({ recipe }) {
                   )
                 })}
               </StyledItemsList>
-              <StyledTitleContainer>
-                <StyledVerticalLine />
-                <StyledItemsContainerTitle>OUTPUT</StyledItemsContainerTitle>
-              </StyledTitleContainer>
+              <StyledTitleContainer>OUTPUT</StyledTitleContainer>
             </StyledItemsContainer>
           </StyledItemsSection>
         </StyledContainer>
@@ -198,34 +192,14 @@ const StyledItemsList = styled.div`
 `
 
 const StyledTitleContainer = styled.div`
-  min-width: 32%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
-
-const StyledVerticalLine = styled.div`
-  width: 2px;
-  height: 6px;
-  background-color: #dddddd;
-`
-
-const StyledItemsContainerTitle = styled.div`
-  min-width: 4rem;
-  background-color: #dddddd;
-  padding: 0.125rem 1rem;
-  border-radius: 0.25rem;
-  font-weight: 600;
+  background-color: #43454B;
+  color: white;
   font-size: 0.5rem;
-  font-family: Roboto, -apple-system, sans-serif;
-  color: #7b7b7c;
-  text-align: center;
-
-  @media (min-width: 1440px) {
-    min-width: 6rem;
-    font-size: 0.75rem;
-  }
 `
 
 const StyledItemLine = styled.div`
