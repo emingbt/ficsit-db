@@ -31,6 +31,7 @@ export default function Recipe({ recipe }) {
                             width={64}
                             height={64}
                             alt={ingredient.slug}
+                            quality={100}
                           />
                         </StyledItemImage>
                         <StyledItemDetail>
@@ -61,6 +62,7 @@ export default function Recipe({ recipe }) {
                             width={64}
                             height={64}
                             alt={product.slug}
+                            quality={100}
                           />
                         </StyledItemImage>
                         <StyledItemDetail>
