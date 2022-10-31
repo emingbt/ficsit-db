@@ -106,7 +106,7 @@ const StyledContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  padding: 0.75rem;
+  padding: 0.625rem;
   background-color: #131416;
 `
 
@@ -116,7 +116,7 @@ const StyledRecipeTitleContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #1a1a1a;
+  background-color: #202125;
   padding: 0.5rem 0;
   font-size: 0.75rem;
 
@@ -142,9 +142,8 @@ const StyledItemsSection = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin-top: 0.75rem;
-  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 0.625rem;
 
   @media (min-width: 1440px) {
     gap: 4rem;
@@ -152,7 +151,7 @@ const StyledItemsSection = styled.section`
 `
 
 const StyledItemsContainer = styled.div`
-  width: 48%;
+  width: calc(50% - 5px);
   max-width: 12rem;
   height: 100%;
   display: flex;
@@ -171,14 +170,13 @@ const StyledItemsContainer = styled.div`
 
 const StyledItemsList = styled.div`
   width: 100%;
-  min-height: 14rem;
+  min-height: 16rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0;
-  background-color: white;
-  border: 0.25rem solid #333333;
+  padding: 0.5rem;
+  background-color: #202125;
   outline: none;
 
   @media (min-width: 768px) {
@@ -187,7 +185,6 @@ const StyledItemsList = styled.div`
 
   @media (min-width: 1440px) {
     min-height: 24rem;
-    border-width: 0.45rem;
   }
 `
 
@@ -205,7 +202,7 @@ const StyledTitleContainer = styled.div`
 const StyledItemLine = styled.div`
   width: ${props => props.primary ? '96%' : '100%'};
   height: 1px;
-  background-color: #CCCBCB;
+  background-color: #9BA3A9;
 `
 
 const StyledItemContainer = styled.div`
@@ -225,11 +222,11 @@ const StyledItem = styled.div`
 `
 
 const StyledItemImage = styled.div`
-  height: 36px;
-  width: 36px;
-  background-color: #CCCBCB;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #43454B;
   padding: 0.125rem;
-  margin: 0.25rem 0.25rem 0.25rem 0;
+  margin: 0.5rem 0.25rem 0.5rem 0;
   border-radius: ${props => props.isFluid ? '50%' : '0.125rem'};
 
   @media (min-width: 768px) {
@@ -245,18 +242,18 @@ const StyledItemImage = styled.div`
 `
 
 const StyledItemDetail = styled.div`
+  width: calc(100% - 2.5rem);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  color: #696969;
+  color: #CCCCCC;
   font-family: Roboto, -apple-system, sans-serif;
 `
 
 const StyledItemName = styled.div`
-  color: #474747;
+  color: #DDDDDD;
   font-size: 0.5rem;
-  font-weight: 1000;
   margin-bottom: 0.125rem;
 
   @media (min-width: 768px) {
