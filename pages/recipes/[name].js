@@ -269,10 +269,10 @@ const StyledItemName = styled.div`
 `
 
 const StyledUsagePerMinute = styled.div`
-  font-size: 0.40rem;
+  font-size: 0.4rem;
 
   @media (min-width: 768px) {
-    font-size: 0.60rem;
+    font-size: 0.6rem;
   }
 
   @media (min-width: 1440px) {
