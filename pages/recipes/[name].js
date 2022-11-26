@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { getRecipeByRecipeName } from '../../lib/api'
 import styled from 'styled-components'
 import { Container, Main, StyledTitle, StyledLine } from '../../components/sharedstyles'
 import Image from 'next/image'
 
 export default function Recipe({ recipe }) {
+  const [clockspeed, setClockspeed] = useState(100)
+
   return (
     <Container>
       <Main>
@@ -75,6 +77,34 @@ export default function Recipe({ recipe }) {
               <StyledTitleContainer>OUTPUT</StyledTitleContainer>
             </StyledItemsContainer>
           </StyledItemsSection>
+          <StyledDetailsSection>
+            <StyledDetailsContainer>
+              {/* <StyledClockspeedInputs>
+
+              </StyledClockspeedInputs>
+              <StyledClockspeedDetails>
+
+              </StyledClockspeedDetails> */}
+            </StyledDetailsContainer>
+            <StyledClockspeedBarContainer>
+              <StyledClockspeedBar
+                type="range"
+                min={0}
+                max={250}
+                step={5}
+                onChange={e => { setClockspeed(e.currentTarget.value) }}
+                value={clockspeed}
+              />
+              <StyledClockspeedTextContainer>
+                <StyledClockspeedText></StyledClockspeedText>
+                <StyledClockspeedText overclocked={100 <= clockspeed} onClick={() => setClockspeed(100)}>100%</StyledClockspeedText>
+                <StyledClockspeedText overclocked={150 <= clockspeed} onClick={() => setClockspeed(150)}>150%</StyledClockspeedText>
+                <StyledClockspeedText overclocked={200 <= clockspeed} onClick={() => setClockspeed(200)}>200%</StyledClockspeedText>
+                <StyledClockspeedText overclocked={250 <= clockspeed} onClick={() => setClockspeed(250)}>250%</StyledClockspeedText>
+              </StyledClockspeedTextContainer>
+            </StyledClockspeedBarContainer>
+            <StyledTitleContainer>OVERCLOCK</StyledTitleContainer>
+          </StyledDetailsSection>
         </StyledContainer>
       </Main>
     </Container>
@@ -278,5 +308,76 @@ const StyledUsagePerMinute = styled.div`
 `
 
 const StyledDetailsSection = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #202125;
+  margin-top: 0.625rem;
+`
 
+const StyledDetailsContainer = styled.div`
+
+`
+
+const StyledClockspeedBarContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  padding-bottom: 0.25rem;
+`
+
+const StyledClockspeedBar = styled.input`
+  overflow: hidden;
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: #43454B;
+
+  ::-webkit-slider-runnable-track {
+    height: 1.5rem;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  }
+
+  ::-webkit-slider-thumb {
+    width: 1px;
+    -webkit-appearance: none;
+    height: 1.5rem;
+    cursor: ew-resize;
+    background: #434343;
+    box-shadow: -800px 0 0 800px #D79845;
+  }
+
+  ::-moz-range-progress {
+    background-color: #D79845;
+  }
+  ::-moz-range-track {
+    background-color: #43454B;
+  }
+  ::-ms-fill-lower {
+    background-color: #D79845;
+  }
+  ::-ms-fill-upper {
+    background-color: #43454B;
+  }
+`
+
+const StyledClockspeedTextContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+const StyledClockspeedText = styled.div`
+  width: calc(100% / 5);
+  text-align: right;
+  font-size: 0.5rem;
+  color: ${ props => props.overclocked ? "#D79845" : "#FFFFFF" };
+  user-select: none;
 `
