@@ -8,6 +8,9 @@ export default function Recipe({ recipe, building }) {
   const [clockspeed, setClockspeed] = useState(100)
   const [productionRate, setProductionRate] = useState(recipe.products[0].quantity / recipe.craftTime * 60)
 
+  let energyConsumption = parseFloat((building.meta?.powerInfo?.consumption * (clockspeed / 100) ** building.meta?.overclockInfo?.exponent).toFixed(4))
+  let periodTime = parseFloat((recipe.craftTime * 100 / clockspeed).toFixed(4))
+  let requiredPowerShards = clockspeed > 200 ? 3 : clockspeed > 150 ? 2 : clockspeed > 100 ? 1 : 0
 
   const handleClockspeedChange = (e) => {
     setClockspeed(e)
@@ -119,6 +122,61 @@ export default function Recipe({ recipe, building }) {
                 </StyledProductionRateContainer>
               </StyledClockspeedInputs>
               <StyledClockspeedDetails>
+                <StyledClockSpeedDetail>
+                  <StyledClockspeedDetailTitle>
+                    Required Energy:
+                  </StyledClockspeedDetailTitle>
+                  <StyledClockspeedDetailValue>
+                    {energyConsumption} MW
+                  </StyledClockspeedDetailValue>
+                </StyledClockSpeedDetail>
+                <StyledClockSpeedDetail>
+                  <StyledClockspeedDetailTitle>
+                    Period Time:
+                  </StyledClockspeedDetailTitle>
+                  <StyledClockspeedDetailValue>
+                    {periodTime} sec
+                  </StyledClockspeedDetailValue>
+                </StyledClockSpeedDetail>
+                <StyledClockSpeedDetail>
+                  <StyledClockspeedDetailTitle>
+                    Required Power Shards:
+                  </StyledClockspeedDetailTitle>
+                  <StyledClockspeedDetailValueContainer>
+                    <StyledClockspeedDetailValue>
+                      {requiredPowerShards}x
+                    </StyledClockspeedDetailValue>
+                    <StyledItemImage detail>
+                      <Image
+                        src={`/images/items/power-shard.png`}
+                        width={64}
+                        height={64}
+                        alt={building.name}
+                      />
+                    </StyledItemImage>
+                  </StyledClockspeedDetailValueContainer>
+                </StyledClockSpeedDetail>
+                <StyledClockSpeedDetail>
+                  <StyledClockspeedDetailTitle>
+                    Produced In:
+                  </StyledClockspeedDetailTitle>
+                  <StyledClockspeedDetailValueContainer>
+                    <StyledClockspeedDetailValue building>
+                      {building.name}
+                    </StyledClockspeedDetailValue>
+                    <Link href={`/buildings/production/${building.slug}`}>
+                      <StyledItemImage detail>
+                        <Image
+                          src={`/images/buildables/${building.slug}.png`}
+                          width={64}
+                          height={64}
+                          alt={building.name}
+                        />
+                      </StyledItemImage>
+                    </Link>
+                  </StyledClockspeedDetailValueContainer>
+                </StyledClockSpeedDetail>
+              </StyledClockspeedDetails>
             </StyledDetailsContainer>
             <StyledClockspeedBarContainer>
               <StyledClockspeedBar
@@ -287,12 +345,13 @@ const StyledItem = styled.div`
 `
 
 const StyledItemImage = styled.div`
-  height: 2.5rem;
-  width: 2.5rem;
+  height: ${props => props.detail ? '1.5rem' : '2.5rem'};
+  width: ${props => props.detail ? '1.5rem' : '2.5rem'};
   background-color: #43454B;
   padding: 0.125rem;
   margin: 0.5rem 0.25rem 0.5rem 0;
   border-radius: ${props => props.isFluid ? '50%' : '0.125rem'};
+  ${props => props.detail && 'margin: 0 0 0 0.25rem;'}
 
   @media (min-width: 768px) {
     width: 3rem;
@@ -300,8 +359,8 @@ const StyledItemImage = styled.div`
   }
 
   @media (min-width: 1440px) {
-    width: 4rem;
-    height: 4rem;
+    width: ${props => props.detail ? '4rem' : '4.5rem'};
+    height: ${props => props.detail ? '4rem' : '4.5rem'};
     margin: 0.5rem 0.5rem 0.5rem 0;
   }
 `
@@ -394,6 +453,73 @@ const StyledClockSpeedInput = styled.input`
   font-size: 1.25rem;
   padding-left: 0.25rem;
 `
+
+const StyledClockspeedDetails = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+`
+
+const StyledClockSpeedDetail = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.125rem;
+`
+
+const StyledClockspeedDetailTitle = styled.div`
+  font-size: 0.5rem;
+  font-family: Roboto;
+  color: white;
+`
+
+const StyledClockspeedDetailValue = styled.div`
+  font-size: ${props => props.building ? '0.5rem' : '0.75rem'};
+  font-family: Roboto;
+  color: #D79845;
+`
+
+const StyledClockspeedDetailValueContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+`
+
+const StyledProductionRateContainer = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`
+
+const StyledProductionRateInputContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+`
+
+const StyledProductionRateInput = styled.input`
+  width: 60%;
+  height: 1.5rem;
+  background-color: #43454B;
+  color: #D79845;
+  overflow: hidden;
+  border: 0px solid;
+  font-size: 1.125rem;
+  padding-left: 0.25rem;
+`
+
+const StyledPerMinute = styled.div`
+  font-size: 0.5rem;
+  color: white;
+  padding-left: 0.25rem;
 `
 
 const StyledClockspeedBarContainer = styled.div`
