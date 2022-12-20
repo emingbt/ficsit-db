@@ -53,7 +53,13 @@ export default function Recipe({ recipe, building }) {
                         </StyledItemImage>
                         <StyledItemDetail>
                           <StyledItemName>{ingredient.quantity} {ingredient.name}</StyledItemName>
-                          <StyledUsagePerMinute><span style={{ color: '#e59344' }}>{parseFloat((60 / recipe.craftTime * ingredient.quantity).toFixed(3))}</span> per minute</StyledUsagePerMinute>
+                          <StyledUsagePerMinute>
+                            <span style={{ color: '#e59344' }}>
+                              {parseFloat((60 / recipe.craftTime * ingredient.quantity).toFixed(3))}
+                            </span>
+                            {clockspeed != 100 && (
+                              <strong style={{ color: '#e59344' }}>({(60 / recipe.craftTime * ingredient.quantity * clockspeed / 100)})</strong>
+                            )} per minute</StyledUsagePerMinute>
                         </StyledItemDetail>
                       </StyledItem>
                       <StyledItemLine />
@@ -81,7 +87,13 @@ export default function Recipe({ recipe, building }) {
                         </StyledItemImage>
                         <StyledItemDetail>
                           <StyledItemName>{product.quantity} {product.name}</StyledItemName>
-                          <StyledUsagePerMinute><span style={{ color: '#e59344' }}>{parseFloat((60 / recipe.craftTime * product.quantity).toFixed(3))}</span> per minute</StyledUsagePerMinute>
+                          <StyledUsagePerMinute>
+                            <span style={{ color: '#e59344' }}>
+                              {parseFloat((60 / recipe.craftTime * product.quantity).toFixed(3))}
+                            </span>
+                            {clockspeed != 100 && (
+                              <strong style={{ color: '#e59344' }}>({(60 / recipe.craftTime * product.quantity * clockspeed / 100)})</strong>
+                            )} per minute</StyledUsagePerMinute>
                         </StyledItemDetail>
                       </StyledItem>
                       <StyledItemLine />
