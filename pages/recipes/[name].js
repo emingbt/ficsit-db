@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 export default function Recipe({ recipe }) {
   const [clockspeed, setClockspeed] = useState(100)
+  const [productionRate, setProductionRate] = useState(recipe.products[0].quantity / recipe.craftTime * 60)
 
   return (
     <Container>
@@ -79,12 +80,34 @@ export default function Recipe({ recipe }) {
           </StyledItemsSection>
           <StyledDetailsSection>
             <StyledDetailsContainer>
-              {/* <StyledClockspeedInputs>
-
+              <StyledClockspeedInputs>
+                <StyledClockspeedContainer>
+                  <StyledDetailTitle>Clock Speed:</StyledDetailTitle>
+                  <StyledClockSpeedInput
+                    type="number"
+                    min={0}
+                    max={250}
+                    pattern="^[0-9]*$"
+                    onChange={e => handleClockspeedChange(e.target.value)}
+                    value={clockspeed}
+                  />
+                </StyledClockspeedContainer>
+                <StyledProductionRateContainer>
+                  <StyledDetailTitle>Target production rate:</StyledDetailTitle>
+                  <StyledProductionRateInputContainer>
+                    <StyledProductionRateInput
+                      type="number"
+                      min={0}
+                      max={999}
+                      pattern="^[0-9]*$"
+                      onChange={e => handleProductionRateChage(e.target.value)}
+                      value={productionRate}
+                    />
+                    <StyledPerMinute>per minute</StyledPerMinute>
+                  </StyledProductionRateInputContainer>
+                </StyledProductionRateContainer>
               </StyledClockspeedInputs>
               <StyledClockspeedDetails>
-
-              </StyledClockspeedDetails> */}
             </StyledDetailsContainer>
             <StyledClockspeedBarContainer>
               <StyledClockspeedBar
@@ -318,7 +341,47 @@ const StyledDetailsSection = styled.section`
 `
 
 const StyledDetailsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.75rem;
+  padding-bottom: 0;
+`
 
+const StyledClockspeedInputs = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`
+
+const StyledClockspeedContainer = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+`
+
+const StyledDetailTitle = styled.div`
+  font-size: 0.5rem;
+  color: #FFFFFF;
+  margin-bottom: 0.125rem;
+`
+
+const StyledClockSpeedInput = styled.input`
+  width: 100%;
+  height: 1.5rem;
+  background-color: #43454B;
+  color: #D79845;
+  overflow: hidden;
+  border: 0px solid;
+  font-size: 1.25rem;
+  padding-left: 0.25rem;
+`
 `
 
 const StyledClockspeedBarContainer = styled.div`
