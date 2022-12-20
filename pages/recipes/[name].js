@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { getRecipeByRecipeName } from '../../lib/api'
+import { getBuildableByName, getRecipeByRecipeName } from '../../lib/api'
 import styled from 'styled-components'
 import { Container, Main, StyledTitle, StyledLine } from '../../components/sharedstyles'
 import Image from 'next/image'
 
-export default function Recipe({ recipe }) {
+export default function Recipe({ recipe, building }) {
   const [clockspeed, setClockspeed] = useState(100)
   const [productionRate, setProductionRate] = useState(recipe.products[0].quantity / recipe.craftTime * 60)
 
@@ -147,10 +147,11 @@ export default function Recipe({ recipe }) {
 
 export async function getServerSideProps(context) {
   var name = context.query.name
-  const recipe = getRecipeByRecipeName(name)
+  const recipe = await getRecipeByRecipeName(name)
+  const building = getBuildableByName(recipe.producedIn)
 
   return {
-    props: { recipe }
+    props: { recipe, building }
   }
 }
 
