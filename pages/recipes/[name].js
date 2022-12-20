@@ -3,6 +3,7 @@ import { getBuildableByName, getRecipeByRecipeName } from '../../lib/api'
 import styled from 'styled-components'
 import { Container, Main, StyledTitle, StyledLine } from '../../components/sharedstyles'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Recipe({ recipe, building }) {
   const [clockspeed, setClockspeed] = useState(100)
