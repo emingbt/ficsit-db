@@ -8,6 +8,17 @@ export default function Recipe({ recipe }) {
   const [clockspeed, setClockspeed] = useState(100)
   const [productionRate, setProductionRate] = useState(recipe.products[0].quantity / recipe.craftTime * 60)
 
+
+  const handleClockspeedChange = (e) => {
+    setClockspeed(e)
+    setProductionRate((recipe.products[0].quantity / recipe.craftTime * 60) * e / 100)
+  }
+
+  const handleProductionRateChage = (e) => {
+    setProductionRate(e)
+    setClockspeed(e / (recipe.products[0].quantity / recipe.craftTime * 60) * 100)
+  }
+
   return (
     <Container>
       <Main>
@@ -115,15 +126,15 @@ export default function Recipe({ recipe }) {
                 min={0}
                 max={250}
                 step={5}
-                onChange={e => { setClockspeed(e.currentTarget.value) }}
+                onChange={e => { handleClockspeedChange(e.target.value) }}
                 value={clockspeed}
               />
               <StyledClockspeedTextContainer>
                 <StyledClockspeedText></StyledClockspeedText>
-                <StyledClockspeedText overclocked={100 <= clockspeed} onClick={() => setClockspeed(100)}>100%</StyledClockspeedText>
-                <StyledClockspeedText overclocked={150 <= clockspeed} onClick={() => setClockspeed(150)}>150%</StyledClockspeedText>
-                <StyledClockspeedText overclocked={200 <= clockspeed} onClick={() => setClockspeed(200)}>200%</StyledClockspeedText>
-                <StyledClockspeedText overclocked={250 <= clockspeed} onClick={() => setClockspeed(250)}>250%</StyledClockspeedText>
+                <StyledClockspeedText overclocked={100 <= clockspeed} onClick={() => handleClockspeedChange(100)}>100%</StyledClockspeedText>
+                <StyledClockspeedText overclocked={150 <= clockspeed} onClick={() => handleClockspeedChange(150)}>150%</StyledClockspeedText>
+                <StyledClockspeedText overclocked={200 <= clockspeed} onClick={() => handleClockspeedChange(200)}>200%</StyledClockspeedText>
+                <StyledClockspeedText overclocked={250 <= clockspeed} onClick={() => handleClockspeedChange(250)}>250%</StyledClockspeedText>
               </StyledClockspeedTextContainer>
             </StyledClockspeedBarContainer>
             <StyledTitleContainer>OVERCLOCK</StyledTitleContainer>
