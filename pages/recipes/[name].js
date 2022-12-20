@@ -592,6 +592,6 @@ const StyledClockspeedText = styled.div`
   width: calc(100% / 5);
   text-align: right;
   font-size: 0.5rem;
-  color: ${ props => props.overclocked ? "#D79845" : "#FFFFFF" };
+  color: ${props => props.overclocked ? "#D79845" : "#FFFFFF"};
   user-select: none;
 `
