@@ -15,7 +15,7 @@ export default function Building({ buildable, recipes }) {
   const { category } = router.query
 
   const [clockspeed, setClockspeed] = useState(100)
-  let energyConsumption = (buildable.meta?.powerInfo?.consumption * (clockspeed / 100) ** buildable.meta?.overclockInfo?.exponent).toFixed(3)
+  let energyConsumption = (buildable.meta?.powerInfo?.consumption * (clockspeed / 100) ** buildable.meta?.overclockInfo?.exponent).toFixed(4)
 
   let powerProduction = (buildable.meta?.generatorInfo?.powerProduction * Math.pow((clockspeed / 100), 1 / buildable.meta?.overclockInfo?.exponent)).toFixed(3)
   let operatingRate = Math.pow((clockspeed / 100), 1 / buildable.meta?.overclockInfo?.exponent) * 100

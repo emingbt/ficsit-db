@@ -7270,8 +7270,8 @@
     }
   },
   "productionRecipes": {
-    "Recipe_AlternatelassicBattery": {
-      "slug": "alternate-classic-battery-recipe",
+    "classic-battery-recipe": {
+      "slug": "classic-battery-recipe",
       "name": "Classic Battery",
       "craftTime": 8,
       "maunalCraftMultiplier": 1,
@@ -7306,7 +7306,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_PortableMiner": {
+    "portable-miner-recipe": {
       "slug": "portable-miner-recipe",
       "name": "Portable Miner",
       "craftTime": 40,
@@ -7334,7 +7334,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipeable": {
+    "cable-recipe": {
       "slug": "cable-recipe",
       "name": "Cable",
       "craftTime": 2,
@@ -7358,7 +7358,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Wire": {
+    "wire-recipe": {
       "slug": "wire-recipe",
       "name": "Wire",
       "craftTime": 4,
@@ -7382,7 +7382,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_IngotCopper": {
+    "copper-ingot-recipe": {
       "slug": "copper-ingot-recipe",
       "name": "Copper Ingot",
       "craftTime": 2,
@@ -7406,7 +7406,7 @@
       "producedIn": "smelter",
       "event": "NONE"
     },
-    "Recipe_IronPlateReinforced": {
+    "reinforced-iron-plate-recipe": {
       "slug": "reinforced-iron-plate-recipe",
       "name": "Reinforced Iron Plate",
       "craftTime": 12,
@@ -7434,7 +7434,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipeoncrete": {
+    "concrete-recipe": {
       "slug": "concrete-recipe",
       "name": "Concrete",
       "craftTime": 4,
@@ -7458,7 +7458,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Reciperew": {
+    "screw-recipe": {
       "slug": "screw-recipe",
       "name": "Screw",
       "craftTime": 6,
@@ -7482,7 +7482,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Biomass_Leaves": {
+    "biomass-leaves-recipe": {
       "slug": "biomass-leaves-recipe",
       "name": "Biomass (Leaves)",
       "craftTime": 5,
@@ -7506,7 +7506,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Biomass_Wood": {
+    "biomass-wood-recipe": {
       "slug": "biomass-wood-recipe",
       "name": "Biomass (Wood)",
       "craftTime": 4,
@@ -7530,7 +7530,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_IronPlate": {
+    "iron-plate-recipe": {
       "slug": "iron-plate-recipe",
       "name": "Iron Plate",
       "craftTime": 6,
@@ -7554,7 +7554,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_IronRod": {
+    "iron-rod-recipe": {
       "slug": "iron-rod-recipe",
       "name": "Iron Rod",
       "craftTime": 4,
@@ -7578,7 +7578,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_XenoZapper": {
+    "xeno-zapper-recipe": {
       "slug": "xeno-zapper-recipe",
       "name": "Xeno-Zapper",
       "craftTime": 40,
@@ -7614,7 +7614,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_IngotIron": {
+    "iron-ingot-recipe": {
       "slug": "iron-ingot-recipe",
       "name": "Iron Ingot",
       "craftTime": 2,
@@ -7638,8 +7638,8 @@
       "producedIn": "smelter",
       "event": "NONE"
     },
-    "Recipe_Alternate_AdheredIronPlate": {
-      "slug": "alternate-adhered-iron-plate-recipe",
+    "adhered-iron-plate-recipe": {
+      "slug": "adhered-iron-plate-recipe",
       "name": "Adhered Iron Plate",
       "craftTime": 16,
       "maunalCraftMultiplier": 1,
@@ -7666,7 +7666,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "RecipeircuitBoard": {
+    "circuit-board-recipe": {
       "slug": "circuit-board-recipe",
       "name": "Circuit Board",
       "craftTime": 8,
@@ -7694,7 +7694,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_LiquidFuel": {
+    "fuel-recipe": {
       "slug": "fuel-recipe",
       "name": "Fuel",
       "craftTime": 6,
@@ -7722,7 +7722,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_PetroleumCoke": {
+    "petroleum-coke-recipe": {
       "slug": "petroleum-coke-recipe",
       "name": "Petroleum Coke",
       "craftTime": 6,
@@ -7746,7 +7746,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Plastic": {
+    "plastic-recipe": {
       "slug": "plastic-recipe",
       "name": "Plastic",
       "craftTime": 6,
@@ -7774,7 +7774,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Rubber": {
+    "rubber-recipe": {
       "slug": "rubber-recipe",
       "name": "Rubber",
       "craftTime": 6,
@@ -7802,7 +7802,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_ResidualFuel": {
+    "residual-fuel-recipe": {
       "slug": "residual-fuel-recipe",
       "name": "Residual Fuel",
       "craftTime": 6,
@@ -7826,7 +7826,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_ResidualPlastic": {
+    "residual-plastic-recipe": {
       "slug": "residual-plastic-recipe",
       "name": "Residual Plastic",
       "craftTime": 6,
@@ -7854,7 +7854,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_ResidualRubber": {
+    "residual-rubber-recipe": {
       "slug": "residual-rubber-recipe",
       "name": "Residual Rubber",
       "craftTime": 6,
@@ -7882,8 +7882,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_BoltedFrame": {
-      "slug": "alternate-bolted-frame-recipe",
+    "bolted-frame-recipe": {
+      "slug": "bolted-frame-recipe",
       "name": "Bolted Frame",
       "craftTime": 24,
       "maunalCraftMultiplier": 1,
@@ -7910,7 +7910,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_ModularFrame": {
+    "modular-frame-recipe": {
       "slug": "modular-frame-recipe",
       "name": "Modular Frame",
       "craftTime": 60,
@@ -7938,7 +7938,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Rotor": {
+    "rotor-recipe": {
       "slug": "rotor-recipe",
       "name": "Rotor",
       "craftTime": 15,
@@ -7966,7 +7966,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "RecipeopperSheet": {
+    "copper-sheet-recipe": {
       "slug": "copper-sheet-recipe",
       "name": "Copper Sheet",
       "craftTime": 6,
@@ -7990,7 +7990,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_SpaceElevatorPart_1": {
+    "smart-plating-recipe": {
       "slug": "smart-plating-recipe",
       "name": "Smart Plating",
       "craftTime": 30,
@@ -8018,8 +8018,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_AlternateoatedCable": {
-      "slug": "alternate-coated-cable-recipe",
+    "coated-cable-recipe": {
+      "slug": "coated-cable-recipe",
       "name": "Coated Cable",
       "craftTime": 8,
       "maunalCraftMultiplier": 1,
@@ -8046,8 +8046,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_AlternateoatedIronCanister": {
-      "slug": "alternate-coated-iron-canister-recipe",
+    "coated-iron-canister-recipe": {
+      "slug": "coated-iron-canister-recipe",
       "name": "Coated Iron Canister",
       "craftTime": 4,
       "maunalCraftMultiplier": 1,
@@ -8074,7 +8074,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "RecipeolorCartridge": {
+    "color-cartridge-recipe": {
       "slug": "color-cartridge-recipe",
       "name": "Color Cartridge",
       "craftTime": 6,
@@ -8098,7 +8098,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_FluidCanister": {
+    "empty-canister-recipe": {
       "slug": "empty-canister-recipe",
       "name": "Empty Canister",
       "craftTime": 4,
@@ -8122,7 +8122,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Fuel": {
+    "packaged-fuel-recipe": {
       "slug": "packaged-fuel-recipe",
       "name": "Packaged Fuel",
       "craftTime": 3,
@@ -8143,14 +8143,14 @@
       ],
       "products": [
         {
-          "itemClass":"packaged-fuel",
+          "itemClass": "packaged-fuel",
           "quantity": 2
         }
       ],
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_LiquidBiofuel": {
+    "liquid-biofuel-recipe": {
       "slug": "liquid-biofuel-recipe",
       "name": "Liquid Biofuel",
       "craftTime": 4,
@@ -8178,7 +8178,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_PackagedBiofuel": {
+    "packaged-liquid-biofuel-recipe": {
       "slug": "packaged-liquid-biofuel-recipe",
       "name": "Packaged Liquid Biofuel",
       "craftTime": 3,
@@ -8199,14 +8199,14 @@
       ],
       "products": [
         {
-          "itemClass":"packaged-liquid-biofuel",
+          "itemClass": "packaged-liquid-biofuel",
           "quantity": 2
         }
       ],
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_PackagedCrudeOil": {
+    "packaged-oil-recipe": {
       "slug": "packaged-oil-recipe",
       "name": "Packaged Oil",
       "craftTime": 4,
@@ -8227,14 +8227,14 @@
       ],
       "products": [
         {
-          "itemClass":"packaged-oil",
+          "itemClass": "packaged-oil",
           "quantity": 2
         }
       ],
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_PackagedOilResidue": {
+    "packaged-heavy-oil-residue-recipe": {
       "slug": "packaged-heavy-oil-residue-recipe",
       "name": "Packaged Heavy Oil Residue",
       "craftTime": 4,
@@ -8255,14 +8255,14 @@
       ],
       "products": [
         {
-          "itemClass":"packaged-heavy-oil-residue",
+          "itemClass": "packaged-heavy-oil-residue",
           "quantity": 2
         }
       ],
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_PackagedWater": {
+    "packaged-water-recipe": {
       "slug": "packaged-water-recipe",
       "name": "Packaged Water",
       "craftTime": 2,
@@ -8283,14 +8283,14 @@
       ],
       "products": [
         {
-          "itemClass":"packaged-water",
+          "itemClass": "packaged-water",
           "quantity": 2
         }
       ],
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_UnpackageBioFuel": {
+    "unpackage-liquid-biofuel-recipe": {
       "slug": "unpackage-liquid-biofuel-recipe",
       "name": "Unpackage Liquid Biofuel",
       "craftTime": 2,
@@ -8301,7 +8301,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass":"packaged-liquid-biofuel",
+          "itemClass": "packaged-liquid-biofuel",
           "quantity": 2
         }
       ],
@@ -8318,7 +8318,7 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_UnpackageFuel": {
+    "unpackage-fuel-recipe": {
       "slug": "unpackage-fuel-recipe",
       "name": "Unpackage Fuel",
       "craftTime": 2,
@@ -8329,7 +8329,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass":"packaged-fuel",
+          "itemClass": "packaged-fuel",
           "quantity": 2
         }
       ],
@@ -8346,7 +8346,7 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_UnpackageOil": {
+    "unpackage-oil-recipe": {
       "slug": "unpackage-oil-recipe",
       "name": "Unpackage Oil",
       "craftTime": 2,
@@ -8357,7 +8357,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass":"packaged-oil",
+          "itemClass": "packaged-oil",
           "quantity": 2
         }
       ],
@@ -8374,7 +8374,7 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_UnpackageOilResidue": {
+    "unpackage-heavy-oil-residue-recipe": {
       "slug": "unpackage-heavy-oil-residue-recipe",
       "name": "Unpackage Heavy Oil Residue",
       "craftTime": 6,
@@ -8385,7 +8385,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass":"packaged-heavy-oil-residue",
+          "itemClass": "packaged-heavy-oil-residue",
           "quantity": 2
         }
       ],
@@ -8402,7 +8402,7 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_UnpackageWater": {
+    "unpackage-water-recipe": {
       "slug": "unpackage-water-recipe",
       "name": "Unpackage Water",
       "craftTime": 1,
@@ -8413,7 +8413,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass":"packaged-water",
+          "itemClass": "packaged-water",
           "quantity": 2
         }
       ],
@@ -8430,8 +8430,8 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_AlternateoatedIronPlate": {
-      "slug": "alternate-coated-iron-plate-recipe",
+    "coated-iron-plate-recipe": {
+      "slug": "coated-iron-plate-recipe",
       "name": "Coated Iron Plate",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -8458,8 +8458,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_AlternateokeSteelIngot": {
-      "slug": "alternate-coke-steel-ingot-recipe",
+    "coke-steel-ingot-recipe": {
+      "slug": "coke-steel-ingot-recipe",
       "name": "Coke Steel Ingot",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -8486,8 +8486,8 @@
       "producedIn": "foundry",
       "event": "NONE"
     },
-    "Recipe_AlternateopperAlloyIngot": {
-      "slug": "alternate-copper-alloy-ingot-recipe",
+    "copper-alloy-ingot-recipe": {
+      "slug": "copper-alloy-ingot-recipe",
       "name": "Copper Alloy Ingot",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -8514,8 +8514,8 @@
       "producedIn": "foundry",
       "event": "NONE"
     },
-    "Recipe_AlternateopperRotor": {
-      "slug": "alternate-copper-rotor-recipe",
+    "copper-rotor-recipe": {
+      "slug": "copper-rotor-recipe",
       "name": "Copper Rotor",
       "craftTime": 16,
       "maunalCraftMultiplier": 1,
@@ -8542,8 +8542,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_DilutedPackagedFuel": {
-      "slug": "alternate-diluted-packaged-fuel-recipe",
+    "diluted-packaged-fuel-recipe": {
+      "slug": "diluted-packaged-fuel-recipe",
       "name": "Diluted Packaged Fuel",
       "craftTime": 2,
       "maunalCraftMultiplier": 1,
@@ -8557,21 +8557,21 @@
           "quantity": 1
         },
         {
-          "itemClass":"packaged-water",
+          "itemClass": "packaged-water",
           "quantity": 2
         }
       ],
       "products": [
         {
-          "itemClass":"packaged-fuel",
+          "itemClass": "packaged-fuel",
           "quantity": 2
         }
       ],
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_ElectroAluminumScrap": {
-      "slug": "alternate-electrode-aluminum-scrap-recipe",
+    "electrode-aluminum-scrap-recipe": {
+      "slug": "electrode-aluminum-scrap-recipe",
       "name": "Electrode - Aluminum Scrap",
       "craftTime": 4,
       "maunalCraftMultiplier": 1,
@@ -8602,7 +8602,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_UraniumCell": {
+    "encased-uranium-cell-recipe": {
       "slug": "encased-uranium-cell-recipe",
       "name": "Encased Uranium Cell",
       "craftTime": 12,
@@ -8638,7 +8638,7 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "RecipeoolingSystem": {
+    "cooling-system-recipe": {
       "slug": "cooling-system-recipe",
       "name": "Cooling System",
       "craftTime": 10,
@@ -8674,7 +8674,7 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "Recipe_NitricAcid": {
+    "nitric-acid-recipe": {
       "slug": "nitric-acid-recipe",
       "name": "Nitric Acid",
       "craftTime": 6,
@@ -8706,7 +8706,7 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "Recipe_NonFissileUranium": {
+    "non-fissile-uranium-recipe": {
       "slug": "non-fissile-uranium-recipe",
       "name": "Non-fissile Uranium",
       "craftTime": 24,
@@ -8746,7 +8746,7 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "Recipe_AluminumCasing": {
+    "aluminum-casing-recipe": {
       "slug": "aluminum-casing-recipe",
       "name": "Aluminum Casing",
       "craftTime": 2,
@@ -8770,7 +8770,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_AluminumSheet": {
+    "alclad-aluminum-sheet-recipe": {
       "slug": "alclad-aluminum-sheet-recipe",
       "name": "Alclad Aluminum Sheet",
       "craftTime": 6,
@@ -8798,7 +8798,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_RadioControlUnit": {
+    "radio-control-unit-recipe": {
       "slug": "radio-control-unit-recipe",
       "name": "Radio Control Unit",
       "craftTime": 48,
@@ -8830,7 +8830,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_AluminaSolution": {
+    "alumina-solution-recipe": {
       "slug": "alumina-solution-recipe",
       "name": "Alumina Solution",
       "craftTime": 6,
@@ -8862,7 +8862,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_AluminumScrap": {
+    "aluminum-scrap-recipe": {
       "slug": "aluminum-scrap-recipe",
       "name": "Aluminum Scrap",
       "craftTime": 1,
@@ -8894,7 +8894,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_PackagedAlumina": {
+    "packaged-alumina-solution-recipe": {
       "slug": "packaged-alumina-solution-recipe",
       "name": "Packaged Alumina Solution",
       "craftTime": 1,
@@ -8915,14 +8915,14 @@
       ],
       "products": [
         {
-          "itemClass":"packaged-alumina-solution",
+          "itemClass": "packaged-alumina-solution",
           "quantity": 2
         }
       ],
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_IngotAluminum": {
+    "aluminum-ingot-recipe": {
       "slug": "aluminum-ingot-recipe",
       "name": "Aluminum Ingot",
       "craftTime": 4,
@@ -8950,7 +8950,7 @@
       "producedIn": "foundry",
       "event": "NONE"
     },
-    "Recipe_QuartzCrystal": {
+    "quartz-crystal-recipe": {
       "slug": "quartz-crystal-recipe",
       "name": "Quartz Crystal",
       "craftTime": 8,
@@ -8974,7 +8974,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "ReciperystalOscillator": {
+    "crystal-oscillator-recipe": {
       "slug": "crystal-oscillator-recipe",
       "name": "Crystal Oscillator",
       "craftTime": 120,
@@ -9006,7 +9006,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_UnpackageAlumina": {
+    "unpackage-alumina-solution-recipe": {
       "slug": "unpackage-alumina-solution-recipe",
       "name": "Unpackage Alumina Solution",
       "craftTime": 1,
@@ -9017,7 +9017,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass":"packaged-alumina-solution",
+          "itemClass": "packaged-alumina-solution",
           "quantity": 2
         }
       ],
@@ -9034,8 +9034,8 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_Alternate_ElectrodeCircuitBoard": {
-      "slug": "alternate-electrode-circuit-board-recipe",
+    "electrode-circuit-board-recipe": {
+      "slug": "electrode-circuit-board-recipe",
       "name": "Electrode Circuit Board",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -9062,8 +9062,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_FlexibleFramework": {
-      "slug": "alternate-flexible-framework-recipe",
+    "flexible-framework-recipe": {
+      "slug": "flexible-framework-recipe",
       "name": "Flexible Framework",
       "craftTime": 16,
       "maunalCraftMultiplier": 1,
@@ -9087,15 +9087,15 @@
       ],
       "products": [
         {
-          "itemClass":"versatile-framework",
+          "itemClass": "versatile-framework",
           "quantity": 2
         }
       ],
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_FusedWire": {
-      "slug": "alternate-fused-wire-recipe",
+    "fused-wire-recipe": {
+      "slug": "fused-wire-recipe",
       "name": "Fused Wire",
       "craftTime": 20,
       "maunalCraftMultiplier": 1,
@@ -9122,8 +9122,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_HeavyFlexibleFrame": {
-      "slug": "alternate-heavy-flexible-frame-recipe",
+    "heavy-flexible-frame-recipe": {
+      "slug": "heavy-flexible-frame-recipe",
       "name": "Heavy Flexible Frame",
       "craftTime": 16,
       "maunalCraftMultiplier": 1,
@@ -9158,7 +9158,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipeomputer": {
+    "computer-recipe": {
       "slug": "computer-recipe",
       "name": "Computer",
       "craftTime": 24,
@@ -9194,7 +9194,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_SpaceElevatorPart_4": {
+    "modular-engine-recipe": {
       "slug": "modular-engine-recipe",
       "name": "Modular Engine",
       "craftTime": 60,
@@ -9226,7 +9226,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_SpaceElevatorPart_5": {
+    "adaptive-control-unit-recipe": {
       "slug": "adaptive-control-unit-recipe",
       "name": "Adaptive Control Unit",
       "craftTime": 120,
@@ -9262,8 +9262,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_HeavyOilResidue": {
-      "slug": "alternate-heavy-oil-residue-recipe",
+    "heavy-oil-residue-recipe": {
+      "slug": "heavy-oil-residue-recipe",
       "name": "Heavy Oil Residue",
       "craftTime": 6,
       "maunalCraftMultiplier": 1,
@@ -9290,8 +9290,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_HighSpeedWiring": {
-      "slug": "alternate-automated-speed-wiring-recipe",
+    "automated-speed-wiring-recipe": {
+      "slug": "automated-speed-wiring-recipe",
       "name": "Automated Speed Wiring",
       "craftTime": 32,
       "maunalCraftMultiplier": 1,
@@ -9322,7 +9322,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_EncasedIndustrialBeam": {
+    "encased-industrial-beam-recipe": {
       "slug": "encased-industrial-beam-recipe",
       "name": "Encased Industrial Beam",
       "craftTime": 10,
@@ -9350,7 +9350,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Motor": {
+    "motor-recipe": {
       "slug": "motor-recipe",
       "name": "Motor",
       "craftTime": 12,
@@ -9378,7 +9378,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Stator": {
+    "stator-recipe": {
       "slug": "stator-recipe",
       "name": "Stator",
       "craftTime": 12,
@@ -9406,7 +9406,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_ModularFrameHeavy": {
+    "heavy-modular-frame-recipe": {
       "slug": "heavy-modular-frame-recipe",
       "name": "Heavy Modular Frame",
       "craftTime": 30,
@@ -9442,7 +9442,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_SpaceElevatorPart_3": {
+    "automated-wiring-recipe": {
       "slug": "automated-wiring-recipe",
       "name": "Automated Wiring",
       "craftTime": 24,
@@ -9470,7 +9470,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_AILimiter": {
+    "ai-limiter-recipe": {
       "slug": "ai-limiter-recipe",
       "name": "AI Limiter",
       "craftTime": 12,
@@ -9498,8 +9498,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_PlasticSmartPlating": {
-      "slug": "alternate-plastic-smart-plating-recipe",
+    "plastic-smart-plating-recipe": {
+      "slug": "plastic-smart-plating-recipe",
       "name": "Plastic Smart Plating",
       "craftTime": 24,
       "maunalCraftMultiplier": 1,
@@ -9530,8 +9530,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_PolymerResin": {
-      "slug": "alternate-polymer-resin-recipe",
+    "polymer-resin-recipe": {
+      "slug": "polymer-resin-recipe",
       "name": "Polymer Resin",
       "craftTime": 6,
       "maunalCraftMultiplier": 1,
@@ -9558,8 +9558,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_PureAluminumIngot": {
-      "slug": "alternate-pure-aluminum-ingot-recipe",
+    "pure-aluminum-ingot-recipe": {
+      "slug": "pure-aluminum-ingot-recipe",
       "name": "Pure Aluminum Ingot",
       "craftTime": 2,
       "maunalCraftMultiplier": 1,
@@ -9582,8 +9582,8 @@
       "producedIn": "smelter",
       "event": "NONE"
     },
-    "Recipe_Alternate_PureCateriumIngot": {
-      "slug": "alternate-pure-caterium-ingot-recipe",
+    "pure-caterium-ingot-recipe": {
+      "slug": "pure-caterium-ingot-recipe",
       "name": "Pure Caterium Ingot",
       "craftTime": 5,
       "maunalCraftMultiplier": 1,
@@ -9593,7 +9593,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass":"caterium-ore",
+          "itemClass": "caterium-ore",
           "quantity": 2
         },
         {
@@ -9610,8 +9610,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_PureCopperIngot": {
-      "slug": "alternate-pure-copper-ingot-recipe",
+    "pure-copper-ingot-recipe": {
+      "slug": "pure-copper-ingot-recipe",
       "name": "Pure Copper Ingot",
       "craftTime": 24,
       "maunalCraftMultiplier": 1,
@@ -9638,8 +9638,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_PureIronIngot": {
-      "slug": "alternate-pure-iron-ingot-recipe",
+    "pure-iron-ingot-recipe": {
+      "slug": "pure-iron-ingot-recipe",
       "name": "Pure Iron Ingot",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -9666,8 +9666,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_PureQuartzCrystal": {
-      "slug": "alternate-pure-quartz-crystal-recipe",
+    "pure-quartz-crystal-recipe": {
+      "slug": "pure-quartz-crystal-recipe",
       "name": "Pure Quartz Crystal",
       "craftTime": 8,
       "maunalCraftMultiplier": 1,
@@ -9694,8 +9694,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_RecycledRubber": {
-      "slug": "alternate-recycled-rubber-recipe",
+    "recycled-rubber-recipe": {
+      "slug": "recycled-rubber-recipe",
       "name": "Recycled Rubber",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -9722,8 +9722,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_RubberConcrete": {
-      "slug": "alternate-rubber-concrete-recipe",
+    "rubber-concrete-recipe": {
+      "slug": "rubber-concrete-recipe",
       "name": "Rubber Concrete",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -9750,8 +9750,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_SteamedCopperSheet": {
-      "slug": "alternate-steamed-copper-sheet-recipe",
+    "steamed-copper-sheet-recipe": {
+      "slug": "steamed-copper-sheet-recipe",
       "name": "Steamed Copper Sheet",
       "craftTime": 8,
       "maunalCraftMultiplier": 1,
@@ -9778,8 +9778,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_SteelCanister": {
-      "slug": "alternate-steel-canister-recipe",
+    "steel-canister-recipe": {
+      "slug": "steel-canister-recipe",
       "name": "Steel Canister",
       "craftTime": 3,
       "maunalCraftMultiplier": 1,
@@ -9802,8 +9802,8 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Alternate_SteelCoatedPlate": {
-      "slug": "alternate-steel-coated-plate-recipe",
+    "steel-coated-plate-recipe": {
+      "slug": "steel-coated-plate-recipe",
       "name": "Steel Coated Plate",
       "craftTime": 24,
       "maunalCraftMultiplier": 1,
@@ -9830,8 +9830,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_SteelRod": {
-      "slug": "alternate-steel-rod-recipe",
+    "steel-rod-recipe": {
+      "slug": "steel-rod-recipe",
       "name": "Steel Rod",
       "craftTime": 5,
       "maunalCraftMultiplier": 1,
@@ -9854,7 +9854,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_SteelBeam": {
+    "steel-beam-recipe": {
       "slug": "steel-beam-recipe",
       "name": "Steel Beam",
       "craftTime": 4,
@@ -9878,7 +9878,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_SteelPipe": {
+    "steel-pipe-recipe": {
       "slug": "steel-pipe-recipe",
       "name": "Steel Pipe",
       "craftTime": 6,
@@ -9902,7 +9902,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_IngotSteel": {
+    "steel-ingot-recipe": {
       "slug": "steel-ingot-recipe",
       "name": "Steel Ingot",
       "craftTime": 4,
@@ -9930,7 +9930,7 @@
       "producedIn": "foundry",
       "event": "NONE"
     },
-    "Recipe_SpaceElevatorPart_2": {
+    "versatile-framework-recipe": {
       "slug": "versatile-framework-recipe",
       "name": "Versatile Framework",
       "craftTime": 24,
@@ -9951,15 +9951,15 @@
       ],
       "products": [
         {
-          "itemClass":"versatile-framework",
+          "itemClass": "versatile-framework",
           "quantity": 2
         }
       ],
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_TurboHeavyFuel": {
-      "slug": "alternate-turbo-heavy-fuel-recipe",
+    "turbo-heavy-fuel-recipe": {
+      "slug": "turbo-heavy-fuel-recipe",
       "name": "Turbo Heavy Fuel",
       "craftTime": 8,
       "maunalCraftMultiplier": 1,
@@ -9986,7 +9986,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_PackagedTurboFuel": {
+    "packaged-turbofuel-recipe": {
       "slug": "packaged-turbofuel-recipe",
       "name": "Packaged Turbofuel",
       "craftTime": 6,
@@ -10014,7 +10014,7 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_UnpackageTurboFuel": {
+    "unpackage-turbofuel-recipe": {
       "slug": "unpackage-turbofuel-recipe",
       "name": "Unpackage Turbofuel",
       "craftTime": 6,
@@ -10042,8 +10042,8 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_Alternateoal_1": {
-      "slug": "alternate-charcoal-recipe",
+    "charcoal-recipe": {
+      "slug": "charcoal-recipe",
       "name": "Charcoal",
       "craftTime": 4,
       "maunalCraftMultiplier": 1,
@@ -10066,8 +10066,8 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Alternateoal_2": {
-      "slug": "alternate-biocoal-recipe",
+    "biocoal-recipe": {
+      "slug": "biocoal-recipe",
       "name": "Biocoal",
       "craftTime": 8,
       "maunalCraftMultiplier": 1,
@@ -10090,8 +10090,8 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Alternate_EnrichedCoal": {
-      "slug": "alternate-compacted-coal-recipe",
+    "compacted-coal-recipe": {
+      "slug": "compacted-coal-recipe",
       "name": "Compacted Coal",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -10118,8 +10118,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_WetConcrete": {
-      "slug": "alternate-wet-concrete-recipe",
+    "wet-concrete-recipe": {
+      "slug": "wet-concrete-recipe",
       "name": "Wet Concrete",
       "craftTime": 3,
       "maunalCraftMultiplier": 1,
@@ -10146,8 +10146,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_AlcladCasing": {
-      "slug": "alternate-alclad-casing-recipe",
+    "alclad-casing-recipe": {
+      "slug": "alclad-casing-recipe",
       "name": "Alclad Casing",
       "craftTime": 8,
       "maunalCraftMultiplier": 1,
@@ -10174,8 +10174,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_AutomatedMiner": {
-      "slug": "alternate-automated-miner-recipe",
+    "automated-miner-recipe": {
+      "slug": "automated-miner-recipe",
       "name": "Automated Miner",
       "craftTime": 60,
       "maunalCraftMultiplier": 1,
@@ -10210,7 +10210,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Battery": {
+    "battery-recipe": {
       "slug": "battery-recipe",
       "name": "Battery",
       "craftTime": 3,
@@ -10246,7 +10246,7 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "RecipeomputerSuper": {
+    "supercomputer-recipe": {
       "slug": "supercomputer-recipe",
       "name": "Supercomputer",
       "craftTime": 32,
@@ -10282,7 +10282,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_SulfuricAcid": {
+    "sulfuric-acid-recipe": {
       "slug": "sulfuric-acid-recipe",
       "name": "Sulfuric Acid",
       "craftTime": 6,
@@ -10310,7 +10310,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_PackagedSulfuricAcid": {
+    "packaged-sulfuric-acid-recipe": {
       "slug": "packaged-sulfuric-acid-recipe",
       "name": "Packaged Sulfuric Acid",
       "craftTime": 3,
@@ -10338,7 +10338,7 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_SpaceElevatorPart_7": {
+    "assembly-director-system-recipe": {
       "slug": "assembly-director-system-recipe",
       "name": "Assembly Director System",
       "craftTime": 80,
@@ -10366,7 +10366,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_HighSpeedConnector": {
+    "high-speed-connector-recipe": {
       "slug": "high-speed-connector-recipe",
       "name": "High-Speed Connector",
       "craftTime": 16,
@@ -10398,7 +10398,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_UnpackageSulfuricAcid": {
+    "unpackage-sulfuric-acid-recipe": {
       "slug": "unpackage-sulfuric-acid-recipe",
       "name": "Unpackage Sulfuric Acid",
       "craftTime": 1,
@@ -10426,8 +10426,8 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_AlternateoolingDevice": {
-      "slug": "alternate-cooling-device-recipe",
+    "cooling-device-recipe": {
+      "slug": "cooling-device-recipe",
       "name": "Cooling Device",
       "craftTime": 32,
       "maunalCraftMultiplier": 1,
@@ -10458,7 +10458,7 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "Recipe_HeatSink": {
+    "heat-sink-recipe": {
       "slug": "heat-sink-recipe",
       "name": "Heat Sink",
       "craftTime": 8,
@@ -10486,7 +10486,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_FusedModularFrame": {
+    "fused-modular-frame-recipe": {
       "slug": "fused-modular-frame-recipe",
       "name": "Fused Modular Frame",
       "craftTime": 40,
@@ -10518,7 +10518,7 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "Recipe_GasTank": {
+    "empty-fluid-tank-recipe": {
       "slug": "empty-fluid-tank-recipe",
       "name": "Empty Fluid Tank",
       "craftTime": 1,
@@ -10542,7 +10542,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_PackagedNitrogen": {
+    "packaged-nitrogen-gas-recipe": {
       "slug": "packaged-nitrogen-gas-recipe",
       "name": "Packaged Nitrogen Gas",
       "craftTime": 1,
@@ -10570,7 +10570,7 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_UnpackageNitrogen": {
+    "unpackage-nitrogen-gas-recipe": {
       "slug": "unpackage-nitrogen-gas-recipe",
       "name": "Unpackage Nitrogen Gas",
       "craftTime": 1,
@@ -10598,8 +10598,8 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_Alternate_DilutedFuel": {
-      "slug": "alternate-diluted-fuel-recipe",
+    "diluted-fuel-recipe": {
+      "slug": "diluted-fuel-recipe",
       "name": "Diluted Fuel",
       "craftTime": 6,
       "maunalCraftMultiplier": 1,
@@ -10626,8 +10626,8 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "Recipe_Alternate_ElectricMotor": {
-      "slug": "alternate-electric-motor-recipe",
+    "electric-motor-recipe": {
+      "slug": "electric-motor-recipe",
       "name": "Electric Motor",
       "craftTime": 16,
       "maunalCraftMultiplier": 1,
@@ -10654,8 +10654,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_FertileUranium": {
-      "slug": "alternate-fertile-uranium-recipe",
+    "fertile-uranium-recipe": {
+      "slug": "fertile-uranium-recipe",
       "name": "Fertile Uranium",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -10694,7 +10694,7 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "Recipe_PlutoniumCell": {
+    "encased-plutonium-cell-recipe": {
       "slug": "encased-plutonium-cell-recipe",
       "name": "Encased Plutonium Cell",
       "craftTime": 12,
@@ -10722,7 +10722,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_PressureConversionCube": {
+    "pressure-conversion-cube-recipe": {
       "slug": "pressure-conversion-cube-recipe",
       "name": "Pressure Conversion Cube",
       "craftTime": 60,
@@ -10750,7 +10750,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "RecipeopperDust": {
+    "copper-powder-recipe": {
       "slug": "copper-powder-recipe",
       "name": "Copper Powder",
       "craftTime": 6,
@@ -10774,7 +10774,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Plutonium": {
+    "plutonium-pellet-recipe": {
       "slug": "plutonium-pellet-recipe",
       "name": "Plutonium Pellet",
       "craftTime": 60,
@@ -10802,7 +10802,7 @@
       "producedIn": "particle-accelerator",
       "event": "NONE"
     },
-    "Recipe_PlutoniumFuelRod": {
+    "plutonium-fuel-rod-recipe": {
       "slug": "plutonium-fuel-rod-recipe",
       "name": "Plutonium Fuel Rod",
       "craftTime": 240,
@@ -10838,7 +10838,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_PackagedNitricAcid": {
+    "packaged-nitric-acid-recipe": {
       "slug": "packaged-nitric-acid-recipe",
       "name": "Packaged Nitric Acid",
       "craftTime": 2,
@@ -10866,7 +10866,7 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_SpaceElevatorPart_9": {
+    "nuclear-pasta-recipe": {
       "slug": "nuclear-pasta-recipe",
       "name": "Nuclear Pasta",
       "craftTime": 120,
@@ -10894,7 +10894,7 @@
       "producedIn": "particle-accelerator",
       "event": "NONE"
     },
-    "Recipe_UnpackageNitricAcid": {
+    "unpackage-nitric-acid-recipe": {
       "slug": "unpackage-nitric-acid-recipe",
       "name": "Unpackage Nitric Acid",
       "craftTime": 3,
@@ -10922,8 +10922,8 @@
       "producedIn": "packager",
       "event": "NONE"
     },
-    "Recipe_Alternate_HeatFusedFrame": {
-      "slug": "alternate-heat-fused-frame-recipe",
+    "heat-fused-frame-recipe": {
+      "slug": "heat-fused-frame-recipe",
       "name": "Heat-Fused Frame",
       "craftTime": 20,
       "maunalCraftMultiplier": 1,
@@ -10958,8 +10958,8 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "Recipe_Alternate_InstantPlutoniumCell": {
-      "slug": "alternate-instant-plutonium-cell-recipe",
+    "instant-plutonium-cell-recipe": {
+      "slug": "instant-plutonium-cell-recipe",
       "name": "Instant Plutonium Cell",
       "craftTime": 120,
       "maunalCraftMultiplier": 1,
@@ -10986,8 +10986,8 @@
       "producedIn": "particle-accelerator",
       "event": "NONE"
     },
-    "Recipe_Alternate_InstantScrap": {
-      "slug": "alternate-instant-scrap-recipe",
+    "instant-scrap-recipe": {
+      "slug": "instant-scrap-recipe",
       "name": "Instant Scrap",
       "craftTime": 6,
       "maunalCraftMultiplier": 1,
@@ -11026,8 +11026,8 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "Recipe_Alternate_OCSupercomputer": {
-      "slug": "alternate-oc-supercomputer-recipe",
+    "oc-supercomputer-recipe": {
+      "slug": "oc-supercomputer-recipe",
       "name": "OC Supercomputer",
       "craftTime": 20,
       "maunalCraftMultiplier": 1,
@@ -11054,8 +11054,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_PlutoniumFuelUnit": {
-      "slug": "alternate-plutonium-fuel-unit-recipe",
+    "plutonium-fuel-unit-recipe": {
+      "slug": "plutonium-fuel-unit-recipe",
       "name": "Plutonium Fuel Unit",
       "craftTime": 120,
       "maunalCraftMultiplier": 1,
@@ -11082,8 +11082,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_RadioControlSystem": {
-      "slug": "alternate-radio-control-system-recipe",
+    "radio-control-system-recipe": {
+      "slug": "radio-control-system-recipe",
       "name": "Radio Control System",
       "craftTime": 40,
       "maunalCraftMultiplier": 1,
@@ -11118,8 +11118,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_SloppyAlumina": {
-      "slug": "alternate-sloppy-alumina-recipe",
+    "sloppy-alumina-recipe": {
+      "slug": "sloppy-alumina-recipe",
       "name": "Sloppy Alumina",
       "craftTime": 3,
       "maunalCraftMultiplier": 1,
@@ -11146,8 +11146,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_SuperStateComputer": {
-      "slug": "alternate-super-state-computer-recipe",
+    "super-state-computer-recipe": {
+      "slug": "super-state-computer-recipe",
       "name": "Super-State Computer",
       "craftTime": 50,
       "maunalCraftMultiplier": 1,
@@ -11182,7 +11182,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_ElectromagneticControlRod": {
+    "electromagnetic-control-rod-recipe": {
       "slug": "electromagnetic-control-rod-recipe",
       "name": "Electromagnetic Control Rod",
       "craftTime": 30,
@@ -11210,7 +11210,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_NuclearFuelRod": {
+    "uranium-fuel-rod-recipe": {
       "slug": "uranium-fuel-rod-recipe",
       "name": "Uranium Fuel Rod",
       "craftTime": 150,
@@ -11242,7 +11242,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_SpaceElevatorPart_6": {
+    "magnetic-field-generator-recipe": {
       "slug": "magnetic-field-generator-recipe",
       "name": "Magnetic Field Generator",
       "craftTime": 120,
@@ -11253,7 +11253,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass":"versatile-framework",
+          "itemClass": "versatile-framework",
           "quantity": 5
         },
         {
@@ -11274,8 +11274,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_TurboBlendFuel": {
-      "slug": "alternate-turbo-blend-fuel-recipe",
+    "turbo-blend-fuel-recipe": {
+      "slug": "turbo-blend-fuel-recipe",
       "name": "Turbo Blend Fuel",
       "craftTime": 8,
       "maunalCraftMultiplier": 1,
@@ -11310,8 +11310,8 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "Recipe_Alternate_TurboPressureMotor": {
-      "slug": "alternate-turbo-pressure-motor-recipe",
+    "turbo-pressure-motor-recipe": {
+      "slug": "turbo-pressure-motor-recipe",
       "name": "Turbo Pressure Motor",
       "craftTime": 32,
       "maunalCraftMultiplier": 1,
@@ -11346,8 +11346,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_Beacon_1": {
-      "slug": "alternate-crystal-beacon-recipe",
+    "crystal-beacon-recipe": {
+      "slug": "crystal-beacon-recipe",
       "name": "Crystal Beacon",
       "craftTime": 120,
       "maunalCraftMultiplier": 1,
@@ -11378,8 +11378,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternateable_1": {
-      "slug": "alternate-insulated-cable-recipe",
+    "insulated-cable-recipe": {
+      "slug": "insulated-cable-recipe",
       "name": "Insulated Cable",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -11406,8 +11406,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternateable_2": {
-      "slug": "alternate-quickwire-cable-recipe",
+    "quickwire-cable-recipe": {
+      "slug": "quickwire-cable-recipe",
       "name": "Quickwire Cable",
       "craftTime": 24,
       "maunalCraftMultiplier": 1,
@@ -11434,7 +11434,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_IngotCaterium": {
+    "caterium-ingot-recipe": {
       "slug": "caterium-ingot-recipe",
       "name": "Caterium Ingot",
       "craftTime": 4,
@@ -11445,7 +11445,7 @@
       "machineCraftable": true,
       "ingredients": [
         {
-          "itemClass":"caterium-ore",
+          "itemClass": "caterium-ore",
           "quantity": 3
         }
       ],
@@ -11458,8 +11458,8 @@
       "producedIn": "smelter",
       "event": "NONE"
     },
-    "Recipe_AlternateircuitBoard_1": {
-      "slug": "alternate-silicon-circuit-board-recipe",
+    "silicon-circuit-board-recipe": {
+      "slug": "silicon-circuit-board-recipe",
       "name": "Silicon Circuit Board",
       "craftTime": 24,
       "maunalCraftMultiplier": 1,
@@ -11486,8 +11486,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_AlternateircuitBoard_2": {
-      "slug": "alternate-caterium-circuit-board-recipe",
+    "caterium-circuit-board-recipe": {
+      "slug": "caterium-circuit-board-recipe",
       "name": "Caterium Circuit Board",
       "craftTime": 48,
       "maunalCraftMultiplier": 1,
@@ -11514,8 +11514,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternateomputer_1": {
-      "slug": "alternate-caterium-computer-recipe",
+    "caterium-computer-recipe": {
+      "slug": "caterium-computer-recipe",
       "name": "Caterium Computer",
       "craftTime": 16,
       "maunalCraftMultiplier": 1,
@@ -11546,8 +11546,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternateomputer_2": {
-      "slug": "alternate-crystal-computer-recipe",
+    "crystal-computer-recipe": {
+      "slug": "crystal-computer-recipe",
       "name": "Crystal Computer",
       "craftTime": 64,
       "maunalCraftMultiplier": 1,
@@ -11574,8 +11574,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternateoncrete": {
-      "slug": "alternate-fine-concrete-recipe",
+    "fine-concrete-recipe": {
+      "slug": "fine-concrete-recipe",
       "name": "Fine Concrete",
       "craftTime": 24,
       "maunalCraftMultiplier": 1,
@@ -11602,8 +11602,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_AlternaterystalOscillator": {
-      "slug": "alternate-insulated-crystal-oscillator-recipe",
+    "insulated-crystal-oscillator-recipe": {
+      "slug": "insulated-crystal-oscillator-recipe",
       "name": "Insulated Crystal Oscillator",
       "craftTime": 32,
       "maunalCraftMultiplier": 1,
@@ -11634,8 +11634,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_ElectromagneticControlRod_1": {
-      "slug": "alternate-electromagnetic-connection-rod-recipe",
+    "electromagnetic-connection-rod-recipe": {
+      "slug": "electromagnetic-connection-rod-recipe",
       "name": "Electromagnetic Connection Rod",
       "craftTime": 15,
       "maunalCraftMultiplier": 1,
@@ -11662,8 +11662,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_Gunpowder_1": {
-      "slug": "alternate-fine-black-powder-recipe",
+    "fine-black-powder-recipe": {
+      "slug": "fine-black-powder-recipe",
       "name": "Fine Black Powder",
       "craftTime": 16,
       "maunalCraftMultiplier": 1,
@@ -11690,8 +11690,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_HeatSink_1": {
-      "slug": "alternate-heat-exchanger-recipe",
+    "heat-exchanger-recipe": {
+      "slug": "heat-exchanger-recipe",
       "name": "Heat Exchanger",
       "craftTime": 6,
       "maunalCraftMultiplier": 1,
@@ -11718,8 +11718,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_ModularFrameHeavy": {
-      "slug": "alternate-heavy-encased-frame-recipe",
+    "heavy-encased-frame-recipe": {
+      "slug": "heavy-encased-frame-recipe",
       "name": "Heavy Encased Frame",
       "craftTime": 64,
       "maunalCraftMultiplier": 1,
@@ -11754,8 +11754,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_HighSpeedConnector": {
-      "slug": "alternate-silicon-high-speed-connector-recipe",
+    "silicon-high-speed-connector-recipe": {
+      "slug": "silicon-high-speed-connector-recipe",
       "name": "Silicon High-Speed Connector",
       "craftTime": 40,
       "maunalCraftMultiplier": 1,
@@ -11786,8 +11786,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_IngotIron": {
-      "slug": "alternate-iron-alloy-ingot-recipe",
+    "iron-alloy-ingot-recipe": {
+      "slug": "iron-alloy-ingot-recipe",
       "name": "Iron Alloy Ingot",
       "craftTime": 6,
       "maunalCraftMultiplier": 1,
@@ -11814,8 +11814,8 @@
       "producedIn": "foundry",
       "event": "NONE"
     },
-    "Recipe_Alternate_IngotSteel_1": {
-      "slug": "alternate-solid-steel-ingot-recipe",
+    "solid-steel-ingot-recipe": {
+      "slug": "solid-steel-ingot-recipe",
       "name": "Solid Steel Ingot",
       "craftTime": 3,
       "maunalCraftMultiplier": 1,
@@ -11842,8 +11842,8 @@
       "producedIn": "foundry",
       "event": "NONE"
     },
-    "Recipe_Alternate_IngotSteel_2": {
-      "slug": "alternate-compacted-steel-ingot-recipe",
+    "compacted-steel-ingot-recipe": {
+      "slug": "compacted-steel-ingot-recipe",
       "name": "Compacted Steel Ingot",
       "craftTime": 16,
       "maunalCraftMultiplier": 1,
@@ -11870,8 +11870,8 @@
       "producedIn": "foundry",
       "event": "NONE"
     },
-    "Recipe_Alternate_ModularFrame": {
-      "slug": "alternate-steeled-frame-recipe",
+    "steeled-frame-recipe": {
+      "slug": "steeled-frame-recipe",
       "name": "Steeled Frame",
       "craftTime": 60,
       "maunalCraftMultiplier": 1,
@@ -11898,8 +11898,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_Motor_1": {
-      "slug": "alternate-rigour-motor-recipe",
+    "rigour-motor-recipe": {
+      "slug": "rigour-motor-recipe",
       "name": "Rigour Motor",
       "craftTime": 48,
       "maunalCraftMultiplier": 1,
@@ -11930,8 +11930,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_NuclearFuelRod_1": {
-      "slug": "alternate-uranium-fuel-unit-recipe",
+    "uranium-fuel-unit-recipe": {
+      "slug": "uranium-fuel-unit-recipe",
       "name": "Uranium Fuel Unit",
       "craftTime": 300,
       "maunalCraftMultiplier": 1,
@@ -11966,8 +11966,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_Plastic_1": {
-      "slug": "alternate-recycled-plastic-recipe",
+    "recycled-plastic-recipe": {
+      "slug": "recycled-plastic-recipe",
       "name": "Recycled Plastic",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -11994,8 +11994,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_Quickwire": {
-      "slug": "alternate-fused-quickwire-recipe",
+    "fused-quickwire-recipe": {
+      "slug": "fused-quickwire-recipe",
       "name": "Fused Quickwire",
       "craftTime": 8,
       "maunalCraftMultiplier": 1,
@@ -12022,8 +12022,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_RadioControlUnit_1": {
-      "slug": "alternate-radio-connection-unit-recipe",
+    "radio-connection-unit-recipe": {
+      "slug": "radio-connection-unit-recipe",
       "name": "Radio Connection Unit",
       "craftTime": 16,
       "maunalCraftMultiplier": 1,
@@ -12054,8 +12054,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_ReinforcedIronPlate_1": {
-      "slug": "alternate-bolted-iron-plate-recipe",
+    "bolted-iron-plate-recipe": {
+      "slug": "bolted-iron-plate-recipe",
       "name": "Bolted Iron Plate",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -12082,8 +12082,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_ReinforcedIronPlate_2": {
-      "slug": "alternate-stitched-iron-plate-recipe",
+    "stitched-iron-plate-recipe": {
+      "slug": "stitched-iron-plate-recipe",
       "name": "Stitched Iron Plate",
       "craftTime": 32,
       "maunalCraftMultiplier": 1,
@@ -12110,8 +12110,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_EncasedIndustrialBeam": {
-      "slug": "alternate-encased-industrial-pipe-recipe",
+    "encased-industrial-pipe-recipe": {
+      "slug": "encased-industrial-pipe-recipe",
       "name": "Encased Industrial Pipe",
       "craftTime": 15,
       "maunalCraftMultiplier": 1,
@@ -12138,8 +12138,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_Rotor": {
-      "slug": "alternate-steel-rotor-recipe",
+    "steel-rotor-recipe": {
+      "slug": "steel-rotor-recipe",
       "name": "Steel Rotor",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -12166,8 +12166,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternaterew": {
-      "slug": "alternate-cast-screw-recipe",
+    "cast-screw-recipe": {
+      "slug": "cast-screw-recipe",
       "name": "Cast Screw",
       "craftTime": 24,
       "maunalCraftMultiplier": 1,
@@ -12190,8 +12190,8 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Alternaterew_2": {
-      "slug": "alternate-steel-screw-recipe",
+    "steel-screw-recipe": {
+      "slug": "steel-screw-recipe",
       "name": "Steel Screw",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -12214,8 +12214,8 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Alternate_Silica": {
-      "slug": "alternate-cheap-silica-recipe",
+    "cheap-silica-recipe": {
+      "slug": "cheap-silica-recipe",
       "name": "Cheap Silica",
       "craftTime": 16,
       "maunalCraftMultiplier": 1,
@@ -12242,7 +12242,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Silica": {
+    "silica-recipe": {
       "slug": "silica-recipe",
       "name": "Silica",
       "craftTime": 8,
@@ -12266,8 +12266,8 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Alternate_Stator": {
-      "slug": "alternate-quickwire-stator-recipe",
+    "quickwire-stator-recipe": {
+      "slug": "quickwire-stator-recipe",
       "name": "Quickwire Stator",
       "craftTime": 15,
       "maunalCraftMultiplier": 1,
@@ -12294,7 +12294,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Turbofuel": {
+    "turbofuel-recipe": {
       "slug": "turbofuel-recipe",
       "name": "Turbofuel",
       "craftTime": 16,
@@ -12322,8 +12322,8 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Alternate_TurboMotor_1": {
-      "slug": "alternate-turbo-electric-motor-recipe",
+    "turbo-electric-motor-recipe": {
+      "slug": "turbo-electric-motor-recipe",
       "name": "Turbo Electric Motor",
       "craftTime": 64,
       "maunalCraftMultiplier": 1,
@@ -12358,7 +12358,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_MotorTurbo": {
+    "turbo-motor-recipe": {
       "slug": "turbo-motor-recipe",
       "name": "Turbo Motor",
       "craftTime": 32,
@@ -12394,7 +12394,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_SpaceElevatorPart_8": {
+    "thermal-propulsion-rocket-recipe": {
       "slug": "thermal-propulsion-rocket-recipe",
       "name": "Thermal Propulsion Rocket",
       "craftTime": 120,
@@ -12430,8 +12430,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_UraniumCell_1": {
-      "slug": "alternate-infused-uranium-cell-recipe",
+    "infused-uranium-cell-recipe": {
+      "slug": "infused-uranium-cell-recipe",
       "name": "Infused Uranium Cell",
       "craftTime": 12,
       "maunalCraftMultiplier": 1,
@@ -12466,8 +12466,8 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Alternate_Wire_1": {
-      "slug": "alternate-iron-wire-recipe",
+    "iron-wire-recipe": {
+      "slug": "iron-wire-recipe",
       "name": "Iron Wire",
       "craftTime": 24,
       "maunalCraftMultiplier": 1,
@@ -12490,8 +12490,8 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Alternate_Wire_2": {
-      "slug": "alternate-caterium-wire-recipe",
+    "caterium-wire-recipe": {
+      "slug": "caterium-wire-recipe",
       "name": "Caterium Wire",
       "craftTime": 4,
       "maunalCraftMultiplier": 1,
@@ -12514,7 +12514,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Beacon": {
+    "beacon-recipe": {
       "slug": "beacon-recipe",
       "name": "Beacon",
       "craftTime": 8,
@@ -12550,7 +12550,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_ObjectScanner": {
+    "object-scanner-recipe": {
       "slug": "object-scanner-recipe",
       "name": "Object Scanner",
       "craftTime": 40,
@@ -12582,7 +12582,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_Biofuel": {
+    "solid-biofuel-recipe": {
       "slug": "solid-biofuel-recipe",
       "name": "Solid Biofuel",
       "craftTime": 4,
@@ -12606,7 +12606,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipehainsaw": {
+    "chainsaw-recipe": {
       "slug": "chainsaw-recipe",
       "name": "Chainsaw",
       "craftTime": 60,
@@ -12642,7 +12642,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_XenoBasher": {
+    "xeno-basher-recipe": {
       "slug": "xeno-basher-recipe",
       "name": "Xeno-Basher",
       "craftTime": 80,
@@ -12678,7 +12678,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_JetPack": {
+    "jetpack-recipe": {
       "slug": "jetpack-recipe",
       "name": "Jetpack",
       "craftTime": 120,
@@ -12714,7 +12714,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_FilterGasMask": {
+    "gas-filter-recipe": {
       "slug": "gas-filter-recipe",
       "name": "Gas Filter",
       "craftTime": 8,
@@ -12746,7 +12746,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_Gasmask": {
+    "gas-mask-recipe": {
       "slug": "gas-mask-recipe",
       "name": "Gas Mask",
       "craftTime": 60,
@@ -12778,7 +12778,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_FilterHazmat": {
+    "iodine-infused-filter-recipe": {
       "slug": "iodine-infused-filter-recipe",
       "name": "Iodine Infused Filter",
       "craftTime": 16,
@@ -12810,7 +12810,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_HazmatSuit": {
+    "hazmat-suit-recipe": {
       "slug": "hazmat-suit-recipe",
       "name": "Hazmat Suit",
       "craftTime": 120,
@@ -12846,7 +12846,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_Hoverpack": {
+    "hover-pack-recipe": {
       "slug": "hover-pack-recipe",
       "name": "Hover Pack",
       "craftTime": 120,
@@ -12882,7 +12882,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_Protein_Hog": {
+    "hog-protein-recipe": {
       "slug": "hog-protein-recipe",
       "name": "Hog Protein",
       "craftTime": 3,
@@ -12906,7 +12906,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_RebarGun": {
+    "rebar-gun-recipe": {
       "slug": "rebar-gun-recipe",
       "name": "Rebar Gun",
       "craftTime": 60,
@@ -12938,7 +12938,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_SpikedRebar": {
+    "iron-rebar-recipe": {
       "slug": "iron-rebar-recipe",
       "name": "Iron Rebar",
       "craftTime": 4,
@@ -12962,7 +12962,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Protein_Spitter": {
+    "spitter-protein-recipe": {
       "slug": "spitter-protein-recipe",
       "name": "Spitter Protein",
       "craftTime": 3,
@@ -12986,7 +12986,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_MedicinalInhalerAlienOrgans": {
+    "protein-inhaler-recipe": {
       "slug": "protein-inhaler-recipe",
       "name": "Protein Inhaler",
       "craftTime": 20,
@@ -13014,7 +13014,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_AlienDNACapsule": {
+    "organic-data-capsule-recipe": {
       "slug": "organic-data-capsule-recipe",
       "name": "Organic Data Capsule",
       "craftTime": 6,
@@ -13038,7 +13038,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Biomass_AlienProtein": {
+    "biomass-alien-protein-recipe": {
       "slug": "biomass-alien-protein-recipe",
       "name": "Biomass (Alien Protein)",
       "craftTime": 4,
@@ -13062,7 +13062,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Proteinrab": {
+    "hatcher-protein-recipe": {
       "slug": "hatcher-protein-recipe",
       "name": "Hatcher Protein",
       "craftTime": 3,
@@ -13086,7 +13086,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Protein_Stinger": {
+    "stinger-protein-recipe": {
       "slug": "stinger-protein-recipe",
       "name": "Stinger Protein",
       "craftTime": 3,
@@ -13110,7 +13110,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Quickwire": {
+    "quickwire-recipe": {
       "slug": "quickwire-recipe",
       "name": "Quickwire",
       "craftTime": 5,
@@ -13134,7 +13134,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_ZipLine": {
+    "zipline-recipe": {
       "slug": "zipline-recipe",
       "name": "Zipline",
       "craftTime": 40,
@@ -13170,7 +13170,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_Rebar_Stunshot": {
+    "stun-rebar-recipe": {
       "slug": "stun-rebar-recipe",
       "name": "Stun Rebar",
       "craftTime": 6,
@@ -13198,7 +13198,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_BladeRunners": {
+    "blade-runners-recipe": {
       "slug": "blade-runners-recipe",
       "name": "Blade Runners",
       "craftTime": 60,
@@ -13230,7 +13230,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "RecipeartridgeSmart": {
+    "homing-rifle-ammo-recipe": {
       "slug": "homing-rifle-ammo-recipe",
       "name": "Homing Rifle Ammo",
       "craftTime": 24,
@@ -13258,7 +13258,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Biomass_Mycelia": {
+    "biomass-mycelia-recipe": {
       "slug": "biomass-mycelia-recipe",
       "name": "Biomass (Mycelia)",
       "craftTime": 4,
@@ -13282,7 +13282,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Fabric": {
+    "fabric-recipe": {
       "slug": "fabric-recipe",
       "name": "Fabric",
       "craftTime": 4,
@@ -13310,8 +13310,8 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Alternate_PolyesterFabric": {
-      "slug": "alternate-polyester-fabric-recipe",
+    "polyester-fabric-recipe": {
+      "slug": "polyester-fabric-recipe",
       "name": "Polyester Fabric",
       "craftTime": 2,
       "maunalCraftMultiplier": 1,
@@ -13338,7 +13338,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Parachute": {
+    "parachute-recipe": {
       "slug": "parachute-recipe",
       "name": "Parachute",
       "craftTime": 20,
@@ -13366,7 +13366,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_MedicinalInhaler": {
+    "vitamin-inhaler-recipe": {
       "slug": "vitamin-inhaler-recipe",
       "name": "Vitamin Inhaler",
       "craftTime": 20,
@@ -13394,7 +13394,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_TherapeuticInhaler": {
+    "therapeutic-inhaler-recipe": {
       "slug": "therapeutic-inhaler-recipe",
       "name": "Therapeutic Inhaler",
       "craftTime": 20,
@@ -13426,7 +13426,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_NobeliskGas": {
+    "gas-nobelisk-recipe": {
       "slug": "gas-nobelisk-recipe",
       "name": "Gas Nobelisk",
       "craftTime": 12,
@@ -13454,7 +13454,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_NutritionalInhaler": {
+    "nutritional-inhaler-recipe": {
       "slug": "nutritional-inhaler-recipe",
       "name": "Nutritional Inhaler",
       "craftTime": 20,
@@ -13486,7 +13486,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_PowerCrystalShard_1": {
+    "power-shard-1-recipe": {
       "slug": "power-shard-1-recipe",
       "name": "Power Shard (1)",
       "craftTime": 8,
@@ -13510,7 +13510,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_PowerCrystalShard_2": {
+    "power-shard-2-recipe": {
       "slug": "power-shard-2-recipe",
       "name": "Power Shard (2)",
       "craftTime": 12,
@@ -13534,7 +13534,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_PowerCrystalShard_3": {
+    "power-shard-5-recipe": {
       "slug": "power-shard-5-recipe",
       "name": "Power Shard (5)",
       "craftTime": 24,
@@ -13558,7 +13558,7 @@
       "producedIn": "constructor",
       "event": "NONE"
     },
-    "Recipe_Rebar_Spreadshot": {
+    "shatter-rebar-recipe": {
       "slug": "shatter-rebar-recipe",
       "name": "Shatter Rebar",
       "craftTime": 12,
@@ -13586,7 +13586,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_NobeliskShockwave": {
+    "pulse-nobelisk-recipe": {
       "slug": "pulse-nobelisk-recipe",
       "name": "Pulse Nobelisk",
       "craftTime": 60,
@@ -13614,7 +13614,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_Gunpowder": {
+    "black-powder-recipe": {
       "slug": "black-powder-recipe",
       "name": "Black Powder",
       "craftTime": 4,
@@ -13642,7 +13642,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_GunpowderMK2": {
+    "smokeless-powder-recipe": {
       "slug": "smokeless-powder-recipe",
       "name": "Smokeless Powder",
       "craftTime": 6,
@@ -13670,7 +13670,7 @@
       "producedIn": "refinery",
       "event": "NONE"
     },
-    "Recipe_Nobelisk": {
+    "nobelisk-recipe": {
       "slug": "nobelisk-recipe",
       "name": "Nobelisk",
       "craftTime": 6,
@@ -13698,7 +13698,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_NobeliskDetonator": {
+    "nobelisk-detonator-recipe": {
       "slug": "nobelisk-detonator-recipe",
       "name": "Nobelisk Detonator",
       "craftTime": 80,
@@ -13730,7 +13730,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_NobeliskCluster": {
+    "cluster-nobelisk-recipe": {
       "slug": "cluster-nobelisk-recipe",
       "name": "Cluster Nobelisk",
       "craftTime": 24,
@@ -13758,7 +13758,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipeartridge": {
+    "rifle-ammo-recipe": {
       "slug": "rifle-ammo-recipe",
       "name": "Rifle Ammo",
       "craftTime": 12,
@@ -13786,7 +13786,7 @@
       "producedIn": "assembler",
       "event": "NONE"
     },
-    "Recipe_SpaceRifleMk1": {
+    "rifle-recipe": {
       "slug": "rifle-recipe",
       "name": "Rifle",
       "craftTime": 120,
@@ -13822,7 +13822,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_Rebar_Explosive": {
+    "explosive-rebar-recipe": {
       "slug": "explosive-rebar-recipe",
       "name": "Explosive Rebar",
       "craftTime": 12,
@@ -13854,7 +13854,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_NobeliskNuke": {
+    "nuke-nobelisk-recipe": {
       "slug": "nuke-nobelisk-recipe",
       "name": "Nuke Nobelisk",
       "craftTime": 120,
@@ -13890,7 +13890,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "RecipeartridgeChaos": {
+    "turbo-rifle-ammo-recipe": {
       "slug": "turbo-rifle-ammo-recipe",
       "name": "Turbo Rifle Ammo",
       "craftTime": 12,
@@ -13922,7 +13922,7 @@
       "producedIn": "blender",
       "event": "NONE"
     },
-    "RecipeartridgeChaos_Packaged": {
+    "turbo-rifle-ammo-packaged-recipe": {
       "slug": "turbo-rifle-ammo-packaged-recipe",
       "name": "Turbo Rifle Ammo",
       "craftTime": 12,
@@ -13954,7 +13954,7 @@
       "producedIn": "manufacturer",
       "event": "NONE"
     },
-    "Recipe_FactoryCart": {
+    "factory-cart-recipe": {
       "slug": "factory-cart-recipe",
       "name": "Factory Cart™",
       "craftTime": 20,
@@ -13986,7 +13986,7 @@
       "producedIn": "equipment-workshop",
       "event": "NONE"
     },
-    "Recipe_GoldenCart": {
+    "golden-factory-cart-recipe": {
       "slug": "golden-factory-cart-recipe",
       "name": "Golden Factory Cart™",
       "craftTime": 20,

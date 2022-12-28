@@ -11,9 +11,11 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
         {recipes.map((recipe) => {
           return (
             <StyledRecipeContainer key={recipe.slug}>
-              <StyledRecipeTitle isAlternate={recipe.isAlternate}>
-                {recipe.isAlternate ? `${recipe.name} (Alternate)` : `${recipe.name}`}
-              </StyledRecipeTitle>
+              <Link href={`/recipes/${recipe.slug}`}>
+                <StyledRecipeTitle isAlternate={recipe.isAlternate}>
+                  {recipe.isAlternate ? `${recipe.name} (Alternate)` : `${recipe.name}`}
+                </StyledRecipeTitle>
+              </Link>
               <StyledRecipe>
                 <StyledContainer>
                   {recipe.ingredients.map((ingredient) => {
@@ -135,6 +137,11 @@ const StyledRecipeTitle = styled.div`
   background-color: #34363b;
   color: ${props => props.isAlternate ? '#D79845' : '#ffffff'};
   font-size: 0.75rem;
+
+  :hover {
+    color:${props => props.isAlternate ? '#c2893e' : '#cccccc'};
+    cursor: pointer;
+  }
   
   @media (min-width: 768px) {
     font-size: 1rem;
