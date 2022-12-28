@@ -137,6 +137,11 @@ const StyledRecipeTitle = styled.div`
   background-color: #34363b;
   color: ${props => props.isAlternate ? '#D79845' : '#ffffff'};
   font-size: 0.75rem;
+
+  :hover {
+    color:${props => props.isAlternate ? '#c2893e' : '#cccccc'};
+    cursor: pointer;
+  }
   
   @media (min-width: 768px) {
     font-size: 1rem;
