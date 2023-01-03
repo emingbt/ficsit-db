@@ -6,11 +6,12 @@ import Image from 'next/image'
 import { getBuildingsByCategory } from '../../../lib/api'
 import { useRouter } from 'next/router'
 
-export default function Buildings({ buildings }) {
+import { BuildingMap } from '../../../interfaces'
+import { Selected } from '../../../interfaces/styledComponents'
+
+export default function Buildings(buildings: BuildingMap) {
   const router = useRouter()
   const { category } = router.query
-
-  const buildingsData = Object.entries(buildings)
 
   const BuildingCategories = [
     'Special',
@@ -31,44 +32,44 @@ export default function Buildings({ buildings }) {
           <StyledTitle>Buildings</StyledTitle>
           <StyledLine color='#E5AF07' />
           <StyledCategoiresContainer>
-            {BuildingCategories.map((e) => {
+            {BuildingCategories.map((category) => {
               return (
-                <Link href={`/buildings/${e.toLowerCase()}`} key={e}>
-                  <StyledCategory selected={router.query.category == e.toLowerCase()}>
+                <Link href={`/buildings/${category.toLowerCase()}`} key={category}>
+                  <StyledCategory selected={router.query.category == category.toLowerCase()}>
                     <Image
-                      src={`/icons/ResIcon_${e}.png`}
+                      src={`/icons/ResIcon_${category}.png`}
                       width={64}
                       height={64}
-                      alt={e.toLowerCase()}
+                      alt={category.toLowerCase()}
                       placeholder='empty'
                     />
-                    <div>{e}</div>
+                    <div>{category}</div>
                   </StyledCategory>
                 </Link>
               )
             })}
           </StyledCategoiresContainer>
-          <StyledLine color='#E5AF07' />
+          <StyledLine color='#e5af07' />
         </StyledHeaderSection>
         <StyledBuildingsSection>
-          {buildingsData.map((e, i) => {
+          {Object.keys(buildings).map((key, i) => {
             return (
-              <React.Fragment key={e[0]}>
-                <StyledCategoryTitle>{i + 1}. {e[0].split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
+              <React.Fragment key={key}>
+                <StyledCategoryTitle>{i + 1}. {key.split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
                 <StyledBuildingsContainer>
-                  {e[1].map((j) => {
+                  {buildings[key].map((building) => {
                     return (
-                      <Link href={`/buildings/${category}/${j.slug}`} key={j.slug}>
-                        <StyledBuilding key={j.slug}>
+                      <Link href={`/buildings/${category}/${building.slug}`} key={building.slug}>
+                        <StyledBuilding key={building.slug}>
                           <StyledBuildingImage>
                             <Image
-                              src={`/images/buildables/${j.slug}.png`}
+                              src={`/images/buildables/${building.slug}.png`}
                               width={256}
                               height={256}
-                              alt={j.name}
+                              alt={building.name}
                             />
                           </StyledBuildingImage>
-                          <StyledBuildingName>{j.name}</StyledBuildingName>
+                          <StyledBuildingName>{building.name}</StyledBuildingName>
                         </StyledBuilding>
                       </Link>
                     )
@@ -88,7 +89,7 @@ export async function getServerSideProps(context) {
   const buildings = getBuildingsByCategory(category)
 
   return {
-    props: { buildings }
+    props: { ...buildings }
   }
 }
 
@@ -108,7 +109,7 @@ const StyledCategoiresContainer = styled.div`
   justify-content: center;
 `
 
-const StyledCategory = styled.div`
+const StyledCategory = styled.div<Selected>`
   width: 20vw;
   display: flex;
   flex-direction: column;
