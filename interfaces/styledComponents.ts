@@ -31,3 +31,11 @@ export interface CannotWrap {
   cannotWrap?: boolean,
   product?: boolean
 }
+
+export interface FlexDirection {
+  flexDirection?: string
+}
+
+export interface Product {
+  product?: boolean
+}

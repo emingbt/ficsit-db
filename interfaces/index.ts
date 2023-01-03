@@ -58,10 +58,18 @@ export interface Building {
         fuel: {
           itemClass: string,
           rate: number
+        },
+        supplement?: {
+          itemClass: string,
+          rate: number
+        },
+        byproduct?: {
+          itemClass: string,
+          rate: number
         }
       }[]
     },
-    extractorInfo: {
+    extractorInfo?: {
       allowedResourceForms: string[],
       allowedResources: string[],
       resourceExtractSpeed: number,
