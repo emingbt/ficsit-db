@@ -1,7 +1,7 @@
 import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import styled from "styled-components"
 import { useRouter } from 'next/router'
-import { getFilteredItemsByName } from '../../lib/api'
+import { getFilteredUnitsByName } from '../../lib/api'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -10,16 +10,16 @@ import { Item, Building } from '../../interfaces'
 import { Selected } from '../../interfaces/styledComponents'
 
 interface Props {
-  items: Item[],
-  buildables: Building[]
+  filteredItems: Item[],
+  filteredBuildables: Building[]
 }
 
-export default function Search({ items, buildables }: Props) {
+export default function Search({ filteredItems, filteredBuildables }: Props) {
   const router = useRouter()
   const { name } = router.query
 
   const [selectedCategory, setSelectedCategory] = useState('items')
-  const sortedData = Object.values(selectedCategory == 'items' ? items : buildables).sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
+  const sortedData = Object.values(selectedCategory == 'items' ? filteredItems : filteredBuildables).sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
 
   return (
     <Container>
@@ -28,8 +28,8 @@ export default function Search({ items, buildables }: Props) {
           <StyledHeader>
             <StyledTitle>Search results for : &quot;<StyledSpan>{name}</StyledSpan>&quot;</StyledTitle>
             <StyledCategoryContainer>
-              <StyledCategory selected={selectedCategory == 'items'} onClick={() => setSelectedCategory('items')}>Items ({items.length})</StyledCategory>
-              <StyledCategory selected={selectedCategory == 'buildables'} onClick={() => setSelectedCategory('buildables')}>Buildings ({buildables.length})</StyledCategory>
+              <StyledCategory selected={selectedCategory == 'items'} onClick={() => setSelectedCategory('items')}>Items ({filteredItems.length})</StyledCategory>
+              <StyledCategory selected={selectedCategory == 'buildables'} onClick={() => setSelectedCategory('buildables')}>Buildings ({filteredBuildables.length})</StyledCategory>
             </StyledCategoryContainer>
           </StyledHeader>
           <StyledLine color='#E5AF07' />
@@ -64,10 +64,10 @@ export default function Search({ items, buildables }: Props) {
 export function getServerSideProps(context) {
   const name = context.query.name
 
-  const { items, buildables } = getFilteredItemsByName(name)
+  const { filteredItems, filteredBuildables } = getFilteredUnitsByName(name)
 
   return {
-    props: { items, buildables }
+    props: { filteredItems, filteredBuildables }
   }
 }
 

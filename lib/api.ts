@@ -107,7 +107,7 @@ export function getBuildingsByCategory(category: string) {
     return { [`${e}`]: buildings[`${e}`].sort((a, b) => a.buildMenuPriority - b.buildMenuPriority) }
   })
 
-  return {...buildings}
+  return { ...buildings }
 }
 
 export function getRecipesByItemName(name: string) {
@@ -151,7 +151,7 @@ export function getBuildableByName(name: string) {
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
-  const buildable:Building = gameData.buildables[`${name}`]
+  const buildable: Building = gameData.buildables[`${name}`]
 
   let ingredients = getBuildableRecipeByName(name)
   buildable.cost = ingredients
@@ -181,18 +181,20 @@ export function getRecipesByBuildingName(name: string) {
   return filteredRecipes
 }
 
-export function getFilteredItemsByName(name: string) {
+export function getFilteredUnitsByName(name: string) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
-  const items: Item[] = Object.values(gameData.items)
-    .filter((item: Item) => item.name.toLowerCase().includes(name.toLowerCase()))
+  const allItems: Item[] = Object.values(gameData.items)
+  const filteredItems = allItems
+    .filter((item) => item.name.toLowerCase().includes(name.toLowerCase()))
 
-  const buildables: Building[] = Object.values(gameData.buildables)
-    .filter((buildable: Building) => buildable.name.toLowerCase().includes(name.toLowerCase()))
+  const allBuildables: Building[] = Object.values(gameData.buildables)
+  const filteredBuildables = allBuildables
+    .filter((buildable) => buildable.name.toLowerCase().includes(name.toLowerCase()))
 
-  return { items, buildables }
+  return { filteredItems, filteredBuildables }
 }
 
 export function getRecipeByRecipeName(name: string) {
