@@ -3,7 +3,15 @@ import styled from "styled-components"
 import { StyledImage } from "../sharedstyles"
 import Image from "next/image"
 
-export default function Recipe({ recipes, title, clockspeed = 100 }) {
+import { ProductionRecipe } from "../../interfaces"
+import { IsAlternate, CannotWrap } from "../../interfaces/styledComponents"
+
+interface Props {
+  recipes: ProductionRecipe[],
+  title: string
+}
+
+export default function Recipe({ recipes, title }: Props) {
   return recipes.length > 0 && (
     <StyledSection>
       <StyledTitle>{title}</StyledTitle>
@@ -30,12 +38,12 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                                 width={48}
                                 height={48}
                                 alt={ingredient.itemClass}
-                                quality={40}
+                                quality={50}
                               />
                             </StyledItemImage>
                           </Link>
                         </StyledItemHeader>
-                        <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * ingredient.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
+                        <StyledUsePerMin>{60 / recipe.craftTime * ingredient.quantity}/min</StyledUsePerMin>
                       </StyledItem>
                     )
                   })}
@@ -60,7 +68,7 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                               </StyledItemImage>
                             </Link>
                           </StyledItemHeader>
-                          <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * product.quantity * clockspeed / 100).toFixed(3))}/min</StyledUsePerMin>
+                          <StyledUsePerMin>{60 / recipe.craftTime * product.quantity}/min</StyledUsePerMin>
                         </StyledItem>
                       )
                     })}
@@ -74,11 +82,11 @@ export default function Recipe({ recipes, title, clockspeed = 100 }) {
                           width={80}
                           height={80}
                           alt={recipe.producedIn}
-                          quality={40}
+                          quality={50}
                         />
                       </a>
                     </Link>
-                    <StyledCraftTime>{parseFloat((recipe.craftTime / clockspeed * 100).toFixed(3))}s</StyledCraftTime>
+                    <StyledCraftTime>{recipe.craftTime}s</StyledCraftTime>
                   </StyledBuildingContainer>
                 </StyledContainer>
               </StyledRecipe>
@@ -127,7 +135,7 @@ const StyledRecipeContainer = styled.div`
   align-items: center;
 `
 
-const StyledRecipeTitle = styled.div`
+const StyledRecipeTitle = styled.div<IsAlternate>`
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -159,7 +167,7 @@ const StyledRecipe = styled.div`
   color: white;
 `
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.div<CannotWrap>`
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -226,7 +234,7 @@ const StyledUsePerMin = styled.div`
   }
 `
 
-const StyledVerticalLine = styled.div`
+const StyledVerticalLine = styled.div<IsAlternate>`
   width: 1px;
   display: block;
   align-self: stretch;

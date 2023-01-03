@@ -11,7 +11,7 @@ import ExtractableResources from '../../../components/sections/extractableResour
 import Fuel from '../../../components/sections/fuel'
 
 import { Building, ProductionRecipe } from '../../../interfaces'
-import {Overclocked, Selected} from '../../../interfaces/styledComponents'
+import { Overclocked, Selected } from '../../../interfaces/styledComponents'
 
 interface Props {
   buildable: Building,
@@ -123,7 +123,7 @@ export default function BuildingPage({ buildable, recipes }: Props) {
               </StyledExtractionContainer>
             }
           </StyledSection>
-          <Recipe recipes={recipes} title={"Recipes"} clockspeed={clockspeed} />
+          <Recipe recipes={recipes} title={"Recipes"} />
           <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
           <Fuel fuels={buildable.meta?.generatorInfo?.fuels} operatingRate={operatingRate} />
         </StyledContainer>

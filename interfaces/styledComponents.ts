@@ -22,3 +22,12 @@ export interface IsBuilding {
 export interface Widescreen {
   widescreen?: boolean
 }
+
+export interface IsAlternate {
+  isAlternate?: boolean
+}
+
+export interface CannotWrap {
+  cannotWrap?: boolean,
+  product?: boolean
+}
