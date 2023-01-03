@@ -39,3 +39,7 @@ export interface FlexDirection {
 export interface Product {
   product?: boolean
 }
+
+export interface IsActive {
+  isActive?: boolean
+}
