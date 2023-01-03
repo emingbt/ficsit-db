@@ -6,11 +6,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 
-export default function Search({ items, buildables }) {
-  const [selectedCategory, setSelectedCategory] = useState('items')
-  const sortedData = Object.values(selectedCategory == 'items' ? items : buildables).sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
+import { Item, Building } from '../../interfaces'
+import { Selected } from '../../interfaces/styledComponents'
+
+interface Props {
+  items: Item[],
+  buildables: Building[]
+}
+
+export default function Search({ items, buildables }: Props) {
   const router = useRouter()
   const { name } = router.query
+
+  const [selectedCategory, setSelectedCategory] = useState('items')
+  const sortedData = Object.values(selectedCategory == 'items' ? items : buildables).sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
 
   return (
     <Container>
@@ -27,18 +36,18 @@ export default function Search({ items, buildables }) {
           {sortedData.length == 0 ?
             <StyledText>Nothing found.</StyledText> :
             <StyledItemsContainer>
-              {sortedData.map((e, i) => {
+              {sortedData.map((unit, i) => {
                 return (
-                  <Link href={`/${selectedCategory == 'items' ? 'items' : `buildings/${e.categories[0]}`}/${e.slug}`} key={i} >
+                  <Link href={`/${selectedCategory == 'items' ? 'items' : `buildings/${unit.categories[0]}`}/${unit.slug}`} key={i} >
                     <StyledItem>
                       <StyledItemImage
-                        src={`/images/${selectedCategory}/${e.slug}.png`}
+                        src={`/images/${selectedCategory}/${unit.slug}.png`}
                         width={256}
                         height={256}
-                        alt={e.name}
+                        alt={unit.name}
                       />
                       <StyledItemName>
-                        {e.name}
+                        {unit.name}
                       </StyledItemName>
                     </StyledItem>
                   </Link>
@@ -92,7 +101,7 @@ const StyledCategoryContainer = styled.div`
   }
 `
 
-const StyledCategory = styled.div`
+const StyledCategory = styled.div<Selected>`
   min-width: 4.5rem;
   display: flex;
   flex-direction: row;
