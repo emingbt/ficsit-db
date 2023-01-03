@@ -1,8 +1,27 @@
 import Link from "next/link"
 import styled from 'styled-components'
+import { FlexDirection, IsAlternate, Product } from "../../interfaces/styledComponents"
 import { StyledImage } from "../sharedstyles"
 
-export default function Fuel({ fuels, operatingRate }) {
+interface Props {
+  fuels: {
+    fuel: {
+      itemClass: string,
+      rate: number
+    },
+    supplement?: {
+      itemClass: string,
+      rate: number
+    },
+    byproduct?: {
+      itemClass: string,
+      rate: number
+    }
+  }[],
+  operatingRate: number
+}
+
+export default function Fuel({ fuels, operatingRate }: Props) {
   return fuels?.length > 0 && (
     <StyledSection>
       <StyledTitle>Fuels</StyledTitle>
@@ -46,7 +65,7 @@ export default function Fuel({ fuels, operatingRate }) {
               <StyledContainer>
                 {e.byproduct &&
                   <StyledContainer flexDirection="row">
-                    <StyledVerticalLine isAlternate={e.isAlternate} />
+                    <StyledVerticalLine />
                     <StyledItem product>
                       <Link href={`/items/${e.byproduct.itemClass}`}>
                         <a>
@@ -120,7 +139,7 @@ const StyledRecipe = styled.div`
   }
 `
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.div<FlexDirection>`
   height: 100%;
   display: flex;
   flex-direction: ${props => props.flexDirection};
@@ -128,7 +147,7 @@ const StyledContainer = styled.div`
   align-items: center;
 `
 
-const StyledItem = styled.div`
+const StyledItem = styled.div<Product>`
   width: 3rem;
   display: flex;
   flex-direction: column;
@@ -158,7 +177,6 @@ const StyledVerticalLine = styled.div`
   height: 4rem;
   width: 1px;
   background-color: #D79845;
-  ${props => props.isAlternate && 'background: repeating-linear-gradient(-35deg,#E5AF07,#E5AF07 10px,#202125 10px,#202125 20px)'}
 
   @media (min-width: 1024px) {
     height: 8rem;

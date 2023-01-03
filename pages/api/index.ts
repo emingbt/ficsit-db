@@ -1,11 +1,12 @@
 import fs from 'fs'
 import { join } from 'path'
+import { Item, ItemMap, Building, ProductionRecipe, BuildingRecipe } from '../../interfaces'
 
 export function getAllItems() {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
-  const allItems = gameData.items
+  const allItems: ItemMap = gameData.items
 
   return allItems
 }
@@ -22,7 +23,7 @@ export function getItemByItemName(name) {
   return { item, recipes, usagesAsIngredient }
 }
 
-export function getBuildingsByCategory(category) {
+export function getBuildingsByCategory(category: string) {
   const categories = {
     special: [
       'Special'
@@ -89,7 +90,7 @@ export function getBuildingsByCategory(category) {
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
-  const buildables = Object.values(gameData.buildables)
+  const buildables: Building[] = Object.values(gameData.buildables)
   let buildings = {}
 
   for (let i = 0; i < categories[`${category}`].length; i++) {
@@ -106,15 +107,15 @@ export function getBuildingsByCategory(category) {
     return { [`${e}`]: buildings[`${e}`].sort((a, b) => a.buildMenuPriority - b.buildMenuPriority) }
   })
 
-  return buildings
+  return { ...buildings }
 }
 
-export function getRecipesByItemName(name) {
+export function getRecipesByItemName(name: string) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
-  const allRecipes = Object.values(gameData.productionRecipes)
+  const allRecipes: ProductionRecipe[] = Object.values(gameData.productionRecipes)
 
   let itemRecipes = []
 
@@ -127,12 +128,12 @@ export function getRecipesByItemName(name) {
   return itemRecipes
 }
 
-export function getUsagesAsIngredientByItemName(name) {
+export function getUsagesAsIngredientByItemName(name: string) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
-  const allRecipes = Object.values(gameData.productionRecipes)
+  const allRecipes: ProductionRecipe[] = Object.values(gameData.productionRecipes)
 
   let usagesAsIngredient = []
 
@@ -145,12 +146,12 @@ export function getUsagesAsIngredientByItemName(name) {
   return usagesAsIngredient
 }
 
-export function getBuildableByName(name) {
+export function getBuildableByName(name: string) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
-  const buildable = gameData.buildables[`${name}`]
+  const buildable: Building = gameData.buildables[`${name}`]
 
   let ingredients = getBuildableRecipeByName(name)
   buildable.cost = ingredients
@@ -158,68 +159,66 @@ export function getBuildableByName(name) {
   return buildable
 }
 
-export function getBuildableRecipeByName(name) {
+export function getBuildableRecipeByName(name: string) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
-  const buildableRecipe = gameData.buildableRecipes[`${name}-recipe`]
+  const buildableRecipe: BuildingRecipe = gameData.buildableRecipes[`${name}-recipe`]
 
   return buildableRecipe.ingredients
 }
 
-export function getRecipesByBuildingName(name) {
+export function getRecipesByBuildingName(name: string) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
-  const allRecipes = Object.values(gameData.productionRecipes)
+  const allRecipes: ProductionRecipe[] = Object.values(gameData.productionRecipes)
 
-  let recipes = []
+  const filteredRecipes = allRecipes.filter((recipe) => recipe.producedIn == name)
 
-  allRecipes.map((e) => {
-    if (e.producedIn == name) {
-      recipes.push(e)
-    }
-  })
-
-  return recipes
+  return filteredRecipes
 }
 
-export function getFilteredItemsByName(name) {
+export function getFilteredUnitsByName(name: string) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
-  const items = Object.values(gameData.items)
-    .filter(item => item.name.toLowerCase().includes(name.toLowerCase()))
+  const allItems: Item[] = Object.values(gameData.items)
+  const filteredItems = allItems
+    .filter((item) => item.name.toLowerCase().includes(name.toLowerCase()))
 
-  const buildables = Object.values(gameData.buildables)
-    .filter(buildables => buildables.name.toLowerCase().includes(name.toLowerCase()))
+  const allBuildables: Building[] = Object.values(gameData.buildables)
+  const filteredBuildables = allBuildables
+    .filter((buildable) => buildable.name.toLowerCase().includes(name.toLowerCase()))
 
-  return { items, buildables }
+  return { filteredItems, filteredBuildables }
 }
 
-export function getRecipeByRecipeName(name) {
+export function getRecipeByRecipeName(name: string) {
   const filePath = join(process.cwd(), 'json/data.json')
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
-  const allRecipes = gameData.productionRecipes
+  const allRecipes: ProductionRecipe[] = gameData.productionRecipes
 
-  const recipe = allRecipes[name]
+  const recipe: ProductionRecipe = allRecipes[name]
 
   let updatedIngredients = recipe.ingredients.map((ingredient) => {
     let item = getItemDetailsByItemName(ingredient.itemClass)
-    item['quantity'] = ingredient.quantity
+    ingredient['isFluid'] = item.isFluid
+    ingredient['name'] = item.name
 
-    return item
+    return ingredient
   })
 
   let updatedProducts = recipe.products.map((product) => {
     let item = getItemDetailsByItemName(product.itemClass)
-    item['quantity'] = product.quantity
+    product['isFluid'] = item.isFluid
+    product['name'] = item.name
 
-    return item
+    return product
   })
 
   recipe.ingredients = updatedIngredients
@@ -233,7 +232,7 @@ export function getItemDetailsByItemName(name) {
   const jsonData = fs.readFileSync(filePath, 'utf-8')
   const gameData = JSON.parse(jsonData)
 
-  const item = gameData.items[name]
+  const item: Item = gameData.items[name]
 
   return item
 }

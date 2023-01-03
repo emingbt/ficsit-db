@@ -1,11 +1,18 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../components/sharedstyles'
-import { getItemByItemName } from '../../lib/api'
+import { getItemByItemName } from '../api/index'
 import Recipe from '../../components/sections/recipe'
+import { Item, ProductionRecipe } from '../../interfaces'
+import { Primary } from '../../interfaces/styledComponents'
 
+interface Props {
+  item: Item,
+  recipes: ProductionRecipe[]
+  usagesAsIngredient: ProductionRecipe[]
+}
 
-export default function Item({ item, recipes, usagesAsIngredient }) {
+export default function ItemPage({ item, recipes, usagesAsIngredient }: Props) {
   return (
     <Container>
       <Main>
@@ -18,7 +25,6 @@ export default function Item({ item, recipes, usagesAsIngredient }) {
             <StyledDetailHeader>
               <StyledImageContainer>
                 <Image
-                  name={item.slug}
                   src={`/images/items/${item.slug}.png`}
                   width={256}
                   height={256}
@@ -142,7 +148,7 @@ const StyledName = styled.div`
   }
 `
 
-const StyledText = styled.div`
+const StyledText = styled.div<Primary>`
   width: 100%;
   height: 24%;
   display: flex;

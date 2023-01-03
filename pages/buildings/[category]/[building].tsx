@@ -4,13 +4,21 @@ import styled from 'styled-components'
 import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../../components/sharedstyles'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import { getBuildableByName, getRecipesByBuildingName } from '../../../lib/api'
+import { getBuildableByName, getRecipesByBuildingName } from '../../api'
 
 import Recipe from '../../../components/sections/recipe'
 import ExtractableResources from '../../../components/sections/extractableResources'
 import Fuel from '../../../components/sections/fuel'
 
-export default function Building({ buildable, recipes }) {
+import { Building, ProductionRecipe } from '../../../interfaces'
+import { Overclocked, Selected } from '../../../interfaces/styledComponents'
+
+interface Props {
+  buildable: Building,
+  recipes: ProductionRecipe[]
+}
+
+export default function BuildingPage({ buildable, recipes }: Props) {
   const router = useRouter()
   const { category } = router.query
 
@@ -27,7 +35,7 @@ export default function Building({ buildable, recipes }) {
     <Container>
       <Main>
         <StyledTitleSection>
-          <StyledTitle>{category.charAt(0).toUpperCase() + category.slice(1)}</StyledTitle>
+          <StyledTitle>{category[0].toUpperCase() + category.slice(1)}</StyledTitle>
           <StyledLine color='#E5AF07' />
         </StyledTitleSection>
         <StyledContainer>
@@ -36,7 +44,6 @@ export default function Building({ buildable, recipes }) {
               <StyledDetailHeader>
                 <StyledImageContainer>
                   <Image
-                    name={buildable.slug}
                     src={`/images/buildables/${buildable.slug}.png`}
                     width={256}
                     height={256}
@@ -49,17 +56,17 @@ export default function Building({ buildable, recipes }) {
                   <StyledName>{buildable.name}</StyledName>
                   <StyledCostTitle>Cost :</StyledCostTitle>
                   <StyledCostContainer>
-                    {buildable.cost.map((e) => {
+                    {buildable.cost.map((item) => {
                       return (
-                        <StyledCostItem key={e.itemClass}>
-                          <StyledText>{e.quantity}x</StyledText>
-                          <Link href={`/items/${e.itemClass}`}>
+                        <StyledCostItem key={item.itemClass}>
+                          <StyledText>{item.quantity}x</StyledText>
+                          <Link href={`/items/${item.itemClass}`}>
                             <StyledCostItemImage>
                               <Image
-                                src={`/images/items/${e.itemClass}.png`}
+                                src={`/images/items/${item.itemClass}.png`}
                                 layout="fill"
                                 objectFit='cover'
-                                alt={e.itemClass}
+                                alt={item.itemClass}
                                 quality={40}
                               />
                             </StyledCostItemImage>
@@ -79,25 +86,7 @@ export default function Building({ buildable, recipes }) {
               <StyledConsumptionContainer>
                 <StyledEnergyContainer>
                   <StyledClockspeedInputContainer>
-                    <StyledClockspeedInput
-                      type="number"
-                      min={1}
-                      max={250}
-                      pattern="\d*"
-                      onClick={e => e.target.select()}
-                      onChange={e => {
-                        if (e.target.value > 250) {
-                          setClockspeed(250)
-                        }
-                        else if (e.target.value < 1) {
-                          setClockspeed(1)
-                        }
-                        else {
-                          setClockspeed(e.target.value)
-                        }
-                      }}
-                      value={clockspeed}
-                    /> %
+                    {clockspeed} %
                   </StyledClockspeedInputContainer>
                   <StyledVerticalLine />
                   <StyledEnergyConsumption>{parseFloat(buildable.isGenerator ? powerProduction : energyConsumption)}MW</StyledEnergyConsumption>
@@ -108,7 +97,7 @@ export default function Building({ buildable, recipes }) {
                     min={1}
                     max={250}
                     step={1}
-                    onChange={e => { setClockspeed(e.currentTarget.value) }}
+                    onChange={e => { setClockspeed(+ e.currentTarget.value) }}
                     value={clockspeed}
                   />
                   <StyledClockspeedTextContainer>
@@ -134,7 +123,7 @@ export default function Building({ buildable, recipes }) {
               </StyledExtractionContainer>
             }
           </StyledSection>
-          <Recipe recipes={recipes} title={"Recipes"} clockspeed={clockspeed} />
+          <Recipe recipes={recipes} title={"Recipes"} />
           <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
           <Fuel fuels={buildable.meta?.generatorInfo?.fuels} operatingRate={operatingRate} />
         </StyledContainer>
@@ -362,44 +351,11 @@ const StyledEnergyContainer = styled.div`
 `
 
 const StyledClockspeedInputContainer = styled.div`
-  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-`
-
-const StyledClockspeedInput = styled.input`
-  -moz-appearance: textfield;
-  appearance: none;
-  height: 50%;
-  border-radius: 0.125rem;
-  border: none;
-  outline: none;
-  padding: 0 0.25rem;
-  margin-right: 0.125rem;
-  background-color: #202125;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.5rem;
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
-
-  &:focus {
-    border: none;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 0.6rem;
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 1rem;
-  }
 `
 
 const StyledVerticalLine = styled.div`
@@ -477,7 +433,7 @@ const StyledClockspeedTextContainer = styled.div`
   }
 `
 
-const StyledClockspeedText = styled.div`
+const StyledClockspeedText = styled.div<Overclocked>`
   width: 5%;
   text-align: right;
   cursor: pointer;
@@ -543,7 +499,7 @@ const StyledPurityContainer = styled.div`
   }
 `
 
-const StyledPurity = styled.div`
+const StyledPurity = styled.div<Selected>`
   min-width: 2.5rem;
   display: flex;
   align-items: center;

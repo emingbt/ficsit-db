@@ -1,6 +1,10 @@
 import styled from "styled-components"
 import Image from "next/image"
 
+interface StyledLine {
+  color: string
+}
+
 const Container = styled.div`
   width: 100%;
   display: flex;
@@ -20,7 +24,7 @@ const Main = styled.main`
   padding-top: 1rem;
 `
 
-const StyledLine = styled.div`
+const StyledLine = styled.div<StyledLine>`
   height: 1px;
   width: 100%;
   background-color: ${props => props.color};

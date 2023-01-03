@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import SearchIcon from '../assets/searchIcon.svg'
 import HamburgerIcon from '../assets/hamburgerIcon.svg'
 import CloseIcon from '../assets/closeIcon.svg'
+import { IsActive } from '../interfaces/styledComponents'
 
 export default function Header() {
   const router = useRouter()
@@ -32,7 +33,7 @@ export default function Header() {
           }
         </StyledHamburgerButton>
       </HeaderBar>
-      <StyledNav active={active} >
+      <StyledNav isActive={active} >
         <StyledForm>
           <StyledInput
             placeholder='Search items or buildings'
@@ -106,8 +107,8 @@ const StyledHamburgerButton = styled.button`
   }
 `
 
-const StyledNav = styled.nav`
-  display: ${props => props.active? 'flex' : 'none'};
+const StyledNav = styled.nav<IsActive>`
+  display: ${props => props.isActive? 'flex' : 'none'};
   flex-direction: column;
   justify-content: center;
   align-items: center;

@@ -1,12 +1,20 @@
 import React, { useState } from 'react'
-import { getBuildableByName, getRecipeByRecipeName } from '../../lib/api'
+import { getBuildableByName, getRecipeByRecipeName } from '../api'
 import styled from 'styled-components'
 import { Container, Main, StyledTitle, StyledLine } from '../../components/sharedstyles'
 import Image from 'next/image'
 import Link from 'next/link'
 import { RecipeDetails } from '../../components/sections/recipeDetails'
 
-export default function Recipe({ recipe, building }) {
+import { ProductionRecipe, Building } from '../../interfaces'
+import { Primary, IsFluid } from '../../interfaces/styledComponents'
+
+interface Props {
+  recipe: ProductionRecipe,
+  building: Building
+}
+
+export default function Recipe({ recipe, building }: Props) {
   const [clockspeed, setClockspeed] = useState(100)
   const [productionRate, setProductionRate] = useState(recipe.products[0].quantity / recipe.craftTime * 60)
 
@@ -28,15 +36,15 @@ export default function Recipe({ recipe, building }) {
                 <StyledItemLine primary />
                 {recipe.ingredients.map((ingredient) => {
                   return (
-                    <StyledItemContainer key={ingredient.slug}>
+                    <StyledItemContainer key={ingredient.itemClass}>
                       <StyledItem>
-                        <Link href={`/items/${ingredient.slug}`}>
+                        <Link href={`/items/${ingredient.itemClass}`}>
                           <StyledItemImage isFluid={ingredient.isFluid}>
                             <Image
-                              src={`/images/items/${ingredient.slug}.png`}
+                              src={`/images/items/${ingredient.itemClass}.png`}
                               width={72}
                               height={72}
-                              alt={ingredient.slug}
+                              alt={ingredient.itemClass}
                               quality={100}
                             />
                           </StyledItemImage>
@@ -71,15 +79,15 @@ export default function Recipe({ recipe, building }) {
                 <StyledItemLine primary />
                 {recipe.products.map((product) => {
                   return (
-                    <StyledItemContainer key={product.slug}>
+                    <StyledItemContainer key={product.itemClass}>
                       <StyledItem>
-                        <Link href={`/items/${product.slug}`}>
+                        <Link href={`/items/${product.itemClass}`}>
                           <StyledItemImage isFluid={product.isFluid}>
                             <Image
-                              src={`/images/items/${product.slug}.png`}
+                              src={`/images/items/${product.itemClass}.png`}
                               width={72}
                               height={72}
-                              alt={product.slug}
+                              alt={product.itemClass}
                               quality={100}
                             />
                           </StyledItemImage>
@@ -235,7 +243,7 @@ const StyledTitleContainer = styled.div`
   }
 `
 
-const StyledItemLine = styled.div`
+const StyledItemLine = styled.div<Primary>`
   width: ${props => props.primary ? '96%' : '100%'};
   height: 1px;
   background-color: #9BA3A9;
@@ -257,7 +265,7 @@ const StyledItem = styled.div`
   justify-content: flex-start;
 `
 
-const StyledItemImage = styled.div`
+const StyledItemImage = styled.div<IsFluid>`
   height: 2.5rem;
   width: 2.5rem;
   background-color: #43454B;
