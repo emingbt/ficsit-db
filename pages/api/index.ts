@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { join } from 'path'
-import { Item, ItemMap, Building, ProductionRecipe, BuildingRecipe } from '../interfaces'
+import { Item, ItemMap, Building, ProductionRecipe, BuildingRecipe } from '../../interfaces'
 
 export function getAllItems() {
   const filePath = join(process.cwd(), 'json/data.json')
