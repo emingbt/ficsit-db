@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../../components/sharedstyles'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import { getBuildableByName, getRecipesByBuildingName } from '../../../lib/api'
+import { getBuildableByName, getRecipesByBuildingName } from '../../api'
 
 import Recipe from '../../../components/sections/recipe'
 import ExtractableResources from '../../../components/sections/extractableResources'

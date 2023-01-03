@@ -1,7 +1,7 @@
 import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import styled from "styled-components"
 import { useRouter } from 'next/router'
-import { getFilteredUnitsByName } from '../../lib/api'
+import { getFilteredUnitsByName } from '..//api'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'

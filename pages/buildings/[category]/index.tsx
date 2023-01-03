@@ -3,7 +3,7 @@ import { Container, Main, StyledLine, StyledTitle } from '../../../components/sh
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getBuildingsByCategory } from '../../../lib/api'
+import { getBuildingsByCategory } from '../../api'
 import { useRouter } from 'next/router'
 
 import { BuildingMap } from '../../../interfaces'

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { getBuildableByName, getRecipeByRecipeName } from '../../lib/api'
+import { getBuildableByName, getRecipeByRecipeName } from '../api'
 import styled from 'styled-components'
 import { Container, Main, StyledTitle, StyledLine } from '../../components/sharedstyles'
 import Image from 'next/image'

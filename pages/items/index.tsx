@@ -1,7 +1,7 @@
 import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import styled from 'styled-components'
 import Link from 'next/link'
-import { getAllItems } from '../../lib/api'
+import { getAllItems } from '../api'
 import Image from 'next/image'
 import { Item } from '../../interfaces/index'
 

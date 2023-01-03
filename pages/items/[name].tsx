@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../components/sharedstyles'
-import { getItemByItemName } from '../../lib/api'
+import { getItemByItemName } from '../api/index'
 import Recipe from '../../components/sections/recipe'
 import { Item, ProductionRecipe } from '../../interfaces'
 import { Primary } from '../../interfaces/styledComponents'
