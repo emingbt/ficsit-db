@@ -2,8 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Building, ProductionRecipe } from '../../interfaces'
+import { IsBuilding, IsFluid, Overclocked, Widescreen } from '../../interfaces/styledComponents'
 
-export const RecipeDetails = ({ widescreen, clockspeed, setClockspeed, productionRate, setProductionRate, recipe, building }) => {
+interface Props {
+  widescreen?: boolean,
+  clockspeed: number,
+  setClockspeed: React.Dispatch<React.SetStateAction<number>>,
+  productionRate: number,
+  setProductionRate: React.Dispatch<React.SetStateAction<number>>,
+  recipe: ProductionRecipe,
+  building: Building
+}
+
+export const RecipeDetails = ({ widescreen, clockspeed, setClockspeed, productionRate, setProductionRate, recipe, building }: Props) => {
 
   let energyConsumption = parseFloat((building.meta?.powerInfo?.consumption * (clockspeed / 100) ** building.meta?.overclockInfo?.exponent).toFixed(4))
   let periodTime = parseFloat((recipe.craftTime * 100 / clockspeed).toFixed(4))
@@ -91,7 +103,7 @@ export const RecipeDetails = ({ widescreen, clockspeed, setClockspeed, productio
               Produced In:
             </StyledClockspeedDetailTitle>
             <StyledClockspeedDetailValueContainer>
-              <StyledClockspeedDetailValue building>
+              <StyledClockspeedDetailValue isBuilding>
                 {building.name}
               </StyledClockspeedDetailValue>
               <Link href={`/buildings/production/${building.slug}`}>
@@ -130,7 +142,7 @@ export const RecipeDetails = ({ widescreen, clockspeed, setClockspeed, productio
   )
 }
 
-const StyledDetailsSection = styled.section`
+const StyledDetailsSection = styled.section<Widescreen>`
   width: 100%;
   display: ${props => props.widescreen ? 'none' : 'flex'};
   flex-direction: column;
@@ -248,18 +260,18 @@ const StyledClockspeedDetailTitle = styled.div`
   }
 `
 
-const StyledClockspeedDetailValue = styled.div`
-  font-size: ${props => props.building ? '0.5rem' : '0.75rem'};
+const StyledClockspeedDetailValue = styled.div<IsBuilding>`
+  font-size: ${props => props.isBuilding ? '0.5rem' : '0.75rem'};
   font-family: Roboto;
   color: #D79845;
   text-align: end;
 
   @media (min-width: 1024px) {
-    font-size: ${props => props.building ? '0.75rem' : '1rem'};
+    font-size: ${props => props.isBuilding ? '0.75rem' : '1rem'};
   }
 
   @media (min-width: 1440px) {
-    font-size: ${props => props.building ? '1rem' : '1.25rem'};
+    font-size: ${props => props.isBuilding ? '1rem' : '1.25rem'};
   }
 `
 
@@ -396,7 +408,7 @@ const StyledClockspeedTextContainer = styled.div`
   align-items: center;
 `
 
-const StyledClockspeedText = styled.div`
+const StyledClockspeedText = styled.div<Overclocked>`
   width: calc(100% / 5);
   text-align: right;
   font-size: 0.5rem;
@@ -430,7 +442,7 @@ const StyledTitleContainer = styled.div`
   }
 `
 
-const StyledItemImage = styled.div`
+const StyledItemImage = styled.div<IsFluid>`
   height: ${props => props.detail ? '1.5rem' : '2.5rem'};
   width: ${props => props.detail ? '1.5rem' : '2.5rem'};
   background-color: #43454B;
