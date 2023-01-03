@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { getAllItems } from '../../lib/api'
 import Image from 'next/image'
+import { Item } from '../../interfaces/index'
 
-export default function Items( items ) {
-  const sortedItems = Object.values(items).sort((a,b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
+export default function Items(items: Item[]) {
+  const sortedItems = Object.values(items).sort((previousItem, currentItem) => (previousItem.name.toLowerCase() > currentItem.name.toLowerCase()) ? 1 : ((currentItem.name > previousItem.name) ? -1 : 0))
 
   return (
     <Container>
@@ -14,18 +15,18 @@ export default function Items( items ) {
           <StyledTitle>Items</StyledTitle>
           <StyledLine color='#E5AF07' />
           <StyledItemsContainer>
-            {sortedItems.map((e, i) => {
+            {sortedItems.map((item, i) => {
               return (
-                <Link href={`/items/${e.slug}`} key={i} >
+                <Link href={`/items/${item.slug}`} key={i} >
                   <StyledItem>
                     <StyledItemImage
-                      src={`/images/items/${e.slug}.png`}
+                      src={`/images/items/${item.slug}.png`}
                       width={256}
                       height={256}
-                      alt={e.name}
+                      alt={item.name}
                     />
                     <StyledItemName>
-                      {e.name}
+                      {item.name}
                     </StyledItemName>
                   </StyledItem>
                 </Link>
