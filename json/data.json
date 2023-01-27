@@ -3,7 +3,7 @@
     "paleberry": {
       "slug": "paleberry",
       "name": "Paleberry",
-      "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore one health segment.",
+      "description": "Can be eaten to restore one health segment.",
       "stackSize": 50,
       "sinkPoints": 0,
       "isFluid": false,
@@ -22,7 +22,7 @@
     "bacon-agaric": {
       "slug": "bacon-agaric",
       "name": "Bacon Agaric",
-      "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore two health segments.",
+      "description": "Can be eaten to restore two health segments.",
       "stackSize": 50,
       "sinkPoints": 0,
       "isFluid": false,
@@ -41,7 +41,7 @@
     "beryl-nut": {
       "slug": "beryl-nut",
       "name": "Beryl Nut",
-      "description": "Slot: Hands\nConsumable\n\nCan be eaten to restore half a health segment.",
+      "description": "Can be eaten to restore half a health segment.",
       "stackSize": 100,
       "sinkPoints": 0,
       "isFluid": false,
@@ -18924,8 +18924,8 @@
       "product": "StorageMedkit",
       "event": "NONE"
     },
-    "ficsit-roof-flat-recipe": {
-      "slug": "ficsit-roof-flat-recipe",
+    "roof-flat-recipe": {
+      "slug": "roof-flat-recipe",
       "name": "FICSIT Roof Flat",
       "ingredients": [
         {
@@ -18936,8 +18936,8 @@
       "product": "Roof_Orange_01",
       "event": "NONE"
     },
-    "ficsit-roof-1m-recipe": {
-      "slug": "ficsit-roof-1m-recipe",
+    "roof-1m-recipe": {
+      "slug": "roof-1m-recipe",
       "name": "FICSIT Roof 1m",
       "ingredients": [
         {
@@ -18948,8 +18948,8 @@
       "product": "Roof_Orange_02",
       "event": "NONE"
     },
-    "ficsit-roof-2m-recipe": {
-      "slug": "ficsit-roof-2m-recipe",
+    "roof-2m-recipe": {
+      "slug": "roof-2m-recipe",
       "name": "FICSIT Roof 2m",
       "ingredients": [
         {
@@ -18960,8 +18960,8 @@
       "product": "Roof_Orange_03",
       "event": "NONE"
     },
-    "ficsit-roof-4m-recipe": {
-      "slug": "ficsit-roof-4m-recipe",
+    "roof-4m-recipe": {
+      "slug": "roof-4m-recipe",
       "name": "FICSIT Roof 4m",
       "ingredients": [
         {
