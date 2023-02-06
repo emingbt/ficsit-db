@@ -43,7 +43,7 @@ export default function Recipe({ recipes, title }: Props) {
                             </StyledItemImage>
                           </Link>
                         </StyledItemHeader>
-                        <StyledUsePerMin>{60 / recipe.craftTime * ingredient.quantity}/min</StyledUsePerMin>
+                        <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * ingredient.quantity).toFixed(4))}/min</StyledUsePerMin>
                       </StyledItem>
                     )
                   })}
@@ -68,7 +68,7 @@ export default function Recipe({ recipes, title }: Props) {
                               </StyledItemImage>
                             </Link>
                           </StyledItemHeader>
-                          <StyledUsePerMin>{60 / recipe.craftTime * product.quantity}/min</StyledUsePerMin>
+                          <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * product.quantity).toFixed(4))}/min</StyledUsePerMin>
                         </StyledItem>
                       )
                     })}
