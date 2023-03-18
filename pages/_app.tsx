@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>FICSIT DB</title>
-        <meta name="description" content="Satisfactory Encyclopedia" />
+        <meta name="description" content="Browse all items you need in Satisfactory. You can find all items, buildings and recipes you need." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
