@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../../components/sharedstyles'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 import { getBuildableByName, getRecipesByBuildingName } from '../../api'
 
 import Recipe from '../../../components/sections/recipe'
@@ -32,103 +33,109 @@ export default function BuildingPage({ buildable, recipes }: Props) {
   let extractionRate = parseFloat((buildable.meta?.extractorInfo?.resourceExtractSpeed * purity * clockspeed / 100).toFixed(2))
 
   return (
-    <Container>
-      <Main>
-        <StyledTitleSection>
-          <StyledTitle>{category[0].toUpperCase() + category.slice(1)}</StyledTitle>
-          <StyledLine color='#E5AF07' />
-        </StyledTitleSection>
-        <StyledContainer>
-          <StyledSection>
-            <StyledDetailContainer>
-              <StyledDetailHeader>
-                <StyledImageContainer>
-                  <Image
-                    src={`/images/buildables/${buildable.slug}.png`}
-                    width={256}
-                    height={256}
-                    priority
-                    quality={100}
-                    alt={buildable.name}
-                  />
-                </StyledImageContainer>
-                <StyledDetail>
-                  <StyledName>{buildable.name}</StyledName>
-                  <StyledCostTitle>Cost :</StyledCostTitle>
-                  <StyledCostContainer>
-                    {buildable.cost.map((item) => {
-                      return (
-                        <StyledCostItem key={item.itemClass}>
-                          <StyledText>{item.quantity}x</StyledText>
-                          <Link href={`/items/${item.itemClass}`}>
-                            <StyledCostItemImage>
-                              <Image
-                                src={`/images/items/${item.itemClass}.png`}
-                                layout="fill"
-                                objectFit='cover'
-                                alt={item.itemClass}
-                                quality={40}
-                              />
-                            </StyledCostItemImage>
-                          </Link>
-                        </StyledCostItem>
-                      )
-                    })}
-                  </StyledCostContainer>
-                </StyledDetail>
-              </StyledDetailHeader>
-              <StyledDescription>
-                {buildable.description}
-              </StyledDescription>
-            </StyledDetailContainer>
-            {
-              buildable.isOverclockable &&
-              <StyledConsumptionContainer>
-                <StyledEnergyContainer>
-                  <StyledClockspeedInputContainer>
-                    {clockspeed} %
-                  </StyledClockspeedInputContainer>
+    <>
+      <Head>
+        <title>{buildable.name} | FICSIT DB</title>
+      </Head>
+
+      <Container>
+        <Main>
+          <StyledTitleSection>
+            <StyledTitle>{category[0].toUpperCase() + category.slice(1)}</StyledTitle>
+            <StyledLine color='#E5AF07' />
+          </StyledTitleSection>
+          <StyledContainer>
+            <StyledSection>
+              <StyledDetailContainer>
+                <StyledDetailHeader>
+                  <StyledImageContainer>
+                    <Image
+                      src={`/images/buildables/${buildable.slug}.png`}
+                      width={256}
+                      height={256}
+                      priority
+                      quality={100}
+                      alt={buildable.name}
+                    />
+                  </StyledImageContainer>
+                  <StyledDetail>
+                    <StyledName>{buildable.name}</StyledName>
+                    <StyledCostTitle>Cost :</StyledCostTitle>
+                    <StyledCostContainer>
+                      {buildable.cost.map((item) => {
+                        return (
+                          <StyledCostItem key={item.itemClass}>
+                            <StyledText>{item.quantity}x</StyledText>
+                            <Link href={`/items/${item.itemClass}`}>
+                              <StyledCostItemImage>
+                                <Image
+                                  src={`/images/items/${item.itemClass}.png`}
+                                  layout="fill"
+                                  objectFit='cover'
+                                  alt={item.itemClass}
+                                  quality={40}
+                                />
+                              </StyledCostItemImage>
+                            </Link>
+                          </StyledCostItem>
+                        )
+                      })}
+                    </StyledCostContainer>
+                  </StyledDetail>
+                </StyledDetailHeader>
+                <StyledDescription>
+                  {buildable.description}
+                </StyledDescription>
+              </StyledDetailContainer>
+              {
+                buildable.isOverclockable &&
+                <StyledConsumptionContainer>
+                  <StyledEnergyContainer>
+                    <StyledClockspeedInputContainer>
+                      {clockspeed} %
+                    </StyledClockspeedInputContainer>
+                    <StyledVerticalLine />
+                    <StyledEnergyConsumption>{parseFloat(buildable.isGenerator ? powerProduction : energyConsumption)}MW</StyledEnergyConsumption>
+                  </StyledEnergyContainer>
+                  <StyledClockspeedContainer>
+                    <StyledClockspeedBar
+                      type="range"
+                      min={1}
+                      max={250}
+                      step={1}
+                      onChange={e => { setClockspeed(+ e.currentTarget.value) }}
+                      value={clockspeed}
+                    />
+                    <StyledClockspeedTextContainer>
+                      <StyledClockspeedText></StyledClockspeedText>
+                      <StyledClockspeedText overclocked={100 <= clockspeed} onClick={() => setClockspeed(100)}>100%</StyledClockspeedText>
+                      <StyledClockspeedText overclocked={150 <= clockspeed} onClick={() => setClockspeed(150)}>150%</StyledClockspeedText>
+                      <StyledClockspeedText overclocked={200 <= clockspeed} onClick={() => setClockspeed(200)}>200%</StyledClockspeedText>
+                      <StyledClockspeedText overclocked={250 <= clockspeed} onClick={() => setClockspeed(250)}>250%</StyledClockspeedText>
+                    </StyledClockspeedTextContainer>
+                  </StyledClockspeedContainer>
+                </StyledConsumptionContainer>
+              }
+              {
+                (buildable.isResourceExtractor && buildable.meta.extractorInfo?.isDependsPurity) &&
+                <StyledExtractionContainer>
+                  <StyledExtractionRate>{extractionRate}/min</StyledExtractionRate>
                   <StyledVerticalLine />
-                  <StyledEnergyConsumption>{parseFloat(buildable.isGenerator ? powerProduction : energyConsumption)}MW</StyledEnergyConsumption>
-                </StyledEnergyContainer>
-                <StyledClockspeedContainer>
-                  <StyledClockspeedBar
-                    type="range"
-                    min={1}
-                    max={250}
-                    step={1}
-                    onChange={e => { setClockspeed(+ e.currentTarget.value) }}
-                    value={clockspeed}
-                  />
-                  <StyledClockspeedTextContainer>
-                    <StyledClockspeedText></StyledClockspeedText>
-                    <StyledClockspeedText overclocked={100 <= clockspeed} onClick={() => setClockspeed(100)}>100%</StyledClockspeedText>
-                    <StyledClockspeedText overclocked={150 <= clockspeed} onClick={() => setClockspeed(150)}>150%</StyledClockspeedText>
-                    <StyledClockspeedText overclocked={200 <= clockspeed} onClick={() => setClockspeed(200)}>200%</StyledClockspeedText>
-                    <StyledClockspeedText overclocked={250 <= clockspeed} onClick={() => setClockspeed(250)}>250%</StyledClockspeedText>
-                  </StyledClockspeedTextContainer>
-                </StyledClockspeedContainer>
-              </StyledConsumptionContainer>
-            }
-            {
-              (buildable.isResourceExtractor && buildable.meta.extractorInfo?.isDependsPurity) &&
-              <StyledExtractionContainer>
-                <StyledExtractionRate>{extractionRate}/min</StyledExtractionRate>
-                <StyledVerticalLine />
-                <StyledPurityContainer>
-                  <StyledPurity selected={purity == 0.5} onClick={() => setPurity(0.5)}>Impure</StyledPurity>
-                  <StyledPurity selected={purity == 1} onClick={() => setPurity(1)}>Normal</StyledPurity>
-                  <StyledPurity selected={purity == 2} onClick={() => setPurity(2)}>Pure</StyledPurity>
-                </StyledPurityContainer>
-              </StyledExtractionContainer>
-            }
-          </StyledSection>
-          <Recipe recipes={recipes} title={"Recipes"} />
-          <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
-          <Fuel fuels={buildable.meta?.generatorInfo?.fuels} operatingRate={operatingRate} />
-        </StyledContainer>
-      </Main>
-    </Container>
+                  <StyledPurityContainer>
+                    <StyledPurity selected={purity == 0.5} onClick={() => setPurity(0.5)}>Impure</StyledPurity>
+                    <StyledPurity selected={purity == 1} onClick={() => setPurity(1)}>Normal</StyledPurity>
+                    <StyledPurity selected={purity == 2} onClick={() => setPurity(2)}>Pure</StyledPurity>
+                  </StyledPurityContainer>
+                </StyledExtractionContainer>
+              }
+            </StyledSection>
+            <Recipe recipes={recipes} title={"Recipes"} />
+            <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
+            <Fuel fuels={buildable.meta?.generatorInfo?.fuels} operatingRate={operatingRate} />
+          </StyledContainer>
+        </Main>
+      </Container>
+    </>
   )
 }
 

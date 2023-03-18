@@ -3,6 +3,7 @@ import { Container, Main, StyledLine, StyledTitle } from '../../../components/sh
 import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
+import Head from 'next/head'
 import { getBuildingsByCategory } from '../../api'
 import { useRouter } from 'next/router'
 
@@ -26,61 +27,68 @@ export default function Buildings(buildings: BuildingMap) {
   ]
 
   return (
-    <Container>
-      <Main>
-        <StyledHeaderSection>
-          <StyledTitle>Buildings</StyledTitle>
-          <StyledLine color='#E5AF07' />
-          <StyledCategoiresContainer>
-            {BuildingCategories.map((category) => {
+    <>
+      <Head>
+        <title>Buildings | FICSIT DB</title>
+      </Head>
+
+      <Container>
+        <Main>
+          <StyledHeaderSection>
+            <StyledTitle>Buildings</StyledTitle>
+            <StyledLine color='#E5AF07' />
+            <StyledCategoiresContainer>
+              {BuildingCategories.map((category) => {
+                return (
+                  <Link href={`/buildings/${category.toLowerCase()}`} key={category}>
+                    <StyledCategory selected={router.query.category == category.toLowerCase()}>
+                      <Image
+                        src={`/icons/ResIcon_${category}.png`}
+                        width={64}
+                        height={64}
+                        alt={category.toLowerCase()}
+                        placeholder='empty'
+                      />
+                      <div>{category}</div>
+                    </StyledCategory>
+                  </Link>
+                )
+              })}
+            </StyledCategoiresContainer>
+            <StyledLine color='#e5af07' />
+          </StyledHeaderSection>
+          <StyledBuildingsSection>
+            {Object.keys(buildings).map((key, i) => {
               return (
-                <Link href={`/buildings/${category.toLowerCase()}`} key={category}>
-                  <StyledCategory selected={router.query.category == category.toLowerCase()}>
-                    <Image
-                      src={`/icons/ResIcon_${category}.png`}
-                      width={64}
-                      height={64}
-                      alt={category.toLowerCase()}
-                      placeholder='empty'
-                    />
-                    <div>{category}</div>
-                  </StyledCategory>
-                </Link>
+                <>
+                  <StyledCategoryTitle>{i + 1}. {key.split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
+                  <StyledBuildingsContainer>
+                    {buildings[key].map((building) => {
+                      return (
+                        <Link href={`/buildings/${category}/${building.slug}`} key={building.slug}>
+                          <StyledBuilding key={building.slug}>
+                            <StyledBuildingImage>
+                              <Image
+                                style={{ userSelect: 'none' }}
+                                src={`/images/buildables/${building.slug}.png`}
+                                width={256}
+                                height={256}
+                                alt={building.name}
+                              />
+                            </StyledBuildingImage>
+                            <StyledBuildingName>{building.name}</StyledBuildingName>
+                          </StyledBuilding>
+                        </Link>
+                      )
+                    })}
+                  </StyledBuildingsContainer>
+                </>
               )
             })}
-          </StyledCategoiresContainer>
-          <StyledLine color='#e5af07' />
-        </StyledHeaderSection>
-        <StyledBuildingsSection>
-          {Object.keys(buildings).map((key, i) => {
-            return (
-              <React.Fragment key={key}>
-                <StyledCategoryTitle>{i + 1}. {key.split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
-                <StyledBuildingsContainer>
-                  {buildings[key].map((building) => {
-                    return (
-                      <Link href={`/buildings/${category}/${building.slug}`} key={building.slug}>
-                        <StyledBuilding key={building.slug}>
-                          <StyledBuildingImage>
-                            <Image
-                              src={`/images/buildables/${building.slug}.png`}
-                              width={256}
-                              height={256}
-                              alt={building.name}
-                            />
-                          </StyledBuildingImage>
-                          <StyledBuildingName>{building.name}</StyledBuildingName>
-                        </StyledBuilding>
-                      </Link>
-                    )
-                  })}
-                </StyledBuildingsContainer>
-              </React.Fragment>
-            )
-          })}
-        </StyledBuildingsSection>
-      </Main>
-    </Container>
+          </StyledBuildingsSection>
+        </Main>
+      </Container>
+    </>
   )
 }
 
@@ -185,6 +193,8 @@ const StyledBuilding = styled.div`
   margin: 0 0.5rem;
   margin-bottom: 1rem;
   cursor: pointer;
+  user-select: none;
+
 
   @media (min-width: 425px) {
     width: 28%;
@@ -200,6 +210,7 @@ const StyledBuildingImage = styled.div`
   aspect-ratio: 1 / 1;
   background-color: #43454B;
   padding: 0.25rem;
+  -webkit-user-drag: none;
 `
 
 const StyledBuildingName = styled.div`

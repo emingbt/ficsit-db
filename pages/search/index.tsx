@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { getFilteredUnitsByName } from '..//api'
 import Link from 'next/link'
 import Image from 'next/image'
+import Head from 'next/head'
 import { useState } from 'react'
 
 import { Item, Building } from '../../interfaces'
@@ -22,42 +23,48 @@ export default function Search({ filteredItems, filteredBuildables }: Props) {
   const sortedData = Object.values(selectedCategory == 'items' ? filteredItems : filteredBuildables).sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
 
   return (
-    <Container>
-      <Main>
-        <StyledContainer>
-          <StyledHeader>
-            <StyledTitle>Search results for : &quot;<StyledSpan>{name}</StyledSpan>&quot;</StyledTitle>
-            <StyledCategoryContainer>
-              <StyledCategory selected={selectedCategory == 'items'} onClick={() => setSelectedCategory('items')}>Items ({filteredItems.length})</StyledCategory>
-              <StyledCategory selected={selectedCategory == 'buildables'} onClick={() => setSelectedCategory('buildables')}>Buildings ({filteredBuildables.length})</StyledCategory>
-            </StyledCategoryContainer>
-          </StyledHeader>
-          <StyledLine color='#E5AF07' />
-          {sortedData.length == 0 ?
-            <StyledText>Nothing found.</StyledText> :
-            <StyledItemsContainer>
-              {sortedData.map((unit, i) => {
-                return (
-                  <Link href={`/${selectedCategory == 'items' ? 'items' : `buildings/${unit.categories[0]}`}/${unit.slug}`} key={i} >
-                    <StyledItem>
-                      <StyledItemImage
-                        src={`/images/${selectedCategory}/${unit.slug}.png`}
-                        width={256}
-                        height={256}
-                        alt={unit.name}
-                      />
-                      <StyledItemName>
-                        {unit.name}
-                      </StyledItemName>
-                    </StyledItem>
-                  </Link>
-                )
-              })}
-            </StyledItemsContainer>
-          }
-        </StyledContainer>
-      </Main>
-    </Container>
+    <>
+      <Head>
+        <title>Search | FICSIT DB</title>
+      </Head>
+
+      <Container>
+        <Main>
+          <StyledContainer>
+            <StyledHeader>
+              <StyledTitle>Search results for : &quot;<StyledSpan>{name}</StyledSpan>&quot;</StyledTitle>
+              <StyledCategoryContainer>
+                <StyledCategory selected={selectedCategory == 'items'} onClick={() => setSelectedCategory('items')}>Items ({filteredItems.length})</StyledCategory>
+                <StyledCategory selected={selectedCategory == 'buildables'} onClick={() => setSelectedCategory('buildables')}>Buildings ({filteredBuildables.length})</StyledCategory>
+              </StyledCategoryContainer>
+            </StyledHeader>
+            <StyledLine color='#E5AF07' />
+            {sortedData.length == 0 ?
+              <StyledText>Nothing found.</StyledText> :
+              <StyledItemsContainer>
+                {sortedData.map((unit, i) => {
+                  return (
+                    <Link href={`/${selectedCategory == 'items' ? 'items' : `buildings/${unit.categories[0]}`}/${unit.slug}`} key={i} >
+                      <StyledItem>
+                        <StyledItemImage
+                          src={`/images/${selectedCategory}/${unit.slug}.png`}
+                          width={256}
+                          height={256}
+                          alt={unit.name}
+                        />
+                        <StyledItemName>
+                          {unit.name}
+                        </StyledItemName>
+                      </StyledItem>
+                    </Link>
+                  )
+                })}
+              </StyledItemsContainer>
+            }
+          </StyledContainer>
+        </Main>
+      </Container>
+    </>
   )
 }
 
