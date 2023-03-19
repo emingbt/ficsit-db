@@ -4,38 +4,45 @@ import Link from 'next/link'
 import { getAllItems } from '../api'
 import Image from 'next/image'
 import { Item } from '../../interfaces/index'
+import Head from 'next/head'
 
 export default function Items(items: Item[]) {
   const sortedItems = Object.values(items).sort((previousItem, currentItem) => (previousItem.name.toLowerCase() > currentItem.name.toLowerCase()) ? 1 : ((currentItem.name > previousItem.name) ? -1 : 0))
 
   return (
-    <Container>
-      <Main>
-        <StyledContainer>
-          <StyledTitle>Items</StyledTitle>
-          <StyledLine color='#E5AF07' />
-          <StyledItemsContainer>
-            {sortedItems.map((item, i) => {
-              return (
-                <Link href={`/items/${item.slug}`} key={i} >
-                  <StyledItem>
-                    <StyledItemImage
-                      src={`/images/items/${item.slug}.png`}
-                      width={256}
-                      height={256}
-                      alt={item.name}
-                    />
-                    <StyledItemName>
-                      {item.name}
-                    </StyledItemName>
-                  </StyledItem>
-                </Link>
-              )
-            })}
-          </StyledItemsContainer>
-        </StyledContainer>
-      </Main>
-    </Container>
+    <>
+      <Head>
+        <title>Items | FICSIT DB</title>
+      </Head>
+
+      <Container>
+        <Main>
+          <StyledContainer>
+            <StyledTitle>Items</StyledTitle>
+            <StyledLine color='#E5AF07' />
+            <StyledItemsContainer>
+              {sortedItems.map((item, i) => {
+                return (
+                  <Link href={`/items/${item.slug}`} key={i} >
+                    <StyledItem>
+                      <StyledItemImage
+                        src={`/images/items/${item.slug}.png`}
+                        width={256}
+                        height={256}
+                        alt={item.name}
+                      />
+                      <StyledItemName>
+                        {item.name}
+                      </StyledItemName>
+                    </StyledItem>
+                  </Link>
+                )
+              })}
+            </StyledItemsContainer>
+          </StyledContainer>
+        </Main>
+      </Container>
+    </>
   )
 }
 
@@ -65,7 +72,7 @@ const StyledItemsContainer = styled.div`
   margin-top: 0.5rem;
 `
 
-const StyledItem = styled.div`
+const StyledItem = styled.a`
   width: 11.25%;
   display: flex;
   flex-direction: column;

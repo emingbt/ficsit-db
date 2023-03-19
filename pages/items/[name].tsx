@@ -5,6 +5,7 @@ import { getItemByItemName } from '../api/index'
 import Recipe from '../../components/sections/recipe'
 import { Item, ProductionRecipe } from '../../interfaces'
 import { Primary } from '../../interfaces/styledComponents'
+import Head from 'next/head'
 
 interface Props {
   item: Item,
@@ -14,50 +15,56 @@ interface Props {
 
 export default function ItemPage({ item, recipes, usagesAsIngredient }: Props) {
   return (
-    <Container>
-      <Main>
-        <StyledTitleSection>
-          <StyledTitle>Item</StyledTitle>
-          <StyledLine color='#E5AF07' />
-        </StyledTitleSection>
-        <StyledContainer>
-          <StyledSection>
-            <StyledDetailHeader>
-              <StyledImageContainer>
-                <Image
-                  src={`/images/items/${item.slug}.png`}
-                  width={256}
-                  height={256}
-                  priority
-                  quality={100}
-                  alt={item.name}
-                />
-              </StyledImageContainer>
-              <StyledDetail>
-                <StyledName>{item.name}</StyledName>
-                <StyledText>
-                  <p>Stack Size:</p>
-                  <p>{item.stackSize}</p>
-                </StyledText>
-                <StyledText primary>
-                  <p>Sink Value:</p>
-                  <p>{item.sinkPoints}</p>
-                </StyledText>
-                <StyledText>
-                  <p>Radioactive:</p>
-                  <p>{item.isRadioactive ? 'Yes' : 'No'}</p>
-                </StyledText>
-              </StyledDetail>
-            </StyledDetailHeader>
-            <StyledDescription>
-              {item.description}
-            </StyledDescription>
-          </StyledSection>
-          <Recipe recipes={recipes} title={"Recipes"} />
-          <Recipe recipes={usagesAsIngredient} title={"Usages as Ingredient"} />
-        </StyledContainer>
-      </Main>
-    </Container>
+    <>
+      <Head>
+        <title>{item.name} | FICSIT DB</title>
+      </Head>
+
+      <Container>
+        <Main>
+          <StyledTitleSection>
+            <StyledTitle>Item</StyledTitle>
+            <StyledLine color='#E5AF07' />
+          </StyledTitleSection>
+          <StyledContainer>
+            <StyledSection>
+              <StyledDetailHeader>
+                <StyledImageContainer>
+                  <Image
+                    src={`/images/items/${item.slug}.png`}
+                    width={256}
+                    height={256}
+                    priority
+                    quality={100}
+                    alt={item.name}
+                  />
+                </StyledImageContainer>
+                <StyledDetail>
+                  <StyledName>{item.name}</StyledName>
+                  <StyledText>
+                    <p>Stack Size:</p>
+                    <p>{item.stackSize}</p>
+                  </StyledText>
+                  <StyledText primary>
+                    <p>Sink Value:</p>
+                    <p>{item.sinkPoints}</p>
+                  </StyledText>
+                  <StyledText>
+                    <p>Radioactive:</p>
+                    <p>{item.isRadioactive ? 'Yes' : 'No'}</p>
+                  </StyledText>
+                </StyledDetail>
+              </StyledDetailHeader>
+              <StyledDescription>
+                {item.description}
+              </StyledDescription>
+            </StyledSection>
+            <Recipe recipes={recipes} title={"Recipes"} />
+            <Recipe recipes={usagesAsIngredient} title={"Usages as Ingredient"} />
+          </StyledContainer>
+        </Main>
+      </Container>
+    </>
   )
 }
 

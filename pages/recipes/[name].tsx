@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Container, Main, StyledTitle, StyledLine } from '../../components/sharedstyles'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 import { RecipeDetails } from '../../components/sections/recipeDetails'
 
 import { ProductionRecipe, Building } from '../../interfaces'
@@ -19,54 +20,102 @@ export default function Recipe({ recipe, building }: Props) {
   const [productionRate, setProductionRate] = useState(recipe.products[0].quantity / recipe.craftTime * 60)
 
   return (
-    <Container>
-      <Main>
-        <StyledTitleSection>
-          <StyledTitle>Recipe</StyledTitle>
-          <StyledLine color='#E5AF07' />
-        </StyledTitleSection>
-        <StyledContainer>
-          <StyledRecipeTitleContainer>
-            <span style={{ color: '#d38840' }}>Recipe:</span>
-            <StyledRecipeTitle>{recipe.name}</StyledRecipeTitle>
-          </StyledRecipeTitleContainer>
-          <StyledItemsSection>
-            <StyledItemsContainer>
-              <StyledItemsList>
-                <StyledItemLine primary />
-                {recipe.ingredients.map((ingredient) => {
-                  return (
-                    <StyledItemContainer key={ingredient.itemClass}>
-                      <StyledItem>
-                        <Link href={`/items/${ingredient.itemClass}`}>
-                          <StyledItemImage isFluid={ingredient.isFluid}>
-                            <Image
-                              src={`/images/items/${ingredient.itemClass}.png`}
-                              width={72}
-                              height={72}
-                              alt={ingredient.itemClass}
-                              quality={100}
-                            />
-                          </StyledItemImage>
-                        </Link>
-                        <StyledItemDetail>
-                          <StyledItemName>{ingredient.quantity} {ingredient.name}</StyledItemName>
-                          <StyledUsagePerMinute>
-                            <span style={{ color: '#e59344' }}>{parseFloat((60 / recipe.craftTime * ingredient.quantity).toFixed(3))} </span>
-                            {clockspeed != 100 && (
-                              <strong style={{ color: '#e59344' }}>({parseFloat((60 / recipe.craftTime * ingredient.quantity * clockspeed / 100).toFixed(4))})</strong>
-                            )} per minute</StyledUsagePerMinute>
-                        </StyledItemDetail>
-                      </StyledItem>
-                      <StyledItemLine />
-                    </StyledItemContainer>
-                  )
-                })}
-              </StyledItemsList>
-              <StyledTitleContainer>INPUT</StyledTitleContainer>
-            </StyledItemsContainer>
+    <>
+      <Head>
+        <title>{recipe.name} | FICSIT DB</title>
+      </Head>
+
+      <Container>
+        <Main>
+          <StyledTitleSection>
+            <StyledTitle>Recipe</StyledTitle>
+            <StyledLine color='#E5AF07' />
+          </StyledTitleSection>
+          <StyledContainer>
+            <StyledRecipeTitleContainer>
+              <span style={{ color: '#d38840' }}>Recipe:</span>
+              <StyledRecipeTitle>{recipe.name}</StyledRecipeTitle>
+            </StyledRecipeTitleContainer>
+            <StyledItemsSection>
+              <StyledItemsContainer>
+                <StyledItemsList>
+                  <StyledItemLine primary />
+                  {recipe.ingredients.map((ingredient) => {
+                    return (
+                      <StyledItemContainer key={ingredient.itemClass}>
+                        <StyledItem>
+                          <Link href={`/items/${ingredient.itemClass}`}>
+                            <StyledItemImage isFluid={ingredient.isFluid}>
+                              <Image
+                                src={`/images/items/${ingredient.itemClass}.png`}
+                                width={72}
+                                height={72}
+                                alt={ingredient.itemClass}
+                                quality={100}
+                              />
+                            </StyledItemImage>
+                          </Link>
+                          <StyledItemDetail>
+                            <StyledItemName>{ingredient.quantity} {ingredient.name}</StyledItemName>
+                            <StyledUsagePerMinute>
+                              <span style={{ color: '#e59344' }}>{parseFloat((60 / recipe.craftTime * ingredient.quantity).toFixed(3))} </span>
+                              {clockspeed != 100 && (
+                                <strong style={{ color: '#e59344' }}>({parseFloat((60 / recipe.craftTime * ingredient.quantity * clockspeed / 100).toFixed(4))})</strong>
+                              )} per minute</StyledUsagePerMinute>
+                          </StyledItemDetail>
+                        </StyledItem>
+                        <StyledItemLine />
+                      </StyledItemContainer>
+                    )
+                  })}
+                </StyledItemsList>
+                <StyledTitleContainer>INPUT</StyledTitleContainer>
+              </StyledItemsContainer>
+              <RecipeDetails
+                widescreen={true}
+                clockspeed={clockspeed}
+                setClockspeed={setClockspeed}
+                productionRate={productionRate}
+                setProductionRate={setProductionRate}
+                recipe={recipe}
+                building={building}
+              />
+              <StyledItemsContainer>
+                <StyledItemsList>
+                  <StyledItemLine primary />
+                  {recipe.products.map((product) => {
+                    return (
+                      <StyledItemContainer key={product.itemClass}>
+                        <StyledItem>
+                          <Link href={`/items/${product.itemClass}`}>
+                            <StyledItemImage isFluid={product.isFluid}>
+                              <Image
+                                src={`/images/items/${product.itemClass}.png`}
+                                width={72}
+                                height={72}
+                                alt={product.itemClass}
+                                quality={100}
+                              />
+                            </StyledItemImage>
+                          </Link>
+                          <StyledItemDetail>
+                            <StyledItemName>{product.quantity} {product.name}</StyledItemName>
+                            <StyledUsagePerMinute>
+                              <span style={{ color: '#e59344' }}>{parseFloat((60 / recipe.craftTime * product.quantity).toFixed(3))} </span>
+                              {clockspeed != 100 && (
+                                <strong style={{ color: '#e59344' }}>({parseFloat((60 / recipe.craftTime * product.quantity * clockspeed / 100).toFixed(4))})</strong>
+                              )} per minute</StyledUsagePerMinute>
+                          </StyledItemDetail>
+                        </StyledItem>
+                        <StyledItemLine />
+                      </StyledItemContainer>
+                    )
+                  })}
+                </StyledItemsList>
+                <StyledTitleContainer>OUTPUT</StyledTitleContainer>
+              </StyledItemsContainer>
+            </StyledItemsSection>
             <RecipeDetails
-              widescreen={true}
               clockspeed={clockspeed}
               setClockspeed={setClockspeed}
               productionRate={productionRate}
@@ -74,52 +123,10 @@ export default function Recipe({ recipe, building }: Props) {
               recipe={recipe}
               building={building}
             />
-            <StyledItemsContainer>
-              <StyledItemsList>
-                <StyledItemLine primary />
-                {recipe.products.map((product) => {
-                  return (
-                    <StyledItemContainer key={product.itemClass}>
-                      <StyledItem>
-                        <Link href={`/items/${product.itemClass}`}>
-                          <StyledItemImage isFluid={product.isFluid}>
-                            <Image
-                              src={`/images/items/${product.itemClass}.png`}
-                              width={72}
-                              height={72}
-                              alt={product.itemClass}
-                              quality={100}
-                            />
-                          </StyledItemImage>
-                        </Link>
-                        <StyledItemDetail>
-                          <StyledItemName>{product.quantity} {product.name}</StyledItemName>
-                          <StyledUsagePerMinute>
-                            <span style={{ color: '#e59344' }}>{parseFloat((60 / recipe.craftTime * product.quantity).toFixed(3))} </span>
-                            {clockspeed != 100 && (
-                              <strong style={{ color: '#e59344' }}>({parseFloat((60 / recipe.craftTime * product.quantity * clockspeed / 100).toFixed(4))})</strong>
-                            )} per minute</StyledUsagePerMinute>
-                        </StyledItemDetail>
-                      </StyledItem>
-                      <StyledItemLine />
-                    </StyledItemContainer>
-                  )
-                })}
-              </StyledItemsList>
-              <StyledTitleContainer>OUTPUT</StyledTitleContainer>
-            </StyledItemsContainer>
-          </StyledItemsSection>
-          <RecipeDetails
-            clockspeed={clockspeed}
-            setClockspeed={setClockspeed}
-            productionRate={productionRate}
-            setProductionRate={setProductionRate}
-            recipe={recipe}
-            building={building}
-          />
-        </StyledContainer>
-      </Main>
-    </Container>
+          </StyledContainer>
+        </Main>
+      </Container>
+    </>
   )
 }
 
