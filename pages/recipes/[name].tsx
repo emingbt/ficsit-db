@@ -45,6 +45,7 @@ export default function Recipe({ recipe, building }: Props) {
                         craftTime={recipe.craftTime}
                         item={ingredient}
                         clockspeed={clockspeed}
+                        key={ingredient.itemClass}
                       />
                     )
                   })}
@@ -69,6 +70,7 @@ export default function Recipe({ recipe, building }: Props) {
                         craftTime={recipe.craftTime}
                         item={product}
                         clockspeed={clockspeed}
+                        key={product.itemClass}
                       />
                     )
                   })}
