@@ -15,7 +15,7 @@ interface Props {
   building: Building
 }
 
-export const RecipeDetails = ({ widescreen, clockspeed, setClockspeed, productionRate, setProductionRate, recipe, building }: Props) => {
+export default function RecipeDetails({ widescreen, clockspeed, setClockspeed, productionRate, setProductionRate, recipe, building }: Props) {
 
   let energyConsumption = parseFloat((building.meta?.powerInfo?.consumption * (clockspeed / 100) ** building.meta?.overclockInfo?.exponent).toFixed(4))
   let periodTime = parseFloat((recipe.craftTime * 100 / clockspeed).toFixed(4))

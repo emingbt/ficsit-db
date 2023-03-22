@@ -125,3 +125,10 @@ export interface BuildingRecipe {
 export type BuildingRecipeMap = {
   [key: string]: BuildingRecipe;
 }
+
+export interface ProductionRecipeItem {
+  itemClass: string,
+  quantity: number,
+  name?: string,
+  isFluid?: boolean
+}
