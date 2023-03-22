@@ -5,7 +5,7 @@ import { Container, Main, StyledTitle, StyledLine } from '../../components/share
 import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
-import { RecipeDetails } from '../../components/sections/recipeDetails'
+import RecipeDetails from '../../components/sections/recipeDetails'
 
 import { ProductionRecipe, Building } from '../../interfaces'
 import { Primary, IsFluid } from '../../interfaces/styledComponents'
