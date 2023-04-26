@@ -1,7 +1,6 @@
 import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import styled from "styled-components"
 import { useRouter } from 'next/router'
-import { getFilteredUnitsByName } from '..//api'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -11,16 +10,16 @@ import { Item, Building } from '../../interfaces'
 import { Selected } from '../../interfaces/styledComponents'
 
 interface Props {
-  filteredItems: Item[],
-  filteredBuildables: Building[]
+  items: Item[],
+  buildings: Building[]
 }
 
-export default function Search({ filteredItems, filteredBuildables }: Props) {
+export default function Search({ items, buildings }: Props) {
   const router = useRouter()
   const { name } = router.query
 
   const [selectedCategory, setSelectedCategory] = useState('items')
-  const sortedData = Object.values(selectedCategory == 'items' ? filteredItems : filteredBuildables).sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
+  const sortedData = Object.values(selectedCategory == 'items' ? items : buildings).sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
 
   return (
     <>
@@ -34,8 +33,8 @@ export default function Search({ filteredItems, filteredBuildables }: Props) {
             <StyledHeader>
               <StyledTitle>Search results for : &quot;<StyledSpan>{name}</StyledSpan>&quot;</StyledTitle>
               <StyledCategoryContainer>
-                <StyledCategory selected={selectedCategory == 'items'} onClick={() => setSelectedCategory('items')}>Items ({filteredItems.length})</StyledCategory>
-                <StyledCategory selected={selectedCategory == 'buildables'} onClick={() => setSelectedCategory('buildables')}>Buildings ({filteredBuildables.length})</StyledCategory>
+                <StyledCategory selected={selectedCategory == 'items'} onClick={() => setSelectedCategory('items')}>Items ({items.length})</StyledCategory>
+                <StyledCategory selected={selectedCategory == 'buildables'} onClick={() => setSelectedCategory('buildables')}>Buildings ({buildings.length})</StyledCategory>
               </StyledCategoryContainer>
             </StyledHeader>
             <StyledLine color='#E5AF07' />
@@ -44,10 +43,10 @@ export default function Search({ filteredItems, filteredBuildables }: Props) {
               <StyledItemsContainer>
                 {sortedData.map((unit, i) => {
                   return (
-                    <Link href={`/${selectedCategory == 'items' ? 'items' : `buildings/${unit.categories[0]}`}/${unit.slug}`} key={i} >
+                    <Link href={`/${selectedCategory == 'items' ? 'items' : `buildings/${unit.category}`}/${unit.slug}`} key={i} >
                       <StyledItem>
                         <StyledItemImage
-                          src={`/images/${selectedCategory}/${unit.slug}.png`}
+                          src={unit.imgUrl}
                           width={256}
                           height={256}
                           alt={unit.name}
@@ -68,13 +67,17 @@ export default function Search({ filteredItems, filteredBuildables }: Props) {
   )
 }
 
-export function getServerSideProps(context) {
+export async function getServerSideProps(context) {
+  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://127.0.0.1:3000'
   const name = context.query.name
+  const result = await fetch(`${baseUrl}/api/search?name=${name}`)
+  const data = await result.json()
 
-  const { filteredItems, filteredBuildables } = getFilteredUnitsByName(name)
+  const items = data.items
+  const buildings = data.buildings
 
   return {
-    props: { filteredItems, filteredBuildables }
+    props: { items, buildings }
   }
 }
 
