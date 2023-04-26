@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import executeQuery from "../../utils/neo4j";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function Building(req: NextApiRequest, res: NextApiResponse) {
   const { slug } = req.query;
 
   const query = `
