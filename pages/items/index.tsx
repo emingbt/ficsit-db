@@ -1,9 +1,9 @@
-import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import styled from 'styled-components'
+import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import { Item } from '../../interfaces/index'
-import Head from 'next/head'
 
 interface Props {
   items: Item[]
@@ -47,7 +47,7 @@ export default function Items({ items }: Props) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://127.0.0.1:3000'
   const result = await fetch(`${baseUrl}/api/items`)
   const items = await result.json()
