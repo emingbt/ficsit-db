@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
-import { getBuildingsByCategory } from '../../api'
 import { useRouter } from 'next/router'
 
 import { Building } from '../../../interfaces'
