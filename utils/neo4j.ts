@@ -13,8 +13,6 @@ const executeQuery = async (query: string, params?: {}) => {
     const session: Session = driver.session({ database: 'neo4j' })
     const result = await session.executeRead(tx => tx.run(query, params))
 
-    console.log(result.records.map(record => record.toObject()))
-
     await session.close()
     return result.records.map(record => record.toObject())
   } catch (error) {
