@@ -9,7 +9,7 @@ export interface Item {
   isBiomass: boolean;
   isRadioactive: boolean;
   isEquipment: boolean;
-  meta: {};
+  imgUrl: string;
   event: string;
 }
 
@@ -30,52 +30,28 @@ export interface Building {
   isGenerator: boolean,
   isVehicle: boolean,
   event: string,
+  imgUrl: string,
   cost: {
-    itemClass: string,
-    quantity: number
+    slug: string,
+    amount: number,
+    imgUrl: string
+  }[],
+  overclockExponent?: number,
+  powerConsumption?: number,
+  powerProduction?: number,
+  isDependsPurity?: boolean,
+  resourceExtractSpeed?: number,
+  resources?: {
+    slug: string,
+    name: string,
+    imgUrl: string
+  }[],
+  fuels?: {
+    slug: string,
+    imgUrl: string,
+    type: string,
+    rate: number
   }[]
-  ,
-  meta: {
-    size: {
-      width: number,
-      length: number,
-      height: number
-    },
-    powerInfo?: {
-      consumption: number,
-      variableConsumption?: {
-        cycleTime: number,
-        minimum: number,
-        maximum: number
-      }
-    },
-    overclockInfo?: {
-      exponent: number
-    },
-    generatorInfo?: {
-      powerProduction: number,
-      fuels: {
-        fuel: {
-          itemClass: string,
-          rate: number
-        },
-        supplement?: {
-          itemClass: string,
-          rate: number
-        },
-        byproduct?: {
-          itemClass: string,
-          rate: number
-        }
-      }[]
-    },
-    extractorInfo?: {
-      allowedResourceForms: string[],
-      allowedResources: string[],
-      resourceExtractSpeed: number,
-      isDependsPurity: boolean
-    }
-  }
 }
 
 export type BuildingMap = {
@@ -91,19 +67,15 @@ export interface ProductionRecipe {
   handCraftable: boolean,
   workshopCraftable: boolean,
   machineCraftable: boolean,
-  ingredients: {
-    itemClass: string,
-    quantity: number,
-    name?: string,
-    isFluid?: boolean
-  }[],
-  products: {
-    itemClass: string,
-    quantity: number,
-    name?: string,
-    isFluid?: boolean
-  }[],
-  producedIn: string,
+  ingredients: ProductionRecipeItem[],
+  products: ProductionRecipeItem[],
+  building: {
+    slug: string,
+    name: string,
+    imgUrl: string,
+    consumption: number,
+    exponent: number
+  },
   event: string
 }
 
@@ -116,7 +88,7 @@ export interface BuildingRecipe {
   name: string,
   ingredients: {
     itemClass: string,
-    quantity: number
+    amount: number
   }[],
   product: string,
   event: string
@@ -127,8 +99,19 @@ export type BuildingRecipeMap = {
 }
 
 export interface ProductionRecipeItem {
-  itemClass: string,
-  quantity: number,
+  slug: string,
+  imgUrl: string,
+  amount: number,
   name?: string,
   isFluid?: boolean
+}
+
+export interface Fuel {
+  name: string,
+  items: {
+    slug: string,
+    imgUrl: string,
+    type: string,
+    rate: number
+  }[]
 }
