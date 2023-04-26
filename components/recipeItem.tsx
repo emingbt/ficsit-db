@@ -13,25 +13,25 @@ interface Props {
 
 export default function RecipeItem({ craftTime, item, clockspeed }: Props) {
   return (
-    <StyledItemContainer key={item.itemClass}>
+    <StyledItemContainer key={item.slug}>
       <StyledItem>
-        <Link href={`/items/${item.itemClass}`}>
+        <Link href={`/items/${item.slug}`}>
           <StyledItemImage isFluid={item.isFluid}>
             <Image
-              src={`/images/items/${item.itemClass}.png`}
+              src={item.imgUrl}
               width={72}
               height={72}
-              alt={item.itemClass}
+              alt={item.slug}
               quality={100}
             />
           </StyledItemImage>
         </Link>
         <StyledItemDetail>
-          <StyledItemName>{item.quantity} {item.name}</StyledItemName>
+          <StyledItemName>{item.amount} {item.name}</StyledItemName>
           <StyledUsagePerMinute>
-            <span style={{ color: '#e59344' }}>{parseFloat((60 / craftTime * item.quantity).toFixed(3))} </span>
+            <span style={{ color: '#e59344' }}>{parseFloat((60 / craftTime * item.amount).toFixed(3))} </span>
             {clockspeed != 100 && (
-              <strong style={{ color: '#e59344' }}>({parseFloat((60 / craftTime * item.quantity * clockspeed / 100).toFixed(4))})</strong>
+              <strong style={{ color: '#e59344' }}>({parseFloat((60 / craftTime * item.amount * clockspeed / 100).toFixed(4))})</strong>
             )} per minute</StyledUsagePerMinute>
         </StyledItemDetail>
       </StyledItem>
