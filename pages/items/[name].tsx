@@ -1,11 +1,10 @@
 import styled from 'styled-components'
+import Head from 'next/head'
 import Image from 'next/image'
 import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../components/sharedstyles'
-import { getItemByItemName } from '../api/index'
 import Recipe from '../../components/sections/recipe'
 import { Item, ProductionRecipe } from '../../interfaces'
 import { Primary } from '../../interfaces/styledComponents'
-import Head from 'next/head'
 
 interface Props {
   item: Item,
@@ -13,11 +12,13 @@ interface Props {
   usagesAsIngredient: ProductionRecipe[]
 }
 
-export default function ItemPage({ item, recipes, usagesAsIngredient }: Props) {
+export default function ItemPage({ data }: { data: Props }) {
+  const { item, recipes, usagesAsIngredient } = data
+
   return (
     <>
       <Head>
-        <title>{item.name} | FICSIT DB</title>
+        <title>FICSIT DB</title>
       </Head>
 
       <Container>
@@ -31,7 +32,7 @@ export default function ItemPage({ item, recipes, usagesAsIngredient }: Props) {
               <StyledDetailHeader>
                 <StyledImageContainer>
                   <Image
-                    src={`/images/items/${item.slug}.png`}
+                    src={item.imgUrl}
                     width={256}
                     height={256}
                     priority
@@ -69,11 +70,13 @@ export default function ItemPage({ item, recipes, usagesAsIngredient }: Props) {
 }
 
 export async function getServerSideProps(context) {
-  var name = context.query.name
-  const { item, recipes, usagesAsIngredient } = getItemByItemName(name)
+  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://127.0.0.1:3000'
+  const name = context.query.name
+  const result = await fetch(`${baseUrl}/api/item?slug=${name}`)
+  const data = await result.json()
 
   return {
-    props: { item, recipes, usagesAsIngredient }
+    props: { data }
   }
 }
 
