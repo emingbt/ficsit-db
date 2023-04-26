@@ -106,3 +106,4 @@ dist
 
 # Build files
 build/
+.vercel
