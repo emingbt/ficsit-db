@@ -1,22 +1,20 @@
 import React, { useState } from 'react'
-import { getBuildableByName, getRecipeByRecipeName } from '../api'
 import styled from 'styled-components'
 import { Container, Main, StyledTitle, StyledLine } from '../../components/sharedstyles'
 import Head from 'next/head'
 import RecipeDetails from '../../components/sections/recipeDetails'
 import RecipeItem from '../../components/recipeItem'
 
-import { ProductionRecipe, Building } from '../../interfaces'
+import { ProductionRecipe } from '../../interfaces'
 import { Primary } from '../../interfaces/styledComponents'
 
 interface Props {
-  recipe: ProductionRecipe,
-  building: Building
+  recipe: ProductionRecipe
 }
 
-export default function Recipe({ recipe, building }: Props) {
+export default function Recipe({ recipe }: Props) {
   const [clockspeed, setClockspeed] = useState(100)
-  const [productionRate, setProductionRate] = useState(recipe.products[0].quantity / recipe.craftTime * 60)
+  const [productionRate, setProductionRate] = useState(recipe.products[0].amount / recipe.craftTime * 60)
 
   return (
     <>
@@ -45,7 +43,7 @@ export default function Recipe({ recipe, building }: Props) {
                         craftTime={recipe.craftTime}
                         item={ingredient}
                         clockspeed={clockspeed}
-                        key={ingredient.itemClass}
+                        key={ingredient.slug}
                       />
                     )
                   })}
@@ -59,7 +57,7 @@ export default function Recipe({ recipe, building }: Props) {
                 productionRate={productionRate}
                 setProductionRate={setProductionRate}
                 recipe={recipe}
-                building={building}
+                building={recipe.building}
               />
               <StyledItemsContainer>
                 <StyledItemsList>
@@ -70,7 +68,7 @@ export default function Recipe({ recipe, building }: Props) {
                         craftTime={recipe.craftTime}
                         item={product}
                         clockspeed={clockspeed}
-                        key={product.itemClass}
+                        key={product.slug}
                       />
                     )
                   })}
@@ -84,7 +82,7 @@ export default function Recipe({ recipe, building }: Props) {
               productionRate={productionRate}
               setProductionRate={setProductionRate}
               recipe={recipe}
-              building={building}
+              building={recipe.building}
             />
           </StyledContainer>
         </Main>
@@ -94,12 +92,13 @@ export default function Recipe({ recipe, building }: Props) {
 }
 
 export async function getServerSideProps(context) {
-  var name = context.query.name
-  const recipe = await getRecipeByRecipeName(name)
-  const building = getBuildableByName(recipe.producedIn)
+  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://127.0.0.1:3000'
+  const name = context.query.name
+  const result = await fetch(`${baseUrl}/api/recipe?slug=${name}`)
+  const recipe = await result.json()
 
   return {
-    props: { recipe, building }
+    props: { recipe }
   }
 }
 

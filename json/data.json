@@ -17,7 +17,8 @@
           "healthGain": 10
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492894/Items%20%7C%20FICSIT%20DB/paleberry_tak45s.png"
     },
     "bacon-agaric": {
       "slug": "bacon-agaric",
@@ -36,7 +37,8 @@
           "healthGain": 20
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492874/Items%20%7C%20FICSIT%20DB/bacon-agaric_johbf7.png"
     },
     "beryl-nut": {
       "slug": "beryl-nut",
@@ -55,7 +57,8 @@
           "healthGain": 5
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492876/Items%20%7C%20FICSIT%20DB/beryl-nut_owgenk.png"
     },
     "medicinal-inhaler": {
       "slug": "medicinal-inhaler",
@@ -74,7 +77,8 @@
           "healthGain": 100
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492890/Items%20%7C%20FICSIT%20DB/medicinal-inhaler_yneikr.png"
     },
     "beacon": {
       "slug": "beacon",
@@ -92,7 +96,8 @@
           "slot": "ARMS"
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492875/Items%20%7C%20FICSIT%20DB/beacon_mcg88k.png"
     },
     "parachute": {
       "slug": "parachute",
@@ -110,7 +115,8 @@
           "slot": "BACK"
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492894/Items%20%7C%20FICSIT%20DB/parachute_fltn6f.png"
     },
     "gas-mask": {
       "slug": "gas-mask",
@@ -129,7 +135,8 @@
           "filterDuration": 240
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492885/Items%20%7C%20FICSIT%20DB/gas-mask_wittdb.png"
     },
     "jetpack": {
       "slug": "jetpack",
@@ -147,7 +154,8 @@
           "slot": "BACK"
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492888/Items%20%7C%20FICSIT%20DB/jetpack_siemmy.png"
     },
     "chainsaw": {
       "slug": "chainsaw",
@@ -167,7 +175,8 @@
           "sawDownTreeTime": 2
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492877/Items%20%7C%20FICSIT%20DB/chainsaw_sputyp.png"
     },
     "factory-cart": {
       "slug": "factory-cart",
@@ -185,7 +194,8 @@
           "slot": "ARMS"
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492882/Items%20%7C%20FICSIT%20DB/factory-cart_neh0z5.png"
     },
     "hazmat-suit": {
       "slug": "hazmat-suit",
@@ -204,7 +214,8 @@
           "filterDuration": 240
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492884/Items%20%7C%20FICSIT%20DB/hazmat-suit_oqomi2.png"
     },
     "blade-runners": {
       "slug": "blade-runners",
@@ -224,7 +235,8 @@
           "jumpSpeedFactor": 1.5
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492875/Items%20%7C%20FICSIT%20DB/blade-runners_q7tugh.png"
     },
     "rebar-gun": {
       "slug": "rebar-gun",
@@ -243,7 +255,8 @@
           "reloadTime": 1.8
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492897/Items%20%7C%20FICSIT%20DB/rebar-gun_hqux9x.png"
     },
     "rifle": {
       "slug": "rifle",
@@ -262,7 +275,8 @@
           "reloadTime": 3.2
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492898/Items%20%7C%20FICSIT%20DB/rifle_iazfwu.png"
     },
     "xeno-zapper": {
       "slug": "xeno-zapper",
@@ -281,7 +295,8 @@
           "attackDistance": 350
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492872/Items%20%7C%20FICSIT%20DB/xeno-zapper_fyqsjb.png"
     },
     "xeno-basher": {
       "slug": "xeno-basher",
@@ -300,7 +315,8 @@
           "attackDistance": 400
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492872/Items%20%7C%20FICSIT%20DB/xeno-basher_feqhh5.png"
     },
     "nobelisk-detonator": {
       "slug": "nobelisk-detonator",
@@ -319,7 +335,8 @@
           "reloadTime": 1.5
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492890/Items%20%7C%20FICSIT%20DB/nobelisk-detonator_xtaeqk.png"
     },
     "portable-miner": {
       "slug": "portable-miner",
@@ -337,7 +354,8 @@
           "slot": "ARMS"
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492896/Items%20%7C%20FICSIT%20DB/portable-miner_aqgnfe.png"
     },
     "object-scanner": {
       "slug": "object-scanner",
@@ -356,7 +374,8 @@
           "detectionRange": 25000
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492892/Items%20%7C%20FICSIT%20DB/object-scanner_ozmg13.png"
     },
     "hover-pack": {
       "slug": "hover-pack",
@@ -374,7 +393,8 @@
           "slot": "BACK"
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492886/Items%20%7C%20FICSIT%20DB/hover-pack_gxikff.png"
     },
     "zipline": {
       "slug": "zipline",
@@ -392,7 +412,8 @@
           "slot": "ARMS"
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492873/Items%20%7C%20FICSIT%20DB/zipline_rffscl.png"
     },
     "golden-factory-cart": {
       "slug": "golden-factory-cart",
@@ -410,7 +431,8 @@
           "slot": "ARMS"
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492883/Items%20%7C%20FICSIT%20DB/golden-factory-cart_sebsna.png"
     },
     "uranium-waste": {
       "slug": "uranium-waste",
@@ -426,7 +448,8 @@
       "meta": {
         "radioactiveDecay": 10
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492871/Items%20%7C%20FICSIT%20DB/uranium-waste_vfj1zn.png"
     },
     "plutonium-waste": {
       "slug": "plutonium-waste",
@@ -442,7 +465,8 @@
       "meta": {
         "radioactiveDecay": 200
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492895/Items%20%7C%20FICSIT%20DB/plutonium-waste_hmkzm9.png"
     },
     "gas-filter": {
       "slug": "gas-filter",
@@ -456,7 +480,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492883/Items%20%7C%20FICSIT%20DB/gas-filter_aobsap.png"
     },
     "alclad-aluminum-sheet": {
       "slug": "alclad-aluminum-sheet",
@@ -470,7 +495,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492869/Items%20%7C%20FICSIT%20DB/alclad-aluminum-sheet_iiakey.png"
     },
     "battery": {
       "slug": "battery",
@@ -486,7 +512,8 @@
       "meta": {
         "energyValue": 6000
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492875/Items%20%7C%20FICSIT%20DB/battery_hh5rho.png"
     },
     "plastic": {
       "slug": "plastic",
@@ -500,7 +527,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492895/Items%20%7C%20FICSIT%20DB/plastic_zblsjo.png"
     },
     "wire": {
       "slug": "wire",
@@ -514,7 +542,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492871/Items%20%7C%20FICSIT%20DB/wire_lsr5sb.png"
     },
     "aluminum-ingot": {
       "slug": "aluminum-ingot",
@@ -528,7 +557,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492873/Items%20%7C%20FICSIT%20DB/aluminum-ingot_kfjxcu.png"
     },
     "packaged-fuel": {
       "slug": "packaged-fuel",
@@ -544,7 +574,8 @@
       "meta": {
         "energyValue": 750
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492893/Items%20%7C%20FICSIT%20DB/packaged-fuel_ryicdu.png"
     },
     "non-fissile-uranium": {
       "slug": "non-fissile-uranium",
@@ -560,7 +591,8 @@
       "meta": {
         "radioactiveDecay": 0.75
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492890/Items%20%7C%20FICSIT%20DB/non-fissile-uranium_erkgtv.png"
     },
     "plutonium-pellet": {
       "slug": "plutonium-pellet",
@@ -576,7 +608,8 @@
       "meta": {
         "radioactiveDecay": 20
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492896/Items%20%7C%20FICSIT%20DB/plutonium-pellet_beg5wm.png"
     },
     "encased-plutonium-cell": {
       "slug": "encased-plutonium-cell",
@@ -592,7 +625,8 @@
       "meta": {
         "radioactiveDecay": 120
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492881/Items%20%7C%20FICSIT%20DB/encased-plutonium-cell_dl7xcg.png"
     },
     "concrete": {
       "slug": "concrete",
@@ -606,7 +640,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492879/Items%20%7C%20FICSIT%20DB/concrete_ul7b8n.png"
     },
     "silica": {
       "slug": "silica",
@@ -620,7 +655,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492899/Items%20%7C%20FICSIT%20DB/silica_huscp0.png"
     },
     "iron-plate": {
       "slug": "iron-plate",
@@ -634,7 +670,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492887/Items%20%7C%20FICSIT%20DB/iron-plate_xk7neb.png"
     },
     "steel-beam": {
       "slug": "steel-beam",
@@ -648,7 +685,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492900/Items%20%7C%20FICSIT%20DB/steel-beam_pafovl.png"
     },
     "iron-rod": {
       "slug": "iron-rod",
@@ -662,7 +700,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492887/Items%20%7C%20FICSIT%20DB/iron-rod_rqltxd.png"
     },
     "screw": {
       "slug": "screw",
@@ -676,7 +715,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492899/Items%20%7C%20FICSIT%20DB/screw_hehcpe.png"
     },
     "blue-power-slug": {
       "slug": "blue-power-slug",
@@ -690,7 +730,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492876/Items%20%7C%20FICSIT%20DB/blue-power-slug_nbqtu8.png"
     },
     "yellow-power-slug": {
       "slug": "yellow-power-slug",
@@ -704,7 +745,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492872/Items%20%7C%20FICSIT%20DB/yellow-power-slug_nyhprz.png"
     },
     "purple-power-slug": {
       "slug": "purple-power-slug",
@@ -718,7 +760,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492896/Items%20%7C%20FICSIT%20DB/purple-power-slug_gbu1ii.png"
     },
     "packaged-turbofuel": {
       "slug": "packaged-turbofuel",
@@ -734,7 +777,8 @@
       "meta": {
         "energyValue": 2000
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492894/Items%20%7C%20FICSIT%20DB/packaged-turbofuel_elque9.png"
     },
     "iodine-infused-filter": {
       "slug": "iodine-infused-filter",
@@ -748,7 +792,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492886/Items%20%7C%20FICSIT%20DB/iodine-infused-filter_y03rlo.png"
     },
     "cable": {
       "slug": "cable",
@@ -762,7 +807,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492877/Items%20%7C%20FICSIT%20DB/cable_u9aklm.png"
     },
     "power-shard": {
       "slug": "power-shard",
@@ -776,7 +822,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492896/Items%20%7C%20FICSIT%20DB/power-shard_bty5zo.png"
     },
     "color-cartridge": {
       "slug": "color-cartridge",
@@ -792,7 +839,8 @@
       "meta": {
         "energyValue": 900
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492878/Items%20%7C%20FICSIT%20DB/color-cartridge_erd7oz.png"
     },
     "hub-parts": {
       "slug": "hub-parts",
@@ -806,7 +854,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492887/Items%20%7C%20FICSIT%20DB/hub-parts_b7k4hs.png"
     },
     "reinforced-iron-plate": {
       "slug": "reinforced-iron-plate",
@@ -820,7 +869,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492898/Items%20%7C%20FICSIT%20DB/reinforced-iron-plate_ctmc1p.png"
     },
     "copper-ingot": {
       "slug": "copper-ingot",
@@ -834,7 +884,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492879/Items%20%7C%20FICSIT%20DB/copper-ingot_wmspar.png"
     },
     "fused-modular-frame": {
       "slug": "fused-modular-frame",
@@ -848,7 +899,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492883/Items%20%7C%20FICSIT%20DB/fused-modular-frame_uarnam.png"
     },
     "circuit-board": {
       "slug": "circuit-board",
@@ -862,7 +914,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492878/Items%20%7C%20FICSIT%20DB/circuit-board_h6ud1w.png"
     },
     "copper-sheet": {
       "slug": "copper-sheet",
@@ -876,7 +929,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492880/Items%20%7C%20FICSIT%20DB/copper-sheet_loxnqs.png"
     },
     "crystal-oscillator": {
       "slug": "crystal-oscillator",
@@ -890,7 +944,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492881/Items%20%7C%20FICSIT%20DB/crystal-oscillator_hrk8ux.png"
     },
     "smart-plating": {
       "slug": "smart-plating",
@@ -904,7 +959,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492899/Items%20%7C%20FICSIT%20DB/smart-plating_rzuoz0.png"
     },
     "versatile-framework": {
       "slug": "versatile-framework",
@@ -918,7 +974,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492871/Items%20%7C%20FICSIT%20DB/versatile-framework_uvayyo.png"
     },
     "automated-wiring": {
       "slug": "automated-wiring",
@@ -932,7 +989,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492874/Items%20%7C%20FICSIT%20DB/automated-wiring_gkq3ow.png"
     },
     "modular-engine": {
       "slug": "modular-engine",
@@ -946,7 +1004,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492889/Items%20%7C%20FICSIT%20DB/modular-engine_zrawjg.png"
     },
     "packaged-water": {
       "slug": "packaged-water",
@@ -960,7 +1019,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492893/Items%20%7C%20FICSIT%20DB/packaged-water_hugmlz.png"
     },
     "organic-data-capsule": {
       "slug": "organic-data-capsule",
@@ -974,7 +1034,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492892/Items%20%7C%20FICSIT%20DB/organic-data-capsule_xhltv9.png"
     },
     "high-speed-connector": {
       "slug": "high-speed-connector",
@@ -988,7 +1049,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492885/Items%20%7C%20FICSIT%20DB/high-speed-connector_bzhxpg.png"
     },
     "motor": {
       "slug": "motor",
@@ -1002,7 +1064,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492889/Items%20%7C%20FICSIT%20DB/motor_lws2ub.png"
     },
     "adaptive-control-unit": {
       "slug": "adaptive-control-unit",
@@ -1016,7 +1079,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492870/Items%20%7C%20FICSIT%20DB/adaptive-control-unit_niy2pn.png"
     },
     "magnetic-field-generator": {
       "slug": "magnetic-field-generator",
@@ -1030,7 +1094,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492888/Items%20%7C%20FICSIT%20DB/magnetic-field-generator_tj6idv.png"
     },
     "assembly-director-system": {
       "slug": "assembly-director-system",
@@ -1044,7 +1109,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492874/Items%20%7C%20FICSIT%20DB/assembly-director-system_vwyegf.png"
     },
     "thermal-propulsion-rocket": {
       "slug": "thermal-propulsion-rocket",
@@ -1058,7 +1124,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492870/Items%20%7C%20FICSIT%20DB/thermal-propulsion-rocket_dnmshg.png"
     },
     "nuclear-pasta": {
       "slug": "nuclear-pasta",
@@ -1072,7 +1139,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492891/Items%20%7C%20FICSIT%20DB/nuclear-pasta_bmtiv2.png"
     },
     "iron-ingot": {
       "slug": "iron-ingot",
@@ -1086,7 +1154,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492886/Items%20%7C%20FICSIT%20DB/iron-ingot_l9txri.png"
     },
     "rotor": {
       "slug": "rotor",
@@ -1100,7 +1169,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492898/Items%20%7C%20FICSIT%20DB/rotor_pv1a7p.png"
     },
     "rubber": {
       "slug": "rubber",
@@ -1114,7 +1184,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492898/Items%20%7C%20FICSIT%20DB/rubber_j9d9tf.png"
     },
     "encased-industrial-beam": {
       "slug": "encased-industrial-beam",
@@ -1128,7 +1199,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492880/Items%20%7C%20FICSIT%20DB/encased-industrial-beam_s8qbkt.png"
     },
     "steel-pipe": {
       "slug": "steel-pipe",
@@ -1142,7 +1214,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492900/Items%20%7C%20FICSIT%20DB/steel-pipe_zcaynh.png"
     },
     "fuel": {
       "slug": "fuel",
@@ -1163,7 +1236,8 @@
         },
         "energyValue": 0.75
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492885/Items%20%7C%20FICSIT%20DB/fuel_z3nfp8.png"
     },
     "polymer-resin": {
       "slug": "polymer-resin",
@@ -1177,7 +1251,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492896/Items%20%7C%20FICSIT%20DB/polymer-resin_qw2zzg.png"
     },
     "heavy-oil-residue": {
       "slug": "heavy-oil-residue",
@@ -1198,7 +1273,8 @@
         },
         "energyValue": 0.4
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492887/Items%20%7C%20FICSIT%20DB/heavy-oil-residue_zniauf.png"
     },
     "petroleum-coke": {
       "slug": "petroleum-coke",
@@ -1214,7 +1290,8 @@
       "meta": {
         "energyValue": 180
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492894/Items%20%7C%20FICSIT%20DB/petroleum-coke_qfx2za.png"
     },
     "modular-frame": {
       "slug": "modular-frame",
@@ -1228,7 +1305,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492891/Items%20%7C%20FICSIT%20DB/modular-frame_ph3ssj.png"
     },
     "empty-canister": {
       "slug": "empty-canister",
@@ -1242,7 +1320,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492881/Items%20%7C%20FICSIT%20DB/empty-canister_ydva35.png"
     },
     "heavy-modular-frame": {
       "slug": "heavy-modular-frame",
@@ -1256,7 +1335,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492884/Items%20%7C%20FICSIT%20DB/heavy-modular-frame_zyxilc.png"
     },
     "packaged-oil": {
       "slug": "packaged-oil",
@@ -1272,7 +1352,8 @@
       "meta": {
         "energyValue": 320
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492893/Items%20%7C%20FICSIT%20DB/packaged-oil_p38ry3.png"
     },
     "packaged-heavy-oil-residue": {
       "slug": "packaged-heavy-oil-residue",
@@ -1288,7 +1369,8 @@
       "meta": {
         "energyValue": 400
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492892/Items%20%7C%20FICSIT%20DB/packaged-heavy-oil-residue_z1vrwi.png"
     },
     "steel-ingot": {
       "slug": "steel-ingot",
@@ -1302,7 +1384,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492900/Items%20%7C%20FICSIT%20DB/steel-ingot_b2c8b0.png"
     },
     "alumina-solution": {
       "slug": "alumina-solution",
@@ -1322,7 +1405,8 @@
           "b": 193
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492874/Items%20%7C%20FICSIT%20DB/alumina-solution_ooioy3.png"
     },
     "aluminum-scrap": {
       "slug": "aluminum-scrap",
@@ -1336,7 +1420,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492874/Items%20%7C%20FICSIT%20DB/aluminum-scrap_ptjlev.png"
     },
     "sulfuric-acid": {
       "slug": "sulfuric-acid",
@@ -1356,7 +1441,8 @@
           "b": 0
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492870/Items%20%7C%20FICSIT%20DB/sulfuric-acid_c9aias.png"
     },
     "encased-uranium-cell": {
       "slug": "encased-uranium-cell",
@@ -1372,7 +1458,8 @@
       "meta": {
         "radioactiveDecay": 0.5
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492881/Items%20%7C%20FICSIT%20DB/encased-uranium-cell_fmjvzo.png"
     },
     "heat-sink": {
       "slug": "heat-sink",
@@ -1386,7 +1473,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492886/Items%20%7C%20FICSIT%20DB/heat-sink_zz89yu.png"
     },
     "cooling-system": {
       "slug": "cooling-system",
@@ -1400,7 +1488,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492879/Items%20%7C%20FICSIT%20DB/cooling-system_io6ve0.png"
     },
     "nitric-acid": {
       "slug": "nitric-acid",
@@ -1420,7 +1509,8 @@
           "b": 162
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492889/Items%20%7C%20FICSIT%20DB/nitric-acid_dkcxi0.png"
     },
     "aluminum-casing": {
       "slug": "aluminum-casing",
@@ -1434,7 +1524,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492873/Items%20%7C%20FICSIT%20DB/aluminum-casing_mv27i0.png"
     },
     "radio-control-unit": {
       "slug": "radio-control-unit",
@@ -1448,7 +1539,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492897/Items%20%7C%20FICSIT%20DB/radio-control-unit_jsrfk1.png"
     },
     "computer": {
       "slug": "computer",
@@ -1462,7 +1554,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492878/Items%20%7C%20FICSIT%20DB/computer_g4aquz.png"
     },
     "quartz-crystal": {
       "slug": "quartz-crystal",
@@ -1476,7 +1569,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492898/Items%20%7C%20FICSIT%20DB/quartz-crystal_tmdx4v.png"
     },
     "caterium-ingot": {
       "slug": "caterium-ingot",
@@ -1490,7 +1584,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492878/Items%20%7C%20FICSIT%20DB/caterium-ingot_hqaxxc.png"
     },
     "stator": {
       "slug": "stator",
@@ -1504,7 +1599,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492900/Items%20%7C%20FICSIT%20DB/stator_pdgfn5.png"
     },
     "ai-limiter": {
       "slug": "ai-limiter",
@@ -1518,7 +1614,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492868/Items%20%7C%20FICSIT%20DB/ai-limiter_u2ucpp.png"
     },
     "quickwire": {
       "slug": "quickwire",
@@ -1532,7 +1629,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492897/Items%20%7C%20FICSIT%20DB/quickwire_kpzpav.png"
     },
     "compacted-coal": {
       "slug": "compacted-coal",
@@ -1548,7 +1646,8 @@
       "meta": {
         "energyValue": 630
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492878/Items%20%7C%20FICSIT%20DB/compacted-coal_gqmtv9.png"
     },
     "turbofuel": {
       "slug": "turbofuel",
@@ -1569,7 +1668,8 @@
         },
         "energyValue": 2
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492869/Items%20%7C%20FICSIT%20DB/turbofuel_bxiynr.png"
     },
     "supercomputer": {
       "slug": "supercomputer",
@@ -1583,7 +1683,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492869/Items%20%7C%20FICSIT%20DB/supercomputer_csj72a.png"
     },
     "empty-fluid-tank": {
       "slug": "empty-fluid-tank",
@@ -1597,7 +1698,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492880/Items%20%7C%20FICSIT%20DB/empty-fluid-tank_epb5fx.png"
     },
     "electromagnetic-control-rod": {
       "slug": "electromagnetic-control-rod",
@@ -1611,7 +1713,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492880/Items%20%7C%20FICSIT%20DB/electromagnetic-control-rod_r8qtqo.png"
     },
     "pressure-conversion-cube": {
       "slug": "pressure-conversion-cube",
@@ -1625,7 +1728,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492897/Items%20%7C%20FICSIT%20DB/pressure-conversion-cube_qpzpip.png"
     },
     "turbo-motor": {
       "slug": "turbo-motor",
@@ -1639,7 +1743,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492870/Items%20%7C%20FICSIT%20DB/turbo-motor_mfpe0i.png"
     },
     "copper-powder": {
       "slug": "copper-powder",
@@ -1653,7 +1758,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492880/Items%20%7C%20FICSIT%20DB/copper-powder_olckbl.png"
     },
     "black-powder": {
       "slug": "black-powder",
@@ -1667,7 +1773,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492876/Items%20%7C%20FICSIT%20DB/black-powder_qgevnj.png"
     },
     "alien-protein": {
       "slug": "alien-protein",
@@ -1681,7 +1788,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492873/Items%20%7C%20FICSIT%20DB/alien-protein_wglqwz.png"
     },
     "smokeless-powder": {
       "slug": "smokeless-powder",
@@ -1695,7 +1803,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492899/Items%20%7C%20FICSIT%20DB/smokeless-powder_znsznv.png"
     },
     "hog-remains": {
       "slug": "hog-remains",
@@ -1711,7 +1820,8 @@
       "meta": {
         "energyValue": 250
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492885/Items%20%7C%20FICSIT%20DB/hog-remains_xfegw1.png"
     },
     "plasma-spitter-remains": {
       "slug": "plasma-spitter-remains",
@@ -1727,7 +1837,8 @@
       "meta": {
         "energyValue": 250
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492894/Items%20%7C%20FICSIT%20DB/plasma-spitter-remains_ecguhi.png"
     },
     "flower-petals": {
       "slug": "flower-petals",
@@ -1743,7 +1854,8 @@
       "meta": {
         "energyValue": 100
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492881/Items%20%7C%20FICSIT%20DB/flower-petals_fpka92.png"
     },
     "leaves": {
       "slug": "leaves",
@@ -1759,7 +1871,8 @@
       "meta": {
         "energyValue": 15
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492888/Items%20%7C%20FICSIT%20DB/leaves_pfqucs.png"
     },
     "mycelia": {
       "slug": "mycelia",
@@ -1775,7 +1888,8 @@
       "meta": {
         "energyValue": 20
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492890/Items%20%7C%20FICSIT%20DB/mycelia_qayupd.png"
     },
     "wood": {
       "slug": "wood",
@@ -1791,7 +1905,8 @@
       "meta": {
         "energyValue": 100
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492871/Items%20%7C%20FICSIT%20DB/wood_yoiwif.png"
     },
     "solid-biofuel": {
       "slug": "solid-biofuel",
@@ -1807,7 +1922,8 @@
       "meta": {
         "energyValue": 450
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492901/Items%20%7C%20FICSIT%20DB/solid-biofuel_voqmrk.png"
     },
     "packaged-liquid-biofuel": {
       "slug": "packaged-liquid-biofuel",
@@ -1823,7 +1939,8 @@
       "meta": {
         "energyValue": 750
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492893/Items%20%7C%20FICSIT%20DB/packaged-liquid-biofuel_ff7mmq.png"
     },
     "biomass": {
       "slug": "biomass",
@@ -1839,7 +1956,8 @@
       "meta": {
         "energyValue": 180
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492875/Items%20%7C%20FICSIT%20DB/biomass_t46zoh.png"
     },
     "liquid-biofuel": {
       "slug": "liquid-biofuel",
@@ -1860,7 +1978,8 @@
         },
         "energyValue": 0.75
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492890/Items%20%7C%20FICSIT%20DB/liquid-biofuel_ey0kqd.png"
     },
     "packaged-alumina-solution": {
       "slug": "packaged-alumina-solution",
@@ -1874,7 +1993,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492891/Items%20%7C%20FICSIT%20DB/packaged-alumina-solution_vdadkn.png"
     },
     "packaged-sulfuric-acid": {
       "slug": "packaged-sulfuric-acid",
@@ -1888,7 +2008,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492894/Items%20%7C%20FICSIT%20DB/packaged-sulfuric-acid_a12bmt.png"
     },
     "packaged-nitrogen-gas": {
       "slug": "packaged-nitrogen-gas",
@@ -1902,7 +2023,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492893/Items%20%7C%20FICSIT%20DB/packaged-nitrogen-gas_bdqv2a.png"
     },
     "packaged-nitric-acid": {
       "slug": "packaged-nitric-acid",
@@ -1916,7 +2038,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492893/Items%20%7C%20FICSIT%20DB/packaged-nitric-acid_jekzlw.png"
     },
     "fabric": {
       "slug": "fabric",
@@ -1932,7 +2055,8 @@
       "meta": {
         "energyValue": 15
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492882/Items%20%7C%20FICSIT%20DB/fabric_kx1yz3.png"
     },
     "hatcher-remains": {
       "slug": "hatcher-remains",
@@ -1948,7 +2072,8 @@
       "meta": {
         "energyValue": 250
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492884/Items%20%7C%20FICSIT%20DB/hatcher-remains_qu6hfz.png"
     },
     "stinger-remains": {
       "slug": "stinger-remains",
@@ -1964,7 +2089,8 @@
       "meta": {
         "energyValue": 250
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492900/Items%20%7C%20FICSIT%20DB/stinger-remains_ydxqar.png"
     },
     "uranium-fuel-rod": {
       "slug": "uranium-fuel-rod",
@@ -1981,7 +2107,8 @@
         "energyValue": 750000,
         "radioactiveDecay": 50
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492871/Items%20%7C%20FICSIT%20DB/uranium-fuel-rod_jgxjfc.png"
     },
     "plutonium-fuel-rod": {
       "slug": "plutonium-fuel-rod",
@@ -1998,7 +2125,8 @@
         "energyValue": 1500000,
         "radioactiveDecay": 250
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492895/Items%20%7C%20FICSIT%20DB/plutonium-fuel-rod_xayylh.png"
     },
     "sulfur": {
       "slug": "sulfur",
@@ -2012,7 +2140,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492901/Items%20%7C%20FICSIT%20DB/sulfur_nmrcta.png"
     },
     "coal": {
       "slug": "coal",
@@ -2028,7 +2157,8 @@
       "meta": {
         "energyValue": 300
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492877/Items%20%7C%20FICSIT%20DB/coal_u87oh5.png"
     },
     "copper-ore": {
       "slug": "copper-ore",
@@ -2042,7 +2172,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492880/Items%20%7C%20FICSIT%20DB/copper-ore_qltxow.png"
     },
     "caterium-ore": {
       "slug": "caterium-ore",
@@ -2056,7 +2187,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492877/Items%20%7C%20FICSIT%20DB/caterium-ore_rjql81.png"
     },
     "iron-ore": {
       "slug": "iron-ore",
@@ -2070,7 +2202,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492887/Items%20%7C%20FICSIT%20DB/iron-ore_bukoi1.png"
     },
     "raw-quartz": {
       "slug": "raw-quartz",
@@ -2084,7 +2217,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492897/Items%20%7C%20FICSIT%20DB/raw-quartz_doa66e.png"
     },
     "limestone": {
       "slug": "limestone",
@@ -2098,7 +2232,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492889/Items%20%7C%20FICSIT%20DB/limestone_dagdoe.png"
     },
     "water": {
       "slug": "water",
@@ -2118,7 +2253,8 @@
           "b": 212
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492873/Items%20%7C%20FICSIT%20DB/water_ffq4bc.png"
     },
     "crude-oil": {
       "slug": "crude-oil",
@@ -2139,7 +2275,8 @@
         },
         "energyValue": 0.32
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492883/Items%20%7C%20FICSIT%20DB/crude-oil_gnzvig.png"
     },
     "bauxite": {
       "slug": "bauxite",
@@ -2153,7 +2290,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492876/Items%20%7C%20FICSIT%20DB/bauxite_lhmhxu.png"
     },
     "uranium": {
       "slug": "uranium",
@@ -2169,7 +2307,8 @@
       "meta": {
         "radioactiveDecay": 15
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492870/Items%20%7C%20FICSIT%20DB/uranium_ccf6u2.png"
     },
     "nitrogen-gas": {
       "slug": "nitrogen-gas",
@@ -2189,7 +2328,8 @@
           "b": 89
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492891/Items%20%7C%20FICSIT%20DB/nitrogen-gas_x5bcyf.png"
     },
     "turbo-rifle-ammo": {
       "slug": "turbo-rifle-ammo",
@@ -2203,7 +2343,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492870/Items%20%7C%20FICSIT%20DB/turbo-rifle-ammo_kfqitm.png"
     },
     "rifle-ammo": {
       "slug": "rifle-ammo",
@@ -2217,7 +2358,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492898/Items%20%7C%20FICSIT%20DB/rifle-ammo_r5aeku.png"
     },
     "explosive-rebar": {
       "slug": "explosive-rebar",
@@ -2231,7 +2373,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492882/Items%20%7C%20FICSIT%20DB/explosive-rebar_o4yslb.png"
     },
     "stun-rebar": {
       "slug": "stun-rebar",
@@ -2245,7 +2388,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492901/Items%20%7C%20FICSIT%20DB/stun-rebar_anuenm.png"
     },
     "iron-rebar": {
       "slug": "iron-rebar",
@@ -2259,7 +2403,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492887/Items%20%7C%20FICSIT%20DB/iron-rebar_ujgmqj.png"
     },
     "homing-rifle-ammo": {
       "slug": "homing-rifle-ammo",
@@ -2273,7 +2418,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492885/Items%20%7C%20FICSIT%20DB/homing-rifle-ammo_z7xiii.png"
     },
     "cluster-nobelisk": {
       "slug": "cluster-nobelisk",
@@ -2287,7 +2433,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492877/Items%20%7C%20FICSIT%20DB/cluster-nobelisk_mfuyc4.png"
     },
     "nobelisk": {
       "slug": "nobelisk",
@@ -2301,7 +2448,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492891/Items%20%7C%20FICSIT%20DB/nobelisk_kc6mho.png"
     },
     "gas-nobelisk": {
       "slug": "gas-nobelisk",
@@ -2315,7 +2463,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492883/Items%20%7C%20FICSIT%20DB/gas-nobelisk_pssenv.png"
     },
     "nuke-nobelisk": {
       "slug": "nuke-nobelisk",
@@ -2329,7 +2478,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492891/Items%20%7C%20FICSIT%20DB/nuke-nobelisk_kguej9.png"
     },
     "pulse-nobelisk": {
       "slug": "pulse-nobelisk",
@@ -2343,7 +2493,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492896/Items%20%7C%20FICSIT%20DB/pulse-nobelisk_pb8y3d.png"
     },
     "shatter-rebar": {
       "slug": "shatter-rebar",
@@ -2357,7 +2508,8 @@
       "isRadioactive": false,
       "isEquipment": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1679492900/Items%20%7C%20FICSIT%20DB/shatter-rebar_zo08xw.png"
     }
   },
   "resources": {
@@ -2597,7 +2749,8 @@
           "height": 3
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654305/piidwvoopezzxerutbfq.png"
     },
     "equipment-workshop": {
       "slug": "equipment-workshop",
@@ -2621,7 +2774,8 @@
           "height": 5
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654308/jdelnvn6nmxbwluktpva.png"
     },
     "conveyor-wall-mount": {
       "slug": "conveyor-wall-mount",
@@ -2639,7 +2793,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654309/agmiujfo2ebq7xyzqboa.png"
     },
     "hypertube-wall-hole": {
       "slug": "hypertube-wall-hole",
@@ -2657,7 +2812,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654310/jjqglz9r18usetrb71op.png"
     },
     "hypertube-wall-support": {
       "slug": "hypertube-wall-support",
@@ -2675,7 +2831,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654313/ada29s3a3fsivxsk87mu.png"
     },
     "pipeline-wall-support": {
       "slug": "pipeline-wall-support",
@@ -2693,7 +2850,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654315/p3ik7xtthqasllfol09f.png"
     },
     "pipeline-wall-hole": {
       "slug": "pipeline-wall-hole",
@@ -2711,7 +2869,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654317/th734ogl2ramrt1xveme.png"
     },
     "conveyor-merger": {
       "slug": "conveyor-merger",
@@ -2729,7 +2888,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654318/txzmg3p5tyr4u7wdnguz.png"
     },
     "conveyor-splitter": {
       "slug": "conveyor-splitter",
@@ -2747,7 +2907,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654320/o1m2awqehcdsdcatsyy7.png"
     },
     "power-switch": {
       "slug": "power-switch",
@@ -2765,7 +2926,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654322/m65yufxxwpuwzy21g9gf.png"
     },
     "conveyor-belt-mk-1": {
       "slug": "conveyor-belt-mk-1",
@@ -2785,7 +2947,8 @@
       "meta": {
         "beltSpeed": 60
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654323/qi3m3actpn1d1pv8mciv.png"
     },
     "conveyor-belt-mk-5": {
       "slug": "conveyor-belt-mk-5",
@@ -2805,7 +2968,8 @@
       "meta": {
         "beltSpeed": 780
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654325/rxodia7elcr8fpovhtdr.png"
     },
     "conveyor-belt-mk-2": {
       "slug": "conveyor-belt-mk-2",
@@ -2825,7 +2989,8 @@
       "meta": {
         "beltSpeed": 120
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654326/pqdzu1j8hgcv4w8rsxp7.png"
     },
     "conveyor-belt-mk-3": {
       "slug": "conveyor-belt-mk-3",
@@ -2845,7 +3010,8 @@
       "meta": {
         "beltSpeed": 270
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654328/xxrjufsjqfu9mrbmxvpx.png"
     },
     "conveyor-belt-mk-4": {
       "slug": "conveyor-belt-mk-4",
@@ -2865,7 +3031,8 @@
       "meta": {
         "beltSpeed": 480
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654329/gjjbnssvimws3jyav6mf.png"
     },
     "conveyor-lift-mk-1": {
       "slug": "conveyor-lift-mk-1",
@@ -2885,7 +3052,8 @@
       "meta": {
         "beltSpeed": 60
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654331/h8ho6gjpibhdwsqlwqo4.png"
     },
     "conveyor-lift-mk-5": {
       "slug": "conveyor-lift-mk-5",
@@ -2905,7 +3073,8 @@
       "meta": {
         "beltSpeed": 780
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654333/w1bnwjqfdzdyxhf0kyyk.png"
     },
     "conveyor-lift-mk-2": {
       "slug": "conveyor-lift-mk-2",
@@ -2925,7 +3094,8 @@
       "meta": {
         "beltSpeed": 120
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654334/snsi9gh8twneqxuzyz3m.png"
     },
     "conveyor-lift-mk-3": {
       "slug": "conveyor-lift-mk-3",
@@ -2945,7 +3115,8 @@
       "meta": {
         "beltSpeed": 270
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654336/bcpoejeacriq4wdjfuab.png"
     },
     "conveyor-lift-mk-4": {
       "slug": "conveyor-lift-mk-4",
@@ -2965,7 +3136,8 @@
       "meta": {
         "beltSpeed": 480
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654338/xngavqe2qrhzq0akwm4u.png"
     },
     "truck-station": {
       "slug": "truck-station",
@@ -2988,7 +3160,8 @@
         },
         "inventorySize": 48
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654339/vxziypwsehaz3aruop5q.png"
     },
     "drone-port": {
       "slug": "drone-port",
@@ -3014,7 +3187,8 @@
         },
         "inventorySize": 18
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654341/mkc7bk1yqxrucflixbck.png"
     },
     "lookout-tower": {
       "slug": "lookout-tower",
@@ -3038,7 +3212,8 @@
           "height": 24
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654342/anxz8w0nm8busnhlfhdk.png"
     },
     "u-jelly-landing-pad": {
       "slug": "u-jelly-landing-pad",
@@ -3060,7 +3235,8 @@
           "consumption": 5
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654344/xulgdems8dxisssgetay.png"
     },
     "flood-light-tower": {
       "slug": "flood-light-tower",
@@ -3082,7 +3258,8 @@
           "consumption": 6
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654345/zikgjje6jyf4t4p8ymgl.png"
     },
     "wall-mounted-flood-light": {
       "slug": "wall-mounted-flood-light",
@@ -3104,7 +3281,8 @@
           "consumption": 6
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654347/ivhmdi6exat9qjhh6str.png"
     },
     "foundation-2m": {
       "slug": "foundation-2m",
@@ -3122,7 +3300,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654348/q75b3ganzngbrezwpxi4.png"
     },
     "foundation-4m": {
       "slug": "foundation-4m",
@@ -3140,7 +3319,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654350/zsjqi0q6rpayce9awvcw.png"
     },
     "down-corner-ramp-1m": {
       "slug": "down-corner-ramp-1m",
@@ -3158,7 +3338,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654352/qun89ncsrrvqctcd56d8.png"
     },
     "up-corner-ramp-1m": {
       "slug": "up-corner-ramp-1m",
@@ -3176,7 +3357,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654353/xmidycdzqoacyetsay2b.png"
     },
     "down-corner-ramp-2m": {
       "slug": "down-corner-ramp-2m",
@@ -3194,7 +3376,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654355/cpmbxekisgjojoraws49.png"
     },
     "up-corner-ramp-2m": {
       "slug": "up-corner-ramp-2m",
@@ -3212,7 +3395,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654357/nbylqt97ztmwcqk7n9tf.png"
     },
     "down-corner-ramp-4m": {
       "slug": "down-corner-ramp-4m",
@@ -3230,7 +3414,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654359/hdegcgcsdjesrnudnhr6.png"
     },
     "up-corner-ramp-4m": {
       "slug": "up-corner-ramp-4m",
@@ -3248,7 +3433,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654361/jgty7xnad5c3mu3bit7s.png"
     },
     "inv-up-corner-1m": {
       "slug": "inv-up-corner-1m",
@@ -3266,7 +3452,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654362/f0s5tdwnxe2rcatvs4t3.png"
     },
     "inv-down-corner-1m": {
       "slug": "inv-down-corner-1m",
@@ -3284,7 +3471,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654365/elzrngb9kxoxjqilznff.png"
     },
     "inv-up-corner-2m": {
       "slug": "inv-up-corner-2m",
@@ -3302,7 +3490,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654366/pokg26ffo5mghzc4acte.png"
     },
     "inv-down-corner-2m": {
       "slug": "inv-down-corner-2m",
@@ -3320,7 +3509,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654368/zgawxnyi3ehpjptbl9z9.png"
     },
     "inv-up-corner-4m": {
       "slug": "inv-up-corner-4m",
@@ -3338,7 +3528,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654370/jimiigugwd3ruug3vhbp.png"
     },
     "inv-down-corner-4m": {
       "slug": "inv-down-corner-4m",
@@ -3356,7 +3547,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654371/bzlccgs7hda5cnr1uo5u.png"
     },
     "foundation-1m": {
       "slug": "foundation-1m",
@@ -3374,7 +3566,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654373/ktncxcsful71i7lyfykq.png"
     },
     "frame-floor": {
       "slug": "frame-floor",
@@ -3392,7 +3585,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654374/jyqgvbddxuxscakygg5a.png"
     },
     "frame-foundation": {
       "slug": "frame-foundation",
@@ -3410,7 +3604,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654376/g6pssnmzr3y5baae4jsp.png"
     },
     "glass-frame-foundation": {
       "slug": "glass-frame-foundation",
@@ -3428,7 +3623,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654377/rk7tj6yx9g6htdyv6aas.png"
     },
     "quarter-pipe": {
       "slug": "quarter-pipe",
@@ -3446,7 +3642,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654379/xycyzdmnoqf9klhnde4k.png"
     },
     "inverted-quarter-pipe": {
       "slug": "inverted-quarter-pipe",
@@ -3464,7 +3661,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654380/tx3yy2pxjhuyrxba09dy.png"
     },
     "inner-corner-quarter-pipe": {
       "slug": "inner-corner-quarter-pipe",
@@ -3482,7 +3680,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654383/nqyo3qupybujapbavd1s.png"
     },
     "inverted-inner-corner-quarter-pipe": {
       "slug": "inverted-inner-corner-quarter-pipe",
@@ -3500,7 +3699,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654384/simeijpkzotf0bcgip4r.png"
     },
     "outer-corner-quarter-pipe": {
       "slug": "outer-corner-quarter-pipe",
@@ -3518,7 +3718,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654385/cvgu9ijxprzry1xufdzq.png"
     },
     "inverted-outer-corner-quarter-pipe": {
       "slug": "inverted-outer-corner-quarter-pipe",
@@ -3536,7 +3737,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654387/rbiizowj7nbotoex6f3h.png"
     },
     "resource-well-pressurizer": {
       "slug": "resource-well-pressurizer",
@@ -3580,7 +3782,8 @@
           "height": 23
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654388/yu1xo8xro6bwrmac04oh.png"
     },
     "resource-well-extractor": {
       "slug": "resource-well-extractor",
@@ -3620,7 +3823,8 @@
           "height": 5
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654389/vr4rs4jvi3maqej8jdei.png"
     },
     "biomass-burner": {
       "slug": "biomass-burner",
@@ -3688,7 +3892,7 @@
             },
             {
               "fuel": {
-                "itemClass":"packaged-liquid-biofuel",
+                "itemClass": "packaged-liquid-biofuel",
                 "rate": 2.4
               }
             },
@@ -3730,7 +3934,8 @@
           "height": 7
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654392/hctdutffzmbsqrhos9kd.png"
     },
     "coal-generator": {
       "slug": "coal-generator",
@@ -3792,7 +3997,8 @@
           "height": 36
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654393/fb4gnbx0qqoj3jj9rtnw.png"
     },
     "fuel-generator": {
       "slug": "fuel-generator",
@@ -3842,7 +4048,8 @@
           "height": 27
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654395/cjlmpddtfmrc0xoosvmc.png"
     },
     "geothermal-generator": {
       "slug": "geothermal-generator",
@@ -3875,7 +4082,8 @@
           "height": 34
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654396/f06xwis7ddvat6nmjhf3.png"
     },
     "nuclear-power-plant": {
       "slug": "nuclear-power-plant",
@@ -3935,7 +4143,8 @@
           "height": 49
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654398/rmfrafx8xhelmsbduozb.png"
     },
     "jump-pad": {
       "slug": "jump-pad",
@@ -3957,7 +4166,8 @@
           "consumption": 5
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654399/zsauuoksvi3vbdxgu7yf.png"
     },
     "ladder": {
       "slug": "ladder",
@@ -3975,7 +4185,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654401/vydmhjlral9xnya0brou.png"
     },
     "ceiling-light": {
       "slug": "ceiling-light",
@@ -3997,7 +4208,8 @@
           "consumption": 2
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654402/flopbt4kxpdzoetvyfeh.png"
     },
     "street-light": {
       "slug": "street-light",
@@ -4019,7 +4231,8 @@
           "consumption": 1
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654403/bjw8m0ar3ocnyas4ym96.png"
     },
     "lights-control-panel": {
       "slug": "lights-control-panel",
@@ -4037,7 +4250,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654405/uxtitm9xx7bvc1bk3xfd.png"
     },
     "mam": {
       "slug": "mam",
@@ -4061,7 +4275,8 @@
           "height": 6
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654407/rzxeq1ddzqr8zrrhhiik.png"
     },
     "constructor": {
       "slug": "constructor",
@@ -4091,7 +4306,8 @@
           "height": 8
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654409/qwikp78mkxpuzqwjddcs.png"
     },
     "smelter": {
       "slug": "smelter",
@@ -4121,7 +4337,8 @@
           "height": 9
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654411/f7v9jbgfqsrthuwvpv8s.png"
     },
     "foundry": {
       "slug": "foundry",
@@ -4151,7 +4368,8 @@
           "height": 9
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654413/ajabitdkjpzcowwqnv77.png"
     },
     "refinery": {
       "slug": "refinery",
@@ -4181,7 +4399,8 @@
           "height": 31
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654415/tqptvvo6zujvg4cphhuh.png"
     },
     "assembler": {
       "slug": "assembler",
@@ -4211,7 +4430,8 @@
           "height": 11
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654417/l4ljujefvuzywouwttkb.png"
     },
     "packager": {
       "slug": "packager",
@@ -4241,7 +4461,8 @@
           "height": 12
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654418/rkrtlphdwt9np0fosrdf.png"
     },
     "blender": {
       "slug": "blender",
@@ -4271,7 +4492,8 @@
           "height": 15
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654420/nnv9ecta0uzpuxugrqeo.png"
     },
     "manufacturer": {
       "slug": "manufacturer",
@@ -4301,7 +4523,8 @@
           "height": 12
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654422/msac9zxa1fgav2zbqbac.png"
     },
     "particle-accelerator": {
       "slug": "particle-accelerator",
@@ -4336,7 +4559,8 @@
           "height": 32
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654424/x0grebofjvk2nelunmgk.png"
     },
     "hypertube": {
       "slug": "hypertube",
@@ -4354,7 +4578,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654425/h6otrag5gbqu75sxzchh.png"
     },
     "fluid-buffer": {
       "slug": "fluid-buffer",
@@ -4379,7 +4604,8 @@
         },
         "fluidStorageCapacity": 400
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654428/tohu5w0hx4hhteoqbmym.png"
     },
     "industrial-fluid-buffer": {
       "slug": "industrial-fluid-buffer",
@@ -4404,7 +4630,8 @@
         },
         "fluidStorageCapacity": 2400
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654430/oqwzkujt8mavi4a7j8gk.png"
     },
     "pipeline-mk-1": {
       "slug": "pipeline-mk-1",
@@ -4424,7 +4651,8 @@
       "meta": {
         "flowLimit": 300
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654431/xrwab9rkxdxrpiqkn5b9.png"
     },
     "pipeline-mk-2": {
       "slug": "pipeline-mk-2",
@@ -4444,7 +4672,8 @@
       "meta": {
         "flowLimit": 600
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654433/hbzhziuabvv1ucksbhuv.png"
     },
     "pipeline-junction-cross": {
       "slug": "pipeline-junction-cross",
@@ -4462,7 +4691,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654435/kdytgsogqzcxfoh8vqzl.png"
     },
     "valve": {
       "slug": "valve",
@@ -4480,7 +4710,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654437/e1mpzldroqlgivyr4n8b.png"
     },
     "pipeline-pump-mk-1": {
       "slug": "pipeline-pump-mk-1",
@@ -4504,7 +4735,8 @@
         "headLift": 20,
         "headLiftMax": 22
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654440/lca8jct539thb8ortqau.png"
     },
     "pipeline-pump-mk-2": {
       "slug": "pipeline-pump-mk-2",
@@ -4528,7 +4760,8 @@
         "headLift": 50,
         "headLiftMax": 55
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654442/gb4or611eqcuuusllcow.png"
     },
     "pipeline-support": {
       "slug": "pipeline-support",
@@ -4546,7 +4779,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654443/fahbcamd019aatnfqfjv.png"
     },
     "stackable-hypertube-support": {
       "slug": "stackable-hypertube-support",
@@ -4564,7 +4798,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654444/lb9cqygzgw2cwedhwplp.png"
     },
     "hypertube-support": {
       "slug": "hypertube-support",
@@ -4582,7 +4817,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654446/dwkvertdjx77iocaolx0.png"
     },
     "stackable-pipeline-support": {
       "slug": "stackable-pipeline-support",
@@ -4600,7 +4836,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654447/agvsahxjea3unrsntqcp.png"
     },
     "conveyor-pole": {
       "slug": "conveyor-pole",
@@ -4618,7 +4855,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654448/f3bq0hjpkvetiuylm6qp.png"
     },
     "power-pole-mk-1": {
       "slug": "power-pole-mk-1",
@@ -4636,7 +4874,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654449/slcfghlzpgxzdcwbrba7.png"
     },
     "wall-outlet-mk-1": {
       "slug": "wall-outlet-mk-1",
@@ -4654,7 +4893,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654450/piqwztcaeriuldbhbix5.png"
     },
     "power-pole-mk-2": {
       "slug": "power-pole-mk-2",
@@ -4672,7 +4912,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654451/zroinz4wnkwlpuwezled.png"
     },
     "power-pole-mk-3": {
       "slug": "power-pole-mk-3",
@@ -4690,7 +4931,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654452/s2e4bux0oie5nixti0fh.png"
     },
     "double-wall-outlet-mk-1": {
       "slug": "double-wall-outlet-mk-1",
@@ -4708,7 +4950,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654454/we6qdemz4f3wudhzzr5d.png"
     },
     "double-wall-outlet-mk-2": {
       "slug": "double-wall-outlet-mk-2",
@@ -4726,7 +4969,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654456/fmeq56srd6ykqi7pryy7.png"
     },
     "wall-outlet-mk-2": {
       "slug": "wall-outlet-mk-2",
@@ -4744,7 +4988,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654457/u6imtwxlw0wzzw7lslei.png"
     },
     "double-wall-outlet-mk-3": {
       "slug": "double-wall-outlet-mk-3",
@@ -4762,7 +5007,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654459/kvllz6hmubwjw6csy0rh.png"
     },
     "wall-outlet-mk-3": {
       "slug": "wall-outlet-mk-3",
@@ -4780,7 +5026,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654460/f9o1fts4xtunywlhbfzt.png"
     },
     "power-storage": {
       "slug": "power-storage",
@@ -4805,7 +5052,8 @@
         },
         "powerStorageCapacity": 100
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654462/aonaq9j1knvlsor4kv3c.png"
     },
     "radar-tower": {
       "slug": "radar-tower",
@@ -4838,7 +5086,8 @@
           "expansionInterval": null
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654463/pcymkd3qyivz8zd1pxpj.png"
     },
     "train-station": {
       "slug": "train-station",
@@ -4865,7 +5114,8 @@
           "height": 20
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654464/tkjd3dasfimhjfhgqm2r.png"
     },
     "railway": {
       "slug": "railway",
@@ -4883,7 +5133,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654466/okeszafqrmynrhppp51a.png"
     },
     "miner-mk-1": {
       "slug": "miner-mk-1",
@@ -4931,7 +5182,8 @@
           "height": 18
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654467/gw6szxmrhewaklq3j747.png"
     },
     "oil-extractor": {
       "slug": "oil-extractor",
@@ -4971,7 +5223,8 @@
           "height": 20
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654468/cvdyvse0ehhmzesj2ojl.png"
     },
     "miner-mk-2": {
       "slug": "miner-mk-2",
@@ -5019,7 +5272,8 @@
           "height": 18
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654471/wqci7w8sfo18sm1ecyhj.png"
     },
     "miner-mk-3": {
       "slug": "miner-mk-3",
@@ -5067,7 +5321,8 @@
           "height": 18
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654472/yik4irsypmhbybuebotl.png"
     },
     "awesome-sink": {
       "slug": "awesome-sink",
@@ -5094,7 +5349,8 @@
           "height": 24
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654474/s1mepy1ybu2xfa17lidb.png"
     },
     "awesome-shop": {
       "slug": "awesome-shop",
@@ -5118,7 +5374,8 @@
           "height": 5
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654476/itmjfyfx0carkmnxpxov.png"
     },
     "space-elevator": {
       "slug": "space-elevator",
@@ -5142,7 +5399,8 @@
           "height": 118
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654478/vdnn1gnjyyrzjquqs0ka.png"
     },
     "smart-splitter": {
       "slug": "smart-splitter",
@@ -5160,7 +5418,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654479/i4rqnhji5t3upgwouyof.png"
     },
     "programmable-splitter": {
       "slug": "programmable-splitter",
@@ -5178,7 +5437,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654481/qi4bbiztfcoackbnc21m.png"
     },
     "stairs-left": {
       "slug": "stairs-left",
@@ -5196,7 +5456,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654482/fc1ll5eq02zwlervnwmd.png"
     },
     "stairs-right": {
       "slug": "stairs-right",
@@ -5214,7 +5475,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654484/lbkoyqecikvnbyb5y5zv.png"
     },
     "storage-container": {
       "slug": "storage-container",
@@ -5239,7 +5501,8 @@
         },
         "inventorySize": 24
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654485/tjnfv4eeflntlrlpkvsp.png"
     },
     "personal-storage-box": {
       "slug": "personal-storage-box",
@@ -5259,7 +5522,8 @@
       "meta": {
         "inventorySize": 25
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654494/hfneyoxfz9b46qqceaxl.png"
     },
     "industrial-storage-container": {
       "slug": "industrial-storage-container",
@@ -5284,7 +5548,8 @@
         },
         "inventorySize": 48
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654496/gqg2fehbunax33kt1qtg.png"
     },
     "hazard-storage-box": {
       "slug": "hazard-storage-box",
@@ -5304,7 +5569,8 @@
       "meta": {
         "inventorySize": 25
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654498/urec8jjerqdmc8paw8ca.png"
     },
     "medical-storage-box": {
       "slug": "medical-storage-box",
@@ -5324,7 +5590,8 @@
       "meta": {
         "inventorySize": 25
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654500/nezsmcwih6fjcjvpccv5.png"
     },
     "the-hub": {
       "slug": "the-hub",
@@ -5348,7 +5615,8 @@
           "height": 28
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654503/ab7ezkounptjqbpg4l2q.png"
     },
     "freight-platform": {
       "slug": "freight-platform",
@@ -5376,7 +5644,8 @@
         },
         "inventorySize": 48
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654505/hogqlxkmc5aqzqlldua4.png"
     },
     "fluid-freight-platform": {
       "slug": "fluid-freight-platform",
@@ -5404,7 +5673,8 @@
         },
         "inventorySize": 1
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654508/fsurlkxqekutw1zsvup4.png"
     },
     "empty-platform": {
       "slug": "empty-platform",
@@ -5428,7 +5698,8 @@
           "height": 1
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654509/rg2h3pbsshenazna4xwd.png"
     },
     "empty-platform-with-catwalk": {
       "slug": "empty-platform-with-catwalk",
@@ -5452,7 +5723,8 @@
           "height": 1
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654510/cdketwgmn6btdp0eabby.png"
     },
     "walkway-crossing": {
       "slug": "walkway-crossing",
@@ -5470,7 +5742,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654511/zqpas260oeggxzgpc1wf.png"
     },
     "walkway-ramp": {
       "slug": "walkway-ramp",
@@ -5488,7 +5761,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654514/rf5fklohawukv3q2amw4.png"
     },
     "walkway-straight": {
       "slug": "walkway-straight",
@@ -5506,7 +5780,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654515/jtq1nsdin4krchxra0mn.png"
     },
     "walkway-t-crossing": {
       "slug": "walkway-t-crossing",
@@ -5524,7 +5799,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654517/kigzqhytjjliaezflzvc.png"
     },
     "walkway-turn": {
       "slug": "walkway-turn",
@@ -5542,7 +5818,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654518/o0rtdzyibnrrmf4vvzlx.png"
     },
     "catwalk-crossing": {
       "slug": "catwalk-crossing",
@@ -5560,7 +5837,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654520/g45xhxaxghvvqaqkicss.png"
     },
     "catwalk-ramp": {
       "slug": "catwalk-ramp",
@@ -5578,7 +5856,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654522/dlvqxyw39hx7pxkptyvg.png"
     },
     "catwalk-stairs": {
       "slug": "catwalk-stairs",
@@ -5596,7 +5875,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654524/kuvndbxa0laaxw6jcdiw.png"
     },
     "catwalk-straight": {
       "slug": "catwalk-straight",
@@ -5614,7 +5894,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654526/qbha8xnzxdkpo72r2fs6.png"
     },
     "catwalk-t-crossing": {
       "slug": "catwalk-t-crossing",
@@ -5632,7 +5913,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654527/jdiizpju8cpdm2mj4tih.png"
     },
     "catwalk-corner": {
       "slug": "catwalk-corner",
@@ -5650,7 +5932,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654529/ystpxjyqnoo4kouflbrr.png"
     },
     "basic-wall-4m": {
       "slug": "basic-wall-4m",
@@ -5668,7 +5951,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654531/llwj9db9ucabhiakoy6d.png"
     },
     "conveyor-wall-x3": {
       "slug": "conveyor-wall-x3",
@@ -5686,7 +5970,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654532/wajfmpuuqpoaw1tqnz5j.png"
     },
     "conveyor-wall-x2": {
       "slug": "conveyor-wall-x2",
@@ -5704,7 +5989,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654534/bwbkgdtl2qk0xp2ci1d2.png"
     },
     "conveyor-wall-x1": {
       "slug": "conveyor-wall-x1",
@@ -5722,7 +6008,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654536/av4yzptaz5azugw5tjd8.png"
     },
     "gate-hole-wall": {
       "slug": "gate-hole-wall",
@@ -5740,7 +6027,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654538/baomlqqekrz48nr5inbh.png"
     },
     "single-window": {
       "slug": "single-window",
@@ -5758,7 +6046,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654539/mayh92tjwy5nirpwydel.png"
     },
     "frame-window": {
       "slug": "frame-window",
@@ -5776,7 +6065,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654541/kgjazz5ujwle7e3ob9jn.png"
     },
     "panel-window": {
       "slug": "panel-window",
@@ -5794,7 +6084,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654543/yutizbghw66esgezf4ex.png"
     },
     "reinforced-window": {
       "slug": "reinforced-window",
@@ -5812,7 +6103,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654544/h4nhp3zunklvxojmckrk.png"
     },
     "basic-wall-1m": {
       "slug": "basic-wall-1m",
@@ -5830,7 +6122,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654546/tqdmctyqjbllqsxbw87o.png"
     },
     "tilted-wall-4m": {
       "slug": "tilted-wall-4m",
@@ -5848,7 +6141,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654547/uqmbdvzfe9ztkrpm4yow.png"
     },
     "tilted-wall-8m": {
       "slug": "tilted-wall-8m",
@@ -5866,7 +6160,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654549/suah2oj9anoanqu3zk4f.png"
     },
     "inv-ramp-wall-1m": {
       "slug": "inv-ramp-wall-1m",
@@ -5884,7 +6179,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654556/xuiyt04a2h04hbvtvbkd.png"
     },
     "inv-ramp-wall-2m": {
       "slug": "inv-ramp-wall-2m",
@@ -5902,7 +6198,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654559/bwrdhnr1eyoac2hedar3.png"
     },
     "inv-ramp-wall-4m": {
       "slug": "inv-ramp-wall-4m",
@@ -5920,7 +6217,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654564/e8yrbu150hyyxm9rpahp.png"
     },
     "inv-ramp-wall-8m": {
       "slug": "inv-ramp-wall-8m",
@@ -5938,7 +6236,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654566/nul4kmd7sgbdhsxrlm3a.png"
     },
     "ramp-wall-1m": {
       "slug": "ramp-wall-1m",
@@ -5956,7 +6255,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654569/k0p1yszgcr88ubuktbse.png"
     },
     "ramp-wall-2m": {
       "slug": "ramp-wall-2m",
@@ -5974,7 +6274,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654572/wvzguvl4toyq062cg4qq.png"
     },
     "ramp-wall-4m": {
       "slug": "ramp-wall-4m",
@@ -5992,7 +6293,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654575/ushqiyvgzfpjo7gj0wia.png"
     },
     "ramp-wall-8m": {
       "slug": "ramp-wall-8m",
@@ -6010,7 +6312,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654581/bthveotzb0ojulyx5nnd.png"
     },
     "industrial-railing": {
       "slug": "industrial-railing",
@@ -6028,7 +6331,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654583/dp2rzyogc6bgztb3kov5.png"
     },
     "wall-conveyor-perpendicular": {
       "slug": "wall-conveyor-perpendicular",
@@ -6046,7 +6350,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654585/o5mciraz4r3vcok3c4dx.png"
     },
     "frame-wall": {
       "slug": "frame-wall",
@@ -6064,7 +6369,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654587/bomhl6bvmun6nzt1rohr.png"
     },
     "modern-railing": {
       "slug": "modern-railing",
@@ -6082,7 +6388,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654589/tk6dgzn7esbn579vqmew.png"
     },
     "road-barrier-concrete": {
       "slug": "road-barrier-concrete",
@@ -6100,7 +6407,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654590/njgflbek44fkbwpkrdcy.png"
     },
     "full-frame-window": {
       "slug": "full-frame-window",
@@ -6118,7 +6426,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654591/qn40kktlaeyffckbppyt.png"
     },
     "hex-frame-window": {
       "slug": "hex-frame-window",
@@ -6136,7 +6445,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654593/ancoc1bt38i1netxtmi5.png"
     },
     "water-extractor": {
       "slug": "water-extractor",
@@ -6176,7 +6486,8 @@
           "height": 26
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654594/hfrpdiu9cmfuzkw2dsdf.png"
     },
     "power-line": {
       "slug": "power-line",
@@ -6194,7 +6505,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654595/n7vl3hjxzyiymhojxyhq.png"
     },
     "stackable-conveyor-pole": {
       "slug": "stackable-conveyor-pole",
@@ -6212,7 +6524,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654596/fl8iqpynhj7ex8vcpyph.png"
     },
     "hypertube-entrance": {
       "slug": "hypertube-entrance",
@@ -6234,7 +6547,8 @@
           "consumption": 10
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654598/snbntfwuclqxrplhrg9t.png"
     },
     "metal-beam": {
       "slug": "metal-beam",
@@ -6252,7 +6566,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654600/srbfju93fcjo1gg18w53.png"
     },
     "painted-beam": {
       "slug": "painted-beam",
@@ -6270,7 +6585,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654601/ivxd6ofgsvryar5mtqbf.png"
     },
     "tilted-corner-wall-4m": {
       "slug": "tilted-corner-wall-4m",
@@ -6288,7 +6604,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654603/bavri2cvwtnwsp51nygp.png"
     },
     "tilted-corner-wall-8m": {
       "slug": "tilted-corner-wall-8m",
@@ -6306,7 +6623,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654605/ffnfeabrv5qrv0gy5n1g.png"
     },
     "center-door-wall": {
       "slug": "center-door-wall",
@@ -6324,7 +6642,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654606/gx5yqirvsfnvfkmmfnab.png"
     },
     "side-door-wall": {
       "slug": "side-door-wall",
@@ -6342,7 +6661,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654608/bwggmsvxssewcblroyis.png"
     },
     "automated-gate": {
       "slug": "automated-gate",
@@ -6360,7 +6680,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654610/thcaj8gh0ruuc8jvrhyq.png"
     },
     "beam-connector": {
       "slug": "beam-connector",
@@ -6378,7 +6699,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654612/jwjaiuovmlixuyvqbzbg.png"
     },
     "beam-connector-double": {
       "slug": "beam-connector-double",
@@ -6396,7 +6718,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654613/ao8dvedfd42yflf2npxb.png"
     },
     "beam-support": {
       "slug": "beam-support",
@@ -6414,7 +6737,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654615/atqah7dvnqf37xtcq4tv.png"
     },
     "pipeline-floor-hole": {
       "slug": "pipeline-floor-hole",
@@ -6432,7 +6756,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654617/lc8dt1kdymemwq47zltl.png"
     },
     "conveyor-lift-floor-hole": {
       "slug": "conveyor-lift-floor-hole",
@@ -6450,7 +6775,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654619/g9pwgeegasmgoyvjtqu1.png"
     },
     "hypertube-floor-hole": {
       "slug": "hypertube-floor-hole",
@@ -6468,7 +6794,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654620/bgqezcnq8ggfwezakqaj.png"
     },
     "small-metal-pillar": {
       "slug": "small-metal-pillar",
@@ -6486,7 +6813,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654622/wfpaflkccy9brcz4g4eu.png"
     },
     "small-pillar-support": {
       "slug": "small-pillar-support",
@@ -6504,7 +6832,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654623/hulhdsjm8j4i6ysn1rjk.png"
     },
     "big-pillar-support": {
       "slug": "big-pillar-support",
@@ -6522,7 +6851,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654625/saayobb9tlgtixr9vvtr.png"
     },
     "big-metal-pillar": {
       "slug": "big-metal-pillar",
@@ -6540,7 +6870,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654626/ahgns66lxcnggqbwwypr.png"
     },
     "small-concrete-pillar": {
       "slug": "small-concrete-pillar",
@@ -6558,7 +6889,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654628/s0brtgtrcs4kijzovvmc.png"
     },
     "big-concrete-pillar": {
       "slug": "big-concrete-pillar",
@@ -6576,7 +6908,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654629/hopmstpij2t3prcxhwxt.png"
     },
     "small-frame-pillar": {
       "slug": "small-frame-pillar",
@@ -6594,7 +6927,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654631/y7gcdzn9zo9ibus9jt46.png"
     },
     "big-frame-pillar": {
       "slug": "big-frame-pillar",
@@ -6612,7 +6946,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654632/yfa3elq82umo0hq4vpis.png"
     },
     "block-signal": {
       "slug": "block-signal",
@@ -6630,7 +6965,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654634/ybw8s7ksi0eoomx6ry7n.png"
     },
     "path-signal": {
       "slug": "path-signal",
@@ -6648,7 +6984,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654635/kms4kvswqoos1m8i16dx.png"
     },
     "ramp-1m": {
       "slug": "ramp-1m",
@@ -6666,7 +7003,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654636/rqihyjasepojbni5lcii.png"
     },
     "ramp-2m": {
       "slug": "ramp-2m",
@@ -6684,7 +7022,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654639/uein7bx5q3zh2btcybvi.png"
     },
     "ramp-4m": {
       "slug": "ramp-4m",
@@ -6702,7 +7041,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654640/iv1u7ufj2fewrjoayuaq.png"
     },
     "inv-ramp-4m": {
       "slug": "inv-ramp-4m",
@@ -6720,7 +7060,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654642/xkqho2o9kuupeutdfg0s.png"
     },
     "double-ramp-8m": {
       "slug": "double-ramp-8m",
@@ -6738,7 +7079,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654643/yju8pwkmprmwfiaurkrp.png"
     },
     "double-ramp-4m": {
       "slug": "double-ramp-4m",
@@ -6756,7 +7098,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654645/jv9xnpdfrz9geh2v5rds.png"
     },
     "double-ramp-2m": {
       "slug": "double-ramp-2m",
@@ -6774,7 +7117,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654646/ldcay3pu1thjas9tu76h.png"
     },
     "inv-ramp-1m": {
       "slug": "inv-ramp-1m",
@@ -6792,7 +7136,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654647/nn6ndmf5pfswfuzpzhxb.png"
     },
     "inv-ramp-2m": {
       "slug": "inv-ramp-2m",
@@ -6810,7 +7155,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654649/mepakfmhlatzn0canzwx.png"
     },
     "frame-ramp": {
       "slug": "frame-ramp",
@@ -6828,7 +7174,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654651/vguezactdbytuv2jinao.png"
     },
     "inverted-frame-ramp": {
       "slug": "inverted-frame-ramp",
@@ -6846,7 +7193,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654653/zdi56ncfj1qsoodkmefv.png"
     },
     "roof-1m": {
       "slug": "roof-1m",
@@ -6864,7 +7212,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654654/i4xllosd4iumgxfbwrxq.png"
     },
     "roof-2m": {
       "slug": "roof-2m",
@@ -6882,7 +7231,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654655/z2m1pinvwvvut3bcezso.png"
     },
     "roof-4m": {
       "slug": "roof-4m",
@@ -6900,7 +7250,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654657/wp6cwuwcwg4zfnefgagu.png"
     },
     "roof-flat": {
       "slug": "roof-flat",
@@ -6918,7 +7269,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654658/nvwlfmagz4vimnxvdht9.png"
     },
     "large-billboard": {
       "slug": "large-billboard",
@@ -6936,7 +7288,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654659/phfperq81gnz7npum2pw.png"
     },
     "small-billboard": {
       "slug": "small-billboard",
@@ -6954,7 +7307,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654661/qd7y78pyy07dhnfdccst.png"
     },
     "display-sign": {
       "slug": "display-sign",
@@ -6972,7 +7326,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654662/iqwypbzuuhrr3tqwxdvd.png"
     },
     "portrait-sign": {
       "slug": "portrait-sign",
@@ -6990,7 +7345,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654663/qifo1xxtfnokjtuq7iwc.png"
     },
     "square-sign-2m": {
       "slug": "square-sign-2m",
@@ -7008,7 +7364,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654666/vw5mqyvwepqt2wcpdlsu.png"
     },
     "square-sign-1m": {
       "slug": "square-sign-1m",
@@ -7026,7 +7383,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654667/qwtdojdzc7xy8ixmnntz.png"
     },
     "label-sign-2m": {
       "slug": "label-sign-2m",
@@ -7044,7 +7402,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654668/zn69jcfidyigw3yps2fz.png"
     },
     "label-sign-4m": {
       "slug": "label-sign-4m",
@@ -7062,7 +7421,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654669/fxpempbwv9d7wjknxxx6.png"
     },
     "label-sign-3m": {
       "slug": "label-sign-3m",
@@ -7080,7 +7440,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654671/f5rqociz45fjewxknme5.png"
     },
     "square-sign-0-5m": {
       "slug": "square-sign-0-5m",
@@ -7098,7 +7459,8 @@
       "isGenerator": false,
       "isVehicle": false,
       "meta": {},
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654672/hek9u850ihaznwehi42g.png"
     },
     "truck": {
       "slug": "truck",
@@ -7121,7 +7483,8 @@
         },
         "inventorySize": 48
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654673/pdyx7esyouu8mfiak392.png"
     },
     "drone": {
       "slug": "drone",
@@ -7144,7 +7507,8 @@
         },
         "inventorySize": 9
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654675/sctp2nzxblrrxocqqvd2.png"
     },
     "tractor": {
       "slug": "tractor",
@@ -7167,7 +7531,8 @@
         },
         "inventorySize": 25
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654676/biukhmiebpzanxov3kg9.png"
     },
     "freight-car": {
       "slug": "freight-car",
@@ -7190,7 +7555,8 @@
         },
         "inventorySize": 32
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654678/xpuxfr4pr6awrha2ntcp.png"
     },
     "electric-locomotive": {
       "slug": "electric-locomotive",
@@ -7220,7 +7586,8 @@
           }
         }
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654680/henzcyephbu0wchd3sjz.png"
     },
     "explorer": {
       "slug": "explorer",
@@ -7243,7 +7610,8 @@
         },
         "inventorySize": 24
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654681/y25p8myazqiuhe8zevat.png"
     },
     "cyber-wagon": {
       "slug": "cyber-wagon",
@@ -7266,7 +7634,8 @@
         },
         "inventorySize": 1
       },
-      "event": "NONE"
+      "event": "NONE",
+      "imgUrl": "https://res.cloudinary.com/ficsitdb/image/upload/v1681654683/fet5yybbxg22iqu7o501.png"
     }
   },
   "productionRecipes": {
@@ -21129,7 +21498,7 @@
       "techTier": 3,
       "cost": [
         {
-          "itemClass":"caterium-ore",
+          "itemClass": "caterium-ore",
           "quantity": 10
         }
       ],
@@ -22133,7 +22502,7 @@
       "techTier": 3,
       "cost": [
         {
-          "itemClass":"caterium-ore",
+          "itemClass": "caterium-ore",
           "quantity": 50
         }
       ],
@@ -23283,7 +23652,7 @@
           "quantity": 100
         },
         {
-          "itemClass":"packaged-fuel",
+          "itemClass": "packaged-fuel",
           "quantity": 50
         }
       ],
@@ -25100,7 +25469,7 @@
           "quantity": 15
         },
         {
-          "itemClass":"packaged-fuel",
+          "itemClass": "packaged-fuel",
           "quantity": 50
         }
       ],
@@ -26699,7 +27068,7 @@
       },
       "event": "NONE"
     },
-    "ResourceSink_WindowedWalls": {
+    "ResourceSink_Windowed Walls": {
       "slug": "resourcesink-windowedwalls",
       "name": "Windowed Walls",
       "description": "",
@@ -28534,7 +28903,7 @@
       "unlocks": {
         "giveItems": [
           {
-            "itemClass":"packaged-liquid-biofuel",
+            "itemClass": "packaged-liquid-biofuel",
             "quantity": 100
           }
         ]
@@ -28557,7 +28926,7 @@
       "unlocks": {
         "giveItems": [
           {
-            "itemClass":"packaged-fuel",
+            "itemClass": "packaged-fuel",
             "quantity": 100
           }
         ]

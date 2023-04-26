@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import { GoogleAnalytics } from 'nextjs-google-analytics'
+import { Analytics } from '@vercel/analytics/react'
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -45,6 +46,7 @@ function MyApp({ Component, pageProps }) {
       <GlobalStyle />
       <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
+      <Analytics />
       <Footer />
     </>
   )

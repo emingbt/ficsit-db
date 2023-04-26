@@ -14,7 +14,7 @@ export default function Home() {
         <StyledBannerSection>
           <StyledBannerContainer>
             <StyledBackgroundImage
-              src={bannerImg}
+              src={'https://res.cloudinary.com/ficsitdb/image/upload/v1682541347/banner_ahwgdx.png'}
               layout="fill"
               objectFit='cover'
               alt="Banner"
@@ -30,7 +30,7 @@ export default function Home() {
             <StyledNavItem>
               <StyledNavImage>
                 <StyledBackgroundImage
-                  src={itemsBg}
+                  src={'https://res.cloudinary.com/ficsitdb/image/upload/v1682541340/items-bg_m55bbp.png'}
                   layout="fill"
                   objectFit='cover'
                   alt="Items"
@@ -43,7 +43,7 @@ export default function Home() {
             <StyledNavItem>
               <StyledNavImage>
                 <StyledBackgroundImage
-                  src={buildingBg}
+                  src={'https://res.cloudinary.com/ficsitdb/image/upload/v1682541330/buildings-bg_naskbu.png'}
                   layout="fill"
                   objectFit='cover'
                   alt="Buildings"

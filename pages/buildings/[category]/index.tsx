@@ -4,15 +4,21 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
-import { getBuildingsByCategory } from '../../api'
 import { useRouter } from 'next/router'
 
-import { BuildingMap } from '../../../interfaces'
+import { Building } from '../../../interfaces'
 import { Selected } from '../../../interfaces/styledComponents'
 
-export default function Buildings(buildings: BuildingMap) {
+interface Props {
+  categories: {
+    name: string,
+    buildings: Building[]
+  }[]
+}
+
+export default function Buildings({ categories }: Props) {
   const router = useRouter()
-  const { category } = router.query
+  const currentCategory = router.query.category
 
   const BuildingCategories = [
     'Special',
@@ -41,7 +47,7 @@ export default function Buildings(buildings: BuildingMap) {
               {BuildingCategories.map((category) => {
                 return (
                   <Link href={`/buildings/${category.toLowerCase()}`} key={category}>
-                    <StyledCategory selected={router.query.category == category.toLowerCase()}>
+                    <StyledCategory selected={currentCategory == category.toLowerCase()}>
                       <Image
                         src={`/icons/ResIcon_${category}.png`}
                         width={64}
@@ -58,19 +64,18 @@ export default function Buildings(buildings: BuildingMap) {
             <StyledLine color='#e5af07' />
           </StyledHeaderSection>
           <StyledBuildingsSection>
-            {Object.keys(buildings).map((key, i) => {
+            {categories.map((category, i) => {
               return (
                 <>
-                  <StyledCategoryTitle>{i + 1}. {key.split(/(?=[A-Z])/).join(' ')}</StyledCategoryTitle>
-                  <StyledBuildingsContainer>
-                    {buildings[key].map((building) => {
+                  <StyledCategoryTitle>{i + 1}. {category.name}</StyledCategoryTitle>
+                  <StyledBuildingsContainer key={i}>
+                    {category.buildings.map((building) => {
                       return (
-                        <Link href={`/buildings/${category}/${building.slug}`} key={building.slug}>
+                        <Link href={`/buildings/${currentCategory}/${building.slug}`} key={building.slug}>
                           <StyledBuilding key={building.slug}>
                             <StyledBuildingImage>
                               <Image
-                                style={{ userSelect: 'none' }}
-                                src={`/images/buildables/${building.slug}.png`}
+                                src={building.imgUrl}
                                 width={256}
                                 height={256}
                                 alt={building.name}
@@ -93,11 +98,13 @@ export default function Buildings(buildings: BuildingMap) {
 }
 
 export async function getServerSideProps(context) {
-  var category = context.query.category
-  const buildings = getBuildingsByCategory(category)
+  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://127.0.0.1:3000'
+  const category = context.query.category
+  const result = await fetch(`${baseUrl}/api/buildings?category=${category}`)
+  const categories = await result.json()
 
   return {
-    props: { ...buildings }
+    props: { categories }
   }
 }
 

@@ -1,84 +1,88 @@
 import Link from "next/link"
 import styled from 'styled-components'
+import { Building, Fuel } from "../../interfaces"
 import { FlexDirection, IsAlternate, Product } from "../../interfaces/styledComponents"
 import { StyledImage } from "../sharedstyles"
 
 interface Props {
-  fuels: {
-    fuel: {
-      itemClass: string,
-      rate: number
-    },
-    supplement?: {
-      itemClass: string,
-      rate: number
-    },
-    byproduct?: {
-      itemClass: string,
-      rate: number
-    }
-  }[],
+  fuels: Fuel[],
   operatingRate: number
 }
 
-export default function Fuel({ fuels, operatingRate }: Props) {
+export default function Fuels({ fuels, operatingRate }: Props) {
+  let transformedFuels = []
+
+  fuels.map((fuel, i) => {
+    const transformedItems = fuel.items.reduce((acc, item) => {
+      const itemType = item.type.split('_')[0].toLowerCase();
+      acc[itemType] = {
+        imgUrl: item.imgUrl,
+        rate: item.rate,
+        slug: item.slug
+      };
+      return acc;
+    }, {});
+    transformedFuels.push(transformedItems);
+  })
+
   return fuels?.length > 0 && (
     <StyledSection>
       <StyledTitle>Fuels</StyledTitle>
       <StyledRecipeContainer>
-        {fuels.map((e, i) => {
+        {transformedFuels.map((items, i) => {
           return (
             <StyledRecipe key={i}>
               <StyledContainer flexDirection="row">
                 <StyledItem>
-                  <Link href={`/items/${e.fuel.itemClass}`}>
+                  <Link href={`/items/${items.fuel.slug}`}>
                     <a>
                       <StyledImage
-                        src={`/images/items/${e.fuel.itemClass}.png`}
+                        src={items.fuel.imgUrl}
                         width={80}
                         height={80}
-                        alt={e.fuel.itemClass}
+                        alt={items.fuel.slug}
                         quality={40}
                       />
                     </a>
                   </Link>
-                  <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.fuel.rate).toFixed(3))}/min</StyledUsePerMin>
+                  <StyledUsePerMin>{parseFloat((operatingRate / 100 * items.fuel.rate).toFixed(3))}/min</StyledUsePerMin>
                 </StyledItem>
                 {
-                  e.supplement &&
+                  items.supplement &&
                   <StyledItem>
-                    <Link href={`/items/${e.supplement.itemClass}`}>
+                    <Link href={`/items/${items.supplement.slug}`}>
                       <a>
                         <StyledImage
-                          src={`/images/items/${e.supplement.itemClass}.png`}
+                          src={items.supplement.imgUrl}
                           width={80}
                           height={80}
-                          alt={e.supplement.itemClass}
+                          alt={items.supplement.slug}
                           quality={40}
                         />
                       </a>
                     </Link>
-                    <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.supplement.rate).toFixed(3))}/min</StyledUsePerMin>
+                    <StyledUsePerMin>{parseFloat((operatingRate / 100 * items.supplement.rate).toFixed(3))}/min</StyledUsePerMin>
                   </StyledItem>
                 }
               </StyledContainer>
               <StyledContainer>
-                {e.byproduct &&
+                {
+                  items.product &&
                   <StyledContainer flexDirection="row">
                     <StyledVerticalLine />
                     <StyledItem product>
-                      <Link href={`/items/${e.byproduct.itemClass}`}>
+                      <Link href={`/items/${items.product.slug}`}>
                         <a>
                           <StyledImage
-                            src={`/images/items/${e.byproduct.itemClass}.png`}
+                            src={items.product.imgUrl}
                             width={80}
                             height={80}
-                            alt={e.byproduct.itemClass}
+                            alt={items.product.slug}
                             quality={40}
                           />
                         </a>
                       </Link>
-                      <StyledUsePerMin>{parseFloat((operatingRate / 100 * e.byproduct.rate).toFixed(3))}/min</StyledUsePerMin>
+                      <StyledUsePerMin>{parseFloat((operatingRate / 100 * items.product.rate).toFixed(3))}/min</StyledUsePerMin>
                     </StyledItem>
                   </StyledContainer>
                 }

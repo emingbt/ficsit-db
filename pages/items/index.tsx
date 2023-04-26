@@ -1,14 +1,15 @@
-import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import styled from 'styled-components'
-import Link from 'next/link'
-import { getAllItems } from '../api'
-import Image from 'next/image'
-import { Item } from '../../interfaces/index'
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
+import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
+import { Item } from '../../interfaces/index'
 
-export default function Items(items: Item[]) {
-  const sortedItems = Object.values(items).sort((previousItem, currentItem) => (previousItem.name.toLowerCase() > currentItem.name.toLowerCase()) ? 1 : ((currentItem.name > previousItem.name) ? -1 : 0))
+interface Props {
+  items: Item[]
+}
 
+export default function Items({ items }: Props) {
   return (
     <>
       <Head>
@@ -21,12 +22,12 @@ export default function Items(items: Item[]) {
             <StyledTitle>Items</StyledTitle>
             <StyledLine color='#E5AF07' />
             <StyledItemsContainer>
-              {sortedItems.map((item, i) => {
+              {items.map((item, i) => {
                 return (
                   <Link href={`/items/${item.slug}`} key={i} >
                     <StyledItem>
                       <StyledItemImage
-                        src={`/images/items/${item.slug}.png`}
+                        src={item.imgUrl}
                         width={256}
                         height={256}
                         alt={item.name}
@@ -46,11 +47,13 @@ export default function Items(items: Item[]) {
   )
 }
 
-export async function getStaticProps() {
-  const items = getAllItems()
+export async function getServerSideProps() {
+  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://127.0.0.1:3000'
+  const result = await fetch(`${baseUrl}/api/items`)
+  const items = await result.json()
 
   return {
-    props: items
+    props: { items }
   }
 }
 

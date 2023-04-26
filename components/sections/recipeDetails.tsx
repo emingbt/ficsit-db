@@ -12,23 +12,29 @@ interface Props {
   productionRate: number,
   setProductionRate: React.Dispatch<React.SetStateAction<number>>,
   recipe: ProductionRecipe,
-  building: Building
+  building: {
+    slug: string,
+    name: string,
+    imgUrl: string,
+    consumption: number,
+    exponent: number
+  }
 }
 
 export default function RecipeDetails({ widescreen, clockspeed, setClockspeed, productionRate, setProductionRate, recipe, building }: Props) {
 
-  let energyConsumption = parseFloat((building.meta?.powerInfo?.consumption * (clockspeed / 100) ** building.meta?.overclockInfo?.exponent).toFixed(4))
+  let energyConsumption = parseFloat((building.consumption * (clockspeed / 100) ** building.exponent).toFixed(4))
   let periodTime = parseFloat((recipe.craftTime * 100 / clockspeed).toFixed(4))
   let requiredPowerShards = clockspeed > 200 ? 3 : clockspeed > 150 ? 2 : clockspeed > 100 ? 1 : 0
 
   const handleClockspeedChange = (e) => {
     setClockspeed(e)
-    setProductionRate((recipe.products[0].quantity / recipe.craftTime * 60) * e / 100)
+    setProductionRate((recipe.products[0].amount / recipe.craftTime * 60) * e / 100)
   }
 
   const handleProductionRateChage = (e) => {
     setProductionRate(e)
-    setClockspeed(e / (recipe.products[0].quantity / recipe.craftTime * 60) * 100)
+    setClockspeed(e / (recipe.products[0].amount / recipe.craftTime * 60) * 100)
   }
 
   return (
@@ -92,7 +98,7 @@ export default function RecipeDetails({ widescreen, clockspeed, setClockspeed, p
                     src={`/images/items/power-shard.png`}
                     width={64}
                     height={64}
-                    alt={building.name}
+                    alt="power-shard"
                   />
                 </StyledItemImage>
               </Link>
@@ -109,10 +115,10 @@ export default function RecipeDetails({ widescreen, clockspeed, setClockspeed, p
               <Link href={`/buildings/production/${building.slug}`}>
                 <StyledItemImage detail>
                   <Image
-                    src={`/images/buildables/${building.slug}.png`}
+                    src={building.imgUrl}
                     width={64}
                     height={64}
-                    alt={building.name}
+                    alt={building.slug}
                   />
                 </StyledItemImage>
               </Link>
