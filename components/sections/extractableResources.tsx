@@ -2,28 +2,30 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import Image from 'next/image'
 
+import { Building } from '../../interfaces'
+
 interface Props {
-  extractableResources: string[]
+  extractableResources: Building['resources']
 }
 
-export default function ExtractableResources( {extractableResources}: Props ) {
+export default function ExtractableResources({ extractableResources }: Props) {
   return extractableResources?.length > 0 && (
     <StyledSection>
       <StyledTitle>Extractable Resources</StyledTitle>
       <StyledResourceContainer>
         {extractableResources.map((resource) => {
           return (
-            <Link href={`/items/${resource.split(' ').join('-').toLowerCase()}`} key={resource}>
+            <Link href={`/items/${resource.slug}`} key={resource.slug}>
               <StyledResource>
                 <StyledResourceImage>
                   <Image
-                    src={`/images/items/${resource.split(' ').join('-').toLowerCase()}.png`}
+                    src={resource.imgUrl}
                     width={120}
                     height={120}
-                    alt={resource}
+                    alt={resource.slug}
                   />
                 </StyledResourceImage>
-                <StyledResourceName>{resource}</StyledResourceName>
+                <StyledResourceName>{resource.name}</StyledResourceName>
               </StyledResource>
             </Link>
           )
