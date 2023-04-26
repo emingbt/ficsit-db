@@ -5,31 +5,31 @@ import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { getBuildableByName, getRecipesByBuildingName } from '../../api'
 
 import Consumption from '../../../components/consumption'
 import Extraction from '../../../components/extraction'
 
 import Recipe from '../../../components/sections/recipe'
 import ExtractableResources from '../../../components/sections/extractableResources'
-import Fuel from '../../../components/sections/fuel'
+import Fuels from '../../../components/sections/fuels'
 
-import { Building, ProductionRecipe } from '../../../interfaces'
+import { Building, Fuel, ProductionRecipe } from '../../../interfaces'
 
 interface Props {
-  buildable: Building,
+  building: Building,
   recipes: ProductionRecipe[]
+  fuels: Fuel[]
 }
 
-export default function BuildingPage({ buildable, recipes }: Props) {
+export default function BuildingPage({ building, recipes, fuels }: Props) {
   const router = useRouter()
   const { category } = router.query
 
   const [clockspeed, setClockspeed] = useState(100)
-  const clockspeedExponent = buildable.meta?.overclockInfo?.exponent
+  const clockspeedExponent = building?.overclockExponent
 
-  let energyConsumption = (buildable.meta?.powerInfo?.consumption * (clockspeed / 100) ** clockspeedExponent).toFixed(4)
-  let powerProduction = (buildable.meta?.generatorInfo?.powerProduction * Math.pow((clockspeed / 100), 1 / clockspeedExponent)).toFixed(3)
+  let energyConsumption = (building?.powerConsumption * (clockspeed / 100) ** clockspeedExponent).toFixed(4)
+  let powerProduction = (building?.powerProduction * Math.pow((clockspeed / 100), 1 / clockspeedExponent)).toFixed(3)
   let operatingRate = Math.pow((clockspeed / 100), 1 / clockspeedExponent) * 100
 
   const [purity, setPurity] = useState(1)
@@ -37,7 +37,7 @@ export default function BuildingPage({ buildable, recipes }: Props) {
   return (
     <>
       <Head>
-        <title>{buildable.name} | FICSIT DB</title>
+        <title>{building.name} | FICSIT DB</title>
       </Head>
 
       <Container>
@@ -52,29 +52,29 @@ export default function BuildingPage({ buildable, recipes }: Props) {
                 <StyledDetailHeader>
                   <StyledImageContainer>
                     <Image
-                      src={`/images/buildables/${buildable.slug}.png`}
+                      src={building.imgUrl}
                       width={256}
                       height={256}
                       priority
                       quality={100}
-                      alt={buildable.name}
+                      alt={building.name}
                     />
                   </StyledImageContainer>
                   <StyledDetail>
-                    <StyledName>{buildable.name}</StyledName>
+                    <StyledName>{building.name}</StyledName>
                     <StyledCostTitle>Cost :</StyledCostTitle>
                     <StyledCostContainer>
-                      {buildable.cost.map((item) => {
+                      {building.cost.map((item) => {
                         return (
-                          <StyledCostItem key={item.itemClass}>
-                            <StyledText>{item.quantity}x</StyledText>
-                            <Link href={`/items/${item.itemClass}`}>
+                          <StyledCostItem key={item.slug}>
+                            <StyledText>{item.amount}x</StyledText>
+                            <Link href={`/items/${item.slug}`}>
                               <StyledCostItemImage>
                                 <Image
-                                  src={`/images/items/${item.itemClass}.png`}
+                                  src={item.imgUrl}
                                   layout="fill"
                                   objectFit='cover'
-                                  alt={item.itemClass}
+                                  alt={item.slug}
                                   quality={40}
                                 />
                               </StyledCostItemImage>
@@ -86,32 +86,32 @@ export default function BuildingPage({ buildable, recipes }: Props) {
                   </StyledDetail>
                 </StyledDetailHeader>
                 <StyledDescription>
-                  {buildable.description}
+                  {building.description}
                 </StyledDescription>
               </StyledDetailContainer>
               {
-                buildable.isOverclockable &&
+                building.isOverclockable &&
                 <Consumption
                   clockspeed={clockspeed}
                   setClockspeed={setClockspeed}
                   energyConsumption={energyConsumption}
                   powerProduction={powerProduction}
-                  isGenerator={buildable.isGenerator}
+                  isGenerator={building.isGenerator}
                 />
               }
               {
-                (buildable.isResourceExtractor && buildable.meta.extractorInfo?.isDependsPurity) &&
+                (building.isResourceExtractor && building?.isDependsPurity) &&
                 <Extraction
                   clockspeed={clockspeed}
                   purity={purity}
                   setPurity={setPurity}
-                  extractSpeed={buildable.meta.extractorInfo.resourceExtractSpeed}
+                  extractSpeed={building?.resourceExtractSpeed}
                 />
               }
             </StyledSection>
             <Recipe recipes={recipes} title={"Recipes"} />
-            <ExtractableResources extractableResources={buildable.meta?.extractorInfo?.allowedResources} />
-            <Fuel fuels={buildable.meta?.generatorInfo?.fuels} operatingRate={operatingRate} />
+            <ExtractableResources extractableResources={building?.resources} />
+            <Fuels fuels={fuels} operatingRate={operatingRate} />
           </StyledContainer>
         </Main>
       </Container>
@@ -119,13 +119,18 @@ export default function BuildingPage({ buildable, recipes }: Props) {
   )
 }
 
-export function getServerSideProps(context) {
+export async function getServerSideProps(context) {
+  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://127.0.0.1:3000'
   const name = context.query.building
-  const buildable = getBuildableByName(name)
-  const recipes = getRecipesByBuildingName(name)
+  const result = await fetch(`${baseUrl}/api/building?slug=${name}`)
+  const data = await result.json()
+
+  const building = data.building
+  const recipes = data.recipes
+  const fuels = data.fuels
 
   return {
-    props: { buildable, recipes }
+    props: { building, recipes, fuels }
   }
 }
 
