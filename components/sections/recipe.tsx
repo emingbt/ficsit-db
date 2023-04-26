@@ -28,22 +28,22 @@ export default function Recipe({ recipes, title }: Props) {
                 <StyledContainer>
                   {recipe.ingredients.map((ingredient) => {
                     return (
-                      <StyledItem key={ingredient.itemClass}>
+                      <StyledItem key={ingredient.name}>
                         <StyledItemHeader>
-                          <StyledItemQuantity>{ingredient.quantity}x</StyledItemQuantity>
-                          <Link href={`/items/${ingredient.itemClass}`}>
+                          <StyledItemQuantity>{ingredient.amount}x</StyledItemQuantity>
+                          <Link href={`/items/${ingredient.name}`}>
                             <StyledItemImage>
                               <Image
-                                src={`/images/items/${ingredient.itemClass}.png`}
+                                src={ingredient.imgUrl}
                                 width={48}
                                 height={48}
-                                alt={ingredient.itemClass}
+                                alt={ingredient.name}
                                 quality={50}
                               />
                             </StyledItemImage>
                           </Link>
                         </StyledItemHeader>
-                        <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * ingredient.quantity).toFixed(4))}/min</StyledUsePerMin>
+                        <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * ingredient.amount).toFixed(4))}/min</StyledUsePerMin>
                       </StyledItem>
                     )
                   })}
@@ -53,35 +53,35 @@ export default function Recipe({ recipes, title }: Props) {
                   <StyledContainer product>
                     {recipe.products.map((product) => {
                       return (
-                        <StyledItem key={product.itemClass}>
+                        <StyledItem key={product.name}>
                           <StyledItemHeader>
-                            <StyledItemQuantity>{product.quantity}x</StyledItemQuantity>
-                            <Link href={`/items/${product.itemClass}`} style={{ position: 'relative' }}>
+                            <StyledItemQuantity>{product.amount}x</StyledItemQuantity>
+                            <Link href={`/items/${product.name}`} style={{ position: 'relative' }}>
                               <StyledItemImage>
                                 <Image
-                                  src={`/images/items/${product.itemClass}.png`}
+                                  src={product.imgUrl}
                                   width={48}
                                   height={48}
-                                  alt={product.itemClass}
+                                  alt={product.name}
                                   quality={50}
                                 />
                               </StyledItemImage>
                             </Link>
                           </StyledItemHeader>
-                          <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * product.quantity).toFixed(4))}/min</StyledUsePerMin>
+                          <StyledUsePerMin>{parseFloat((60 / recipe.craftTime * product.amount).toFixed(4))}/min</StyledUsePerMin>
                         </StyledItem>
                       )
                     })}
                   </StyledContainer>
                   <StyledVerticalLine isAlternate={recipe.isAlternate} />
                   <StyledBuildingContainer>
-                    <Link href={`/buildings/production/${recipe.producedIn}`}>
+                    <Link href={`/buildings/production/${recipe.building.slug}`}>
                       <a>
                         <StyledImage
-                          src={`/images/buildables/${recipe.producedIn}.png`}
+                          src={recipe.building.imgUrl}
                           width={80}
                           height={80}
-                          alt={recipe.producedIn}
+                          alt={recipe.building.slug}
                           quality={50}
                         />
                       </a>
