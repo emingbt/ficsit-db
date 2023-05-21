@@ -1,11 +1,33 @@
-import express, { Request, Response } from 'express'
+import express from 'express'
+import { expressHandler } from 'trpc-playground/handlers/express'
+import * as trpcExpress from '@trpc/server/adapters/express'
+import { appRouter } from './routers'
 
-const app = express()
+const runApp = async () => {
+  const app = express()
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!')
-})
+  const trpcApiEndpoint = '/trpc'
+  const playgroundEndpoint = '/trpc-playground'
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!')
-})
+  app.use(
+    trpcApiEndpoint,
+    trpcExpress.createExpressMiddleware({
+      router: appRouter,
+    }),
+  )
+
+  app.use(
+    playgroundEndpoint,
+    await expressHandler({
+      trpcApiEndpoint,
+      playgroundEndpoint,
+      router: appRouter,
+    }),
+  )
+
+  app.listen(8080, () => {
+    console.log('listening at http://localhost:8080')
+  })
+}
+
+runApp()
