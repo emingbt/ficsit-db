@@ -1,46 +1,31 @@
 import { publicProcedure, router } from "../utils/trpc"
 import z from 'zod'
-import { PrismaClient } from "@prisma/client"
-
-const prisma = new PrismaClient()
-
-const mockUsers = [
-  {
-    id: 1,
-    name: 'John Doe',
-    email: 'example@exapmle.com',
-  },
-  {
-    id: 2,
-    name: 'Jane Doe',
-    email: 'example2@example.com',
-  },
-]
+import {
+  getAllUsers,
+  getUserById,
+  createUser
+} from "../services/user"
 
 export const userRouter = router({
   getAllUsers: publicProcedure
     .query(async () => {
-      const allUsers = await prisma.user.findMany()
+      const allUsers = await getAllUsers()
       return allUsers
     }),
   getUserById: publicProcedure
     .input(z.object({ userId: z.number() }))
-    .query(({ input }) => {
-      return mockUsers.find((user) => user.id === input.userId)
+    .query(async ({ input }) => {
+      const user = await getUserById(input)
+      return user
     }),
   createUser: publicProcedure
     .input(z.object({
-      name: z.string(),
+      username: z.string(),
       email: z.string().email(),
+      password: z.string(),
     }))
     .mutation(async ({ input }) => {
-      const createdUser = await prisma.user.create({
-        data: {
-          name: input.name,
-          email: input.email,
-        }
-      })
-
+      const createdUser = await createUser(input)
       return createdUser
     }),
 })
