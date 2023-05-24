@@ -10,28 +10,44 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Upvote {
+  id          Int       @id @default(autoincrement())
+  createdAt   DateTime  @default(now())
+  blueprint   Blueprint @relation(fields: [blueprintId], references: [id])
+  blueprintId Int
+  user        User      @relation(fields: [userId], references: [id])
+  userId      Int
+}
+
 model Comment {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  title     String   @db.VarChar(255)
-  content   String?
-  published Boolean  @default(false)
-  author    User     @relation(fields: [authorId], references: [id])
-  authorId  Int
+  id          Int       @id @default(autoincrement())
+  createdAt   DateTime  @default(now())
+  content     String?
+  author      User      @relation(fields: [authorId], references: [id])
+  authorId    Int
+  blueprint   Blueprint @relation(fields: [blueprintId], references: [id])
+  blueprintId Int
 }
 
 model Blueprint {
-  id     Int     @id @default(autoincrement())
-  bio    String?
-  user   User    @relation(fields: [userId], references: [id])
-  userId Int     @unique
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String?
+  fileLinks   String[]
+  imageLinks  String[]
+  categories  String[]
+  comments    Comment[]
+  upvotes     Upvote[]
+  designer    User      @relation(fields: [designerId], references: [id])
+  designerId  Int       @unique
 }
 
 model User {
-  id         Int      @id @default(autoincrement())
-  email      String   @unique
-  name       String?
+  id         Int         @id @default(autoincrement())
+  email      String      @unique
+  username   String
+  password   String
   comments   Comment[]
   blueprints Blueprint[]
+  upvotes    Upvote[]
 }
