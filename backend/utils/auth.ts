@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 export const generateToken = (id: string) => {
   return jwt.sign({ id }, process.env.JWT_SECRET!, {
     algorithm: 'HS256',
-    expiresIn: '1d'
+    expiresIn: '30d'
   })
 }
 
@@ -14,7 +14,7 @@ export const verifyToken = (token: string) => {
 export const generateResetPasswordToken = (id: string) => {
   return jwt.sign({ id }, process.env.JWT_RESET_PASSWORD_SECRET!, {
     algorithm: 'HS256',
-    expiresIn: '30d'
+    expiresIn: '30m'
   })
 }
 
@@ -25,7 +25,7 @@ export const verifyResetPasswordToken = (token: string) => {
 export const generateEmailConfirmationToken = (id: string) => {
   return jwt.sign({ id }, process.env.JWT_EMAIL_CONFIRMATION_SECRET!, {
     algorithm: 'HS256',
-    expiresIn: '30d'
+    expiresIn: '30m'
   })
 }
 
