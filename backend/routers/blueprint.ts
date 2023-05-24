@@ -14,7 +14,7 @@ export const blueprintRouter = router({
     return allBlueprints
   }),
   getBlueprintById: publicProcedure
-    .input(z.object({ blueprintId: z.number() }))
+    .input(z.object({ blueprintId: z.string() }))
     .query(async ({ input }) => {
       const blueprint = await getBlueprintById(input)
       return blueprint
@@ -26,7 +26,7 @@ export const blueprintRouter = router({
       fileLinks: z.array(z.string()),
       imageLinks: z.array(z.string()),
       categories: z.array(z.string()),
-      designerId: z.number()
+      designerId: z.string()
     }))
     .mutation(async ({ input }) => {
       const createdBlueprint = await createBlueprint(input)
@@ -34,7 +34,7 @@ export const blueprintRouter = router({
     }),
   updateBlueprint: publicProcedure
     .input(z.object({
-      id: z.number(),
+      id: z.string(),
       title: z.string(),
       description: z.string(),
       fileLinks: z.array(z.string()),
@@ -46,7 +46,7 @@ export const blueprintRouter = router({
       return updatedBlueprint
     }),
   deleteBlueprint: publicProcedure
-    .input(z.object({ blueprintId: z.number() }))
+    .input(z.object({ blueprintId: z.string() }))
     .mutation(async ({ input }) => {
       const deletedBlueprint = await deleteBlueprint(input)
       return deletedBlueprint

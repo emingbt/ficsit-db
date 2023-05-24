@@ -10,7 +10,7 @@ export const getAllBlueprints = async () => {
 
 export const getBlueprintById = async (input:
   {
-    blueprintId: number
+    blueprintId: string
   }) => {
   const blueprint = await prisma.blueprint.findUnique({
     where: {
@@ -28,7 +28,7 @@ export const createBlueprint = async (input:
     fileLinks: string[],
     imageLinks: string[],
     categories: string[],
-    designerId: number
+    designerId: string
   }) => {
   const createdBlueprint = await prisma.blueprint.create({
     data: {
@@ -46,7 +46,7 @@ export const createBlueprint = async (input:
 
 export const updateBlueprint = async (input:
   {
-    id: number,
+    id: string,
     title: string,
     description: string,
     fileLinks: string[],
@@ -71,7 +71,7 @@ export const updateBlueprint = async (input:
 
 export const deleteBlueprint = async (input:
   {
-    blueprintId: number
+    blueprintId: string
   }) => {
   const deletedBlueprint = await prisma.blueprint.delete({
     where: {

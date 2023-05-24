@@ -13,7 +13,7 @@ export const userRouter = router({
       return allUsers
     }),
   getUserById: publicProcedure
-    .input(z.object({ userId: z.number() }))
+    .input(z.object({ userId: z.string() }))
     .query(async ({ input }) => {
       const user = await getUserById(input)
       return user
