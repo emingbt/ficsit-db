@@ -1,11 +1,36 @@
-import express, { Request, Response } from 'express'
+import express from 'express'
+import { expressHandler } from 'trpc-playground/handlers/express'
+import * as trpcExpress from '@trpc/server/adapters/express'
+import { appRouter } from './routers'
+import dotenv from 'dotenv'
 
-const app = express()
+dotenv.config()
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!')
-})
+const runApp = async () => {
+  const app = express()
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!')
-})
+  const trpcApiEndpoint = '/trpc'
+  const playgroundEndpoint = '/trpc-playground'
+
+  app.use(
+    trpcApiEndpoint,
+    trpcExpress.createExpressMiddleware({
+      router: appRouter,
+    }),
+  )
+
+  app.use(
+    playgroundEndpoint,
+    await expressHandler({
+      trpcApiEndpoint,
+      playgroundEndpoint,
+      router: appRouter,
+    }),
+  )
+
+  app.listen(8080, () => {
+    console.log('listening at http://localhost:8080')
+  })
+}
+
+runApp()
