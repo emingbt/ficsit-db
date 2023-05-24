@@ -1,8 +1,8 @@
 import { router } from "../utils/trpc"
-import { helloRouter } from "./hello"
+import { blueprintRouter } from "./blueprint"
 import { userRouter } from "./user"
 
 export const appRouter = router({
-  hello: helloRouter,
+  hello: blueprintRouter,
   user: userRouter
 })
