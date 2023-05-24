@@ -9,10 +9,11 @@ import {
 } from "../services/blueprint"
 
 export const blueprintRouter = router({
-  getAllBlueprints: publicProcedure.query(async () => {
-    const allBlueprints = await getAllBlueprints()
-    return allBlueprints
-  }),
+  getAllBlueprints: publicProcedure
+    .query(async () => {
+      const allBlueprints = await getAllBlueprints()
+      return allBlueprints
+    }),
   getBlueprintById: publicProcedure
     .input(z.object({ blueprintId: z.string() }))
     .query(async ({ input }) => {

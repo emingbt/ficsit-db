@@ -3,6 +3,6 @@ import { blueprintRouter } from "./blueprint"
 import { userRouter } from "./user"
 
 export const appRouter = router({
-  hello: blueprintRouter,
+  blueprint: blueprintRouter,
   user: userRouter
 })

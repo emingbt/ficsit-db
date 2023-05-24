@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Upvote {
-  id          String       @id @default(uuid())
+  id          String    @id @default(uuid())
   createdAt   DateTime  @default(now())
   blueprint   Blueprint @relation(fields: [blueprintId], references: [id])
   blueprintId String
@@ -20,7 +20,7 @@ model Upvote {
 }
 
 model Comment {
-  id          String       @id @default(uuid())
+  id          String    @id @default(uuid())
   createdAt   DateTime  @default(now())
   content     String?
   author      User      @relation(fields: [authorId], references: [id])
@@ -30,7 +30,7 @@ model Comment {
 }
 
 model Blueprint {
-  id          String       @id @default(uuid())
+  id          String    @id @default(uuid())
   title       String
   description String?
   fileLinks   String[]
@@ -39,11 +39,11 @@ model Blueprint {
   comments    Comment[]
   upvotes     Upvote[]
   designer    User      @relation(fields: [designerId], references: [id])
-  designerId  String       @unique
+  designerId  String    @unique
 }
 
 model User {
-  id         String         @id @default(uuid())
+  id         String      @id @default(uuid())
   email      String      @unique
   username   String
   password   String
