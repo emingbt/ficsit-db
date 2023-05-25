@@ -1,4 +1,4 @@
-import { publicProcedure, router } from "../utils/trpc"
+import { protectedProcedure, publicProcedure, router } from "../utils/trpc"
 import z from 'zod'
 import {
   getAllUsers,
@@ -12,7 +12,7 @@ export const userRouter = router({
       const allUsers = await getAllUsers()
       return allUsers
     }),
-  getUserById: publicProcedure
+  getUserById: protectedProcedure
     .input(z.object({ userId: z.string() }))
     .query(async ({ input }) => {
       const user = await getUserById(input)

@@ -60,3 +60,32 @@ export const loginUser = async (input:
 
   return token
 }
+
+export const registerUser = async (input:
+  {
+    username: string,
+    email: string,
+    password: string
+  }) => {
+  const user = await prisma.user.findUnique({
+    where: {
+      email: input.email
+    }
+  })
+
+  if (user) {
+    throw new Error('User already exists')
+  }
+
+  const createdUser = await prisma.user.create({
+    data: {
+      username: input.username,
+      email: input.email,
+      password: input.password,
+    }
+  })
+
+  const token = generateToken(createdUser.id)
+
+  return token
+}
