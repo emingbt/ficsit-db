@@ -1,10 +1,11 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 import express from 'express'
 import { expressHandler } from 'trpc-playground/handlers/express'
 import * as trpcExpress from '@trpc/server/adapters/express'
 import { appRouter } from './routers'
-import dotenv from 'dotenv'
-
-dotenv.config()
+import { createContext } from './utils/trpc'
 
 const runApp = async () => {
   const app = express()
@@ -16,6 +17,7 @@ const runApp = async () => {
     trpcApiEndpoint,
     trpcExpress.createExpressMiddleware({
       router: appRouter,
+      createContext
     }),
   )
 

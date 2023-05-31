@@ -1,20 +1,42 @@
 import { PrismaClient } from '@prisma/client'
+import { generateToken } from '../utils/auth'
 
 const prisma = new PrismaClient()
 
-export const getAllUsers = async () => {
-  const allUsers = await prisma.user.findMany()
-  return allUsers
-}
-
-export const getUserById = async (input: { userId: number }) => {
+export const getUserByUsername = async (input: { username: string }) => {
   const user = await prisma.user.findUnique({
     where: {
-      id: input.userId
+      username: input.username
     }
   })
 
   return user
+}
+
+export const getUser = async (input:
+  {
+    email: string,
+    password: string
+  }) => {
+  const user = await prisma.user.findUnique({
+    where: {
+      email: input.email
+    }
+  })
+
+  if (!user) {
+    throw new Error('No user found')
+  }
+
+  const isPasswordValid = user.password === input.password
+
+  if (!isPasswordValid) {
+    throw new Error('Invalid password')
+  }
+
+  const token = generateToken(user.id)
+
+  return { token, user }
 }
 
 export const createUser = async (input:
@@ -23,6 +45,16 @@ export const createUser = async (input:
     email: string,
     password: string
   }) => {
+  const user = await prisma.user.findUnique({
+    where: {
+      email: input.email
+    }
+  })
+
+  if (user) {
+    throw new Error('User already exists')
+  }
+
   const createdUser = await prisma.user.create({
     data: {
       username: input.username,
@@ -31,5 +63,7 @@ export const createUser = async (input:
     }
   })
 
-  return createdUser
+  const token = generateToken(createdUser.id)
+
+  return token
 }

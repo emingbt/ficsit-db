@@ -1,7 +1,10 @@
 version: '3'
+name: ficsitdb
 services:
   backend:
     image: backend
+    container_name: backend
+    env_file: .env
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,8 +12,9 @@ services:
       - 8080:8080
     volumes:
       - .:/app
-  postges:
+  postgres:
     image: postgres
+    container_name: postgres
     restart: always
     ports:
       - 5432:5432
