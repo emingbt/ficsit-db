@@ -21,6 +21,17 @@ export const getBlueprintById = async (input:
   return blueprint
 }
 
+export const getBlueprintByDesignerId = async (input:
+  {
+    designerId: string
+  }) => {
+  const blueprints = await prisma.blueprint.findMany({
+    where: {
+      designerId: input.designerId
+    }
+  })
+}
+
 export const createBlueprint = async (input:
   {
     title: string,

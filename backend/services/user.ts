@@ -3,39 +3,17 @@ import { generateToken } from '../utils/auth'
 
 const prisma = new PrismaClient()
 
-export const getAllUsers = async () => {
-  const allUsers = await prisma.user.findMany()
-  return allUsers
-}
-
-export const getUserById = async (input: { userId: string }) => {
+export const getUserByUsername = async (input: { username: string }) => {
   const user = await prisma.user.findUnique({
     where: {
-      id: input.userId
+      username: input.username
     }
   })
 
   return user
 }
 
-export const createUser = async (input:
-  {
-    username: string,
-    email: string,
-    password: string
-  }) => {
-  const createdUser = await prisma.user.create({
-    data: {
-      username: input.username,
-      email: input.email,
-      password: input.password,
-    }
-  })
-
-  return createdUser
-}
-
-export const loginUser = async (input:
+export const getUser = async (input:
   {
     email: string,
     password: string
@@ -58,10 +36,10 @@ export const loginUser = async (input:
 
   const token = generateToken(user.id)
 
-  return token
+  return { token, user }
 }
 
-export const registerUser = async (input:
+export const createUser = async (input:
   {
     username: string,
     email: string,
