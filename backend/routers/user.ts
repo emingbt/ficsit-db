@@ -1,31 +1,35 @@
 import { protectedProcedure, publicProcedure, router } from "../utils/trpc"
 import z from 'zod'
 import {
-  getAllUsers,
-  getUserById,
+  getUserByUsername,
+  getUser,
   createUser
 } from "../services/user"
 
 export const userRouter = router({
-  getAllUsers: publicProcedure
-    .query(async () => {
-      const allUsers = await getAllUsers()
-      return allUsers
-    }),
-  getUserById: protectedProcedure
-    .input(z.object({ userId: z.string() }))
+  getUser: publicProcedure
+    .input(z.object({ username: z.string() }))
     .query(async ({ input }) => {
-      const user = await getUserById(input)
+      const user = await getUserByUsername(input)
       return user
     }),
-  createUser: publicProcedure
+  login: publicProcedure
+    .input(z.object({
+      email: z.string().email(),
+      password: z.string(),
+    }))
+    .mutation(async ({ input }) => {
+      const token = await getUser(input)
+      return token
+    }),
+  register: publicProcedure
     .input(z.object({
       username: z.string(),
       email: z.string().email(),
       password: z.string(),
     }))
     .mutation(async ({ input }) => {
-      const createdUser = await createUser(input)
-      return createdUser
+      const token = await createUser(input)
+      return token
     }),
 })
