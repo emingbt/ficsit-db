@@ -103,24 +103,32 @@ export const createUser = async ({ input, ctx }: {
   ctx: Context
 }) => {
   // Check if username or email is already taken
-  const user = await prisma.user.findFirst({
+  const isUsernameTaken = await prisma.user.findFirst({
     where: {
-      OR: [
-        {
-          username: input.username
-        },
-        {
-          email: input.email
-        }
-      ]
+      username: input.username
     }
   })
 
-  // If user exists, throw error
-  if (user) {
+  // If user with username exists, throw error
+  if (isUsernameTaken) {
     throw new TRPCError({
       code: 'BAD_REQUEST',
-      message: 'User already exists'
+      message: 'This username is already taken'
+    })
+  }
+
+  const isEmailTaken = await prisma.user.findFirst({
+    where: {
+      email: input.email
+    }
+  })
+
+  // If user with email exists, throw error
+
+  if (isEmailTaken) {
+    throw new TRPCError({
+      code: 'BAD_REQUEST',
+      message: 'This email is already taken'
     })
   }
 
