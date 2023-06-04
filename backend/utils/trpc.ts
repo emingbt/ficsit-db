@@ -1,7 +1,5 @@
 import { initTRPC, inferAsyncReturnType, TRPCError } from '@trpc/server'
 import { createContext } from './context'
-import * as trpcExpress from '@trpc/server/adapters/express'
-import { verifyToken } from './auth'
 
 // Create context type
 export type Context = inferAsyncReturnType<typeof createContext>
@@ -9,16 +7,21 @@ export type Context = inferAsyncReturnType<typeof createContext>
 // Initialize TRPC
 const t = initTRPC.context<Context>().create()
 
-// Create auth middleware
-const isAuthed = t.middleware(({ ctx, next }) => {
-  if (!ctx.req.headers.authorization) {
-    throw new TRPCError({ code: 'FORBIDDEN' })
-  }
-  else if (!verifyToken(ctx.req.headers.authorization)) {
-    throw new TRPCError({ code: 'UNAUTHORIZED' })
+const isAuthed = t.middleware(async ({ ctx, next }) => {
+  // If user is not authorized, throw error
+  if (!ctx.user) {
+    throw new TRPCError({
+      code: 'UNAUTHORIZED',
+      message: 'User is not authorized'
+    })
   }
 
-  return next()
+  // Continue
+  return next({
+    ctx: {
+      user: ctx.user
+    }
+  })
 })
 
 // Export router and procedures
