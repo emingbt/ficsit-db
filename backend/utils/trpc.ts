@@ -1,16 +1,10 @@
 import { initTRPC, inferAsyncReturnType, TRPCError } from '@trpc/server'
+import { createContext } from './context'
 import * as trpcExpress from '@trpc/server/adapters/express'
 import { verifyToken } from './auth'
 
-// Create context and type it
-export const createContext = async ({
-  req,
-  res
-}: trpcExpress.CreateExpressContextOptions) => ({
-  req,
-  res
-})
-type Context = inferAsyncReturnType<typeof createContext>
+// Create context type
+export type Context = inferAsyncReturnType<typeof createContext>
 
 // Initialize TRPC
 const t = initTRPC.context<Context>().create()

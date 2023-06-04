@@ -5,7 +5,7 @@ import express from 'express'
 import { expressHandler } from 'trpc-playground/handlers/express'
 import * as trpcExpress from '@trpc/server/adapters/express'
 import { appRouter } from './routers'
-import { createContext } from './utils/trpc'
+import { createContext } from './utils/context'
 
 const runApp = async () => {
   const app = express()
