@@ -4,7 +4,9 @@ import {
   getAllUsers,
   getUserByUsername,
   createUser,
-  loginUser
+  loginUser,
+  forgotPassword,
+  deleteUser
 } from "../services/user"
 
 export const userRouter = router({
@@ -12,6 +14,12 @@ export const userRouter = router({
     .query(async () => {
       const users = await getAllUsers()
       return users
+    }),
+  deleteUser: protectedProcedure
+    .input(z.object({ id: z.string() }))
+    .mutation(async ({ input }) => {
+      const deletedUser = await deleteUser(input)
+      return deletedUser
     }),
   getUser: publicProcedure
     .input(z.object({ username: z.string() }))
@@ -38,4 +46,10 @@ export const userRouter = router({
       const user = await createUser({ input, ctx })
       return user
     }),
+  forgotPassword: publicProcedure
+    .input(z.object({ email: z.string().email() }))
+    .mutation(async ({ input }) => {
+      const sentAddress = await forgotPassword(input)
+      return sentAddress
+    })
 })

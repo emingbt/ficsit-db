@@ -2,12 +2,36 @@ import bcrypt from 'bcrypt'
 import { TRPCError } from '@trpc/server'
 import { prisma } from '../prisma'
 import type { Context } from '../utils/trpc'
-import { generateToken } from '../utils/auth'
+import { generateToken, TokenType } from '../utils/auth'
+import { sendForgotPasswordEmail } from '../utils/nodemailer'
 
 export const getAllUsers = async () => {
   const users = await prisma.user.findMany()
 
   return users
+}
+
+export const deleteUser = async (input: { id: string }) => {
+  // Check if user exists
+  const user = await prisma.user.findUnique({
+    where: {
+      id: input.id
+    }
+  })
+
+  // If user does not exist, throw error
+  if (!user) {
+    throw new TRPCError({ code: 'NOT_FOUND', message: 'User does not exist' })
+  }
+
+  // Delete user
+  const deletedUser = await prisma.user.delete({
+    where: {
+      id: input.id
+    }
+  })
+
+  return deletedUser
 }
 
 export const getUserById = async (input: { id: string }) => {
@@ -159,3 +183,37 @@ export const createUser = async ({ input, ctx }: {
   createdUser.password = ''
   return createdUser
 }
+
+export const logoutUser = async ({ ctx }: {
+  ctx: Context
+}) => {
+  // Clear cookie
+  ctx.res.clearCookie('token')
+
+  return true
+}
+
+export const forgotPassword = async (input: { email: string }) => {
+  // Check if user exists
+  const user = await prisma.user.findUnique({
+    where: {
+      email: input.email
+    }
+  })
+
+  // If user does not exist, throw error
+  if (!user) {
+    throw new TRPCError({
+      code: 'NOT_FOUND',
+      message: 'User does not exist'
+    })
+  }
+
+  // Generate password reset token
+  const passwordResetToken = generateToken(user.id, TokenType.RESET_PASSWORD)
+
+  // Send email with password reset link and return sent address
+  const sentAddress = sendForgotPasswordEmail(user.email, user.username, passwordResetToken)
+  return sentAddress
+}
+
