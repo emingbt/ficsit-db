@@ -1,12 +1,18 @@
 import { protectedProcedure, publicProcedure, router } from "../utils/trpc"
 import z from 'zod'
 import {
+  getAllUsers,
   getUserByUsername,
-  getUser,
-  createUser
+  createUser,
+  loginUser
 } from "../services/user"
 
 export const userRouter = router({
+  getAllUsers: protectedProcedure
+    .query(async () => {
+      const users = await getAllUsers()
+      return users
+    }),
   getUser: publicProcedure
     .input(z.object({ username: z.string() }))
     .query(async ({ input }) => {
@@ -16,20 +22,20 @@ export const userRouter = router({
   login: publicProcedure
     .input(z.object({
       email: z.string().email(),
-      password: z.string(),
+      password: z.string().min(8).max(16)
     }))
-    .mutation(async ({ input }) => {
-      const token = await getUser(input)
-      return token
+    .mutation(async ({ input, ctx }) => {
+      const user = await loginUser({ input, ctx })
+      return user
     }),
   register: publicProcedure
     .input(z.object({
       username: z.string(),
       email: z.string().email(),
-      password: z.string(),
+      password: z.string().min(8).max(16)
     }))
-    .mutation(async ({ input }) => {
-      const token = await createUser(input)
-      return token
+    .mutation(async ({ input, ctx }) => {
+      const user = await createUser({ input, ctx })
+      return user
     }),
 })
