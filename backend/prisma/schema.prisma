@@ -44,11 +44,13 @@ model Blueprint {
 }
 
 model User {
-  id         String      @id @default(uuid())
-  email      String      @unique
-  username   String      @unique
-  password   String
-  comments   Comment[]
-  blueprints Blueprint[]
-  upvotes    Upvote[]
+  id          String      @id @default(uuid())
+  email       String      @unique
+  username    String      @unique
+  password    String
+  memberSince DateTime    @default(now())
+  isVerified  Boolean     @default(false)
+  comments    Comment[]
+  blueprints  Blueprint[]
+  upvotes     Upvote[]
 }
