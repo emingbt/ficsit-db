@@ -1,10 +1,8 @@
 import bcrypt from 'bcrypt'
 import { TRPCError } from '@trpc/server'
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '../prisma'
 import type { Context } from '../utils/trpc'
 import { generateToken } from '../utils/auth'
-
-const prisma = new PrismaClient()
 
 export const getAllUsers = async () => {
   const users = await prisma.user.findMany()

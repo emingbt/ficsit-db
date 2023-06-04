@@ -1,7 +1,5 @@
-import { PrismaClient } from "@prisma/client"
+import { prisma } from "../prisma"
 import cloudinary from 'cloudinary'
-
-const prisma = new PrismaClient()
 
 export const getAllBlueprints = async () => {
   const allBlueprints = await prisma.blueprint.findMany()
