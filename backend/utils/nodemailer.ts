@@ -26,7 +26,7 @@ export const sendForgotPasswordEmail = async (
       from: process.env.EMAIL_USER,
       to,
       subject: "Reset Your Password",
-      html: pug.renderFile(`${__dirname}/../../views/../views/forgotPassword.pug`, { username, forgotPasswordUrl })
+      html: pug.renderFile(`${__dirname}/../../views/forgotPassword.pug`, { username, forgotPasswordUrl })
     }, async (err, info) => {
       // If error, throw an error
       if (err) {
