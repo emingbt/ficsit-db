@@ -210,10 +210,17 @@ export const forgotPassword = async (input: { email: string }) => {
   }
 
   // Generate password reset token
-  const passwordResetToken = generateToken(user.id, TokenType.RESET_PASSWORD)
+  const passwordResetToken = generateToken(
+    user.id,
+    TokenType.RESET_PASSWORD
+  )
 
   // Send email with password reset link and return sent address
-  const sentAddress = sendForgotPasswordEmail(user.email, user.username, passwordResetToken)
+  const sentAddress = sendEmail(
+    user.email,
+    user.username,
+    passwordResetToken,
+    EmailType.RESET_PASSWORD
+  )
   return sentAddress
 }
-
