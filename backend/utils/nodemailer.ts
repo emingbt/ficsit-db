@@ -18,9 +18,9 @@ export enum EmailType {
 
 export const sendEmail = async (
   to: string,
-  username: string,
   token: string,
-  type: EmailType
+  type: EmailType,
+  username?: string
 ) => {
   // Create forgot password url
   const forgotPasswordUrl = `${process.env.CLIENT_URL}/reset-password/${token}`
@@ -35,7 +35,7 @@ export const sendEmail = async (
   switch (type) {
     case EmailType.RESET_PASSWORD:
       subject = 'Reset Your Password'
-      html = pug.renderFile(`${__dirname}/../../views/forgotPassword.pug`, { username, forgotPasswordUrl })
+      html = pug.renderFile(`${__dirname}/../../views/forgotPassword.pug`, { forgotPasswordUrl })
       break
     case EmailType.EMAIL_VERIFICATION:
       subject = 'Verify Your Email'
