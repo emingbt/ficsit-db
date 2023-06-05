@@ -11,22 +11,45 @@ const transporter = nodemailer.createTransport({
   }
 })
 
+export enum EmailType {
+  RESET_PASSWORD,
+  EMAIL_VERIFICATION
+}
 
-export const sendForgotPasswordEmail = async (
+export const sendEmail = async (
   to: string,
-  username: string,
-  token: string
+  token: string,
+  type: EmailType,
+  username?: string
 ) => {
   // Create forgot password url
   const forgotPasswordUrl = `${process.env.CLIENT_URL}/reset-password/${token}`
+  // Create verify email url
+  const verifyEmailUrl = `${process.env.CLIENT_URL}/verify-email/${token}`
+  // Create email subject
+  let subject = ''
+  // Create email html
+  let html = ''
+
+  // Check email type
+  switch (type) {
+    case EmailType.RESET_PASSWORD:
+      subject = 'Reset Your Password'
+      html = pug.renderFile(`${__dirname}/../../views/forgotPassword.pug`, { forgotPasswordUrl })
+      break
+    case EmailType.EMAIL_VERIFICATION:
+      subject = 'Verify Your Email'
+      html = pug.renderFile(`${__dirname}/../../views/verifyEmail.pug`, { username, verifyEmailUrl })
+      break
+  }
 
   // Wrap sendMail function in a promise
   return new Promise((resolve, reject) => {
     transporter.sendMail({
       from: process.env.EMAIL_USER,
       to,
-      subject: "Reset Your Password",
-      html: pug.renderFile(`${__dirname}/../../views/forgotPassword.pug`, { username, forgotPasswordUrl })
+      subject,
+      html
     }, async (err, info) => {
       // If error, throw an error
       if (err) {

@@ -43,16 +43,10 @@ export const verifyToken = async (token: string, tokenType = TokenType.ACCESS) =
     const { id } = decoded as { id: string }
 
     if (!id) {
-      return false
+      return null
     }
 
-    const user = await getUserById({ id })
-
-    if (!user) {
-      return false
-    }
-
-    return user
+    return id
   } catch (err) {
     throw new TRPCError({ code: 'BAD_REQUEST', message: 'Invalid token' })
   }
