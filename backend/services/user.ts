@@ -182,9 +182,9 @@ export const createUser = async ({ input, ctx }: {
   // Send verification email
   sendEmail(
     createdUser.email,
-    createdUser.username,
     token,
-    EmailType.EMAIL_VERIFICATION
+    EmailType.EMAIL_VERIFICATION,
+    createdUser.username
   )
 
   // Remove password and return user
@@ -226,7 +226,6 @@ export const forgotPassword = async (input: { email: string }) => {
   // Send email with password reset link and return sent address
   const sentAddress = sendEmail(
     user.email,
-    user.username,
     passwordResetToken,
     EmailType.RESET_PASSWORD
   )
