@@ -6,28 +6,28 @@ export const createContext = async ({
   req,
   res
 }: trpcExpress.CreateExpressContextOptions) => {
-  // Get user from header function
-  async function getUserFromHeader() {
+  // Get userId from header function
+  async function getUserIdFromHeader() {
     // If no authorization header, return null
     if (!req.headers.authorization) {
       return null
     }
 
     // Verify token
-    const user = await verifyToken(
+    const userId = await verifyToken(
       req.headers.authorization.split(' ')[1]
     )
 
-    return user
+    return userId
   }
 
-  // Get user
-  const user = await getUserFromHeader()
+  // Get userId
+  const userId = await getUserIdFromHeader()
 
   // Return context
   return {
     req,
     res,
-    user
+    userId
   }
 }

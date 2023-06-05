@@ -9,7 +9,7 @@ const t = initTRPC.context<Context>().create()
 
 const isAuthed = t.middleware(async ({ ctx, next }) => {
   // If user is not authorized, throw error
-  if (!ctx.user) {
+  if (!ctx.userId) {
     throw new TRPCError({
       code: 'UNAUTHORIZED',
       message: 'User is not authorized'
@@ -19,7 +19,7 @@ const isAuthed = t.middleware(async ({ ctx, next }) => {
   // Continue
   return next({
     ctx: {
-      user: ctx.user
+      user: ctx.userId
     }
   })
 })
