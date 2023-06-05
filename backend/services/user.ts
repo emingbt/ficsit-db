@@ -3,7 +3,7 @@ import { TRPCError } from '@trpc/server'
 import { prisma } from '../prisma'
 import type { Context } from '../utils/trpc'
 import { generateToken, TokenType } from '../utils/auth'
-import { sendForgotPasswordEmail } from '../utils/nodemailer'
+import { EmailType, sendEmail } from '../utils/nodemailer'
 
 export const getAllUsers = async () => {
   const users = await prisma.user.findMany()
@@ -223,4 +223,57 @@ export const forgotPassword = async (input: { email: string }) => {
     EmailType.RESET_PASSWORD
   )
   return sentAddress
+}
+
+export const resetPassword = async ({ input, ctx }: {
+  input: {
+    password: string,
+    token: string
+  },
+  ctx: Context
+}) => {
+  // If context does not have userId, throw error
+  // Actually, this should never happen, because
+  // there is a middleware that checks if token is valid
+  // But typescript does not know that
+  if (!ctx.userId) {
+    throw new TRPCError({
+      code: 'BAD_REQUEST',
+      message: 'Invalid token'
+    })
+  }
+
+  // Change password
+  const hashedPassword = await bcrypt.hash(input.password, 10)
+  const updatedUser = await prisma.user.update({
+    where: {
+      id: ctx.userId
+    },
+    data: {
+      password: hashedPassword
+    }
+  })
+
+  // If user does not exist, throw error
+  if (!updatedUser) {
+    throw new TRPCError({
+      code: 'NOT_FOUND',
+      message: 'User does not exist'
+    })
+  }
+
+  // Generate token
+  const token = `Bearer ${generateToken(updatedUser.id)}`
+
+  // Set token in cookie
+  ctx.res.cookie('token', token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'strict',
+    expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30) // 1 month
+  })
+
+  // Remove password and return user
+  updatedUser.password = ''
+  return updatedUser
 }

@@ -6,7 +6,8 @@ import {
   createUser,
   loginUser,
   forgotPassword,
-  deleteUser
+  deleteUser,
+  resetPassword
 } from "../services/user"
 
 export const userRouter = router({
@@ -51,5 +52,14 @@ export const userRouter = router({
     .mutation(async ({ input }) => {
       const sentAddress = await forgotPassword(input)
       return sentAddress
+    }),
+  resetPassword: protectedProcedure
+    .input(z.object({
+      token: z.string(),
+      password: z.string().min(8).max(16)
+    }))
+    .mutation(async ({ input, ctx }) => {
+      const user = await resetPassword({ input, ctx })
+      return user
     })
 })
