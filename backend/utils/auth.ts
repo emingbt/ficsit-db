@@ -4,20 +4,20 @@ import { TRPCError } from '@trpc/server'
 
 // Token types enum
 export enum TokenType {
-  access = 'ACCESS',
-  resetPassword = 'RESET_PASSWORD',
-  emailConfirmation = 'EMAIL_CONFIRMATION'
+  ACCESS = 'ACCESS',
+  RESET_PASSWORD = 'RESET_PASSWORD',
+  EMAIL_CONFIRMATION = 'EMAIL_CONFIRMATION'
 }
 
 // Token expiration times
 const expirationTimes = {
-  [TokenType.access]: '30d',
-  [TokenType.resetPassword]: '30m',
-  [TokenType.emailConfirmation]: '30m'
+  [TokenType.ACCESS]: '30d',
+  [TokenType.RESET_PASSWORD]: '5m',
+  [TokenType.EMAIL_CONFIRMATION]: '30m'
 }
 
 // Generate token
-export const generateToken = (id: string, tokenType = TokenType.access) => {
+export const generateToken = (id: string, tokenType = TokenType.ACCESS) => {
   // Get secret from environment variables
   const secret = process.env[`JWT_${tokenType}_SECRET`]
 
@@ -36,7 +36,7 @@ export const generateToken = (id: string, tokenType = TokenType.access) => {
 }
 
 // Verify token
-export const verifyToken = async (token: string, tokenType = TokenType.access) => {
+export const verifyToken = async (token: string, tokenType = TokenType.ACCESS) => {
   try {
     const secret = process.env[`JWT_${tokenType}_SECRET`]
     const decoded = jwt.verify(token, secret!)

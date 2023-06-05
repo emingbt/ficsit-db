@@ -6,12 +6,16 @@ import { expressHandler } from 'trpc-playground/handlers/express'
 import * as trpcExpress from '@trpc/server/adapters/express'
 import { appRouter } from './routers'
 import { createContext } from './utils/context'
+import path from 'path'
 
 const runApp = async () => {
   const app = express()
 
   const trpcApiEndpoint = '/trpc'
   const playgroundEndpoint = '/trpc-playground'
+
+  app.set("views", path.join(__dirname, "views"))
+  app.set("view engine", "pug")
 
   app.use(
     trpcApiEndpoint,

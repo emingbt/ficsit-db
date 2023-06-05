@@ -2,12 +2,36 @@ import bcrypt from 'bcrypt'
 import { TRPCError } from '@trpc/server'
 import { prisma } from '../prisma'
 import type { Context } from '../utils/trpc'
-import { generateToken } from '../utils/auth'
+import { generateToken, TokenType } from '../utils/auth'
+import { sendForgotPasswordEmail } from '../utils/nodemailer'
 
 export const getAllUsers = async () => {
   const users = await prisma.user.findMany()
 
   return users
+}
+
+export const deleteUser = async (input: { id: string }) => {
+  // Check if user exists
+  const user = await prisma.user.findUnique({
+    where: {
+      id: input.id
+    }
+  })
+
+  // If user does not exist, throw error
+  if (!user) {
+    throw new TRPCError({ code: 'NOT_FOUND', message: 'User does not exist' })
+  }
+
+  // Delete user
+  const deletedUser = await prisma.user.delete({
+    where: {
+      id: input.id
+    }
+  })
+
+  return deletedUser
 }
 
 export const getUserById = async (input: { id: string }) => {
@@ -103,24 +127,32 @@ export const createUser = async ({ input, ctx }: {
   ctx: Context
 }) => {
   // Check if username or email is already taken
-  const user = await prisma.user.findFirst({
+  const isUsernameTaken = await prisma.user.findFirst({
     where: {
-      OR: [
-        {
-          username: input.username
-        },
-        {
-          email: input.email
-        }
-      ]
+      username: input.username
     }
   })
 
-  // If user exists, throw error
-  if (user) {
+  // If user with username exists, throw error
+  if (isUsernameTaken) {
     throw new TRPCError({
       code: 'BAD_REQUEST',
-      message: 'User already exists'
+      message: 'This username is already taken'
+    })
+  }
+
+  const isEmailTaken = await prisma.user.findFirst({
+    where: {
+      email: input.email
+    }
+  })
+
+  // If user with email exists, throw error
+
+  if (isEmailTaken) {
+    throw new TRPCError({
+      code: 'BAD_REQUEST',
+      message: 'This email is already taken'
     })
   }
 
@@ -151,3 +183,37 @@ export const createUser = async ({ input, ctx }: {
   createdUser.password = ''
   return createdUser
 }
+
+export const logoutUser = async ({ ctx }: {
+  ctx: Context
+}) => {
+  // Clear cookie
+  ctx.res.clearCookie('token')
+
+  return true
+}
+
+export const forgotPassword = async (input: { email: string }) => {
+  // Check if user exists
+  const user = await prisma.user.findUnique({
+    where: {
+      email: input.email
+    }
+  })
+
+  // If user does not exist, throw error
+  if (!user) {
+    throw new TRPCError({
+      code: 'NOT_FOUND',
+      message: 'User does not exist'
+    })
+  }
+
+  // Generate password reset token
+  const passwordResetToken = generateToken(user.id, TokenType.RESET_PASSWORD)
+
+  // Send email with password reset link and return sent address
+  const sentAddress = sendForgotPasswordEmail(user.email, user.username, passwordResetToken)
+  return sentAddress
+}
+
