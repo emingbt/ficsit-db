@@ -179,6 +179,14 @@ export const createUser = async ({ input, ctx }: {
     expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30) // 1 month
   })
 
+  // Send verification email
+  sendEmail(
+    createdUser.email,
+    createdUser.username,
+    token,
+    EmailType.EMAIL_VERIFICATION
+  )
+
   // Remove password and return user
   createdUser.password = ''
   return createdUser
