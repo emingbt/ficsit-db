@@ -11,11 +11,14 @@ export const getAllUsers = async () => {
   return users
 }
 
-export const deleteUser = async (input: { id: string }) => {
-  // Check if user exists
+export const deleteUser = async ({ input, ctx }: {
+  input: { password: string },
+  ctx: Context
+}) => {
+  // Check if user exists and password is correct
   const user = await prisma.user.findUnique({
     where: {
-      id: input.id
+      id: ctx.userId
     }
   })
 
@@ -24,10 +27,24 @@ export const deleteUser = async (input: { id: string }) => {
     throw new TRPCError({ code: 'NOT_FOUND', message: 'User does not exist' })
   }
 
+  // If password is incorrect, throw error
+  const passwordMatch = await bcrypt.compare(input.password, user.password)
+
+  if (!passwordMatch) {
+    throw new TRPCError({ code: 'UNAUTHORIZED', message: 'Incorrect password' })
+  }
+
+  // Delete all blueprints by user
+  await prisma.blueprint.deleteMany({
+    where: {
+      designerId: ctx.userId
+    }
+  })
+
   // Delete user
   const deletedUser = await prisma.user.delete({
     where: {
-      id: input.id
+      id: ctx.userId
     }
   })
 
