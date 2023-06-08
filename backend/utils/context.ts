@@ -1,33 +1,28 @@
 import * as trpcExpress from '@trpc/server/adapters/express'
-import { verifyToken } from './auth'
 
 // Create context
 export const createContext = async ({
   req,
   res
 }: trpcExpress.CreateExpressContextOptions) => {
-  // Get userId from header function
-  async function getUserIdFromHeader() {
+  // Get token from header function
+  function getTokenFromHeader() {
     // If no authorization header, return null
     if (!req.headers.authorization) {
-      return null
+      return ''
     }
 
-    // Verify token
-    const userId = await verifyToken(
-      req.headers.authorization.split(' ')[1]
-    )
-
-    return userId
+    return req.headers.authorization?.split(' ')[1] || ''
   }
 
-  // Get userId
-  const userId = await getUserIdFromHeader()
+  // Get token from header
+  const token = getTokenFromHeader()
 
   // Return context
   return {
     req,
     res,
-    userId
+    token,
+    userId: ''
   }
 }
