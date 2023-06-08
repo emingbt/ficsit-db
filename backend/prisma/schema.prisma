@@ -14,9 +14,9 @@ datasource db {
 model Upvote {
   id          String    @id @default(uuid())
   createdAt   DateTime  @default(now())
-  blueprint   Blueprint @relation(fields: [blueprintId], references: [id])
+  blueprint   Blueprint @relation(fields: [blueprintId], references: [id], onDelete: Cascade)
   blueprintId String
-  user        User      @relation(fields: [userId], references: [id])
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId      String
 }
 
@@ -24,23 +24,23 @@ model Comment {
   id          String    @id @default(uuid())
   createdAt   DateTime  @default(now())
   content     String?
-  author      User      @relation(fields: [authorId], references: [id])
+  author      User      @relation(fields: [authorId], references: [id], onDelete: Restrict)
   authorId    String
-  blueprint   Blueprint @relation(fields: [blueprintId], references: [id])
+  blueprint   Blueprint @relation(fields: [blueprintId], references: [id], onDelete: Cascade)
   blueprintId String
 }
 
 model Blueprint {
   id          String    @id @default(uuid())
-  title       String
+  title       String    @unique
   description String?
   fileLinks   String[]
   imageLinks  String[]
   categories  String[]
   comments    Comment[]
   upvotes     Upvote[]
-  designer    User      @relation(fields: [designerId], references: [id])
-  designerId  String    @unique
+  designer    User      @relation(fields: [designerId], references: [id], onDelete: Cascade)
+  designerId  String
 }
 
 model User {
