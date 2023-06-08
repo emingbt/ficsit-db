@@ -31,13 +31,12 @@ export const blueprintRouter = router({
     .input(z.object({
       title: z.string(),
       description: z.string(),
-      fileLinks: z.array(z.string()),
-      imageLinks: z.array(z.string()),
-      categories: z.array(z.string()),
-      designerId: z.string()
+      files: z.array(z.string()),
+      images: z.array(z.string()),
+      categories: z.array(z.string())
     }))
-    .mutation(async ({ input }) => {
-      const createdBlueprint = await createBlueprint(input)
+    .mutation(async ({ input, ctx }) => {
+      const createdBlueprint = await createBlueprint({ input, ctx })
       return createdBlueprint
     }),
   updateBlueprint: protectedProcedure
