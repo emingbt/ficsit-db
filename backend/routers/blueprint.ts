@@ -6,7 +6,7 @@ import {
   createBlueprint,
   updateBlueprint,
   deleteBlueprint,
-  getBlueprintByDesignerId
+  getBlueprintsByDesignerId
 } from "../services/blueprint"
 
 export const blueprintRouter = router({
@@ -15,16 +15,16 @@ export const blueprintRouter = router({
       const allBlueprints = await getAllBlueprints()
       return allBlueprints
     }),
-  getBlueprintById: publicProcedure
+  getBlueprintById: protectedProcedure
     .input(z.object({ blueprintId: z.string() }))
     .query(async ({ input }) => {
       const blueprint = await getBlueprintById(input)
       return blueprint
     }),
-  getBlueprintByDesignerId: publicProcedure
+  getBlueprintByDesignerId: protectedProcedure
     .input(z.object({ designerId: z.string() }))
     .query(async ({ input }) => {
-      const blueprints = await getBlueprintByDesignerId(input)
+      const blueprints = await getBlueprintsByDesignerId(input)
       return blueprints
     }),
   createBlueprint: protectedProcedure
