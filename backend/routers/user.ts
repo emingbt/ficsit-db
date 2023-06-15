@@ -4,11 +4,13 @@ import {
   getAllUsers,
   getUserByUsername,
   createUser,
+  deleteUser
+} from "../services/user"
+import {
   loginUser,
   forgotPassword,
-  deleteUser,
   resetPassword
-} from "../services/user"
+} from "../services/auth"
 
 export const userRouter = router({
   getAllUsers: protectedProcedure
