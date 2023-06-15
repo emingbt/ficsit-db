@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken'
-import { getUserById } from '../services/user'
 import { TRPCError } from '@trpc/server'
 
 // Token types enum
