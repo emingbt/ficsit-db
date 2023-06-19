@@ -4,11 +4,13 @@ import {
   getAllUsers,
   getUserByUsername,
   createUser,
+  deleteUser
+} from "../services/user"
+import {
   loginUser,
   forgotPassword,
-  deleteUser,
   resetPassword
-} from "../services/user"
+} from "../services/auth"
 
 export const userRouter = router({
   getAllUsers: protectedProcedure
@@ -17,9 +19,9 @@ export const userRouter = router({
       return users
     }),
   deleteUser: protectedProcedure
-    .input(z.object({ id: z.string() }))
-    .mutation(async ({ input }) => {
-      const deletedUser = await deleteUser(input)
+    .input(z.object({ password: z.string() }))
+    .mutation(async ({ input, ctx }) => {
+      const deletedUser = await deleteUser({ input, ctx })
       return deletedUser
     }),
   getUser: publicProcedure

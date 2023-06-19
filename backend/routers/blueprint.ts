@@ -6,7 +6,7 @@ import {
   createBlueprint,
   updateBlueprint,
   deleteBlueprint,
-  getBlueprintByDesignerId
+  getBlueprintsByDesignerId
 } from "../services/blueprint"
 
 export const blueprintRouter = router({
@@ -15,39 +15,38 @@ export const blueprintRouter = router({
       const allBlueprints = await getAllBlueprints()
       return allBlueprints
     }),
-  getBlueprintById: publicProcedure
+  getBlueprintById: protectedProcedure
     .input(z.object({ blueprintId: z.string() }))
     .query(async ({ input }) => {
       const blueprint = await getBlueprintById(input)
       return blueprint
     }),
-  getBlueprintByDesignerId: publicProcedure
+  getBlueprintByDesignerId: protectedProcedure
     .input(z.object({ designerId: z.string() }))
     .query(async ({ input }) => {
-      const blueprints = await getBlueprintByDesignerId(input)
+      const blueprints = await getBlueprintsByDesignerId(input)
       return blueprints
     }),
   createBlueprint: protectedProcedure
     .input(z.object({
-      title: z.string(),
+      title: z.string().nonempty(),
       description: z.string(),
-      fileLinks: z.array(z.string()),
-      imageLinks: z.array(z.string()),
-      categories: z.array(z.string()),
-      designerId: z.string()
+      files: z.array(z.string()).min(2),
+      images: z.array(z.string()).min(1),
+      categories: z.array(z.string()).min(1)
     }))
-    .mutation(async ({ input }) => {
-      const createdBlueprint = await createBlueprint(input)
+    .mutation(async ({ input, ctx }) => {
+      const createdBlueprint = await createBlueprint({ input, ctx })
       return createdBlueprint
     }),
   updateBlueprint: protectedProcedure
     .input(z.object({
       id: z.string(),
-      title: z.string(),
+      title: z.string().nonempty(),
       description: z.string(),
-      fileLinks: z.array(z.string()),
-      imageLinks: z.array(z.string()),
-      categories: z.array(z.string()),
+      fileLinks: z.array(z.string()).min(2),
+      imageLinks: z.array(z.string()).min(1),
+      categories: z.array(z.string()).min(1)
     }))
     .mutation(async ({ input }) => {
       const updatedBlueprint = await updateBlueprint(input)
