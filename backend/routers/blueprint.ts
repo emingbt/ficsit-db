@@ -29,11 +29,11 @@ export const blueprintRouter = router({
     }),
   createBlueprint: protectedProcedure
     .input(z.object({
-      title: z.string(),
+      title: z.string().nonempty(),
       description: z.string(),
-      files: z.array(z.string()),
-      images: z.array(z.string()),
-      categories: z.array(z.string())
+      files: z.array(z.string()).min(2),
+      images: z.array(z.string()).min(1),
+      categories: z.array(z.string()).min(1)
     }))
     .mutation(async ({ input, ctx }) => {
       const createdBlueprint = await createBlueprint({ input, ctx })
@@ -42,11 +42,11 @@ export const blueprintRouter = router({
   updateBlueprint: protectedProcedure
     .input(z.object({
       id: z.string(),
-      title: z.string(),
+      title: z.string().nonempty(),
       description: z.string(),
-      fileLinks: z.array(z.string()),
-      imageLinks: z.array(z.string()),
-      categories: z.array(z.string()),
+      fileLinks: z.array(z.string()).min(2),
+      imageLinks: z.array(z.string()).min(1),
+      categories: z.array(z.string()).min(1)
     }))
     .mutation(async ({ input }) => {
       const updatedBlueprint = await updateBlueprint(input)
