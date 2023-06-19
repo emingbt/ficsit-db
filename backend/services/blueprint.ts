@@ -3,12 +3,12 @@ import { TRPCError } from "@trpc/server"
 import cloudinary from 'cloudinary'
 import type { Context } from "../utils/trpc"
 
-export const getAllBlueprints = async () => {
+const getAllBlueprints = async () => {
   const allBlueprints = await prisma.blueprint.findMany()
   return allBlueprints
 }
 
-export const getBlueprintById = async (input: {
+const getBlueprintById = async (input: {
   blueprintId: string
 }) => {
   const blueprint = await prisma.blueprint.findUnique({
@@ -20,7 +20,7 @@ export const getBlueprintById = async (input: {
   return blueprint
 }
 
-export const getBlueprintsByDesignerId = async (input: {
+const getBlueprintsByDesignerId = async (input: {
   designerId: string
 }) => {
   // Get all blueprints by designer id
@@ -33,7 +33,7 @@ export const getBlueprintsByDesignerId = async (input: {
   return blueprints
 }
 
-export const createBlueprint = async ({ input, ctx }: {
+const createBlueprint = async ({ input, ctx }: {
   input: {
     title: string,
     description: string,
@@ -60,35 +60,6 @@ export const createBlueprint = async ({ input, ctx }: {
   // Get user id from context
   const userId = ctx.userId
 
-  // Convert image and files from base64 to cloudinary links
-  const cloudinaryImages = await Promise.all(input.images.map(async (image) => {
-    try {
-      const uploadedImage = await cloudinary.v2.uploader
-        .upload(image, { folder: `blueprints/${input.title}`, resource_type: 'image' })
-
-      return uploadedImage.secure_url
-    } catch (err) {
-      throw new TRPCError({
-        code: 'INTERNAL_SERVER_ERROR',
-        message: 'Image could not be uploaded'
-      })
-    }
-  }))
-
-  const cloudinaryFiles = await Promise.all(input.files.map(async (file) => {
-    try {
-      const uploadedFile = await cloudinary.v2.uploader
-        .upload(file, { folder: `blueprints/${input.title}`, resource_type: 'raw' })
-
-      return uploadedFile.secure_url
-    } catch (err) {
-      throw new TRPCError({
-        code: 'INTERNAL_SERVER_ERROR',
-        message: 'File could not be uploaded'
-      })
-    }
-  }))
-
   // Transform title to capitalize first letter of each word
   function transformTitle(title: string) {
     return title.replace(/\b\w/g, match => match.toUpperCase())
@@ -100,8 +71,6 @@ export const createBlueprint = async ({ input, ctx }: {
     data: {
       title: transformedTitle,
       description: input.description,
-      fileLinks: cloudinaryFiles,
-      imageLinks: cloudinaryImages,
       categories: input.categories,
       designerId: userId
     }
@@ -115,18 +84,72 @@ export const createBlueprint = async ({ input, ctx }: {
     })
   }
 
-  return createdBlueprint
+  // Convert image and files from base64 to cloudinary links
+  const cloudinaryImages = await Promise.all(input.images.map(async (image) => {
+    try {
+      const uploadedImage = await cloudinary.v2.uploader
+        .upload(image, { folder: `blueprints/${createdBlueprint.id}`, resource_type: 'image' })
+
+      return uploadedImage.secure_url
+    } catch (err) {
+      throw new TRPCError({
+        code: 'INTERNAL_SERVER_ERROR',
+        message: 'Image could not be uploaded'
+      })
+    }
+  }))
+
+  const cloudinaryFiles = await Promise.all(input.files.map(async (file, i) => {
+    try {
+      // Upload file to cloudinary with public id as title
+      const uploadedFile = await cloudinary.v2.uploader
+        .upload(file, {
+          folder: `blueprints/${createdBlueprint.id}`,
+          resource_type: 'raw',
+          format: i == 0 ? 'sbp' : 'sbpcfg',
+          public_id: i == 0 ? createdBlueprint.title : `${createdBlueprint.title} Config`
+        })
+
+      return uploadedFile.secure_url
+    } catch (err) {
+      throw new TRPCError({
+        code: 'INTERNAL_SERVER_ERROR',
+        message: 'File could not be uploaded'
+      })
+    }
+  }))
+
+  // Update blueprint with cloudinary links
+  const updatedBlueprint = await prisma.blueprint.update({
+    where: {
+      id: createdBlueprint.id
+    },
+    data: {
+      imageLinks: cloudinaryImages,
+      fileLinks: cloudinaryFiles
+    }
+  })
+
+  // If blueprint is not updated, throw error
+  if (!updatedBlueprint) {
+    throw new TRPCError({
+      code: "INTERNAL_SERVER_ERROR",
+      message: "Blueprint could not be updated"
+    })
+  }
+
+  return updatedBlueprint
 }
 
-export const updateBlueprint = async (input:
-  {
-    id: string,
-    title: string,
-    description: string,
-    fileLinks: string[],
-    imageLinks: string[],
-    categories: string[],
-  }) => {
+const updateBlueprint = async (input: {
+  id: string,
+  title: string,
+  description: string,
+  fileLinks: string[],
+  imageLinks: string[],
+  categories: string[],
+}) => {
+  // Check if user is the designer of the blueprint and update blueprint
   const updatedBlueprint = await prisma.blueprint.update({
     where: {
       id: input.id
@@ -148,7 +171,7 @@ export const updateBlueprint = async (input:
   return updatedBlueprint
 }
 
-export const deleteBlueprint = async (input: {
+const deleteBlueprint = async (input: {
   blueprintId: string
 }) => {
   const deletedBlueprint = await prisma.blueprint.delete({
@@ -157,10 +180,15 @@ export const deleteBlueprint = async (input: {
     }
   })
 
-  await cloudinary.v2.uploader
-    .destroy(`blueprints/${input.blueprintId}`, (result) => {
-      console.log(result)
-    })
 
   return deletedBlueprint
+}
+
+export {
+  getAllBlueprints,
+  getBlueprintById,
+  getBlueprintsByDesignerId,
+  createBlueprint,
+  updateBlueprint,
+  deleteBlueprint
 }
