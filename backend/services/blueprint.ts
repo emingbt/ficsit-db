@@ -8,31 +8,6 @@ const getAllBlueprints = async () => {
   return allBlueprints
 }
 
-const getBlueprintById = async (input: {
-  blueprintId: string
-}) => {
-  const blueprint = await prisma.blueprint.findUnique({
-    where: {
-      id: input.blueprintId
-    }
-  })
-
-  return blueprint
-}
-
-const getBlueprintsByDesignerId = async (input: {
-  designerId: string
-}) => {
-  // Get all blueprints by designer id
-  const blueprints = await prisma.blueprint.findMany({
-    where: {
-      designerId: input.designerId
-    }
-  })
-
-  return blueprints
-}
-
 const getBlueprintByTitle = async (input: {
   title: string
 }) => {
@@ -230,9 +205,7 @@ const deleteBlueprint = async (input: {
 
 export {
   getAllBlueprints,
-  getBlueprintById,
   getBlueprintByTitle,
-  getBlueprintsByDesignerId,
   createBlueprint,
   updateBlueprint,
   deleteBlueprint

@@ -2,12 +2,10 @@ import { protectedProcedure, publicProcedure, router } from "../utils/trpc"
 import z from 'zod'
 import {
   getAllBlueprints,
-  getBlueprintById,
   getBlueprintByTitle,
   createBlueprint,
   updateBlueprint,
-  deleteBlueprint,
-  getBlueprintsByDesignerId
+  deleteBlueprint
 } from "../services/blueprint"
 
 export const blueprintRouter = router({
@@ -15,18 +13,6 @@ export const blueprintRouter = router({
     .query(async () => {
       const allBlueprints = await getAllBlueprints()
       return allBlueprints
-    }),
-  getBlueprintById: protectedProcedure
-    .input(z.object({ blueprintId: z.string() }))
-    .query(async ({ input }) => {
-      const blueprint = await getBlueprintById(input)
-      return blueprint
-    }),
-  getBlueprintByDesignerId: protectedProcedure
-    .input(z.object({ designerId: z.string() }))
-    .query(async ({ input }) => {
-      const blueprints = await getBlueprintsByDesignerId(input)
-      return blueprints
     }),
   getBlueprintByTitle: publicProcedure
     .input(z.object({ title: z.string() }))
