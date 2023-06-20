@@ -33,6 +33,38 @@ const getBlueprintsByDesignerId = async (input: {
   return blueprints
 }
 
+const getBlueprintByTitle = async (input: {
+  title: string
+}) => {
+  // Get blueprint by title
+  const blueprint = await prisma.blueprint.findUnique({
+    where: {
+      title: input.title
+    },
+
+    // Remove id and designeriId and include designer username and upvotes count
+    select: {
+      title: true,
+      description: true,
+      categories: true,
+      imageLinks: true,
+      fileLinks: true,
+      designer: {
+        select: {
+          username: true
+        }
+      },
+      _count: {
+        select: {
+          upvotes: true
+        }
+      }
+    }
+  })
+
+  return blueprint
+}
+
 const createBlueprint = async ({ input, ctx }: {
   input: {
     title: string,
@@ -187,6 +219,7 @@ const deleteBlueprint = async (input: {
 export {
   getAllBlueprints,
   getBlueprintById,
+  getBlueprintByTitle,
   getBlueprintsByDesignerId,
   createBlueprint,
   updateBlueprint,

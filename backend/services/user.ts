@@ -147,7 +147,7 @@ const createUser = async ({ input, ctx }: {
   // Send verification email
   sendEmail(
     createdUser.email,
-    token,
+    token.split(' ')[1],
     EmailType.EMAIL_VERIFICATION,
     createdUser.username
   )
