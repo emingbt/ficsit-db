@@ -2,12 +2,10 @@ import { protectedProcedure, publicProcedure, router } from "../utils/trpc"
 import z from 'zod'
 import {
   getAllBlueprints,
-  getBlueprintById,
   getBlueprintByTitle,
   createBlueprint,
   updateBlueprint,
-  deleteBlueprint,
-  getBlueprintsByDesignerId
+  deleteBlueprint
 } from "../services/blueprint"
 
 export const blueprintRouter = router({
@@ -16,20 +14,8 @@ export const blueprintRouter = router({
       const allBlueprints = await getAllBlueprints()
       return allBlueprints
     }),
-  getBlueprintById: protectedProcedure
-    .input(z.object({ blueprintId: z.string() }))
-    .query(async ({ input }) => {
-      const blueprint = await getBlueprintById(input)
-      return blueprint
-    }),
-  getBlueprintByDesignerId: protectedProcedure
-    .input(z.object({ designerId: z.string() }))
-    .query(async ({ input }) => {
-      const blueprints = await getBlueprintsByDesignerId(input)
-      return blueprints
-    }),
   getBlueprintByTitle: publicProcedure
-    .input(z.object({ title: z.string() }))
+    .input(z.object({ title: z.string().nonempty() }))
     .query(async ({ input }) => {
       const blueprint = await getBlueprintByTitle(input)
       return blueprint
@@ -48,10 +34,10 @@ export const blueprintRouter = router({
     }),
   updateBlueprint: protectedProcedure
     .input(z.object({
-      id: z.string(),
+      oldTitle: z.string().nonempty(),
       title: z.string().nonempty(),
       description: z.string(),
-      fileLinks: z.array(z.string()).min(2),
+      fileLinks: z.array(z.string()).length(2),
       imageLinks: z.array(z.string()).min(1),
       categories: z.array(z.string()).min(1)
     }))

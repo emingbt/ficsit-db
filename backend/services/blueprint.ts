@@ -8,31 +8,6 @@ const getAllBlueprints = async () => {
   return allBlueprints
 }
 
-const getBlueprintById = async (input: {
-  blueprintId: string
-}) => {
-  const blueprint = await prisma.blueprint.findUnique({
-    where: {
-      id: input.blueprintId
-    }
-  })
-
-  return blueprint
-}
-
-const getBlueprintsByDesignerId = async (input: {
-  designerId: string
-}) => {
-  // Get all blueprints by designer id
-  const blueprints = await prisma.blueprint.findMany({
-    where: {
-      designerId: input.designerId
-    }
-  })
-
-  return blueprints
-}
-
 const getBlueprintByTitle = async (input: {
   title: string
 }) => {
@@ -57,6 +32,18 @@ const getBlueprintByTitle = async (input: {
       _count: {
         select: {
           upvotes: true
+        }
+      },
+      comments: {
+        select: {
+          id: true,
+          content: true,
+          createdAt: true,
+          author: {
+            select: {
+              username: true
+            }
+          }
         }
       }
     }
@@ -174,7 +161,7 @@ const createBlueprint = async ({ input, ctx }: {
 }
 
 const updateBlueprint = async (input: {
-  id: string,
+  oldTitle: string,
   title: string,
   description: string,
   fileLinks: string[],
@@ -184,7 +171,7 @@ const updateBlueprint = async (input: {
   // Check if user is the designer of the blueprint and update blueprint
   const updatedBlueprint = await prisma.blueprint.update({
     where: {
-      id: input.id
+      title: input.oldTitle
     },
     data: {
       title: input.title,
@@ -218,9 +205,7 @@ const deleteBlueprint = async (input: {
 
 export {
   getAllBlueprints,
-  getBlueprintById,
   getBlueprintByTitle,
-  getBlueprintsByDesignerId,
   createBlueprint,
   updateBlueprint,
   deleteBlueprint
