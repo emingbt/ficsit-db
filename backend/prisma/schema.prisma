@@ -23,7 +23,7 @@ model Upvote {
 model Comment {
   id          String    @id @default(uuid())
   createdAt   DateTime  @default(now())
-  content     String?
+  content     String
   author      User      @relation(fields: [authorId], references: [id], onDelete: Restrict)
   authorId    String
   blueprint   Blueprint @relation(fields: [blueprintId], references: [id], onDelete: Cascade)
