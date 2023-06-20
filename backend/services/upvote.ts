@@ -39,7 +39,10 @@ const upvoteBlueprint = async ({ input, ctx }: {
     }
   })
 
-  return newUpvote
+  return {
+    blueprint: blueprint.title,
+    upvotedAt: newUpvote.createdAt
+  }
 }
 
 const removeUpvote = async ({ input, ctx }: {
