@@ -161,7 +161,7 @@ const createBlueprint = async ({ input, ctx }: {
 }
 
 const updateBlueprint = async (input: {
-  id: string,
+  oldTitle: string,
   title: string,
   description: string,
   fileLinks: string[],
@@ -171,7 +171,7 @@ const updateBlueprint = async (input: {
   // Check if user is the designer of the blueprint and update blueprint
   const updatedBlueprint = await prisma.blueprint.update({
     where: {
-      id: input.id
+      title: input.oldTitle
     },
     data: {
       title: input.title,
