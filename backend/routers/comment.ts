@@ -5,7 +5,7 @@ import { addComment, removeComment } from "../services/comment"
 export const commentRouter = router({
   addComment: protectedProcedure
     .input(z.object({
-      blueprintTitle: z.string(),
+      blueprintTitle: z.string().nonempty(),
       comment: z.string().nonempty()
     }))
     .mutation(async ({ input, ctx }) => {
@@ -13,7 +13,7 @@ export const commentRouter = router({
       return comment
     }),
   removeComment: protectedProcedure
-    .input(z.object({ commentId: z.string() }))
+    .input(z.object({ commentId: z.string().nonempty() }))
     .mutation(async ({ input, ctx }) => {
       const removedComment = await removeComment({ input, ctx })
       return removedComment

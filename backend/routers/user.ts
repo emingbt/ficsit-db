@@ -19,13 +19,13 @@ export const userRouter = router({
       return users
     }),
   deleteUser: protectedProcedure
-    .input(z.object({ password: z.string() }))
+    .input(z.object({ password: z.string().nonempty() }))
     .mutation(async ({ input, ctx }) => {
       const deletedUser = await deleteUser({ input, ctx })
       return deletedUser
     }),
   getUser: publicProcedure
-    .input(z.object({ username: z.string() }))
+    .input(z.object({ username: z.string().nonempty() }))
     .query(async ({ input }) => {
       const user = await getUserByUsername(input)
       return user
@@ -41,7 +41,7 @@ export const userRouter = router({
     }),
   register: publicProcedure
     .input(z.object({
-      username: z.string(),
+      username: z.string().min(1).max(16),
       email: z.string().email(),
       password: z.string().min(8).max(16)
     }))
@@ -57,7 +57,7 @@ export const userRouter = router({
     }),
   resetPassword: protectedProcedure
     .input(z.object({
-      token: z.string(),
+      token: z.string().nonempty(),
       password: z.string().min(8).max(16)
     }))
     .mutation(async ({ input, ctx }) => {

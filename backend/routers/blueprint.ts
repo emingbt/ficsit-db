@@ -15,7 +15,7 @@ export const blueprintRouter = router({
       return allBlueprints
     }),
   getBlueprintByTitle: publicProcedure
-    .input(z.object({ title: z.string() }))
+    .input(z.object({ title: z.string().nonempty() }))
     .query(async ({ input }) => {
       const blueprint = await getBlueprintByTitle(input)
       return blueprint
@@ -34,10 +34,10 @@ export const blueprintRouter = router({
     }),
   updateBlueprint: protectedProcedure
     .input(z.object({
-      id: z.string(),
+      oldTitle: z.string().nonempty(),
       title: z.string().nonempty(),
       description: z.string(),
-      fileLinks: z.array(z.string()).min(2),
+      fileLinks: z.array(z.string()).length(2),
       imageLinks: z.array(z.string()).min(1),
       categories: z.array(z.string()).min(1)
     }))
