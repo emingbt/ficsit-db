@@ -3,6 +3,7 @@ import z from 'zod'
 import {
   getAllBlueprints,
   getBlueprintById,
+  getBlueprintByTitle,
   createBlueprint,
   updateBlueprint,
   deleteBlueprint,
@@ -26,6 +27,12 @@ export const blueprintRouter = router({
     .query(async ({ input }) => {
       const blueprints = await getBlueprintsByDesignerId(input)
       return blueprints
+    }),
+  getBlueprintByTitle: publicProcedure
+    .input(z.object({ title: z.string() }))
+    .query(async ({ input }) => {
+      const blueprint = await getBlueprintByTitle(input)
+      return blueprint
     }),
   createBlueprint: protectedProcedure
     .input(z.object({
