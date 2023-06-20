@@ -28,6 +28,7 @@ const addComment = async ({ input, ctx }: {
   })
 
   return {
+    id: newComment.id,
     blueprint: blueprint.title,
     comment: newComment.content,
     commentedAt: newComment.createdAt
