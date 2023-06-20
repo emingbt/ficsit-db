@@ -3,13 +3,25 @@ import { prisma } from '../prisma'
 import { TRPCError } from '@trpc/server'
 
 const upvoteBlueprint = async ({ input, ctx }: {
-  input: { blueprintId: string },
+  input: { blueprintTitle: string },
   ctx: Context
 }) => {
+  // Check if blueprint exists, and get its id
+  const blueprint = await prisma.blueprint.findFirst({
+    where: {
+      title: input.blueprintTitle
+    }
+  })
+
+  // If blueprint does not exist, throw error
+  if (!blueprint) {
+    throw new TRPCError({ code: 'BAD_REQUEST', message: 'Blueprint does not exist' })
+  }
+
   // Check if user has already upvoted the blueprint
   const upvote = await prisma.upvote.findFirst({
     where: {
-      blueprintId: input.blueprintId,
+      blueprintId: blueprint.id,
       userId: ctx.userId
     }
   })
@@ -22,7 +34,7 @@ const upvoteBlueprint = async ({ input, ctx }: {
   // Create upvote
   const newUpvote = await prisma.upvote.create({
     data: {
-      blueprintId: input.blueprintId,
+      blueprintId: blueprint.id,
       userId: ctx.userId
     }
   })
@@ -31,13 +43,25 @@ const upvoteBlueprint = async ({ input, ctx }: {
 }
 
 const removeUpvote = async ({ input, ctx }: {
-  input: { blueprintId: string },
+  input: { blueprintTitle: string },
   ctx: Context
 }) => {
+  // Check if blueprint exists, and get its id
+  const blueprint = await prisma.blueprint.findFirst({
+    where: {
+      title: input.blueprintTitle
+    }
+  })
+
+  // If blueprint does not exist, throw error
+  if (!blueprint) {
+    throw new TRPCError({ code: 'BAD_REQUEST', message: 'Blueprint does not exist' })
+  }
+
   // Check if user has already upvoted the blueprint
   const upvote = await prisma.upvote.findFirst({
     where: {
-      blueprintId: input.blueprintId,
+      blueprintId: blueprint.id,
       userId: ctx.userId
     }
   })
