@@ -58,6 +58,17 @@ const getBlueprintByTitle = async (input: {
         select: {
           upvotes: true
         }
+      },
+      comments: {
+        select: {
+          content: true,
+          createdAt: true,
+          author: {
+            select: {
+              username: true
+            }
+          }
+        }
       }
     }
   })
