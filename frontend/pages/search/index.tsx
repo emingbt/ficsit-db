@@ -2,7 +2,7 @@ import { Container, Main, StyledLine, StyledTitle } from '../../components/share
 import styled from "styled-components"
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Head from 'next/head'
 import { useState } from 'react'
 

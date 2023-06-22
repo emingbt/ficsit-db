@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Head from 'next/head'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { Container, Main, StyledLine, StyledTitle, StyledImageContainer } from '../../components/sharedstyles'
 import Recipe from '../../components/sections/recipe'
 import { Item, ProductionRecipe } from '../../interfaces'

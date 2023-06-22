@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { Container, Main, StyledLine, StyledTitle } from '../../components/sharedstyles'
 import { Item } from '../../interfaces/index'
 

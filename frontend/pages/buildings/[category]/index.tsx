@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Main, StyledLine, StyledTitle } from '../../../components/sharedstyles'
 import styled from 'styled-components'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 

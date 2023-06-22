@@ -1,7 +1,7 @@
 import Link from "next/link"
 import styled from "styled-components"
 import { StyledImage } from "../sharedstyles"
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 import { ProductionRecipe } from "../../interfaces"
 import { IsAlternate, CannotWrap } from "../../interfaces/styledComponents"
