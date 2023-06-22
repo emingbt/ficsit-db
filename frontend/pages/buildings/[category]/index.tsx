@@ -32,69 +32,71 @@ export default function Buildings({ categories }: Props) {
     'Architecture'
   ]
 
-  return (
-    <>
-      <Head>
-        <title>Buildings | FICSIT DB</title>
-      </Head>
+  return <>
+    <Head>
+      <title>Buildings | FICSIT DB</title>
+    </Head>
 
-      <Container>
-        <Main>
-          <StyledHeaderSection>
-            <StyledTitle>Buildings</StyledTitle>
-            <StyledLine color='#E5AF07' />
-            <StyledCategoiresContainer>
-              {BuildingCategories.map((category) => {
-                return (
-                  <Link href={`/buildings/${category.toLowerCase()}`} key={category}>
-                    <StyledCategory selected={currentCategory == category.toLowerCase()}>
-                      <Image
-                        src={`/icons/ResIcon_${category}.png`}
-                        width={64}
-                        height={64}
-                        alt={category.toLowerCase()}
-                        placeholder='empty'
-                      />
-                      <div>{category}</div>
-                    </StyledCategory>
-                  </Link>
-                )
-              })}
-            </StyledCategoiresContainer>
-            <StyledLine color='#e5af07' />
-          </StyledHeaderSection>
-          <StyledBuildingsSection>
-            {categories.map((category, i) => {
+    <Container>
+      <Main>
+        <StyledHeaderSection>
+          <StyledTitle>Buildings</StyledTitle>
+          <StyledLine color='#E5AF07' />
+          <StyledCategoiresContainer>
+            {BuildingCategories.map((category) => {
               return (
-                <>
-                  <StyledCategoryTitle>{i + 1}. {category.name}</StyledCategoryTitle>
-                  <StyledBuildingsContainer key={i}>
-                    {category.buildings.map((building) => {
-                      return (
-                        <Link href={`/buildings/${currentCategory}/${building.slug}`} key={building.slug}>
-                          <StyledBuilding key={building.slug}>
-                            <StyledBuildingImage>
-                              <Image
-                                src={building.imgUrl}
-                                width={256}
-                                height={256}
-                                alt={building.name}
-                              />
-                            </StyledBuildingImage>
-                            <StyledBuildingName>{building.name}</StyledBuildingName>
-                          </StyledBuilding>
-                        </Link>
-                      )
-                    })}
-                  </StyledBuildingsContainer>
-                </>
+                <Link
+                  href={`/buildings/${category.toLowerCase()}`}
+                  key={category}
+                  legacyBehavior>
+                  <StyledCategory selected={currentCategory == category.toLowerCase()}>
+                    <Image
+                      src={`/icons/ResIcon_${category}.png`}
+                      width={64}
+                      height={64}
+                      alt={category.toLowerCase()}
+                      placeholder='empty'
+                    />
+                    <div>{category}</div>
+                  </StyledCategory>
+                </Link>
               )
             })}
-          </StyledBuildingsSection>
-        </Main>
-      </Container>
-    </>
-  )
+          </StyledCategoiresContainer>
+          <StyledLine color='#e5af07' />
+        </StyledHeaderSection>
+        <StyledBuildingsSection>
+          {categories.map((category, i) => {
+            return <>
+              <StyledCategoryTitle>{i + 1}. {category.name}</StyledCategoryTitle>
+              <StyledBuildingsContainer key={i}>
+                {category.buildings.map((building) => {
+                  return (
+                    <Link
+                      href={`/buildings/${currentCategory}/${building.slug}`}
+                      key={building.slug}
+                      legacyBehavior>
+                      <StyledBuilding key={building.slug}>
+                        <StyledBuildingImage>
+                          <Image
+                            src={building.imgUrl}
+                            width={256}
+                            height={256}
+                            alt={building.name}
+                          />
+                        </StyledBuildingImage>
+                        <StyledBuildingName>{building.name}</StyledBuildingName>
+                      </StyledBuilding>
+                    </Link>
+                  )
+                })}
+              </StyledBuildingsContainer>
+            </>
+          })}
+        </StyledBuildingsSection>
+      </Main>
+    </Container>
+  </>
 }
 
 export async function getServerSideProps(context) {

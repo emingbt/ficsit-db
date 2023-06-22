@@ -14,15 +14,15 @@ export default function Fuels({ fuels, operatingRate }: Props) {
 
   fuels.map((fuel, i) => {
     const transformedItems = fuel.items.reduce((acc, item) => {
-      const itemType = item.type.split('_')[0].toLowerCase();
+      const itemType = item.type.split('_')[0].toLowerCase()
       acc[itemType] = {
         imgUrl: item.imgUrl,
         rate: item.rate,
         slug: item.slug
-      };
-      return acc;
-    }, {});
-    transformedFuels.push(transformedItems);
+      }
+      return acc
+    }, {})
+    transformedFuels.push(transformedItems)
   })
 
   return fuels?.length > 0 && (
@@ -35,15 +35,15 @@ export default function Fuels({ fuels, operatingRate }: Props) {
               <StyledContainer flexDirection="row">
                 <StyledItem>
                   <Link href={`/items/${items.fuel.slug}`}>
-                    <a>
-                      <StyledImage
-                        src={items.fuel.imgUrl}
-                        width={80}
-                        height={80}
-                        alt={items.fuel.slug}
-                        quality={40}
-                      />
-                    </a>
+
+                    <StyledImage
+                      src={items.fuel.imgUrl}
+                      width={80}
+                      height={80}
+                      alt={items.fuel.slug}
+                      quality={40}
+                    />
+
                   </Link>
                   <StyledUsePerMin>{parseFloat((operatingRate / 100 * items.fuel.rate).toFixed(3))}/min</StyledUsePerMin>
                 </StyledItem>
@@ -51,15 +51,15 @@ export default function Fuels({ fuels, operatingRate }: Props) {
                   items.supplement &&
                   <StyledItem>
                     <Link href={`/items/${items.supplement.slug}`}>
-                      <a>
-                        <StyledImage
-                          src={items.supplement.imgUrl}
-                          width={80}
-                          height={80}
-                          alt={items.supplement.slug}
-                          quality={40}
-                        />
-                      </a>
+
+                      <StyledImage
+                        src={items.supplement.imgUrl}
+                        width={80}
+                        height={80}
+                        alt={items.supplement.slug}
+                        quality={40}
+                      />
+
                     </Link>
                     <StyledUsePerMin>{parseFloat((operatingRate / 100 * items.supplement.rate).toFixed(3))}/min</StyledUsePerMin>
                   </StyledItem>
@@ -72,15 +72,15 @@ export default function Fuels({ fuels, operatingRate }: Props) {
                     <StyledVerticalLine />
                     <StyledItem product>
                       <Link href={`/items/${items.product.slug}`}>
-                        <a>
-                          <StyledImage
-                            src={items.product.imgUrl}
-                            width={80}
-                            height={80}
-                            alt={items.product.slug}
-                            quality={40}
-                          />
-                        </a>
+
+                        <StyledImage
+                          src={items.product.imgUrl}
+                          width={80}
+                          height={80}
+                          alt={items.product.slug}
+                          quality={40}
+                        />
+
                       </Link>
                       <StyledUsePerMin>{parseFloat((operatingRate / 100 * items.product.rate).toFixed(3))}/min</StyledUsePerMin>
                     </StyledItem>

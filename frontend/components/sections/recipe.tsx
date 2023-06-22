@@ -19,7 +19,7 @@ export default function Recipe({ recipes, title }: Props) {
         {recipes.map((recipe) => {
           return (
             <StyledRecipeContainer key={recipe.slug}>
-              <Link href={`/recipes/${recipe.slug}`}>
+              <Link href={`/recipes/${recipe.slug}`} legacyBehavior>
                 <StyledRecipeTitle isAlternate={recipe.isAlternate}>
                   {recipe.isAlternate ? `${recipe.name} (Alternate)` : `${recipe.name}`}
                 </StyledRecipeTitle>
@@ -31,7 +31,7 @@ export default function Recipe({ recipes, title }: Props) {
                       <StyledItem key={ingredient.name}>
                         <StyledItemHeader>
                           <StyledItemQuantity>{ingredient.amount}x</StyledItemQuantity>
-                          <Link href={`/items/${ingredient.name}`}>
+                          <Link href={`/items/${ingredient.name}`} legacyBehavior>
                             <StyledItemImage>
                               <Image
                                 src={ingredient.imgUrl}
@@ -56,7 +56,10 @@ export default function Recipe({ recipes, title }: Props) {
                         <StyledItem key={product.name}>
                           <StyledItemHeader>
                             <StyledItemQuantity>{product.amount}x</StyledItemQuantity>
-                            <Link href={`/items/${product.name}`} style={{ position: 'relative' }}>
+                            <Link
+                              href={`/items/${product.name}`}
+                              style={{ position: 'relative' }}
+                              legacyBehavior>
                               <StyledItemImage>
                                 <Image
                                   src={product.imgUrl}
@@ -76,15 +79,15 @@ export default function Recipe({ recipes, title }: Props) {
                   <StyledVerticalLine isAlternate={recipe.isAlternate} />
                   <StyledBuildingContainer>
                     <Link href={`/buildings/production/${recipe.building.slug}`}>
-                      <a>
-                        <StyledImage
-                          src={recipe.building.imgUrl}
-                          width={80}
-                          height={80}
-                          alt={recipe.building.slug}
-                          quality={50}
-                        />
-                      </a>
+
+                      <StyledImage
+                        src={recipe.building.imgUrl}
+                        width={80}
+                        height={80}
+                        alt={recipe.building.slug}
+                        quality={50}
+                      />
+
                     </Link>
                     <StyledCraftTime>{recipe.craftTime}s</StyledCraftTime>
                   </StyledBuildingContainer>

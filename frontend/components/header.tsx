@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <Wrapper>
       <HeaderBar>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <Logo>FiCS<span style={{ color: '#4DACF0' }}>I</span><span style={{ color: '#D79845' }}>T</span>DB</Logo>
         </Link>
         <StyledHamburgerButton
@@ -28,8 +28,8 @@ export default function Header() {
           aria-label="Navbar"
         >
           {active ?
-            <StyledCloseIcon/> :
-            <StyledHamburgerIcon/>
+            <StyledCloseIcon /> :
+            <StyledHamburgerIcon />
           }
         </StyledHamburgerButton>
       </HeaderBar>
@@ -50,13 +50,13 @@ export default function Header() {
             <StyledSearchIcon />
           </StyledSearchButton>
         </StyledForm>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <StyledText>Home</StyledText>
         </Link>
-        <Link href="/items">
+        <Link href="/items" legacyBehavior>
           <StyledText>Items</StyledText>
         </Link>
-        <Link href="/buildings/production">
+        <Link href="/buildings/production" legacyBehavior>
           <StyledText>Buildings</StyledText>
         </Link>
       </StyledNav>
@@ -108,7 +108,7 @@ const StyledHamburgerButton = styled.button`
 `
 
 const StyledNav = styled.nav<IsActive>`
-  display: ${props => props.isActive? 'flex' : 'none'};
+  display: ${props => props.isActive ? 'flex' : 'none'};
   flex-direction: column;
   justify-content: center;
   align-items: center;

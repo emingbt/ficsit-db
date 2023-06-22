@@ -22,7 +22,7 @@ export default function Home() {
           </StyledBannerText>
         </StyledBannerSection>
         <StyledNavSection>
-          <Link href="/items">
+          <Link href="/items" legacyBehavior>
             <StyledNavItem>
               <StyledNavImage>
                 <StyledBackgroundImage
@@ -35,7 +35,7 @@ export default function Home() {
               <StyledNavText>Items</StyledNavText>
             </StyledNavItem>
           </Link>
-          <Link href="/buildings/production">
+          <Link href="/buildings/production" legacyBehavior>
             <StyledNavItem>
               <StyledNavImage>
                 <StyledBackgroundImage

@@ -15,7 +15,7 @@ export default function ExtractableResources({ extractableResources }: Props) {
       <StyledResourceContainer>
         {extractableResources.map((resource) => {
           return (
-            <Link href={`/items/${resource.slug}`} key={resource.slug}>
+            <Link href={`/items/${resource.slug}`} key={resource.slug} legacyBehavior>
               <StyledResource>
                 <StyledResourceImage>
                   <Image

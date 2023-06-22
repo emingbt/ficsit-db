@@ -15,7 +15,7 @@ export default function RecipeItem({ craftTime, item, clockspeed }: Props) {
   return (
     <StyledItemContainer key={item.slug}>
       <StyledItem>
-        <Link href={`/items/${item.slug}`}>
+        <Link href={`/items/${item.slug}`} legacyBehavior>
           <StyledItemImage isFluid={item.isFluid}>
             <Image
               src={item.imgUrl}

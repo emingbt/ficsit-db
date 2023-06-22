@@ -34,89 +34,87 @@ export default function BuildingPage({ building, recipes, fuels }: Props) {
 
   const [purity, setPurity] = useState(1)
 
-  return (
-    <>
-      <Head>
-        <title>{building.name} | FICSIT DB</title>
-      </Head>
+  return <>
+    <Head>
+      <title>{building.name} | FICSIT DB</title>
+    </Head>
 
-      <Container>
-        <Main>
-          <StyledTitleSection>
-            <StyledTitle>{category[0].toUpperCase() + category.slice(1)}</StyledTitle>
-            <StyledLine color='#E5AF07' />
-          </StyledTitleSection>
-          <StyledContainer>
-            <StyledSection>
-              <StyledDetailContainer>
-                <StyledDetailHeader>
-                  <StyledImageContainer>
-                    <Image
-                      src={building.imgUrl}
-                      width={256}
-                      height={256}
-                      priority
-                      quality={100}
-                      alt={building.name}
-                    />
-                  </StyledImageContainer>
-                  <StyledDetail>
-                    <StyledName>{building.name}</StyledName>
-                    <StyledCostTitle>Cost :</StyledCostTitle>
-                    <StyledCostContainer>
-                      {building.cost.map((item) => {
-                        return (
-                          <StyledCostItem key={item.slug}>
-                            <StyledText>{item.amount}x</StyledText>
-                            <Link href={`/items/${item.slug}`}>
-                              <StyledCostItemImage>
-                                <Image
-                                  src={item.imgUrl}
-                                  layout="fill"
-                                  objectFit='cover'
-                                  alt={item.slug}
-                                  quality={40}
-                                />
-                              </StyledCostItemImage>
-                            </Link>
-                          </StyledCostItem>
-                        )
-                      })}
-                    </StyledCostContainer>
-                  </StyledDetail>
-                </StyledDetailHeader>
-                <StyledDescription>
-                  {building.description}
-                </StyledDescription>
-              </StyledDetailContainer>
-              {
-                building.isOverclockable &&
-                <Consumption
-                  clockspeed={clockspeed}
-                  setClockspeed={setClockspeed}
-                  energyConsumption={energyConsumption}
-                  powerProduction={powerProduction}
-                  isGenerator={building.isGenerator}
-                />
-              }
-              {
-                (building.isResourceExtractor && building?.isDependsPurity) &&
-                <Extraction
-                  clockspeed={clockspeed}
-                  purity={purity}
-                  setPurity={setPurity}
-                  extractSpeed={building?.resourceExtractSpeed}
-                />
-              }
-            </StyledSection>
-            <Recipe recipes={recipes} title={"Recipes"} />
-            <ExtractableResources extractableResources={building?.resources} />
-            <Fuels fuels={fuels} operatingRate={operatingRate} />
-          </StyledContainer>
-        </Main>
-      </Container>
-    </>
-  )
+    <Container>
+      <Main>
+        <StyledTitleSection>
+          <StyledTitle>{category[0].toUpperCase() + category.slice(1)}</StyledTitle>
+          <StyledLine color='#E5AF07' />
+        </StyledTitleSection>
+        <StyledContainer>
+          <StyledSection>
+            <StyledDetailContainer>
+              <StyledDetailHeader>
+                <StyledImageContainer>
+                  <Image
+                    src={building.imgUrl}
+                    width={256}
+                    height={256}
+                    priority
+                    quality={100}
+                    alt={building.name}
+                  />
+                </StyledImageContainer>
+                <StyledDetail>
+                  <StyledName>{building.name}</StyledName>
+                  <StyledCostTitle>Cost :</StyledCostTitle>
+                  <StyledCostContainer>
+                    {building.cost.map((item) => {
+                      return (
+                        <StyledCostItem key={item.slug}>
+                          <StyledText>{item.amount}x</StyledText>
+                          <Link href={`/items/${item.slug}`} legacyBehavior>
+                            <StyledCostItemImage>
+                              <Image
+                                src={item.imgUrl}
+                                layout="fill"
+                                objectFit='cover'
+                                alt={item.slug}
+                                quality={40}
+                              />
+                            </StyledCostItemImage>
+                          </Link>
+                        </StyledCostItem>
+                      )
+                    })}
+                  </StyledCostContainer>
+                </StyledDetail>
+              </StyledDetailHeader>
+              <StyledDescription>
+                {building.description}
+              </StyledDescription>
+            </StyledDetailContainer>
+            {
+              building.isOverclockable &&
+              <Consumption
+                clockspeed={clockspeed}
+                setClockspeed={setClockspeed}
+                energyConsumption={energyConsumption}
+                powerProduction={powerProduction}
+                isGenerator={building.isGenerator}
+              />
+            }
+            {
+              (building.isResourceExtractor && building?.isDependsPurity) &&
+              <Extraction
+                clockspeed={clockspeed}
+                purity={purity}
+                setPurity={setPurity}
+                extractSpeed={building?.resourceExtractSpeed}
+              />
+            }
+          </StyledSection>
+          <Recipe recipes={recipes} title={"Recipes"} />
+          <ExtractableResources extractableResources={building?.resources} />
+          <Fuels fuels={fuels} operatingRate={operatingRate} />
+        </StyledContainer>
+      </Main>
+    </Container>
+  </>
 }
 
 export async function getServerSideProps(context) {

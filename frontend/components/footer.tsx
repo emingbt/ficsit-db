@@ -7,7 +7,9 @@ export default function Footer() {
     <Wrapper>
       <StyledLine color="#E5AF07" />
       <StyledText>Built by <StyledAnchor href="https://github.com/emingbt">@emingbt</StyledAnchor></StyledText>
-      <Link href={"https://events.softgiving.com/donate/HasanAbiForTurkeySyriaEarthquakesFund"}>
+      <Link
+        href={"https://events.softgiving.com/donate/HasanAbiForTurkeySyriaEarthquakesFund"}
+        legacyBehavior>
         <StyledDonationLink>
           Massive Earthquake in Turkey
         </StyledDonationLink>

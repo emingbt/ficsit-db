@@ -10,41 +10,39 @@ interface Props {
 }
 
 export default function Items({ items }: Props) {
-  return (
-    <>
-      <Head>
-        <title>Items | FICSIT DB</title>
-      </Head>
+  return <>
+    <Head>
+      <title>Items | FICSIT DB</title>
+    </Head>
 
-      <Container>
-        <Main>
-          <StyledContainer>
-            <StyledTitle>Items</StyledTitle>
-            <StyledLine color='#E5AF07' />
-            <StyledItemsContainer>
-              {items.map((item, i) => {
-                return (
-                  <Link href={`/items/${item.slug}`} key={i} >
-                    <StyledItem>
-                      <StyledItemImage
-                        src={item.imgUrl}
-                        width={256}
-                        height={256}
-                        alt={item.name}
-                      />
-                      <StyledItemName>
-                        {item.name}
-                      </StyledItemName>
-                    </StyledItem>
-                  </Link>
-                )
-              })}
-            </StyledItemsContainer>
-          </StyledContainer>
-        </Main>
-      </Container>
-    </>
-  )
+    <Container>
+      <Main>
+        <StyledContainer>
+          <StyledTitle>Items</StyledTitle>
+          <StyledLine color='#E5AF07' />
+          <StyledItemsContainer>
+            {items.map((item, i) => {
+              return (
+                <Link href={`/items/${item.slug}`} key={i} legacyBehavior>
+                  <StyledItem>
+                    <StyledItemImage
+                      src={item.imgUrl}
+                      width={256}
+                      height={256}
+                      alt={item.name}
+                    />
+                    <StyledItemName>
+                      {item.name}
+                    </StyledItemName>
+                  </StyledItem>
+                </Link>
+              )
+            })}
+          </StyledItemsContainer>
+        </StyledContainer>
+      </Main>
+    </Container>
+  </>
 }
 
 export async function getServerSideProps() {
