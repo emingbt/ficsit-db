@@ -3,10 +3,6 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import bannerImg from '/public/images/banner.jpeg'
-import itemsBg from '/public/images/items-bg.jpg'
-import buildingBg from '/public/images/buildings-bg.jpg'
-
 export default function Home() {
   return (
     <Container>
