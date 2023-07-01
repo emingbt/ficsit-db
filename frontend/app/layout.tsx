@@ -4,6 +4,7 @@ import { Metadata } from 'next'
 import './global.css'
 
 import Header from '../components/header'
+import Footer from '../components/footer'
 
 export const metadata: Metadata = {
   title: 'Ficsit DB',
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: {
       <body className='w-full h-full flex flex-col items-center margin-0 padding-0 bg-main-bg text-white'>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
