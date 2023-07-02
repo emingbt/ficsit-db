@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className='w-full flex flex-col bg-dark-bg px-8'>
       <div className="w-full h-20 flex items-center justify-center">
-        <p className="text-sm">
+        <p className="text-sm xl:text-base">
           Built by <Link
             href="https://www.github.com/emingbt"
             className='text-main-orange hover:text-light-orange hover:underline'
