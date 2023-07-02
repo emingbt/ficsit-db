@@ -15,7 +15,7 @@ export default function RootLayout({ children }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='font-main'>
       <body className='w-full h-full flex flex-col items-center margin-0 padding-0 bg-main-bg text-white'>
         <Header />
         {children}
