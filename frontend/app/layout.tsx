@@ -18,7 +18,9 @@ export default function RootLayout({ children }: {
     <html lang="en" className='font-main'>
       <body className='w-full h-full flex flex-col items-center margin-0 padding-0 bg-main-bg text-white'>
         <Header />
-        {children}
+        <div className='w-full h-full flex flex-col items-center p-5 xl:p-16 xl:pt-8'>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
