@@ -1,14 +1,14 @@
 "use client"
 
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import SearchInput from './searchInput'
 import HamburgerIcon from '../assets/hamburgerIcon.svg'
 import CloseIcon from '../assets/closeIcon.svg'
 
 export default function Header() {
-  const router = useRouter()
+  const router = usePathname()
   const [active, setActive] = useState(false)
 
   useEffect(() => {
