@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default async function Home() {
   return (
@@ -34,11 +35,15 @@ export default async function Home() {
         </div>
         <div className="w-full order-2 aspect-square p-8 flex flex-col justify-center">
           <p className="w-full text-xl mb-6 lg:text-3xl">You can check items and the recipes to learn how to produce them.</p>
-          <button className="w-2/5 h-8 bg-main-orange text-sm lg:h-10 lg:text-lg hover:bg-light-bg">Items</button>
+          <Link href="/items">
+            <button className="w-2/5 h-8 bg-main-orange text-sm lg:h-10 lg:text-lg hover:bg-light-bg">Items</button>
+          </Link>
         </div>
         <div className="w-full order-4 md:order-3 aspect-square p-8 flex flex-col justify-center">
           <p className="w-full text-xl mb-6 lg:text-3xl">Also, you can check buildings, which items you can produce on them and how much power they use or produce.</p>
-          <button className="w-2/5 h-8 bg-main-orange text-sm lg:h-10 lg:text-lg hover:bg-light-bg">Buildings</button>
+          <Link href="/buildings/production">
+            <button className="w-2/5 h-8 bg-main-orange text-sm lg:h-10 lg:text-lg hover:bg-light-bg">Buildings</button>
+          </Link>
         </div>
         <div className="w-full order-3 md:order-4 aspect-square relative">
           <Image
@@ -58,7 +63,9 @@ export default async function Home() {
         </div>
         <div className="w-full order-6 aspect-square p-8 flex flex-col justify-center">
           <p className="w-full text-xl mb-6 lg:text-3xl">And you can use other pioneers’ blueprints to improve your production line.</p>
-          <button className="w-2/5 h-8 bg-main-orange text-sm lg:h-10 lg:text-lg hover:bg-light-bg">Blueprints</button>
+          <Link href="/blueprints">
+            <button className="w-2/5 h-8 bg-main-orange text-sm lg:h-10 lg:text-lg hover:bg-light-bg">Blueprints</button>
+          </Link>
         </div>
       </section>
     </main>
