@@ -18,7 +18,7 @@ export default function BuildingCategories({ selectedCategory = undefined }: { s
     <nav className="w-full max-w-5xl grid grid-cols-3 sm:grid-cols-9 gap-1 items-center justify-center bg-dark-bg p-2">
       {BuildingCategories.map((category, i) => {
         return (
-          <Link href={`/buildings/${category.toLowerCase()}`} key={i}
+          <Link href={`/buildings?category=${category.toLowerCase()}`} key={i}
             className="w-full min-h-[6rem] sm:min-h-[1rem] flex items-center justify-center bg-main-bg aspect-square">
             <div className={`w-full max-w-[8rem] h-full flex flex-col
                   items-center justify-between p-2 bg-main-bg hover:bg-dark-bg cursor-pointer
