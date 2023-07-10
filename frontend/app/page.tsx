@@ -44,7 +44,7 @@ export default async function Home() {
         </div>
         <div className="w-full order-4 md:order-3 aspect-square p-8 flex flex-col justify-center">
           <p className="w-full text-xl mb-6 lg:text-3xl">Also, you can check buildings, which items you can produce on them and how much power they use or produce.</p>
-          <Link href="/buildings/production">
+          <Link href="/buildings?category=production">
             <button className="w-2/5 h-8 bg-main-orange text-sm lg:h-10 lg:text-lg hover:bg-light-bg">Buildings</button>
           </Link>
         </div>
