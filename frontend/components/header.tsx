@@ -65,7 +65,7 @@ export default function Header() {
             <Link href='/items' className='w-60 pt-6'>
               <p className='h-full text-center'>Items</p>
             </Link>
-            <Link href='/buildings/production' className='w-60 pt-6'>
+            <Link href='/buildings?category=production' className='w-60 pt-6'>
               <p className='h-full text-center'>Buildings</p>
             </Link>
             <Link href='/blueprints' className='w-60 pt-6'>
