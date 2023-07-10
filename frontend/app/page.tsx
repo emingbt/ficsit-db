@@ -15,12 +15,14 @@ export default async function Home() {
             <button className="w-full max-w-[16rem] h-8 lg:h-10 bg-main-orange font-main font-normal hover:bg-light-bg">Login</button>
           </div>
         </div>
-        <div className="hidden lg:flex w-1/2 h-full bg-red-400 relative">
+        <div className="hidden lg:flex w-1/2 h-full relative">
           <Image
             src="/images/landing-page.png"
             alt="landing-page"
             fill
             className="object-cover object-center w-full h-full"
+            sizes='100%'
+
           />
         </div>
       </section>
@@ -31,6 +33,7 @@ export default async function Home() {
             alt="landing-page-items"
             fill
             className="object-cover object-center w-full h-full"
+            sizes='100%'
           />
         </div>
         <div className="w-full order-2 aspect-square p-8 flex flex-col justify-center">
@@ -51,6 +54,7 @@ export default async function Home() {
             alt="landing-page-buildings"
             fill
             className="object-cover object-center w-full h-full"
+            sizes='100%'
           />
         </div>
         <div className="w-full order-5 aspect-square relative">
@@ -59,6 +63,7 @@ export default async function Home() {
             alt="landing-page-blueprints"
             fill
             className="object-cover object-center w-full h-full"
+            sizes='100%'
           />
         </div>
         <div className="w-full order-6 aspect-square p-8 flex flex-col justify-center">
