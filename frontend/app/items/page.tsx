@@ -9,7 +9,7 @@ export default async function Items() {
   const items = await result.json()
 
   return (
-    <>
+    <section className='w-full grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-1 lg:gap-2 justify-center bg-light-bg p-1 lg: p-3'>
       {items.map((item: Item, i: number) => {
         return (
           <Link href={`/items/${item.slug}`} key={i}>
@@ -32,6 +32,6 @@ export default async function Items() {
           </Link>
         )
       })}
-    </>
+    </section>
   )
 }
