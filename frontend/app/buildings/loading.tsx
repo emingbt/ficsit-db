@@ -1,6 +1,6 @@
 import BuildingCategories from "../../components/buildingCategories"
 
-export default function Loading({ searchParams }: { searchParams: { category: string } | undefined }) {
+export default function Loading({ searchParams }: { searchParams?: { category: string } | undefined }) {
   return (
     <main className="w-full h-full flex flex-col items-center justify-cente p-2">
       <BuildingCategories selectedCategory={searchParams?.category || ''} />
