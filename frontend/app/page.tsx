@@ -22,7 +22,7 @@ export default async function Home() {
             fill
             className="object-cover object-center w-full h-full"
             sizes='100%'
-
+            priority
           />
         </div>
       </section>
