@@ -13,7 +13,7 @@ export default async function Items() {
       {items.map((item: Item, i: number) => {
         return (
           <Link href={`/items/${item.slug}`} key={i}>
-            <div className="flex flex-col items-center justify-center m-1 bg-main-bg hover:bg-dark-bg pointer-cursor">
+            <div className="flex flex-col items-center justify-center m-1 bg-main-bg lg:hover:bg-dark-bg pointer-cursor">
               <div className='w-full aspect-square p-2'>
                 <div className='w-full min-h-[5rem] h-full relative'>
                   <Image
