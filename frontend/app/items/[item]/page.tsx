@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Recipes from "../../../components/recipes"
 
 export default async function Item({ params }: { params: { item: string } }) {
   const slug = params.item
@@ -24,6 +25,7 @@ export default async function Item({ params }: { params: { item: string } }) {
                 sizes="100%"
                 alt={item.name}
                 style={{ objectFit: 'contain' }}
+                priority
               />
             </div>
           </div>
@@ -49,6 +51,8 @@ export default async function Item({ params }: { params: { item: string } }) {
           <p>{item.description}</p>
         </div>
       </section>
+      <Recipes recipes={recipes} title='Recipes' />
+      <Recipes recipes={usagesAsIngredient} title='Usages as Ingredient' />
     </div>
   )
 }
