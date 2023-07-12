@@ -21,7 +21,7 @@ export default function BuildingCategories({ selectedCategory = undefined }: { s
           <Link href={`/buildings?category=${category.toLowerCase()}`} key={i}
             className="w-full min-h-[6rem] sm:min-h-[1rem] flex items-center justify-center bg-main-bg aspect-square">
             <div className={`w-full max-w-[8rem] h-full flex flex-col
-                  items-center justify-between p-2 bg-main-bg hover:bg-dark-bg cursor-pointer
+                  items-center justify-between p-2 bg-main-bg lg:hover:bg-dark-bg cursor-pointer
                   ${category.toLowerCase() == selectedCategory && 'text-main-orange'}`}>
               <div className="w-full h-full flex items-center justify-center relative m-3 sm:m-1">
                 <Image
