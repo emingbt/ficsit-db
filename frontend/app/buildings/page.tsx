@@ -27,7 +27,7 @@ export default async function Buildings({
                 <div className="w-full grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2 p-2 bg-light-bg">
                   {category.buildings.map((building: any, j: number) => {
                     return (
-                      <Link href={`/buildings/${selectedCategory}/${building.slug}`} className="w-full flex flex-col bg-main-bg hover:bg-dark-bg cursor-pointer" key={j}>
+                      <Link href={`/buildings/${building.slug}`} className="w-full flex flex-col bg-main-bg hover:bg-dark-bg cursor-pointer" key={j}>
                         <div className="w-full flex items-center justify-center p-1 sm:p-2 xl:p-3">
                           <div className="w-full aspect-square relative">
                             <Image
