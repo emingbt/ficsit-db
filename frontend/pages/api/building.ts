@@ -1,8 +1,8 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import executeQuery from "../../utils/neo4j";
+import { NextApiRequest, NextApiResponse } from "next"
+import executeQuery from "../../utils/neo4j"
 
 export default async function Building(req: NextApiRequest, res: NextApiResponse) {
-  const { slug } = req.query;
+  const { slug } = req.query
 
   const query = `
     MATCH (br:BuildingRecipe)-[:PRODUCES]->(b:Building {slug: $slug})
@@ -21,13 +21,17 @@ export default async function Building(req: NextApiRequest, res: NextApiResponse
     WITH b, cost, resources, fuels, pr, ingredients, products, pr{.*, ingredients: ingredients, products: products, building: {slug:b.slug, name:b.slug, imgUrl:b.imgUrl}} AS recipe
     WITH b, cost, resources, fuels, COLLECT(DISTINCT recipe) AS recipes
     RETURN b{.*, cost:cost, resources:resources} AS building, recipes, fuels
-  `;
+  `
 
   const params = {
     slug: slug
-  };
+  }
 
-  const result = await executeQuery(query, params);
+  const result = await executeQuery(query, params)
 
-  res.status(200).json(result[0]);
+  if (result == undefined || result.length === 0) {
+    return res.status(404).json({ message: 'Not found' })
+  }
+
+  res.status(200).json(result[0])
 }

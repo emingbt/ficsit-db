@@ -1,51 +1,22 @@
 import Link from "next/link"
-import styled from "styled-components"
-import { StyledLine } from "./sharedstyles"
 
 export default function Footer() {
   return (
-    <Wrapper>
-      <StyledLine color="#E5AF07" />
-      <StyledText>Built by <StyledAnchor href="https://github.com/emingbt">@emingbt</StyledAnchor></StyledText>
-      <Link href={"https://events.softgiving.com/donate/HasanAbiForTurkeySyriaEarthquakesFund"}>
-        <StyledDonationLink>
-          Massive Earthquake in Turkey
-        </StyledDonationLink>
-      </Link>
-    </Wrapper>
+    <footer className='w-full flex flex-col bg-dark-bg px-8'>
+      <div className="w-full h-20 flex items-center justify-center">
+        <p className="text-sm xl:text-base">
+          Built by <Link
+            href="https://www.github.com/emingbt"
+            className='text-main-orange hover:text-light-orange hover:underline'
+          >@emingbt</Link>
+        </p>
+      </div>
+      <div className='w-full h-0.5 bg-main-orange mb-6' />
+      <p className="w-full text-main-gray min-h-16 mb-6 text-xs">
+        The assets comes from Satisfactory or from websites created and owned by Coffee Stain Studios, who hold the copyright of Satisfactory.
+        <br />
+        All trademarks and registered trademarks present in the image are proprietary to Coffee Stain Studios.
+      </p>
+    </footer>
   )
 }
-
-const Wrapper = styled.footer`
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-`
-
-const StyledText = styled.p`
-  color: #ffffff;
-  margin: 1.5rem;
-  font-size: clamp(0.5rem, 2vw, 1.25rem);
-`
-
-const StyledAnchor = styled.a`
-  color: #9BA3A9;
-  :hover {
-    color: #E5AF07;
-      text-decoration: underline;
-  }
-`
-
-const StyledDonationLink = styled.p`
-  color: #9BA3A9;
-  font-size: clamp(0.35rem, 2vw, 1rem);
-  cursor: pointer;
-
-  :hover {
-    color: #E5AF07;
-    text-decoration: underline;
-  }
-`

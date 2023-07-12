@@ -2,16 +2,16 @@ import { Container, Main, StyledLine, StyledTitle } from '../../components/share
 import styled from "styled-components"
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Head from 'next/head'
 import { useState } from 'react'
 
-import { Item, Building } from '../../interfaces'
+import { Item, BuildingType } from '../../interfaces'
 import { Selected } from '../../interfaces/styledComponents'
 
 interface Props {
   items: Item[],
-  buildings: Building[]
+  buildings: BuildingType[]
 }
 
 export default function Search({ items, buildings }: Props) {
@@ -21,50 +21,51 @@ export default function Search({ items, buildings }: Props) {
   const [selectedCategory, setSelectedCategory] = useState('items')
   const sortedData = Object.values(selectedCategory == 'items' ? items : buildings).sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name > a.name) ? -1 : 0))
 
-  return (
-    <>
-      <Head>
-        <title>Search | FICSIT DB</title>
-      </Head>
+  return <>
+    <Head>
+      <title>Search | FICSIT DB</title>
+    </Head>
 
-      <Container>
-        <Main>
-          <StyledContainer>
-            <StyledHeader>
-              <StyledTitle>Search results for : &quot;<StyledSpan>{name}</StyledSpan>&quot;</StyledTitle>
-              <StyledCategoryContainer>
-                <StyledCategory selected={selectedCategory == 'items'} onClick={() => setSelectedCategory('items')}>Items ({items.length})</StyledCategory>
-                <StyledCategory selected={selectedCategory == 'buildables'} onClick={() => setSelectedCategory('buildables')}>Buildings ({buildings.length})</StyledCategory>
-              </StyledCategoryContainer>
-            </StyledHeader>
-            <StyledLine color='#E5AF07' />
-            {sortedData.length == 0 ?
-              <StyledText>Nothing found.</StyledText> :
-              <StyledItemsContainer>
-                {sortedData.map((unit, i) => {
-                  return (
-                    <Link href={`/${selectedCategory == 'items' ? 'items' : `buildings/${unit.category}`}/${unit.slug}`} key={i} >
-                      <StyledItem>
-                        <StyledItemImage
-                          src={unit.imgUrl}
-                          width={256}
-                          height={256}
-                          alt={unit.name}
-                        />
-                        <StyledItemName>
-                          {unit.name}
-                        </StyledItemName>
-                      </StyledItem>
-                    </Link>
-                  )
-                })}
-              </StyledItemsContainer>
-            }
-          </StyledContainer>
-        </Main>
-      </Container>
-    </>
-  )
+    <Container>
+      <Main>
+        <StyledContainer>
+          <StyledHeader>
+            <StyledTitle>Search results for : &quot;<StyledSpan>{name}</StyledSpan>&quot;</StyledTitle>
+            <StyledCategoryContainer>
+              <StyledCategory selected={selectedCategory == 'items'} onClick={() => setSelectedCategory('items')}>Items ({items.length})</StyledCategory>
+              <StyledCategory selected={selectedCategory == 'buildables'} onClick={() => setSelectedCategory('buildables')}>Buildings ({buildings.length})</StyledCategory>
+            </StyledCategoryContainer>
+          </StyledHeader>
+          <StyledLine color='#E5AF07' />
+          {sortedData.length == 0 ?
+            <StyledText>Nothing found.</StyledText> :
+            <StyledItemsContainer>
+              {sortedData.map((unit, i) => {
+                return (
+                  <Link
+                    href={`/${selectedCategory == 'items' ? 'items' : `buildings/${unit.category}`}/${unit.slug}`}
+                    key={i}
+                    legacyBehavior>
+                    <StyledItem>
+                      <StyledItemImage
+                        src={unit.imgUrl}
+                        width={256}
+                        height={256}
+                        alt={unit.name}
+                      />
+                      <StyledItemName>
+                        {unit.name}
+                      </StyledItemName>
+                    </StyledItem>
+                  </Link>
+                )
+              })}
+            </StyledItemsContainer>
+          }
+        </StyledContainer>
+      </Main>
+    </Container>
+  </>
 }
 
 export async function getServerSideProps(context) {

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Link from 'next/link'
-import { Building, ProductionRecipe } from '../../interfaces'
+import { BuildingType, ProductionRecipe } from '../../interfaces'
 import { IsBuilding, IsFluid, Overclocked, Widescreen } from '../../interfaces/styledComponents'
 
 interface Props {
@@ -92,7 +92,7 @@ export default function RecipeDetails({ widescreen, clockspeed, setClockspeed, p
               <StyledClockspeedDetailValue>
                 {requiredPowerShards}x
               </StyledClockspeedDetailValue>
-              <Link href={"/items/power-shard"}>
+              <Link href={"/items/power-shard"} legacyBehavior>
                 <StyledItemImage detail>
                   <Image
                     src={`/images/items/power-shard.png`}
@@ -112,7 +112,7 @@ export default function RecipeDetails({ widescreen, clockspeed, setClockspeed, p
               <StyledClockspeedDetailValue isBuilding>
                 {building.name}
               </StyledClockspeedDetailValue>
-              <Link href={`/buildings/production/${building.slug}`}>
+              <Link href={`/buildings/production/${building.slug}`} legacyBehavior>
                 <StyledItemImage detail>
                   <Image
                     src={building.imgUrl}

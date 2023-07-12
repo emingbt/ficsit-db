@@ -1,23 +1,23 @@
 export interface Item {
-  slug: string;
-  name: string;
-  description: string;
-  stackSize: number;
-  sinkPoints: number;
-  isFluid: boolean;
-  isFuel: boolean;
-  isBiomass: boolean;
-  isRadioactive: boolean;
-  isEquipment: boolean;
-  imgUrl: string;
-  event: string;
+  slug: string
+  name: string
+  description: string
+  stackSize: number
+  sinkPoints: number
+  isFluid: boolean
+  isFuel: boolean
+  isBiomass: boolean
+  isRadioactive: boolean
+  isEquipment: boolean
+  imgUrl: string
+  event: string
 }
 
 export type ItemMap = {
-  [key: string]: Item;
-};
+  [key: string]: Item
+}
 
-export interface Building {
+export interface BuildingType {
   slug: string,
   name: string,
   description: string,
@@ -55,7 +55,7 @@ export interface Building {
 }
 
 export type BuildingMap = {
-  [key: string]: Building[];
+  [key: string]: BuildingType[]
 }
 
 export interface ProductionRecipe {
@@ -80,7 +80,7 @@ export interface ProductionRecipe {
 }
 
 export type ProductionRecipeMap = {
-  [key: string]: ProductionRecipe;
+  [key: string]: ProductionRecipe
 }
 
 export interface BuildingRecipe {
@@ -95,7 +95,7 @@ export interface BuildingRecipe {
 }
 
 export type BuildingRecipeMap = {
-  [key: string]: BuildingRecipe;
+  [key: string]: BuildingRecipe
 }
 
 export interface ProductionRecipeItem {

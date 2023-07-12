@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 interface StyledLine {
   color: string

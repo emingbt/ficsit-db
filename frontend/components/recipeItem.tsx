@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import Link from "next/link"
 
 import { IsFluid, Primary } from "../interfaces/styledComponents"
@@ -15,7 +15,7 @@ export default function RecipeItem({ craftTime, item, clockspeed }: Props) {
   return (
     <StyledItemContainer key={item.slug}>
       <StyledItem>
-        <Link href={`/items/${item.slug}`}>
+        <Link href={`/items/${item.slug}`} legacyBehavior>
           <StyledItemImage isFluid={item.isFluid}>
             <Image
               src={item.imgUrl}

@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import executeQuery from '../../utils/neo4j';
+import executeQuery from '../../utils/neo4j'
 
 export default async function Search(req: NextApiRequest, res: NextApiResponse) {
-  const { name } = req.query;
+  const { name } = req.query
 
   const query = `
   MATCH (i:Item)
@@ -15,7 +15,11 @@ export default async function Search(req: NextApiRequest, res: NextApiResponse) 
     regex: `.*${name}.*`
   }
 
-  const result = await executeQuery(query, params);
+  const result = await executeQuery(query, params)
+
+  if (result == undefined || result.length === 0) {
+    return res.status(404).json({ message: 'Not found' })
+  }
 
   res.status(200).json(result[0])
 }

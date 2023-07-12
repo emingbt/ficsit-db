@@ -15,5 +15,9 @@ export default async function Recipe(req: NextApiRequest, res: NextApiResponse) 
 
   const result = await executeQuery(query, params)
 
+  if (result == undefined || result.length === 0) {
+    return res.status(404).json({ message: 'Not found' })
+  }
+
   res.status(200).json(result[0].recipe)
 }
