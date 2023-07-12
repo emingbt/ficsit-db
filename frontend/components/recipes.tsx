@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function Recipes({ recipes, title }: { recipes: any[], title: string }) {
+export default function Recipes({ recipes, title = 'Recipes' }: { recipes: any[], title?: string }) {
   return (
     <section className={`w-full flex flex-col mt-4 ${recipes.length == 0 && 'hidden'}`}>
       <div className="w-full h-12 flex items-center px-4 bg-main-bg">
