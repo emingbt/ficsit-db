@@ -14,6 +14,7 @@ module.exports = {
         'main-orange': '#D79845',
         'light-orange': '#E5AF07',
         'dark-orange': '#E59344',
+        'dark-gray': '#2A2C33',
         'main-gray': '#9BA3A9',
         'error': '#E74C3C',
         'logo-blue': '#4DACF0'
