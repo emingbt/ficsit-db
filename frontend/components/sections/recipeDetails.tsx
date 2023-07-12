@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from "next/legacy/image"
 import Link from 'next/link'
-import { Building, ProductionRecipe } from '../../interfaces'
+import { BuildingType, ProductionRecipe } from '../../interfaces'
 import { IsBuilding, IsFluid, Overclocked, Widescreen } from '../../interfaces/styledComponents'
 
 interface Props {
