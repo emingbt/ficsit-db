@@ -1,10 +1,18 @@
 import neo4j, { Driver, Session } from 'neo4j-driver'
 
+const uri = process.env.NEO4J_URI
+const user = process.env.NEO4J_USER
+const password = process.env.NEO4J_PASSWORD
+
+if (!uri || !user || !password) {
+  throw new Error('Missing Neo4j credentials')
+}
+
 const driver: Driver = neo4j.driver(
-  process.env.NEO4J_URI,
+  uri,
   neo4j.auth.basic(
-    process.env.NEO4J_USER,
-    process.env.NEO4J_PASSWORD
+    user,
+    password
   )
 )
 
