@@ -6,12 +6,12 @@ import Image from "next/legacy/image"
 import Head from 'next/head'
 import { useState } from 'react'
 
-import { Item, Building } from '../../interfaces'
+import { Item, BuildingType } from '../../interfaces'
 import { Selected } from '../../interfaces/styledComponents'
 
 interface Props {
   items: Item[],
-  buildings: Building[]
+  buildings: BuildingType[]
 }
 
 export default function Search({ items, buildings }: Props) {
