@@ -10,9 +10,15 @@ export default async function Home() {
           <h1 className="text-4xl mb-2 lg:text-5xl">Hi Pioneer!</h1>
           <p className="text-xs text-main-gray mb-8 lg:text-lg">Welcome to Ficsit DB pioneer guidance system.</p>
           <div className="w-full xl:max-w-md flex flex-row items-center justify-between">
-            <button className="w-full max-w-[16rem] h-8 lg:h-10 bg-main-orange font-main font-normal lg:hover:bg-light-bg  lg:hover:text-light-orange">Sign up</button>
+            <Link href={'/items'}
+              className="w-full max-w-[16rem] h-8 lg:h-10 flex items-center justify-center bg-main-orange font-main font-normal lg:hover:bg-light-bg  lg:hover:text-light-orange">
+              Items
+            </Link>
             <p className="px-4 text-main-gray">or</p>
-            <button className="w-full max-w-[16rem] h-8 lg:h-10 bg-main-orange font-main font-normal lg:hover:bg-light-bg  lg:hover:text-light-orange">Login</button>
+            <Link href={'/buildings'}
+              className="w-full max-w-[16rem] h-8 lg:h-10 flex items-center justify-center bg-main-orange font-main font-normal lg:hover:bg-light-bg  lg:hover:text-light-orange">
+              Buildings
+            </Link>
           </div>
         </div>
         <div className="hidden lg:flex w-1/2 h-full relative">
@@ -57,7 +63,7 @@ export default async function Home() {
             sizes='100%'
           />
         </div>
-        <div className="w-full order-5 aspect-square relative">
+        {/* <div className="w-full order-5 aspect-square relative">
           <Image
             src="/images/landing-page-blueprints.png"
             alt="landing-page-blueprints"
@@ -71,7 +77,7 @@ export default async function Home() {
           <Link href="/blueprints">
             <button className="w-2/5 h-8 bg-main-orange text-sm lg:h-10 lg:text-lg lg:hover:bg-light-bg  lg:hover:text-light-orange">Blueprints</button>
           </Link>
-        </div>
+        </div> */}
       </section>
     </main>
   )
