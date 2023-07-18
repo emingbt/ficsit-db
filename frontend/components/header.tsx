@@ -45,7 +45,7 @@ export default function Header() {
         <Link href="/buildings?category=production" className='w-20 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Buildings</p>
         </Link>
-        <Link href="/blueprints" className='w-20 ml-6 hover:text-main-orange'>
+        {/* <Link href="/blueprints" className='w-20 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Blueprints</p>
         </Link>
         <div className='w-0.5 h-12 bg-main-orange ml-8' />
@@ -54,7 +54,7 @@ export default function Header() {
         </Link>
         <Link href="/login" className='w-16 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Login</p>
-        </Link>
+        </Link> */}
       </nav>
 
       {
@@ -68,7 +68,7 @@ export default function Header() {
             <Link href='/buildings?category=production' className='w-60 pt-6'>
               <p className='h-full text-center'>Buildings</p>
             </Link>
-            <Link href='/blueprints' className='w-60 pt-6'>
+            {/* <Link href='/blueprints' className='w-60 pt-6'>
               <p className='h-full text-center'>Blueprints</p>
             </Link>
             <div className='w-full h-0.5 bg-main-orange mt-8' />
@@ -79,7 +79,7 @@ export default function Header() {
               <Link href='/login' className='w-32 pt-8'>
                 <p className='h-full text-center'>Login</p>
               </Link>
-            </div>
+            </div> */}
           </nav>
         </div>
       }
