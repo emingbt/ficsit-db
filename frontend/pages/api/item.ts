@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import executeQuery from '../../utils/neo4j'
 
 export default async function Items(req: NextApiRequest, res: NextApiResponse) {
-  const { slug } = req.query
+  const { slug } = req.query || 'computers'
 
   const query = `
     MATCH (i:Item {slug: $slug})
