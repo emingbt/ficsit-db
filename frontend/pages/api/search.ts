@@ -6,9 +6,9 @@ export default async function Search(req: NextApiRequest, res: NextApiResponse) 
 
   const query = `
   MATCH (i:Item)
-  MATCH (c:Category)--(:Category)--(b:Building)
+  MATCH (b:Building)
   WHERE toLower(i.name) =~ $regex AND toLower(b.name) =~ $regex
-  RETURN COLLECT(DISTINCT {slug:i.slug, name:i.name, imgUrl:i.imgUrl}) AS items, COLLECT(DISTINCT {slug:b.slug, name:b.name, imgUrl:b.imgUrl, category: c.name}) AS buildings
+  RETURN COLLECT(DISTINCT {slug:i.slug, name:i.name, imgUrl:i.imgUrl}) AS items, COLLECT(DISTINCT {slug:b.slug, name:b.name, imgUrl:b.imgUrl}) AS buildings
   `
 
   const params = {
