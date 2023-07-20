@@ -3,7 +3,6 @@ import Recipes from "../../../components/recipes"
 
 export default async function Item({ params }: { params: { item: string } }) {
   const slug = params.item
-  console.log(slug)
 
   const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'
   const result = await fetch(`${baseUrl}/api/item?slug=${slug}`, { cache: 'no-store' })
