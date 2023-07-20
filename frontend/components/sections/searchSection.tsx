@@ -7,9 +7,7 @@ import SearchIcon from "../../assets/searchIcon.svg"
 
 import type { Item, BuildingType } from "../../interfaces"
 
-export default function SearchSection({
-  data
-}: {
+export default function SearchSection({ data }: {
   data: {
     items: Item[],
     buildings: BuildingType[]
