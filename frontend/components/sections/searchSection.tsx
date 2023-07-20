@@ -30,7 +30,6 @@ export default function SearchSection({ data }: {
           onSubmit={(e) => {
             e.preventDefault()
             router.push(`/search?name=${searchValue}`)
-            router.refresh()
           }}>
           <input
             className="w-full h-full bg-main-bg lg:mb-4 px-4"

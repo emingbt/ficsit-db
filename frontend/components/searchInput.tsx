@@ -15,7 +15,6 @@ export default function SearchInput() {
       onSubmit={(e) => {
         e.preventDefault()
         router.push(`/search?name=${searchValue}`)
-        router.refresh()
       }}>
       <input
         className='w-full h-full px-4 py-2 bg-dark-bg border border-main-orange rounded-full text-white outline-none bg-light-bg text-sm'
