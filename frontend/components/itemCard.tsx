@@ -4,9 +4,9 @@ import Image from "next/image"
 import type { Item, BuildingType } from "../interfaces"
 
 // Actually, this is a card for item but can be used for building too
-export const ItemCard = ({ item }: { item: Item | BuildingType }) => {
+export const ItemCard = ({ item, isBuilding = false }: { item: Item | BuildingType, isBuilding?: boolean }) => {
   return (
-    <Link href={`/items/${item.slug}`}>
+    <Link href={`/${isBuilding ? "buildings" : "items"}/${item.slug}`}>
       <div className="flex flex-col items-center justify-center m-1 bg-main-bg lg:hover:bg-dark-bg pointer-cursor">
         <div className='w-full aspect-square p-2'>
           <div className='w-full min-h-[5rem] h-full relative'>

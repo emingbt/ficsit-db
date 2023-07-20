@@ -79,7 +79,7 @@ export default function SearchSection({ data }: {
           buildings.length > 0 ? (
             buildings.map((building: BuildingType, i: number) => {
               return (
-                <ItemCard item={building} key={i} />
+                <ItemCard item={building} isBuilding={true} key={i} />
               )
             })
           ) : (
