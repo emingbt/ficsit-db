@@ -63,7 +63,7 @@ export default function SearchSection({ data }: {
       </div>
       <div className="w-full grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-1 lg:gap-2 justify-center bg-light-bg p-2 lg:p-3">
         {items.length == 0 && buildings.length == 0 ? (
-          <p className="text-white">No {selectedCategory} found</p>
+          <p className="w-full font-secondary">No {selectedCategory} found</p>
         ) : selectedCategory == "items" ? (
           items.length > 0 ? (
             items.map((item: Item, i: number) => {
