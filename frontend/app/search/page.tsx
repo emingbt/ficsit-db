@@ -10,8 +10,6 @@ export default async function Search({ searchParams }: {
   const data = await result.json()
 
   return (
-    <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">
-      <SearchSection data={data} />
-    </main>
+    <SearchSection data={data} />
   )
 }
