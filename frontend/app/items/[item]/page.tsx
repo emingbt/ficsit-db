@@ -1,16 +1,18 @@
 import Image from "next/image"
 import Recipes from "../../../components/recipes"
 
-export default async function Item({ params }: { params: { item: string } }) {
+import type { Item, ProductionRecipe } from "../../../interfaces"
+
+export default async function ItemPage({ params }: { params: { item: string } }) {
   const slug = params.item
 
   const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'
-  const result = await fetch(`${baseUrl}/api/item?slug=${slug}`, { cache: 'no-store' })
+  const result = await fetch(`${baseUrl}/api/item?slug=${slug}`)
   const data = await result.json()
 
-  const item = data.item
-  const recipes = data.recipes
-  const usagesAsIngredient = data.usagesAsIngredient
+  const item: Item = data.item
+  const recipes: ProductionRecipe[] = data.recipes
+  const usagesAsIngredient: ProductionRecipe[] = data.usagesAsIngredient
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">

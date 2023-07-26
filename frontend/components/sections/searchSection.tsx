@@ -32,7 +32,7 @@ export default function SearchSection({ data }: {
             router.push(`/search?name=${searchValue}`)
           }}>
           <input
-            className="w-full h-full bg-main-bg lg:mb-4 px-4"
+            className="w-full h-full bg-main-bg lg:mb-4 px-4 outline-none"
             type="text"
             placeholder="Search something..."
             value={searchValue}

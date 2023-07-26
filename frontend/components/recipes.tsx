@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
-export default function Recipes({ recipes, title = 'Recipes' }: { recipes: any[], title?: string }) {
+import type { ProductionRecipe } from "../interfaces"
+
+export default function Recipes({ recipes, title = 'Recipes' }: { recipes: ProductionRecipe[], title?: string }) {
   return (
     <section className={`w-full flex flex-col mt-4 ${recipes.length == 0 && 'hidden'}`}>
       <div className="w-full h-12 flex items-center px-4 bg-main-bg">
@@ -8,7 +11,10 @@ export default function Recipes({ recipes, title = 'Recipes' }: { recipes: any[]
       </div>
       <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 p-4 bg-light-bg">
         {recipes.map((recipe, i) => (
-          <div className="w-full flex flex-col bg-dark-bg lg:hover:bg-main-bg cursor-pointer" key={i}>
+          <Link href={`/recipes/${recipe.slug}`}
+            className="w-full flex flex-col bg-dark-bg lg:hover:bg-main-bg cursor-pointer"
+            key={i}
+          >
             <div className="w-full flex flex-wrap items-center justify-center py-2">
               {recipe.products.map((product, j) => (
                 <div className={`h-10 sm:h-16 aspect-square p-0.5 sm:p-1 m-1 sm:m-2 bg-light-bg
@@ -18,7 +24,7 @@ export default function Recipes({ recipes, title = 'Recipes' }: { recipes: any[]
                       src={product.imgUrl}
                       fill
                       sizes="100%"
-                      alt={product.name}
+                      alt={product.slug}
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
@@ -38,7 +44,7 @@ export default function Recipes({ recipes, title = 'Recipes' }: { recipes: any[]
                       src={ingredient.imgUrl}
                       fill
                       sizes="100%"
-                      alt={ingredient.name}
+                      alt={ingredient.slug}
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
@@ -51,7 +57,7 @@ export default function Recipes({ recipes, title = 'Recipes' }: { recipes: any[]
                 {recipe.name}
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
