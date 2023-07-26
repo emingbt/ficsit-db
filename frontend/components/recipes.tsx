@@ -22,7 +22,7 @@ export default function Recipes({ recipes, title = 'Recipes' }: { recipes: any[]
                       src={product.imgUrl}
                       fill
                       sizes="100%"
-                      alt={product.name}
+                      alt={product.slug}
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
@@ -42,7 +42,7 @@ export default function Recipes({ recipes, title = 'Recipes' }: { recipes: any[]
                       src={ingredient.imgUrl}
                       fill
                       sizes="100%"
-                      alt={ingredient.name}
+                      alt={ingredient.slug}
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
