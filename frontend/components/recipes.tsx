@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Recipes({ recipes, title = 'Recipes' }: { recipes: any[], title?: string }) {
+import type { ProductionRecipe } from "../interfaces"
+
+export default function Recipes({ recipes, title = 'Recipes' }: { recipes: ProductionRecipe[], title?: string }) {
   return (
     <section className={`w-full flex flex-col mt-4 ${recipes.length == 0 && 'hidden'}`}>
       <div className="w-full h-12 flex items-center px-4 bg-main-bg">
