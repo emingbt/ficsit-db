@@ -15,7 +15,6 @@ export default function BuildingExtension({ building }: { building: BuildingType
           <div className="w-full sm:w-32 md:w-40 lg:w-48 h-10 sm:h-full shrink-0 flex flex-row items-center justify-center bg-dark-gray">
             <p className='text-sm lg:text-base'>{building.powerConsumption || building.powerProduction} MW</p>
             {building.isResourceExtractor && (
-              // vertical line
               <div className='h-full flex sm:hidden flex-row items-center text-sm'>
                 <div className='w-0.5 h-4/5 sm:h-full bg-main-orange mx-4' />
                 <p>{building.resourceExtractSpeed}/min</p>
