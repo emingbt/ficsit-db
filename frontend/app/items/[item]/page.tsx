@@ -7,7 +7,7 @@ export default async function ItemPage({ params }: { params: { item: string } })
   const slug = params.item
 
   const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'
-  const result = await fetch(`${baseUrl}/api/item?slug=${slug}`, { cache: 'no-store' })
+  const result = await fetch(`${baseUrl}/api/item?slug=${slug}`)
   const data = await result.json()
 
   const item: Item = data.item

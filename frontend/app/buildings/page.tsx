@@ -10,7 +10,7 @@ export default async function Buildings({
   const selectedCategory = searchParams?.category || "production"
 
   const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'
-  const result = await fetch(`${baseUrl}/api/buildings?category=${selectedCategory}`, { cache: 'no-store' })
+  const result = await fetch(`${baseUrl}/api/buildings?category=${selectedCategory}`)
   const categories = await result.json()
 
   return (
