@@ -51,6 +51,7 @@ export default async function Building({ params }: { params: { building: string 
                         fill
                         alt={item.slug}
                         style={{ objectFit: 'contain' }}
+                        sizes='50%'
                       />
                     </div>
                   </Link>

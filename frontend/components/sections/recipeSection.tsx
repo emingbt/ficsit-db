@@ -102,6 +102,7 @@ export default function RecipeSection({ recipe }: {
                         alt="power-shard"
                         fill
                         style={{ objectFit: 'contain' }}
+                        sizes="50%"
                       />
                     </div>
                   </div>
@@ -118,6 +119,7 @@ export default function RecipeSection({ recipe }: {
                         alt={recipe.building.slug}
                         fill
                         style={{ objectFit: 'contain' }}
+                        sizes="50%"
                       />
                     </div>
                   </div>

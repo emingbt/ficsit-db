@@ -15,6 +15,7 @@ export default function RecipeItem({ item, perMinute }: {
             alt={item.slug}
             fill
             style={{ objectFit: 'contain' }}
+            sizes='50%'
           />
         </div>
       </div>
