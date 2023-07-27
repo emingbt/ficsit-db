@@ -5,6 +5,7 @@ import BuildingExtension from '../../../components/buildingExtension'
 import Recipes from '../../../components/recipes'
 
 import { BuildingType } from '../../../interfaces'
+import ExtractableResources from '../../../components/extractableResources'
 
 export default async function Building({ params }: { params: { building: string } }) {
   const slug = params.building
@@ -66,6 +67,7 @@ export default async function Building({ params }: { params: { building: string 
       </section>
       <BuildingExtension building={building} />
       <Recipes recipes={recipes} />
+      <ExtractableResources resources={building.resources} />
     </>
   )
 }
