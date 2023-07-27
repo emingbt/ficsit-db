@@ -5,7 +5,9 @@ import type { BuildingType } from "../interfaces"
 export default function ExtractableResources({ resources }: {
   resources: BuildingType['resources']
 }) {
-  return (resources && resources?.length > 0) && (
+  if (!resources || resources.length == 0) return null
+
+  return (
     <section className={`w-full flex flex-col mt-4`}>
       <div className="w-full h-12 flex items-center px-4 bg-main-bg">
         <h1>Extractable Resources - ({resources.length})</h1>

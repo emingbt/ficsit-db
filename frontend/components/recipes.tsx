@@ -4,7 +4,9 @@ import Link from 'next/link'
 import type { ProductionRecipe } from "../interfaces"
 
 export default function Recipes({ recipes, title = 'Recipes' }: { recipes: ProductionRecipe[], title?: string }) {
-  return recipes.length > 0 && (
+  if (!recipes || recipes.length == 0) return null
+
+  return (
     <section className={`w-full flex flex-col mt-4`}>
       <div className="w-full h-12 flex items-center px-4 bg-main-bg">
         <h1>{title} - ({recipes.length})</h1>
