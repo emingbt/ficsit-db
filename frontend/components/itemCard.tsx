@@ -1,10 +1,14 @@
 import Link from "next/link"
 import Image from "next/image"
 
-import type { Item, BuildingType } from "../interfaces"
+type Card = {
+  slug: string
+  imgUrl: string
+  name: string
+}
 
 // Actually, this is a card for item but can be used for building too
-export const ItemCard = ({ item, isBuilding = false }: { item: Item | BuildingType, isBuilding?: boolean }) => {
+export const ItemCard = ({ item, isBuilding = false }: { item: Card, isBuilding?: boolean }) => {
   return (
     <Link href={`/${isBuilding ? "buildings" : "items"}/${item.slug}`}>
       <div className="flex flex-col items-center justify-center m-1 bg-main-bg lg:hover:bg-dark-bg pointer-cursor">
