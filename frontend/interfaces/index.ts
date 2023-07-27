@@ -47,10 +47,14 @@ export interface BuildingType {
     imgUrl: string
   }[],
   fuels?: {
-    slug: string,
-    imgUrl: string,
-    type: string,
-    rate: number
+    name: string,
+    items: {
+      slug: string,
+      imgUrl: string,
+      isFluid: boolean,
+      type: string,
+      rate: number
+    }[]
   }[]
 }
 

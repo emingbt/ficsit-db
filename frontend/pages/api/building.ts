@@ -13,7 +13,7 @@ export default async function Building(req: NextApiRequest, res: NextApiResponse
     WITH b, cost, CASE WHEN resources[0].slug IS NULL THEN [] ELSE resources END AS resources
     OPTIONAL MATCH (f:Fuel)-[:USED_BY]->(b)
     OPTIONAL MATCH (f)-[r]-(i:Item)
-    WITH b, cost, resources, f, COLLECT({slug: i.slug, imgUrl:i.imgUrl, type:type(r), rate:r.rate}) AS items
+    WITH b, cost, resources, f, COLLECT({slug: i.slug, imgUrl:i.imgUrl, isFluid:i.isFluid, type:type(r), rate:r.rate}) AS items
     WITH b, cost, resources, COLLECT(f{.*, items}) AS fuels
     OPTIONAL MATCH (pr:ProductionRecipe)-[:PRODUCES_IN]->(b)
     OPTIONAL MATCH (ingredient:Item)-[u:USED_IN]->(pr)-[p:PRODUCES]->(product:Item)
