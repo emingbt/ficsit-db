@@ -12,7 +12,7 @@ export default function RecipeSection({ recipe }: {
   const [clockspeed, setClockspeed] = useState(100)
   const [productionRate, setProductionRate] = useState(recipe.products[0].amount / recipe.craftTime * 60)
 
-  let energyConsumption = parseFloat((recipe.building.consumption * (clockspeed / 100) ** recipe.building.exponent).toFixed(4))
+  let energyConsumption = parseFloat((recipe.building.consumption * (clockspeed / 100) ** Math.log2(2.5)).toFixed(4))
   let requiredPowerShards = clockspeed > 200 ? 3 : clockspeed > 150 ? 2 : clockspeed > 100 ? 1 : 0
   let periodTime = parseFloat((recipe.craftTime * 100 / clockspeed).toFixed(4))
 
