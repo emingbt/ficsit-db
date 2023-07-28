@@ -13,9 +13,6 @@ export interface Item {
   event: string
 }
 
-export type ItemMap = {
-  [key: string]: Item
-}
 
 export interface BuildingType {
   slug: string,
@@ -58,8 +55,7 @@ export interface BuildingType {
   }[]
 }
 
-export type BuildingMap = {
-  [key: string]: BuildingType[]
+  fuels?: Fuel[]
 }
 
 export interface ProductionRecipe {
@@ -83,9 +79,6 @@ export interface ProductionRecipe {
   event: string
 }
 
-export type ProductionRecipeMap = {
-  [key: string]: ProductionRecipe
-}
 
 export interface BuildingRecipe {
   slug: string,
@@ -98,9 +91,6 @@ export interface BuildingRecipe {
   event: string
 }
 
-export type BuildingRecipeMap = {
-  [key: string]: BuildingRecipe
-}
 
 export interface ProductionRecipeItem {
   slug: string,
