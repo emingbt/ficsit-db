@@ -16,7 +16,7 @@ export default async function BuildingsPage({
   return (
     <main className="w-full h-full flex flex-col items-center justify-cente p-2">
       <BuildingCategories selectedCategory={selectedCategory} />
-      <div className="w-full bg-dark-bg p-4 mt-7 xl:mt-5">
+      <div className="w-full bg-dark-bg p-2 sm:p-4 mt-7 xl:mt-5">
         <section className="w-full h-full flex flex-col items-center justify-center bg-main-bg">
           {categories.map((category: any, i: number) => {
             return (
