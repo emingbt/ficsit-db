@@ -1,6 +1,6 @@
 import SearchSection from "../../components/sections/searchSection"
 
-export default async function Search({ searchParams }: {
+export default async function SearchPage({ searchParams }: {
   searchParams: { name: string, category: "items" | "buildings" } | undefined
 }) {
   const name = searchParams?.name?.toLowerCase() || ""

@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import BuildingCategories from "../../components/buildingCategories"
 
-export default async function Buildings({
+export default async function BuildingsPage({
   searchParams
 }: {
   searchParams: { category: string } | undefined

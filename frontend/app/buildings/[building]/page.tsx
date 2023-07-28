@@ -8,7 +8,7 @@ import { BuildingType } from '../../../interfaces'
 import ExtractableResources from '../../../components/extractableResources'
 import Fuels from '../../../components/fuels'
 
-export default async function Building({ params }: { params: { building: string } }) {
+export default async function BuildingPage({ params }: { params: { building: string } }) {
   const slug = params.building
 
   const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'

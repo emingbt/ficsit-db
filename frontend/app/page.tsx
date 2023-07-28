@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default async function Home() {
+export default async function HomePage() {
   return (
 
     <main className="w-full p-[10px] bg-dark-bg lg:p-5">
