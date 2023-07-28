@@ -5,12 +5,12 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { ItemCard } from "../itemCard"
 import SearchIcon from "../../assets/searchIcon.svg"
 
-import type { Item, BuildingType } from "../../interfaces"
+import type { Item, Building } from "../../interfaces"
 
 export default function SearchSection({ data }: {
   data: {
     items: Item[],
-    buildings: BuildingType[]
+    buildings: Building[]
   }
 }) {
   const router = useRouter()
@@ -76,7 +76,7 @@ export default function SearchSection({ data }: {
           )
         ) : selectedCategory == "buildings" && (
           buildings.length > 0 ? (
-            buildings.map((building: BuildingType, i: number) => {
+            buildings.map((building: Building, i: number) => {
               return (
                 <ItemCard item={building} isBuilding={true} key={i} />
               )

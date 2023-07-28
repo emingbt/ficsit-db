@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
-import type { BuildingType } from "../interfaces"
+import type { Building } from "../interfaces"
 
 export default function Fuels({ fuels }: {
-  fuels: BuildingType['fuels']
+  fuels: Building['fuels']
 }) {
   // if there are no fuels, return null
   if (!fuels || fuels.length == 0) return null

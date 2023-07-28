@@ -1,9 +1,9 @@
 import { ItemCard } from './itemCard'
 
-import type { BuildingType } from "../interfaces"
+import type { Building } from "../interfaces"
 
 export default function ExtractableResources({ resources }: {
-  resources: BuildingType['resources']
+  resources: Building['resources']
 }) {
   if (!resources || resources.length == 0) return null
 

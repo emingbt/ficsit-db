@@ -13,8 +13,7 @@ export interface Item {
   event: string
 }
 
-
-export interface BuildingType {
+export interface Building {
   slug: string,
   name: string,
   description: string,
@@ -43,18 +42,6 @@ export interface BuildingType {
     name: string,
     imgUrl: string
   }[],
-  fuels?: {
-    name: string,
-    items: {
-      slug: string,
-      imgUrl: string,
-      isFluid: boolean,
-      type: string,
-      rate: number
-    }[]
-  }[]
-}
-
   fuels?: Fuel[]
 }
 
@@ -79,25 +66,12 @@ export interface ProductionRecipe {
   event: string
 }
 
-
-export interface BuildingRecipe {
-  slug: string,
-  name: string,
-  ingredients: {
-    itemClass: string,
-    amount: number
-  }[],
-  product: string,
-  event: string
-}
-
-
 export interface ProductionRecipeItem {
   slug: string,
   imgUrl: string,
   amount: number,
-  name?: string,
-  isFluid?: boolean
+  name: string,
+  isFluid: boolean
 }
 
 export interface Fuel {
@@ -105,6 +79,7 @@ export interface Fuel {
   items: {
     slug: string,
     imgUrl: string,
+    isFluid: boolean,
     type: string,
     rate: number
   }[]
