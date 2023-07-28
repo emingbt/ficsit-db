@@ -17,7 +17,7 @@ export default function RootLayout({ children }: {
     <html lang="en" className='font-main'>
       <body className='w-full h-full min-h-screen flex flex-col justify-between margin-0 padding-0 bg-main-bg text-white'>
         <div className='w-full flex flex-col'>
-          <Suspense fallback={<div>Loading...</div>} >
+          <Suspense fallback={<header className='w-full h-16 bg-dark-bg' />} >
             <Header />
           </Suspense>
           <div className='w-full h-full flex flex-col items-center p-5 xl:p-16 xl:pt-8'>
