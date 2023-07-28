@@ -2,7 +2,7 @@ import { ItemCard } from '../../components/itemCard'
 
 import { Item } from '../../interfaces'
 
-export default async function Items() {
+export default async function ItemsPage() {
   const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'
   const result = await fetch(`${baseUrl}/api/items`)
   const items = await result.json()

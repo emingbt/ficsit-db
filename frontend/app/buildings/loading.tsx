@@ -4,7 +4,7 @@ export default function Loading({ searchParams }: { searchParams?: { category: s
   return (
     <main className="w-full h-full flex flex-col items-center justify-cente p-2">
       <BuildingCategories selectedCategory={searchParams?.category || ''} />
-      <div className="w-full bg-dark-bg p-4 mt-7 xl:mt-5">
+      <div className="w-full bg-dark-bg p-2 sm:p-4 mt-7 xl:mt-5">
         <section className="w-full h-full flex flex-col items-center justify-center bg-main-bg">
           {Array.from(Array(4).keys()).map((i: number) => {
             return (

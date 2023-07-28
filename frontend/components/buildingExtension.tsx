@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 
-import type { BuildingType } from "../interfaces"
+import type { Building } from "../interfaces"
 
-export default function BuildingExtension({ building }: { building: BuildingType }) {
+export default function BuildingExtension({ building }: { building: Building }) {
   const [clockspeed, setClockspeed] = useState<number>(100)
   const [purity, setPurity] = useState<'Impure' | 'Normal' | 'Pure'>('Normal')
   const purityMultiplier = purity == 'Impure' ? 0.5 : purity == 'Normal' ? 1 : 2

@@ -13,11 +13,7 @@ export interface Item {
   event: string
 }
 
-export type ItemMap = {
-  [key: string]: Item
-}
-
-export interface BuildingType {
+export interface Building {
   slug: string,
   name: string,
   description: string,
@@ -46,20 +42,7 @@ export interface BuildingType {
     name: string,
     imgUrl: string
   }[],
-  fuels?: {
-    name: string,
-    items: {
-      slug: string,
-      imgUrl: string,
-      isFluid: boolean,
-      type: string,
-      rate: number
-    }[]
-  }[]
-}
-
-export type BuildingMap = {
-  [key: string]: BuildingType[]
+  fuels?: Fuel[]
 }
 
 export interface ProductionRecipe {
@@ -83,31 +66,12 @@ export interface ProductionRecipe {
   event: string
 }
 
-export type ProductionRecipeMap = {
-  [key: string]: ProductionRecipe
-}
-
-export interface BuildingRecipe {
-  slug: string,
-  name: string,
-  ingredients: {
-    itemClass: string,
-    amount: number
-  }[],
-  product: string,
-  event: string
-}
-
-export type BuildingRecipeMap = {
-  [key: string]: BuildingRecipe
-}
-
 export interface ProductionRecipeItem {
   slug: string,
   imgUrl: string,
   amount: number,
-  name?: string,
-  isFluid?: boolean
+  name: string,
+  isFluid: boolean
 }
 
 export interface Fuel {
@@ -115,6 +79,7 @@ export interface Fuel {
   items: {
     slug: string,
     imgUrl: string,
+    isFluid: boolean,
     type: string,
     rate: number
   }[]

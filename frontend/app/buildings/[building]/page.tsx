@@ -4,20 +4,20 @@ import Link from 'next/link'
 import BuildingExtension from '../../../components/buildingExtension'
 import Recipes from '../../../components/recipes'
 
-import { BuildingType } from '../../../interfaces'
+import { Building, ProductionRecipe } from '../../../interfaces'
 import ExtractableResources from '../../../components/extractableResources'
 import Fuels from '../../../components/fuels'
 
-export default async function Building({ params }: { params: { building: string } }) {
+export default async function BuildingPage({ params }: { params: { building: string } }) {
   const slug = params.building
 
   const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'
   const result = await fetch(`${baseUrl}/api/building?slug=${slug}`)
   const data = await result.json()
 
-  const building: BuildingType = data.building
-  const recipes = data.recipes
-  const fuels = data.fuels
+  const building: Building = data.building
+  const recipes: ProductionRecipe[] = data.recipes
+  const fuels: Building['fuels'] = data.fuels
 
   return (
     <>

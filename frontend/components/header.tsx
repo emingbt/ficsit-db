@@ -1,9 +1,10 @@
 "use client"
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
 import SearchInput from './searchInput'
+import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
+
 import HamburgerIcon from '../assets/hamburgerIcon.svg'
 import CloseIcon from '../assets/closeIcon.svg'
 
