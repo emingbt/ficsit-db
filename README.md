@@ -1,11 +1,8 @@
-# FICSIT DB (Under Development)
+# FICSIT DB
 A [Satisfactory](https://www.satisfactorygame.com/) Encyclopedia that helps you while building systems 🚧
 
 ![ficsitdb-banner](https://user-images.githubusercontent.com/73133276/185584869-fc718861-a32c-4969-b615-28e0d064ca38.png)
 
-## Development Update
-### 12/07/2023
-Now project is being updated to Next.js 13.0.0. I am also working on the design of the website. I have switched from Styled Components to Tailwind CSS. Some pages are updated with the new design but some of them might not work properly. My primary pursose is updating frontend but I am also working on the backend of the project. I am planning to use PostgeSQL for backend database. For the game data, neo4j will stay. I will update the README.md file when new features are added. 
 
 ## Project setup
 
