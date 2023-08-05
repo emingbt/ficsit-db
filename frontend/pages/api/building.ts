@@ -17,8 +17,8 @@ export default async function Building(req: NextApiRequest, res: NextApiResponse
     WITH b, cost, resources, COLLECT(f{.*, items}) AS fuels
     OPTIONAL MATCH (pr:ProductionRecipe)-[:PRODUCES_IN]->(b)
     OPTIONAL MATCH (ingredient:Item)-[u:USED_IN]->(pr)-[p:PRODUCES]->(product:Item)
-    WITH b, cost, resources, fuels, pr, COLLECT(DISTINCT {name: ingredient.slug, imgUrl: ingredient.imgUrl, amount: u.amount}) AS ingredients, COLLECT(DISTINCT {name: product.slug, imgUrl: product.imgUrl, amount: p.amount}) AS products
-    WITH b, cost, resources, fuels, pr, ingredients, products, pr{.*, ingredients: ingredients, products: products, building: {slug:b.slug, name:b.slug, imgUrl:b.imgUrl}} AS recipe
+    WITH b, cost, resources, fuels, pr, COLLECT(DISTINCT {name: ingredient.slug, imgUrl: ingredient.imgUrl, isFluid: ingredient.isFluid, amount: u.amount}) AS ingredients, COLLECT(DISTINCT {name: product.slug, imgUrl: product.imgUrl, isFluid: product.isFluid, amount: p.amount}) AS products
+    WITH b, cost, resources, fuels, pr, ingredients, products, pr{.*, ingredients: ingredients, products: products, building: {slug:b.slug, imgUrl:b.imgUrl}} AS recipe
     WITH b, cost, resources, fuels, COLLECT(DISTINCT recipe) AS recipes
     RETURN b{.*, cost:cost, resources:resources} AS building, recipes, fuels
   `
