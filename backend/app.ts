@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express'
-import { usersRouter } from './routers/users'
+import router from './routers'
 
 const app = express()
 
@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 })
 
 // Mount routers
-app.use('/users', usersRouter)
+app.use('/', router)
 
 // Error handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
