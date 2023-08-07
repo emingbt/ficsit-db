@@ -70,3 +70,5 @@ router.delete('/:id', async (req, res) => {
 
   res.json(blueprint)
 })
+
+export const blueprintRouter = router
