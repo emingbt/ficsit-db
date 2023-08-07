@@ -8,13 +8,11 @@ const getAllBlueprints = async () => {
   return allBlueprints
 }
 
-const getBlueprintByTitle = async (input: {
-  title: string
-}) => {
+const getBlueprintByTitle = async (title: string) => {
   // Get blueprint by title
   const blueprint = await prisma.blueprint.findUnique({
     where: {
-      title: input.title
+      title: title
     },
 
     // Remove id and designeriId and include designer username and upvotes count
@@ -52,15 +50,13 @@ const getBlueprintByTitle = async (input: {
   return blueprint
 }
 
-const createBlueprint = async ({ input, ctx }: {
-  input: {
-    title: string,
-    description: string,
-    files: string[],
-    images: string[],
-    categories: string[],
-  },
-  ctx: Context
+const createBlueprint = async (input: {
+  title: string,
+  description: string,
+  files: string[],
+  images: string[],
+  categories: string[],
+  designerId: string
 }) => {
   // Check if title is already taken
   const blueprintExists = await prisma.blueprint.findUnique({
@@ -76,9 +72,6 @@ const createBlueprint = async ({ input, ctx }: {
     })
   }
 
-  // Get user id from context
-  const userId = ctx.userId
-
   // Transform title to capitalize first letter of each word
   function transformTitle(title: string) {
     return title.replace(/\b\w/g, match => match.toUpperCase())
@@ -91,7 +84,7 @@ const createBlueprint = async ({ input, ctx }: {
       title: transformedTitle,
       description: input.description,
       categories: input.categories,
-      designerId: userId
+      designerId: input.designerId
     }
   })
 
@@ -190,12 +183,10 @@ const updateBlueprint = async (input: {
   return updatedBlueprint
 }
 
-const deleteBlueprint = async (input: {
-  blueprintId: string
-}) => {
+const deleteBlueprint = async (blueprintId: string) => {
   const deletedBlueprint = await prisma.blueprint.delete({
     where: {
-      id: input.blueprintId
+      id: blueprintId
     }
   })
 
