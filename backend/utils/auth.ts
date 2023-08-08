@@ -1,31 +1,25 @@
 import jwt from 'jsonwebtoken'
-import { TRPCError } from '@trpc/server'
-
-// Token types enum
-export enum TokenType {
-  ACCESS = 'ACCESS',
-  RESET_PASSWORD = 'RESET_PASSWORD',
-  EMAIL_CONFIRMATION = 'EMAIL_CONFIRMATION'
-}
+import createErrors from 'http-errors'
 
 // Token expiration times
 const expirationTimes = {
-  [TokenType.ACCESS]: '30d',
-  [TokenType.RESET_PASSWORD]: '5m',
-  [TokenType.EMAIL_CONFIRMATION]: '30m'
+  "ACCESS": '30d',
+  "RESET_PASSWORD": '5m',
+  "EMAIL_CONFIRMATION": '30m'
 }
 
 // Generate token
-export const generateToken = (id: string, tokenType = TokenType.ACCESS) => {
+export const generateToken = (
+  id: string,
+  tokenType: "ACCESS" | "RESET_PASSWORD" | "EMAIL_CONFIRMATION" = "ACCESS"
+) => {
   // Get secret from environment variables
   const secret = process.env[`JWT_${tokenType}_SECRET`]
 
   // If secret is not defined, throw error
+  // I'm not sure giving this information is a good idea
   if (!secret) {
-    throw new TRPCError({
-      code: 'INTERNAL_SERVER_ERROR',
-      message: 'JWT secret is not defined'
-    })
+    throw new Error('JWT secret not defined')
   }
 
   // Create and return token
@@ -35,18 +29,25 @@ export const generateToken = (id: string, tokenType = TokenType.ACCESS) => {
 }
 
 // Verify token
-export const verifyToken = async (token: string, tokenType = TokenType.ACCESS) => {
+export const verifyToken = (
+  token: string,
+  tokenType: "ACCESS" | "RESET_PASSWORD" | "EMAIL_CONFIRMATION" = "ACCESS"
+) => {
+  // Get secret from environment variables
+  const secret = process.env[`JWT_${tokenType}_SECRET`]
+
+  // If secret is not defined, throw error
+  if (!secret) {
+    throw new Error('JWT secret not defined')
+  }
+
   try {
-    const secret = process.env[`JWT_${tokenType}_SECRET`]
-    const decoded = jwt.verify(token, secret!)
-    const { id } = decoded as { id: string }
+    // Verify token
+    const decoded = jwt.verify(token, secret!) as { id: string }
 
-    if (!id) {
-      return null
-    }
-
-    return id
-  } catch (err) {
-    throw new TRPCError({ code: 'BAD_REQUEST', message: 'Invalid token' })
+    // Return user id
+    return decoded.id
+  } catch (error) {
+    throw new createErrors.Unauthorized('Invalid token')
   }
 }
