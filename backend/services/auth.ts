@@ -92,7 +92,7 @@ const forgotPassword = async (input: { email: string }) => {
   const sentAddress = sendEmail(
     user.email,
     passwordResetToken,
-    EmailType.RESET_PASSWORD
+    "RESET_PASSWORD"
   )
   return sentAddress
 }
