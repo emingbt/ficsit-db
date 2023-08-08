@@ -15,9 +15,14 @@ app.use('/', router)
 
 // Error handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+  const statusCode = err.statusCode || 500
+  const message = err.message || 'Something went wrong'
+
   console.log(err)
-  res.status(500).json({
-    message: 'Something went wrong'
+
+  res.status(statusCode).json({
+    message: message,
+    stack: process.env.NODE_ENV === 'production' ? null : err.stack
   })
 })
 
