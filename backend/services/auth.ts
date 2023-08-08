@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt'
 import { prisma } from '../prisma'
 import { TRPCError } from '@trpc/server'
 import type { Context } from '../utils/trpc'
-import { generateToken, TokenType } from '../utils/auth'
+import { generateToken } from '../utils/auth'
 import { sendEmail, EmailType } from '../utils/nodemailer'
 
 const loginUser = async ({ input, ctx }: {
@@ -85,7 +85,7 @@ const forgotPassword = async (input: { email: string }) => {
   // Generate password reset token
   const passwordResetToken = generateToken(
     user.id,
-    TokenType.RESET_PASSWORD
+    "RESET_PASSWORD"
   )
 
   // Send email with password reset link and return sent address
