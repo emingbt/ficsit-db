@@ -23,9 +23,9 @@ export const sendEmail = async (
   username?: string
 ) => {
   // Create forgot password url
-  const forgotPasswordUrl = `${process.env.CLIENT_URL}/reset-password/${token}`
+  const forgotPasswordUrl = `${process.env.CLIENT_URL}/reset-password?token=${token}`
   // Create verify email url
-  const verifyEmailUrl = `${process.env.CLIENT_URL}/verify-email/${token}`
+  const verifyEmailUrl = `${process.env.CLIENT_URL}/verify-email?token=${token}`
   // Create email subject
   let subject = ''
   // Create email html
