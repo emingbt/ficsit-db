@@ -1,7 +1,7 @@
 import { prisma } from "../prisma"
 import { TRPCError } from "@trpc/server"
 import cloudinary from 'cloudinary'
-import type { Context } from "../utils/trpc"
+import createError from "http-errors"
 
 const getAllBlueprints = async () => {
   const allBlueprints = await prisma.blueprint.findMany()
@@ -66,10 +66,7 @@ const createBlueprint = async (input: {
   })
 
   if (blueprintExists) {
-    throw new TRPCError({
-      code: 'CONFLICT',
-      message: 'Blueprint with this title already exists'
-    })
+    throw createError(409, 'Blueprint with this title already exists')
   }
 
   // Transform title to capitalize first letter of each word
@@ -90,10 +87,7 @@ const createBlueprint = async (input: {
 
   // If blueprint is not created, throw error
   if (!createdBlueprint) {
-    throw new TRPCError({
-      code: "INTERNAL_SERVER_ERROR",
-      message: "Blueprint could not be created"
-    })
+    throw createError(500, 'Blueprint could not be created')
   }
 
   // Convert image and files from base64 to cloudinary links
@@ -104,10 +98,7 @@ const createBlueprint = async (input: {
 
       return uploadedImage.secure_url
     } catch (err) {
-      throw new TRPCError({
-        code: 'INTERNAL_SERVER_ERROR',
-        message: 'Image could not be uploaded'
-      })
+      throw createError(500, 'Image could not be uploaded')
     }
   }))
 
@@ -124,10 +115,7 @@ const createBlueprint = async (input: {
 
       return uploadedFile.secure_url
     } catch (err) {
-      throw new TRPCError({
-        code: 'INTERNAL_SERVER_ERROR',
-        message: 'File could not be uploaded'
-      })
+      throw createError(500, 'File could not be uploaded')
     }
   }))
 
@@ -144,10 +132,7 @@ const createBlueprint = async (input: {
 
   // If blueprint is not updated, throw error
   if (!updatedBlueprint) {
-    throw new TRPCError({
-      code: "INTERNAL_SERVER_ERROR",
-      message: "Blueprint could not be updated"
-    })
+    throw createError(500, 'Blueprint could not be updated')
   }
 
   return updatedBlueprint
@@ -189,7 +174,6 @@ const deleteBlueprint = async (blueprintId: string) => {
       id: blueprintId
     }
   })
-
 
   return deletedBlueprint
 }
