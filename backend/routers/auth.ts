@@ -7,7 +7,6 @@ import {
   generateToken,
   verifyToken
 } from '../utils/auth'
-import { EmailType } from '../utils/nodemailer'
 
 
 
