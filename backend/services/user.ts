@@ -49,7 +49,6 @@ const deleteUser = async (
 }
 
 const getUserById = async (id: string) => {
-  // Check if user exists
   const user = await prisma.user.findUnique({
     where: {
       id: id
@@ -65,7 +64,6 @@ const getUserById = async (id: string) => {
 }
 
 const getUserByUsername = async (username: string) => {
-  // Check if user exists
   const user = await prisma.user.findUnique({
     where: {
       username: username

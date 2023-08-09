@@ -1,108 +1,59 @@
 import express from 'express'
-import { prisma } from '../prisma'
+import {
+  getAllUsers,
+  getUserById,
+  getUserByUsername,
+  deleteUser
+} from '../services/user'
 
 const router = express.Router()
 
 // Get all users
 router.get('/', async (req, res) => {
-  const users = await prisma.user.findMany()
+  const users = await getAllUsers()
 
   res.json(users)
 })
 
 // Get user by id
-router.get('/:id', async (req, res) => {
-  const { id } = req.params
+router.get('/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params
 
-  const user = await prisma.user.findUnique({
-    where: {
-      id: id
-    }
-  })
+    const user = await getUserById(id)
 
-  if (!user) {
-    res.status(404)
-    res.json({
-      message: 'User not found'
-    })
-    return
+    res.json(user)
+  } catch (error) {
+    return next(error)
   }
-
-  res.json(user)
 })
 
 // Get user by username
-router.get('/username/:username', async (req, res) => {
-  const { username } = req.params
+router.get('/username/:username', async (req, res, next) => {
+  try {
+    const { username } = req.params
 
-  const user = await prisma.user.findUnique({
-    where: {
-      username: username
-    }
-  })
+    const user = await getUserByUsername(username)
 
-  if (!user) {
-    res.status(404)
-    res.json({
-      message: 'User not found'
-    })
-    return
+    res.json(user)
+  } catch (error) {
+    return next(error)
   }
-
-  res.json(user)
-})
-
-// Create user
-router.post('/', async (req, res) => {
-  const { username, password, email } = req.body
-
-  const user = await prisma.user.create({
-    data: {
-      username,
-      password,
-      email
-    }
-  })
-
-  // if user could not be created, throw error
-  if (!user) {
-    res.status(400)
-    res.json({
-      message: 'User could not be created'
-    })
-    return
-  }
-
-  res.json(user)
 })
 
 // Delete user
-router.delete('/:id', async (req, res) => {
-  const { id } = req.params
+router.delete('/', async (req, res, next) => {
+  try {
+    const { id, password } = req.body
 
-  const user = await prisma.user.findUnique({
-    where: {
-      id: id
-    }
-  })
+    await deleteUser(id, password)
 
-  if (!user) {
-    res.status(404)
     res.json({
-      message: 'User not found'
+      message: 'User deleted'
     })
-    return
+  } catch (error) {
+    return next(error)
   }
-
-  await prisma.user.delete({
-    where: {
-      id: id
-    }
-  })
-
-  res.json({
-    message: 'User deleted'
-  })
 })
 
 // Export router as usersRouter
