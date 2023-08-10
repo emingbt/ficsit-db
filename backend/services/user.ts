@@ -1,6 +1,6 @@
-import bcrypt from 'bcrypt'
-import { prisma } from '../prisma'
-import createError from 'http-errors'
+import bcrypt from "bcrypt"
+import { prisma } from "../prisma"
+import createError from "http-errors"
 
 const getAllUsers = async () => {
   const users = await prisma.user.findMany()

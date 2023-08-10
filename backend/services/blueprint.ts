@@ -1,6 +1,5 @@
 import { prisma } from "../prisma"
-import { TRPCError } from "@trpc/server"
-import cloudinary from 'cloudinary'
+import cloudinary from "cloudinary"
 import createError from "http-errors"
 
 const getAllBlueprints = async () => {
@@ -162,7 +161,7 @@ const updateBlueprint = async (input: {
 
   // If blueprint does not exist, throw error
   if (!updatedBlueprint) {
-    throw new TRPCError({ code: "NOT_FOUND", message: "Blueprint not found" })
+    throw createError(500, 'Blueprint could not be updated')
   }
 
   return updatedBlueprint

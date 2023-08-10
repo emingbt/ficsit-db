@@ -104,7 +104,7 @@ const forgotPassword = async (email: string) => {
     "RESET_PASSWORD"
   )
 
-  // Send email with password reset link and return sent address
+  // Send email with password reset link
   sendEmail(
     user.email,
     passwordResetToken,

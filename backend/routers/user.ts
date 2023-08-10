@@ -22,6 +22,10 @@ router.get('/:id', async (req, res, next) => {
 
     const user = await getUserById(id)
 
+    if (!user) {
+      res.status(404).send("User not found")
+    }
+
     res.json(user)
   } catch (error) {
     return next(error)
@@ -34,6 +38,10 @@ router.get('/username/:username', async (req, res, next) => {
     const { username } = req.params
 
     const user = await getUserByUsername(username)
+
+    if (!user) {
+      res.status(404).send("User not found")
+    }
 
     res.json(user)
   } catch (error) {
