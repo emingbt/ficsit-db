@@ -1,12 +1,13 @@
-import { router } from "../utils/trpc"
-import { blueprintRouter } from "./blueprint"
-import { commentRouter } from "./comment"
-import { upvoteRouter } from "./upvote"
-import { userRouter } from "./user"
+import express from "express"
 
-export const appRouter = router({
-  blueprint: blueprintRouter,
-  comment: commentRouter,
-  upvote: upvoteRouter,
-  user: userRouter
-})
+import { authRouter } from "./auth"
+import { blueprintRouter } from "./blueprint"
+import { usersRouter } from "./user"
+
+const router = express.Router()
+
+router.use('/auth', authRouter)
+router.use('/blueprints', blueprintRouter)
+router.use('/users', usersRouter)
+
+export default router

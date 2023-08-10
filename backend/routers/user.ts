@@ -1,67 +1,68 @@
-import { protectedProcedure, publicProcedure, router } from "../utils/trpc"
-import z from 'zod'
+import express from 'express'
 import {
   getAllUsers,
+  getUserById,
   getUserByUsername,
-  createUser,
   deleteUser
-} from "../services/user"
-import {
-  loginUser,
-  forgotPassword,
-  resetPassword
-} from "../services/auth"
+} from '../services/user'
 
-export const userRouter = router({
-  getAllUsers: protectedProcedure
-    .query(async () => {
-      const users = await getAllUsers()
-      return users
-    }),
-  deleteUser: protectedProcedure
-    .input(z.object({ password: z.string().nonempty() }))
-    .mutation(async ({ input, ctx }) => {
-      const deletedUser = await deleteUser({ input, ctx })
-      return deletedUser
-    }),
-  getUser: publicProcedure
-    .input(z.object({ username: z.string().nonempty() }))
-    .query(async ({ input }) => {
-      const user = await getUserByUsername(input)
-      return user
-    }),
-  login: publicProcedure
-    .input(z.object({
-      email: z.string().email(),
-      password: z.string().min(8).max(16)
-    }))
-    .mutation(async ({ input, ctx }) => {
-      const user = await loginUser({ input, ctx })
-      return user
-    }),
-  register: publicProcedure
-    .input(z.object({
-      username: z.string().min(1).max(16),
-      email: z.string().email(),
-      password: z.string().min(8).max(16)
-    }))
-    .mutation(async ({ input, ctx }) => {
-      const user = await createUser({ input, ctx })
-      return user
-    }),
-  forgotPassword: publicProcedure
-    .input(z.object({ email: z.string().email() }))
-    .mutation(async ({ input }) => {
-      const sentAddress = await forgotPassword(input)
-      return sentAddress
-    }),
-  resetPassword: protectedProcedure
-    .input(z.object({
-      token: z.string().nonempty(),
-      password: z.string().min(8).max(16)
-    }))
-    .mutation(async ({ input, ctx }) => {
-      const user = await resetPassword({ input, ctx })
-      return user
-    })
+const router = express.Router()
+
+// Get all users
+router.get('/', async (req, res) => {
+  const users = await getAllUsers()
+
+  res.json(users)
 })
+
+// Get user by id
+router.get('/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params
+
+    const user = await getUserById(id)
+
+    if (!user) {
+      res.status(404).send("User not found")
+    }
+
+    res.json(user)
+  } catch (error) {
+    return next(error)
+  }
+})
+
+// Get user by username
+router.get('/username/:username', async (req, res, next) => {
+  try {
+    const { username } = req.params
+
+    const user = await getUserByUsername(username)
+
+    if (!user) {
+      res.status(404).send("User not found")
+    }
+
+    res.json(user)
+  } catch (error) {
+    return next(error)
+  }
+})
+
+// Delete user
+router.delete('/', async (req, res, next) => {
+  try {
+    const { id, password } = req.body
+
+    await deleteUser(id, password)
+
+    res.json({
+      message: 'User deleted'
+    })
+  } catch (error) {
+    return next(error)
+  }
+})
+
+// Export router as usersRouter
+export const usersRouter = router

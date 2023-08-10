@@ -19,13 +19,13 @@ export enum EmailType {
 export const sendEmail = async (
   to: string,
   token: string,
-  type: EmailType,
+  type: "RESET_PASSWORD" | "EMAIL_VERIFICATION",
   username?: string
 ) => {
   // Create forgot password url
-  const forgotPasswordUrl = `${process.env.CLIENT_URL}/reset-password/${token}`
+  const forgotPasswordUrl = `${process.env.CLIENT_URL}/reset-password?token=${token}`
   // Create verify email url
-  const verifyEmailUrl = `${process.env.CLIENT_URL}/verify-email/${token}`
+  const verifyEmailUrl = `${process.env.CLIENT_URL}/verify-email?token=${token}`
   // Create email subject
   let subject = ''
   // Create email html
@@ -33,11 +33,11 @@ export const sendEmail = async (
 
   // Check email type
   switch (type) {
-    case EmailType.RESET_PASSWORD:
+    case "RESET_PASSWORD":
       subject = 'Reset Your Password'
       html = pug.renderFile(`${__dirname}/../../views/forgotPassword.pug`, { forgotPasswordUrl })
       break
-    case EmailType.EMAIL_VERIFICATION:
+    case "EMAIL_VERIFICATION":
       subject = 'Verify Your Email'
       html = pug.renderFile(`${__dirname}/../../views/verifyEmail.pug`, { username, verifyEmailUrl })
       break
