@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react'
 import { Metadata } from 'next'
+import Script from 'next/script'
 import './global.css'
 
 import Header from '../components/header'
@@ -15,6 +16,16 @@ export default function RootLayout({ children }: {
 }) {
   return (
     <html lang="en" className='font-main'>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-JSTXP7VT57');
+        `}
+      </Script>
       <body className='w-full h-full min-h-screen flex flex-col justify-between margin-0 padding-0 bg-main-bg text-white'>
         <div className='w-full flex flex-col'>
           <Suspense fallback={<header className='w-full h-16 bg-dark-bg' />} >
