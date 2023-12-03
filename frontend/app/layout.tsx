@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 import './global.css'
 
+import Provider from '../components/Provider'
+
 import Header from '../components/header'
 import Footer from '../components/footer'
 
@@ -32,7 +34,7 @@ export default function RootLayout({ children }: {
             <Header />
           </Suspense>
           <div className='w-full h-full flex flex-col items-center p-5 xl:p-16 xl:pt-8'>
-            {children}
+            <Provider>{children}</Provider>
           </div>
         </div>
         <Footer />
