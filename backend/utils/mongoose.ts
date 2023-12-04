@@ -14,7 +14,7 @@ export const connectMongoDB = async () => {
   }
 
   try {
-    // await mongoose.connect(connectionString)
+    await mongoose.connect(connectionString)
     console.log("%cConnected to MongoDB", "color: green")
   } catch (error) {
     console.log("%cError connecting to MongoDB", "color: red")
