@@ -1,11 +1,23 @@
 import mongoose from 'npm:mongoose@^6.7'
 
+const nodeEnv = Deno.env.get("NODE_ENV")
 const mongodbURI = Deno.env.get("MONGODB_URI")
+let connectionString = ""
 
-const connectionString = mongodbURI || "mongodb://localhost:27017/deno"
 
 // Create connect mongo db function
 export const connectMongoDB = async () => {
-  await mongoose.connect(connectionString)
-  console.log("%cConnected to MongoDB", "color: green")
+  if (nodeEnv == "production" && mongodbURI) {
+    connectionString = mongodbURI
+  } else {
+    connectionString = "mongodb://localhost:27017/deno"
+  }
+
+  try {
+    // await mongoose.connect(connectionString)
+    console.log("%cConnected to MongoDB", "color: green")
+  } catch (error) {
+    console.log("%cError connecting to MongoDB", "color: red")
+    console.log(error)
+  }
 }
