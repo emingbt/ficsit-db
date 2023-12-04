@@ -1,15 +1,5 @@
 import { Router } from "https://deno.land/x/oak@v12.6.1/mod.ts"
-
-const books = [
-  {
-    id: "1",
-    title: "The Hound of the Baskervilles"
-  },
-  {
-    id: "2",
-    title: "Romeo and Juliet"
-  }
-]
+import User from "../models/user.ts"
 
 const router = new Router()
 
@@ -17,20 +7,22 @@ router.get("/", (ctx) => {
   ctx.response.body = "Hello world!"
 })
 
-router.get("/books", (ctx) => {
-  ctx.response.body = books
+router.get("/users", async (ctx) => {
+  ctx.response.body = await User.find()
 })
 
-router.get("/book/:id", (ctx) => {
-  if (ctx.params && ctx.params.id) {
-    const book = books.filter((book) => book.id === ctx.params.id)
+router.get("/user/:name", (ctx) => {
+  const { name } = ctx.params
+  const user = new User({
+    name: name,
+    email: "test@test.com",
+    password: "123456"
+  })
 
-    ctx.response.body = book
-    return
-  }
+  user.save()
 
-  ctx.response.status = 404
-  ctx.response.body = { message: "Not found" }
+  ctx.response.status = 200
+  ctx.response.body = user
 })
 
 export default router

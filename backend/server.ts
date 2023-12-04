@@ -1,10 +1,14 @@
 import { Application } from "https://deno.land/x/oak@v12.6.1/mod.ts"
+import "https://deno.land/std@0.208.0/dotenv/load.ts"
 
+import { connectMongoDB } from "./utils/mongoose.ts"
 import router from "./routers/index.ts"
 
 const app = new Application()
 app.use(router.routes())
 app.use(router.allowedMethods())
+
+connectMongoDB()
 
 // Logger
 app.use(async (ctx, next) => {
