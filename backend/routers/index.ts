@@ -11,18 +11,28 @@ router.get("/users", async (ctx) => {
   ctx.response.body = await User.find()
 })
 
-router.get("/user/:name", (ctx) => {
-  const { name } = ctx.params
+router.post("/user", async (ctx) => {
+  const { name, email, password } = await ctx.request.body().value
+
   const user = new User({
     name: name,
-    email: "test@test.com",
-    password: "123456"
+    email: email,
+    password: password
   })
 
-  user.save()
+  await user.save()
 
   ctx.response.status = 200
   ctx.response.body = user
+})
+
+router.delete("/user/:id", async (ctx) => {
+  const id = ctx.params.id
+
+  await User.deleteOne({ _id: id })
+
+  ctx.response.status = 200
+  ctx.response.body = { id }
 })
 
 export default router
