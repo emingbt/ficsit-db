@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import { Metadata } from 'next'
 import Script from 'next/script'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './global.css'
 
 import Header from '../components/header'
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: {
           </Suspense>
           <div className='w-full h-full flex flex-col items-center p-5 xl:p-16 xl:pt-8'>
             {children}
+            <SpeedInsights />
           </div>
         </div>
         <Footer />
