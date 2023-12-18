@@ -1,82 +1,49 @@
 import { Router } from "https://deno.land/x/oak@v12.6.1/mod.ts"
-import * as bcrypt from "https://deno.land/x/bcrypt/mod.ts"
 import userModel from "../models/user.ts"
+import { createUser, getUserById, loginUser } from "../services/user.ts"
 import { createToken, verifyToken } from "../utils/jwt.ts"
 
 const router = new Router()
 
+router.get("/", async (ctx) => {
+  // get all users
+  const allUsers = await userModel.find({})
+  ctx.response.body = { users: allUsers }
+  ctx.response.status = 200
+})
+
 router.post("/signup", async (ctx) => {
   const { username, email, password } = await ctx.request.body().value
 
-  // Check if username and email is available
-  const user = await userModel.findOne({ username: username })
-  const userEmail = await userModel.findOne({ email: email })
+  try {
+    const newUser = await createUser(username, email, password)
 
-  if (user) {
-    ctx.response.body = { message: "Username is not available" }
+    // Create a token
+    await createToken(newUser.id, ctx)
+
+    ctx.response.body = { user: newUser }
+    ctx.response.status = 201
+  } catch (error) {
+    ctx.response.body = { message: error.message }
     ctx.response.status = 400
-    return
   }
-
-  if (userEmail) {
-    ctx.response.body = { message: "Email is not available" }
-    ctx.response.status = 400
-    return
-  }
-
-  // Hash the password
-  const hashedPassword = await bcrypt.hash(password)
-
-  // Create a user
-  const newUser = await userModel.create({
-    username: username,
-    email: email,
-    password: hashedPassword,
-  })
-
-  // Create a token
-  const token = await createToken(newUser.id)
-
-  ctx.cookies.set("token", token, { httpOnly: true, secure: true, expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30) })
-
-  // Remove the password of the user before sending it
-  newUser.password = ""
-
-  ctx.response.body = { user: newUser }
-  ctx.response.status = 201
 })
 
 router.post("/login", async (ctx) => {
   const { username, password } = await ctx.request.body().value
 
-  // Check if user exists
-  const user = await userModel.findOne({ username: username })
+  try {
+    const user = await loginUser(username, password)
 
-  if (!user) {
-    ctx.response.body = { message: "User does not exist" }
-    ctx.response.status = 404
-    return
-  }
+    // Create a token
+    await createToken(user.id, ctx)
 
-  // Check if password is correct
-  const passwordCorrect = await bcrypt.compare(password, user.password)
-
-  if (!passwordCorrect) {
-    ctx.response.body = { message: "Password is incorrect" }
+    ctx.response.body = { user: user }
+    ctx.response.status = 200
+  } catch (error) {
+    ctx.response.body = { message: error.message }
     ctx.response.status = 400
-    return
   }
-
-  // Create a token
-  const token = await createToken(user.id)
-
-  ctx.cookies.set("token", token, { httpOnly: true, secure: true, expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30) })
-
-  // Remove the password of the user before sending it
-  user.password = ""
-
-  ctx.response.body = { user: user }
-  ctx.response.status = 200
 })
 
 router.get("/logout", (ctx) => {
@@ -89,7 +56,7 @@ router.get("/logout", (ctx) => {
 // Me;
 // Return the user from the token
 router.get("/me", async (ctx) => {
-  const token = await ctx.cookies.get("token")
+  const token = ctx.request.headers.get("Authorization")?.split(" ")[1]
 
   if (!token) {
     ctx.response.body = { message: "Not logged in" }
@@ -97,27 +64,22 @@ router.get("/me", async (ctx) => {
     return
   }
 
-  // Verify the token
-  const payload = await verifyToken(token)
+  try {
+    // Verify the token, get user id
+    const id = await verifyToken(token)
 
-  // Get the user from the payload
-  const user = await userModel.findOne({ _id: payload.id })
+    const user = await getUserById(id)
 
-  if (!user) {
-    ctx.response.body = { message: "User does not exist" }
-    ctx.response.status = 404
-    return
+    ctx.response.body = { user: user }
+    ctx.response.status = 200
+  } catch (error) {
+    ctx.response.body = { message: error.message }
+    ctx.response.status = 400
   }
-
-  // Remove the password of the user before sending it
-  user.password = ""
-
-  ctx.response.body = { user: user }
-  ctx.response.status = 200
 })
 
 router.get("/users", async (ctx) => {
-  const token = await ctx.cookies.get("token")
+  const token = ctx.request.headers.get("Authorization")?.split(" ")[1]
 
   if (!token) {
     ctx.response.body = { message: "Not logged in" }
@@ -125,33 +87,40 @@ router.get("/users", async (ctx) => {
     return
   }
 
-  // Verify the token
-  const payload = await verifyToken(token)
+  try {
+    // Verify the token
+    const id = await verifyToken(token)
 
-  // Get the user from the payload
-  const user = await userModel.findOne({ _id: payload.id })
+    const user = await getUserById(id)
 
-  if (!user) {
-    ctx.response.body = { message: "User does not exist" }
-    ctx.response.status = 404
-    return
+    if (user.role !== "admin") {
+      ctx.response.body = { message: "Not authorized" }
+      ctx.response.status = 401
+      return
+    }
+
+    // Get all users
+    const users = await userModel.find({})
+
+    // Remove the password of the users before sending it
+    users.forEach((user) => {
+      user.password = ""
+    })
+
+    ctx.response.body = { users: users }
+    ctx.response.status = 200
+  } catch (error) {
+    ctx.response.body = { message: error.message }
+    ctx.response.status = 400
   }
+})
 
-  if (user.role !== "admin") {
-    ctx.response.body = { message: "Not authorized" }
-    ctx.response.status = 401
-    return
-  }
+router.delete("/users/:id", async (ctx) => {
+  const id = ctx.params.id
 
-  // Get all users
-  const users = await userModel.find({})
+  const user = await userModel.deleteMany({ id: id })
 
-  // Remove the password of the users before sending it
-  users.forEach((user) => {
-    user.password = ""
-  })
-
-  ctx.response.body = { users: users }
+  ctx.response.body = { user: user }
   ctx.response.status = 200
 })
 
