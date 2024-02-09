@@ -16,7 +16,10 @@ export const connectMongoDB = async () => {
 
   try {
     await mongoose.connect(connectionString)
-    console.log(`%cConnected to MongoDB - %c${nodeEnv}`, "color: green", `color: ${nodeEnv == "production" ? "yellow" : "green"}`)
+
+    if (mongoose.connection.readyState == 1) {
+      console.log(`%cConnected to MongoDB - %c${nodeEnv}`, "color: green", `color: ${nodeEnv == "production" ? "yellow" : "green"}`)
+    }
   } catch (error) {
     console.log("%cError connecting to MongoDB", "color: red")
     console.log(error)
