@@ -38,8 +38,16 @@ router.post("/login", async (ctx) => {
   }
 })
 
-router.get("/logout", (ctx) => {
-  ctx.cookies.set("token", "", { httpOnly: true, secure: true, expires: new Date(Date.now()) })
+router.post("/logout", (ctx) => {
+  ctx.cookies.set(
+    "token",
+    "",
+    {
+      httpOnly: true,
+      secure: Deno.env.get("NODE_ENV") == "development" ? false : true,
+      expires: new Date(Date.now())
+    }
+  )
 
   ctx.response.body = { message: "Logged out" }
   ctx.response.status = 200
