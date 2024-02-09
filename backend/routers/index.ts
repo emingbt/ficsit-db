@@ -1,38 +1,79 @@
 import { Router } from "https://deno.land/x/oak@v12.6.1/mod.ts"
-import User from "../models/user.ts"
+import { createUser, getUserById, loginUser } from "../services/user.ts"
+import { createToken, verifyToken } from "../utils/jwt.ts"
 
 const router = new Router()
 
-router.get("/", (ctx) => {
-  ctx.response.body = "Hello world!"
+router.post("/signup", async (ctx) => {
+  const { username, email, password } = await ctx.request.body().value
+
+  try {
+    const newUser = await createUser(username, email, password)
+
+    // Create a token
+    await createToken(newUser.id, ctx)
+
+    ctx.response.body = { user: newUser }
+    ctx.response.status = 201
+  } catch (error) {
+    ctx.response.body = { message: error.message }
+    ctx.response.status = 400
+  }
 })
 
-router.get("/users", async (ctx) => {
-  ctx.response.body = await User.find()
+router.post("/login", async (ctx) => {
+  const { email, password } = await ctx.request.body().value
+
+  try {
+    const user = await loginUser(email, password)
+
+    // Create a token
+    await createToken(user.id, ctx)
+
+    ctx.response.body = { user: user }
+    ctx.response.status = 200
+  } catch (error) {
+    ctx.response.body = { message: error.message }
+    ctx.response.status = 400
+  }
 })
 
-router.post("/user", async (ctx) => {
-  const { name, email, password } = await ctx.request.body().value
+router.post("/logout", (ctx) => {
+  ctx.cookies.set(
+    "token",
+    "",
+    {
+      httpOnly: true,
+      secure: Deno.env.get("NODE_ENV") == "development" ? false : true,
+      expires: new Date(Date.now())
+    }
+  )
 
-  const user = new User({
-    name: name,
-    email: email,
-    password: password
-  })
-
-  await user.save()
-
+  ctx.response.body = { message: "Logged out" }
   ctx.response.status = 200
-  ctx.response.body = user
 })
 
-router.delete("/user/:id", async (ctx) => {
-  const id = ctx.params.id
+router.get("/me", async (ctx) => {
+  const token = ctx.request.headers.get("Authorization")?.split(" ")[1]
 
-  await User.deleteOne({ _id: id })
+  if (!token) {
+    ctx.response.body = { message: "Not logged in" }
+    ctx.response.status = 400
+    return
+  }
 
-  ctx.response.status = 200
-  ctx.response.body = { id }
+  try {
+    // Verify the token, get user id
+    const id = await verifyToken(token)
+
+    const user = await getUserById(id)
+
+    ctx.response.body = { user: user }
+    ctx.response.status = 200
+  } catch (error) {
+    ctx.response.body = { message: error.message }
+    ctx.response.status = 400
+  }
 })
 
 export default router
