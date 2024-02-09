@@ -22,10 +22,10 @@ router.post("/signup", async (ctx) => {
 })
 
 router.post("/login", async (ctx) => {
-  const { username, password } = await ctx.request.body().value
+  const { email, password } = await ctx.request.body().value
 
   try {
-    const user = await loginUser(username, password)
+    const user = await loginUser(email, password)
 
     // Create a token
     await createToken(user.id, ctx)

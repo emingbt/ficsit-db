@@ -30,9 +30,9 @@ const createUser = async (username: string, email: string, password: string) => 
   return newUser
 }
 
-const loginUser = async (username: string, password: string) => {
+const loginUser = async (email: string, password: string) => {
   // Check if user exists
-  const user = await userModel.findOne({ username: username })
+  const user = await userModel.findOne({ email: email })
 
   if (!user) {
     throw new Error("User does not exist")
