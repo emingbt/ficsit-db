@@ -51,6 +51,24 @@ const loginUser = async (email: string, password: string) => {
   return user
 }
 
+const forgotPassword = async (email: string) => {
+  // Check if user exists
+  const user = await userModel.findOne({ email: email })
+
+  if (!user) {
+    throw new Error("User does not exist")
+  }
+
+  // Send email with password reset link
+  const token = await createToken(user.id)
+
+  try {
+    await sendPasswordResetEmail(email, token)
+  } catch (error) {
+    console.error(error.message)
+    throw new Error("Could not send email")
+  }
+}
 const getUserById = async (id: string) => {
   // get user by id
   const user = await userModel.findOne({ id: id })
