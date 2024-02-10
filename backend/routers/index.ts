@@ -1,5 +1,11 @@
 import { Router } from "https://deno.land/x/oak@v12.6.1/mod.ts"
-import { createUser, getUserById, loginUser } from "../services/user.ts"
+import {
+  createUser,
+  getUserById,
+  loginUser,
+  forgotPassword,
+  resetPassword
+} from "../services/user.ts"
 import { createToken, verifyToken } from "../utils/jwt.ts"
 
 const router = new Router()
@@ -11,7 +17,13 @@ router.post("/signup", async (ctx) => {
     const newUser = await createUser(username, email, password)
 
     // Create a token
-    await createToken(newUser.id, ctx)
+    const token = await createToken(newUser.id)
+
+    ctx.cookies.set('token', token, {
+      httpOnly: true,
+      secure: Deno.env.get("NODE_ENV") == "development" ? false : true,
+      expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7)
+    })
 
     ctx.response.body = { user: newUser }
     ctx.response.status = 201
@@ -28,7 +40,13 @@ router.post("/login", async (ctx) => {
     const user = await loginUser(email, password)
 
     // Create a token
-    await createToken(user.id, ctx)
+    const token = await createToken(user.id)
+
+    ctx.cookies.set('token', token, {
+      httpOnly: true,
+      secure: Deno.env.get("NODE_ENV") == "development" ? false : true,
+      expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7)
+    })
 
     ctx.response.body = { user: user }
     ctx.response.status = 200
@@ -69,6 +87,36 @@ router.get("/me", async (ctx) => {
     const user = await getUserById(id)
 
     ctx.response.body = { user: user }
+    ctx.response.status = 200
+  } catch (error) {
+    ctx.response.body = { message: error.message }
+    ctx.response.status = 400
+  }
+})
+
+router.post("/forgot-password", async (ctx) => {
+  const { email } = await ctx.request.body().value
+
+  try {
+    await forgotPassword(email)
+
+    ctx.response.body = { message: "Email sent" }
+    ctx.response.status = 200
+  } catch (error) {
+    console.log(error.message)
+    ctx.response.body = { message: error.message }
+    ctx.response.status = 400
+  }
+})
+
+router.post("/reset-password", async (ctx) => {
+  const { resetToken, password } = await ctx.request.body().value
+
+  try {
+    // Reset the password
+    await resetPassword(resetToken, password)
+
+    ctx.response.body = { message: "Password reset" }
     ctx.response.status = 200
   } catch (error) {
     ctx.response.body = { message: error.message }
