@@ -4,6 +4,7 @@ import {
   getUserById,
   loginUser,
   forgotPassword,
+  resetPassword
 } from "../services/user.ts"
 import { createToken, verifyToken } from "../utils/jwt.ts"
 
@@ -107,4 +108,20 @@ router.post("/forgot-password", async (ctx) => {
     ctx.response.status = 400
   }
 })
+
+router.post("/reset-password", async (ctx) => {
+  const { resetToken, password } = await ctx.request.body().value
+
+  try {
+    // Reset the password
+    await resetPassword(resetToken, password)
+
+    ctx.response.body = { message: "Password reset" }
+    ctx.response.status = 200
+  } catch (error) {
+    ctx.response.body = { message: error.message }
+    ctx.response.status = 400
+  }
+})
+
 export default router
