@@ -1,5 +1,10 @@
 import { Router } from "https://deno.land/x/oak@v12.6.1/mod.ts"
-import { createUser, getUserById, loginUser } from "../services/user.ts"
+import {
+  createUser,
+  getUserById,
+  loginUser,
+  forgotPassword,
+} from "../services/user.ts"
 import { createToken, verifyToken } from "../utils/jwt.ts"
 
 const router = new Router()
@@ -76,4 +81,18 @@ router.get("/me", async (ctx) => {
   }
 })
 
+router.post("/forgot-password", async (ctx) => {
+  const { email } = await ctx.request.body().value
+
+  try {
+    await forgotPassword(email)
+
+    ctx.response.body = { message: "Email sent" }
+    ctx.response.status = 200
+  } catch (error) {
+    console.log(error.message)
+    ctx.response.body = { message: error.message }
+    ctx.response.status = 400
+  }
+})
 export default router
