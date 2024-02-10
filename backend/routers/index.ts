@@ -16,7 +16,13 @@ router.post("/signup", async (ctx) => {
     const newUser = await createUser(username, email, password)
 
     // Create a token
-    await createToken(newUser.id, ctx)
+    const token = await createToken(newUser.id)
+
+    ctx.cookies.set('token', token, {
+      httpOnly: true,
+      secure: Deno.env.get("NODE_ENV") == "development" ? false : true,
+      expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7)
+    })
 
     ctx.response.body = { user: newUser }
     ctx.response.status = 201
@@ -33,7 +39,13 @@ router.post("/login", async (ctx) => {
     const user = await loginUser(email, password)
 
     // Create a token
-    await createToken(user.id, ctx)
+    const token = await createToken(user.id)
+
+    ctx.cookies.set('token', token, {
+      httpOnly: true,
+      secure: Deno.env.get("NODE_ENV") == "development" ? false : true,
+      expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7)
+    })
 
     ctx.response.body = { user: user }
     ctx.response.status = 200

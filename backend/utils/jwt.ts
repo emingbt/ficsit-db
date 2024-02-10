@@ -1,5 +1,4 @@
 import { create, verify } from "https://deno.land/x/djwt@v3.0.1/mod.ts"
-import { Context } from "https://deno.land/x/oak@v12.6.1/mod.ts"
 
 const jwtSecret = Deno.env.get("JWT_SECRET")
 const nodeEnv = Deno.env.get("NODE_ENV")
@@ -12,7 +11,7 @@ const key = await crypto.subtle.importKey(
   ["sign", "verify"]
 )
 
-export const createToken = async (id: string, ctx: Context) => {
+export const createToken = async (id: string) => {
   const jwt = await create(
     {
       alg: "HS512",
@@ -24,12 +23,6 @@ export const createToken = async (id: string, ctx: Context) => {
     },
     key
   )
-
-  ctx.cookies.set('token', jwt, {
-    httpOnly: true,
-    secure: nodeEnv == "production",
-    expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7)
-  })
 
   return jwt
 }
