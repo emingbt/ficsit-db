@@ -5,15 +5,14 @@ import { sendPasswordResetEmail } from "../utils/nodemailer.ts"
 
 const createUser = async (username: string, email: string, password: string) => {
   // Check if username and email is available
-  const user = await userModel.findOne({ username: username })
   const userEmail = await userModel.findOne({ email: email })
-
-  if (user) {
-    throw new Error("Username is already taken")
+  if (userEmail) {
+    throw new Error("There is already an account with this email", { cause: "emailTaken" })
   }
 
-  if (userEmail) {
-    throw new Error("There is already an account with this email")
+  const user = await userModel.findOne({ username: username })
+  if (user) {
+    throw new Error("Username is already taken", { cause: "usernameTaken" })
   }
 
   // Hash the password
