@@ -22,6 +22,7 @@ router.post("/signup", async (ctx) => {
     ctx.cookies.set('token', token, {
       httpOnly: true,
       secure: Deno.env.get("NODE_ENV") == "development" ? false : true,
+      sameSite: "none",
       expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7)
     })
 
