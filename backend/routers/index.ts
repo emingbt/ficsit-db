@@ -29,7 +29,7 @@ router.post("/signup", async (ctx) => {
     ctx.response.body = { user: newUser }
     ctx.response.status = 201
   } catch (error) {
-    ctx.response.body = { message: error.message }
+    ctx.response.body = { message: error.message, cause: error.cause }
     ctx.response.status = 400
   }
 })
