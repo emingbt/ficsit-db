@@ -27,12 +27,12 @@ export default function RootLayout({ children }: {
           gtag('config', 'G-JSTXP7VT57');
         `}
       </Script>
-      <body className='w-full h-full min-h-screen flex flex-col justify-between margin-0 padding-0 bg-main-bg text-white'>
+      <body className='w-full h-full min-h-screen flex flex-col justify-between margin-0 padding-0 bg-dark-bg text-white'>
         <div className='w-full flex flex-col'>
           <Suspense fallback={<header className='w-full h-16 bg-dark-bg' />} >
             <Header />
           </Suspense>
-          <div className='w-full h-full flex flex-col items-center p-5 xl:p-16 xl:pt-8'>
+          <div className='w-full h-full flex flex-col items-center bg-main-bg p-5 xl:p-8'>
             {children}
             <SpeedInsights />
           </div>
