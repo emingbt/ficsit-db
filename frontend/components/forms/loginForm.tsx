@@ -91,7 +91,7 @@ export default function LoginForm() {
         Login
       </button>
       <p className='w-full text-xs lg:text-base'>
-        Don't have an account? <Link href="/signup"><span className='text-main-orange hover:underline cursor-pointer'>Create an account</span></Link>
+        Don&#39;t have an account? <Link href="/signup"><span className='text-main-orange hover:underline cursor-pointer'>Create an account</span></Link>
       </p>
     </form>
   )
