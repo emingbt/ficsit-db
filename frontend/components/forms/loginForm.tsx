@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { loginSchema } from '../../utils/zod'
+import { useUserStore } from '../../utils/zustand'
 
 export default function LoginForm() {
+  const baseUrl = process.env.BASE_URL || 'http://localhost:8000'
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -19,7 +21,7 @@ export default function LoginForm() {
     try {
       loginSchema.parse({ email, password })
 
-      const response = await fetch(`http://localhost:8000/login`, {
+      const response = await fetch(`${baseUrl}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,10 +36,12 @@ export default function LoginForm() {
         console.error(data.message)
         return
       } else {
-        console.log(data.user)
-      }
+        // Set the user in the store
+        useUserStore.setState({ user: data.user })
 
-      console.log(data.token)
+        // Redirect to the homepage
+        // window.location.href = '/'
+      }
     } catch (error) {
       console.error(error.name)
       if (error.name === 'ZodError') {
@@ -53,15 +57,17 @@ export default function LoginForm() {
     }
   }
 
-  console.log(emailError, passwordError)
-
   return (
     <form className='w-full flex flex-col items-center' onSubmit={handleOnSubmit}>
       <label className='w-full text-xs lg:text-base lg:mb-2'>Email</label>
       <input
         id='email'
         type='text'
-        className={`w-full h-8 lg:h-10 p-2 ${!emailError && 'mb-4 lg:mb-6'} bg-light-bg text-white rounded-none outline-none focus:border-b-2 border-${!emailError ? 'main-orange' : 'error'} ${emailError && 'border-b-2 border-error'}`}
+        className={
+          `w-full h-8 lg:h-10 p-2 ${!emailError && 'mb-4 lg:mb-6'} bg-light-bg text-white
+          rounded-none outline-none focus:border-b-2 border-${!emailError ? 'main-orange' : 'error'}
+          ${emailError && 'border-b-2 border-error'}`
+        }
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />

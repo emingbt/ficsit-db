@@ -68,8 +68,10 @@ export default function SignupForm() {
       <input
         id='email'
         type='text'
-        className={`w-full h-8 lg:h-10 p-2 ${!emailError ? 'mb-4 lg:mb-6' : 'border-b-2 border-error'} 
-        bg-light-bg text-white rounded-none outline-none focus:border-b-2 focus:border-${!emailError ? 'main-orange' : 'error'}`
+        className={
+          `w-full h-8 lg:h-10 p-2 ${!emailError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
+          rounded-none outline-none focus:border-b-2 border-${!emailError ? 'main-orange' : 'error'}
+          ${emailError && 'border-b-2 border-error'}`
         }
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -82,8 +84,9 @@ export default function SignupForm() {
         id='username'
         type='text'
         className={
-          `w-full h-8 lg:h-10 p-2 ${!usernameError ? 'mb-4 lg:mb-6' : 'border-b-2 border-error'} 
-          bg-light-bg text-white rounded-none outline-none focus:border-b-2 focus:border-${!emailError ? 'main-orange' : 'error'}`
+          `w-full h-8 lg:h-10 p-2 ${!usernameError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
+          rounded-none outline-none focus:border-b-2 border-${!usernameError ? 'main-orange' : 'error'}
+          ${usernameError && 'border-b-2 border-error'}`
         }
         value={username}
         onChange={(e) => setUsername(e.target.value)}
@@ -96,8 +99,9 @@ export default function SignupForm() {
         id='password'
         type='password'
         className={
-          `w-full h-8 lg:h-10 p-2 ${passwordError ? 'border-b-2 border-error' : 'mb-8 lg:mb-14'} 
-          bg-light-bg text-white rounded-none outline-none focus:border-b-2 focus:border-${!emailError ? 'main-orange' : 'error'}`
+          `w-full h-8 lg:h-10 p-2 ${!passwordError && 'mb-8 lg:mb-14'}  bg-light-bg text-white
+          rounded-none outline-none focus:border-b-2 border-${!emailError ? 'main-orange' : 'error'}
+          ${emailError && 'border-b-2 border-error'}`
         }
         value={password}
         onChange={(e) => setPassword(e.target.value)}
