@@ -16,7 +16,7 @@ const createUser = async (username: string, email: string, password: string) => 
   }
 
   // Hash the password
-  const hashedPassword = await bcrypt.hash(password)
+  const hashedPassword = bcrypt.hashSync(password)
 
   // Create a user
   const newUser = await userModel.create({
@@ -40,7 +40,7 @@ const loginUser = async (email: string, password: string) => {
   }
 
   // Check if password is correct
-  const passwordCorrect = await bcrypt.compare(password, user.password)
+  const passwordCorrect = bcrypt.compareSync(password, user.password)
 
   if (!passwordCorrect) {
     throw new Error("Password is incorrect")
