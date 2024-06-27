@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { loginSchema } from '../../utils/zod'
-import { useUserStore } from '../../utils/zustand'
+// import { useUserStore } from '../../utils/zustand'
 
 export default function LoginForm() {
   const baseUrl = process.env.BASE_URL || 'http://localhost:8000'
@@ -14,6 +14,7 @@ export default function LoginForm() {
   const [passwordError, setPasswordError] = useState('')
 
   const handleOnSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    console.log('Form submitted')
     e.preventDefault()
     setEmailError('')
     setPasswordError('')
@@ -21,29 +22,37 @@ export default function LoginForm() {
     try {
       loginSchema.parse({ email, password })
 
-      const response = await fetch(`${baseUrl}/login`, {
+      // const response = await fetch(`${baseUrl}/login`, {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     getSetCookie: 'true'
+      //   },
+      //   body: JSON.stringify({ email, password })
+      // })
+      console.log('Sending request')
+      const response = await fetch('/api/login', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          getSetCookie: 'true'
-        },
         body: JSON.stringify({ email, password })
       })
 
       const data = await response.json()
 
+      console.log('Sent request', response, "data", data)
+
       if (response.status !== 200) {
-        console.error(data.message)
+        console.error('There is an error', data.message)
         return
       } else {
+        console.log('Successfull', data, data.body)
         // Set the user in the store
-        useUserStore.setState({ user: data.user })
+        // useUserStore.setState({ user: data.user })
 
         // Redirect to the homepage
         // window.location.href = '/'
       }
     } catch (error) {
-      console.error(error.name)
+      console.error(error)
       if (error.name === 'ZodError') {
         error.errors.map((err: any) => {
           if (err.path[0] === 'email') {
