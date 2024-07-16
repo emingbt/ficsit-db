@@ -4,19 +4,19 @@ import Link from 'next/link'
 export default async function HomePage() {
   return (
 
-    <main className="w-full p-[10px] bg-dark-bg lg:p-5">
-      <section className="w-full h-[34rem] lg:h-[calc(100vh-5rem)] xl:h-[calc(100vh-7.25rem)] flex flex-row items-center bg-main-bg">
+    <main className="w-full p-[10px] bg-dark-bg lg:p-4">
+      <section className="w-full h-[34rem] lg:h-[calc(100vh-6.25rem)] xl:h-[calc(100vh-7rem)] flex flex-row items-center bg-main-bg">
         <div className="w-full lg:w-1/2 flex flex-col p-4 font-bold font-secondary md:p-16">
           <h1 className="text-4xl mb-2 lg:text-5xl">Hi Pioneer!</h1>
           <p className="text-xs text-main-gray mb-8 lg:text-lg">Welcome to Ficsit DB pioneer guidance system.</p>
-          <div className="w-full xl:max-w-md flex flex-row items-center justify-between">
+          <div className="w-full xl:max-w-md flex flex-row items-center justify-between font-main font-semibold">
             <Link href={'/items'}
-              className="w-full max-w-[16rem] h-8 lg:h-10 flex items-center justify-center bg-main-orange font-main font-normal lg:hover:bg-light-bg  lg:hover:text-light-orange">
+              className="w-full max-w-[16rem] h-8 lg:h-10 flex items-center justify-center bg-main-orange lg:hover:bg-light-bg  lg:hover:text-light-orange">
               Items
             </Link>
             <p className="px-4 text-main-gray">or</p>
             <Link href={'/buildings'}
-              className="w-full max-w-[16rem] h-8 lg:h-10 flex items-center justify-center bg-main-orange font-main font-normal lg:hover:bg-light-bg  lg:hover:text-light-orange">
+              className="w-full max-w-[16rem] h-8 lg:h-10 flex items-center justify-center bg-main-orange lg:hover:bg-light-bg  lg:hover:text-light-orange">
               Buildings
             </Link>
           </div>
