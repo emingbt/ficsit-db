@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 export default async function HomePage() {
   return (
-
     <main className="w-full p-[10px] bg-dark-bg lg:p-4">
       <section className="w-full h-[34rem] lg:h-[calc(100vh-6.25rem)] xl:h-[calc(100vh-7rem)] flex flex-row items-center bg-main-bg">
         <div className="w-full lg:w-1/2 flex flex-col p-4 font-bold font-secondary md:p-16">
