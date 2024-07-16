@@ -14,4 +14,8 @@ export const signupSchema = object({
 export const forgotPasswordSchema = object({
   email: string().email(),
 })
+
+export const resetPasswordSchema = object({
+  password: string().min(8),
+  confirmPassword: string().min(8),
 })
