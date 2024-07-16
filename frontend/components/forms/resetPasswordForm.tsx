@@ -17,6 +17,11 @@ export default function ResetPasswordForm({ token }: { token: string }) {
     try {
       resetPasswordSchema.parse({ password, confirmPassword })
 
+      if (password !== confirmPassword) {
+        setConfirmPasswordError('Passwords do not match')
+        return
+      }
+
       const response = await fetch('/api/reset-password', {
         method: 'POST',
         body: JSON.stringify({ password, token })
