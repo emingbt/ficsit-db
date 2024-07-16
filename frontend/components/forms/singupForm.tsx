@@ -99,7 +99,7 @@ export default function SignupForm() {
         id='password'
         type='password'
         className={
-          `w-full h-8 lg:h-10 p-2 ${!passwordError && 'mb-8 lg:mb-14'}  bg-light-bg text-white
+          `w-full h-8 lg:h-10 p-2 ${!passwordError && 'mb-6 lg:mb-10'}  bg-light-bg text-white
           rounded-none outline-none focus:border-b-2 border-${!emailError ? 'main-orange' : 'error'}
           ${emailError && 'border-b-2 border-error'}`
         }
@@ -107,7 +107,7 @@ export default function SignupForm() {
         onChange={(e) => setPassword(e.target.value)}
       />
       {
-        passwordError && <p className='w-full text-xs lg:text-base text-error mb-4 lg:mb-8 '>{passwordError}</p>
+        passwordError && <p className='w-full text-xs lg:text-base text-error mb-4 '>{passwordError}</p>
       }
       <button
         type='submit'
@@ -116,7 +116,7 @@ export default function SignupForm() {
         Signup
       </button>
       <p className='w-full text-xs lg:text-base'>
-        Already have an account? <Link href="/login"><span className='text-main-orange hover:underline cursor-pointer'>Login</span></Link>
+        Already have an account? <Link href="/auth/login"><span className='text-main-orange hover:underline cursor-pointer'>Login</span></Link>
       </p>
     </form>
   )
