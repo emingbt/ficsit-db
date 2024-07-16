@@ -17,7 +17,10 @@ export default function Header() {
   }, [router])
 
   return (
-    <header className='w-full h-16 flex flex-col items-center justify-between bg-dark-bg relative px-8 pt-[18px] z-50 lg:flex-row lg:pt-0'>
+    <header className='w-full h-16 relative lg:fixed top-0 flex flex-col
+      items-center justify-between bg-dark-bg px-8 pt-[18px] z-50
+      lg:flex-row lg:pt-0 shadow-xl'
+    >
       <div className='flex flex-row items-center justify-between w-full lg:w-1/5'>
         <Link href="/">
           <p className='font-logo user-select-none size-logo cursor-pointer text-xl'>
@@ -50,10 +53,10 @@ export default function Header() {
           <p className='user-select-none cursor-pointer h-full text-center'>Blueprints</p>
         </Link>
         <div className='w-0.5 h-12 bg-main-orange ml-8' />
-        <Link href="/register" className='w-20 ml-6 hover:text-main-orange'>
+        <Link href="/auth/signup" className='w-20 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Sign up</p>
         </Link>
-        <Link href="/login" className='w-16 ml-6 hover:text-main-orange'>
+        <Link href="/auth/login" className='w-16 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Login</p>
         </Link> */}
       </nav>

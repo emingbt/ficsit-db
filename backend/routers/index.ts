@@ -22,13 +22,14 @@ router.post("/signup", async (ctx) => {
     ctx.cookies.set('token', token, {
       httpOnly: true,
       secure: Deno.env.get("NODE_ENV") == "development" ? false : true,
+      sameSite: "none",
       expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7)
     })
 
     ctx.response.body = { user: newUser }
     ctx.response.status = 201
   } catch (error) {
-    ctx.response.body = { message: error.message }
+    ctx.response.body = { message: error.message, cause: error.cause }
     ctx.response.status = 400
   }
 })

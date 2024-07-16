@@ -10,7 +10,7 @@ app.use(oakCors())
 app.use(router.routes())
 app.use(router.allowedMethods())
 
-connectMongoDB()
+await connectMongoDB()
 
 // Logger
 app.use(async (ctx, next) => {
