@@ -32,7 +32,7 @@ export default function RootLayout({ children }: {
           <Suspense fallback={<header className='w-full h-16 bg-dark-bg' />} >
             <Header />
           </Suspense>
-          <div className='w-full h-full flex flex-col items-center bg-main-bg p-5 xl:p-8'>
+          <div className='w-full h-full min-h-[calc(100vh-4rem)] flex flex-col items-center p-5 xl:p-8 lg:mt-16 bg-main-bg'>
             {children}
             <SpeedInsights />
           </div>

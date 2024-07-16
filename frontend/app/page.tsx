@@ -5,7 +5,7 @@ export default async function HomePage() {
   return (
 
     <main className="w-full p-[10px] bg-dark-bg lg:p-5">
-      <section className="w-full h-[34rem] lg:h-screen flex flex-row items-center bg-main-bg">
+      <section className="w-full h-[34rem] lg:h-[calc(100vh-5rem)] xl:h-[calc(100vh-7.25rem)] flex flex-row items-center bg-main-bg">
         <div className="w-full lg:w-1/2 flex flex-col p-4 font-bold font-secondary md:p-16">
           <h1 className="text-4xl mb-2 lg:text-5xl">Hi Pioneer!</h1>
           <p className="text-xs text-main-gray mb-8 lg:text-lg">Welcome to Ficsit DB pioneer guidance system.</p>
