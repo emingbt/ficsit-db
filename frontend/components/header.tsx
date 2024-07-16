@@ -24,7 +24,7 @@ export default function Header() {
       <div className='flex flex-row items-center justify-between w-full lg:w-1/5'>
         <Link href="/">
           <p className='font-logo user-select-none size-logo cursor-pointer text-xl'>
-            FiCS<span className='text-logo-blue'>I</span><span className='text-main-orange'>T</span> DB
+            FiCS<span className='text-logo-blue ml-[-2px]'>I</span><span className='text-main-orange ml-[-6px]'>T</span> DB
           </p>
         </Link>
 
