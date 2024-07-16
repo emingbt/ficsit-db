@@ -53,10 +53,10 @@ export default function Header() {
           <p className='user-select-none cursor-pointer h-full text-center'>Blueprints</p>
         </Link>
         <div className='w-0.5 h-12 bg-main-orange ml-8' />
-        <Link href="/register" className='w-20 ml-6 hover:text-main-orange'>
+        <Link href="/auth/signup" className='w-20 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Sign up</p>
         </Link>
-        <Link href="/login" className='w-16 ml-6 hover:text-main-orange'>
+        <Link href="/auth/login" className='w-16 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Login</p>
         </Link> */}
       </nav>
