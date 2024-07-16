@@ -17,7 +17,10 @@ export default function Header() {
   }, [router])
 
   return (
-    <header className='w-full h-16 flex flex-col items-center justify-between bg-dark-bg relative px-8 pt-[18px] z-50 lg:flex-row lg:pt-0'>
+    <header className='w-full h-16 relative lg:fixed top-0 flex flex-col
+      items-center justify-between bg-dark-bg px-8 pt-[18px] z-50
+      lg:flex-row lg:pt-0 shadow-xl'
+    >
       <div className='flex flex-row items-center justify-between w-full lg:w-1/5'>
         <Link href="/">
           <p className='font-logo user-select-none size-logo cursor-pointer text-xl'>
