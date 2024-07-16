@@ -10,3 +10,8 @@ export const signupSchema = object({
   username: string().min(3),
   password: string().min(8),
 })
+
+export const forgotPasswordSchema = object({
+  email: string().email(),
+})
+})
