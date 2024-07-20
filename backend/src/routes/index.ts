@@ -1,5 +1,7 @@
 import { Router } from "express"
 import { PrismaClient } from '@prisma/client'
+import validate from "../middleware/validate"
+import { signUpSchema } from "../lib/authSchemas"
 
 const router = Router()
 const prisma = new PrismaClient()
@@ -17,8 +19,9 @@ router.get("/pioneers", async (req, res) => {
   res.json(pioneers)
 })
 
-router.post("/pioneers", async (req, res) => {
+router.post("/pioneers", validate(signUpSchema), async (req, res) => {
   const { name, email, password } = req.body
+
   const pioneer = await prisma.pioneer.create({
     data: {
       name,
