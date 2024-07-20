@@ -1,2 +1,8 @@
+// Environment variables
 .env
-/cov_profile
+
+// Node modules
+node_modules
+
+// Build files
+/dist
