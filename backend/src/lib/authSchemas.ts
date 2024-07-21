@@ -6,3 +6,8 @@ export const signUpSchema = z.object({
   email: z.string().email(),
   password: z.string().min(8).max(16).regex(/^[a-zA-Z0-9_]+$/)
 })
+
+export const loginSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8).max(16).regex(/^[a-zA-Z0-9_]+$/)
+})

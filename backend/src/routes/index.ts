@@ -22,14 +22,32 @@ router.get("/pioneers", async (req, res) => {
 router.post("/pioneers", validate(signUpSchema), async (req, res) => {
   const { name, email, password } = req.body
 
-  const pioneer = await prisma.pioneer.create({
-    data: {
-      name,
-      email,
-      password
+  const pioneerExists = await prisma.pioneer.findFirst({
+    where: {
+      OR: [
+        { email },
+        { name }
+      ]
     }
   })
-  res.json(pioneer)
+
+  if (pioneerExists) {
+    return res.status(400).json({ error: "Email or name already exists." })
+  }
+
+  try {
+    const pioneer = await prisma.pioneer.create({
+      data: {
+        name,
+        email,
+        password
+      }
+    })
+    res.json(pioneer)
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: "Something went wrong." })
+  }
 })
 
 export default router
