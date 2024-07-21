@@ -1,11 +1,11 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "dist/app.js",
+  "main": "build/app.js",
   "description": "",
   "scripts": {
-    "build": "yarn add typescript && npx tsc -p .",
-    "start": "node dist/app.js",
+    "build": "npx tsc -p .",
+    "start": "node ./build/app.js",
     "dev": "nodemon src/app.ts"
   },
   "dependencies": {
