@@ -16,6 +16,7 @@
     "express-async-errors": "^3.1.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.1",
+    "typescript": "^5.5.3",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -25,8 +26,7 @@
     "@types/node": "^20.14.11",
     "nodemon": "^3.1.4",
     "prisma": "^5.17.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "ts-node": "^10.9.2"
   },
   "author": "emingbt",
   "license": "MIT"
