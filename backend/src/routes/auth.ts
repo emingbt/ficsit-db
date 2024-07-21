@@ -1,5 +1,6 @@
 import { Router } from "express"
 import { PrismaClient } from '@prisma/client'
+import bcrypt from "bcrypt"
 import validate from "../middleware/validate"
 import { loginSchema, signUpSchema } from "../lib/authSchemas"
 import { createToken, verifyToken } from "../utils/jwt"
@@ -20,7 +21,8 @@ authRouter.post("/login", validate(loginSchema), async (req, res) => {
     return res.status(401).json({ error: "There isn't a pioneer with that email." })
   }
 
-  if (pioneer.password !== password) {
+  const passwordMatch = bcrypt.compareSync(password, pioneer.password)
+  if (passwordMatch == false) {
     return res.status(401).json({ error: "Password is incorrect." })
   }
 
@@ -60,7 +62,7 @@ authRouter.post("/signup", validate(signUpSchema), async (req, res) => {
     data: {
       name,
       email,
-      password
+      password: bcrypt.hashSync(password, 10)
     }
   })
 
