@@ -4,7 +4,7 @@
   "main": "dist/app.js",
   "description": "",
   "scripts": {
-    "build": "yarn install && npx tsc -p .",
+    "build": "yarn add typescript && npx tsc -p .",
     "start": "node dist/app.js",
     "dev": "nodemon src/app.ts"
   },
