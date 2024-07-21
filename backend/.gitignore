@@ -5,7 +5,7 @@
 node_modules
 
 // Build files
-/dist
+/build
 
 // Prisma
 /prisma/.env
