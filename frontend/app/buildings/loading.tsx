@@ -2,7 +2,7 @@ import BuildingCategories from "../../components/buildingCategories"
 
 export default function Loading({ searchParams }: { searchParams?: { category: string } | undefined }) {
   return (
-    <main className="w-full h-full flex flex-col items-center justify-cente p-2">
+    <main className="w-full h-full flex flex-col items-center justify-center p-2">
       <BuildingCategories selectedCategory={searchParams?.category || ''} />
       <div className="w-full bg-dark-bg p-2 sm:p-4 mt-7 xl:mt-5">
         <section className="w-full h-full flex flex-col items-center justify-center bg-main-bg">
