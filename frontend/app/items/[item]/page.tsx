@@ -1,18 +1,23 @@
 import Image from "next/image"
+import { getItem } from "../../../utils/gameDataFetcher"
 import Recipes from "../../../components/recipes"
-
-import type { Item, ProductionRecipe } from "../../../interfaces"
 
 export default async function ItemPage({ params }: { params: { item: string } }) {
   const slug = params.item
 
-  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'
-  const result = await fetch(`${baseUrl}/api/item?slug=${slug}`)
-  const data = await result.json()
+  const data = await getItem(slug)
 
-  const item: Item = data.item
-  const recipes: ProductionRecipe[] = data.recipes
-  const usagesAsIngredient: ProductionRecipe[] = data.usagesAsIngredient
+  if (!data) {
+    return (
+      <main className="w-full h-full flex items-center justify-center bg-main-bg">
+        <p className="text-xl">Item not found</p>
+      </main>
+    )
+  }
+
+  const item = data.item
+  const recipes = data.recipes
+  const usagesAsIngredient = data.usagesAsIngredient
 
   return (
     <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">

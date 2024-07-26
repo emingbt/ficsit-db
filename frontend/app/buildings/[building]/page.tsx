@@ -1,23 +1,26 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { getBuilding } from '../../../utils/gameDataFetcher'
 import BuildingExtension from '../../../components/buildingExtension'
 import Recipes from '../../../components/recipes'
-
-import { Building, ProductionRecipe } from '../../../interfaces'
 import ExtractableResources from '../../../components/extractableResources'
 import Fuels from '../../../components/fuels'
 
 export default async function BuildingPage({ params }: { params: { building: string } }) {
   const slug = params.building
+  const data = await getBuilding(slug)
 
-  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'
-  const result = await fetch(`${baseUrl}/api/building?slug=${slug}`)
-  const data = await result.json()
+  if (!data) {
+    return (
+      <main className="w-full h-full flex items-center justify-center bg-main-bg">
+        <p className="text-xl">Building not found</p>
+      </main>
+    )
+  }
 
-  const building: Building = data.building
-  const recipes: ProductionRecipe[] = data.recipes
-  const fuels: Building['fuels'] = data.fuels
+  const building = data.building
+  const recipes = data.recipes
+  const fuels = data.fuels
 
   return (
     <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">

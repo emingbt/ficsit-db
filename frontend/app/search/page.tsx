@@ -1,3 +1,4 @@
+import { getSearch } from "../../utils/gameDataFetcher"
 import SearchSection from "../../components/sections/searchSection"
 
 export default async function SearchPage({ searchParams }: {
@@ -5,9 +6,15 @@ export default async function SearchPage({ searchParams }: {
 }) {
   const name = searchParams?.name?.toLowerCase() || ""
 
-  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'
-  const result = await fetch(`${baseUrl}/api/search?name=${name}`, { cache: 'no-store' })
-  const data = await result.json()
+  const data = await getSearch(name)
+
+  if (!data) {
+    return (
+      <main className="w-full h-full flex items-center justify-center bg-main-bg">
+        <p className="text-xl">No results found</p>
+      </main>
+    )
+  }
 
   return (
     <SearchSection data={data} />

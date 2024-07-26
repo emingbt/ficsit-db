@@ -1,15 +1,21 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { getBuildings } from '../../utils/gameDataFetcher'
 
 export default async function BuildingsSection({ selectedCategory }: { selectedCategory: string }) {
-  const baseUrl = process.env.NODE_ENV === 'production' ? process.env.BASE_URL : 'http://localhost:3000'
-  const result = await fetch(`${baseUrl}/api/buildings?category=${selectedCategory}`)
-  const categories = await result.json()
+  const buildingsByCategory = await getBuildings(selectedCategory)
 
+  if (!buildingsByCategory) {
+    return (
+      <section className="w-full h-full flex items-center justify-center bg-main-bg">
+        <p className="text-xl">No buildings found</p>
+      </section>
+    )
+  }
 
   return (
     <section className="w-full h-full flex flex-col items-center justify-center bg-main-bg">
-      {categories.map((category: any, i: number) => {
+      {buildingsByCategory.map((category: any, i: number) => {
         return (
           <div className="w-full flex flex-col" key={i}>
             <div className="w-full bg-main-bg p-2 pl-4">
