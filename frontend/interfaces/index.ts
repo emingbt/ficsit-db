@@ -84,3 +84,21 @@ export interface Fuel {
     rate: number
   }[]
 }
+
+export interface SearchData {
+  items: Item[],
+  buildings: Building[],
+  recipes: ProductionRecipe[]
+}
+
+export interface ItemData {
+  item: Item,
+  recipes: ProductionRecipe[],
+  usagesAsIngredient: ProductionRecipe[]
+}
+
+export interface BuildingData {
+  building: Building,
+  recipes: ProductionRecipe[],
+  fuels: Building['fuels']
+}
