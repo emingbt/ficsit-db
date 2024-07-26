@@ -1,3 +1,5 @@
+'use server'
+
 import executeQuery from "./neo4j"
 import Neo4jQueries from "../lib/neo4jQueries"
 
