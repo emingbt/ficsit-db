@@ -116,7 +116,7 @@ export default function SignupForm() {
         Signup
       </button>
       <p className='w-full text-xs lg:text-base'>
-        Already have an account? <Link href="/auth/login"><span className='text-main-orange hover:underline cursor-pointer'>Login</span></Link>
+        Already have an account? <Link href="/login"><span className='text-main-orange hover:underline cursor-pointer'>Login</span></Link>
       </p>
     </form>
   )

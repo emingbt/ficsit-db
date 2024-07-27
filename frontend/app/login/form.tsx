@@ -95,7 +95,7 @@ export default function LoginForm() {
         passwordError && <p className='w-full text-xs lg:text-base text-error'>{passwordError}</p>
       }
       <div className='w-full flex flex-row-reverse mb-6'>
-        <Link href='/auth/forgot-password' >
+        <Link href='/forgot-password' >
           <p className='text-xs lg:text-base text-main-gray hover:text-light-orange'>Forgot password?</p>
         </Link>
       </div>
@@ -106,7 +106,7 @@ export default function LoginForm() {
         Login
       </button>
       <p className='w-full text-xs lg:text-base'>
-        Don&#39;t have an account? <Link href="/auth/signup"><span className='text-main-orange hover:underline cursor-pointer'>Create an account</span></Link>
+        Don&#39;t have an account? <Link href="/signup"><span className='text-main-orange hover:underline cursor-pointer'>Create an account</span></Link>
       </p>
     </form>
   )
