@@ -1,23 +1,22 @@
 "use client"
 
 import { useState } from "react"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { ItemCard } from "../itemCard"
 import SearchIcon from "../../assets/searchIcon.svg"
 
 import type { Item, Building } from "../../interfaces"
 
-export default function SearchSection({ data }: {
+export default function SearchSection({ searchInput, data }: {
+  searchInput: string,
   data: {
     items: Item[],
     buildings: Building[]
   }
 }) {
   const router = useRouter()
-  const searchParams = useSearchParams()
-  const name = searchParams?.get('name') || ""
 
-  const [searchValue, setSearchValue] = useState(name)
+  const [searchValue, setSearchValue] = useState(searchInput)
   const [selectedCategory, setSelectedCategory] = useState<"items" | "buildings">("items")
 
   const items = data.items
@@ -46,7 +45,7 @@ export default function SearchSection({ data }: {
           </button>
         </form>
         <h1 className="w-full hidden lg:flex text-2xl pl-2">
-          Search results for  (<span className="text-main-orange"> {name}</span>)
+          Search results for  (<span className="text-main-orange"> {searchInput}</span>)
         </h1>
         <div className="flex flex-row justify-end mb-2.5 lg:mb-4">
           <button className={`w-full sm:w-32 h-8 sm:ml-2.5 lg:ml-4

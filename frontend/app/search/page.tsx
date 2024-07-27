@@ -17,6 +17,6 @@ export default async function SearchPage({ searchParams }: {
   }
 
   return (
-    <SearchSection data={data} />
+    <SearchSection searchInput={name} data={data} />
   )
 }
