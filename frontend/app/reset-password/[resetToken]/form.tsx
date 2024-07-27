@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { redirect } from 'next/navigation'
-import { resetPasswordSchema } from '../../utils/zod'
+import { resetPasswordSchema } from '../../../utils/zod'
 
 export default function ResetPasswordForm({ token }: { token: string }) {
   const [password, setPassword] = useState('')

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-import type { Building } from "../interfaces"
+import type { Building } from "../../interfaces"
 
 export default function BuildingExtension({ building }: { building: Building }) {
   const [clockspeed, setClockspeed] = useState<number>(100)

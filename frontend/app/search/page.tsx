@@ -1,5 +1,5 @@
 import { getSearch } from "../../utils/gameDataFetcher"
-import SearchSection from "../../components/sections/searchSection"
+import SearchSection from "./section"
 
 export default async function SearchPage({ searchParams }: {
   searchParams: { name: string, category: "items" | "buildings" } | undefined
@@ -17,6 +17,6 @@ export default async function SearchPage({ searchParams }: {
   }
 
   return (
-    <SearchSection data={data} />
+    <SearchSection searchInput={name} data={data} />
   )
 }

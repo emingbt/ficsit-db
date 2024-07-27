@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getBuilding } from '../../../utils/gameDataFetcher'
-import BuildingExtension from '../../../components/buildingExtension'
+import BuildingExtension from '../../../components/building/buildingExtension'
 import Recipes from '../../../components/recipes'
-import ExtractableResources from '../../../components/extractableResources'
-import Fuels from '../../../components/fuels'
+import ExtractableResources from '../../../components/building/extractableResources'
+import Fuels from '../../../components/building/fuels'
 
 export default async function BuildingPage({ params }: { params: { building: string } }) {
   const slug = params.building

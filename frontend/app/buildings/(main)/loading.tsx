@@ -1,4 +1,4 @@
-import BuildingCategories from "../../components/buildingCategories"
+import BuildingCategories from "../../../components/building/buildingCategories"
 
 export default function Loading({ searchParams }: { searchParams?: { category: string } | undefined }) {
   return (

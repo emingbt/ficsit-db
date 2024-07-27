@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { getBuildings } from '../../utils/gameDataFetcher'
+import { getBuildings } from '../../../utils/gameDataFetcher'
 
 export default async function BuildingsSection({ selectedCategory }: { selectedCategory: string }) {
   const buildingsByCategory = await getBuildings(selectedCategory)

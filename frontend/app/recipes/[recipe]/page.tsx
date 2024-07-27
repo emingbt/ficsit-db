@@ -1,5 +1,5 @@
 import { getRecipe } from "../../../utils/gameDataFetcher"
-import RecipeSection from "../../../components/sections/recipeSection"
+import RecipeSection from "./section"
 
 export default async function RecipePage({ params }: {
   params: { recipe: string }

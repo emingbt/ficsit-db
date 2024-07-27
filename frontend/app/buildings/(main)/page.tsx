@@ -1,5 +1,5 @@
-import BuildingCategories from "../../components/buildingCategories"
-import BuildingsSection from "../../components/sections/buildingsSection"
+import BuildingCategories from "../../../components/building/buildingCategories"
+import BuildingsSection from "./section"
 
 export default async function BuildingsPage({
   searchParams
