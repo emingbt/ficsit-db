@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import RecipeItem from "../recipeItem"
+import RecipeItem from "../../../components/recipeItem"
 
-import type { ProductionRecipe } from "../../interfaces"
+import type { ProductionRecipe } from "../../../interfaces"
 
 export default function RecipeSection({ recipe }: {
   recipe: ProductionRecipe
