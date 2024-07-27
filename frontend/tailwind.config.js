@@ -11,6 +11,10 @@ module.exports = {
         'base': 'calc(100vh - 6.5rem)',
         'base-lg': 'calc(100vh - 8rem)',
       },
+      minHeight: {
+        'base': 'calc(100vh - 6.5rem)',
+        'base-lg': 'calc(100vh - 8rem)',
+      },
       colors: {
         'main-bg': '#202125',
         'dark-bg': '#141518',
