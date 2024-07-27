@@ -11,10 +11,12 @@ const nextConfig = {
     return config
   },
   images: {
-    domains: ['res.cloudinary.com']
-  },
-  experimental: {
-    serverActions: true
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: 'res.cloudinary.com',
+      port: '',
+      pathname: '/ficsitdb/image/upload/**'
+    }]
   }
 }
 
