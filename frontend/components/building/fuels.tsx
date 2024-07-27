@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import type { Building } from "../interfaces"
+import type { Building } from "../../interfaces"
 
 export default function Fuels({ fuels }: {
   fuels: Building['fuels']

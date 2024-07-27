@@ -1,6 +1,6 @@
-import { ItemCard } from './itemCard'
+import { ItemCard } from '../itemCard'
 
-import type { Building } from "../interfaces"
+import type { Building } from "../../interfaces"
 
 export default function ExtractableResources({ resources }: {
   resources: Building['resources']

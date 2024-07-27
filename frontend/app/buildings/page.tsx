@@ -1,4 +1,4 @@
-import BuildingCategories from "../../components/buildingCategories"
+import BuildingCategories from "../../components/building/buildingCategories"
 import BuildingsSection from "../../components/sections/buildingsSection"
 
 export default async function BuildingsPage({
