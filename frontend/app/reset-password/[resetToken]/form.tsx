@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { redirect } from 'next/navigation'
-import { resetPasswordSchema } from '../../../utils/zod'
+import { ResetPasswordFormSchema } from '../../../utils/zod'
 
 export default function ResetPasswordForm({ token }: { token: string }) {
   const [password, setPassword] = useState('')
@@ -15,7 +15,7 @@ export default function ResetPasswordForm({ token }: { token: string }) {
     setConfirmPasswordError('')
 
     try {
-      resetPasswordSchema.parse({ password, confirmPassword })
+      ResetPasswordFormSchema.parse({ password, confirmPassword })
 
       if (password !== confirmPassword) {
         setConfirmPasswordError('Passwords do not match')

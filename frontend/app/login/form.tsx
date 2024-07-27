@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { loginSchema } from '../../utils/zod'
+import { LoginFormSchema } from '../../utils/zod'
 // import { useUserStore } from '../../utils/zustand'
 
 export default function LoginForm() {
@@ -20,7 +20,7 @@ export default function LoginForm() {
     setPasswordError('')
 
     try {
-      loginSchema.parse({ email, password })
+      LoginFormSchema.parse({ email, password })
 
       // const response = await fetch(`${baseUrl}/login`, {
       //   method: 'POST',

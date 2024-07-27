@@ -1,21 +1,21 @@
 import { object, string } from "zod"
 
-export const loginSchema = object({
+export const LoginFormSchema = object({
   email: string().email(),
   password: string().min(8),
 })
 
-export const signupSchema = object({
+export const SignupFormSchema = object({
   email: string().email(),
-  username: string().min(3),
+  name: string().min(3),
   password: string().min(8),
 })
 
-export const forgotPasswordSchema = object({
+export const ForgotPasswordFormSchema = object({
   email: string().email(),
 })
 
-export const resetPasswordSchema = object({
+export const ResetPasswordFormSchema = object({
   password: string().min(8),
   confirmPassword: string().min(8),
 })

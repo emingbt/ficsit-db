@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { forgotPasswordSchema } from '../../utils/zod'
+import { ForgotPasswordFormSchema } from '../../utils/zod'
 
 export default function ForgotPasswordForm() {
   const [email, setEmail] = useState('')
@@ -12,7 +12,7 @@ export default function ForgotPasswordForm() {
     setEmailError('')
 
     try {
-      forgotPasswordSchema.parse({ email })
+      ForgotPasswordFormSchema.parse({ email })
 
       const response = await fetch('http://localhost:8000/forgot-password', {
         method: 'POST',

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { signupSchema } from '../../utils/zod'
+import { SignupFormSchema } from '../../utils/zod'
 
 export default function SignupForm() {
   const [email, setEmail] = useState('')
@@ -20,7 +20,7 @@ export default function SignupForm() {
     setPasswordError('')
 
     try {
-      signupSchema.parse({ email, username, password })
+      SignupFormSchema.parse({ email, username, password })
 
       const response = await fetch('http://localhost:8000/signup', {
         method: 'POST',
