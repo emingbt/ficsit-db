@@ -1,113 +1,78 @@
 'use client'
 
-import { useState } from 'react'
+import { useFormState, useFormStatus } from 'react-dom'
+import { login } from './action'
 import Link from 'next/link'
-import { LoginFormSchema } from '../../utils/zod'
-// import { useUserStore } from '../../utils/zustand'
 
 export default function LoginForm() {
-  const baseUrl = process.env.BASE_URL || 'http://localhost:8000'
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [state, action] = useFormState(login, undefined)
 
-  const [emailError, setEmailError] = useState('')
-  const [passwordError, setPasswordError] = useState('')
-
-  const handleOnSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    console.log('Form submitted')
-    e.preventDefault()
-    setEmailError('')
-    setPasswordError('')
-
-    try {
-      LoginFormSchema.parse({ email, password })
-
-      // const response = await fetch(`${baseUrl}/login`, {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     getSetCookie: 'true'
-      //   },
-      //   body: JSON.stringify({ email, password })
-      // })
-      console.log('Sending request')
-      const response = await fetch('/api/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password })
-      })
-
-      const data = await response.json()
-
-      console.log('Sent request', response, "data", data)
-
-      if (response.status !== 200) {
-        console.error('There is an error', data.message)
-        return
-      } else {
-        console.log('Successfull', data, data.body)
-        // Set the user in the store
-        // useUserStore.setState({ user: data.user })
-
-        // Redirect to the homepage
-        // window.location.href = '/'
-      }
-    } catch (error) {
-      console.error(error)
-      if (error.name === 'ZodError') {
-        error.errors.map((err: any) => {
-          if (err.path[0] === 'email') {
-            setEmailError(err.message)
-          }
-          if (err.path[0] === 'password') {
-            setPasswordError(err.message)
-          }
-        })
-      }
-    }
-  }
+  const emailError = state?.error?.email
+  const passwordError = state?.error?.password
 
   return (
-    <form className='w-full flex flex-col items-center' onSubmit={handleOnSubmit}>
-      <label className='w-full text-xs lg:text-base lg:mb-2'>Email</label>
+    <form action={action} className='w-full flex flex-col items-center'>
+      <label htmlFor='email' className='w-full text-xs lg:text-base lg:mb-2'>Email</label>
       <input
         id='email'
+        name='email'
+        placeholder='pioneer@example.com'
         type='text'
         className={
           `w-full h-8 lg:h-10 p-2 ${!emailError && 'mb-4 lg:mb-6'} bg-light-bg text-white
           rounded-none outline-none focus:border-b-2 border-${!emailError ? 'main-orange' : 'error'}
           ${emailError && 'border-b-2 border-error'}`
         }
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
       />
       {
         emailError && <p className='w-full text-xs lg:text-base text-error'>{emailError}</p>
       }
-      <label className='w-full text-xs lg:text-base lg:mb-2'>Password</label>
+      <label htmlFor='password' className='w-full text-xs lg:text-base lg:mb-2'>Password</label>
       <input
         id='password'
+        name='password'
         type='password'
         className={`w-full h-8 lg:h-10 p-2 ${!passwordError && 'mb-4 lg:mb-6'} bg-light-bg text-white rounded-none outline-none focus:border-b-2 border-${!emailError ? 'main-orange' : 'error'} ${passwordError && 'border-b-2 border-error'}`}
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
       />
       {
-        passwordError && <p className='w-full text-xs lg:text-base text-error'>{passwordError}</p>
+        passwordError &&
+        <div className="w-full text-xs lg:text-base text-error mb-4">
+          <p>Password must:</p>
+          <ul>
+            {passwordError.map((error) => (
+              <li key={error}>- {error}</li>
+            ))}
+          </ul>
+        </div>
       }
       <div className='w-full flex flex-row-reverse mb-6'>
         <Link href='/forgot-password' >
           <p className='text-xs lg:text-base text-main-gray hover:text-light-orange'>Forgot password?</p>
         </Link>
       </div>
-      <button
-        type='submit'
-        className='w-full h-8 lg:h-10 text-base mb-4 bg-main-orange hover:bg-light-bg hover:text-light-orange'
-      >
-        Login
-      </button>
+      <LoginButton />
       <p className='w-full text-xs lg:text-base'>
         Don&#39;t have an account? <Link href="/signup"><span className='text-main-orange hover:underline cursor-pointer'>Create an account</span></Link>
       </p>
     </form>
+  )
+}
+
+export function LoginButton() {
+  const { pending } = useFormStatus()
+
+  return (
+    <button
+      type='submit'
+      aria-disabled={pending}
+      disabled={pending}
+      className={`
+        w-full h-8 lg:h-10 text-base mb-4
+        ${pending ? 'bg-light-bg  text-light-orange' : 'bg-main-orange'}
+        hover:bg-light-bg hover:text-light-orange
+      `}
+    >
+      {pending ? 'Submitting...' : 'Login'}
+    </button>
   )
 }
