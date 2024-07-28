@@ -1,8 +1,16 @@
 import { object, string } from "zod"
 
 export const LoginFormSchema = object({
-  email: string().email(),
-  password: string().min(8),
+  email: string().email({ message: 'Please enter a valid email.' }).trim(),
+  password: string()
+    .min(8, { message: 'Be at least 8 characters long' })
+    .max(64, { message: 'Be at most 64 characters long' })
+    .regex(/[a-zA-Z]/, { message: 'Contain at least one letter.' })
+    .regex(/[0-9]/, { message: 'Contain at least one number.' })
+    .regex(/[^a-zA-Z0-9]/, {
+      message: 'Contain at least one special character.',
+    })
+    .trim(),
 })
 
 export const SignupFormSchema = object({
