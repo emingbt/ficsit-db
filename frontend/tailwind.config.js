@@ -14,6 +14,9 @@ module.exports = {
       minHeight: {
         'base': 'calc(100vh - 6.5rem)',
         'base-lg': 'calc(100vh - 8rem)',
+        'content': 'calc(100vh - 6.5rem - 20px)',
+        'content-lg': 'calc(100vh - 8rem - 10px)',
+        'content-xl': 'calc(100vh - 8rem - 2rem)',
       },
       colors: {
         'main-bg': '#202125',
