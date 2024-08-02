@@ -28,7 +28,16 @@ module.exports = {
         'dark-gray': '#2A2C33',
         'main-gray': '#9BA3A9',
         'error': '#E74C3C',
-        'logo-blue': '#4DACF0'
+        'logo-blue': '#4DACF0',
+        'avatar-gray': '#3E3E3E',
+        'avatar-purple': '#A64ACF',
+        'avatar-indigo': '#4F46E5 ',
+        'avatar-blue': '#4DACF0',
+        'avatar-green': '#4ACF4D',
+        'avatar-yellow': '#FDE047',
+        'avatar-orange': '#D79845',
+        'avatar-red': '#CF4A4A',
+        'avatar-pink': '#CF4ACF',
       },
       fontFamily: {
         'logo': 'Industrial Branding',
@@ -40,6 +49,16 @@ module.exports = {
       }
     },
   },
+  safelist: [
+    'bg-avatar-gray',
+    'bg-avatar-purple',
+    'bg-avatar-indigo',
+    'bg-avatar-blue',
+    'bg-avatar-green',
+    'bg-avatar-yellow',
+    'bg-avatar-orange',
+    'bg-avatar-red'
+  ],
   plugins: [],
 }
 
