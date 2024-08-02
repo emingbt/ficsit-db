@@ -4,6 +4,8 @@ import Link from 'next/link'
 import SearchInput from './searchInput'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { RegisterLink, LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components"
+import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 
 import HamburgerIcon from '../assets/hamburgerIcon.svg'
 import CloseIcon from '../assets/closeIcon.svg'
@@ -11,6 +13,8 @@ import CloseIcon from '../assets/closeIcon.svg'
 export default function Header() {
   const router = usePathname()
   const [active, setActive] = useState(false)
+  const { isAuthenticated } = useKindeBrowserClient()
+  const user = false
 
   useEffect(() => {
     setActive(false)
@@ -51,14 +55,28 @@ export default function Header() {
         </Link>
         {/* <Link href="/blueprints" className='w-20 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Blueprints</p>
-        </Link>
-        <div className='w-0.5 h-12 bg-main-orange ml-8' />
-        <Link href="/signup" className='w-20 ml-6 hover:text-main-orange'>
-          <p className='user-select-none cursor-pointer h-full text-center'>Sign up</p>
-        </Link>
-        <Link href="/login" className='w-16 ml-6 hover:text-main-orange'>
-          <p className='user-select-none cursor-pointer h-full text-center'>Login</p>
         </Link> */}
+        <div className='w-0.5 h-12 bg-main-orange ml-8' />
+        {
+          isAuthenticated ?
+            <LogoutLink className='w-20 ml-6 hover:text-main-orange'>
+              <p className='user-select-none cursor-pointer h-full text-center'>Logout</p>
+            </LogoutLink> :
+            <>
+              <RegisterLink
+                postLoginRedirectURL='/create-pioneer'
+                className='w-20 ml-6 hover:text-main-orange'
+              >
+                <p className='user-select-none cursor-pointer h-full text-center'>Sign up</p>
+              </RegisterLink>
+              <LoginLink
+                postLoginRedirectURL='/'
+                className='w-16 ml-6 hover:text-main-orange'
+              >
+                <p className='user-select-none cursor-pointer h-full text-center'>Login</p>
+              </LoginLink>
+            </>
+        }
       </nav>
 
       {
@@ -74,16 +92,16 @@ export default function Header() {
             </Link>
             {/* <Link href='/blueprints' className='w-60 pt-6'>
               <p className='h-full text-center'>Blueprints</p>
-            </Link>
+            </Link> */}
             <div className='w-full h-0.5 bg-main-orange mt-8' />
             <div className='w-full flex flex-row justify-between'>
-              <Link href='/register' className='w-32 pt-8'>
+              <RegisterLink className='w-32 pt-8'>
                 <p className='h-full text-center'>Sign up</p>
-              </Link>
-              <Link href='/login' className='w-32 pt-8'>
+              </RegisterLink>
+              <LoginLink className='w-32 pt-8'>
                 <p className='h-full text-center'>Login</p>
-              </Link>
-            </div> */}
+              </LoginLink>
+            </div>
           </nav>
         </div>
       }
