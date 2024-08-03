@@ -102,3 +102,9 @@ export interface BuildingData {
   recipes: ProductionRecipe[],
   fuels: Building['fuels']
 }
+
+export interface Pioneer {
+  name: string
+  avatar: string
+  color: string
+}
