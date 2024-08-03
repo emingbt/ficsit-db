@@ -16,7 +16,6 @@ export async function createPioneer(state, formData: FormData) {
     color: formData.get('color'),
   })
 
-  console.log('Validation results:', validationResults)
   if (!validationResults.success) {
     return {
       error: validationResults.error.flatten().fieldErrors,
