@@ -14,7 +14,6 @@ export default function Header() {
   const router = usePathname()
   const [active, setActive] = useState(false)
   const { isAuthenticated } = useKindeBrowserClient()
-  const user = false
 
   useEffect(() => {
     setActive(false)
@@ -64,13 +63,13 @@ export default function Header() {
             </LogoutLink> :
             <>
               <RegisterLink
-                postLoginRedirectURL='/create-pioneer'
+                postLoginRedirectURL='/api/auth'
                 className='w-20 ml-6 hover:text-main-orange'
               >
                 <p className='user-select-none cursor-pointer h-full text-center'>Sign up</p>
               </RegisterLink>
               <LoginLink
-                postLoginRedirectURL='/'
+                postLoginRedirectURL='/api/auth'
                 className='w-16 ml-6 hover:text-main-orange'
               >
                 <p className='user-select-none cursor-pointer h-full text-center'>Login</p>
@@ -95,12 +94,26 @@ export default function Header() {
             </Link> */}
             <div className='w-full h-0.5 bg-main-orange mt-8' />
             <div className='w-full flex flex-row justify-between'>
-              <RegisterLink className='w-32 pt-8'>
-                <p className='h-full text-center'>Sign up</p>
-              </RegisterLink>
-              <LoginLink className='w-32 pt-8'>
-                <p className='h-full text-center'>Login</p>
-              </LoginLink>
+              {
+                isAuthenticated ?
+                  <LogoutLink className='w-full pt-8'>
+                    <p className='h-full text-center'>Logout</p>
+                  </LogoutLink> :
+                  <>
+                    <RegisterLink
+                      postLoginRedirectURL='/api/auth'
+                      className='w-32 pt-8'
+                    >
+                      <p className='h-full text-center'>Sign up</p>
+                    </RegisterLink>
+                    <LoginLink
+                      postLoginRedirectURL='/api/auth'
+                      className='w-32 pt-8'
+                    >
+                      <p className='h-full text-center'>Login</p>
+                    </LoginLink>
+                  </>
+              }
             </div>
           </nav>
         </div>
