@@ -107,3 +107,6 @@ dist
 # Build files
 build/
 .vercel
+
+# Local drizzle generated files
+drizzle/db/
