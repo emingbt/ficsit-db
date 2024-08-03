@@ -20,6 +20,7 @@ export const ItemCard = ({ item, isBuilding = false }: { item: Card, isBuilding?
               sizes='100%'
               alt={item.name}
               style={{ objectFit: 'contain' }}
+              unoptimized
             />
           </div>
         </div>
