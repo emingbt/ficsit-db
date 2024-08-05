@@ -68,6 +68,7 @@ export async function createPioneer(state, formData: FormData) {
         email: user.email,
         avatar,
         color,
+        kindeId: user.id,
       })
       .returning({ name: Pioneer.name, avatar: Pioneer.avatar, color: Pioneer.color })
 
