@@ -17,7 +17,7 @@ export const Pioneer = pgTable('Pioneer', {
   color: colorEnum('color').default('gray').notNull(),
   kindeId: text('kinde_id').notNull(),
   role: roleEnum('role').default('user').notNull(),
-  createdAt: timestamp('created_at').defaultNow()
+  createdAt: timestamp('created_at').defaultNow().notNull()
 }, (pioneer) => {
   return {
     uniqueIdx: uniqueIndex('unique_idx').on(pioneer.name, pioneer.email)
