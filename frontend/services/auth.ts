@@ -12,8 +12,10 @@ export const getPioneerByEmail = cache(async (email: string) => {
 
       columns: {
         name: true,
+        email: true,
         avatar: true,
-        color: true
+        color: true,
+        createdAt: true
       }
     })
 
