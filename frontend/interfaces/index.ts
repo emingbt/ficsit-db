@@ -104,7 +104,23 @@ export interface BuildingData {
 }
 
 export interface Pioneer {
-  name: string
-  avatar: string
-  color: string
+  name: string,
+  email: string,
+  avatar: 'bacon-agaric' |
+  'beryl-nut' |
+  'ficsit-coffee-cup' |
+  'lizard-doggo' |
+  'paleberry' |
+  'pioneer' |
+  'small-stinger' |
+  'space-giraffe-tick-penguin-whale',
+  color: 'gray' |
+  'purple' |
+  'indigo' |
+  'blue' |
+  'green' |
+  'yellow' |
+  'orange' |
+  'red',
+  createdAt: Date
 }
