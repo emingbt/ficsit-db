@@ -1,10 +1,12 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 import { LoginLink, LogoutLink, RegisterLink } from '@kinde-oss/kinde-auth-nextjs'
 import { getPropertiesFromIdToken } from '../utils/kinde'
 
 export default function AuthNavigation() {
   const { isAuthenticated, getIdToken } = useKindeBrowserClient()
+
   const idToken = getIdToken()
   const pioneer = getPropertiesFromIdToken(idToken || undefined)
 
@@ -27,7 +29,8 @@ export default function AuthNavigation() {
             </LoginLink>
           </> :
           pioneer ?
-            <LogoutLink
+            <Link
+              href='/profile'
               className='w-1/2 h-16 lg:w-10 lg:h-10 flex flex-row items-center justify-center gap-2 lg:ml-6'
             >
               <p className='text-white lg:hidden'>{pioneer.name}</p>
@@ -38,7 +41,7 @@ export default function AuthNavigation() {
                 height={40}
                 className={`rounded-full bg-avatar-${pioneer.color}`}
               />
-            </LogoutLink> :
+            </Link> :
             <LogoutLink
               className='w-32 lg:w-16 lg:ml-6 lg:hover:text-main-orange'>
               <p className='h-full text-center user-select-none lg:cursor-pointer'>Logout</p>
