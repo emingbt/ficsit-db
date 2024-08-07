@@ -59,3 +59,8 @@ export const CreatePioneerFormSchema = object({
   avatar: AvatarEnum,
   color: ColorEnum,
 })
+
+export const UpdateAvatarFormSchema = object({
+  avatar: AvatarEnum,
+  color: ColorEnum,
+})
