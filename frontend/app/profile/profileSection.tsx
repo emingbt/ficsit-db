@@ -11,7 +11,7 @@ export default function ProfileSection({ pioneer }: { pioneer: Pioneer }) {
 
   return (
     <section className="w-full lg:w-2/5 h-full flex flex-1 flex-col items-start justify-center p-8 bg-main-bg">
-      <h1 className="w-full text-left text-2xl"> Profile</h1>
+      <h1 className="w-full text-left text-2xl">Profile</h1>
       <p className="w-full mb-4 text-left text-sm text-gray-300">Update your profile</p>
       <div className="w-full flex flex-col mb-4">
         <p>Name: {pioneer.name}</p>

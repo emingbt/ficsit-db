@@ -5,7 +5,7 @@ import ProfileSection from "./profileSection"
 import AvatarSection from "./avatarSection"
 
 export default async function ProfilePage() {
-  const { getUser, isAuthenticated, refreshTokens } = getKindeServerSession()
+  const { getUser, isAuthenticated } = getKindeServerSession()
   const authenticated = await isAuthenticated()
 
   if (!authenticated) {
@@ -26,7 +26,7 @@ export default async function ProfilePage() {
 
   return (
     <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">
-      <div className="w-full h-full flex flex-col lg:flex-row items-center justify-center gap-5 bg-dark-bg">
+      <div className="w-full h-full lg:h-base xl:h-base-lg flex flex-col lg:flex-row items-center justify-center gap-5 bg-dark-bg">
         <ProfileSection pioneer={pioneer} />
         <AvatarSection pioneer={pioneer} />
       </div>
