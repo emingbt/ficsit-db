@@ -1,12 +1,10 @@
 'use server'
 
-import { CreatePioneerFormSchema } from "../../utils/zod"
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import db from "../../utils/postgres"
-import { Pioneer } from "../../drizzle/schema"
-import { eq } from "drizzle-orm"
-import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
+import { CreatePioneerFormSchema } from "../../utils/zod"
+import { updateKindeUserProperties } from "../../services/kinde"
+import { createNewPioneer, getPioneerByEmail } from "../../services/auth"
 
 export async function createPioneer(state, formData: FormData) {
   // 1. Validate the form data
@@ -25,7 +23,7 @@ export async function createPioneer(state, formData: FormData) {
   const { name, avatar, color } = validationResults.data
 
   //2. Check if the user is authenticated and get the user
-  const { getUser, isAuthenticated } = getKindeServerSession()
+  const { getUser, isAuthenticated, refreshTokens } = getKindeServerSession()
   const authenticated = await isAuthenticated()
 
   if (!authenticated) {
@@ -47,9 +45,7 @@ export async function createPioneer(state, formData: FormData) {
   }
 
   // 3. Check if the user is already a pioneer
-  const existingPioneer = await db.query.Pioneer.findFirst({
-    where: eq(Pioneer.email, user.email),
-  })
+  const existingPioneer = await getPioneerByEmail(user.email)
 
   if (existingPioneer) {
     return {
@@ -61,16 +57,14 @@ export async function createPioneer(state, formData: FormData) {
 
   // 4. Create a new pioneer
   try {
-    const pioneer = await db
-      .insert(Pioneer)
-      .values({
-        name,
-        email: user.email,
-        avatar,
-        color,
-        kindeId: user.id,
-      })
-      .returning({ name: Pioneer.name, avatar: Pioneer.avatar, color: Pioneer.color })
+    const pioneer = await createNewPioneer({
+      email: user.email,
+      kindeId: user.id,
+    }, {
+      name,
+      avatar,
+      color
+    })
 
     if (!pioneer) {
       return {
@@ -80,12 +74,13 @@ export async function createPioneer(state, formData: FormData) {
       }
     }
 
-    // 5. Add the avatar and color to the cookie
-    cookies().set('pioneer', JSON.stringify(pioneer), {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+    await updateKindeUserProperties(user.id, {
+      name,
+      avatar,
+      color,
     })
+
+    await refreshTokens()
   } catch (error) {
     console.error('Error creating pioneer:', error)
     return {
