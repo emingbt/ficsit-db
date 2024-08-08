@@ -1,7 +1,6 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { redirect } from "next/navigation"
 import { getPioneerByEmail } from "../../../services/auth"
-import { cookies } from "next/headers"
 
 export async function GET(req: Request) {
   // 1. Check if the user is authenticated
@@ -26,14 +25,6 @@ export async function GET(req: Request) {
     return redirect('/create-pioneer')
   }
 
-  // 3.2. If the user is a pioneer, set cookies and redirect to the home page
-  const { name, avatar, color } = existingPioneer
-
-  cookies().set('pioneer', JSON.stringify({ name, avatar, color }), {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'strict',
-  })
-
+  // 3.2. If the user is a pioneer, redirect to the home page
   return redirect('/')
 }
