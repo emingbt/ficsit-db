@@ -24,4 +24,11 @@ export const Pioneer = pgTable('Pioneer', {
   }
 })
 
+export const ApiAccessToken = pgTable('ApiAccessToken', {
+  id: serial('id').primaryKey(),
+  accessToken: text('access_token').notNull(),
+  expiresAt: timestamp('expires_at').notNull()
+})
+
 export type Pioneer = InferInsertModel<typeof Pioneer>
+export type ApiAccessToken = InferInsertModel<typeof ApiAccessToken>
