@@ -4,7 +4,7 @@ import db from '../utils/postgres'
 import { eq } from 'drizzle-orm'
 import { cache } from 'react'
 import { Pioneer } from '../drizzle/schema'
-import { UpdateAvatarFormSchema } from '../utils/zod'
+import { CreatePioneerFormSchema, UpdateAvatarFormSchema } from '../utils/zod'
 
 export const getPioneerByEmail = cache(async (email: string) => {
   try {
@@ -26,6 +26,34 @@ export const getPioneerByEmail = cache(async (email: string) => {
     return
   }
 })
+
+export const createNewPioneer = async (kindeData: { email: string, kindeId: string }, formData: { name: string, avatar: string, color: string }) => {
+  const validationResults = CreatePioneerFormSchema.safeParse(formData)
+
+  if (!validationResults.success) {
+    throw new Error('Invalid pioneer properties.')
+  }
+
+  const { name, avatar, color } = validationResults.data
+
+  try {
+    const pioneer = await db
+      .insert(Pioneer)
+      .values({
+        name,
+        email: kindeData.email,
+        avatar,
+        color,
+        kindeId: kindeData.kindeId,
+      })
+      .returning({ name: Pioneer.name, avatar: Pioneer.avatar, color: Pioneer.color })
+
+    return pioneer
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to create the pioneer.')
+  }
+}
 
 export const updatePioneerAvatar = async (email: string, newAvatar: string, newColor: string) => {
   const validationResults = UpdateAvatarFormSchema.safeParse({
