@@ -2,10 +2,8 @@
 
 import { UpdateAvatarFormSchema } from "../../utils/zod"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import { getPioneerByEmail } from "../../services/auth"
-import db from "../../utils/postgres"
-import { Pioneer } from "../../drizzle/schema"
-import { eq } from "drizzle-orm"
+import { getPioneerByEmail, updatePioneerAvatar } from "../../services/auth"
+import { updateKindeUserProperties } from "../../services/kinde"
 
 export async function updateAvatar(state, formData: FormData) {
   // 1. Validate the form data
@@ -57,14 +55,12 @@ export async function updateAvatar(state, formData: FormData) {
 
   // 4. Update the pioneer
   try {
-    await db
-      .update(Pioneer)
-      .set({
-        avatar,
-        color,
-      })
-      .where(eq(Pioneer.email, user.email))
-      .execute()
+    await updatePioneerAvatar(user.email, avatar, color)
+
+    await updateKindeUserProperties(user.id, {
+      avatar,
+      color
+    })
 
     await refreshTokens()
 
