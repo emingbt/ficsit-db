@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        'base': 'calc(100vh - 6.5rem)',
-        'base-lg': 'calc(100vh - 8rem)',
+        'base': 'calc(100vh - 8.5rem)',
+        'base-lg': 'calc(100vh - 10rem)',
       },
       minHeight: {
         'base': 'calc(100vh - 6.5rem)',
