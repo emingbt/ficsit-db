@@ -1,9 +1,8 @@
 import 'server-only'
 
-import { cache } from 'react'
 import { addAPIAccessToken, getCurrentAPIAccessToken } from './apiAccessToken'
 
-export const getKindeManagementAPIAccessToken = cache(async () => {
+export const getKindeManagementAPIAccessToken = async () => {
   // 0. If the current access token is still valid, return it
   const currentAccessToken = await getCurrentAPIAccessToken()
 
@@ -54,7 +53,7 @@ export const getKindeManagementAPIAccessToken = cache(async () => {
     console.error('Error getting Kinde access token:', error)
     throw new Error('Error getting Kinde Management API Access Token')
   }
-})
+}
 
 export const updateKindeUserProperties = async (userId: string, userProperties: Record<string, any>) => {
   const accessToken = await getKindeManagementAPIAccessToken()
