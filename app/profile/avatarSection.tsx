@@ -43,7 +43,7 @@ export default function AvatarSection({ pioneer }: { pioneer: Pioneer }) {
       <p className="w-full mb-6 text-left text-sm text-gray-300">Update your avatar</p>
       <div className="w-full flex flex-col lg:flex-row">
         <div className={`lg:shrink-0 w-48 h-48 lg:w-64 lg:h-64 relative rounded-full overflow-hidden bg-avatar-${selectedColor} mb-8 lg:mr-4`} >
-          <Image src={`/images/avatars/${selectedAvatar}.png`} alt="selectedAvatar" fill />
+          <Image src={`/images/avatars/${selectedAvatar}.png`} alt="selectedAvatar" fill sizes='192px, 256px' priority />
         </div>
         <form action={action} className="flex flex-col lg:ml-4">
           <div className='flex flex-row flex-wrap justify-start gap-2 mb-4 lg:mb-6'>
@@ -52,7 +52,12 @@ export default function AvatarSection({ pioneer }: { pioneer: Pioneer }) {
                 key={index}
                 className={`w-16 h-16 relative cursor-pointer bg-light-bg ${selectedAvatar === avatar ? 'border-2 border-main-orange' : ''}`}
               >
-                <Image src={`/images/avatars/${avatar}.png`} alt={avatar} fill />
+                <Image
+                  src={`/images/avatars/${avatar}.png`}
+                  alt={avatar}
+                  fill
+                  sizes='64px'
+                />
                 <input
                   id={avatar}
                   value={avatar}
