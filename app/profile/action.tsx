@@ -53,7 +53,7 @@ export async function updateAvatar(state, formData: FormData) {
     }
   }
 
-  // 4. Update the pioneer
+  // 4. Update the avatar
   try {
     await updatePioneerAvatar(user.email, avatar, color)
 

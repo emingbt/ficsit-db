@@ -52,16 +52,12 @@ export const getKindeManagementAPIAccessToken = cache(async () => {
     return accessToken
   } catch (error) {
     console.error('Error getting Kinde access token:', error)
-    return
+    throw new Error('Error getting Kinde Management API Access Token')
   }
 })
 
 export const updateKindeUserProperties = async (userId: string, userProperties: Record<string, any>) => {
   const accessToken = await getKindeManagementAPIAccessToken()
-
-  if (!accessToken) {
-    return
-  }
 
   try {
     const request = await fetch(`${process.env.KINDE_ISSUER_URL}/api/v1/users/${userId}/properties`, {
@@ -76,9 +72,35 @@ export const updateKindeUserProperties = async (userId: string, userProperties: 
       })
     })
 
+    await refreshKindeUserClaimsAndInvalidateCache(userId, accessToken)
+
     return request.status
   } catch (error) {
     console.error('Error updating user in kinde:', error)
-    return
+    throw new Error('Error updating user in kinde')
+  }
+}
+
+export const refreshKindeUserClaimsAndInvalidateCache = async (userId: string, accessToken?: string) => {
+  // 1. Check if the access token is provided, if not get a new one
+  if (!accessToken) {
+    accessToken = await getKindeManagementAPIAccessToken()
+  }
+
+  // 2. Refresh the user claims and invalidate the cache
+  try {
+    const request = await fetch(`${process.env.KINDE_ISSUER_URL}/api/v1/users/${userId}/refresh_claims`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${accessToken}`
+      }
+    })
+
+    return request.status
+  } catch (error) {
+    console.error('Error refreshing user claims in kinde:', error)
+    throw new Error('Error refreshing user claims in kinde')
   }
 }
