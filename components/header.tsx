@@ -52,9 +52,9 @@ export default function Header() {
         </Link>
         {/* <Link href="/blueprints" className='w-20 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Blueprints</p>
-        </Link> */}
+        </Link>
         <div className='w-0.5 h-12 bg-main-orange ml-8' />
-        <AuthNavigation />
+        <AuthNavigation /> */}
       </nav>
 
       {

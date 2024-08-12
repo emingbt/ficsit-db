@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 import { createPioneer } from './action'
+import { LoginLink } from '@kinde-oss/kinde-auth-nextjs'
 
 export default function CreatePioneerForm() {
   const avatars = [
@@ -131,6 +132,7 @@ export default function CreatePioneerForm() {
           </div>
         }
       </form>
+      <LoginLink className='w-full text-xs lg:text-base text-center mt-4'>Login</LoginLink>
     </section>
   )
 }
