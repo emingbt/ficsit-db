@@ -70,11 +70,11 @@ export default function Header() {
             </Link>
             {/* <Link href='/blueprints' className='w-60 pt-6'>
               <p className='h-full text-center'>Blueprints</p>
-            </Link> */}
+            </Link>
             <div className='w-full h-0.5 bg-main-orange mt-8' />
             <div className='w-full flex flex-row justify-center mt-6'>
               <AuthNavigation />
-            </div>
+            </div> */}
           </nav>
         </div>
       }
