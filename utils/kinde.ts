@@ -1,4 +1,4 @@
-import type { KindeIdToken } from "@kinde-oss/kinde-auth-nextjs/dist/types"
+import type { KindeAccessToken, KindeIdToken } from "@kinde-oss/kinde-auth-nextjs/dist/types"
 
 interface PioneerProperties {
   name: string,
@@ -6,13 +6,13 @@ interface PioneerProperties {
   color: string,
 }
 
-export function getPropertiesFromIdToken(idToken?: KindeIdToken) {
-  if (!idToken) {
+export function getPropertiesFromAccessToken(accessToken?: KindeAccessToken) {
+  if (!accessToken) {
     return undefined
   }
 
   // @ts-ignore
-  const properties = idToken?.user_properties
+  const properties = accessToken?.user_properties
 
   if (!properties) {
     return undefined

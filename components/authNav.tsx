@@ -2,13 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 import { LoginLink, LogoutLink, RegisterLink } from '@kinde-oss/kinde-auth-nextjs'
-import { getPropertiesFromIdToken } from '../utils/kinde'
+import { getPropertiesFromAccessToken } from '../utils/kinde'
 
 export default function AuthNavigation() {
-  const { isAuthenticated, getIdToken } = useKindeBrowserClient()
+  const { isAuthenticated, getAccessToken } = useKindeBrowserClient()
 
-  const idToken = getIdToken()
-  const pioneer = getPropertiesFromIdToken(idToken || undefined)
+  const accessToken = getAccessToken()
+  const pioneer = getPropertiesFromAccessToken(accessToken || undefined)
 
   return (
     <>
