@@ -21,3 +21,23 @@ export const colorEnum = pgEnum('color', [
   'red'
 ])
 export const roleEnum = pgEnum('role', ['admin', 'user'])
+
+export const categoryEnum = pgEnum('category', [
+  'Architecture',
+  'Power',
+  'Transportation',
+  'Trains',
+  'Tracks',
+  'Roads',
+  'Hypertubes',
+  'Foundations',
+  'Compact',
+  'Belts',
+  'Load Balancer',
+  'Logistics',
+  'Signs',
+  'Decorations',
+  'Storage',
+  'Pipes',
+  'Supports'
+])

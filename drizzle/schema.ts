@@ -7,7 +7,7 @@ import {
   timestamp
 } from 'drizzle-orm/pg-core'
 import { InferInsertModel } from 'drizzle-orm'
-import { avatarEnum, colorEnum, roleEnum } from './enums'
+import { avatarEnum, categoryEnum, colorEnum, roleEnum } from './enums'
 
 export const Pioneer = pgTable('Pioneer', {
   id: serial('id').primaryKey(),
@@ -30,5 +30,17 @@ export const ApiAccessToken = pgTable('ApiAccessToken', {
   expiresAt: timestamp('expires_at').notNull()
 })
 
+export const Blueprint = pgTable('Blueprint', {
+  id: serial('id').primaryKey(),
+  title: text('title').notNull(),
+  description: text('description'),
+  images: text('images').array().notNull(),
+  files: text('files').array().notNull(),
+  categories: categoryEnum('categories').array().notNull(),
+  pioneerId: serial('pioneer_id').references(() => Pioneer.id).notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull()
+})
+
 export type Pioneer = InferInsertModel<typeof Pioneer>
 export type ApiAccessToken = InferInsertModel<typeof ApiAccessToken>
+export type Blueprint = InferInsertModel<typeof Blueprint>
