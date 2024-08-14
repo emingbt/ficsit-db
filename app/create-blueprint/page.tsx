@@ -26,6 +26,7 @@ export default async function CreatePioneerPage() {
             fill
             className="object-cover object-left w-full h-full"
             sizes='100%'
+            priority
           />
         </div>
       </div>
