@@ -1,11 +1,14 @@
 'use client'
 
+import { useState } from "react"
 import { useFormState, useFormStatus } from "react-dom"
 import createBlueprint from "./action"
 import CategoryInput from "./categoryInput"
+import Link from "next/link"
 
 export default function CreateBlueprintForm() {
   const [state, action] = useFormState(createBlueprint, undefined)
+  const [images, setImages] = useState<File[]>([])
 
   const titleError = state?.error?.title
   const imageError = state?.error?.images
@@ -13,10 +16,11 @@ export default function CreateBlueprintForm() {
   const categoryError = state?.error?.categories
   const submitError = state?.error?.submit
   const submitSuccess = state?.success?.submit
+  const blueprintTitle = state?.success?.data
 
   return (
     <form action={action}>
-      <label htmlFor='title' className='w-full text-xs lg:text-base lg:mb-2'>Title</label>
+      <label htmlFor='title'>Title</label>
       <input
         id='title'
         type='text'
@@ -29,8 +33,13 @@ export default function CreateBlueprintForm() {
       />
       {
         titleError &&
-        <div className='w-full text-xs lg:text-base text-error'>
-          <p>{titleError}</p>
+        <div className="w-full text-xs lg:text-base text-error mb-4">
+          <p>Name must:</p>
+          <ul>
+            {titleError.map((error) => (
+              <li key={error}>- {error}</li>
+            ))}
+          </ul>
         </div>
       }
       <label htmlFor="description">Description (Optional)</label>
@@ -48,10 +57,17 @@ export default function CreateBlueprintForm() {
         multiple
         max="5"
         className={
-          `w-full h-8 lg:h-10 p-2 ${!titleError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
-          rounded-none outline-none focus:border-b-2 border-${!titleError ? 'main-orange' : 'error'}
-          ${titleError && 'border-b-2 border-error'}`
+          `w-full h-8 lg:h-10 p-2 ${!imageError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
+          rounded-none outline-none focus:border-b-2 border-${!imageError ? 'main-orange' : 'error'}
+          ${imageError && 'border-b-2 border-error'}`
         }
+        // add images to state
+        onChange={(event) => {
+          const files = event.target.files
+          if (files) {
+            setImages(Array.from(files))
+          }
+        }}
       />
       {
         imageError &&
@@ -59,6 +75,16 @@ export default function CreateBlueprintForm() {
           <p>{imageError}</p>
         </div>
       }
+      <div className="w-full flex flex-wrap flex-row gap-4 mb-4 lg:mb-6">
+        {images?.map((image) => (
+          <img
+            key={image.name}
+            src={URL.createObjectURL(image)}
+            alt={image.name}
+            className='w-32 h-20 object-cover bg-light-bg'
+          />
+        ))}
+      </div>
       <label htmlFor="files">Blueprint files</label>
       <input
         id="files"
@@ -68,9 +94,9 @@ export default function CreateBlueprintForm() {
         multiple
         max="5"
         className={
-          `w-full h-8 lg:h-10 p-2 ${!titleError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
-          rounded-none outline-none focus:border-b-2 border-${!titleError ? 'main-orange' : 'error'}
-          ${titleError && 'border-b-2 border-error'}`
+          `w-full h-8 lg:h-10 p-2 ${!fileError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
+          rounded-none outline-none focus:border-b-2 border-${!fileError ? 'main-orange' : 'error'}
+          ${fileError && 'border-b-2 border-error'}`
         }
       />
       {
@@ -80,14 +106,7 @@ export default function CreateBlueprintForm() {
         </div>
       }
       <CategoryInput error={categoryError} />
-      <label htmlFor="mods">Mods used (Optional)</label>
-      <input
-        id="mods"
-        type="text"
-        name="mods"
-        className="w-full h-10 p-2 mb-6 bg-light-bg text-white rounded-none outline-none focus:border-b-2 border-main-orange"
-      />
-      <SubmitButton />
+      <SubmitButton success={submitSuccess} blueprintTitle={blueprintTitle} />
       {submitError && <p className='text-red-500'>{submitError}</p>}
       {submitSuccess && <p className='text-green-500'>{submitSuccess}</p>}
     </form>
@@ -95,21 +114,31 @@ export default function CreateBlueprintForm() {
 }
 
 
-function SubmitButton() {
+function SubmitButton({ success, blueprintTitle }: { success: boolean, blueprintTitle: string }) {
   const { pending } = useFormStatus()
 
   return (
-    <button
-      type='submit'
-      aria-disabled={pending}
-      disabled={pending}
-      className={`
-        w-full h-10 lg:h-10 text-base
+    success ? (
+      <div className="w-full h-10 bg-logo-blue cursor-pointer">
+        <Link
+          className="w-full h-full flex justify-center items-center text-lg font-semibold"
+          href={`/blueprints/${blueprintTitle}`}
+        >
+          Go to Blueprint
+        </Link>
+      </div>
+    ) : (
+      <button
+        type='submit'
+        aria-disabled={pending}
+        disabled={pending}
+        className={`
+        w-full h-10 text-base
         ${pending ? 'bg-light-bg  text-light-orange' : 'bg-main-orange'}
         hover:bg-light-bg hover:text-light-orange
       `}
-    >
-      {pending ? 'Submitting...' : 'Create Blueprint'}
-    </button>
-  )
+      >
+        {pending ? 'Creating Pioneer...' : 'Create Blueprint'}
+      </button>
+    ))
 }
