@@ -1,10 +1,10 @@
 import {
+  pgTable,
   serial,
   text,
-  pgEnum,
-  pgTable,
+  timestamp,
+  index,
   uniqueIndex,
-  timestamp
 } from 'drizzle-orm/pg-core'
 import { InferInsertModel } from 'drizzle-orm'
 import { avatarEnum, categoryEnum, colorEnum, roleEnum } from './enums'
@@ -20,7 +20,8 @@ export const Pioneer = pgTable('Pioneer', {
   createdAt: timestamp('created_at').defaultNow().notNull()
 }, (pioneer) => {
   return {
-    uniqueIdx: uniqueIndex('unique_idx').on(pioneer.name, pioneer.email)
+    nameIdx: uniqueIndex('name_idx').on(pioneer.name),
+    emailIdx: uniqueIndex('email_idx').on(pioneer.email)
   }
 })
 
@@ -32,13 +33,18 @@ export const ApiAccessToken = pgTable('ApiAccessToken', {
 
 export const Blueprint = pgTable('Blueprint', {
   id: serial('id').primaryKey(),
-  title: text('title').notNull(),
+  title: text('title').unique().notNull(),
   description: text('description'),
   images: text('images').array().notNull(),
   files: text('files').array().notNull(),
-  categories: categoryEnum('categories').array().notNull(),
-  pioneerId: serial('pioneer_id').references(() => Pioneer.id).notNull(),
+  categories: categoryEnum('category').array().notNull(),
+  pioneerName: text('pioneer_name').references(() => Pioneer.name).notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull()
+}, (blueprint) => {
+  return {
+    titleIdx: uniqueIndex('title_idx').on(blueprint.title),
+    pioneerNameIdx: index('pioneerName_idx').on(blueprint.pioneerName)
+  }
 })
 
 export type Pioneer = InferInsertModel<typeof Pioneer>
