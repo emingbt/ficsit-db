@@ -11,6 +11,7 @@ export default function CreateBlueprintForm() {
   const [images, setImages] = useState<File[]>([])
 
   const titleError = state?.error?.title
+  const descriptionError = state?.error?.description
   const imageError = state?.error?.images
   const fileError = state?.error?.files
   const categoryError = state?.error?.categories
@@ -46,8 +47,18 @@ export default function CreateBlueprintForm() {
       <textarea
         id="description"
         name="description"
-        className="w-full h-16 p-2 mb-6 bg-light-bg text-white rounded-none outline-none focus:border-b-2 border-main-orange"
+        className={
+          `w-full h-16 p-2 ${!descriptionError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
+          rounded-none outline-none focus:border-b-2 border-${!descriptionError ? 'main-orange' : 'error'}
+          ${descriptionError && 'border-b-2 border-error'}`
+        }
       />
+      {
+        descriptionError &&
+        <div className='w-full text-xs lg:text-base text-error'>
+          <p>{descriptionError}</p>
+        </div>
+      }
       <label htmlFor="images">Images</label>
       <input
         id="images"
