@@ -17,7 +17,7 @@ export async function uploadImagesToCloudinary(images: File[], pioneerName: stri
       const uploadStream = cloudinary.v2.uploader.upload_stream({
         tags: 'blueprint_image',
         resource_type: 'image',
-        public_id: `${index}_${image.name}`,
+        public_id: `${blueprintTitle}-${index}`,
         folder: `blueprints/${pioneerName}/${blueprintTitle}`,
         overwrite: false,
         transformation: {
@@ -55,7 +55,7 @@ export async function uploadFilesToCloudinary(files: File[], pioneerName: string
       const uploadStream = cloudinary.v2.uploader.upload_stream({
         tags: 'blueprint_file',
         resource_type: 'raw',
-        public_id: `${index}-${file.name}`,
+        public_id: `${blueprintTitle}-${index}`,
         folder: `blueprints/${pioneerName}/${blueprintTitle}`,
         overwrite: false
       }, (error, result) => {
