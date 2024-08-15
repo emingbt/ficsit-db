@@ -149,7 +149,7 @@ function SubmitButton({ success, blueprintTitle }: { success: boolean, blueprint
         hover:bg-light-bg hover:text-light-orange
       `}
       >
-        {pending ? 'Creating Pioneer...' : 'Create Blueprint'}
+        {pending ? 'Creating Blueprint...' : 'Create Blueprint'}
       </button>
     ))
 }
