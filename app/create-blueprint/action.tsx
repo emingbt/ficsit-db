@@ -5,7 +5,7 @@ import { uploadFilesToCloudinary, uploadImagesToCloudinary } from "../../service
 import { CrateBlueprintFormSchema } from "../../utils/zod"
 import { getPioneerByEmail } from "../../services/auth"
 import { redirect } from "next/navigation"
-import { createNewBlueprint, getBlueprintByTitle } from "../../services/blueprint"
+import { createNewBlueprint, getAllBlueprintsByPioneer } from "../../services/blueprint"
 
 export default async function createBlueprint(state, formData: FormData) {
   // 1. Validate form data
@@ -62,12 +62,12 @@ export default async function createBlueprint(state, formData: FormData) {
   }
 
   // 4. Check if the user has another blueprint with the same title
-  const blueprintExist = await getBlueprintByTitle(title)
+  const blueprints = await getAllBlueprintsByPioneer(pioneer.name)
 
-  if (blueprintExist) {
+  if (blueprints.some((blueprint) => blueprint.title === title)) {
     return {
       error: {
-        submit: 'A blueprint with the same title already exists.'
+        submit: 'You have already created a blueprint with this title.'
       }
     }
   }

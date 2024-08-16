@@ -29,6 +29,25 @@ export const getBlueprintById = async (id: number) => {
   }
 }
 
+export const getAllBlueprintsByPioneer = async (pioneerName: string) => {
+  try {
+    const blueprints = await db.query.Blueprint.findMany({
+      where: eq(Blueprint.pioneerName, pioneerName),
+      columns: {
+        title: true,
+        images: true,
+        categories: true,
+        createdAt: true
+      }
+    })
+
+    return blueprints
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to get the blueprint.')
+  }
+}
+
 export const createNewBlueprint = async (blueprint: Blueprint) => {
   try {
     const newBlueprint = await db.insert(Blueprint)
