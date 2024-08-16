@@ -12,6 +12,7 @@ export const getPioneerByEmail = cache(async (email: string) => {
       where: eq(Pioneer.email, email),
 
       columns: {
+        id: true,
         name: true,
         email: true,
         avatar: true,

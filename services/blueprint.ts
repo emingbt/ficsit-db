@@ -1,13 +1,16 @@
 import 'server-only'
 
+import { cache } from 'react'
 import db from '../utils/postgres'
 import { count, desc, eq } from 'drizzle-orm'
 import { Blueprint } from '../drizzle/schema'
 
-export const getBlueprintByTitle = async (title: string) => {
+const blueprintsPerPage = 30
+
+export const getBlueprintById = async (id: number) => {
   try {
     const blueprint = await db.query.Blueprint.findFirst({
-      where: eq(Blueprint.title, title),
+      where: eq(Blueprint.id, id),
       columns: {
         title: true,
         description: true,
@@ -48,7 +51,6 @@ export const createNewBlueprint = async (blueprint: Blueprint) => {
 }
 
 export const getPageCountAndBlueprintsByPage = async (page: number) => {
-  const blueprintsPerPage = 30
   const offset = (page - 1) * blueprintsPerPage
 
   if (page < 1) {
@@ -60,13 +62,11 @@ export const getPageCountAndBlueprintsByPage = async (page: number) => {
 
   try {
     const blueprints = await db.select().from(Blueprint)
-      .orderBy(desc(Blueprint.createdAt))
+      .orderBy(desc(Blueprint.id))
       .limit(blueprintsPerPage)
       .offset(offset)
 
-    const totalBlueprints = (await db.select({ value: count() }).from(Blueprint))[0].value
-
-    const pageCount = Math.ceil(totalBlueprints / blueprintsPerPage)
+    const pageCount = await getPageCount()
 
     return { pageCount, blueprints }
   } catch (error) {
@@ -74,3 +74,16 @@ export const getPageCountAndBlueprintsByPage = async (page: number) => {
     throw new Error('Failed to get the blueprints.')
   }
 }
+
+export const getPageCount = cache(async () => {
+  try {
+    const totalBlueprints = (await db.select({ value: count() }).from(Blueprint))[0].value
+
+    const pageCount = Math.ceil(totalBlueprints / blueprintsPerPage)
+
+    return pageCount
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to get the page count.')
+  }
+})

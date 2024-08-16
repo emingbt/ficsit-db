@@ -2,14 +2,11 @@ import Link from "next/link"
 import Image from "next/image"
 import StarIcon from "../assets/starIcon.svg"
 
-type Card = {
-  title: string
-  images: string[]
-}
+import type { Blueprint } from "../drizzle/schema"
 
-export default function BlueprintCard({ blueprint }: { blueprint: Card }) {
+export default function BlueprintCard({ blueprint }: { blueprint: Blueprint }) {
   return (
-    <Link href={`/blueprints/${blueprint.title}`}>
+    <Link href={`/blueprints/${blueprint.id}`}>
       <div className="flex flex-col items-center justify-center bg-dark-bg lg:hover:bg-main-bg cursor-pointer">
         <div className='w-full h-20 sm:h-40 relative'>
           <Image
