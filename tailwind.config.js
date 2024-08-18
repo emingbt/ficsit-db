@@ -46,7 +46,10 @@ module.exports = {
       },
       fontSize: {
         'logo': 'clamp(1.25rem, 2vw, 2rem)'
-      }
+      },
+      backgroundImage: {
+        foo: 'repeating-linear-gradient(-60deg, #052338 0 20px, #031726 20px 40px)',
+      },
     },
   },
   safelist: [
