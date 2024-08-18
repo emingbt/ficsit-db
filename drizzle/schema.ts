@@ -5,6 +5,8 @@ import {
   timestamp,
   index,
   uniqueIndex,
+  integer,
+  real
 } from 'drizzle-orm/pg-core'
 import { InferInsertModel } from 'drizzle-orm'
 import { avatarEnum, categoryEnum, colorEnum, roleEnum } from './enums'
@@ -39,6 +41,7 @@ export const Blueprint = pgTable('Blueprint', {
   files: text('files').array().notNull(),
   categories: categoryEnum('category').array().notNull(),
   pioneerName: text('pioneer_name').references(() => Pioneer.name).notNull(),
+  averageRating: real('average_rating').default(0).notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull()
 }, (blueprint) => {
@@ -47,6 +50,19 @@ export const Blueprint = pgTable('Blueprint', {
   }
 })
 
+export const BlueprintRating = pgTable('BlueprintRating', {
+  id: serial('id').primaryKey(),
+  blueprintId: serial('blueprint_id').references(() => Blueprint.id).notNull(),
+  pioneerName: text('pioneer_name').references(() => Pioneer.name).notNull(),
+  rating: integer('rating').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull()
+}, (blueprintRating) => {
+  return {
+    blueprintIdPioneerNameIdx: uniqueIndex('blueprintId_pioneerName_idx').on(blueprintRating.blueprintId, blueprintRating.pioneerName)
+  }
+})
+
 export type Pioneer = InferInsertModel<typeof Pioneer>
 export type ApiAccessToken = InferInsertModel<typeof ApiAccessToken>
 export type Blueprint = InferInsertModel<typeof Blueprint>
+export type BlueprintRating = InferInsertModel<typeof BlueprintRating>
