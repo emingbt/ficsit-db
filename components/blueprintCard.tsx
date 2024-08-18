@@ -7,22 +7,26 @@ import type { Blueprint } from "../drizzle/schema"
 export default function BlueprintCard({ blueprint }: { blueprint: Blueprint }) {
   return (
     <Link href={`/blueprints/${blueprint.id}`}>
-      <div className="flex flex-col items-center justify-center bg-dark-bg lg:hover:bg-main-bg cursor-pointer">
-        <div className='w-full h-20 sm:h-40 relative'>
-          <Image
-            src={blueprint.images[0]}
-            fill
-            sizes='100%'
-            alt={blueprint.title}
-            style={{ objectFit: 'cover' }}
-            unoptimized
-          />
+      <div className="flex flex-col items-center justify-center bg-main-bg lg:hover:bg-dark-bg cursor-pointer">
+        <div className="w-full aspect-video p-1 sm:p-2">
+          <div className='w-full h-full relative'>
+            <Image
+              src={blueprint.images[0]}
+              fill
+              sizes='100%'
+              alt={blueprint.title}
+              style={{ objectFit: 'cover' }}
+              unoptimized
+            />
+          </div>
         </div>
         <div className='w-full flex flex-col p-2 sm:p-4'>
-          <div className="w-full h-14 sm:h-20 mb-4 font-medium text-xl">
-            <p className='text-sm sm:text-lg text-center font-medium'>{blueprint.title}</p>
+          <div className="w-full h-10 sm:h-12 flex items-center justify-center mb-4 font-medium text-xl overflow-hidden">
+            <p className="text-sm sm:text-lg text-center font-medium line-clamp-2">
+              {blueprint.title}
+            </p>
           </div>
-          <div className="w-full h-3 flex flex-row justify-center items-center gap-1">
+          <div className="w-full h-3 flex flex-row justify-center items-center gap-1 mb-1">
             {
               Array.from({ length: 5 }).map((_, index) => (
                 <StarIcon
@@ -34,7 +38,7 @@ export default function BlueprintCard({ blueprint }: { blueprint: Blueprint }) {
             }
           </div>
         </div>
-        <div className='w-full h-1 sm:h-2 bg-logo-blue' />
+        <div className='w-full h-1 sm:h-1 bg-logo-blue' />
       </div>
     </Link>
   )
