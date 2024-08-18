@@ -62,6 +62,8 @@ module.exports = {
     'bg-avatar-orange',
     'bg-avatar-red'
   ],
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
 
