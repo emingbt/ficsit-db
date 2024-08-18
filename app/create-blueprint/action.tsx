@@ -6,6 +6,7 @@ import { CrateBlueprintFormSchema } from "../../utils/zod"
 import { getPioneerByEmail } from "../../services/auth"
 import { redirect } from "next/navigation"
 import { createNewBlueprint, getAllBlueprintsByPioneer } from "../../services/blueprint"
+import { revalidatePath } from "next/cache"
 
 export default async function createBlueprint(state, formData: FormData) {
   // 1. Validate form data
@@ -96,6 +97,8 @@ export default async function createBlueprint(state, formData: FormData) {
         }
       }
     }
+
+    revalidatePath('/blueprints')
 
     return {
       success: {
