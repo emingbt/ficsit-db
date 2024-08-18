@@ -2,8 +2,8 @@ import 'server-only'
 
 import { cache } from 'react'
 import db from '../utils/postgres'
-import { count, desc, eq } from 'drizzle-orm'
-import { Blueprint } from '../drizzle/schema'
+import { count, desc, eq, avg, and } from 'drizzle-orm'
+import { Blueprint, BlueprintRating, Pioneer } from '../drizzle/schema'
 
 const blueprintsPerPage = 30
 
@@ -128,3 +128,70 @@ export const getPageCount = cache(async () => {
     throw new Error('Failed to get the page count.')
   }
 })
+
+export const getBlueprintRating = async (blueprintId: number, pioneerName: string) => {
+  try {
+    const blueprintRating = (await db.select().from(BlueprintRating)
+      .where(and(
+        eq(BlueprintRating.blueprintId, blueprintId),
+        eq(BlueprintRating.pioneerName, pioneerName)
+      )))[0]
+
+    return blueprintRating
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to get the blueprint rating.')
+  }
+}
+
+export const createOrUpdateBlueprintRating = async (blueprintId: number, pioneerName: string, rating: number) => {
+  if (rating < 1 || rating > 5 || rating % 1 !== 0) {
+    throw new Error('Rating must be a whole number between 1 and 5.')
+  }
+
+  try {
+    // Check if the pioneer has already rated the blueprint
+    const existingRating = await getBlueprintRating(blueprintId, pioneerName)
+
+    if (existingRating) {
+      // Update the existing rating
+      await db.update(BlueprintRating)
+        .set({
+          rating,
+          createdAt: new Date()
+        })
+        .where(eq(BlueprintRating.id, existingRating.id))
+    } else {
+      // Create a new rating
+      await db.insert(BlueprintRating)
+        .values({
+          blueprintId,
+          pioneerName,
+          rating
+        })
+    }
+
+    // Update the average rating of the blueprint
+    const averageRatingValue = (await db.select({
+      value: avg(BlueprintRating.rating)
+    }).from(BlueprintRating)
+      .where(eq(BlueprintRating.blueprintId, blueprintId)))[0].value
+
+    if (!averageRatingValue) {
+      throw new Error('Failed to calculate the average rating.')
+    }
+
+    const averageRating = parseFloat(averageRatingValue)
+
+    await db.update(Blueprint)
+      .set({
+        averageRating
+      })
+      .where(eq(Blueprint.id, blueprintId))
+
+    return averageRating
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to rate the blueprint.')
+  }
+}
