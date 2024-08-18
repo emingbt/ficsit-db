@@ -23,11 +23,15 @@ export default function BlueprintCard({ blueprint }: { blueprint: Blueprint }) {
             <p className='text-sm sm:text-lg text-center font-medium'>{blueprint.title}</p>
           </div>
           <div className="w-full h-3 flex flex-row justify-center items-center gap-1">
-            <StarIcon className="w-3 sm:w-5 h-3 sm:h-5" />
-            <StarIcon className="w-3 sm:w-5 h-3 sm:h-5" />
-            <StarIcon className="w-3 sm:w-5 h-3 sm:h-5" />
-            <StarIcon className="w-3 sm:w-5 h-3 sm:h-5" />
-            <StarIcon className="w-3 sm:w-5 h-3 sm:h-5" />
+            {
+              Array.from({ length: 5 }).map((_, index) => (
+                <StarIcon
+                  key={index}
+                  //@ts-ignore
+                  className={`w-4 h-4 text-logo-blue ${index < blueprint.averageRating ? 'fill-main-orange' : 'fill-light-bg'}`}
+                />
+              ))
+            }
           </div>
         </div>
         <div className='w-full h-1 sm:h-2 bg-logo-blue' />
