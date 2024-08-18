@@ -18,11 +18,33 @@ export const getBlueprintById = async (id: number) => {
         files: true,
         categories: true,
         pioneerName: true,
-        createdAt: true
+        averageRating: true,
+        createdAt: true,
+        updatedAt: true
       }
     })
 
-    return blueprint
+    if (!blueprint) {
+      throw new Error('Blueprint not found.')
+    }
+
+    const pioneerAvatar = await db.query.Pioneer.findFirst({
+      where: eq(Pioneer.name, blueprint.pioneerName),
+      columns: {
+        avatar: true,
+        color: true
+      }
+    })
+
+    if (!pioneerAvatar) {
+      throw new Error('Designer of Blueprint not found.')
+    }
+
+    return {
+      ...blueprint,
+      pioneerAvatar: pioneerAvatar.avatar,
+      pioneerAvatarColor: pioneerAvatar.color
+    }
   } catch (error) {
     console.log(error)
     throw new Error('Failed to get the blueprint.')
