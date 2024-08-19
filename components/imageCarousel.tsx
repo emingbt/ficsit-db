@@ -50,15 +50,17 @@ export default function ImageCarousel({ images, title }: { images: string[], tit
         </button>
       </div>
       <div className="absolute bottom-0 left-0 w-full h-10 flex items-center justify-center">
-        {
-          images.map((image, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentImage(index)}
-              className={`w-2 h-2 mx-1 rounded-full ${currentImage === index ? 'bg-white' : 'bg-black'}`}
-            />
-          ))
-        }
+        <div className="flex items-center justify-center p-1 sm:p-2 rounded-full bg-light-bg">
+          {
+            images.map((image, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImage(index)}
+                className={`w-2 h-2 mx-1 rounded-full ${currentImage === index ? 'bg-white' : 'bg-black'}`}
+              />
+            ))
+          }
+        </div>
       </div>
     </div>
   )
