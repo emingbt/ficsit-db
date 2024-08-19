@@ -2,9 +2,14 @@ import Link from "next/link"
 import Image from "next/image"
 import StarIcon from "../assets/starIcon.svg"
 
-import type { Blueprint } from "../drizzle/schema"
+type Card = {
+  id: number
+  title: string
+  images: string[]
+  averageRating: number
+}
 
-export default function BlueprintCard({ blueprint }: { blueprint: Blueprint }) {
+export default function BlueprintCard({ blueprint }: { blueprint: Card }) {
   return (
     <Link href={`/blueprints/${blueprint.id}`}>
       <div className="flex flex-col items-center justify-center bg-main-bg lg:hover:bg-dark-bg cursor-pointer">
@@ -21,12 +26,12 @@ export default function BlueprintCard({ blueprint }: { blueprint: Blueprint }) {
           </div>
         </div>
         <div className='w-full flex flex-col p-2 sm:p-4'>
-          <div className="w-full h-10 sm:h-12 flex items-center justify-center mb-4 font-medium text-xl overflow-hidden">
+          <div className="w-full h-10 sm:h-12 flex items-center justify-center mb-2 sm:mb-4 font-medium text-xl overflow-hidden">
             <p className="text-sm sm:text-lg text-center font-medium line-clamp-2">
               {blueprint.title}
             </p>
           </div>
-          <div className="w-full h-3 flex flex-row justify-center items-center gap-1 mb-1">
+          <div className="w-full h-3 flex flex-row justify-center items-center gap-1 mb-2 sm:mb-1">
             {
               Array.from({ length: 5 }).map((_, index) => (
                 <StarIcon
@@ -38,7 +43,7 @@ export default function BlueprintCard({ blueprint }: { blueprint: Blueprint }) {
             }
           </div>
         </div>
-        <div className='w-full h-1 sm:h-1 bg-logo-blue' />
+        <div className='w-full h-1 bg-logo-blue' />
       </div>
     </Link>
   )
