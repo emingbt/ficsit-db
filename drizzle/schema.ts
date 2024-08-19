@@ -42,6 +42,7 @@ export const Blueprint = pgTable('Blueprint', {
   categories: categoryEnum('category').array().notNull(),
   pioneerName: text('pioneer_name').references(() => Pioneer.name).notNull(),
   averageRating: real('average_rating').default(0).notNull(),
+  downloads: integer('downloads').default(0).notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull()
 }, (blueprint) => {
