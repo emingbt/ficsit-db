@@ -56,10 +56,10 @@ export const getAllBlueprintsByPioneer = async (pioneerName: string) => {
     const blueprints = await db.query.Blueprint.findMany({
       where: eq(Blueprint.pioneerName, pioneerName),
       columns: {
+        id: true,
         title: true,
         images: true,
-        categories: true,
-        createdAt: true
+        averageRating: true
       }
     })
 
