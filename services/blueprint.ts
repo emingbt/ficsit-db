@@ -2,10 +2,15 @@ import 'server-only'
 
 import { cache } from 'react'
 import db from '../utils/postgres'
-import { count, desc, eq, avg, and } from 'drizzle-orm'
+import { count, desc, eq, avg, and, sql, AnyColumn } from 'drizzle-orm'
 import { Blueprint, BlueprintRating, Pioneer } from '../drizzle/schema'
 
 const blueprintsPerPage = 30
+
+const increment = (column: AnyColumn, value = 1) => {
+  return sql`${column} + ${value}`
+}
+
 
 export const getBlueprintById = async (id: number) => {
   try {
@@ -18,6 +23,7 @@ export const getBlueprintById = async (id: number) => {
         files: true,
         categories: true,
         pioneerName: true,
+        downloads: true,
         averageRating: true,
         createdAt: true,
         updatedAt: true
@@ -113,6 +119,19 @@ export const getPageCountAndBlueprintsByPage = async (page: number) => {
   } catch (error) {
     console.log(error)
     throw new Error('Failed to get the blueprints.')
+  }
+}
+
+export const incrementBlueprintDownloads = async (blueprintId: number) => {
+  try {
+    await db.update(Blueprint)
+      .set({
+        downloads: increment(Blueprint.downloads)
+      })
+      .where(eq(Blueprint.id, blueprintId))
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to increase the blueprint downloads.')
   }
 }
 
