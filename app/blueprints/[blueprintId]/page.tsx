@@ -1,10 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
-import StarIcon from "../../../assets/starIcon.svg"
-import DownloadIcon from "../../../assets/downloadIcon.svg"
-import { getBlueprintById } from "../../../services/blueprint"
-import ImageCarousel from "../../../components/imageCarousel"
 import RateBlueprint from "./rateBlueprint"
+import DownloadSection from "./downloadSection"
+import ImageCarousel from "../../../components/imageCarousel"
+import { getBlueprintById } from "../../../services/blueprint"
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
   const blueprintId = parseInt(params.blueprintId)
@@ -92,28 +91,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
               Ad
             </div>
           }
-          <div className="w-full lg:w-80 xl:w-[570px] h-36 sm:h-32 lg:h-full flex relative lg:flex-col xl:flex-row items-center justify-evenly pb-6 sm:pb-0 lg:pb-8 xl:p-0 bg-foo">
-            <div className="w-36 lg:w-48 h-16 bg-light-bg rounded">
-              <Link
-                href={blueprint.files[0]}
-                className="w-full h-full flex items-center justify-center text-sm lg:text-base lg:font-medium text-white hover:text-logo-blue hover:bg-main-bg"
-              >
-                Download SBP
-              </Link>
-            </div>
-            <div className="w-36 lg:w-48 h-16 bg-light-bg rounded">
-              <Link
-                href={blueprint.files[1]}
-                className="w-full h-full flex items-center justify-center text-sm lg:text-base lg:font-medium text-white hover:text-logo-blue hover:bg-main-bg"
-              >
-                Download SBPCFG
-              </Link>
-            </div>
-            <div className="flex flex-row gap-1 absolute bottom-4">
-              <DownloadIcon className="w-6 h-6 stroke-logo-blue" />
-              <p className="text-logo-blue font-medium">254</p>
-            </div>
-          </div>
+          <DownloadSection id={blueprintId} files={blueprint.files} downloads={blueprint.downloads} />
         </div>
         <div className="w-full h-[50px] lg:h-24 flex items-center justify-center bg-black">
           Ad
