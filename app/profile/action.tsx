@@ -1,5 +1,6 @@
 'use server'
 
+import { revalidatePath } from "next/cache"
 import { UpdateAvatarFormSchema } from "../../utils/zod"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPioneerByEmail, updatePioneerAvatar } from "../../services/auth"
@@ -63,6 +64,8 @@ export async function updateAvatar(state, formData: FormData) {
     })
 
     await refreshTokens()
+
+    revalidatePath('/pioneers/[pioneerName]', 'page')
 
     return {
       success: {
