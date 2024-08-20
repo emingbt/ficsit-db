@@ -117,5 +117,5 @@ export const CrateBlueprintFormSchema = object({
     }),
   categories: array(CategoriesEnum)
     .min(1, { message: 'At least one category has to selected.' })
-    .max(5, { message: 'At most 5 categories can be selected.' })
+    .max(3, { message: 'At most 3 categories can be selected.' })
 })
