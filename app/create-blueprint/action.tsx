@@ -2,7 +2,7 @@
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { uploadFilesToCloudinary, uploadImagesToCloudinary } from "../../services/cloudinary"
-import { CrateBlueprintFormSchema } from "../../utils/zod"
+import { CreateBlueprintFormSchema } from "../../utils/zod"
 import { getPioneerByEmail } from "../../services/auth"
 import { redirect } from "next/navigation"
 import { createNewBlueprint, getAllBlueprintsByPioneer } from "../../services/blueprint"
@@ -10,7 +10,7 @@ import { revalidatePath } from "next/cache"
 
 export default async function createBlueprint(state, formData: FormData) {
   // 1. Validate form data
-  const validationResults = CrateBlueprintFormSchema.safeParse({
+  const validationResults = CreateBlueprintFormSchema.safeParse({
     title: formData.get('title'),
     description: formData.get('description'),
     images: formData.getAll('images'),
