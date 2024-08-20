@@ -11,7 +11,7 @@ type Card = {
 
 export default function BlueprintCard({ blueprint, isEdit }: { blueprint: Card, isEdit?: boolean }) {
   return (
-    <Link href={`/${isEdit ? "edit-blueprints" : "blueprints"}/${blueprint.id}`}>
+    <Link href={`/${isEdit ? "edit-blueprint" : "blueprints"}/${blueprint.id}`}>
       <div className="flex flex-col items-center justify-center bg-main-bg lg:hover:bg-dark-bg cursor-pointer">
         <div className="w-full aspect-video p-1 sm:p-2">
           <div className='w-full h-full relative'>
