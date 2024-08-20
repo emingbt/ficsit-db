@@ -25,13 +25,20 @@ export async function uploadImagesToCloudinary(images: File[], pioneerName: stri
           format: 'auto',
           width: 1920,
           height: 1080,
+          crop: "fill"
         }
       }, (error, result) => {
         if (error) {
           console.error(error)
           reject(new Error('Failed to upload the image.'))
-        } else if (result?.secure_url) {
-          resolve(result.secure_url) // Ensure it's not undefined
+        } else if (result?.public_id) {
+          // Generate URL with automatic quality and format
+          const secureUrl = cloudinary.v2.url(result.public_id, {
+            transformation: [
+              { quality: "auto:eco", fetch_format: "auto" },
+            ]
+          })
+          resolve(secureUrl)
         } else {
           reject(new Error('Failed to retrieve the image URL.'))
         }
@@ -51,11 +58,14 @@ export async function uploadFilesToCloudinary(files: File[], pioneerName: string
     const arrayBuffer = await file.arrayBuffer()
     const buffer = new Uint8Array(arrayBuffer)
 
+    // Get the file extension
+    const fileExtension = file.name.split('.').pop()
+
     return new Promise<string>((resolve, reject) => {
       const uploadStream = cloudinary.v2.uploader.upload_stream({
         tags: 'blueprint_file',
         resource_type: 'raw',
-        public_id: `${blueprintTitle}-${index}`,
+        public_id: `${blueprintTitle}-${index}.${fileExtension}`, // Add the extension to the public_id
         folder: `blueprints/${pioneerName}/${blueprintTitle}`,
         overwrite: false
       }, (error, result) => {
@@ -63,7 +73,7 @@ export async function uploadFilesToCloudinary(files: File[], pioneerName: string
           console.error(error)
           reject(new Error('Failed to upload the file.'))
         } else if (result?.secure_url) {
-          resolve(result.secure_url) // Ensure it's not undefined
+          resolve(result.secure_url)
         } else {
           reject(new Error('Failed to retrieve the file URL.'))
         }
