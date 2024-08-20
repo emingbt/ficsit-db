@@ -31,7 +31,7 @@ export default async function ProfilePage() {
 
   return (
     <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">
-      <div className="w-full h-full lg:h-base xl:h-base-lg flex flex-col lg:flex-row items-center justify-center gap-[10px] lg:gap-5 bg-dark-bg mb-[10px] lg:mb-4">
+      <div className="w-full h-full lg:h-base xl:h-base-lg flex flex-col lg:flex-row items-center justify-center gap-[10px] lg:gap-4 bg-dark-bg mb-[10px] lg:mb-4">
         <ProfileSection pioneer={pioneer} />
         <AvatarSection pioneer={pioneer} />
       </div>
