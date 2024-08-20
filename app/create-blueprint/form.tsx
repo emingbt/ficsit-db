@@ -17,7 +17,7 @@ export default function CreateBlueprintForm() {
   const categoryError = state?.error?.categories
   const submitError = state?.error?.submit
   const submitSuccess = state?.success?.submit
-  const blueprintTitle = state?.success?.data
+  const blueprintId = state?.success?.data
 
   return (
     <form action={action}>
@@ -117,7 +117,7 @@ export default function CreateBlueprintForm() {
         </div>
       }
       <CategoryInput error={categoryError} />
-      <SubmitButton success={submitSuccess} blueprintTitle={blueprintTitle} />
+      <SubmitButton success={submitSuccess} blueprintId={blueprintId} />
       {submitError && <p className='text-red-500'>{submitError}</p>}
       {submitSuccess && <p className='text-green-500'>{submitSuccess}</p>}
     </form>
@@ -125,7 +125,7 @@ export default function CreateBlueprintForm() {
 }
 
 
-function SubmitButton({ success, blueprintTitle }: { success: boolean, blueprintTitle: string }) {
+function SubmitButton({ success, blueprintId }: { success: boolean, blueprintId: string }) {
   const { pending } = useFormStatus()
 
   return (
@@ -133,7 +133,7 @@ function SubmitButton({ success, blueprintTitle }: { success: boolean, blueprint
       <div className="w-full h-10 bg-logo-blue cursor-pointer">
         <Link
           className="w-full h-full flex justify-center items-center text-lg font-semibold"
-          href={`/blueprints/${blueprintTitle}`}
+          href={`/blueprints/${blueprintId}`}
         >
           Go to Blueprint
         </Link>

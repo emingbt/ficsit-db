@@ -102,7 +102,7 @@ export default async function createBlueprint(state, formData: FormData) {
 
     return {
       success: {
-        data: newBlueprint.title,
+        data: newBlueprint.id,
         submit: 'Blueprint created successfully.'
       }
     }

@@ -81,6 +81,7 @@ export const createNewBlueprint = async (blueprint: Blueprint) => {
     const newBlueprint = await db.insert(Blueprint)
       .values(blueprint)
       .returning({
+        id: Blueprint.id,
         title: Blueprint.title,
         description: Blueprint.description,
         images: Blueprint.images,
