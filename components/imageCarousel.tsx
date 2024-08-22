@@ -35,7 +35,7 @@ export default function ImageCarousel({ images, title }: { images: string[], tit
           priority
         />
       </div>
-      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-between p-3">
+      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-between lg:opacity-0 lg:hover:opacity-100 duration-200 transition-opacity p-3">
         <button
           onClick={prevImage}
           className="w-10 h-10 bg-black hover:bg-main-gray hover:bg-opacity-40 bg-opacity-50 flex items-center justify-center rounded-full text-white font-bold select-none"
