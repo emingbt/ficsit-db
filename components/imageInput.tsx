@@ -32,8 +32,8 @@ export default function ImageInput({ imageError }: { imageError: string }) {
                 className='w-full h-full object-cover bg-light-bg'
               /> :
               <div className="w-full h-full flex flex-col items-center justify-center">
-                <ImageIcon className="w-8 h-8 text-gray-300" />
-                <p className="text-gray-300 text-center">Upload thumbnail</p>
+                <ImageIcon className="w-8 h-8" />
+                <p className="text-gray-400 text-center">Upload thumbnail</p>
               </div>
             }
           </div>
@@ -56,8 +56,8 @@ export default function ImageInput({ imageError }: { imageError: string }) {
                 className='w-full h-full object-cover bg-light-bg'
               /> :
               <div className="w-full h-full flex flex-col items-center justify-center">
-                <ImageIcon className="w-8 h-8 text-gray-300" />
-                <p className="text-gray-300 text-center">Upload an image</p>
+                <ImageIcon className="w-8 h-8" />
+                <p className="text-gray-400 text-center">Upload an image</p>
               </div>
             }
           </div>
@@ -80,8 +80,8 @@ export default function ImageInput({ imageError }: { imageError: string }) {
                 className='w-full h-full object-cover bg-light-bg'
               /> :
               <div className="w-full h-full flex flex-col items-center justify-center">
-                <ImageIcon className="w-8 h-8 text-gray-300" />
-                <p className="text-gray-300 text-center">Upload an image</p>
+                <ImageIcon className="w-8 h-8" />
+                <p className="text-gray-400 text-center">Upload an image</p>
               </div>
             }
           </div>
