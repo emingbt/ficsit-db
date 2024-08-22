@@ -1,15 +1,14 @@
 'use client'
 
-import { useState } from "react"
+import Link from "next/link"
 import { useFormState, useFormStatus } from "react-dom"
 import createBlueprint from "./action"
 import CategoryInput from "../../components/categoryInput"
-import Link from "next/link"
 import ImageInput from "../../components/imageInput"
+import FileInput from "../../components/fileInput"
 
 export default function CreateBlueprintForm() {
   const [state, action] = useFormState(createBlueprint, undefined)
-  const [images, setImages] = useState<File[]>([])
 
   const titleError = state?.error?.title
   const descriptionError = state?.error?.description
@@ -36,7 +35,7 @@ export default function CreateBlueprintForm() {
       {
         titleError &&
         <div className="w-full text-xs lg:text-base text-error mb-4">
-          <p>Name must:</p>
+          <p>Title must:</p>
           <ul>
             {titleError.map((error) => (
               <li key={error}>- {error}</li>
@@ -61,26 +60,7 @@ export default function CreateBlueprintForm() {
         </div>
       }
       <ImageInput imageError={imageError} />
-      <label htmlFor="files">Blueprint files</label>
-      <input
-        id="files"
-        type="file"
-        name="files"
-        accept=".sbp, .sbpcfg"
-        multiple
-        max="5"
-        className={
-          `w-full h-8 lg:h-10 p-2 ${!fileError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
-          rounded-none outline-none focus:border-b-2 border-${!fileError ? 'main-orange' : 'error'}
-          ${fileError && 'border-b-2 border-error'}`
-        }
-      />
-      {
-        fileError &&
-        <div className='w-full text-xs lg:text-base text-error'>
-          <p>{fileError}</p>
-        </div>
-      }
+      <FileInput fileError={fileError} />
       <CategoryInput error={categoryError} />
       <SubmitButton success={submitSuccess} blueprintId={blueprintId} />
       {submitError && <p className='text-red-500'>{submitError}</p>}
