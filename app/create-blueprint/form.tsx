@@ -5,6 +5,7 @@ import { useFormState, useFormStatus } from "react-dom"
 import createBlueprint from "./action"
 import CategoryInput from "./categoryInput"
 import Link from "next/link"
+import ImageInput from "../../components/imageInput"
 
 export default function CreateBlueprintForm() {
   const [state, action] = useFormState(createBlueprint, undefined)
@@ -59,43 +60,7 @@ export default function CreateBlueprintForm() {
           <p>{descriptionError}</p>
         </div>
       }
-      <label htmlFor="images">Images</label>
-      <input
-        id="images"
-        type="file"
-        name="images"
-        accept="image/jpeg, image/jpg, image/png, image/webp"
-        multiple
-        max="5"
-        className={
-          `w-full h-8 lg:h-10 p-2 ${!imageError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
-          rounded-none outline-none focus:border-b-2 border-${!imageError ? 'main-orange' : 'error'}
-          ${imageError && 'border-b-2 border-error'}`
-        }
-        // add images to state
-        onChange={(event) => {
-          const files = event.target.files
-          if (files) {
-            setImages(Array.from(files))
-          }
-        }}
-      />
-      {
-        imageError &&
-        <div className='w-full text-xs lg:text-base text-error'>
-          <p>{imageError}</p>
-        </div>
-      }
-      <div className="w-full flex flex-wrap flex-row gap-4 mb-4 lg:mb-6">
-        {images?.map((image) => (
-          <img
-            key={image.name}
-            src={URL.createObjectURL(image)}
-            alt={image.name}
-            className='w-32 h-20 object-cover bg-light-bg'
-          />
-        ))}
-      </div>
+      <ImageInput imageError={imageError} />
       <label htmlFor="files">Blueprint files</label>
       <input
         id="files"
