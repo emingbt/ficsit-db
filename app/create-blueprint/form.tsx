@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useFormState, useFormStatus } from "react-dom"
 import createBlueprint from "./action"
-import CategoryInput from "./categoryInput"
+import CategoryInput from "../../components/categoryInput"
 import Link from "next/link"
 import ImageInput from "../../components/imageInput"
 
