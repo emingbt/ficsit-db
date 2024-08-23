@@ -88,6 +88,7 @@ export default async function createBlueprint(state, formData: FormData) {
       images: imageUrls,
       files: fileUrls,
       categories,
+      fileSize: files[0].size,
       pioneerName: pioneer.name
     }
 
