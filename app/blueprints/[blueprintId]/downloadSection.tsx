@@ -4,9 +4,10 @@ import Link from "next/link"
 import { useState } from "react"
 import { incrementDownloads } from "./action"
 import DownloadIcon from "../../../assets/downloadIcon.svg"
+import StarIcon from "../../../assets/starIcon.svg"
 
 
-export default function DownloadSection({ id, files, downloads }: { id: number, files: string[], downloads: number }) {
+export default function DownloadSection({ id, files, downloads, averageRating }: { id: number, files: string[], downloads: number, averageRating: number }) {
   const [downloadCount, setDownloadCount] = useState(downloads)
 
   const handleDownload = () => {
@@ -36,6 +37,8 @@ export default function DownloadSection({ id, files, downloads }: { id: number, 
       <div className="flex flex-row gap-1 absolute bottom-4">
         <DownloadIcon className="w-6 h-6 stroke-logo-blue" />
         <p className="text-logo-blue font-medium">{downloadCount}</p>
+        <StarIcon className="w-5 h-5 fill-main-orange mt-0.5 ml-4" />
+        <p className="text-main-orange font-medium">{averageRating}</p>
       </div>
     </div>
   )
