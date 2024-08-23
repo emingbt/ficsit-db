@@ -30,7 +30,7 @@ export const getRating = async (blueprintId: number, pioneerName: string) => {
 export const checkIfRated = async (blueprintId: number, pioneerName: string) => {
   const blueprintRating = await getBlueprintRating(blueprintId, pioneerName)
 
-  return !!blueprintRating
+  return blueprintRating?.rating
 }
 
 export const incrementDownloads = async (blueprintId: number) => {

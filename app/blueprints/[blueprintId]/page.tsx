@@ -4,10 +4,16 @@ import RateBlueprint from "./rateBlueprint"
 import DownloadSection from "./downloadSection"
 import ImageCarousel from "../../../components/imageCarousel"
 import { getBlueprintById } from "../../../services/blueprint"
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
+import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
   const blueprintId = parseInt(params.blueprintId)
   const blueprint = await getBlueprintById(blueprintId)
+  const { getAccessToken } = getKindeServerSession()
+  const accessToken = await getAccessToken()
+
+  const user = getPropertiesFromAccessToken(accessToken)
 
   if (!blueprint) {
     return (
@@ -68,7 +74,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
                   <div className="w-[2px] h-full lg:w-full lg:h-[2px] bg-logo-blue" />
                   <p>Updated At {blueprint.updatedAt.getDate()}/{blueprint.updatedAt.getMonth()}/{blueprint.updatedAt.getFullYear()}</p>
                 </div>
-                <RateBlueprint averageRating={blueprint.averageRating} blueprintId={blueprintId} pioneerName={blueprint.pioneerName} />
+                <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} />
               </div>
               <div className="h-full w-[336px] hidden xl:flex items-center justify-center bg-black">
                 Ad
@@ -91,7 +97,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
               Ad
             </div>
           }
-          <DownloadSection id={blueprintId} files={blueprint.files} downloads={blueprint.downloads} />
+          <DownloadSection id={blueprintId} files={blueprint.files} downloads={blueprint.downloads} averageRating={blueprint.averageRating} />
         </div>
         <div className="w-full h-[50px] lg:h-24 flex items-center justify-center bg-black">
           Ad
