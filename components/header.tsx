@@ -50,7 +50,7 @@ export default function Header() {
         <Link href="/buildings?category=production" className='w-20 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Buildings</p>
         </Link>
-        {/* <Link href="/blueprints" className='w-20 ml-6 hover:text-main-orange'>
+        {/* <Link href="/blueprints" className='w-20 ml-6 hover:text-logo-blue'>
           <p className='user-select-none cursor-pointer h-full text-center'>Blueprints</p>
         </Link>
         <div className='w-0.5 h-12 bg-main-orange ml-8' />
