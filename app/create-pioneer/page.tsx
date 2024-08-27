@@ -13,7 +13,7 @@ export default function CreatePioneerPage() {
         <div className="hidden lg:flex lg:w-1/2 xl:w-full relative">
           <Image
             src="/images/Pioneer.jpg"
-            alt="signup-page"
+            alt="create-pioneer-page-banner"
             fill
             className="object-cover object-center w-full h-full"
             sizes='100%'

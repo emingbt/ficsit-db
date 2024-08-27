@@ -1,4 +1,4 @@
-import { enum as enum_, object, string } from "zod"
+import { array, any, enum as enum_, object, string } from "zod"
 
 export const LoginFormSchema = object({
   email: string().email({ message: 'Please enter a valid email.' }).trim(),
@@ -63,4 +63,70 @@ export const CreatePioneerFormSchema = object({
 export const UpdateAvatarFormSchema = object({
   avatar: AvatarEnum,
   color: ColorEnum,
+})
+
+// category checkboxes
+const CategoriesEnum = enum_([
+  'Architecture',
+  'Power',
+  'Transportation',
+  'Trains',
+  'Tracks',
+  'Roads',
+  'Hypertubes',
+  'Foundations',
+  'Compact',
+  'Belts',
+  'Load Balancer',
+  'Logistics',
+  'Signs',
+  'Decorations',
+  'Storage',
+  'Pipes',
+  'Supports'
+])
+
+export const CreateBlueprintFormSchema = object({
+  title: string()
+    .min(3, { message: 'Title must be at least 3 characters long.' })
+    .max(64, { message: 'Title must be at most 64 characters long.' })
+    // Can only include letters, numbers, -dashes, _underscores, () paranthesis, and spaces.
+    .regex(/^[a-zA-Z0-9_()-\s]*$/, {
+      message: 'Title can only include letters, numbers, -dashes, _underscores, ()paranthesis, and spaces.',
+    })
+    // Must contain at least one letter or number.
+    .regex(/^(?![-_]+$)/, {
+      message: 'Title must contain at least one letter or number.',
+    })
+    // Cannot have more than one consecutive space.
+    .regex(/^(?!.*\s{2}).*$/, {
+      message: 'Title cannot have more than one consecutive space.',
+    })
+    .trim(),
+  description: string().max(512, { message: 'Description must be at most 512 characters long.' }),
+  images: any()
+    .refine((images) => images?.length > 0, "At least 1 image is required.")
+    .refine((images) => images?.length <= 3, "At most 3 images are allowed.")
+    .refine((files) => files?.every((file: File) => file.size < 5000000), {
+      message: `File size must be less than 5MB.`,
+    }),
+  files: any()
+    .refine((files) => files?.length == 2, "Both .sbp and .sbpcfg files are required.")
+    .refine((files) => files?.every((file: File) => file.size < 5000000), {
+      message: `File size must be less than 5MB.`,
+    }),
+  categories: array(CategoriesEnum)
+    .min(1, { message: 'At least one category has to selected.' })
+    .max(3, { message: 'At most 3 categories can be selected.' })
+})
+
+export const UpdateBlueprintFormSchema = object({
+  id: string(),
+  description: string().max(512, { message: 'Description must be at most 512 characters long.' }),
+  images: any()
+    .refine((images) => images?.length > 0, "At least 1 image is required.")
+    .refine((images) => images?.length <= 3, "At most 3 images are allowed."),
+  categories: array(CategoriesEnum)
+    .min(1, { message: 'At least one category has to selected.' })
+    .max(3, { message: 'At most 3 categories can be selected.' })
 })
