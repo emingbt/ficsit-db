@@ -42,30 +42,18 @@ export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint 
       <ImageInput imageError={imageError} existingImageUrls={blueprint.images} />
       <CategoryInput error={categoryError} existingCategories={blueprint.categories} />
       <SubmitButton success={submitSuccess} blueprintId={blueprint.id} />
-      // Delete blueprint button
-      <button
-        type='button'
-        className='w-full h-10 bg-error hover:bg-error-hover text-white text-base'
-        onClick={() => {
-          if (confirm('Are you sure you want to delete this blueprint?')) {
-            deleteBlueprint(blueprint.id)
-          }
-        }}
-      >
-        Delete Blueprint
-      </button>
+      <DeleteButton blueprintId={blueprint.id} />
       {submitError && <p className='text-red-500'>{submitError}</p>}
       {submitSuccess && <p className='text-green-500'>{submitSuccess}</p>}
     </form>
   )
 }
 
-
 function SubmitButton({ success, blueprintId }: { success: boolean, blueprintId?: number }) {
   const { pending } = useFormStatus()
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col mb-4 lg:mg-6">
       {success ? (
         <div className="w-full h-10 bg-logo-blue cursor-pointer">
           <Link
@@ -90,5 +78,26 @@ function SubmitButton({ success, blueprintId }: { success: boolean, blueprintId?
         </button>
       )}
     </div>
+  )
+}
+
+function DeleteButton({ blueprintId }: { blueprintId?: number }) {
+  const [pending, setPending] = useState(false)
+
+  return (
+    <button
+      type='button'
+      className={`w-full h-10 ${pending ? 'bg-light-bg  text-red-500' : 'bg-red-600'} hover:bg-light-bg hover:text-red-500 text-white text-base`}
+      onClick={async () => {
+        if (confirm('Are you sure you want to delete this blueprint?')) {
+          if (blueprintId) {
+            setPending(true)
+            await deleteBlueprint(blueprintId)
+          }
+        }
+      }}
+    >
+      {pending ? 'Deleting Blueprint...' : 'Delete Blueprint'}
+    </button>
   )
 }
