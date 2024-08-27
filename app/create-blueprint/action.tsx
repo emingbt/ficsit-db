@@ -1,7 +1,7 @@
 'use server'
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import { uploadFilesToCloudinary, uploadImagesToCloudinary } from "../../services/cloudinary"
+import { uploadFilesToCloudinary, uploadImageToCloudinary } from "../../services/cloudinary"
 import { CreateBlueprintFormSchema } from "../../utils/zod"
 import { getPioneerByEmail } from "../../services/auth"
 import { redirect } from "next/navigation"
@@ -79,7 +79,10 @@ export default async function createBlueprint(state, formData: FormData) {
 
   // 5. Upload images and files to cloudinary, then create the blueprint
   try {
-    const imageUrls = await uploadImagesToCloudinary(images, pioneer.name, title)
+    const imageUrls = images.map(async (image: File, index: number) => {
+      const imageUrl = await uploadImageToCloudinary(image, index, pioneer.name, title)
+      return imageUrl
+    })
     const fileUrls = await uploadFilesToCloudinary(files, pioneer.name, title)
 
     const blueprint = {
