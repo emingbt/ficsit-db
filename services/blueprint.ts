@@ -17,6 +17,7 @@ export const getBlueprintById = async (id: number) => {
     const blueprint = await db.query.Blueprint.findFirst({
       where: eq(Blueprint.id, id),
       columns: {
+        id: true,
         title: true,
         description: true,
         images: true,
@@ -31,7 +32,7 @@ export const getBlueprintById = async (id: number) => {
     })
 
     if (!blueprint) {
-      throw new Error('Blueprint not found.')
+      return undefined
     }
 
     const pioneerAvatar = await db.query.Pioneer.findFirst({
@@ -95,6 +96,46 @@ export const createNewBlueprint = async (blueprint: Blueprint) => {
   } catch (error) {
     console.log(error)
     throw new Error('Failed to create the blueprint.')
+  }
+}
+
+export const updateBlueprintProperties = async (blueprintId: number, blueprint: {
+  description: Blueprint["description"],
+  images: Blueprint["images"],
+  categories: Blueprint["categories"]
+}) => {
+  try {
+    const updatedBlueprint = await db.update(Blueprint)
+      .set(blueprint)
+      .where(eq(Blueprint.id, blueprintId))
+      .returning({
+        id: Blueprint.id
+      })
+
+    return updatedBlueprint[0]
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to update the blueprint.')
+  }
+}
+
+export const deleteBlueprintById = async (blueprintId: number) => {
+  try {
+    // 1. Delete the blueprint ratings
+    await db.delete(BlueprintRating)
+      .where(eq(BlueprintRating.blueprintId, blueprintId))
+
+    // 2. Delete the blueprint
+    const deletedBlueprint = await db.delete(Blueprint)
+      .where(eq(Blueprint.id, blueprintId))
+      .returning({
+        id: Blueprint.id
+      })
+
+    return deletedBlueprint[0]
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to delete the blueprint.')
   }
 }
 
