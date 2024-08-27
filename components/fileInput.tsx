@@ -12,10 +12,8 @@ export default function FileInput({ fileError }: { fileError: string }) {
     if (inputFiles) {
       const file = inputFiles[0]
       let newFiles = [...files]
-      console.log("newFiles1", newFiles)
 
       newFiles[index] = file
-      console.log("newFiles2", newFiles)
       setFiles(newFiles)
     }
   }
