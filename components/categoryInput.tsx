@@ -2,8 +2,8 @@
 
 import { ReactNode, useState } from 'react'
 
-export default function CategoryInput({ error }: { error?: ReactNode }) {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
+export default function CategoryInput({ error, existingCategories }: { error?: ReactNode, existingCategories?: string[] }) {
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(existingCategories || [])
 
   const categories = [
     'Architecture',
