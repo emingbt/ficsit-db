@@ -13,7 +13,11 @@ export default async function createBlueprint(state, formData: FormData) {
   const validationResults = CreateBlueprintFormSchema.safeParse({
     title: formData.get('title'),
     description: formData.get('description'),
-    images: formData.getAll("images").filter(
+    images: [
+      formData.get('image-0'),
+      formData.get('image-1'),
+      formData.get('image-2')
+    ].filter(
       (file): file is File => file instanceof File && file.size > 0
     ),
     files: formData.getAll('files').filter(
