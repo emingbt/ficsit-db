@@ -19,6 +19,7 @@ export async function uploadImageToCloudinary(image: File, index: number, pionee
       public_id: `image-${index}`,
       folder: `blueprints/${pioneerName}/${blueprintTitle}`,
       overwrite: true,
+      invalidate: true,
       transformation: {
         quality: 'auto:eco',
         format: 'auto',
@@ -45,6 +46,15 @@ export async function uploadImageToCloudinary(image: File, index: number, pionee
 
     uploadStream.end(buffer)
   })
+}
+
+export async function uploadImagesToCloudinary(images: File[], pioneerName: string, blueprintTitle: string) {
+  const uploadPromises = images.map(async (image, index) => {
+    return uploadImageToCloudinary(image, index, pioneerName, blueprintTitle)
+  })
+
+  const imageUrls = await Promise.all(uploadPromises)
+  return imageUrls
 }
 
 export async function uploadFilesToCloudinary(files: File[], pioneerName: string, blueprintTitle: string) {
@@ -121,8 +131,16 @@ export async function deleteImage(pioneerName: string, blueprintTitle: string, i
 }
 
 export async function deleteFolder(pioneerName: string, blueprintTitle: string) {
+  // 1. Delete all images and files in the folder
+  await cloudinary.v2.api.delete_resources_by_prefix(`blueprints/${pioneerName}/${blueprintTitle}`)
+  await cloudinary.v2.api.delete_resources([
+    `blueprints/${pioneerName}/${blueprintTitle}/${blueprintTitle}-0.sbp`,
+    `blueprints/${pioneerName}/${blueprintTitle}/${blueprintTitle}-1.sbpcfg`
+  ], { resource_type: 'raw' })
+
+  // 2. Delete the folder
   return new Promise<void>((resolve, reject) => {
-    cloudinary.v2.api.delete_resources_by_prefix(`blueprints/${pioneerName}/${blueprintTitle}`, (error, result) => {
+    cloudinary.v2.api.delete_folder(`blueprints/${pioneerName}/${blueprintTitle}`, (error, result) => {
       if (error) {
         console.error(error)
         reject(new Error('Failed to delete the folder.'))

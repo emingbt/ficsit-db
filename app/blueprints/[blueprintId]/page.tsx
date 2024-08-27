@@ -10,9 +10,9 @@ import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
   const blueprintId = parseInt(params.blueprintId)
   const blueprint = await getBlueprintById(blueprintId)
+
   const { getAccessToken } = getKindeServerSession()
   const accessToken = await getAccessToken()
-
   const user = getPropertiesFromAccessToken(accessToken)
 
   if (!blueprint) {
