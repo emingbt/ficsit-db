@@ -11,6 +11,7 @@ export default function AvatarSection({ pioneer }: { pioneer: Pioneer }) {
   const [state, action] = useFormState(updateAvatar, pioneer)
   const [selectedAvatar, setSelectedAvatar] = useState(pioneer.avatar)
   const [selectedColor, setSelectedColor] = useState(pioneer.color)
+  const isChanged = selectedAvatar !== pioneer.avatar || selectedColor !== pioneer.color
 
   const submitError = state.error?.submit
   const submitSuccess = state.success?.submit
@@ -92,7 +93,7 @@ export default function AvatarSection({ pioneer }: { pioneer: Pioneer }) {
               </div>
             ))}
           </div>
-          <UpdateAvatarButton />
+          <UpdateAvatarButton isChanged={isChanged} />
           {submitError && <p className='text-red-500 text-sm'>{submitError}</p>}
           {submitSuccess && <p className='text-green-500 text-sm'>{submitSuccess}</p>}
         </form>
@@ -101,14 +102,14 @@ export default function AvatarSection({ pioneer }: { pioneer: Pioneer }) {
   )
 }
 
-export function UpdateAvatarButton() {
+export function UpdateAvatarButton({ isChanged }: { isChanged: boolean }) {
   const { pending } = useFormStatus()
 
   return (
     <button
       type='submit'
-      aria-disabled={pending}
-      disabled={pending}
+      aria-disabled={pending || !isChanged}
+      disabled={pending || !isChanged}
       className={`
         w-full h-10 lg:h-10 text-base
         ${pending ? 'bg-light-bg  text-light-orange' : 'bg-main-orange'}
