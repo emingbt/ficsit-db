@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import GoogleAdsense from '../utils/googleAdsense'
 import './global.css'
 
 import Header from '../components/header'
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: {
           gtag('config', 'G-JSTXP7VT57');
         `}
       </Script>
+      <GoogleAdsense />
       <body className='w-full h-full min-h-screen flex flex-col justify-between margin-0 padding-0 bg-dark-bg text-white'>
         <div className='w-full flex flex-col'>
           <Suspense fallback={<header className='w-full h-16 bg-dark-bg' />} >
