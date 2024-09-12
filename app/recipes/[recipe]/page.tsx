@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { getRecipe } from "../../../utils/gameDataFetcher"
 import RecipeSection from "./section"
 
@@ -21,6 +22,9 @@ export default async function RecipePage({ params }: {
         <span className="text-main-orange">Recipe:</span>
         <h1 className="text-white text-xl ml-2">{recipe.name}</h1>
       </div>
+      <Link href="/deprecated" className='w-full h-6 sm:h-8 flex items-center justify-center bg-error hover:bg-red-600 mb-2 lg:mb-3'>
+        <p className='text-white text-center text-xs sm:text-base'>Recipes are deprecated</p>
+      </Link>
       <RecipeSection recipe={recipe} />
     </main>
   )
