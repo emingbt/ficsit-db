@@ -11,13 +11,13 @@ export default function Deprecated() {
             Satisfactory 1.0 is released 🎉 and there are lots of new things.
           </p>
           <p>
-            But I'm still at the university and in the last year.
+            But I&apos;m still at the university and in the last year.
           </p>
           <p>
-            Right now, I'm working on my graduation project, so I don't have too much free time.
+            Right now, I&apos;m working on my graduation project, so I don&apos;t have too much free time.
           </p>
           <p>
-            I'll try to update the website as soon as possible.
+            I&apos;ll try to update the website as soon as possible.
           </p>
           <br />
           <p className="text-main-orange">Thank you for your understanding.</p>
