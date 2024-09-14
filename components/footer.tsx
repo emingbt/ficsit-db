@@ -15,7 +15,7 @@ export default function Footer() {
       <p className="w-full text-main-gray min-h-16 mb-6 text-xs">
         The assets comes from Satisfactory or from websites created and owned by Coffee Stain Studios, who hold the copyright of Satisfactory.
         <br />
-        All trademarks and registered trademarks present in the image are proprietary to Coffee Stain Studios.
+        All trademarks and registered trademarks present in the image are proprietary to Coffee Stain Studios. | <Link href="/privacy-policy" className='text-main-orange hover:text-light-orange hover:underline'>Privacy Policy</Link>
       </p>
     </footer>
   )
