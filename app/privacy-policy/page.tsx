@@ -7,9 +7,9 @@ export default function PrivacyPolicyPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
           <p>
-            Ficsit DB ("we", "our", "us") respects your privacy and is committed to protecting your personal data.
+            Ficsit DB (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) respects your privacy and is committed to protecting your personal data.
             This privacy policy explains how we collect, use, store, and protect your information when you visit our website,
-            https://www.ficsitdb.app ("Site").
+            https://www.ficsitdb.app (&quot;Site&quot;).
           </p>
         </section>
 
@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-2xl font-semibold mb-4">2. Data Collection</h2>
           <p>We collect the following types of personal information:</p>
           <ul className="list-disc ml-6 mb-4">
-            <li><strong>Email address</strong>: Collected during user registration via email or through the "Continue with Google" option for authentication.</li>
+            <li><strong>Email address</strong>: Collected during user registration via email or through the &quot;Continue with Google&quot; option for authentication.</li>
             <li><strong>Cookies and Tracking</strong>: We use cookies to enhance your experience and for analytical purposes. These may include functional and analytical cookies.</li>
           </ul>
           <p>We do not collect any sensitive personal information, nor do we target or collect information from users under 18.</p>
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
           <p>Our cookies may be either:</p>
           <ul className="list-disc ml-6 mb-4">
             <li><strong>Session cookies</strong>: Temporary cookies that track users during their visit to our website and are deleted when you close your browser.</li>
-            <li><strong>Persistent cookies</strong>: Cookies that allow us to "remember" you and your preferences, which remain on your device after you close your browser.</li>
+            <li><strong>Persistent cookies</strong>: Cookies that allow us to &quot;remember&quot; you and your preferences, which remain on your device after you close your browser.</li>
           </ul>
           <p>We use the following types of cookies:</p>
           <ul className="list-disc ml-6 mb-4">
@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
           <ul className="list-disc ml-6 mb-4">
             <li><strong>Right to Access</strong>: You can request access to your personal data and obtain a copy of the information we hold about you.</li>
             <li><strong>Right to Rectification</strong>: You can request corrections to any inaccurate or incomplete personal data.</li>
-            <li><strong>Right to Erasure ("Right to be Forgotten")</strong>: You can request that we delete your personal data when it is no longer necessary, or if you withdraw consent.</li>
+            <li><strong>Right to Erasure (&quot;Right to be Forgotten&quot;)</strong>: You can request that we delete your personal data when it is no longer necessary, or if you withdraw consent.</li>
             <li><strong>Right to Data Portability</strong>: You can receive your personal data in a structured, commonly used, and machine-readable format, and transmit it to another controller.</li>
             <li><strong>Right to Object</strong>: You can object to the processing of your personal data in certain situations, such as for direct marketing.</li>
             <li><strong>Right to Restrict Processing</strong>: You can request the restriction of processing of your personal data in certain circumstances.</li>
@@ -135,7 +135,7 @@ export default function PrivacyPolicyPage() {
 
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">11. Children's Privacy</h2>
+          <h2 className="text-2xl font-semibold mb-4">11. Children&apos;s Privacy</h2>
           <p>
             Our Site does not target children, and we do not knowingly collect data from users under 18. If you believe we have unintentionally collected such data, please contact us immediately.
           </p>
