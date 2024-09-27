@@ -30,6 +30,7 @@ export default function RootLayout({ children }: {
         `}
       </Script>
       <GoogleAdsense />
+      <meta name="google-adsense-account" content="ca-pub-1772997678438254"></meta>
       <body className='w-full h-full min-h-screen flex flex-col justify-between margin-0 padding-0 bg-dark-bg text-white'>
         <div className='w-full flex flex-col'>
           <Suspense fallback={<header className='w-full h-16 bg-dark-bg' />} >
