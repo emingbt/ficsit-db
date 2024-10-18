@@ -6,6 +6,7 @@ import ImageCarousel from "../../../components/imageCarousel"
 import { getBlueprintById } from "../../../services/blueprint"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
+import DesktopAd from "../../../components/desktopAd"
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
   const blueprintId = parseInt(params.blueprintId)
@@ -67,7 +68,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
             <div className="w-full h-[50px] md:h-[90px] bg-black flex lg:hidden items-center justify-center">
               Ad
             </div>
-            <div className="w-full h-72 flex flex-1 bg-light-bg">
+            <div className="w-full h-72 flex flex-1 flex-row bg-light-bg">
               <div className="w-full lg:h-full flex xl:flex-1 flex-col">
                 <div className="w-full h-16 lg:h-full flex lg:flex-1 lg:flex-col items-center justify-center gap-4 p-3 xl:px-8 text-sm lg:text-base font-semibold text-center">
                   <p>Created At {blueprint.createdAt.getDate()}/{blueprint.createdAt.getMonth()}/{blueprint.createdAt.getFullYear()}</p>
@@ -76,8 +77,8 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
                 </div>
                 <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} />
               </div>
-              <div className="h-full w-[336px] hidden xl:flex items-center justify-center bg-black">
-                Ad
+              <div className="h-full w-[336px] hidden xl:block bg-black">
+                <DesktopAd dataAdSlot="5085063532" />
               </div>
             </div>
           </div>
