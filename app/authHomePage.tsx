@@ -15,7 +15,7 @@ export default function AuthHomePage({ pioneer }: {
     <main className="w-full p-[10px] bg-dark-bg lg:p-4">
       <div className="w-full h-12 lg:h-24 flex items-center justify-between bg-main-bg mb-[10px] lg:mb-4">
         <h1 className="flex-1 text-xl lg:text-2xl text-center lg:text-start font-secondary pl-4 overflow-hidden">Hi {pioneer.name}!</h1>
-        <DesktopAd fullHeight bottom />
+        {/* <DesktopAd fullHeight bottom /> */}
       </div>
       <MobileAd />
       <div className="w-full sm:h-64 lg:h-96 flex flex-col sm:flex-row gap-[10px] lg:gap-4 mb-[10px] lg:mb-4">
@@ -42,7 +42,7 @@ export default function AuthHomePage({ pioneer }: {
         </section>
       </div>
       <MobileAd onlyPhone rectangle />
-      <DesktopAd fullWidth />
+      {/* <DesktopAd fullWidth /> */}
       <section className="w-full sm:h-32 lg:h-72 flex flex-col sm:flex-row gap-[10px] lg:gap-4 mb-[10px] lg:mb-4">
         {
           ["items", "buildings", "blueprints"].map((element, index) => {
@@ -66,7 +66,7 @@ export default function AuthHomePage({ pioneer }: {
         }
       </section>
       <MobileAd bottom rectangle />
-      <DesktopAd bottom fullWidth />
+      {/* <DesktopAd bottom fullWidth /> */}
     </main>
   )
 }
