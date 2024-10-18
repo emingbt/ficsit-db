@@ -27,7 +27,7 @@ export default function DesktopAd({
   return (
     <ins
       className="adsbygoogle"
-      style={{ display: "block", height: "100%" }}
+      style={{ display: "block" }}
       data-ad-client="ca-pub-1772997678438254"
       data-ad-slot={dataAdSlot}
       data-ad-format={dataAdFormat}
