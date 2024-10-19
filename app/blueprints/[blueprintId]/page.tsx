@@ -6,6 +6,7 @@ import ImageCarousel from "../../../components/imageCarousel"
 import { getBlueprintById } from "../../../services/blueprint"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
+import AdBanner from "../../../components/adBanner"
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
   const blueprintId = parseInt(params.blueprintId)
@@ -100,7 +101,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           <DownloadSection id={blueprintId} files={blueprint.files} downloads={blueprint.downloads} averageRating={blueprint.averageRating} />
         </div>
         <div className="w-full h-[50px] lg:h-24 flex items-center justify-center bg-black">
-          Ad
+          <AdBanner dataAdSlot="5085063532" />
         </div>
       </div>
     </main >

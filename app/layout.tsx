@@ -7,6 +7,7 @@ import './global.css'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import CookieConsent from '../components/cookieConsent'
 
 export const metadata: Metadata = {
   title: 'Ficsit DB',
@@ -18,17 +19,19 @@ export default function RootLayout({ children }: {
 }) {
   return (
     <html lang="en" className='font-main'>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57" />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+      <head>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-          gtag('config', 'G-JSTXP7VT57');
-        `}
-      </Script>
-      <GoogleAdsense />
+            gtag('config', 'G-JSTXP7VT57');
+          `}
+        </Script>
+        <GoogleAdsense />
+      </head>
       <body className='w-full h-full min-h-screen flex flex-col justify-between margin-0 padding-0 bg-dark-bg text-white'>
         <div className='w-full flex flex-col'>
           <Suspense fallback={<header className='w-full h-16 bg-dark-bg' />} >
@@ -39,6 +42,7 @@ export default function RootLayout({ children }: {
             <SpeedInsights />
           </div>
         </div>
+        <CookieConsent />
         <Footer />
       </body>
     </html>
