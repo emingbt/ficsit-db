@@ -7,6 +7,7 @@ import './global.css'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import CookieConsent from '../components/cookieConsent'
 
 export const metadata: Metadata = {
   title: 'Ficsit DB',
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: {
             <SpeedInsights />
           </div>
         </div>
+        <CookieConsent />
         <Footer />
       </body>
     </html>
