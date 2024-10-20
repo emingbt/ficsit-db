@@ -11,7 +11,7 @@ type AdBannerTypes = {
 const AdBanner = ({
   dataAdSlot,
   dataAdFormat = "auto",
-  dataFullWidthResponsive = true,
+  dataFullWidthResponsive = false,
 }: AdBannerTypes) => {
   useEffect(() => {
     try {
