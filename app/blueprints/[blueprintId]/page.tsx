@@ -66,7 +66,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
               }
             </div>
             <div className="w-full h-[50px] md:h-[90px] bg-black flex lg:hidden items-center justify-center">
-              Ad
+              <AdBanner dataAdSlot="8715388606" />
             </div>
             <div className="w-full h-72 flex flex-1 bg-light-bg">
               <div className="w-full lg:h-full flex xl:flex-1 flex-col">
@@ -78,7 +78,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
                 <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} />
               </div>
               <div className="h-full w-[336px] hidden xl:flex items-center justify-center bg-black">
-                Ad
+                <AdBanner dataAdSlot="4926949738" />
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
                 {blueprint.description}
               </div>
               <div className="w-full h-[50px] md:h-[90px] flex lg:hidden items-center justify-center bg-black">
-                Ad
+                <AdBanner dataAdSlot="8715388606" />
               </div>
             </> :
             // If there is no description, display a ad
