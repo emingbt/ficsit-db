@@ -26,24 +26,6 @@ export default async function EditBlueprintPage({ params }: { params: { blueprin
   }
 
   return (
-    // <main className='w-full min-h-base xl:min-h-base-lg p-[10px] lg:p-4 bg-dark-bg'>
-    //   <div className='w-full min-h-content lg:min-h-content-lg xl:min-h-content-xl flex flex-row bg-main-bg'>
-    //     <div className='w-full lg:w-1/2 flex flex-col lg:justify-center p-6 lg:p-16 font-secondary'>
-    //       <h1 className='text-2xl lg:text-4xl mb-4 lg:mb-1'>Edit blueprint</h1>
-    //       <EditBlueprintForm blueprint={blueprint} />
-    //     </div>
-    //     <div className="hidden w-1/2 lg:flex relative">
-    //       <Image
-    //         src="/images/edit-blueprint-banner.webp"
-    //         alt="blueprint-page"
-    //         fill
-    //         className="object-cover object-right w-full h-full"
-    //         sizes='100%'
-    //         priority
-    //       />
-    //     </div>
-    //   </div>
-    // </main>
     <Main classname="p-8" image='edit-blueprint-banner'>
       <h1 className='text-2xl lg:text-4xl mb-4 lg:mb-1'>Edit blueprint</h1>
       <div className='w-full h-[2px] bg-gray-600 mb-4' />
