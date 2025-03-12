@@ -7,7 +7,7 @@ export default function Recipes({ recipes, title = 'Recipes' }: { recipes: Produ
   if (!recipes || recipes.length == 0) return null
 
   return (
-    <section className={`w-full flex flex-col mt-4`}>
+    <section className={`w-full flex flex-col mt-2 lg:mt-4`}>
       <div className="w-full h-12 flex items-center px-4 bg-main-bg">
         <h1>{title} - ({recipes.length})</h1>
       </div>
