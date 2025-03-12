@@ -1,7 +1,7 @@
-import { getPageCountAndBlueprintsByPage } from "../../services/blueprint"
-import BlueprintCard from "../../components/blueprintCard"
-import Pagination from "../../components/pagination"
-import Main from "../../components/Main"
+import { getPageCountAndBlueprintsByPage } from "../../../services/blueprint"
+import BlueprintCard from "../../../components/blueprintCard"
+import Pagination from "../../../components/pagination"
+import Main from "../../../components/Main"
 
 export default async function BlueprintsPage({ searchParams }: { searchParams: { page: string } | undefined }) {
   const page = searchParams?.page ? parseInt(searchParams?.page) : 1
