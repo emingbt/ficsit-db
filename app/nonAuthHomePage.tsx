@@ -1,9 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
+import Main from "../components/Main"
 
 export default async function NonAuthHomePage() {
   return (
-    <main className="w-full p-[10px] bg-dark-bg lg:p-4">
+    <Main>
       <section className="w-full h-[34rem] lg:h-[calc(100vh-6.25rem)] xl:h-[calc(100vh-7rem)] flex flex-row items-center bg-main-bg">
         <div className="w-full lg:w-1/2 flex flex-col p-4 font-bold font-secondary md:p-16">
           <h1 className="text-4xl mb-2 lg:text-5xl">Hi Pioneer!</h1>
@@ -78,6 +79,6 @@ export default async function NonAuthHomePage() {
           </Link>
         </div> */}
       </section>
-    </main>
+    </Main>
   )
 }
