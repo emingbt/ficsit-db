@@ -5,6 +5,7 @@ import ProfileSection from "./profileSection"
 import AvatarSection from "./avatarSection"
 import BlueprintCard from "../../components/blueprintCard"
 import { getAllBlueprintsByPioneer } from "../../services/blueprint"
+import Main from "../../components/Main"
 
 export default async function ProfilePage() {
   const { getUser, isAuthenticated } = getKindeServerSession()
@@ -30,8 +31,8 @@ export default async function ProfilePage() {
   const blueprints = await getAllBlueprintsByPioneer(pioneer.name)
 
   return (
-    <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">
-      <div className="w-full h-full lg:h-base xl:h-base-lg flex flex-col lg:flex-row items-center justify-center gap-[10px] lg:gap-4 bg-dark-bg mb-[10px] lg:mb-4">
+    <Main classname="bg-dark-bg">
+      <div className="w-full flex flex-col lg:flex-row items-stretch gap-2 lg:gap-4 bg-dark-bg mb-2 lg:mb-4">
         <ProfileSection pioneer={pioneer} />
         <AvatarSection pioneer={pioneer} />
       </div>
@@ -41,7 +42,7 @@ export default async function ProfilePage() {
           <div className="w-full h-10 sm:h-12 flex items-center bg-main-bg pl-4">
             <h1 className="text-lg sm:text-xl font-medium">Edit your Blueprints</h1>
           </div>
-          <section className='w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 lg:gap-3 justify-center bg-light-bg p-2 lg:p-3 mb-[10px] lg:mb-4'>
+          <section className='w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 lg:gap-3 justify-center bg-light-bg p-2 lg:p-3'>
             {
               blueprints.map((blueprint, i: number) => {
                 return (
@@ -52,6 +53,6 @@ export default async function ProfilePage() {
           </section>
         </div>
       }
-    </main>
+    </Main>
   )
 }

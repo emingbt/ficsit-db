@@ -39,7 +39,7 @@ export default function AvatarSection({ pioneer }: { pioneer: Pioneer }) {
   ]
 
   return (
-    <section className="w-full lg:w-3/5 h-full flex flex-col items-start justify-center p-8 bg-main-bg">
+    <section className="w-full lg:w-3/5 h-full flex flex-col flex-grow flex-shrink-0 items-start p-8 bg-main-bg">
       <h1 className="w-full text-left text-2xl"> Avatar</h1>
       <p className="w-full mb-6 text-left text-sm text-gray-300">Update your avatar</p>
       <div className="w-full flex flex-col lg:flex-row">
