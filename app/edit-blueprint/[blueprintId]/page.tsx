@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { redirect } from 'next/navigation'
 import { getBlueprintById } from '../../../services/blueprint'
@@ -26,7 +25,7 @@ export default async function EditBlueprintPage({ params }: { params: { blueprin
   }
 
   return (
-    <Main classname="p-8" image='edit-blueprint-banner'>
+    <Main classname="p-8" image='edit-blueprint-banner' imagePosition='right'>
       <h1 className='text-2xl lg:text-4xl mb-4 lg:mb-1'>Edit blueprint</h1>
       <div className='w-full h-[2px] bg-gray-600 mb-4' />
       <EditBlueprintForm blueprint={blueprint} />

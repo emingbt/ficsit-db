@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function Main({ children, classname, image }: { children: React.ReactNode, classname?: string, image?: string }) {
+export default function Main({ children, classname, image, imagePosition }: { children: React.ReactNode, classname?: string, image?: string, imagePosition?: string }) {
   const isDivided: boolean = !!image
 
   return (
@@ -8,8 +8,9 @@ export default function Main({ children, classname, image }: { children: React.R
       <main className={`w-full ${isDivided ? "lg:w-1/2" : ""} ${classname}`}>
         {children}
       </main>
+      {/* Image that fills the remaining space (flex-1) */}
       {isDivided && image && (
-        <div className="w-1/2 h-auto hidden lg:block relative">
+        <div className="flex-1 hidden lg:block relative">
           <Image
             src={`/images/${image}.webp`}
             alt={image}
@@ -17,6 +18,7 @@ export default function Main({ children, classname, image }: { children: React.R
             className="object-cover object-left w-full h-full"
             sizes="100%"
             priority
+            style={{ objectPosition: imagePosition || "center" }}
           />
         </div>
       )}
