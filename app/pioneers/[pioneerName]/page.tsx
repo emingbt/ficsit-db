@@ -3,6 +3,8 @@ import BlueprintCard from "../../../components/blueprintCard"
 import { getAllBlueprintsByPioneer } from "../../../services/blueprint"
 import { getPioneerByName } from "../../../services/pioneer"
 import Main from "../../../components/Main"
+import BlueprintContainer from "../../../components/BlueprintContainer"
+import Link from "next/link"
 
 export default async function PioneerPage({ params }: { params: { pioneerName: string } }) {
   const pioneerName = params.pioneerName
@@ -10,14 +12,12 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
 
   if (!pioneer) {
     return (
-      <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">
-        <div className="w-full h-10 sm:h-12 flex items-center bg-main-bg pl-4">
-          <h1 className="text-xl sm:text-2xl font-medium text-logo-blue">Pioneer</h1>
+      <Main>
+        <div className='w-full h-full flex flex-col items-center justify-center'>
+          <p className='text-2xl mb-4'>Pioneer not found</p>
+          <Link href="/" className='text-lg text-logo-blue hover:underline'>Go home page</Link>
         </div>
-        <section className='w-full h-full flex items-center justify-center'>
-          <p className='text-2xl'>Pioneer not found</p>
-        </section>
-      </main>
+      </Main>
     )
   }
 
@@ -62,10 +62,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
       <div className="w-full h-[50px] sm:h-[90px] flex lg:hidden items-center justify-center bg-black mb-[10px]">
         Ad
       </div>
-      <div className="w-full h-8 sm:h-14 flex items-center bg-main-bg pl-4">
-        <h1 className="text-lg sm:text-xl font-medium">Blueprints</h1>
-      </div>
-      <section className='w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 lg:gap-3 justify-center bg-light-bg p-2 lg:p-3'>
+      {/* <section className='w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 lg:gap-3 justify-center bg-light-bg p-2 lg:p-3'>
         {
           blueprints?.length > 0 ?
             blueprints.map((blueprint, i: number) => {
@@ -77,7 +74,8 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
               <p className='text-xl my-16'>No blueprints found</p>
             </div>
         }
-      </section>
+      </section> */}
+      <BlueprintContainer blueprints={blueprints} title="Blueprints" />
     </Main>
   )
 }
