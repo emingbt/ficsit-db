@@ -15,7 +15,7 @@ export default function BuildingCategories({ selectedCategory = undefined }: { s
   ]
 
   return (
-    <nav className="w-full max-w-5xl grid grid-cols-3 sm:grid-cols-9 gap-1 items-center justify-center bg-dark-bg p-2">
+    <nav className="w-full max-w-5xl grid grid-cols-3 sm:grid-cols-9 gap-1 items-center justify-center bg-dark-bg p-2 mb-7 xl:mb-5">
       {BuildingCategories.map((category, i) => {
         return (
           <Link href={`/buildings?category=${category.toLowerCase()}`} key={i}

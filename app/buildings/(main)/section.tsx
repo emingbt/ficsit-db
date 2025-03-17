@@ -14,7 +14,7 @@ export default async function BuildingsSection({ selectedCategory }: { selectedC
   }
 
   return (
-    <section className="w-full h-full flex flex-col items-center justify-center bg-main-bg">
+    <section className="w-full flex flex-col items-center justify-center bg-main-bg">
       {buildingsByCategory.map((category: any, i: number) => {
         return (
           <div className="w-full flex flex-col" key={i}>
