@@ -57,8 +57,8 @@ export default function RatingBlueprint({ blueprintId, pioneerName }: { blueprin
               handleOnClick(index + 1)
             }}>
               <Star
-                color={index < rating ? 'bg-main-orange' : 'bg-main-bg'}
-                className={`w-5 h-5 sm:w-6 sm:h-6 ${index < rating ? 'fill-main-orange' : 'fill-main-bg'}`}
+                color={index < rating ? 'bg-main-orange' : 'bg-black'}
+                className={`w-5 h-5 sm:w-6 sm:h-6 ${index < rating ? 'fill-main-orange' : 'fill-black'}`}
               />
             </button>
           ))
