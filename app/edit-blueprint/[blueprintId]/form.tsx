@@ -4,8 +4,8 @@ import Link from "next/link"
 import { useState } from "react"
 import { useFormState, useFormStatus } from "react-dom"
 import { deleteBlueprint, updateBlueprint } from "./action"
-import ImageInput from "../../../components/imageInput"
-import CategoryInput from "../../../components/categoryInput"
+import ImageInput from "../../../components/ImageInput"
+import CategoryInput from "../../../components/CategoryInput"
 import { Blueprint } from "../../../drizzle/schema"
 
 export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint }) {

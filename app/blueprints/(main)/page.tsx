@@ -1,5 +1,5 @@
 import Main from "../../../components/Main"
-import Pagination from "../../../components/pagination"
+import Pagination from "../../../components/Pagination"
 import BlueprintContainer from "../../../components/BlueprintContainer"
 import { getPageCountAndBlueprintsByPage } from "../../../services/blueprint"
 

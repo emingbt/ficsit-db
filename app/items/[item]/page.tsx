@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { getItem } from "../../../utils/gameDataFetcher"
-import Recipes from "../../../components/recipes"
+import Recipes from "../../../components/Recipes"
 import Main from "../../../components/Main"
 
 export default async function ItemPage({ params }: { params: { item: string } }) {

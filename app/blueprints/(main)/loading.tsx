@@ -1,5 +1,5 @@
 import Main from "../../../components/Main"
-import Pagination from "../../../components/pagination"
+import Pagination from "../../../components/Pagination"
 
 export default function Loading() {
   const blueprints = Array.from(Array(5).keys())

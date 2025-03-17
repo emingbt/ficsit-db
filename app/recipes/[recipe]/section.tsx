@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import RecipeItem from "../../../components/recipeItem"
+import RecipeItem from "../../../components/RecipeItem"
 
 import type { ProductionRecipe } from "../../../interfaces"
 

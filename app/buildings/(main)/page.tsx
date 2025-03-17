@@ -1,5 +1,5 @@
 import Link from "next/link"
-import BuildingCategories from "../../../components/building/buildingCategories"
+import BuildingCategories from "../../../components/building/BuildingCategories"
 import BuildingsSection from "./section"
 import Main from "../../../components/Main"
 

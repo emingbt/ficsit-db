@@ -1,5 +1,5 @@
 import { getItems } from '../../../utils/gameDataFetcher'
-import { ItemCard } from '../../../components/itemCard'
+import { ItemCard } from '../../../components/ItemCard'
 import Main from '../../../components/Main'
 import Link from 'next/link'
 

@@ -1,4 +1,4 @@
-import BlueprintCard from '../components/blueprintCard'
+import BlueprintCard from './BlueprintCard'
 
 type Card = {
   id: number

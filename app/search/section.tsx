@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { ItemCard } from "../../components/itemCard"
+import { ItemCard } from "../../components/ItemCard"
 import SearchIcon from "../../assets/searchIcon.svg"
 
 import type { Item, Building } from "../../interfaces"

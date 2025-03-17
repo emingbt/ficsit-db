@@ -6,8 +6,8 @@ import GoogleAdsense from '../utils/googleAdsense'
 import './global.css'
 
 import Header from '../components/header'
-import Footer from '../components/footer'
-import CookieConsent from '../components/cookieConsent'
+import Footer from '../components/Footer'
+import CookieConsent from '../components/CookieConsent'
 
 export const metadata: Metadata = {
   title: 'Ficsit DB',

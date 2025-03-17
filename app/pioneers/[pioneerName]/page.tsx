@@ -1,5 +1,5 @@
 import Image from "next/image"
-import BlueprintCard from "../../../components/blueprintCard"
+import BlueprintCard from "../../../components/BlueprintCard"
 import { getAllBlueprintsByPioneer } from "../../../services/blueprint"
 import { getPioneerByName } from "../../../services/pioneer"
 import Main from "../../../components/Main"

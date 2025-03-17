@@ -2,11 +2,11 @@ import Link from "next/link"
 import Image from "next/image"
 import RateBlueprint from "./rateBlueprint"
 import DownloadSection from "./downloadSection"
-import ImageCarousel from "../../../components/imageCarousel"
+import ImageCarousel from "../../../components/ImageCarousel"
 import { getBlueprintById } from "../../../services/blueprint"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
-import AdBanner from "../../../components/adBanner"
+import AdBanner from "../../../components/AdBanner"
 import Main from "../../../components/Main"
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {

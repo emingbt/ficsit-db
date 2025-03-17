@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Main from "../../../components/Main"
-import BuildingCategories from "../../../components/building/buildingCategories"
+import BuildingCategories from "../../../components/building/BuildingCategories"
 
 export default function Loading({ searchParams }: { searchParams?: { category: string } | undefined }) {
   return (
