@@ -5,6 +5,7 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { CreatePioneerFormSchema } from "../../utils/zod"
 import { updateKindeUserProperties } from "../../services/kinde"
 import { createNewPioneer, getPioneerByEmail } from "../../services/auth"
+import { getPioneerByName } from "../../services/pioneer"
 
 export async function createPioneer(state, formData: FormData) {
   // 1. Validate the form data
@@ -55,7 +56,18 @@ export async function createPioneer(state, formData: FormData) {
     }
   }
 
-  // 4. Create a new pioneer
+  // 4. Check if the pioneer name is already taken
+  const pioneer = await getPioneerByName(name)
+
+  if (pioneer) {
+    return {
+      error: {
+        name: ['This name is already taken.']
+      }
+    }
+  }
+
+  // 5. Create a new pioneer
   try {
     const pioneer = await createNewPioneer({
       email: user.email,
