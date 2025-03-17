@@ -23,10 +23,10 @@ export default function Recipes({ recipes, title = 'Recipes' }: { recipes: Produ
                 ${product.isFluid ? 'rounded-full' : 'rounded-sm sm:rounded-md'}`} key={j}>
                   <div className='w-full h-full relative'>
                     <Image
+                      alt={product.name}
                       src={product.imgUrl}
                       fill
                       sizes="100%"
-                      alt={product.slug}
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
@@ -43,10 +43,10 @@ export default function Recipes({ recipes, title = 'Recipes' }: { recipes: Produ
                 ${ingredient.isFluid ? 'rounded-full' : 'rounded-sm sm:rounded-md'}`} key={j}>
                   <div className='w-full h-full relative'>
                     <Image
+                      alt={ingredient.name}
                       src={ingredient.imgUrl}
                       fill
                       sizes="100%"
-                      alt={ingredient.slug}
                       style={{ objectFit: 'contain' }}
                     />
                   </div>
