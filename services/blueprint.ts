@@ -106,7 +106,10 @@ export const updateBlueprintProperties = async (blueprintId: number, blueprint: 
 }) => {
   try {
     const updatedBlueprint = await db.update(Blueprint)
-      .set(blueprint)
+      .set({
+        ...blueprint,
+        updatedAt: sql`now()`
+      })
       .where(eq(Blueprint.id, blueprintId))
       .returning({
         id: Blueprint.id
