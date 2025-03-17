@@ -1,5 +1,4 @@
 import Image from "next/image"
-import BlueprintCard from "../../../components/BlueprintCard"
 import { getAllBlueprintsByPioneer } from "../../../services/blueprint"
 import { getPioneerByName } from "../../../services/pioneer"
 import Main from "../../../components/Main"
@@ -62,19 +61,6 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
       <div className="w-full h-[50px] sm:h-[90px] flex lg:hidden items-center justify-center bg-black mb-[10px]">
         Ad
       </div>
-      {/* <section className='w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 lg:gap-3 justify-center bg-light-bg p-2 lg:p-3'>
-        {
-          blueprints?.length > 0 ?
-            blueprints.map((blueprint, i: number) => {
-              return (
-                <BlueprintCard key={i} blueprint={blueprint} />
-              )
-            }) :
-            <div className="col-span-2 sm:col-span-2 lg:col-span-3 xl:col-span-5 w-full h-full flex items-center justify-center">
-              <p className='text-xl my-16'>No blueprints found</p>
-            </div>
-        }
-      </section> */}
       <BlueprintContainer blueprints={blueprints} title="Blueprints" />
     </Main>
   )
