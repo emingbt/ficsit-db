@@ -22,7 +22,7 @@ export default async function ItemPage({ params }: { params: { item: string } })
   const usagesAsIngredient = data.usagesAsIngredient
 
   return (
-    <Main classname="flex flex-col items-center justify-center bg-dark-bg">
+    <Main classname="flex flex-col bg-dark-bg" dontFill>
       <Link href="/deprecated" className='w-full h-6 flex sm:hidden items-center justify-center bg-error hover:bg-red-600'>
         <p className='text-white text-center text-xs'>Items are deprecated</p>
       </Link>

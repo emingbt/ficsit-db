@@ -15,7 +15,7 @@ export default async function ItemsPage() {
   }
 
   return (
-    <Main>
+    <Main dontFill>
       <Link href="/deprecated" className='w-full h-6 sm:h-8 flex items-center justify-center bg-error hover:bg-red-600'>
         <p className='text-white text-center text-xs sm:text-base'>Items are deprecated</p>
       </Link>
