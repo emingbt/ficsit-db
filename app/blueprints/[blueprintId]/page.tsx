@@ -87,11 +87,11 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
               </div>
               <div className="flex flex-row flex-grow items-center justify-between gap-4">
                 <p>Created:</p>
-                <p>{blueprint.createdAt.getDate()}/{blueprint.createdAt.getMonth()}/{blueprint.createdAt.getFullYear()}</p>
+                <p>{blueprint.createdAt.getDate()}/{blueprint.createdAt.getMonth() + 1}/{blueprint.createdAt.getFullYear()}</p>
               </div>
               <div className="flex flex-row flex-grow items-center justify-between gap-4">
                 <p>Updated:</p>
-                <p>{blueprint.createdAt.getDate()}/{blueprint.createdAt.getMonth()}/{blueprint.createdAt.getFullYear()}</p>
+                <p>{blueprint.updatedAt.getDate()}/{blueprint.updatedAt.getMonth() + 1}/{blueprint.updatedAt.getFullYear()}</p>
               </div>
               <div className="flex flex-row flex-grow items-center justify-between gap-4">
                 <p>Downloads:</p>
