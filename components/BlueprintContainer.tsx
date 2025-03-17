@@ -7,7 +7,7 @@ type Card = {
   averageRating: number
 }
 
-export default function BlueprintContainer({ blueprints, title }: { blueprints: Card[], title: string }) {
+export default function BlueprintContainer({ blueprints, title, isEdit = false }: { blueprints: Card[], title: string, isEdit?: boolean }) {
   return (
     <div className='w-full flex flex-col flex-grow'>
       <div className="w-full h-10 sm:h-12 flex items-center bg-main-bg pl-4">
@@ -19,7 +19,7 @@ export default function BlueprintContainer({ blueprints, title }: { blueprints: 
             blueprints?.length > 0 ?
               blueprints.map((blueprint, i: number) => {
                 return (
-                  <BlueprintCard key={i} blueprint={blueprint} />
+                  <BlueprintCard key={i} blueprint={blueprint} isEdit={isEdit} />
                 )
               }) :
               <p className='text-2xl'>No blueprints found</p>

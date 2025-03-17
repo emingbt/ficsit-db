@@ -39,7 +39,7 @@ export default async function ProfilePage() {
       </div>
       {
         blueprints?.length > 0 &&
-        <BlueprintContainer blueprints={blueprints} title="Edit your Blueprints" />
+        <BlueprintContainer blueprints={blueprints} title="Edit your Blueprints" isEdit />
       }
     </Main>
   )
