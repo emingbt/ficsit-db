@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import StarIcon from "../../../assets/starIcon.svg"
+import { Star } from "lucide-react"
 import { rateBlueprint, checkIfRated } from "./action"
 
 export default function RatingBlueprint({ blueprintId, pioneerName }: { blueprintId: number, pioneerName: string | undefined }) {
@@ -55,8 +56,9 @@ export default function RatingBlueprint({ blueprintId, pioneerName }: { blueprin
             <button key={index} onClick={() => {
               handleOnClick(index + 1)
             }}>
-              <StarIcon
-                className={`w-6 h-6 lg:w-5 lg:h-5 text-logo-blue ${index < rating ? 'fill-main-orange' : 'fill-light-bg'}`}
+              <Star
+                color={index < rating ? 'bg-main-orange' : 'bg-main-bg'}
+                className={`w-5 h-5 sm:w-6 sm:h-6 ${index < rating ? 'fill-main-orange' : 'fill-main-bg'}`}
               />
             </button>
           ))
