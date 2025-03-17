@@ -23,7 +23,7 @@ export default function ImageCarousel({ images, title }: { images: string[], tit
   }
 
   return (
-    <div className="h-full w-full flex lg:flex-1 aspect-video relative">
+    <div className="w-full lg:w-2/3 flex aspect-video relative">
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
         <Image
           src={images[currentImage]}
