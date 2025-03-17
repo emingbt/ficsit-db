@@ -5,6 +5,7 @@ import BuildingExtension from '../../../components/building/buildingExtension'
 import Recipes from '../../../components/recipes'
 import ExtractableResources from '../../../components/building/extractableResources'
 import Fuels from '../../../components/building/fuels'
+import Main from '../../../components/Main'
 
 export default async function BuildingPage({ params }: { params: { building: string } }) {
   const slug = params.building
@@ -23,7 +24,7 @@ export default async function BuildingPage({ params }: { params: { building: str
   const fuels = data.fuels
 
   return (
-    <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">
+    <Main classname="bg-dark-bg" dontFill>
       <Link href="/deprecated" className='w-full h-6 flex sm:hidden items-center justify-center bg-error hover:bg-red-600'>
         <p className='text-white text-center text-xs'>Buildings are deprecated</p>
       </Link>
@@ -80,6 +81,6 @@ export default async function BuildingPage({ params }: { params: { building: str
       <Recipes recipes={recipes} />
       <ExtractableResources resources={building.resources} />
       <Fuels fuels={fuels} />
-    </main>
+    </Main>
   )
 }

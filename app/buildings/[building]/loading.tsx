@@ -1,6 +1,8 @@
+import Main from "../../../components/Main"
+
 export default function Loading() {
   return (
-    <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">
+    <Main classname="bg-dark-bg" dontFill>
       <section className="w-full flex flex-col md:flex-row items-center justify-center bg-main-bg text-xs sm:text-sm">
         <div className="w-full md:w-3/5 h-24 sm:h-32 md:h-40 lg:h-48 flex flex-row items-center justify-center">
           <div className="h-full aspect-square bg-light-bg p-2">
@@ -48,6 +50,6 @@ export default function Loading() {
             }} />
         </div>
       </section>
-    </main>
+    </Main>
   )
 }
