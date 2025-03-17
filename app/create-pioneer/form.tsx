@@ -132,7 +132,6 @@ export default function CreatePioneerForm() {
           </div>
         }
       </form>
-      <LoginLink className='w-full text-xs lg:text-base text-center mt-4'>Login</LoginLink>
     </section>
   )
 }
