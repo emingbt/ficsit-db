@@ -1,10 +1,15 @@
-import BuildingCategories from "../../../components/building/buildingCategories"
+import Link from "next/link"
+import Main from "../../../components/Main"
+import BuildingCategories from "../../../components/building/BuildingCategories"
 
 export default function Loading({ searchParams }: { searchParams?: { category: string } | undefined }) {
   return (
-    <main className="w-full h-full flex flex-col items-center justify-center p-2">
+    <div className="w-full h-full flex flex-col items-center justify-center p-2">
       <BuildingCategories selectedCategory={searchParams?.category || ''} />
-      <div className="w-full bg-dark-bg p-2 sm:p-4 mt-7 xl:mt-5">
+      <Main classname="bg-dark-bg" dontFill>
+        <Link href="/deprecated" className='w-full h-6 sm:h-8 flex items-center justify-center bg-error hover:bg-red-600 mb-2 sm:mb-4'>
+          <p className='text-white text-center text-xs sm:text-base'>Buildings are deprecated</p>
+        </Link>
         <section className="w-full h-full flex flex-col items-center justify-center bg-main-bg">
           {Array.from(Array(4).keys()).map((i: number) => {
             return (
@@ -42,7 +47,7 @@ export default function Loading({ searchParams }: { searchParams?: { category: s
             )
           })}
         </section>
-      </div>
-    </main>
+      </Main>
+    </div>
   )
 }

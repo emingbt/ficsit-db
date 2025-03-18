@@ -1,4 +1,4 @@
-import { ItemCard } from '../itemCard'
+import { ItemCard } from '../ItemCard'
 
 import type { Building } from "../../interfaces"
 

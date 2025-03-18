@@ -3,7 +3,7 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { uploadFilesToCloudinary, uploadImagesToCloudinary } from "../../services/cloudinary"
 import { CreateBlueprintFormSchema } from "../../utils/zod"
-import { getPioneerByEmail } from "../../services/auth"
+import { getPioneerByEmail } from "../../services/pioneer"
 import { redirect } from "next/navigation"
 import { createNewBlueprint, getAllBlueprintsByPioneer } from "../../services/blueprint"
 import { revalidatePath } from "next/cache"

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { ItemCard } from "../../components/itemCard"
+import { ItemCard } from "../../components/ItemCard"
 import SearchIcon from "../../assets/searchIcon.svg"
 
 import type { Item, Building } from "../../interfaces"
@@ -61,12 +61,14 @@ export default function SearchSection({ searchInput, data }: {
           </button>
         </div>
       </div>
-      <Link href="/deprecated" className='w-full h-6 sm:h-8 flex items-center justify-center bg-error hover:bg-red-600 mb-2 lg:mb-3'>
+      <Link href="/deprecated" className='w-full h-6 sm:h-8 flex items-center justify-center bg-error hover:bg-red-600 mb-2 lg:mb-4'>
         <p className='text-white text-center text-xs sm:text-base'>{selectedCategory} are deprecated</p>
       </Link>
-      <div className="w-full grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-1 lg:gap-2 justify-center bg-light-bg p-2 lg:p-3">
+      <div className="w-full min-h-[calc(100%-96px)] grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-1 lg:gap-2 justify-center bg-light-bg p-2 lg:p-3">
         {items.length == 0 && buildings.length == 0 ? (
-          <p className="w-full font-secondary">No {selectedCategory} found</p>
+          <div className="w-full h-full col-span-full flex items-center justify-center">
+            <p className="font-secondary">No {selectedCategory} found</p>
+          </div>
         ) : selectedCategory == "items" ? (
           items.length > 0 ? (
             items.map((item: Item, i: number) => {
@@ -75,7 +77,9 @@ export default function SearchSection({ searchInput, data }: {
               )
             })
           ) : (
-            <p className="text-white">No items found</p>
+            <div className="w-full h-full col-span-full flex items-center justify-center">
+              <p className="font-secondary">No items found</p>
+            </div>
           )
         ) : selectedCategory == "buildings" && (
           buildings.length > 0 ? (
@@ -85,7 +89,9 @@ export default function SearchSection({ searchInput, data }: {
               )
             })
           ) : (
-            <p className="text-white">No buildings found</p>
+            <div className="w-full h-full col-span-full flex items-center justify-center">
+              <p className="font-secondary">No buildings found</p>
+            </div>
           )
         )}
       </div>

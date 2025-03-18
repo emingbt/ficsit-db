@@ -1,3 +1,4 @@
+import Main from "../../components/Main"
 import { getSearch } from "../../utils/gameDataFetcher"
 import SearchSection from "./section"
 
@@ -11,12 +12,14 @@ export default async function SearchPage({ searchParams }: {
   if (!data) {
     return (
       <main className="w-full h-full flex items-center justify-center bg-main-bg">
-        <p className="text-xl">No results found</p>
+        <div className="w-full h-full flex items-center justify-center text-xl">No results found</div>
       </main>
     )
   }
 
   return (
-    <SearchSection searchInput={name} data={data} />
+    <Main classname="bg-dark-bg">
+      <SearchSection searchInput={name} data={data} />
+    </Main>
   )
 }

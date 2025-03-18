@@ -3,9 +3,9 @@
 import Link from "next/link"
 import { useFormState, useFormStatus } from "react-dom"
 import createBlueprint from "./action"
-import CategoryInput from "../../components/categoryInput"
-import ImageInput from "../../components/imageInput"
-import FileInput from "../../components/fileInput"
+import CategoryInput from "../../components/CategoryInput"
+import ImageInput from "../../components/ImageInput"
+import FileInput from "../../components/FileInput"
 
 export default function CreateBlueprintForm() {
   const [state, action] = useFormState(createBlueprint, undefined)

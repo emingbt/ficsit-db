@@ -16,7 +16,7 @@ export default function DownloadSection({ id, files, downloads, averageRating }:
   }
 
   return (
-    <div className="w-full lg:w-80 xl:w-[570px] h-36 sm:h-32 lg:h-full flex relative lg:flex-col xl:flex-row items-center justify-evenly pb-6 sm:pb-0 lg:pb-8 xl:p-0 bg-foo">
+    <div className="w-full lg:w-1/3 min-h-64 sm:min-h-48 flex flex-grow flex-col sm:flex-row lg:flex-col 2xl:flex-row items-center justify-evenly relative pb-6 sm:pb-0 lg:pb-8 xl:p-0 bg-foo">
       <div className="w-36 lg:w-48 h-16 bg-light-bg rounded">
         <Link
           href={files[0]}

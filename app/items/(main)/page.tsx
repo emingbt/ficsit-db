@@ -1,5 +1,6 @@
 import { getItems } from '../../../utils/gameDataFetcher'
-import { ItemCard } from '../../../components/itemCard'
+import { ItemCard } from '../../../components/ItemCard'
+import Main from '../../../components/Main'
 import Link from 'next/link'
 
 export default async function ItemsPage() {
@@ -7,14 +8,14 @@ export default async function ItemsPage() {
 
   if (!items) {
     return (
-      <section className='w-full h-full flex justify-center items-center'>
+      <main className='w-full h-full flex justify-center items-center'>
         <p className='text-2xl'>No items found</p>
-      </section>
+      </main>
     )
   }
 
   return (
-    <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">
+    <Main dontFill>
       <Link href="/deprecated" className='w-full h-6 sm:h-8 flex items-center justify-center bg-error hover:bg-red-600'>
         <p className='text-white text-center text-xs sm:text-base'>Items are deprecated</p>
       </Link>
@@ -25,6 +26,6 @@ export default async function ItemsPage() {
           )
         })}
       </section>
-    </main>
+    </Main>
   )
 }

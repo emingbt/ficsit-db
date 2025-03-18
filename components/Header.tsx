@@ -1,13 +1,13 @@
 "use client"
 
 import Link from 'next/link'
-import SearchInput from './searchInput'
+import SearchInput from './SearchInput'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 import HamburgerIcon from '../assets/hamburgerIcon.svg'
 import CloseIcon from '../assets/closeIcon.svg'
-import AuthNavigation from './authNav'
+import AuthNavigation from './AuthNav'
 
 export default function Header() {
   const router = usePathname()
@@ -50,11 +50,11 @@ export default function Header() {
         <Link href="/buildings?category=production" className='w-20 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Buildings</p>
         </Link>
-        {/* <Link href="/blueprints" className='w-20 ml-6 hover:text-logo-blue'>
+        <Link href="/blueprints" className='w-20 ml-6 hover:text-logo-blue'>
           <p className='user-select-none cursor-pointer h-full text-center'>Blueprints</p>
         </Link>
         <div className='w-0.5 h-12 bg-main-orange ml-8' />
-        <AuthNavigation /> */}
+        <AuthNavigation />
       </nav>
 
       {
@@ -68,13 +68,13 @@ export default function Header() {
             <Link href='/buildings?category=production' className='w-60 pt-6'>
               <p className='h-full text-center'>Buildings</p>
             </Link>
-            {/* <Link href='/blueprints' className='w-60 pt-6'>
+            <Link href='/blueprints' className='w-60 pt-6'>
               <p className='h-full text-center'>Blueprints</p>
             </Link>
             <div className='w-full h-0.5 bg-main-orange mt-8' />
             <div className='w-full flex flex-row justify-center mt-6'>
               <AuthNavigation />
-            </div> */}
+            </div>
           </nav>
         </div>
       }

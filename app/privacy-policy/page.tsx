@@ -1,20 +1,20 @@
+import Main from "../../components/Main"
+
 export default function PrivacyPolicyPage() {
   return (
-    <main className="w-full min-h-screen p-4 bg-dark-bg">
+    <Main>
       <div className="w-full bg-main-bg p-6 text-white">
-        <h1 className="text-3xl font-bold mb-6 text-center">Privacy Policy for Ficsit DB</h1>
-
+        <h1 className="text-xl lg:text-3xl font-bold mb-6 text-center">Privacy Policy for Ficsit DB</h1>
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">1. Introduction</h2>
           <p>
             Ficsit DB (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) respects your privacy and is committed to protecting your personal data.
             This privacy policy explains how we collect, use, store, and protect your information when you visit our website,
             https://www.ficsitdb.app (&quot;Site&quot;).
           </p>
         </section>
-
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">2. Data Collection</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">2. Data Collection</h2>
           <p>We collect the following types of personal information:</p>
           <ul className="list-disc ml-6 mb-4">
             <li><strong>Email address</strong>: Collected during user registration via email or through the &quot;Continue with Google&quot; option for authentication.</li>
@@ -22,9 +22,8 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p>We do not collect any sensitive personal information, nor do we target or collect information from users under 18.</p>
         </section>
-
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">3. Purpose of Data Collection</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">3. Purpose of Data Collection</h2>
           <p>
             We collect and use your personal data to:
           </p>
@@ -35,9 +34,8 @@ export default function PrivacyPolicyPage() {
             <li>Analyze website traffic and usage through tools like Google Analytics.</li>
           </ul>
         </section>
-
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">4. Data Storage</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">4. Data Storage</h2>
           <p>
             Your data is stored securely using third-party services:
           </p>
@@ -52,17 +50,15 @@ export default function PrivacyPolicyPage() {
             If you believe your account has been compromised, please contact us immediately at ficsitdb@gmail.com.
           </p>
         </section>
-
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">5. Data Retention</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">5. Data Retention</h2>
           <p>
             We retain your data until you request its deletion. Users can manage or delete their uploaded files
             directly on the Site. For account deletion, you may email us at ficsitdb@gmail.com.
           </p>
         </section>
-
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">6. Third-Party Services</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">6. Third-Party Services</h2>
           <p>
             We use the following third-party services:
           </p>
@@ -70,9 +66,8 @@ export default function PrivacyPolicyPage() {
             <li><strong>Google Analytics</strong>: Tracks user interactions with the Site (e.g., location, pages viewed). While no personal data is intentionally shared, some user interaction details may be visible through Google Analytics.</li>
           </ul>
         </section>
-
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">7. Cookies, Analytics, and Traffic Data</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">7. Cookies, Analytics, and Traffic Data</h2>
           <p>
             Cookies are small text files that are transferred from our website and stored on your device. We use cookies to provide you with a personalized experience and to improve the functionality of our website.
           </p>
@@ -91,9 +86,8 @@ export default function PrivacyPolicyPage() {
           <p><strong>IP Address and Traffic Data</strong>: Our servers log traffic data such as your IP address, device information, and the website you visited before ours. We also collect site statistics like access rates, but this data does not identify individual users.</p>
           <p><strong>How to Disable Cookies</strong>: You can configure your browser to restrict or block cookies. However, disabling cookies may affect your ability to use certain features of our website. For more information on managing cookies, visit <a href="https://www.allaboutcookies.org" className="text-main-orange hover:underline">www.allaboutcookies.org</a>.</p>
         </section>
-
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">8. Security and Storage of Information</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">8. Security and Storage of Information</h2>
           <p>
             We are committed to keeping your information secure by implementing appropriate technical and organizational measures to protect it from unauthorized or unlawful processing, as well as accidental loss, destruction, or damage.
           </p>
@@ -102,9 +96,8 @@ export default function PrivacyPolicyPage() {
             If you believe your account has been compromised, please contact us immediately at ficsitdb@gmail.com.
           </p>
         </section>
-
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">9. Your Rights and Data Protection</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">9. Your Rights and Data Protection</h2>
           <p>If you are based within the EEA or another jurisdiction with similar data protection laws, you have the following rights:</p>
           <ul className="list-disc ml-6 mb-4">
             <li><strong>Right to Access</strong>: You can request access to your personal data and obtain a copy of the information we hold about you.</li>
@@ -119,9 +112,8 @@ export default function PrivacyPolicyPage() {
             We will retain your personal information for the duration of our business relationship and for as long as necessary for our legitimate business purposes, in accordance with our data retention and destruction policies, or as required by applicable laws and regulations. When your personal information is no longer needed, we will dispose of it securely without further notice to you.
           </p>
         </section>
-
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">10. Data Transfers Outside the European Economic Area (EEA)</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">10. Data Transfers Outside the European Economic Area (EEA)</h2>
           <p>
             Personal data in the EEA is protected by strict privacy laws. However, we may transfer your data to other countries, including the United States, that do not have the same data protection standards.
           </p>
@@ -132,23 +124,20 @@ export default function PrivacyPolicyPage() {
             By using our website and services, you consent to the transfer of your data outside the EEA. If you do not wish for your data to be transferred outside of the EEA, please refrain from using our services.
           </p>
         </section>
-
-
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">11. Children&apos;s Privacy</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">11. Children&apos;s Privacy</h2>
           <p>
             Our Site does not target children, and we do not knowingly collect data from users under 18. If you believe we have unintentionally collected such data, please contact us immediately.
           </p>
         </section>
-
         <section>
-          <h2 className="text-2xl font-semibold mb-4">12. Contact Us</h2>
+          <h2 className="text-lg lg:text-2xl font-semibold mb-4">12. Contact Us</h2>
           <p>
             If you have any questions or concerns about this Privacy Policy or how your data is handled,
             please contact us at ficsitdb@gmail.com.
           </p>
         </section>
       </div>
-    </main>
+    </Main>
   )
 }

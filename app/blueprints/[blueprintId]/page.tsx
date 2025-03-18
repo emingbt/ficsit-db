@@ -2,11 +2,12 @@ import Link from "next/link"
 import Image from "next/image"
 import RateBlueprint from "./rateBlueprint"
 import DownloadSection from "./downloadSection"
-import ImageCarousel from "../../../components/imageCarousel"
+import ImageCarousel from "../../../components/ImageCarousel"
 import { getBlueprintById } from "../../../services/blueprint"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
-import AdBanner from "../../../components/adBanner"
+import Main from "../../../components/Main"
+import { Download, Star } from "lucide-react"
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
   const blueprintId = parseInt(params.blueprintId)
@@ -18,27 +19,28 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
 
   if (!blueprint) {
     return (
-      <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">
-        <div className='w-full min-h-content lg:min-h-content-lg xl:min-h-content-xl flex items-center justify-center bg-main-bg'>
-          <p className="text-xl">Blueprint not found</p>
-        </div>
-      </main>
+      <Main classname="flex flex-col items-center justify-center">
+        <p className="text-xl mb-4">Blueprint not found</p>
+        <Link
+          href="/blueprints">
+          <p className="text-logo-blue hover:underline">Go back to blueprints</p>
+        </Link>
+      </Main>
     )
   }
 
   return (
-    <main className="w-full h-full bg-dark-bg p-[10px] lg:p-4">
-      <div className='w-full min-h-content lg:min-h-content-lg xl:min-h-content-xl flex flex-col bg-main-bg'>
-        <div className="w-full lg:h-96 xl:h-[480px] flex flex-col lg:flex-row">
-          <ImageCarousel images={blueprint.images} title={blueprint.title} />
-          <div className="w-full lg:w-80 xl:w-[570px] h-full flex flex-col">
-            <div className="w-full p-3 lg:p-0 lg:h-20 flex items-center justify-center bg-logo-blue text-lg xl:text-2xl text-center text-white font-semibold">
-              {blueprint.title}
-            </div>
-            <div className="w-full h-16 flex flex-row items-center justify-center bg-light-bg">
+    <Main classname="bg-dark-bg">
+      <div className="w-full flex flex-col lg:flex-row items-stretch justify-stretch gap-2 lg:gap-4 mb-2 lg:mb-4">
+        <section className="w-full lg:w-2/3 h-full">
+          <div className="w-full p-3 lg:p-0 lg:h-20 flex items-center justify-center bg-black text-lg xl:text-2xl text-center text-white font-semibold">
+            {blueprint.title}
+          </div>
+          <div className="w-full flex flex-col sm:flex-row justify-between bg-light-bg p-4">
+            <div className="flex flex-col flex-1 gap-4 mb-4 sm:mb-0">
               <Link
                 href={`/pioneers/${blueprint.pioneerName}`}
-                className="flex flex-row items-center text-white hover:underline"
+                className="w-32 flex flex-row items-center p-1 pr-4 rounded-full bg-dark-bg hover:bg-main-bg text-white hover:underline"
               >
                 <Image
                   src={`/images/avatars/${blueprint.pioneerAvatar}.png`}
@@ -49,61 +51,84 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
                 />
                 <p className="font-medium ml-2">{blueprint.pioneerName}</p>
               </Link>
-            </div>
-            <div className="w-full h-16 flex flex-row items-center justify-center gap-4">
-              {
-                blueprint.categories.map((category, index) => (
-                  <Link
-                    key={index}
-                    href={`/blueprints?category=${category}`}
-                    className="text-gray-300 hover:text-logo-blue"
-                  >
-                    <div className="flex items-center justify-center p-2 bg-light-bg">
-                      <p className="text-sm font-semibold">{category}</p>
-                    </div>
-                  </Link>
-                ))
-              }
-            </div>
-            <div className="w-full h-[50px] md:h-[90px] bg-black flex lg:hidden items-center justify-center">
-              <AdBanner dataAdSlot="8715388606" />
-            </div>
-            <div className="w-full h-72 flex flex-1 bg-light-bg">
-              <div className="w-full lg:h-full flex xl:flex-1 flex-col">
-                <div className="w-full h-16 lg:h-full flex lg:flex-1 lg:flex-col items-center justify-center gap-4 p-3 xl:px-8 text-sm lg:text-base font-semibold text-center">
-                  <p>Created At {blueprint.createdAt.getDate()}/{blueprint.createdAt.getMonth()}/{blueprint.createdAt.getFullYear()}</p>
-                  <div className="w-[2px] h-full lg:w-full lg:h-[2px] bg-logo-blue" />
-                  <p>Updated At {blueprint.updatedAt.getDate()}/{blueprint.updatedAt.getMonth()}/{blueprint.updatedAt.getFullYear()}</p>
-                </div>
-                <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} />
+              <div className="flex flex-row flex-wrap gap-4">
+                {
+                  blueprint.categories.map((category, index) => (
+                    <Link
+                      key={index}
+                      href={`/blueprints?category=${category}`}
+                      className="text-gray-300 hover:text-logo-blue"
+                    >
+                      <div className="flex items-center justify-center px-3 py-2 bg-main-bg">
+                        <p className="text-sm font-semibold">{category}</p>
+                      </div>
+                    </Link>
+                  ))
+                }
               </div>
-              <div className="h-full w-[336px] hidden xl:flex items-center justify-center bg-black">
-                <AdBanner dataAdSlot="4926949738" />
+            </div>
+            <div className="flex flex-col gap-4 font-semibold text-gray-200">
+              <div className="flex flex-row flex-grow items-center justify-between gap-4">
+                <p>Rating:</p>
+                <div className="flex flex-row gap-1">
+                  <div className="flex flex-row gap-1">
+                    {
+                      Array.from({ length: 5 }).map((_, index) => (
+                        <Star
+                          key={index}
+                          color={index < blueprint.averageRating ? 'bg-main-orange' : 'bg-main-bg'}
+                          className={`w-5 h-5 sm:w-6 sm:h-6 ${index < blueprint.averageRating ? 'fill-main-orange' : 'fill-main-bg'}`}
+                        />
+                      ))
+                    }
+                  </div>
+                  <p className="font-normal">( <span className="font-semibold">{blueprint.averageRating}</span> )</p>
+                </div>
+              </div>
+              <div className="flex flex-row flex-grow items-center justify-between gap-4">
+                <p>Created:</p>
+                <p>{blueprint.createdAt.getDate()}/{blueprint.createdAt.getMonth() + 1}/{blueprint.createdAt.getFullYear()}</p>
+              </div>
+              <div className="flex flex-row flex-grow items-center justify-between gap-4">
+                <p>Updated:</p>
+                <p>{blueprint.updatedAt.getDate()}/{blueprint.updatedAt.getMonth() + 1}/{blueprint.updatedAt.getFullYear()}</p>
+              </div>
+              <div className="flex flex-row flex-grow items-center justify-between gap-4">
+                <p>Downloads:</p>
+                <div className="flex flex-row gap-1 items-center">
+                  <Download className="w-5 h-5 stroke-logo-blue" />
+                  <p className="text-logo-blue font-bold">{blueprint.downloads}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="w-full lg:h-56 xl:h-48 flex flex-col-reverse lg:flex-row">
-          {blueprint.description ?
-            <>
-              <div className="w-full h-full bg-light-bg flex flex-1 items-center p-4">
-                {blueprint.description}
-              </div>
-              <div className="w-full h-[50px] md:h-[90px] flex lg:hidden items-center justify-center bg-black">
-                <AdBanner dataAdSlot="8715388606" />
-              </div>
-            </> :
-            // If there is no description, display a ad
-            <div className="w-full h-[50px] md:h-[90px] lg:h-full bg-black flex lg:flex-1 items-center justify-center">
-              Ad
-            </div>
-          }
-          <DownloadSection id={blueprintId} files={blueprint.files} downloads={blueprint.downloads} averageRating={blueprint.averageRating} />
-        </div>
-        <div className="w-full h-[50px] lg:h-24 flex items-center justify-center bg-black">
-          <AdBanner dataAdSlot="5085063532" />
+        </section>
+
+        <DownloadSection id={blueprintId} files={blueprint.files} downloads={blueprint.downloads} averageRating={blueprint.averageRating} />
+      </div>
+      <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
+        <ImageCarousel images={blueprint.images} title={blueprint.title} />
+        <div className="w-full lg:w-1/3 flex flex-col flex-grow gap-2 lg:gap-4">
+          <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} />
+          <div className="w-full h-64 lg:h-full flex items-center justify-center bg-main-bg">
+            Ad
+          </div>
         </div>
       </div>
-    </main >
+      <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4">
+        {
+          blueprint.description && (
+            <div className="w-full lg:w-2/3 bg-light-bg text-gray-200 p-4">
+              <h2 className="text-xl font-semibold">Description</h2>
+              <div className="w-full h-[1px] bg-gray-500 shadow-md my-1" />
+              <p>{blueprint.description}</p>
+            </div>
+          )
+        }
+        <div className={`w-full ${blueprint.description && "lg:w-1/3"} min-h-32 flex items-center justify-center bg-main-bg`}>
+          Ad
+        </div>
+      </div>
+    </Main>
   )
 }

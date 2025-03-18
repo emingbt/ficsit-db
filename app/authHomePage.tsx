@@ -1,8 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
-import DesktopAd from "../components/desktopAd"
-import MobileAd from "../components/mobileAd"
-import TopRatedBlueprintOfWeek from "../components/topRatedBlueprint"
+import DesktopAd from "../components/DesktopAd"
+import MobileAd from "../components/MobileAd"
+import TopRatedBlueprintOfWeek from "../components/TopRatedBlueprint"
+import Main from "../components/Main"
 
 export default function AuthHomePage({ pioneer }: {
   pioneer: {
@@ -12,7 +13,7 @@ export default function AuthHomePage({ pioneer }: {
   }
 }) {
   return (
-    <main className="w-full p-[10px] bg-dark-bg lg:p-4">
+    <Main classname="bg-dark-bg">
       <div className="w-full h-12 lg:h-24 flex items-center justify-between bg-main-bg mb-[10px] lg:mb-4">
         <h1 className="flex-1 text-xl lg:text-2xl text-center lg:text-start font-secondary pl-4 overflow-hidden">Hi {pioneer.name}!</h1>
         <DesktopAd fullHeight bottom />
@@ -67,6 +68,6 @@ export default function AuthHomePage({ pioneer }: {
       </section>
       <MobileAd bottom rectangle />
       <DesktopAd bottom fullWidth />
-    </main>
+    </Main>
   )
 }
