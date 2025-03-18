@@ -8,6 +8,7 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
 import { Download, Star } from "lucide-react"
+import AdBanner from "../../../components/AdBanner"
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
   const blueprintId = parseInt(params.blueprintId)
@@ -110,9 +111,10 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
         <ImageCarousel images={blueprint.images} title={blueprint.title} />
         <div className="w-full lg:w-1/3 flex flex-col flex-grow gap-2 lg:gap-4">
           <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} />
-          <div className="w-full h-64 lg:h-full flex items-center justify-center bg-main-bg">
-            Ad
-          </div>
+          <AdBanner classname="w-full h-64 lg:!h-full flex items-center justify-center"
+            dataAdSlot="8715388606"
+            dataFullWidthResponsive={true}
+          />
         </div>
       </div>
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4">
@@ -125,9 +127,10 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
             </div>
           )
         }
-        <div className={`w-full ${blueprint.description && "lg:w-1/3"} min-h-32 flex items-center justify-center bg-main-bg`}>
-          Ad
-        </div>
+        <AdBanner classname={`w-full ${blueprint.description && "lg:w-1/3"} min-h-32 hidden lg:flex items-center justify-center bg-main-bg`}
+          dataAdSlot="4926949738"
+          dataFullWidthResponsive={true}
+        />
       </div>
     </Main>
   )
