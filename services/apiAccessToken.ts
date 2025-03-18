@@ -4,6 +4,9 @@ import db from "../utils/postgres"
 import { ApiAccessToken } from "../drizzle/schema"
 import { desc } from "drizzle-orm"
 
+// This function is used to get API access token from the database
+// This token is used to talk with the Kinde API, which is
+// currently used authentication service.
 export async function getCurrentAPIAccessToken() {
   // 1. Get the last written access token from the database
   const currentAccessToken = (await db.select()
