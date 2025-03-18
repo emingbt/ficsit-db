@@ -14,7 +14,7 @@ export default function AuthHomePage({ pioneer }: {
   }
 }) {
   return (
-    <Main classname="bg-dark-bg">
+    <Main classname="bg-dark-bg" dontFill>
       <div className="w-full h-12 lg:h-24 flex items-center justify-between bg-dark-bg mb-2 lg:mb-4 gap-4">
         <div className="w-full lg:w-5/12 h-full flex items-center justify-center bg-main-bg">
           <h1 className="w-full flex-1 text-xl lg:text-2xl text-center lg:text-start font-secondary pl-4 overflow-hidden">Hi {pioneer.name}!</h1>

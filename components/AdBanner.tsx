@@ -34,7 +34,17 @@ export default function AdBanner({ classname, dataAdSlot, adHeight, dataFullWidt
       <div className="w-full h-full relative">
         <ins
           className="adsbygoogle"
-          style={{ display: "block", position: "absolute", width: "inherit", height: adHeight ? `${adHeight}px` : "100%" }}
+          style={{
+            display: "block",
+            position: "absolute",
+            top: "50%", // ✅ Move to the center vertically
+            left: "50%", // ✅ Move to the center horizontally
+            transform: "translate(-50%, -50%)", // ✅ Ensure it is centered correctly
+            width: "100%",
+            height: adHeight ? `${adHeight}px` : "100%",
+            overflow: "hidden",
+            textAlign: "center"
+          }}
           data-ad-client="ca-pub-1772997678438254"
           data-ad-slot={dataAdSlot}
           data-ad-format={dataAdFormat}

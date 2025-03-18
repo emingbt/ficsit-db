@@ -31,7 +31,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
   }
 
   return (
-    <Main classname="bg-dark-bg">
+    <Main classname="bg-dark-bg" dontFill>
       <div className="w-full flex flex-col lg:flex-row items-stretch justify-stretch gap-2 lg:gap-4 mb-2 lg:mb-4">
         <section className="w-full lg:w-2/3 h-full">
           <div className="w-full p-3 lg:p-0 lg:h-20 flex items-center justify-center bg-black text-lg xl:text-2xl text-center text-white font-semibold">
