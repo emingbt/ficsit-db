@@ -63,7 +63,7 @@ export default async function NonAuthHomePage() {
             sizes='100%'
           />
         </div>
-        <div className="w-full order-5 aspect-square relative">
+        {/* <div className="w-full order-5 aspect-square relative">
           <Image
             src="/images/landing-page-blueprints.webp"
             alt="landing-page-blueprints"
@@ -77,7 +77,7 @@ export default async function NonAuthHomePage() {
           <Link href="/blueprints">
             <button className="w-2/5 h-8 bg-main-orange text-sm lg:h-10 lg:text-lg lg:hover:bg-light-bg  lg:hover:text-light-orange">Blueprints</button>
           </Link>
-        </div>
+        </div> */}
       </section>
     </Main>
   )
