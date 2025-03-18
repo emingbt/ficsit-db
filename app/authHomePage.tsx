@@ -22,6 +22,7 @@ export default function AuthHomePage({ pioneer }: {
         <AdBanner classname="w-7/12 h-full hidden lg:flex items-center justify-center"
           dataAdSlot="1020178445"
           data-full-width-responsive="true"
+          adHeight={90}
         />
       </div>
       <AdBanner classname="w-full h-14 sm:h-24 flex lg:hidden items-center justify-center mb-2"

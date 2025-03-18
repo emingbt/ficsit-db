@@ -5,11 +5,12 @@ import { useEffect, useState } from "react"
 type AdBannerProps = {
   classname: string
   dataAdSlot: string
+  adHeight?: number
   dataAdFormat?: string
   dataFullWidthResponsive?: boolean
 }
 
-export default function AdBanner({ classname, dataAdSlot, dataFullWidthResponsive = false, dataAdFormat = "auto", }: AdBannerProps) {
+export default function AdBanner({ classname, dataAdSlot, adHeight, dataFullWidthResponsive = false, dataAdFormat = "auto", }: AdBannerProps) {
   const [adsLoaded, setAdsLoaded] = useState(false)
 
   useEffect(() => {
@@ -30,14 +31,16 @@ export default function AdBanner({ classname, dataAdSlot, dataFullWidthResponsiv
 
   return (
     <div className={`${classname} relative bg-main-bg text-gray-600 text-lg lg:text-xl font-semibold`}>
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block", width: "100%", height: "100%" }}
-        data-ad-client="ca-pub-1772997678438254"
-        data-ad-slot={dataAdSlot}
-        data-ad-format={dataAdFormat}
-        data-full-width-responsive={dataFullWidthResponsive.toString()}
-      ></ins>
+      <div className="w-full h-full relative">
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block", position: "absolute", width: "inherit", height: adHeight ? `${adHeight}px` : "100%" }}
+          data-ad-client="ca-pub-1772997678438254"
+          data-ad-slot={dataAdSlot}
+          data-ad-format={dataAdFormat}
+          data-full-width-responsive={dataFullWidthResponsive.toString()}
+        ></ins>
+      </div>
       <div className="absolute w-full h-full flex items-center justify-center">
         Ad
       </div>
