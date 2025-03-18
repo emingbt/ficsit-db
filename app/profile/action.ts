@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache"
 import { UpdateAvatarFormSchema } from "../../utils/zod"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import { getPioneerByEmail, updatePioneerAvatar } from "../../services/auth"
+import { getPioneerByEmail, updatePioneerAvatar } from "../../services/pioneer"
 import { updateKindeUserProperties } from "../../services/kinde"
 
 export async function updateAvatar(state, formData: FormData) {

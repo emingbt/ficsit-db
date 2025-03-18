@@ -1,6 +1,6 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { redirect } from "next/navigation"
-import { getPioneerByEmail } from "../../../services/auth"
+import { getPioneerByEmail } from "../../../services/pioneer"
 
 export async function GET(req: Request) {
   // 1. Check if the user is authenticated

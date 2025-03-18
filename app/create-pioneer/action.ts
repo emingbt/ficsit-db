@@ -4,7 +4,7 @@ import { redirect } from "next/navigation"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { CreatePioneerFormSchema } from "../../utils/zod"
 import { updateKindeUserProperties } from "../../services/kinde"
-import { createNewPioneer, getPioneerByEmail } from "../../services/auth"
+import { createNewPioneer, getPioneerByEmail } from "../../services/pioneer"
 import { getPioneerByName } from "../../services/pioneer"
 
 export async function createPioneer(state, formData: FormData) {
