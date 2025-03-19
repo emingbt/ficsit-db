@@ -21,13 +21,19 @@ export default function AuthHomePage({ pioneer }: {
         </div>
         <AdBanner classname="w-7/12 h-full hidden lg:flex items-center justify-center"
           dataAdSlot="1020178445"
-          data-full-width-responsive="true"
+          data-full-width-responsive={false}
+          dataAdFormat="fixed"
+          dynamicHeight={false}
           adHeight={90}
+          adPadding={16}
         />
       </div>
       <AdBanner classname="w-full h-14 sm:h-24 flex lg:hidden items-center justify-center mb-2"
         dataAdSlot="1020178445"
-        data-full-width-responsive="true"
+        data-full-width-responsive={false}
+        dataAdFormat="fixed"
+        dynamicHeight={false}
+        adHeight={50}
       />
       <div className="w-full sm:h-64 lg:h-96 flex flex-col sm:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
         <TopRatedBlueprintOfWeek />
