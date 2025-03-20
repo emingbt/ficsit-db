@@ -34,21 +34,24 @@ export default function AdBanner({ classname, dataAdSlot, dynamicHeight = true, 
     <div className={`${classname} relative bg-main-bg text-gray-600 text-lg lg:text-xl font-semibold`}>
       {
         dynamicHeight ? (
-          <ins
-            className="adsbygoogle"
-            style={{
-              display: "block",
-              width: adPadding ? `calc(100% - ${adPadding * 2}px)` : "100%",
-              height: adPadding ? `calc(100% - ${adPadding * 2}px)` : "100%",
-              minWidth: "300px"
-            }}
-            data-ad-client="ca-pub-1772997678438254"
-            data-ad-slot={dataAdSlot}
-            data-ad-format={dataAdFormat}
-            data-full-width-responsive={dataFullWidthResponsive.toString()}
-          ></ins>
+          <div className="w-full h-full flex justify-center items-center z-10">
+            <ins
+              className="adsbygoogle"
+              style={{
+                display: "block",
+                width: adPadding ? `calc(100% - ${adPadding * 2}px)` : "100%",
+                height: adPadding ? `calc(100% - ${adPadding * 2}px)` : "100%",
+                minWidth: "300px"
+              }}
+              data-ad-client="ca-pub-1772997678438254"
+              data-ad-slot={dataAdSlot}
+              data-ad-format={dataAdFormat}
+              data-full-width-responsive={dataFullWidthResponsive.toString()}
+            ></ins>
+          </div>
+
         ) : (
-          <div className="w-full h-full relative">
+          <div className="w-full h-full relative z-10">
             <ins
               className="adsbygoogle"
               style={{
