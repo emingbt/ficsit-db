@@ -97,8 +97,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
               <div className="flex flex-row flex-grow items-center justify-between gap-4">
                 <p>Downloads:</p>
                 <div className="flex flex-row gap-1 items-center">
-                  <Download className="w-5 h-5 stroke-logo-blue" />
-                  <p className="text-logo-blue font-bold">{blueprint.downloads}</p>
+                  <p>{blueprint.downloads}</p>
                 </div>
               </div>
             </div>
@@ -135,7 +134,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
             <div className="w-full lg:w-2/3 bg-light-bg text-gray-200 p-4">
               <h2 className="text-xl font-semibold">Description</h2>
               <div className="w-full h-[1px] bg-gray-500 shadow-md my-1" />
-              <p>{blueprint.description}</p>
+              <pre className="whitespace-pre-wrap font-main">{blueprint.description}</pre>
             </div>
           )
         }
