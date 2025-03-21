@@ -4,6 +4,7 @@ import { getPioneerByName } from "../../../services/pioneer"
 import Main from "../../../components/Main"
 import BlueprintContainer from "../../../components/BlueprintContainer"
 import Link from "next/link"
+import AdBanner from "../../../components/AdBanner"
 
 export default async function PioneerPage({ params }: { params: { pioneerName: string } }) {
   const pioneerName = params.pioneerName
@@ -27,7 +28,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
       <div className="w-full h-16 bg-black flex sm:hidden items-center justify-center text-lg font-semibold">
         {pioneer.name}
       </div>
-      <div className="w-full h-28 sm:h-48 lg:h-72 flex flex-row mb-[10px] lg:mb-4">
+      <div className="w-full h-28 sm:h-48 lg:h-72 flex flex-row mb-2 lg:mb-4">
         <div className={`h-full aspect-square relative bg-avatar-${pioneer.color}`}>
           <Image
             src={`/images/avatars/${pioneer.avatar}.png`}
@@ -36,7 +37,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
             priority
           />
         </div>
-        <div className="h-full w-full flex flex-1 flex-col font-medium text-sm lg:text-lg">
+        <div className="h-full w-full flex flex-1 flex-col font-medium text-sm lg:text-lg lg:mr-4">
           <div className="w-full h-24 hidden sm:flex items-center justify-center bg-black text-lg xl:text-2xl text-center text-white font-semibold">
             {pioneer.name}
           </div>
@@ -54,13 +55,19 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
             <p>0</p>
           </div>
         </div>
-        <div className="h-full w-[336px] hidden lg:flex items-center justify-center bg-black">
-          Ad
-        </div>
+        <AdBanner classname="h-full w-[336px] 3xl:w-[768px] hidden lg:flex items-center justify-center"
+          dataAdSlot="5085063532"
+          dataFullWidthResponsive={false}
+          adHeight={280}
+          adPadding={4}
+        />
       </div>
-      <div className="w-full h-[50px] sm:h-[90px] flex lg:hidden items-center justify-center bg-black mb-[10px]">
-        Ad
-      </div>
+      <AdBanner classname="w-full h-[50px] sm:h-[90px] flex lg:hidden items-center justify-center mb-2"
+        dataAdSlot="5085063532"
+        dataFullWidthResponsive={false}
+        dataAdFormat="fixed"
+        dynamicHeight={false}
+      />
       <BlueprintContainer blueprints={blueprints} title="Blueprints" />
     </Main>
   )

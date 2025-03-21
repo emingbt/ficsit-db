@@ -50,6 +50,9 @@ module.exports = {
       backgroundImage: {
         foo: 'repeating-linear-gradient(-60deg, #052338 0 20px, #031726 20px 40px)',
       },
+      screens: {
+        '3xl': '1600px',
+      },
     },
   },
   safelist: [
