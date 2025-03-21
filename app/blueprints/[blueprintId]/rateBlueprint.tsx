@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import StarIcon from "../../../assets/starIcon.svg"
 import { Star } from "lucide-react"
 import { rateBlueprint, checkIfRated } from "./action"
 
