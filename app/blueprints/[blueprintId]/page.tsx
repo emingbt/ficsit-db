@@ -83,7 +83,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
                       ))
                     }
                   </div>
-                  <p className="font-normal">( <span className="font-semibold">{blueprint.averageRating}</span> )</p>
+                  <p className="font-normal">( <span className="font-semibold">{blueprint.averageRating.toFixed(1)}</span> )</p>
                 </div>
               </div>
               <div className="flex flex-row flex-grow items-center justify-between gap-4">
