@@ -3,11 +3,13 @@ import Link from "next/link"
 export default function Pagination({
   path,
   currentPage,
-  pageCount
+  pageCount,
+  filterPath
 }: {
   path: string,
   currentPage: number,
-  pageCount: number
+  pageCount: number,
+  filterPath?: string
 }) {
   const getPages = () => {
     const pages: any[] = []
@@ -31,14 +33,14 @@ export default function Pagination({
     <div className='w-full h-12 flex justify-center items-center bg-main-bg'>
       <div className="w-full h-full flex sm:hidden flex-row items-center justify-between p-2">
         <Link
-          href={`${path}?page=${currentPage - 1}`}
+          href={`${path}?page=${currentPage - 1}${filterPath ? filterPath : ''}`}
           className={`w-20 h-full flex items-center justify-center bg-logo-blue text-white font-medium ${currentPage == 1 && 'pointer-events-none'}`}
         >
           Previous
         </Link>
         <p>{currentPage}/{pageCount}</p>
         <Link
-          href={`${path}?page=${currentPage + 1}`}
+          href={`${path}?page=${currentPage + 1}${filterPath ? filterPath : ''}`}
           className={`w-20 h-full flex items-center justify-center  bg-logo-blue text-white font-medium ${currentPage == pageCount && 'pointer-events-none'}`}
         >
           Next
@@ -46,14 +48,14 @@ export default function Pagination({
       </div>
       <div className="h-8 hidden sm:flex justify-between items-center bg-light-bg rounded-md">
         <Link
-          href={`${path}?page=1`}
+          href={`${path}?page=1${filterPath ? filterPath : ''}`}
           className={`w-8 h-full flex justify-center text-xl text-logo-blue font-semibold hover:bg-dark-bg ${currentPage == 1 && 'pointer-events-none'}`}
           aria-disabled={currentPage == 1}
         >
           &#171;
         </Link>
         <Link
-          href={`${path}?page=${currentPage - 1}`}
+          href={`${path}?page=${currentPage - 1}${filterPath ? filterPath : ''}`}
           className={`w-8 h-full flex justify-center items-center text-logo-blue font-semibold hover:bg-dark-bg ${currentPage == 1 && 'pointer-events-none'}`}
           aria-disabled={currentPage == 1}
         >
@@ -65,7 +67,7 @@ export default function Pagination({
           typeof page === 'number' ? (
             <Link
               key={index}
-              href={`${path}?page=${page}`}
+              href={`${path}?page=${page}${filterPath ? filterPath : ''}`}
               className={`w-10 h-full flex justify-center items-center font-medium hover:bg-dark-bg ${currentPage === page ? 'bg-dark-bg text-logo-blue' : 'text-white'}`}
             >
               {page}
@@ -78,14 +80,14 @@ export default function Pagination({
         ))}
 
         <Link
-          href={`${path}?page=${currentPage + 1}`}
+          href={`${path}?page=${currentPage + 1}${filterPath ? filterPath : ''}`}
           className={`w-8 h-full flex justify-center items-center text-logo-blue font-semibold hover:bg-dark-bg ${currentPage == pageCount && 'pointer-events-none'}`}
           aria-disabled={currentPage == pageCount}
         >
           &#62;
         </Link>
         <Link
-          href={`${path}?page=${pageCount}`}
+          href={`${path}?page=${pageCount}${filterPath ? filterPath : ''}`}
           className={`w-8 h-full flex justify-center text-xl text-logo-blue font-semibold hover:bg-dark-bg ${currentPage == pageCount && 'pointer-events-none'}`}
           aria-disabled={currentPage == pageCount}
         >
