@@ -9,8 +9,8 @@ export const rateBlueprint = async (blueprintId: number, pioneerName: string, ra
   try {
     const averageRating = await createOrUpdateBlueprintRating(blueprintId, pioneerName, rating)
 
-    revalidatePath('/blueprints/[blueprintId]', "page")
-    revalidatePath('/blueprints', "page")
+    revalidatePath(`/blueprints/${blueprintId}`, "page")
+    revalidatePath('/blueprints')
 
     return averageRating
   } catch (error) {
@@ -35,7 +35,7 @@ export const incrementDownloads = async (blueprintId: number) => {
   try {
     await incrementBlueprintDownloads(blueprintId)
 
-    revalidatePath('/blueprints/[blueprintId]', "page")
+    revalidatePath(`/blueprints/${blueprintId}`, "page")
   } catch (error) {
     console.log(error)
     throw new Error('Failed to increment the blueprint downloads.')
