@@ -65,7 +65,7 @@ export async function updateAvatar(state, formData: FormData) {
 
     await refreshTokens()
 
-    revalidatePath(`/pioneers/${pioneer.name}`, "page")
+    revalidatePath(`/pioneers/${pioneer.name}`)
 
     return {
       success: {
