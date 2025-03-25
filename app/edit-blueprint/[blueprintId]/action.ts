@@ -112,7 +112,7 @@ export async function updateBlueprint(state, formData: FormData) {
     }
 
     revalidatePath('/blueprints')
-    revalidatePath(`/blueprints/${blueprint.id}`)
+    revalidatePath(`/blueprints/${blueprint.id}`, "page")
 
     return {
       success: {
@@ -175,7 +175,7 @@ export async function deleteBlueprint(blueprintId: number) {
 
     revalidatePath('/blueprints')
     revalidatePath('/profile')
-    revalidatePath(`/pioneers/${pioneer.name}`)
+    revalidatePath(`/pioneers/${pioneer.name}`, "page")
 
   } catch (error) {
     console.log(error)
