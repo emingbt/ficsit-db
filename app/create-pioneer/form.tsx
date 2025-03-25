@@ -132,6 +132,7 @@ export default function CreatePioneerForm() {
           </div>
         }
       </form>
+      <LoginLink postLoginRedirectURL='/api/auth'>Login</LoginLink>
     </section>
   )
 }
