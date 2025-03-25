@@ -38,7 +38,9 @@ export default function AdBanner({ classname, dataAdSlot, dynamicHeight = true, 
             <ins
               className="adsbygoogle"
               style={{
-                display: "block",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 width: adPadding ? `calc(100% - ${adPadding * 2}px)` : "100%",
                 height: adPadding ? `calc(100% - ${adPadding * 2}px)` : "100%",
                 minWidth: "300px"

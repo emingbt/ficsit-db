@@ -58,9 +58,19 @@ export default function AuthHomePage({ pioneer }: {
           </div>
         </section>
       </div>
-      <AdBanner classname="w-full h-14 lg:h-24 flex sm:hidden lg:flex items-center justify-center mb-2 lg:mb-4"
+      <AdBanner classname="w-full h-14 flex sm:hidden items-center justify-center mb-2"
         dataAdSlot="7394849252"
-        data-full-width-responsive="true"
+        data-full-width-responsive={false}
+        dataAdFormat="fixed"
+        dynamicHeight={false}
+        adHeight={50}
+      />
+      <AdBanner classname="w-full h-24 hidden lg:flex items-center justify-center mb-4"
+        dataAdSlot="7394849252"
+        data-full-width-responsive={false}
+        dataAdFormat="fixed"
+        dynamicHeight={false}
+        adHeight={90}
       />
       <section className="w-full sm:h-32 lg:h-72 flex flex-col sm:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
         {
