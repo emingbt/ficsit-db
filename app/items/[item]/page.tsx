@@ -23,7 +23,7 @@ export default async function ItemPage({ params }: { params: { item: string } })
 
   return (
     <Main classname="flex flex-col bg-dark-bg" dontFill>
-      <Link href="/deprecated" className='w-full h-6 flex sm:hidden items-center justify-center bg-error hover:bg-red-600'>
+      <Link href="/deprecated" className='w-full h-6 flex sm:hidden items-center justify-center bg-red-800 hover:bg-red-700'>
         <p className='text-white text-center text-xs'>Items are deprecated</p>
       </Link>
       <section className="w-full flex flex-col md:flex-row items-center justify-center bg-main-bg text-xs sm:text-sm">
@@ -41,7 +41,7 @@ export default async function ItemPage({ params }: { params: { item: string } })
             </div>
           </div>
           <div className="w-full h-full flex flex-col">
-            <div className="w-full h-1/4 flex items-center justify-center bg-black xl:text-lg">
+            <div className="w-full h-1/4 flex items-center justify-center bg-black xl:text-lg font-secondary">
               {item.name}
             </div>
             <div className="w-full h-1/4 flex flex-row items-center justify-between px-4">
@@ -59,7 +59,7 @@ export default async function ItemPage({ params }: { params: { item: string } })
           </div>
         </div>
         <div className="w-full md:w-2/5 h-full sm:h-32 md:h-40 lg:h-48 relative flex items-center justify-center p-6">
-          <Link href="/deprecated" className='w-full h-8 hidden absolute top-0 sm:flex items-center justify-center bg-error hover:bg-red-600'>
+          <Link href="/deprecated" className='w-full h-8 hidden absolute top-0 sm:flex items-center justify-center bg-red-800 hover:bg-red-700'>
             <p className='text-white text-center'>Items are deprecated</p>
           </Link>
           <p>{item.description}</p>

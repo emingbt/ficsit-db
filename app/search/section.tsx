@@ -61,7 +61,7 @@ export default function SearchSection({ searchInput, data }: {
           </button>
         </div>
       </div>
-      <Link href="/deprecated" className='w-full h-6 sm:h-8 flex items-center justify-center bg-error hover:bg-red-600 mb-2 lg:mb-4'>
+      <Link href="/deprecated" className='w-full h-6 sm:h-8 flex items-center justify-center bg-red-800 hover:bg-red-700 mb-2 lg:mb-4'>
         <p className='text-white text-center text-xs sm:text-base'>{selectedCategory} are deprecated</p>
       </Link>
       <div className="w-full min-h-[calc(100%-96px)] grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-1 lg:gap-2 justify-center bg-light-bg p-2 lg:p-3">

@@ -34,7 +34,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
     <Main classname="bg-dark-bg" dontFill>
       <div className="w-full flex flex-col lg:flex-row items-stretch justify-stretch gap-2 lg:gap-4 mb-2 lg:mb-4">
         <section className="w-full lg:w-2/3 h-full">
-          <div className="w-full p-3 lg:p-0 lg:h-20 flex items-center justify-center bg-black text-lg xl:text-2xl text-center text-white font-semibold">
+          <div className="w-full p-3 lg:p-0 lg:h-20 flex items-center justify-center bg-black text-lg xl:text-2xl text-center text-white font-secondary font-semibold">
             {blueprint.title}
           </div>
           <div className="w-full flex flex-col sm:flex-row justify-between bg-light-bg p-4">

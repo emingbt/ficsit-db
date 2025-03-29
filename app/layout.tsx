@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import { Metadata } from 'next'
 import Script from 'next/script'
+import { Inter, Roboto } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import GoogleAdsense from '../utils/googleAdsense'
 import './global.css'
@@ -8,6 +9,9 @@ import './global.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CookieConsent from '../components/CookieConsent'
+
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-main" })
+const inter = Inter({ subsets: ["latin"], variable: "--font-secondary" })
 
 export const metadata: Metadata = {
   title: 'Ficsit DB',
@@ -18,7 +22,7 @@ export default function RootLayout({ children }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='font-main'>
+    <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
       <head>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57" />
         <Script id="google-analytics">
@@ -32,8 +36,8 @@ export default function RootLayout({ children }: {
         </Script>
         <GoogleAdsense />
       </head>
-      <body className='w-full h-full min-h-screen flex flex-col justify-between margin-0 padding-0 bg-dark-bg text-white'>
-        <div className='w-full flex flex-col'>
+      <body className='w-full h-full min-h-screen flex flex-col justify-between margin-0 padding-0 bg-dark-bg text-white font-secondary'>
+        <div className="w-full flex flex-col">
           <Suspense fallback={<header className='w-full h-16 bg-dark-bg' />} >
             <Header />
           </Suspense>

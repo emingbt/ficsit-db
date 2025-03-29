@@ -55,7 +55,7 @@ export default function Recipes({ recipes, title = 'Recipes' }: { recipes: Produ
               }
             </div>
             <div className='w-full h-full flex items-end'>
-              <div className='w-full h-12 sm:h-20 flex items-center justify-center p-2 sm:p-4 bg-main-bg text-xs sm:text-base'>
+              <div className='w-full h-12 sm:h-20 flex items-center justify-center p-2 sm:p-4 bg-main-bg text-xs sm:text-base text-gray-200 font-secondary'>
                 {recipe.name}
               </div>
             </div>
