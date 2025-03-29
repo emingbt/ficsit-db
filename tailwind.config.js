@@ -41,8 +41,8 @@ module.exports = {
       },
       fontFamily: {
         'logo': 'Industrial Branding',
-        'main': ['Inter', 'sans-serif'],
-        'secondary': ['Roboto', 'sans-serif']
+        'main': "var(--font-main)",
+        'secondary': "var(--font-secondary)",
       },
       fontSize: {
         'logo': 'clamp(1.25rem, 2vw, 2rem)'
