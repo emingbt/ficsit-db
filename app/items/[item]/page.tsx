@@ -41,7 +41,7 @@ export default async function ItemPage({ params }: { params: { item: string } })
             </div>
           </div>
           <div className="w-full h-full flex flex-col">
-            <div className="w-full h-1/4 flex items-center justify-center bg-black xl:text-lg">
+            <div className="w-full h-1/4 flex items-center justify-center bg-black xl:text-lg font-secondary">
               {item.name}
             </div>
             <div className="w-full h-1/4 flex flex-row items-center justify-between px-4">

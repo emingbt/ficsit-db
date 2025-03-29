@@ -43,7 +43,7 @@ export default async function BuildingPage({ params }: { params: { building: str
             </div>
           </div>
           <div className="w-full h-full flex flex-col">
-            <div className="w-full h-1/2 flex items-center justify-center bg-black lg:text-lg">
+            <div className="w-full h-1/2 flex items-center justify-center bg-black lg:text-lg font-secondary">
               {building.name}
             </div>
             <div className="w-full flex items-center text-xs sm:text-sm px-4 sm:py-1 bg-main-orange">

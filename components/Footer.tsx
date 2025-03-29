@@ -2,13 +2,13 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className='w-full flex flex-col bg-dark-bg px-8'>
+    <footer className='w-full flex flex-col bg-dark-bg px-8 font-secondary'>
       <div className="w-full h-20 flex items-center justify-center">
         <p className="text-sm xl:text-base">
           Built by <Link
             href="https://www.github.com/emingbt"
             className='text-main-orange hover:text-light-orange hover:underline'
-          >@emingbt</Link>
+          >emingbt</Link>
         </p>
       </div>
       <div className='w-full h-0.5 bg-main-orange mb-6' />

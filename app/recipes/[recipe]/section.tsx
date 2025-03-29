@@ -40,7 +40,7 @@ export default function RecipeSection({ recipe }: {
             )
           })}
         </div>
-        <div className="w-full text-center text-sm bg-light-bg">
+        <div className="w-full text-center text-sm bg-light-bg font-secondary">
           <p>INPUT</p>
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function RecipeSection({ recipe }: {
             )
           })}
         </div>
-        <div className="w-full text-center text-sm bg-light-bg">
+        <div className="w-full text-center text-sm bg-light-bg font-secondary">
           <p>OUTPUT</p>
         </div>
       </div>
@@ -137,7 +137,7 @@ export default function RecipeSection({ recipe }: {
             onChange={e => handleClockspeed(e.target.value)}
           />
         </div>
-        <div className="w-full text-center text-sm bg-light-bg">
+        <div className="w-full text-center text-sm bg-light-bg font-secondary">
           <p>OVERCLOCK</p>
         </div>
       </div>

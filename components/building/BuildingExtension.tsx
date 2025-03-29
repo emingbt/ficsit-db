@@ -26,7 +26,7 @@ export default function BuildingExtension({ building }: { building: Building }) 
               </div>
             )}
           </div>
-          <div className='w-full h-10 sm:h-full flex flex-row items-center justify-center bg-light-bg'>
+          <div className='w-full h-10 sm:h-full flex flex-row items-center justify-center bg-light-bg font-secondary'>
             <button className='w-16 h-8 bg-dark-bg rounded-sm mx-1'
               onClick={() => setClockspeed(50)}>
               <p className={`text-sm text-main-${clockspeed == 50 ? 'orange' : 'gray'}`}>
