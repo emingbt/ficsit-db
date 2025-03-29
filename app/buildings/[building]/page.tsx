@@ -25,7 +25,7 @@ export default async function BuildingPage({ params }: { params: { building: str
 
   return (
     <Main classname="bg-dark-bg" dontFill>
-      <Link href="/deprecated" className='w-full h-6 flex sm:hidden items-center justify-center bg-error hover:bg-red-600'>
+      <Link href="/deprecated" className='w-full h-6 flex sm:hidden items-center justify-center bg-red-800 hover:bg-red-700'>
         <p className='text-white text-center text-xs'>Buildings are deprecated</p>
       </Link>
       <section className="w-full flex flex-col md:flex-row items-center justify-center bg-main-bg text-xs sm:text-sm">
@@ -71,7 +71,7 @@ export default async function BuildingPage({ params }: { params: { building: str
           </div>
         </div>
         <div className="w-full md:w-2/5 h-full sm:h-32 md:h-40 lg:h-48 relative flex items-center justify-center text-xs lg:text-sm px-6 py-3">
-          <Link href="/deprecated" className='w-full h-8 hidden absolute top-0 sm:flex items-center justify-center bg-error hover:bg-red-600'>
+          <Link href="/deprecated" className='w-full h-8 hidden absolute top-0 sm:flex items-center justify-center bg-red-800 hover:bg-red-700'>
             <p className='text-white text-center'>Buildings are deprecated</p>
           </Link>
           <p>{building.description}</p>
