@@ -34,7 +34,7 @@ export default function AdBanner({ classname, dataAdSlot, dynamicHeight = true, 
     <div className={`${classname} relative bg-main-bg text-gray-600 text-lg lg:text-xl font-semibold`}>
       {
         dynamicHeight ? (
-          <div className="w-full h-full flex justify-center items-center z-10">
+          <div className="w-full h-full flex justify-center items-center z-10 overflow-hidden">
             <ins
               className="adsbygoogle"
               style={{
@@ -53,7 +53,7 @@ export default function AdBanner({ classname, dataAdSlot, dynamicHeight = true, 
           </div>
 
         ) : (
-          <div className="w-full h-full relative z-10">
+          <div className="w-full h-full relative z-10 overflow-hidden">
             <ins
               className="adsbygoogle"
               style={{
