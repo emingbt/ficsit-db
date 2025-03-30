@@ -9,40 +9,45 @@ cloudinary.v2.config({
 })
 
 export async function uploadImageToCloudinary(image: File, index: number, pioneerName: string, blueprintTitle: string) {
+  const cloud_name = process.env.CLOUDINARY_CLOUD_NAME
+
+  if (!cloud_name) {
+    throw new Error('CLOUDINARY_CLOUD_NAME is not defined')
+  }
+
   const arrayBuffer = await image.arrayBuffer()
   const buffer = new Uint8Array(arrayBuffer)
 
   return new Promise<string>((resolve, reject) => {
-    const uploadStream = cloudinary.v2.uploader.upload_stream({
-      tags: 'blueprint_image',
-      resource_type: 'image',
-      public_id: `image-${index}`,
-      folder: `blueprints/${pioneerName}/${blueprintTitle}`,
-      overwrite: true,
-      invalidate: true,
-      transformation: {
-        quality: 'auto:eco',
-        format: 'auto',
-        width: 1920,
-        height: 1080,
-        crop: "fill"
+    const uploadStream = cloudinary.v2.uploader.upload_stream(
+      {
+        tags: "blueprint_image",
+        resource_type: "image",
+        public_id: `image-${index}`,
+        folder: `blueprints/${pioneerName}/${blueprintTitle}`,
+        overwrite: true,
+        invalidate: true,
+        transformation: {
+          quality: "auto:eco",
+          format: "auto",
+          width: 1920,
+          height: 1080,
+          crop: "fill",
+        },
+      },
+      (error, result) => {
+        if (error) {
+          console.error(error)
+          reject(new Error("Failed to upload the image."))
+        } else if (result?.public_id && result?.version) {
+          // Ensure the URL includes the new version to avoid caching issues
+          const secureUrl = `https://res.cloudinary.com/${cloud_name}/image/upload/v${result.version}/${result.public_id}`
+          resolve(secureUrl)
+        } else {
+          reject(new Error("Failed to retrieve the image URL."))
+        }
       }
-    }, (error, result) => {
-      if (error) {
-        console.error(error)
-        reject(new Error('Failed to upload the image.'))
-      } else if (result?.public_id) {
-        // Generate URL with automatic quality and format
-        const secureUrl = cloudinary.v2.url(result.public_id, {
-          transformation: [
-            { quality: "auto:eco", fetch_format: "auto" },
-          ]
-        })
-        resolve(secureUrl)
-      } else {
-        reject(new Error('Failed to retrieve the image URL.'))
-      }
-    })
+    )
 
     uploadStream.end(buffer)
   })
