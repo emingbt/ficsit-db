@@ -2,12 +2,25 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { redirect } from "next/navigation"
 import CreateBlueprintForm from "./form"
 import Main from "../../components/Main"
+import { getPioneerByEmail } from "../../services/pioneer"
 
 export default async function CreatePioneerPage() {
-  const { isAuthenticated } = getKindeServerSession()
+  const { getUser, isAuthenticated } = getKindeServerSession()
   const authenticated = await isAuthenticated()
 
   if (!authenticated) {
+    redirect('/')
+  }
+
+  const user = await getUser()
+  if (!user || !user.email) {
+    redirect('/')
+  }
+
+  const email = user.email
+  const pioneer = await getPioneerByEmail(email)
+
+  if (!pioneer) {
     redirect('/')
   }
 
