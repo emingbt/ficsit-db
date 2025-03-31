@@ -48,6 +48,16 @@ export async function updateBlueprint(state, formData: FormData) {
     categories
   } = validationResults.data
 
+  // Check the sizes of the images
+  const imageSizeError = images.some((image: File) => image.size > 1000000)
+  if (imageSizeError) {
+    return {
+      error: {
+        images: 'Each image must be less than 1MB.'
+      }
+    }
+  }
+
   // 2. Check if the user is authenticated and get the pioneer name
   const { isAuthenticated, getAccessToken } = getKindeServerSession()
   const authenticated = await isAuthenticated()
