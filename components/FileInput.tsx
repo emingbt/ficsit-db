@@ -6,12 +6,19 @@ import FileIcon from "../assets/fileIcon.svg"
 export default function FileInput({ fileError }: { fileError: string }) {
   const [files, setFiles] = useState<File[]>(Array.from({ length: 2 }))
 
+  const maxFileSize = 1000000 // 1MB
+
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
     const inputFiles = event.target.files
 
     if (inputFiles) {
       const file = inputFiles[0]
       let newFiles = [...files]
+
+      if (file && file?.size > maxFileSize) {
+        alert('File size must be less than 1MB')
+        return
+      }
 
       newFiles[index] = file
       setFiles(newFiles)
