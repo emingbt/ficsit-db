@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import FileIcon from "../assets/fileIcon.svg"
+import Link from "next/link"
 
 export default function FileInput({ fileError }: { fileError: string }) {
   const [files, setFiles] = useState<File[]>(Array.from({ length: 2 }))
@@ -28,7 +29,7 @@ export default function FileInput({ fileError }: { fileError: string }) {
   return (
     <>
       <label htmlFor="files">Blueprint files</label>
-      <div className={`w-full flex flex-col sm:flex-row gap-4 ${!fileError && "mb-4 lg:mb-6"}`}>
+      <div className="w-full flex flex-col sm:flex-row gap-4">
         <div className="w-full h-24 relative bg-dark-bg hover:bg-light-bg">
           <div className="w-full h-full absolute top-0 bg-transparent">
             <div className="w-full h-full flex flex-col items-center justify-center text-center">
@@ -80,6 +81,7 @@ export default function FileInput({ fileError }: { fileError: string }) {
           <p>{fileError}</p>
         </div>
       }
+      <p className={`text-main-gray ${!fileError && "mb-4 lg:mb-6"}`}>Don&apos;t you know where to find Blueprint files? <Link href={"/faq"} className="text-main-orange font-medium hover:underline">FAQ</Link></p>
     </>
   )
 }
