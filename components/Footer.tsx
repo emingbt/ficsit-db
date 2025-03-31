@@ -22,6 +22,9 @@ export default function Footer() {
           <Star className="text-gray-600 fill-gray-600 ml-2 group-hover:text-main-orange group-hover:fill-main-orange" size={16} />
         </Link>
       </div>
+      <div className="w-full mb-4">
+        <Link href={"/faq"} className="text-main-orange font-medium">FAQ</Link>
+      </div>
       <div className='w-full h-0.5 bg-main-orange mb-6' />
       <p className="w-full text-main-gray min-h-16 mb-6 text-xs">
         The assets comes from Satisfactory or from websites created and owned by Coffee Stain Studios, who hold the copyright of Satisfactory.
