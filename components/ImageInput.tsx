@@ -85,7 +85,6 @@ export default function ImageInput({ imageError, existingImageUrls }: { imageErr
                       type="file"
                       name={`image-${index}`}
                       accept="image/jpeg, image/jpg, image/png, image/webp"
-                      size={maxImageSize}
                       className="bg-transparent w-full h-full opacity-0 cursor-pointer"
                       onChange={(event) => handleOnChange(event, index)}
                     />
