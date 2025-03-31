@@ -7,6 +7,8 @@ export default function ImageInput({ imageError, existingImageUrls }: { imageErr
   const [images, setImages] = useState<(File | undefined)[]>(Array.from({ length: 3 }))
   const [imageUrls, setImageUrls] = useState<string[]>(existingImageUrls || [])
 
+  const maxImageSize = 1000000 // 1MB
+
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
     const files = event.target.files
 
@@ -14,6 +16,11 @@ export default function ImageInput({ imageError, existingImageUrls }: { imageErr
       const image = files[0]
       const newImages = [...images]
       const newImageUrls = [...imageUrls]
+
+      if (image && image?.size > maxImageSize) {
+        alert('Image size must be less than 1MB')
+        return
+      }
 
       newImages[index] = image
       newImageUrls[index] = ''
@@ -78,6 +85,7 @@ export default function ImageInput({ imageError, existingImageUrls }: { imageErr
                       type="file"
                       name={`image-${index}`}
                       accept="image/jpeg, image/jpg, image/png, image/webp"
+                      size={maxImageSize}
                       className="bg-transparent w-full h-full opacity-0 cursor-pointer"
                       onChange={(event) => handleOnChange(event, index)}
                     />
@@ -94,6 +102,7 @@ export default function ImageInput({ imageError, existingImageUrls }: { imageErr
           <p>{imageError}</p>
         </div>
       }
+      <p className="text-main-gray">- Maximum image size: 1MB</p>
       <p className="text-main-gray mb-4">- Please upload images with 16:9 aspect ratio</p>
     </>
   )
