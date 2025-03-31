@@ -106,15 +106,9 @@ export const CreateBlueprintFormSchema = object({
   description: string().max(1024, { message: 'Description must be at most 1024 characters long.' }),
   images: any()
     .refine((images) => images?.length > 0, "At least 1 image is required.")
-    .refine((images) => images?.length <= 3, "At most 3 images are allowed.")
-    .refine((files) => files?.every((file: File) => file.size < 1000000), {
-      message: `Image size must be less than 1MB.`,
-    }),
+    .refine((images) => images?.length <= 3, "At most 3 images are allowed."),
   files: any()
-    .refine((files) => files?.length == 2, "Both .sbp and .sbpcfg files are required.")
-    .refine((files) => files?.every((file: File) => file.size < 1000000), {
-      message: `File size must be less than 1MB.`,
-    }),
+    .refine((files) => files?.length == 2, "Both .sbp and .sbpcfg files are required."),
   categories: array(CategoriesEnum)
     .min(1, { message: 'At least one category has to selected.' })
     .max(3, { message: 'At most 3 categories can be selected.' })
@@ -125,10 +119,7 @@ export const UpdateBlueprintFormSchema = object({
   description: string().max(1024, { message: 'Description must be at most 512 characters long.' }),
   images: any()
     .refine((images) => images?.length > 0, "At least 1 image is required.")
-    .refine((images) => images?.length <= 3, "At most 3 images are allowed.")
-    .refine((files) => files?.every((file: File) => file.size < 1000000), {
-      message: `Image size must be less than 1MB.`,
-    }),
+    .refine((images) => images?.length <= 3, "At most 3 images are allowed."),
   categories: array(CategoriesEnum)
     .min(1, { message: 'At least one category has to selected.' })
     .max(3, { message: 'At most 3 categories can be selected.' })
