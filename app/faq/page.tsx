@@ -34,7 +34,7 @@ export default function FAQPage() {
           <h2 className="text-xl md:text-lg sm:text-base font-semibold">Where can I find my blueprint files?</h2>
           <div className="w-full h-[1px] bg-main-orange" />
           <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
-            If you want to share your blueprint but don't know where to find your <code>.sbp</code> and <code>.sbpcfg</code> files, you can find your blueprint files in this directory:
+            If you want to share your blueprint but don&apos;t know where to find your <code>.sbp</code> and <code>.sbpcfg</code> files, you can find your blueprint files in this directory:
           </p>
           <div className="flex items-center bg-dark-bg text-sm p-4 rounded mt-2 overflow-x-auto">
             <span className="flex-1">%localappdata%/FactoryGame/Saved/SaveGames/blueprints/</span>
@@ -59,7 +59,7 @@ export default function FAQPage() {
             At that direction, select the folder with the name of your savegame
           </p>
           <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
-            If you don't see the blueprints in-game, try restarting the game or reloading the savegame.
+            If you don&apos;t see the blueprints in-game, try restarting the game or reloading the savegame.
           </p>
         </div>
       </div>
