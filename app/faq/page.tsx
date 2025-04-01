@@ -59,6 +59,9 @@ export default function FAQPage() {
             At that direction, select the folder with the name of your savegame
           </p>
           <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
+            If directory doesn&apos;t exist, create a sample blueprint in-game, and it will create the directory for you.
+          </p>
+          <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
             If you don&apos;t see the blueprints in-game, try restarting the game or reloading the savegame.
           </p>
         </div>
