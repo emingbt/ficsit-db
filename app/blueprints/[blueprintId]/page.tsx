@@ -12,11 +12,22 @@ import AdBanner from "../../../components/AdBanner"
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
   const blueprintId = parseInt(params.blueprintId)
+
+  // If blueprintId is not a number, don't fetch the blueprint
+  if (isNaN(blueprintId)) {
+    return (
+      <Main classname="flex flex-col items-center justify-center">
+        <p className="text-xl mb-4">Invalid blueprint ID</p>
+        <Link
+          href="/blueprints">
+          <p className="text-logo-blue hover:underline">Go back to blueprints</p>
+        </Link>
+      </Main>
+    )
+  }
+
   const blueprint = await getBlueprintById(blueprintId)
 
-  const { getAccessToken } = getKindeServerSession()
-  const accessToken = await getAccessToken()
-  const user = getPropertiesFromAccessToken(accessToken)
 
   if (!blueprint) {
     return (
@@ -29,6 +40,10 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
       </Main>
     )
   }
+
+  const { getAccessToken } = getKindeServerSession()
+  const accessToken = await getAccessToken()
+  const user = getPropertiesFromAccessToken(accessToken)
 
   return (
     <Main classname="bg-dark-bg" dontFill>
