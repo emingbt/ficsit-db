@@ -57,7 +57,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
             <p>{blueprints.length}</p>
           </div>
           <div className="w-full h-full sm:h-16 flex items-center justify-between bg-main-bg px-4">
-            <p>Blueprints downloads:</p>
+            <p>Blueprint downloads:</p>
             <p>{blueprintDownloads}</p>
           </div>
         </div>
