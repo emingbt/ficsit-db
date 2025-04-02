@@ -31,11 +31,12 @@ export const checkIfRated = async (blueprintId: number, pioneerName: string) => 
   return blueprintRating?.rating
 }
 
-export const incrementDownloads = async (blueprintId: number) => {
+export const incrementDownloads = async (blueprintId: number, pioneerName: string) => {
   try {
     await incrementBlueprintDownloads(blueprintId)
 
     revalidatePath(`/blueprints/${blueprintId}`)
+    revalidatePath(`/pioneers/${pioneerName}`)
   } catch (error) {
     console.log(error)
     throw new Error('Failed to increment the blueprint downloads.')
