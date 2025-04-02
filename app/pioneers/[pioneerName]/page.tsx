@@ -22,6 +22,13 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
   }
 
   const blueprints = await getAllBlueprintsByPioneer(pioneerName)
+  let blueprintDownloads = 0
+
+  if (blueprints.length > 0) {
+    blueprintDownloads = blueprints.reduce((acc, blueprint) => {
+      return acc + blueprint.downloads
+    }, 0)
+  }
 
   return (
     <Main classname="flex flex-col bg-dark-bg">
@@ -50,9 +57,8 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
             <p>{blueprints.length}</p>
           </div>
           <div className="w-full h-full sm:h-16 flex items-center justify-between bg-main-bg px-4">
-            {/* //Will be implemented in the next step */}
             <p>Blueprints downloads:</p>
-            <p>0</p>
+            <p>{blueprintDownloads}</p>
           </div>
         </div>
         <AdBanner classname="h-full w-[336px] 3xl:w-[768px] hidden lg:flex items-center justify-center"
