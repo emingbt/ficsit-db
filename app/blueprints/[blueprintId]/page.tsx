@@ -7,7 +7,7 @@ import { getBlueprintById } from "../../../services/blueprint"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
-import { Download, Star } from "lucide-react"
+import { Star } from "lucide-react"
 import AdBanner from "../../../components/AdBanner"
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
@@ -110,7 +110,11 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           dynamicHeight={false}
           adHeight={50}
         />
-        <DownloadSection id={blueprintId} files={blueprint.files} downloads={blueprint.downloads} averageRating={blueprint.averageRating} />
+        <DownloadSection
+          id={blueprintId}
+          files={blueprint.files}
+          pioneerName={blueprint.pioneerName}
+        />
       </div>
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
         <ImageCarousel images={blueprint.images} title={blueprint.title} />

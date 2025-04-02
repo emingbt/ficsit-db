@@ -1,18 +1,11 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
 import { incrementDownloads } from "./action"
-import DownloadIcon from "../../../assets/downloadIcon.svg"
-import StarIcon from "../../../assets/starIcon.svg"
 
-
-export default function DownloadSection({ id, files, downloads, averageRating }: { id: number, files: string[], downloads: number, averageRating: number }) {
-  const [downloadCount, setDownloadCount] = useState(downloads)
-
+export default function DownloadSection({ id, files, pioneerName }: { id: number, files: string[], pioneerName: string }) {
   const handleDownload = () => {
-    incrementDownloads(id)
-    setDownloadCount(downloadCount + 1)
+    incrementDownloads(id, pioneerName)
   }
 
   return (
