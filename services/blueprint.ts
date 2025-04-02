@@ -66,8 +66,10 @@ export const getAllBlueprintsByPioneer = async (pioneerName: string) => {
         id: true,
         title: true,
         images: true,
-        averageRating: true
-      }
+        averageRating: true,
+        downloads: true,
+      },
+      orderBy: desc(Blueprint.createdAt)
     })
 
     return blueprints
