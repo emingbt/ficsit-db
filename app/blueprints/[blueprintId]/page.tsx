@@ -111,7 +111,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           adHeight={50}
         />
         <DownloadSection
-          id={blueprintId}
+          blueprintId={blueprintId}
           files={blueprint.files}
           pioneerName={blueprint.pioneerName}
         />

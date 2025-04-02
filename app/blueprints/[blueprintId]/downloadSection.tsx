@@ -3,9 +3,9 @@
 import Link from "next/link"
 import { incrementDownloads } from "./action"
 
-export default function DownloadSection({ id, files, pioneerName }: { id: number, files: string[], pioneerName: string }) {
+export default function DownloadSection({ blueprintId, files, pioneerName }: { blueprintId: number, files: string[], pioneerName: string }) {
   const handleDownload = () => {
-    incrementDownloads(id, pioneerName)
+    incrementDownloads(blueprintId, pioneerName)
   }
 
   return (
