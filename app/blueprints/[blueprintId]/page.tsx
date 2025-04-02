@@ -7,16 +7,27 @@ import { getBlueprintById } from "../../../services/blueprint"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
-import { Download, Star } from "lucide-react"
+import { Star } from "lucide-react"
 import AdBanner from "../../../components/AdBanner"
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
   const blueprintId = parseInt(params.blueprintId)
+
+  // If blueprintId is not a number, don't fetch the blueprint
+  if (isNaN(blueprintId)) {
+    return (
+      <Main classname="flex flex-col items-center justify-center">
+        <p className="text-xl mb-4">Invalid blueprint ID</p>
+        <Link
+          href="/blueprints">
+          <p className="text-logo-blue hover:underline">Go back to blueprints</p>
+        </Link>
+      </Main>
+    )
+  }
+
   const blueprint = await getBlueprintById(blueprintId)
 
-  const { getAccessToken } = getKindeServerSession()
-  const accessToken = await getAccessToken()
-  const user = getPropertiesFromAccessToken(accessToken)
 
   if (!blueprint) {
     return (
@@ -29,6 +40,10 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
       </Main>
     )
   }
+
+  const { getAccessToken } = getKindeServerSession()
+  const accessToken = await getAccessToken()
+  const user = getPropertiesFromAccessToken(accessToken)
 
   return (
     <Main classname="bg-dark-bg" dontFill>
@@ -110,7 +125,11 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           dynamicHeight={false}
           adHeight={50}
         />
-        <DownloadSection id={blueprintId} files={blueprint.files} downloads={blueprint.downloads} averageRating={blueprint.averageRating} />
+        <DownloadSection
+          blueprintId={blueprintId}
+          files={blueprint.files}
+          pioneerName={blueprint.pioneerName}
+        />
       </div>
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
         <ImageCarousel images={blueprint.images} title={blueprint.title} />
