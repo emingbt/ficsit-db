@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 import { Inter, Roboto } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 import GoogleAdsense from '../utils/googleAdsense'
 import './global.css'
 
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: {
           <div className='w-full h-full min-h-[calc(100vh-4rem)] flex flex-col items-center p-5 xl:p-8 lg:mt-16 bg-main-bg'>
             {children}
             <SpeedInsights />
+            <Analytics />
           </div>
         </div>
         <CookieConsent />
