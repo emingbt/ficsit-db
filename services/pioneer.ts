@@ -9,7 +9,7 @@ import { CreatePioneerFormSchema, UpdateAvatarFormSchema } from '../utils/zod'
 export const getPioneerByName = cache(async (name: string) => {
   try {
     const data = await db.query.Pioneer.findFirst({
-      where: eq(Pioneer.name, name),
+      where: eq(Pioneer.name, name.toLowerCase()),
 
       columns: {
         name: true,

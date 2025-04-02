@@ -49,8 +49,8 @@ export const CreatePioneerFormSchema = object({
   name: string()
     .min(3, { message: 'Name must be at least 3 characters long.' })
     .max(24, { message: 'Name must be at most 24 characters long.' })
-    .regex(/^[a-zA-Z0-9_-]*$/, {
-      message: 'Name can only include letters, numbers, -dashes, _underscores.',
+    .regex(/^[a-z0-9_-]*$/, {
+      message: 'Name can only include lowercase letters, numbers, -dashes, _underscores.',
     })
     .regex(/^(?![-_]+$)/, {
       message: 'Name must contain at least one letter or number.',
