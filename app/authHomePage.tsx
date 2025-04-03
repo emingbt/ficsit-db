@@ -1,7 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import DesktopAd from "../components/DesktopAd"
-import MobileAd from "../components/MobileAd"
 import TopRatedBlueprintOfWeek from "../components/TopRatedBlueprint"
 import Main from "../components/Main"
 import AdBanner from "../components/AdBanner"
