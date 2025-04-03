@@ -39,14 +39,14 @@ export default function RatingBlueprint({ blueprintId, pioneerName }: { blueprin
     <div className="w-full h-24 sm:h-36 lg:h-24 xl:h-36 flex flex-col items-center justify-center gap-1 xl:gap-2 bg-main-bg">
       {isRated ?
         <h3 className="xl:text-xl font-semibold text-main-orange text-center">
-          You gave <br className="hidden lg:block " /> {rating} Stars!
+          You gave {rating} Stars!
         </h3> :
         pioneerName ?
           <h3 className="xl:text-xl font-semibold text-main-orange text-center">
-            Rate this <br className="hidden lg:block " /> Blueprint!
+            Rate this Blueprint!
           </h3> :
           <h3 className="xl:text-xl font-semibold text-main-orange text-center">
-            Login to <br className="hidden lg:block " /> rate Blueprint!
+            Login to rate Blueprint!
           </h3>
       }
       <div className="flex flex-row gap-2">
@@ -56,8 +56,8 @@ export default function RatingBlueprint({ blueprintId, pioneerName }: { blueprin
               handleOnClick(index + 1)
             }}>
               <Star
-                color={index < rating ? 'bg-main-orange' : 'bg-black'}
-                className={`w-5 h-5 sm:w-6 sm:h-6 ${index < rating ? 'fill-main-orange' : 'fill-black'}`}
+                color={index < rating ? 'bg-main-orange' : 'bg-dark-bg'}
+                className={`w-5 h-5 sm:w-6 sm:h-6 ${index < rating ? 'fill-main-orange' : 'fill-dark-bg'}`}
               />
             </button>
           ))
