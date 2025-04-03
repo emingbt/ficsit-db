@@ -4,7 +4,6 @@ import { revalidatePath } from "next/cache"
 import { incrementBlueprintDownloads } from "../../../services/blueprint"
 import { createOrUpdateBlueprintRating, getBlueprintRating } from "../../../services/rating"
 
-
 export const rateBlueprint = async (blueprintId: number, pioneerName: string, rating: number) => {
   try {
     const averageRating = await createOrUpdateBlueprintRating(blueprintId, pioneerName, rating)
