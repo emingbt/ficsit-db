@@ -1,11 +1,30 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
+import { Metadata } from 'next'
 import { getBuilding } from '../../../utils/gameDataFetcher'
 import BuildingExtension from '../../../components/building/BuildingExtension'
 import Recipes from '../../../components/Recipes'
 import ExtractableResources from '../../../components/building/ExtractableResources'
 import Fuels from '../../../components/building/Fuels'
 import Main from '../../../components/Main'
+
+export async function generateMetadata({ params }: { params: { building: string } }): Promise<Metadata> {
+  const data = await getBuilding(params.building)
+  const building = data?.building
+
+  // If building is not found, return a default metadata
+  if (!building) {
+    return {
+      title: "Building Not Found - FicsitDB",
+      description: "Building not found in FicsitDB.",
+    }
+  }
+
+  return {
+    title: building ? `${building.name} - FicsitDB` : "Building Not Found - FicsitDB",
+    description: building ? `Discover how to build and use the ${building.name} in Satisfactory.` : "Building not found in FicsitDB.",
+  }
+}
 
 export default async function BuildingPage({ params }: { params: { building: string } }) {
   const slug = params.building

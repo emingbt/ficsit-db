@@ -1,8 +1,27 @@
 import Link from "next/link"
 import Image from "next/image"
+import { Metadata } from "next"
 import { getItem } from "../../../utils/gameDataFetcher"
 import Recipes from "../../../components/Recipes"
 import Main from "../../../components/Main"
+
+export async function generateMetadata({ params }: { params: { item: string } }): Promise<Metadata> {
+  const data = await getItem(params.item)
+  const item = data?.item
+
+  // If item is not found, return a default metadata
+  if (!item) {
+    return {
+      title: "Item Not Found - FicsitDB",
+      description: "Item not found in FicsitDB.",
+    }
+  }
+
+  return {
+    title: item ? `${item.name} - FicsitDB` : "Item Not Found - FicsitDB",
+    description: item ? `Learn about the ${item.name} in Satisfactory, including its uses and recipes.` : "Item not found in FicsitDB.",
+  }
+}
 
 export default async function ItemPage({ params }: { params: { item: string } }) {
   const slug = params.item

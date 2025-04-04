@@ -15,8 +15,53 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"], varia
 const inter = Inter({ subsets: ["latin"], variable: "--font-secondary" })
 
 export const metadata: Metadata = {
-  title: 'Ficsit DB',
-  description: 'Ficsit DB is a database for Satisfactory items, buildings and recipes.'
+  title: 'Ficsit DB - Built by pioneers for pioneers',
+  description: `FicsitDB is the complete database for Satisfactory players!
+    Explore a vast collection of in-game items, buildings, and recipes to
+    optimize your factory. Browse, share, and download community-made
+    blueprints to streamline your production. Whether you're planning efficient
+    layouts or searching for the best designs, FicsitDB is your go-to resource
+    for everything Satisfactory.`,
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://ficsitdb.com'),
+  openGraph: {
+    title: 'FicsitDB - The Ultimate Satisfactory Database',
+    description: `Your go-to resource for Satisfactory! View items, buildings,
+      recipes, and share blueprints with the community.`,
+    url: 'https://ficsitdb.com',
+    siteName: 'FicsitDB',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'FicsitDB - The Ultimate Satisfactory Database',
+      }
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FicsitDB - Built by Pioneers for Pioneers',
+    description: `Discover the best Satisfactory blueprints, items, buildings,
+      and recipes. Join the community and optimize your factory!`,
+    images: ['/images/og-image.png'],
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon.ico',
+  },
+  manifest: '/site.webmanifest',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://ficsitdb.com',
+  },
+  verification: {
+    google: 'WZWYLdWJWsI5eWu-HQJ5TsvmE0sggGnQClIdb2nHoqQ',
+  }
 }
 
 export default function RootLayout({ children }: {

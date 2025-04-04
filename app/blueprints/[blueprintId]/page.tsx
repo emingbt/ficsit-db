@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { Metadata } from "next"
 import RateBlueprint from "./rateBlueprint"
 import DownloadSection from "./downloadSection"
 import ImageCarousel from "../../../components/ImageCarousel"
@@ -9,6 +10,24 @@ import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
 import { Star } from "lucide-react"
 import AdBanner from "../../../components/AdBanner"
+
+export async function generateMetadata({ params }: { params: { blueprintId: string } }): Promise<Metadata> {
+  const blueprintId = parseInt(params.blueprintId)
+  // If blueprintId is not a number, don't fetch the blueprint
+  if (isNaN(blueprintId)) {
+    return {
+      title: "Invalid blueprint ID - FicsitDB",
+      description: "Invalid blueprint ID",
+    }
+  }
+
+  const blueprint = await getBlueprintById(blueprintId)
+
+  return {
+    title: blueprint ? `${blueprint.title} - FicsitDB` : "Blueprint Not Found - FicsitDB",
+    description: blueprint ? `Download or explore the blueprint: ${blueprint.title} in Satisfactory.` : "Blueprint not found in FicsitDB.",
+  }
+}
 
 export default async function BlueprintPage({ params }: { params: { blueprintId: string } }) {
   const blueprintId = parseInt(params.blueprintId)
