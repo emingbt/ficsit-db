@@ -13,7 +13,7 @@ export default function BlueprintCard({ blueprint, isEdit }: { blueprint: Card, 
   return (
     <div>
       <Link href={`/${isEdit ? "edit-blueprint" : "blueprints"}/${blueprint.id}`}>
-        <div className="flex flex-col items-center justify-center bg-main-bg lg:hover:bg-dark-bg rounded-md cursor-pointer p-1 sm:p-2">
+        <div className="flex flex-col items-center justify-center bg-main-bg lg:hover:bg-dark-bg rounded-sm sm:rounded-md cursor-pointer p-1 sm:p-2">
           <div className="w-full aspect-video">
             <div className='w-full h-full relative'>
               <Image
@@ -38,7 +38,7 @@ export default function BlueprintCard({ blueprint, isEdit }: { blueprint: Card, 
                   <StarIcon
                     key={index}
                     //@ts-ignore
-                    className={`w-4 h-4 text-logo-blue ${index < blueprint.averageRating ? 'fill-main-orange' : 'fill-light-bg'}`}
+                    className={`w-3 sm:w-4 h-3 sm:h-4 text-logo-blue ${index < blueprint.averageRating ? 'fill-main-orange' : 'fill-light-bg'}`}
                   />
                 ))
               }
