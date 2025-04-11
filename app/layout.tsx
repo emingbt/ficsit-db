@@ -70,7 +70,24 @@ export default function RootLayout({ children }: {
   return (
     <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
       <head>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57"
+          strategy='afterInteractive' />
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'analytics_storage': 'denied'
+            });
+          `}
+        </Script>
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            gtag('js', new Date());
+            gtag('config', 'G-JSTXP7VT57');
+          `}
+        </Script>
         <Script id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
