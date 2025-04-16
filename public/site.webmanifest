@@ -1,0 +1,21 @@
+{
+  "name": "Ficsit DB",
+  "short_name": "FicsitDB",
+  "description": "A database for Ficsit Pioneers to find and share blueprints, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#141518",
+  "theme_color": "#D79845",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
