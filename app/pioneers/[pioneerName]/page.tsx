@@ -62,14 +62,14 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
           </div>
         </div>
         <AdBanner classname="h-full w-[336px] 3xl:w-[768px] hidden lg:flex items-center justify-center"
-          dataAdSlot="5085063532"
+          dataAdSlot="3904614625"
           dataFullWidthResponsive={false}
           adHeight={280}
           adPadding={4}
         />
       </div>
       <AdBanner classname="w-full h-[50px] sm:h-[90px] flex lg:hidden items-center justify-center mb-2"
-        dataAdSlot="5085063532"
+        dataAdSlot="3904614625"
         dataFullWidthResponsive={false}
         dataAdFormat="fixed"
         dynamicHeight={false}

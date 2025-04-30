@@ -138,7 +138,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           </div>
         </section>
         <AdBanner classname="w-full h-14 flex lg:hidden items-center justify-center"
-          dataAdSlot="8715388606"
+          dataAdSlot="6097316089"
           dataFullWidthResponsive={false}
           dataAdFormat="fixed"
           dynamicHeight={false}
@@ -155,13 +155,13 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
         <div className="w-full lg:w-1/3 flex flex-col flex-grow gap-2 lg:gap-4">
           <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} />
           <AdBanner classname="w-full h-full hidden lg:flex items-center justify-center"
-            dataAdSlot="8715388606"
+            dataAdSlot="9859648886"
             dataFullWidthResponsive={true}
             dynamicHeight={false}
             adPadding={16}
           />
           <AdBanner classname="w-full min-h-64 flex lg:hidden items-center justify-center"
-            dataAdSlot="8715388606"
+            dataAdSlot="9859648886"
             dataFullWidthResponsive={false}
           />
         </div>
@@ -177,7 +177,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           )
         }
         <AdBanner classname={`w-full ${blueprint.description && "lg:w-1/3"} min-h-32 hidden lg:flex items-center justify-center bg-main-bg`}
-          dataAdSlot="4926949738"
+          dataAdSlot="8546567212"
           dataFullWidthResponsive={true}
           adPadding={16}
         />
