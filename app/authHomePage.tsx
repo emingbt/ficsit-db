@@ -18,7 +18,7 @@ export default function AuthHomePage({ pioneer }: {
           <h1 className="w-full flex-1 text-xl lg:text-2xl text-center lg:text-start font-secondary pl-4 overflow-hidden">Hi {pioneer.name}!</h1>
         </div>
         <AdBanner classname="w-7/12 h-full hidden lg:flex items-center justify-center"
-          dataAdSlot="1020178445"
+          dataAdSlot="3454022639"
           data-full-width-responsive={false}
           dataAdFormat="fixed"
           dynamicHeight={false}
@@ -27,7 +27,7 @@ export default function AuthHomePage({ pioneer }: {
         />
       </div>
       <AdBanner classname="w-full h-14 sm:h-24 flex lg:hidden items-center justify-center mb-2"
-        dataAdSlot="1020178445"
+        dataAdSlot="3454022639"
         data-full-width-responsive={false}
         dataAdFormat="fixed"
         dynamicHeight={false}
@@ -57,14 +57,14 @@ export default function AuthHomePage({ pioneer }: {
         </section>
       </div>
       <AdBanner classname="w-full h-14 flex sm:hidden items-center justify-center mb-2"
-        dataAdSlot="7394849252"
+        dataAdSlot="3813115287"
         data-full-width-responsive={false}
         dataAdFormat="fixed"
         dynamicHeight={false}
         adHeight={50}
       />
       <AdBanner classname="w-full h-24 hidden lg:flex items-center justify-center mb-4"
-        dataAdSlot="7394849252"
+        dataAdSlot="3813115287"
         data-full-width-responsive={false}
         dataAdFormat="fixed"
         dynamicHeight={false}
@@ -93,7 +93,7 @@ export default function AuthHomePage({ pioneer }: {
         }
       </section>
       <AdBanner classname="w-full h-64 sm:h-40 flex items-center justify-center"
-        dataAdSlot="5649983742"
+        dataAdSlot="7410397750"
         data-full-width-responsive="true"
       />
     </Main>
