@@ -9,7 +9,6 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
 import { Star } from "lucide-react"
-import AdBanner from "../../../components/AdBanner"
 
 export async function generateMetadata({ params }: { params: { blueprintId: string } }): Promise<Metadata> {
   const blueprintId = parseInt(params.blueprintId)
@@ -137,13 +136,13 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
             </div>
           </div>
         </section>
-        <AdBanner classname="w-full h-14 flex lg:hidden items-center justify-center"
+        {/* <AdBanner classname="w-full h-14 flex lg:hidden items-center justify-center"
           dataAdSlot="6097316089"
           dataFullWidthResponsive={false}
           dataAdFormat="fixed"
           dynamicHeight={false}
           adHeight={50}
-        />
+        /> */}
         <DownloadSection
           blueprintId={blueprintId}
           files={blueprint.files}
@@ -154,7 +153,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
         <ImageCarousel images={blueprint.images} title={blueprint.title} />
         <div className="w-full lg:w-1/3 flex flex-col flex-grow gap-2 lg:gap-4">
           <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} />
-          <AdBanner classname="w-full h-full hidden lg:flex items-center justify-center"
+          {/* <AdBanner classname="w-full h-full hidden lg:flex items-center justify-center"
             dataAdSlot="9859648886"
             dataFullWidthResponsive={true}
             dynamicHeight={false}
@@ -163,24 +162,27 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           <AdBanner classname="w-full min-h-64 flex lg:hidden items-center justify-center"
             dataAdSlot="9859648886"
             dataFullWidthResponsive={false}
-          />
+          /> */}
+          <div className="w-full h-full hidden lg:flex items-center justify-center bg-main-bg p-4">
+            <p className="text-lg text-gray-500 font-bold">🚧 There will be an ad here 🚧 </p>
+          </div>
         </div>
       </div>
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4">
         {
           blueprint.description && (
-            <div className="w-full lg:w-2/3 bg-light-bg text-gray-200 p-4">
+            <div className="w-full bg-light-bg text-gray-200 p-4">
               <h2 className="text-xl font-semibold">Description</h2>
               <div className="w-full h-[1px] bg-gray-500 shadow-md my-1" />
               <pre className="whitespace-pre-wrap font-main">{blueprint.description}</pre>
             </div>
           )
         }
-        <AdBanner classname={`w-full ${blueprint.description && "lg:w-1/3"} min-h-32 hidden lg:flex items-center justify-center bg-main-bg`}
+        {/* <AdBanner classname={`w-full ${blueprint.description && "lg:w-1/3"} min-h-32 hidden lg:flex items-center justify-center bg-main-bg`}
           dataAdSlot="8546567212"
           dataFullWidthResponsive={true}
           adPadding={16}
-        />
+        /> */}
       </div>
     </Main>
   )

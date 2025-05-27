@@ -4,7 +4,6 @@ import { getPioneerByName } from "../../../services/pioneer"
 import Main from "../../../components/Main"
 import BlueprintContainer from "../../../components/BlueprintContainer"
 import Link from "next/link"
-import AdBanner from "../../../components/AdBanner"
 
 export default async function PioneerPage({ params }: { params: { pioneerName: string } }) {
   const pioneerName = params.pioneerName
@@ -44,7 +43,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
             priority
           />
         </div>
-        <div className="h-full w-full flex flex-1 flex-col font-medium text-sm lg:text-lg lg:mr-4">
+        <div className="h-full w-full flex flex-1 flex-col font-medium text-sm lg:text-lg">
           <div className="w-full h-24 hidden sm:flex items-center justify-center bg-black text-lg xl:text-2xl text-center text-white font-semibold">
             {pioneer.name}
           </div>
@@ -61,19 +60,19 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
             <p>{blueprintDownloads}</p>
           </div>
         </div>
-        <AdBanner classname="h-full w-[336px] 3xl:w-[768px] hidden lg:flex items-center justify-center"
+        {/* <AdBanner classname="h-full w-[336px] 3xl:w-[768px] hidden lg:flex items-center justify-center ml-4"
           dataAdSlot="3904614625"
           dataFullWidthResponsive={false}
           adHeight={280}
           adPadding={4}
-        />
+        /> */}
       </div>
-      <AdBanner classname="w-full h-[50px] sm:h-[90px] flex lg:hidden items-center justify-center mb-2"
+      {/* <AdBanner classname="w-full h-[50px] sm:h-[90px] flex lg:hidden items-center justify-center mb-2"
         dataAdSlot="3904614625"
         dataFullWidthResponsive={false}
         dataAdFormat="fixed"
         dynamicHeight={false}
-      />
+      /> */}
       <BlueprintContainer blueprints={blueprints} title="Blueprints" />
     </Main>
   )

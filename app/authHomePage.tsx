@@ -2,7 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import TopRatedBlueprintOfWeek from "../components/TopRatedBlueprint"
 import Main from "../components/Main"
-import AdBanner from "../components/AdBanner"
 
 export default function AuthHomePage({ pioneer }: {
   pioneer: {
@@ -14,25 +13,25 @@ export default function AuthHomePage({ pioneer }: {
   return (
     <Main classname="bg-dark-bg" dontFill>
       <div className="w-full h-12 lg:h-24 flex items-center justify-between bg-dark-bg mb-2 lg:mb-4 gap-4">
-        <div className="w-full lg:w-5/12 h-full flex items-center justify-center bg-main-bg">
+        <div className="w-full h-full flex items-center justify-center bg-main-bg">
           <h1 className="w-full flex-1 text-xl lg:text-2xl text-center lg:text-start font-secondary pl-4 overflow-hidden">Hi {pioneer.name}!</h1>
         </div>
-        <AdBanner classname="w-7/12 h-full hidden lg:flex items-center justify-center"
+        {/* <AdBanner classname="w-7/12 h-full hidden lg:flex items-center justify-center"
           dataAdSlot="3454022639"
           data-full-width-responsive={false}
           dataAdFormat="fixed"
           dynamicHeight={false}
           adHeight={90}
           adPadding={16}
-        />
+        /> */}
       </div>
-      <AdBanner classname="w-full h-14 sm:h-24 flex lg:hidden items-center justify-center mb-2"
+      {/* <AdBanner classname="w-full h-14 sm:h-24 flex lg:hidden items-center justify-center mb-2"
         dataAdSlot="3454022639"
         data-full-width-responsive={false}
         dataAdFormat="fixed"
         dynamicHeight={false}
         adHeight={50}
-      />
+      /> */}
       <div className="w-full sm:h-64 lg:h-96 flex flex-col sm:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
         <TopRatedBlueprintOfWeek />
         <section className="w-full sm:w-7/12 sm:h-full relative bg-main-bg p-4">
@@ -56,7 +55,7 @@ export default function AuthHomePage({ pioneer }: {
           </div>
         </section>
       </div>
-      <AdBanner classname="w-full h-14 flex sm:hidden items-center justify-center mb-2"
+      {/* <AdBanner classname="w-full h-14 flex sm:hidden items-center justify-center mb-2"
         dataAdSlot="3813115287"
         data-full-width-responsive={false}
         dataAdFormat="fixed"
@@ -69,8 +68,8 @@ export default function AuthHomePage({ pioneer }: {
         dataAdFormat="fixed"
         dynamicHeight={false}
         adHeight={90}
-      />
-      <section className="w-full sm:h-32 lg:h-72 flex flex-col sm:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
+      /> */}
+      <section className="w-full sm:h-32 lg:h-72 3xl:h-96 flex flex-col sm:flex-row gap-2 lg:gap-4">
         {
           ["items", "buildings", "blueprints"].map((element, index) => {
             return (
@@ -92,10 +91,10 @@ export default function AuthHomePage({ pioneer }: {
           })
         }
       </section>
-      <AdBanner classname="w-full h-64 sm:h-40 flex items-center justify-center"
+      {/* <AdBanner classname="w-full h-64 sm:h-40 flex items-center justify-center mt-2 lg:mt-4"
         dataAdSlot="7410397750"
         data-full-width-responsive="true"
-      />
+      /> */}
     </Main>
   )
 }
