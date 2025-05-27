@@ -163,6 +163,9 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
             dataAdSlot="9859648886"
             dataFullWidthResponsive={false}
           /> */}
+          <div className="w-full h-full hidden lg:flex items-center justify-center bg-main-bg p-4">
+            <p className="text-lg text-gray-500 font-bold">🚧 There will be an ad here 🚧 </p>
+          </div>
         </div>
       </div>
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4">
