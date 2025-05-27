@@ -14,9 +14,6 @@ export default async function BuildingsPage({
     <div className="w-full h-full flex flex-col items-center justify-center p-2">
       <BuildingCategories selectedCategory={selectedCategory} />
       <Main classname="bg-dark-bg" dontFill>
-        <Link href="/deprecated" className='w-full h-6 sm:h-8 flex items-center justify-center bg-red-800 hover:bg-red-700 mb-2 sm:mb-4'>
-          <p className='text-white text-center text-xs sm:text-base'>Buildings are deprecated</p>
-        </Link>
         <BuildingsSection selectedCategory={selectedCategory} />
       </Main>
     </div>
