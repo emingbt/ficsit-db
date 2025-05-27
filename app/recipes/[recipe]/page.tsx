@@ -23,9 +23,6 @@ export default async function RecipePage({ params }: {
         <span className="text-main-orange">Recipe:</span>
         <h1 className="text-white text-xl ml-2">{recipe.name}</h1>
       </div>
-      <Link href="/deprecated" className='w-full h-6 sm:h-8 flex items-center justify-center bg-red-800 hover:bg-red-700 mb-2 lg:mb-4'>
-        <p className='text-white text-center text-xs sm:text-base'>Recipes are deprecated</p>
-      </Link>
       <RecipeSection recipe={recipe} />
     </Main>
   )

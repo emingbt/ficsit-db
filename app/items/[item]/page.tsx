@@ -42,9 +42,6 @@ export default async function ItemPage({ params }: { params: { item: string } })
 
   return (
     <Main classname="flex flex-col bg-dark-bg" dontFill>
-      <Link href="/deprecated" className='w-full h-6 flex sm:hidden items-center justify-center bg-red-800 hover:bg-red-700'>
-        <p className='text-white text-center text-xs'>Items are deprecated</p>
-      </Link>
       <section className="w-full flex flex-col md:flex-row items-center justify-center bg-main-bg text-xs sm:text-sm">
         <div className="w-full md:w-3/5 h-24 sm:h-32 md:h-40 lg:h-48 flex flex-row items-center justify-center">
           <div className="h-full aspect-square bg-light-bg p-2 md:p-4">
@@ -78,9 +75,6 @@ export default async function ItemPage({ params }: { params: { item: string } })
           </div>
         </div>
         <div className="w-full md:w-2/5 h-full sm:h-32 md:h-40 lg:h-48 relative flex items-center justify-center p-6">
-          <Link href="/deprecated" className='w-full h-8 hidden absolute top-0 sm:flex items-center justify-center bg-red-800 hover:bg-red-700'>
-            <p className='text-white text-center'>Items are deprecated</p>
-          </Link>
           <p>{item.description}</p>
         </div>
       </section>
