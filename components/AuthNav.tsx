@@ -11,7 +11,6 @@ export default function AuthNavigation() {
 
   // fetch the pioneer data from the store as pioneer
   const { name, avatar, color, setAvatar, setColor, setName } = usePioneerStore((state) => state)
-  console.log('AuthNavigation', { name, avatar, color })
   pioneer = { name, avatar, color }
 
   // if the pioneer data is not available, get it from the access token
