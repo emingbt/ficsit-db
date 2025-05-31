@@ -5,6 +5,7 @@ import { UpdateAvatarFormSchema } from "../../utils/zod"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPioneerByEmail, updatePioneerAvatar } from "../../services/pioneer"
 import { updateKindeUserProperties } from "../../services/kinde"
+import { getAllBlueprintsByPioneer } from "../../services/blueprint"
 
 export async function updateAvatar(state, formData: FormData) {
   // 1. Validate the form data
@@ -66,6 +67,12 @@ export async function updateAvatar(state, formData: FormData) {
     await refreshTokens()
 
     revalidatePath(`/pioneers/${pioneer.name}`)
+
+    // Get the blueprints of the pioneer and revalidate their paths
+    const blueprints = await getAllBlueprintsByPioneer(pioneer.name)
+    blueprints.forEach((blueprint) => {
+      revalidatePath(`/blueprints/${blueprint.id}`)
+    })
 
     return {
       success: {
