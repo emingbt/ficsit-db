@@ -102,6 +102,10 @@ export async function createPioneer(state, formData: FormData) {
     }
   }
 
-  // 6. Redirect to the home page
-  redirect('/')
+  // 6. Return success
+  return {
+    success: {
+      submit: 'Your pioneer has been created successfully.'
+    }
+  }
 }
