@@ -1,9 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 import { createPioneer } from './action'
+import { usePioneerStore } from '../../utils/zustand'
+import { redirect } from 'next/navigation'
 
 export default function CreatePioneerForm() {
   const avatars = [
@@ -36,6 +38,20 @@ export default function CreatePioneerForm() {
 
   let nameError = state?.error?.name
   let submitError = state?.error?.submit
+  let submitSuccess = state?.success?.submit
+
+  const { setAvatar, setColor, setName } = usePioneerStore((state) => state)
+
+  useEffect(() => {
+    if (submitSuccess) {
+      setAvatar(selectedAvatar)
+      setColor(selectedColor)
+      setName(username)
+
+      // Redirect to the profile page after successful creation
+      redirect('/')
+    }
+  }, [selectedAvatar, selectedColor, submitSuccess])
 
   return (
     <section className='w-full'>
@@ -70,7 +86,10 @@ export default function CreatePioneerForm() {
           rounded-none outline-none focus:border-b-2 border-${!nameError ? 'main-orange' : 'error'}
           ${nameError && 'border-b-2 border-error'}`
           }
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => {
+            setUsername(e.target.value)
+            setName(e.target.value)
+          }}
         />
         {
           nameError &&
@@ -100,6 +119,7 @@ export default function CreatePioneerForm() {
                 type='radio'
                 onChange={() => {
                   setSelectedAvatar(avatar)
+                  setAvatar(avatar)
                 }}
               />
             </div>
@@ -118,6 +138,7 @@ export default function CreatePioneerForm() {
                 type='radio'
                 onChange={() => {
                   setSelectedColor(color)
+                  setColor(color)
                 }}
               />
             </div>

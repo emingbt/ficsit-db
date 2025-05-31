@@ -1,9 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 import { updateAvatar } from './action'
+import { usePioneerStore } from '../../utils/zustand'
 
 import type { Pioneer } from '../../interfaces'
 
@@ -15,6 +16,16 @@ export default function AvatarSection({ pioneer }: { pioneer: Pioneer }) {
 
   const submitError = state.error?.submit
   const submitSuccess = state.success?.submit
+
+  // Update the store with the new avatar and color on successful submission
+  const { setAvatar, setColor } = usePioneerStore((state) => state)
+
+  useEffect(() => {
+    if (submitSuccess) {
+      setAvatar(selectedAvatar)
+      setColor(selectedColor)
+    }
+  }, [selectedAvatar, selectedColor, submitSuccess])
 
   const avatars = [
     "pioneer",
@@ -69,6 +80,8 @@ export default function AvatarSection({ pioneer }: { pioneer: Pioneer }) {
                   onChange={() => {
                     // @ts-ignore
                     setSelectedAvatar(avatar)
+                    submitSuccess && (state.success.submit = '')
+                    submitError && (state.error.submit = '')
                   }}
                 />
               </div>
@@ -88,12 +101,16 @@ export default function AvatarSection({ pioneer }: { pioneer: Pioneer }) {
                   onChange={() => {
                     // @ts-ignore
                     setSelectedColor(color)
+                    submitSuccess && (state.success.submit = '')
+                    submitError && (state.error.submit = '')
                   }}
                 />
               </div>
             ))}
           </div>
-          <UpdateAvatarButton isChanged={isChanged} />
+          <UpdateAvatarButton
+            isChanged={isChanged}
+          />
           {submitError && <p className='text-red-500 text-sm'>{submitError}</p>}
           {submitSuccess && <p className='text-green-500 text-sm'>{submitSuccess}</p>}
         </form>
@@ -102,7 +119,7 @@ export default function AvatarSection({ pioneer }: { pioneer: Pioneer }) {
   )
 }
 
-export function UpdateAvatarButton({ isChanged }: { isChanged: boolean }) {
+function UpdateAvatarButton({ isChanged }: { isChanged: boolean }) {
   const { pending } = useFormStatus()
 
   return (
