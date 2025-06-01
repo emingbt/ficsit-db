@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
           <p>
             Ficsit DB (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) respects your privacy and is committed to protecting your personal data.
             This privacy policy explains how we collect, use, store, and protect your information when you visit our website,
-            https://www.ficsitdb.app (&quot;Site&quot;).
+            https://www.ficsitdb.com (&quot;Site&quot;).
           </p>
         </section>
         <section className="mb-8">
