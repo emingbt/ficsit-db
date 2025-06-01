@@ -105,17 +105,17 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
               <div className="flex flex-row flex-grow items-center justify-between gap-4">
                 <p>Rating:</p>
                 <div className="flex flex-row gap-1">
-                  <div className="flex flex-row gap-1">
-                    {
-                      Array.from({ length: 5 }).map((_, index) => (
-                        <Star
-                          key={index}
-                          color={index < blueprint.averageRating ? 'bg-main-orange' : 'bg-main-bg'}
-                          className={`w-5 h-5 sm:w-6 sm:h-6 ${index < blueprint.averageRating ? 'fill-main-orange' : 'fill-main-bg'}`}
-                        />
-                      ))
-                    }
+                  <div className="relative w-6 h-6 flex flex-row items-center text-transparent">
+                    <Star className="w-5 h-5 fill-main-bg absolute top-0 left-0" />
+
+                    <div
+                      className="absolute top-0 left-0 h-full overflow-hidden"
+                      style={{ width: `${(blueprint.averageRating / 5) * 100 - 8}%` }}
+                    >
+                      <Star className="w-5 h-5 fill-main-orange" />
+                    </div>
                   </div>
+
                   <p className="font-normal">( <span className="font-semibold">{blueprint.averageRating.toFixed(1)}</span> )</p>
                 </div>
               </div>

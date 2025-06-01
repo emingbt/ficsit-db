@@ -6,6 +6,7 @@ import createBlueprint from "./action"
 import CategoryInput from "../../components/CategoryInput"
 import ImageInput from "../../components/ImageInput"
 import FileInput from "../../components/FileInput"
+import { redirect } from "next/navigation"
 
 export default function CreateBlueprintForm() {
   const [state, action] = useFormState(createBlueprint, undefined)
@@ -18,6 +19,11 @@ export default function CreateBlueprintForm() {
   const submitError = state?.error?.submit
   const submitSuccess = state?.success?.submit
   const blueprintId = state?.success?.data
+
+  if (submitSuccess && blueprintId) {
+    // If the blueprint was created successfully, redirect to the blueprint page
+    redirect(`/blueprints/${blueprintId}`)
+  }
 
   return (
     <form action={action}>
