@@ -4,13 +4,7 @@ import { useState } from 'react'
 import { Filter, SortDesc } from 'lucide-react'
 import Link from 'next/link'
 import BlueprintCard from './BlueprintCard'
-
-type Card = {
-  id: number
-  title: string
-  images: string[]
-  averageRating: number
-}
+import type { BlueprintCardProps } from '../interfaces'
 
 type Filter = {
   category?: string
@@ -37,7 +31,7 @@ const categories = [
   'Supports'
 ]
 
-export default function BlueprintContainer({ blueprints, title, filter, isEdit = false }: { blueprints: Card[], title: string, filter?: Filter, isEdit?: boolean }) {
+export default function BlueprintContainer({ blueprints, title, filter, isEdit = false }: { blueprints: BlueprintCardProps[], title: string, filter?: Filter, isEdit?: boolean }) {
   const [isCategoriesOpened, setIsCategoriesOpened] = useState(false)
   const [isSortOpened, setIsSortOpened] = useState(false)
   const selectedCategory = filter?.category

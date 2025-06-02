@@ -77,7 +77,7 @@ export async function getRecipe(slug: string) {
 }
 
 export async function getSearch(name: string) {
-  if (!name || name == '') {
+  if (!name || name.trim() == '') {
     return
   }
 

@@ -103,6 +103,14 @@ export interface BuildingData {
   fuels: Building['fuels']
 }
 
+export interface BlueprintCardProps {
+  id: number,
+  title: string,
+  images: string[],
+  averageRating: number,
+  downloads: number
+}
+
 export interface Pioneer {
   name: string,
   email: string,

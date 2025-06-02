@@ -59,6 +59,10 @@ export const getBlueprintById = async (id: number) => {
 }
 
 export const getAllBlueprintsByTitle = async (title: string) => {
+  if (!title || title.trim() == '') {
+    return []
+  }
+
   try {
     // Check if the blueprint title includes the search term
     const blueprints = await db.query.Blueprint.findMany({

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { ItemCard } from "../../components/ItemCard"
 import SearchIcon from "../../assets/searchIcon.svg"
 
-import type { Item, Building } from "../../interfaces"
+import type { Item, Building, BlueprintCardProps } from "../../interfaces"
 import BlueprintCard from "../../components/BlueprintCard"
 
 export default function SearchSection({ searchInput, data }: {
@@ -13,7 +13,7 @@ export default function SearchSection({ searchInput, data }: {
   data: {
     items: Item[],
     buildings: Building[],
-    blueprints: any[]
+    blueprints: BlueprintCardProps[]
   }
 }) {
   const router = useRouter()
