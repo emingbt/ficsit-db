@@ -20,11 +20,6 @@ export const Pioneer = pgTable('Pioneer', {
   kindeId: text('kinde_id').notNull(),
   role: roleEnum('role').default('user').notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull()
-}, (pioneer) => {
-  return {
-    nameIdx: uniqueIndex('name_idx').on(pioneer.name),
-    emailIdx: uniqueIndex('email_idx').on(pioneer.email)
-  }
 })
 
 export const ApiAccessToken = pgTable('ApiAccessToken', {
@@ -35,7 +30,7 @@ export const ApiAccessToken = pgTable('ApiAccessToken', {
 
 export const Blueprint = pgTable('Blueprint', {
   id: serial('id').primaryKey(),
-  title: text('title').notNull(),
+  title: text('title').unique().notNull(),
   description: text('description'),
   images: text('images').array().notNull(),
   files: text('files').array().notNull(),

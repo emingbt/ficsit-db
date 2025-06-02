@@ -58,6 +58,31 @@ export const getBlueprintById = async (id: number) => {
   }
 }
 
+export const getAllBlueprintsByTitle = async (title: string) => {
+  if (!title || title.trim() == '') {
+    return []
+  }
+
+  try {
+    // Check if the blueprint title includes the search term
+    const blueprints = await db.query.Blueprint.findMany({
+      where: sql`${Blueprint.title} ILIKE ${`%${title}%`}`,
+      columns: {
+        id: true,
+        title: true,
+        images: true,
+        averageRating: true,
+        downloads: true
+      },
+      orderBy: desc(Blueprint.createdAt)
+    })
+    return blueprints
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to get the blueprints by title.')
+  }
+}
+
 export const getAllBlueprintsByPioneer = async (pioneerName: string) => {
   try {
     const blueprints = await db.query.Blueprint.findMany({
@@ -79,8 +104,32 @@ export const getAllBlueprintsByPioneer = async (pioneerName: string) => {
   }
 }
 
+export const checkIfTitleIsUsed = async (title: string) => {
+  try {
+    // Check if a blueprint with the same title already exists with lowercase comparison
+    const existingBlueprint = await db.query.Blueprint.findFirst({
+      where: sql`${Blueprint.title} ILIKE ${title}`,
+      columns: {
+        id: true
+      }
+    })
+
+    return existingBlueprint
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to check if the title is not used.')
+  }
+}
+
 export const createNewBlueprint = async (blueprint: Blueprint) => {
   try {
+    // Check if a blueprint with the same title already exists
+    const isTitleUsed = await checkIfTitleIsUsed(blueprint.title)
+
+    if (isTitleUsed) {
+      throw new Error('A blueprint with this title already exists.')
+    }
+
     const newBlueprint = await db.insert(Blueprint)
       .values(blueprint)
       .returning({
@@ -97,6 +146,9 @@ export const createNewBlueprint = async (blueprint: Blueprint) => {
     return newBlueprint[0]
   } catch (error) {
     console.log(error)
+    if (error instanceof Error && error.message === 'A blueprint with this title already exists.') {
+      throw error
+    }
     throw new Error('Failed to create the blueprint.')
   }
 }

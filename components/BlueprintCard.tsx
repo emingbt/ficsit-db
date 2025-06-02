@@ -1,15 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import StarIcon from "../assets/starIcon.svg"
+import type { BlueprintCardProps } from "../interfaces"
 
-type Card = {
-  id: number
-  title: string
-  images: string[]
-  averageRating: number
-}
-
-export default function BlueprintCard({ blueprint, isEdit }: { blueprint: Card, isEdit?: boolean }) {
+export default function BlueprintCard({ blueprint, isEdit }: { blueprint: BlueprintCardProps, isEdit?: boolean }) {
   return (
     <div>
       <Link href={`/${isEdit ? "edit-blueprint" : "blueprints"}/${blueprint.id}`}>

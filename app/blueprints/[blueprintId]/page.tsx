@@ -149,7 +149,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           pioneerName={blueprint.pioneerName}
         />
       </div>
-      <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
+      <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4">
         <ImageCarousel images={blueprint.images} title={blueprint.title} />
         <div className="w-full lg:w-1/3 flex flex-col flex-grow gap-2 lg:gap-4">
           <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} />
@@ -171,14 +171,14 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4">
         {
           blueprint.description && (
-            <div className="w-full bg-light-bg text-gray-200 p-4">
+            <div className="w-full bg-light-bg text-gray-200 p-4 mt-2 lg:mt-4">
               <h2 className="text-xl font-semibold">Description</h2>
               <div className="w-full h-[1px] bg-gray-500 shadow-md my-1" />
               <pre className="whitespace-pre-wrap font-main">{blueprint.description}</pre>
             </div>
           )
         }
-        {/* <AdBanner classname={`w-full ${blueprint.description && "lg:w-1/3"} min-h-32 hidden lg:flex items-center justify-center bg-main-bg`}
+        {/* <AdBanner classname={`w-full ${blueprint.description && "lg:w-1/3"} min-h-32 hidden lg:flex items-center justify-center bg-main-bg mt-2 lg:mt-4`}
           dataAdSlot="8546567212"
           dataFullWidthResponsive={true}
           adPadding={16}

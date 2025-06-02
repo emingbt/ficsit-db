@@ -5,7 +5,7 @@ import { uploadFilesToCloudinary, uploadImagesToCloudinary } from "../../service
 import { CreateBlueprintFormSchema } from "../../utils/zod"
 import { getPioneerByEmail } from "../../services/pioneer"
 import { redirect } from "next/navigation"
-import { createNewBlueprint, getAllBlueprintsByPioneer } from "../../services/blueprint"
+import { checkIfTitleIsUsed, createNewBlueprint } from "../../services/blueprint"
 import { revalidatePath } from "next/cache"
 
 export default async function createBlueprint(state, formData: FormData) {
@@ -89,13 +89,13 @@ export default async function createBlueprint(state, formData: FormData) {
     redirect('/create-pioneer')
   }
 
-  // 4. Check if the user has another blueprint with the same title
-  const blueprints = await getAllBlueprintsByPioneer(pioneer.name)
+  // 4. Check if the blueprint title is not being used
+  const isTitleUsed = await checkIfTitleIsUsed(title)
 
-  if (blueprints.some((blueprint) => blueprint.title === title)) {
+  if (isTitleUsed) {
     return {
       error: {
-        submit: 'You have already created a blueprint with this title.'
+        submit: 'There is already a blueprint with this title.'
       }
     }
   }
