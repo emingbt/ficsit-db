@@ -8,6 +8,10 @@ export default async function SearchPage({ searchParams }: {
 }) {
   const name = searchParams?.name?.toLowerCase() || ""
 
+  // This always fetches blueprints on every search load,
+  // even when the user isn’t viewing that category.
+  // Consider fetching blueprints only when blueprints cateyory
+  // is selected to reduce unnecessary DB calls.
   const gameData = await getSearch(name)
   const blueprints = await getAllBlueprintsByTitle(name)
   const data = {
