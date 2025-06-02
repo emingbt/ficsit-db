@@ -35,7 +35,7 @@ export const ApiAccessToken = pgTable('ApiAccessToken', {
 
 export const Blueprint = pgTable('Blueprint', {
   id: serial('id').primaryKey(),
-  title: text('title').notNull(),
+  title: text('title').unique().notNull(),
   description: text('description'),
   images: text('images').array().notNull(),
   files: text('files').array().notNull(),
@@ -48,7 +48,8 @@ export const Blueprint = pgTable('Blueprint', {
   updatedAt: timestamp('updated_at').defaultNow().notNull()
 }, (blueprint) => {
   return {
-    pioneerNameIdx: index('pioneerName_idx').on(blueprint.pioneerName)
+    pioneerNameIdx: index('pioneerName_idx').on(blueprint.pioneerName),
+    titleIdx: uniqueIndex('title_idx').on(blueprint.title)
   }
 })
 
