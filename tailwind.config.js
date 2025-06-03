@@ -72,6 +72,14 @@ module.exports = {
     'outline-avatar-yellow',
     'outline-avatar-orange',
     'outline-avatar-red',
+    'shadow-avatar-gray',
+    'shadow-avatar-purple',
+    'shadow-avatar-indigo',
+    'shadow-avatar-blue',
+    'shadow-avatar-green',
+    'shadow-avatar-yellow',
+    'shadow-avatar-orange',
+    'shadow-avatar-red'
   ],
   plugins: [],
 }

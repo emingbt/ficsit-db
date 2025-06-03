@@ -82,11 +82,11 @@ export default function AuthNavigation() {
                 alt={`${pioneer.name}'s avatar`}
                 width={40}
                 height={40}
-                className={`rounded-full bg-avatar-${pioneer.color} cursor-pointer outline ${isDropdownOpen && `outline-2  outline-offset-1 outline-avatar-${pioneer.color}`}`}
+                className={`rounded-full bg-avatar-${pioneer.color} cursor-pointer outline ${isDropdownOpen && `outline-2  outline-offset-2 outline-avatar-${pioneer.color}`}`}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               />
               {
-                isDropdownOpen && <AvatarDropdown />
+                isDropdownOpen && <AvatarDropdown color={pioneer.color} />
               }
             </div>
           </div>
@@ -115,15 +115,15 @@ export default function AuthNavigation() {
   )
 }
 
-function AvatarDropdown() {
+function AvatarDropdown({ color }: { color: string }) {
   const { resetStore } = usePioneerStore((state) => state)
 
   return (
-    <div className='absolute top-0 right-0 mt-16 w-24 bg-dark-bg rounded-b-md shadow-lg z-20'>
+    <div className={`absolute top-0 right-0 mt-16 w-24 bg-dark-bg rounded-b-md shadow-sm shadow-avatar-${color} z-10`}>
       <Link href='/profile' className='block px-4 py-2 text-gray-300 hover:bg-main-bg' >
         Profile
       </Link>
-      <LogoutLink className='block px-4 py-2 text-red-500 hover:bg-main-bg'
+      <LogoutLink className='block px-4 py-2 text-red-500 rounded-b-md hover:bg-main-bg'
         onClick={() => resetStore()}
       >
         Logout
