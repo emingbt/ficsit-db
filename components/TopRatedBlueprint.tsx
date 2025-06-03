@@ -16,6 +16,7 @@ export default async function TopRatedBlueprintOfWeek() {
             src={blueprint?.images[0] || "/images/blueprint.webp"}
             alt="blueprint"
             fill
+            sizes="80%"
             className="object-cover object-center"
           />
           <div className="w-full absolute bottom-0 bg-light-bg p-1">
@@ -29,6 +30,7 @@ export default async function TopRatedBlueprintOfWeek() {
                 src={`/images/avatars/${blueprint?.pioneerAvatar}.png`}
                 alt="pioneer-avatar"
                 fill
+                sizes="100%"
                 className="object-cover object-center"
               />
             </div>
