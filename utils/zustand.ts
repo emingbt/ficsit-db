@@ -2,23 +2,32 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 // Zustand store for managing the state of the pioneer
-interface PioneerState {
+type PioneerState = {
   avatar: string
-  setAvatar: (avatar: string) => void
   name: string
-  setName: (name: string) => void
   color: string
+}
+
+type PioneerActions = {
+  setAvatar: (avatar: string) => void
+  setName: (name: string) => void
   setColor: (color: string) => void
+  resetStore: () => void
+}
+
+const initialState: PioneerState = {
+  avatar: '',
+  name: '',
+  color: '',
 }
 
 export const usePioneerStore = create(
-  persist<PioneerState>((set) => ({
-    avatar: '',
-    name: '',
-    color: '',
+  persist<PioneerState & PioneerActions>((set) => ({
+    ...initialState,
     setAvatar: (avatar) => set({ avatar }),
     setName: (name) => set({ name }),
     setColor: (color) => set({ color }),
+    resetStore: () => set(initialState),
   }),
     { name: 'persistent-store' } // Keep the store persistent on localStorage, a storage prop is optional (localStorage chosen by default)
   ),

@@ -9,9 +9,9 @@ const itemQuery = `
     OPTIONAL MATCH (r1:ProductionRecipe)-[:PRODUCES]->(i)
     OPTIONAL MATCH (i)-[:USED_IN]->(r2:ProductionRecipe)
     OPTIONAL MATCH (ingredient:Item)-[u:USED_IN]->(r1:ProductionRecipe)-[p:PRODUCES]->(product:Item)
-    WITH r1, i, r2, COLLECT(DISTINCT {slug: ingredient.slug, imgUrl: ingredient.imgUrl, isFluid: ingredient.isFluid, amount: u.amount}) AS r1Ingredients, COLLECT(DISTINCT {slug: product.slug, imgUrl: product.imgUrl, isFluid: product.isFluid, amount: p.amount}) AS r1Products
+    WITH r1, i, r2, COLLECT(DISTINCT {slug: ingredient.slug, name: ingredient.name, imgUrl: ingredient.imgUrl, isFluid: ingredient.isFluid, amount: u.amount}) AS r1Ingredients, COLLECT(DISTINCT {slug: product.slug, name: product.name, imgUrl: product.imgUrl, isFluid: product.isFluid, amount: p.amount}) AS r1Products
     OPTIONAL MATCH (ingredient:Item)-[u:USED_IN]->(r2:ProductionRecipe)-[p:PRODUCES]->(product:Item)
-    WITH r1, i ,r2, r1Ingredients, r1Products, COLLECT(DISTINCT {slug: ingredient.slug, imgUrl: ingredient.imgUrl, isFluid: ingredient.isFluid, amount: u.amount}) AS r2Ingredients, COLLECT(DISTINCT {slug: product.slug, imgUrl: product.imgUrl, isFluid: product.isFluid, amount: p.amount}) AS r2Products
+    WITH r1, i ,r2, r1Ingredients, r1Products, COLLECT(DISTINCT {slug: ingredient.slug, name: ingredient.name, imgUrl: ingredient.imgUrl, isFluid: ingredient.isFluid, amount: u.amount}) AS r2Ingredients, COLLECT(DISTINCT {slug: product.slug, name: product.name, imgUrl: product.imgUrl, isFluid: product.isFluid, amount: p.amount}) AS r2Products
     WITH i, COLLECT(DISTINCT properties(r1{.*, products:r1Products, ingredients:r1Ingredients})) AS recipes, COLLECT(DISTINCT properties( r2{.*, products:r2Products, ingredients:r2Ingredients})) AS usagesAsIngredient
     RETURN recipes, usagesAsIngredient, properties(i) AS item
   `
