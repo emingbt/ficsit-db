@@ -43,7 +43,7 @@ export default function Header() {
         }
 
       </div>
-      <nav className='hidden lg:flex flex-row items-center justify-end h-8 w-4/5'>
+      <nav className='w-4/5 h-full hidden lg:flex flex-row items-center justify-end'>
         <SearchInput />
         <Link href="/items" className='w-20 ml-6 hover:text-main-orange'>
           <p className='user-select-none cursor-pointer h-full text-center'>Items</p>
