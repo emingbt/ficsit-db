@@ -1,7 +1,6 @@
 'use client'
 
 import { Pioneer } from "../../interfaces"
-import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs"
 
 export default function ProfileSection({ pioneer }: { pioneer: Pioneer }) {
   const year = pioneer.createdAt.getFullYear()
@@ -18,11 +17,6 @@ export default function ProfileSection({ pioneer }: { pioneer: Pioneer }) {
           <p>Email: {pioneer.email}</p>
           <p>Created At: {createdAt}</p>
         </div>
-        <LogoutLink
-          className='w-1/2 lg:w-48 h-10 flex items-center justify-center bg-red-600 cursor-pointer hover:bg-red-500'
-        >
-          <p className='user-select-none'>Logout</p>
-        </LogoutLink>
       </div>
     </section>
   )
