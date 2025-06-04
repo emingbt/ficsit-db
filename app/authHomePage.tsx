@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import TopRatedBlueprintOfWeek from "../components/TopRatedBlueprint"
 import Main from "../components/Main"
 
 export default function AuthHomePage({ pioneer }: {
@@ -10,6 +9,28 @@ export default function AuthHomePage({ pioneer }: {
     color: string,
   }
 }) {
+  const avatars = [
+    "pioneer",
+    "space-giraffe-tick-penguin-whale",
+    "lizard-doggo",
+    "small-stinger",
+    "bacon-agaric",
+    "beryl-nut",
+    "paleberry",
+    "ficsit-coffee-cup"
+  ]
+
+  const colors = [
+    "gray",
+    "purple",
+    "indigo",
+    "blue",
+    "green",
+    "yellow",
+    "orange",
+    "red"
+  ]
+
   return (
     <Main classname="bg-dark-bg" dontFill>
       <div className="w-full h-12 lg:h-24 flex items-center justify-between bg-dark-bg mb-2 lg:mb-4 gap-4">
@@ -33,7 +54,33 @@ export default function AuthHomePage({ pioneer }: {
         adHeight={50}
       /> */}
       <div className="w-full sm:h-64 lg:h-96 flex flex-col sm:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
-        <TopRatedBlueprintOfWeek />
+        <section className="w-full sm:w-5/12 h-72 sm:h-full relative flex flex-col items-center justify-center bg-main-bg overflow-hidden">
+          <div className="flex flex-col items-center justify-center bg-main-bg/95 shadow-sm shadow-main-orange  p-2 sm:p-4 lg:p-6 rounded-md z-20">
+            <h2 className="text-sm sm:text-base lg:text-xl mb-4">Check out all Blueprint Architects</h2>
+            <Link href="/pioneers" className="w-36 lg:w-48 h-8 md:h-10 lg:h-12 bg-main-orange flex items-center justify-center hover:bg-light-bg hover:text-light-orange">
+              <p className="lg:text-xl">Pioneers</p>
+            </Link>
+          </div>
+          {/* Background with the random avatars */}
+          <div className="absolute w-[calc(110%)] top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-wrap items-center justify-center opacity-35">
+            {
+              Array.from({ length: 64 }).map((_, index) => (
+                <div key={index} className={`w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 m-1 relative`}>
+                  <Image
+                    src={`/images/avatars/${avatars[Math.floor(Math.random() * avatars.length)]}.png`}
+                    alt="avatar"
+                    loading="lazy"
+                    sizes="30%"
+                    quality={10}
+                    unoptimized
+                    fill
+                    className={`object-cover rounded-full bg-avatar-${colors[Math.floor(Math.random() * colors.length)]}`}
+                  />
+                </div>
+              ))
+            }
+          </div>
+        </section>
         <section className="w-full sm:w-7/12 sm:h-full relative bg-main-bg p-4">
           <h2 className="lg:text-2xl mb-3 lg:mb-4">If you want to checkout other pioneers’ blueprints</h2>
           <Link href="/blueprints" className="w-36 lg:w-48 h-8 md:h-10 lg:h-12 bg-main-orange flex items-center justify-center hover:bg-light-bg hover:text-light-orange mb-4">

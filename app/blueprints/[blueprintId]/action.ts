@@ -36,6 +36,7 @@ export const incrementDownloads = async (blueprintId: number, pioneerName: strin
 
     revalidatePath(`/blueprints/${blueprintId}`)
     revalidatePath(`/pioneers/${pioneerName}`)
+    revalidatePath('/pioneers')
   } catch (error) {
     console.log(error)
     throw new Error('Failed to increment the blueprint downloads.')
