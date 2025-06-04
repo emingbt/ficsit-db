@@ -25,14 +25,13 @@ export default function SearchSection({ searchInput, data }: {
   const buildings = data.buildings
   const blueprints = data.blueprints
 
-  //If there is no element found in the selected category, show other categories
+  // If there is no element found in the selected category, show other categories
+  // Blueprints is the priority category to show if it has elements
   useEffect(() => {
-    if (selectedCategory === "items" && items.length === 0) {
-      setSelectedCategory("buildings")
-    } else if (selectedCategory === "buildings" && buildings.length === 0) {
+    if (blueprints.length > 0) {
       setSelectedCategory("blueprints")
-    } else if (selectedCategory === "blueprints" && blueprints.length === 0) {
-      setSelectedCategory("items")
+    } else if (items.length === 0) {
+      setSelectedCategory("buildings")
     }
   }, [data])
 
