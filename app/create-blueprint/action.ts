@@ -130,6 +130,7 @@ export default async function createBlueprint(state, formData: FormData) {
     revalidatePath(`/pioneers/${pioneer.name}`)
     revalidatePath('/profile')
     revalidatePath('/pioneers')
+    revalidatePath('/search')
 
     return {
       success: {
