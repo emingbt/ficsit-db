@@ -66,6 +66,7 @@ export async function updateAvatar(state, formData: FormData) {
 
     await refreshTokens()
 
+    revalidatePath("/pioneers")
     revalidatePath(`/pioneers/${pioneer.name}`)
 
     // Get the blueprints of the pioneer and revalidate their paths
