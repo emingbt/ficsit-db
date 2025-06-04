@@ -29,7 +29,7 @@ export default async function SearchPage({ searchParams }: {
   }
 
   return (
-    <Main classname="bg-dark-bg">
+    <Main classname="flex flex-col items-stretch bg-dark-bg">
       <SearchSection searchInput={name} data={data} />
     </Main>
   )
