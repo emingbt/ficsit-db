@@ -27,8 +27,8 @@ export default function SearchSection({ searchInput, data }: {
 
   return (
     <>
-      <div className="w-full flex flex-col sm:flex-row justify-end">
-        <form className="w-full h-12 sm:h-8 flex lg:hidden flex-row mb-2.5"
+      <div className="w-full flex flex-col sm:flex-row justify-between">
+        <form className="h-12 sm:h-9 flex lg:hidden flex-row mb-2.5"
           onSubmit={(e) => {
             e.preventDefault()
             router.push(`/search?name=${searchValue}`)
@@ -47,47 +47,49 @@ export default function SearchSection({ searchInput, data }: {
             <SearchIcon />
           </button>
         </form>
-        <h1 className="w-full hidden lg:flex text-2xl pl-2">
+        <h1 className="hidden lg:flex text-2xl pl-2">
           Search results for  (<span className="text-main-orange"> {searchInput}</span>)
         </h1>
-        <div className="flex flex-row justify-end mb-2.5 lg:mb-4">
-          <button className={`w-full sm:w-32 h-8 sm:ml-2.5 lg:ml-4 bg-${selectedCategory == 'items' ? 'main-orange' : 'light-bg'}`}
+        <div className="flex flex-row justify-end mb-2.5 lg:mb-4 text-sm sm:text-base">
+          <button className={`w-full sm:w-32 p-[6px] sm:ml-2.5 lg:ml-4 bg-${selectedCategory == 'items' ? 'main-orange' : 'light-bg'}`}
             onClick={() => { setSelectedCategory('items') }}>
             Items ({items.length || 0})
           </button>
-          <button className={`w-full sm:w-32 h-8 ml-2.5 lg:ml-4 bg-${selectedCategory == 'buildings' ? 'main-orange' : 'light-bg'}`}
+          <button className={`w-full sm:w-32 p-[6px] ml-2.5 lg:ml-4 bg-${selectedCategory == 'buildings' ? 'main-orange' : 'light-bg'}`}
             onClick={() => { setSelectedCategory('buildings') }}>
             Buildings ({buildings.length || 0})
           </button>
-          <button className={`w-full sm:w-32 h-8 ml-2.5 lg:ml-4 bg-${selectedCategory == 'blueprints' ? 'main-orange' : 'light-bg'}`}
+          <button className={`w-full sm:w-32 p-[6px] ml-2.5 lg:ml-4 bg-${selectedCategory == 'blueprints' ? 'main-orange' : 'light-bg'}`}
             onClick={() => { setSelectedCategory('blueprints') }}>
             Blueprints ({blueprints.length || 0})
           </button>
         </div>
       </div>
-      <div className={`w-full min-h-[calc(100%-96px)] grid
+      <div className='w-full h-full bg-light-bg'>
+        <div className={`w-full grid
         ${selectedCategory == "blueprints" ?
-          "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5" :
-          "grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8"
-        }
-        gap-1 lg:gap-2 justify-center bg-light-bg p-2 lg:p-3`}>
-        {data[selectedCategory].length == 0 ? (
-          <div className="w-full h-full col-span-full flex items-center justify-center">
-            <p className="font-secondary">No {selectedCategory} found</p>
-          </div>
-        ) : selectedCategory == "blueprints" ? (
-          blueprints.map((blueprint: any, i: number) => {
-            return (
-              <BlueprintCard key={i} blueprint={blueprint} />
-            )
-          })
-        ) : (
-          data[selectedCategory].map((element: Item | Building, i: number) => {
-            return (
-              <ItemCard item={element} isBuilding={selectedCategory == "buildings"} key={i} />
-            )
-          })
-        )}
+            "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5" :
+            "grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8"
+          }
+        gap-[1px] lg:gap-2 justify-center p-1 lg:p-3`}>
+          {data[selectedCategory].length == 0 ? (
+            <div className="w-full h-full col-span-full flex items-center justify-center">
+              <p className="font-secondary">No {selectedCategory} found</p>
+            </div>
+          ) : selectedCategory == "blueprints" ? (
+            blueprints.map((blueprint: any, i: number) => {
+              return (
+                <BlueprintCard key={i} blueprint={blueprint} />
+              )
+            })
+          ) : (
+            data[selectedCategory].map((element: Item | Building, i: number) => {
+              return (
+                <ItemCard item={element} isBuilding={selectedCategory == "buildings"} key={i} />
+              )
+            })
+          )}
+        </div>
       </div>
     </>
   )
