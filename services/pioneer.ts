@@ -1,9 +1,9 @@
 import 'server-only'
 
 import db from '../utils/postgres'
-import { eq } from 'drizzle-orm'
+import { eq, sql } from 'drizzle-orm'
 import { cache } from 'react'
-import { Pioneer } from '../drizzle/schema'
+import { Blueprint, Pioneer } from '../drizzle/schema'
 import { CreatePioneerFormSchema, UpdateAvatarFormSchema } from '../utils/zod'
 
 export const getPioneerByName = cache(async (name: string) => {
@@ -100,3 +100,20 @@ export const updatePioneerAvatar = async (email: string, newAvatar: string, newC
     throw new Error('Failed to update the pioneer avatar.')
   }
 }
+
+export const getPioneersWithBlueprintStats = cache(async () => {
+  const result = await db
+    .select({
+      name: Pioneer.name,
+      color: Pioneer.color,
+      avatar: Pioneer.avatar,
+      blueprints: sql<number>`COUNT(${Blueprint.id})`.as('blueprints'),
+      downloads: sql<number>`SUM(${Blueprint.downloads})`.as('downloads')
+    })
+    .from(Pioneer)
+    .innerJoin(Blueprint, eq(Pioneer.name, Blueprint.pioneerName))
+    .groupBy(Pioneer.name, Pioneer.color, Pioneer.avatar)
+    .having(sql`COUNT(${Blueprint.id}) > 0`)
+
+  return result
+})
