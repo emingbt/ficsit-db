@@ -41,7 +41,7 @@ export default function FAQPage() {
             <CopyButton text="%localappdata%/FactoryGame/Saved/SaveGames/blueprints/" />
           </div>
           <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
-            At that direction, select the folder with the name of your savegame
+            At that direction, select the folder with the name of your savegame.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function FAQPage() {
             <CopyButton text="%localappdata%/FactoryGame/Saved/SaveGames/blueprints/" />
           </div>
           <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
-            At that direction, select the folder with the name of your savegame
+            At that direction, select the folder with the name of your savegame.
           </p>
           <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
             If the directory doesn&apos;t exist, create a sample blueprint in-game, and it will create the directory for you.
