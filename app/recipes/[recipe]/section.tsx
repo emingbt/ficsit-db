@@ -29,7 +29,7 @@ export default function RecipeSection({ recipe }: {
   }
 
   return (
-    <section className="w-full h-[calc(100%-128px)] grid grid-cols-2 lg:grid-cols-7 gap-2 lg:gap-4">
+    <section className="w-full h-[calc(100%-72px)] lg:h-[calc(100%-80px)] grid grid-cols-2 lg:grid-cols-7 gap-2 lg:gap-4">
       <div className="w-full flex flex-col lg:col-span-2 bg-main-bg">
         <div className="w-full h-full min-h-[16rem] sm:min-h-[24rem] flex flex-col justify-center px-2 sm:px-4">
           {recipe.ingredients.map((ingredient, index) => {
