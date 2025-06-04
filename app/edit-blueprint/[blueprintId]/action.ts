@@ -186,6 +186,7 @@ export async function deleteBlueprint(blueprintId: number) {
     revalidatePath('/blueprints')
     revalidatePath('/profile')
     revalidatePath(`/pioneers/${pioneer.name}`)
+    revalidatePath('/pioneers')
 
   } catch (error) {
     console.log(error)
