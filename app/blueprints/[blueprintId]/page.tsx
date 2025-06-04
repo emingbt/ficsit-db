@@ -71,10 +71,10 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
             {blueprint.title}
           </div>
           <div className="w-full flex flex-col sm:flex-row justify-between bg-light-bg p-4">
-            <div className="flex flex-col flex-1 gap-4 mb-4 sm:mb-0">
+            <div className="flex flex-col items-start flex-1 gap-4 mb-4 sm:mb-0">
               <Link
                 href={`/pioneers/${blueprint.pioneerName}`}
-                className="w-32 flex flex-row items-center p-1 pr-4 rounded-full bg-dark-bg hover:bg-main-bg text-white hover:underline"
+                className="flex flex-row items-center p-1 pr-4 rounded-full bg-dark-bg hover:bg-main-bg text-white hover:underline"
               >
                 <Image
                   src={`/images/avatars/${blueprint.pioneerAvatar}.png`}

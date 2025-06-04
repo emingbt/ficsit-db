@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { ItemCard } from "../../components/ItemCard"
 import SearchIcon from "../../assets/searchIcon.svg"
@@ -24,6 +24,17 @@ export default function SearchSection({ searchInput, data }: {
   const items = data.items
   const buildings = data.buildings
   const blueprints = data.blueprints
+
+  //If there is no element found in the selected category, show other categories
+  useEffect(() => {
+    if (selectedCategory === "items" && items.length === 0) {
+      setSelectedCategory("buildings")
+    } else if (selectedCategory === "buildings" && buildings.length === 0) {
+      setSelectedCategory("blueprints")
+    } else if (selectedCategory === "blueprints" && blueprints.length === 0) {
+      setSelectedCategory("items")
+    }
+  }, [data])
 
   return (
     <>
@@ -51,15 +62,24 @@ export default function SearchSection({ searchInput, data }: {
           Search results for  (<span className="text-main-orange"> {searchInput}</span>)
         </h1>
         <div className="flex flex-row justify-end mb-2.5 lg:mb-4 text-sm sm:text-base">
-          <button className={`w-full sm:w-32 p-[6px] sm:ml-2.5 lg:ml-4 bg-${selectedCategory == 'items' ? 'main-orange' : 'light-bg'}`}
+          <button className={`w-full sm:w-32 p-[6px] sm:ml-2.5 lg:ml-4
+            ${selectedCategory == 'items' ? 'outline outline-2 outline-offset-2 bg-main-bg' : 'bg-light-bg'}
+              hover:bg-main-bg hover:outline hover:outline-1 outline-main-orange
+          `}
             onClick={() => { setSelectedCategory('items') }}>
             Items ({items.length || 0})
           </button>
-          <button className={`w-full sm:w-32 p-[6px] ml-2.5 lg:ml-4 bg-${selectedCategory == 'buildings' ? 'main-orange' : 'light-bg'}`}
+          <button className={`w-full sm:w-32 p-[6px] sm:ml-2.5 lg:ml-4
+            ${selectedCategory == 'buildings' ? 'outline outline-2 outline-offset-2 bg-main-bg' : 'bg-light-bg'}
+              hover:bg-main-bg hover:outline hover:outline-1 outline-main-orange
+          `}
             onClick={() => { setSelectedCategory('buildings') }}>
             Buildings ({buildings.length || 0})
           </button>
-          <button className={`w-full sm:w-32 p-[6px] ml-2.5 lg:ml-4 bg-${selectedCategory == 'blueprints' ? 'main-orange' : 'light-bg'}`}
+          <button className={`w-full sm:w-32 p-[6px] sm:ml-2.5 lg:ml-4
+            ${selectedCategory == 'blueprints' ? 'outline outline-2 outline-offset-2 bg-main-bg' : 'bg-light-bg'}
+              hover:bg-main-bg hover:outline hover:outline-1 outline-logo-blue
+          `}
             onClick={() => { setSelectedCategory('blueprints') }}>
             Blueprints ({blueprints.length || 0})
           </button>

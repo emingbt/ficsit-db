@@ -49,7 +49,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
           </div>
           <div className="w-full h-full sm:h-16 flex items-center justify-between bg-main-bg px-4">
             <p>Member since:</p>
-            <p>{pioneer.createdAt.getDate()}/{pioneer.createdAt.getMonth()}/{pioneer.createdAt.getFullYear()}</p>
+            <p>{pioneer.createdAt.getDate()}/{pioneer.createdAt.getMonth() + 1}/{pioneer.createdAt.getFullYear()}</p>
           </div>
           <div className="w-full h-full sm:h-16 flex items-center justify-between bg-light-bg px-4">
             <p>Blueprints published:</p>

@@ -20,11 +20,14 @@ export default function Loading({ searchParams }: {
           Search results for (<span className="text-main-orange"> {name}</span>)
         </span>
         <div className="flex flex-row justify-end mb-2.5 lg:mb-4">
-          <button className="w-full sm:w-32 h-8  lg:ml-4 bg-main-orange">
+          <button className="w-full sm:w-32 h-8  lg:ml-4 bg-light-bg">
             Items (0)
           </button>
           <button className="w-full sm:w-32 h-8 ml-2.5 lg:ml-4 bg-light-bg">
             Buildings (0)
+          </button>
+          <button className="w-full sm:w-32 h-8 ml-2.5 lg:ml-4 bg-light-bg">
+            Blueprints (0)
           </button>
         </div>
       </div>

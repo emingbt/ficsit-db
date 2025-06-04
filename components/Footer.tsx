@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row text-gray-600 mb-4 sm:mb-0 items-start sm:items-center">
           <p className=" font-logo">FiCS<span className="-ml-[2px]">I</span><span className="-ml-[5px]">T</span> DB</p>
           {/* <p className="font-logo ml-2">v1.0</p> */}
-          <p className="font-medium sm:ml-2">Built by pioneers for pioneers.</p>
+          <p className="font-medium sm:ml-2">Built by pioneer for pioneers.</p>
         </div>
         <Link
           href="https://www.github.com/emingbt/ficsit-db"

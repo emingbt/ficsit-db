@@ -6,7 +6,7 @@ export default function ProfileSection({ pioneer }: { pioneer: Pioneer }) {
   const year = pioneer.createdAt.getFullYear()
   const month = pioneer.createdAt.getMonth() + 1
   const day = pioneer.createdAt.getDate()
-  const createdAt = `${month}/${day}/${year}`
+  const createdAt = `${day}/${month}/${year}`
 
   return (
     <section className="w-full lg:w-2/5 h-full flex flex-col flex-grow items-start p-8 bg-main-bg">
