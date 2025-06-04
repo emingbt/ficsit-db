@@ -16,7 +16,7 @@ export default async function ItemsPage() {
 
   return (
     <Main dontFill>
-      <section className='w-full grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-1 lg:gap-2 justify-center bg-light-bg p-2 lg:p-3'>
+      <section className='w-full grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-[1px] sm:gap-1 lg:gap-2 justify-center bg-light-bg p-[2px] sm:p-2 lg:p-3'>
         {items.map((item, i: number) => {
           return (
             <ItemCard item={item} key={i} />
