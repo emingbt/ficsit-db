@@ -116,4 +116,24 @@ export const getPioneersWithBlueprintStats = cache(async () => {
     .having(sql`COUNT(${Blueprint.id}) > 0`)
 
   return result
+export const getPioneersWithBlueprintStats = cache(async () => {
+  try {
+    const result = await db
+      .select({
+        name: Pioneer.name,
+        color: Pioneer.color,
+        avatar: Pioneer.avatar,
+        blueprints: sql<number>`COUNT(${Blueprint.id})`.as('blueprints'),
+        downloads: sql<number>`SUM(${Blueprint.downloads})`.as('downloads')
+      })
+      .from(Pioneer)
+      .innerJoin(Blueprint, eq(Pioneer.name, Blueprint.pioneerName))
+      .groupBy(Pioneer.name, Pioneer.color, Pioneer.avatar)
+      .having(sql`COUNT(${Blueprint.id}) > 0`)
+
+    return result
+  } catch (error) {
+    console.log("Error fetching pioneers with blueprint stats:", error)
+    return []
+  }
 })
