@@ -1,3 +1,4 @@
+import Main from "../../components/Main"
 import SearchIcon from "../../assets/searchIcon.svg"
 
 export default function Loading({ searchParams }: {
@@ -6,28 +7,31 @@ export default function Loading({ searchParams }: {
   const name = searchParams?.name?.toLowerCase() || ""
 
   return (
-    <>
-      <div className="w-full flex flex-col sm:flex-row justify-end">
-        <div className="w-full h-12 sm:h-8 flex lg:hidden flex-row mb-2.5">
-          <div className="w-full h-full bg-main-bg lg:mb-4 px-4">
+    <Main classname="flex flex-col items-stretch bg-dark-bg">
+      <div className="w-full flex flex-col lg:flex-row justify-between">
+        <div className="h-12 sm:h-9 flex lg:hidden flex-row mb-2.5">
+          <div className="w-full h-full flex items-center bg-main-bg lg:mb-4 px-4">
             <p>{name}</p>
           </div>
           <div className="w-12 sm:w-8 h-full flex items-center justify-center bg-main-orange lg:mb-4">
             <SearchIcon />
           </div>
         </div>
-        <span className="w-full hidden lg:flex text-2xl pl-2">
-          Search results for (<span className="text-main-orange"> {name}</span>)
+        <span className="hidden lg:flex text-2xl pl-2">
+          Search results for (<span className="text-main-orange">{name}</span>)
         </span>
-        <div className="flex flex-row justify-end mb-2.5 lg:mb-4">
-          <button className="w-full sm:w-32 h-8  lg:ml-4 bg-light-bg">
+        <div className="flex flex-row flex-wrap justify-between lg:justify-end mb-2 gap-2 lg:gap-4 text-sm sm:text-base">
+          <button className="w-full sm:w-[calc(50%-4px)] lg:w-32 p-[6px] bg-light-bg">
             Items (0)
           </button>
-          <button className="w-full sm:w-32 h-8 ml-2.5 lg:ml-4 bg-light-bg">
+          <button className="w-full sm:w-[calc(50%-4px)] lg:w-32 p-[6px] bg-light-bg">
             Buildings (0)
           </button>
-          <button className="w-full sm:w-32 h-8 ml-2.5 lg:ml-4 bg-light-bg">
+          <button className="w-full sm:w-[calc(50%-4px)] lg:w-32 p-[6px] bg-light-bg">
             Blueprints (0)
+          </button>
+          <button className="w-full sm:w-[calc(50%-4px)] lg:w-32 p-[6px] bg-light-bg">
+            Pioneers (0)
           </button>
         </div>
       </div>
@@ -56,6 +60,6 @@ export default function Loading({ searchParams }: {
           )
         })}
       </div>
-    </>
+    </Main>
   )
 }

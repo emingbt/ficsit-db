@@ -58,7 +58,7 @@ export const getBlueprintById = async (id: number) => {
   }
 }
 
-export const getAllBlueprintsByTitle = async (title: string) => {
+export const getAllBlueprintsByTitle = async (title: string, blueprintCount = 30) => {
   if (!title || title.trim() == '') {
     return []
   }
@@ -67,14 +67,15 @@ export const getAllBlueprintsByTitle = async (title: string) => {
     // Check if the blueprint title includes the search term
     const blueprints = await db.query.Blueprint.findMany({
       where: sql`${Blueprint.title} ILIKE ${`%${title}%`}`,
+      orderBy: desc(Blueprint.createdAt),
+      limit: blueprintCount,
       columns: {
         id: true,
         title: true,
         images: true,
         averageRating: true,
         downloads: true
-      },
-      orderBy: desc(Blueprint.createdAt)
+      }
     })
     return blueprints
   } catch (error) {

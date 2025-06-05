@@ -2,6 +2,7 @@ import Main from "../../../components/Main"
 import Link from "next/link"
 import Image from "next/image"
 import { getPioneersWithBlueprintStats } from "../../../services/pioneer"
+import PioneerCard from "../../../components/PioneerCard"
 
 export default async function PioneersPage() {
   const pioneers = await getPioneersWithBlueprintStats()
@@ -18,20 +19,7 @@ export default async function PioneersPage() {
               pioneers?.length > 0 ?
                 pioneers.map((pioneer, i: number) => {
                   return (
-                    <Link href={`/pioneers/${pioneer.name}`} key={i} className="w-full h-full flex flex-col items-center justify-center bg-main-bg p-4 rounded-md shadow-md hover:bg-dark-bg">
-                      <div className={`w-16 h-16 relative flex items-center justify-center`}>
-                        <Image
-                          src={`/images/avatars/${pioneer.avatar}.png`}
-                          alt={pioneer.name}
-                          fill
-                          sizes="80%"
-                          className={`rounded-full bg-avatar-${pioneer.color}`}
-                        />
-                      </div>
-                      <h2 className="text-lg font-semibold">{pioneer.name}</h2>
-                      <p className="text-sm text-gray-200">Blueprints: {pioneer.blueprints}</p>
-                      <p className="text-sm text-gray-200">Downloads: {pioneer.downloads}</p>
-                    </Link>
+                    <PioneerCard key={i} pioneer={pioneer} />
                   )
                 }) :
                 <p className='text-2xl'>No pioneers found</p>

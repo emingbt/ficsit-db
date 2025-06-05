@@ -1,7 +1,7 @@
 import 'server-only'
 
 import db from '../utils/postgres'
-import { eq, sql } from 'drizzle-orm'
+import { desc, eq, sql } from 'drizzle-orm'
 import { cache } from 'react'
 import { Blueprint, Pioneer } from '../drizzle/schema'
 import { CreatePioneerFormSchema, UpdateAvatarFormSchema } from '../utils/zod'
@@ -101,19 +101,48 @@ export const updatePioneerAvatar = async (email: string, newAvatar: string, newC
   }
 }
 
-export const getPioneersWithBlueprintStats = cache(async () => {
-  const result = await db
-    .select({
-      name: Pioneer.name,
-      color: Pioneer.color,
-      avatar: Pioneer.avatar,
-      blueprints: sql<number>`COUNT(${Blueprint.id})`.as('blueprints'),
-      downloads: sql<number>`SUM(${Blueprint.downloads})`.as('downloads')
-    })
-    .from(Pioneer)
-    .innerJoin(Blueprint, eq(Pioneer.name, Blueprint.pioneerName))
-    .groupBy(Pioneer.name, Pioneer.color, Pioneer.avatar)
-    .having(sql`COUNT(${Blueprint.id}) > 0`)
+export const getAllPioneersByName = cache(async (name: string, pioneerCount = 60) => {
+  if (!name || name.trim() == '') {
+    return []
+  }
 
-  return result
+  try {
+    const data = await db.query.Pioneer.findMany({
+      where: sql`LOWER(${Pioneer.name}) LIKE ${`%${name.toLowerCase()}%`}`,
+      orderBy: desc(Pioneer.createdAt),
+      limit: pioneerCount,
+      columns: {
+        name: true,
+        avatar: true,
+        color: true
+      }
+    })
+
+    return data
+  } catch (error) {
+    console.log("Error fetching pioneers by name:", error)
+    return []
+  }
+})
+
+export const getPioneersWithBlueprintStats = cache(async () => {
+  try {
+    const result = await db
+      .select({
+        name: Pioneer.name,
+        color: Pioneer.color,
+        avatar: Pioneer.avatar,
+        blueprints: sql<number>`COUNT(${Blueprint.id})`.as('blueprints'),
+        downloads: sql<number>`SUM(${Blueprint.downloads})`.as('downloads')
+      })
+      .from(Pioneer)
+      .innerJoin(Blueprint, eq(Pioneer.name, Blueprint.pioneerName))
+      .groupBy(Pioneer.name, Pioneer.color, Pioneer.avatar)
+      .having(sql`COUNT(${Blueprint.id}) > 0`)
+
+    return result
+  } catch (error) {
+    console.log("Error fetching pioneers with blueprint stats:", error)
+    return []
+  }
 })
