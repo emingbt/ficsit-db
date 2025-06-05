@@ -1,5 +1,6 @@
 import Main from "../../components/Main"
 import { getAllBlueprintsByTitle } from "../../services/blueprint"
+import { getAllPioneersByName } from "../../services/pioneer"
 import { getSearch } from "../../utils/gameDataFetcher"
 import SearchSection from "./section"
 
@@ -14,10 +15,12 @@ export default async function SearchPage({ searchParams }: {
   // is selected to reduce unnecessary DB calls.
   const gameData = await getSearch(name)
   const blueprints = await getAllBlueprintsByTitle(name)
+  const pioneers = await getAllPioneersByName(name)
   const data = {
     items: gameData?.items || [],
     buildings: gameData?.buildings || [],
-    blueprints: blueprints || []
+    blueprints: blueprints || [],
+    pioneers: pioneers || []
   }
 
   if (!data) {
