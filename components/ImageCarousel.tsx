@@ -47,19 +47,35 @@ export default function ImageCarousel({
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-        <Image
-          src={images[currentImage]}
-          fill
-          sizes="100%"
-          alt={title}
-          style={{ objectFit: 'cover' }}
-          unoptimized
-          priority
-        />
+      <div className="w-full h-full overflow-hidden relative">
+        <div
+          className="flex transition-transform duration-500 ease-in-out h-full w-full"
+          style={{
+            transform: `translateX(-${(currentImage / images.length) * 100}%)`,
+            width: `${images.length * 100}%`,
+          }}
+        >
+          {images.map((image, index) => (
+            <div
+              className="relative w-full h-full flex-shrink-0"
+              key={index}
+              style={{ width: `${100 / images.length}%` }}
+            >
+              <Image
+                src={image}
+                alt={`${title} - Image ${index + 1}`}
+                fill
+                sizes="100%"
+                style={{ objectFit: 'cover' }}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-between p-3">
+
+      <div className={`absolute top-0 left-0 w-full h-full hidden ${images.length == 1 ? "hidden" : "lg:flex"} items-center justify-between p-3`}>
         <button
           onClick={prevImage}
           className="w-10 h-10 bg-black hover:bg-main-gray hover:bg-opacity-40 bg-opacity-50 flex items-center justify-center rounded-full text-white font-bold select-none"
