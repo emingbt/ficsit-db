@@ -16,6 +16,7 @@ export default function CreateBlueprintForm() {
   const imageError = state?.error?.images
   const fileError = state?.error?.files
   const categoryError = state?.error?.categories
+  const videoUrlError = state?.error?.videoUrl
   const submitError = state?.error?.submit
   const submitSuccess = state?.success?.submit
   const blueprintId = state?.success?.data
@@ -68,6 +69,27 @@ export default function CreateBlueprintForm() {
       <ImageInput imageError={imageError} />
       <FileInput fileError={fileError} />
       <CategoryInput error={categoryError} />
+      <label htmlFor="videoUrl">Video Link (Optional)</label>
+      <input
+        id="videoUrl"
+        name="videoUrl"
+        placeholder="https://youtube.com/..."
+        className={`w-full h-8 lg:h-10 p-2 ${!videoUrlError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
+          rounded-none outline-none focus:border-b-2 border-${!videoUrlError ? 'main-orange' : 'error'}
+          ${videoUrlError && 'border-b-2 border-error'}
+        `}
+      />
+      {
+        videoUrlError &&
+        <div className="w-full text-xs lg:text-base text-error mb-4">
+          <p>Video link must:</p>
+          <ul>
+            {videoUrlError.map((error) => (
+              <li key={error}>- {error}</li>
+            ))}
+          </ul>
+        </div>
+      }
       <SubmitButton success={submitSuccess} blueprintId={blueprintId} />
       {submitError && <p className='text-red-500'>{submitError}</p>}
       {submitSuccess && <p className='text-green-500'>{submitSuccess}</p>}

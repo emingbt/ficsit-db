@@ -11,10 +11,13 @@ import { Blueprint } from "../../../drizzle/schema"
 export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint }) {
   const [state, action] = useFormState(updateBlueprint, undefined)
   const [description, setDescription] = useState(blueprint.description)
+  const [videoUrl, setVideoUrl] = useState(blueprint.videoUrl)
 
   const descriptionError = state?.error?.description
   const imageError = state?.error?.images
   const categoryError = state?.error?.categories
+  // const videoUrlError = "Sorry, video URL validation is not implemented yet." // state?.error?.videoUrl
+  const videoUrlError = state?.error?.videoUrl
   const submitError = state?.error?.submit
   const submitSuccess = state?.success?.submit
 
@@ -41,6 +44,30 @@ export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint 
       }
       <ImageInput imageError={imageError} existingImageUrls={blueprint.images} />
       <CategoryInput error={categoryError} existingCategories={blueprint.categories} />
+      <label htmlFor="videoUrl">Video Link (Optional)</label>
+      <input
+        id="videoUrl"
+        type="text"
+        name="videoUrl"
+        value={videoUrl || ''}
+        placeholder="https://youtube.com/..."
+        className={`w-full h-8 lg:h-10 p-2 ${!videoUrlError && 'mb-4 lg:mb-6'}  bg-light-bg text-white
+          rounded-none outline-none focus:border-b-2 border-${!videoUrlError ? 'main-orange' : 'error'}
+          ${videoUrlError && 'border-b-2 border-error'}
+        `}
+        onChange={(event) => setVideoUrl(event.target.value)}
+      />
+      {
+        videoUrlError &&
+        <div className="w-full text-xs lg:text-base text-error mb-4">
+          <p>Video link must:</p>
+          <ul>
+            {videoUrlError.map((error) => (
+              <li key={error}>- {error}</li>
+            ))}
+          </ul>
+        </div>
+      }
       <SubmitButton success={submitSuccess} blueprintId={blueprint.id} />
       <DeleteButton blueprintId={blueprint.id} />
       {submitError && <p className='text-red-500'>{submitError}</p>}
