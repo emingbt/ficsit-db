@@ -40,7 +40,8 @@ export const Blueprint = pgTable('Blueprint', {
   downloads: integer('downloads').default(0).notNull(),
   fileSize: integer('file_size').default(0).notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
-  updatedAt: timestamp('updated_at').defaultNow().notNull()
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+  videoUrl: text('video_url')
 }, (blueprint) => {
   return {
     pioneerNameIdx: index('pioneerName_idx').on(blueprint.pioneerName)
