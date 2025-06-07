@@ -27,7 +27,8 @@ export const getBlueprintById = async (id: number) => {
         downloads: true,
         averageRating: true,
         createdAt: true,
-        updatedAt: true
+        updatedAt: true,
+        videoUrl: true
       }
     })
 
@@ -140,6 +141,7 @@ export const createNewBlueprint = async (blueprint: Blueprint) => {
         images: Blueprint.images,
         files: Blueprint.files,
         categories: Blueprint.categories,
+        videoUrl: Blueprint.videoUrl,
         pioneerName: Blueprint.pioneerName,
         createdAt: Blueprint.createdAt
       })
