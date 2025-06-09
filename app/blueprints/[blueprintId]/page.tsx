@@ -102,7 +102,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
               </div>
               {blueprint.videoUrl && (
                 <a href={blueprint.videoUrl} className="flex flex-row items-center gap-2 py-2 px-4 rounded-full bg-dark-bg hover:bg-main-bg text-white" target="_blank" rel="noopener noreferrer">
-                  <Image src="/icons/youtube-logo.svg" alt="GitHub" width={24} height={24} />
+                  <Image src="/icons/youtube-logo.svg" alt="Youtube Logo" width={24} height={24} />
                   <p className="text-gray-300">Blueprint Video</p>
                   <ExternalLink className="w-4 h-4 text-gray-300" />
                 </a>
