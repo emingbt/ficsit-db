@@ -1,9 +1,10 @@
 import Image from "next/image"
 import { getAllBlueprintsByPioneer } from "../../../services/blueprint"
-import { getPioneerByName } from "../../../services/pioneer"
+import { getPioneerByName, getPioneerSocialLinks } from "../../../services/pioneer"
 import Main from "../../../components/Main"
 import BlueprintContainer from "../../../components/BlueprintContainer"
 import Link from "next/link"
+import { ExternalLink } from "lucide-react"
 
 export default async function PioneerPage({ params }: { params: { pioneerName: string } }) {
   const pioneerName = params.pioneerName
@@ -19,6 +20,8 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
       </Main>
     )
   }
+
+  const socialLinks = await getPioneerSocialLinks(pioneer.name)
 
   const blueprints = await getAllBlueprintsByPioneer(pioneerName)
   let blueprintDownloads = 0
@@ -67,6 +70,23 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
           adPadding={4}
         /> */}
       </div>
+      {
+        socialLinks.length > 0 &&
+        <div className="w-full flex flex-col mb-2 lg:mb-4">
+          <div className="w-full h-10 sm:h-12 flex items-center justify-between bg-main-bg p-4">
+            <h1 className="text-base sm:text-lg font-medium">Social Links</h1>
+          </div>
+          <div className="w-full overflow-x-auto flex flex-1 flex-row items-center gap-2 p-2 bg-light-bg text-sm lg:text-base">
+            {socialLinks.map((link) => (
+              <a key={link.platform} href={link.url} className="flex flex-shrink-0 flex-row items-center gap-2 py-2 px-4 rounded-full bg-dark-bg hover:bg-main-bg text-white" target="_blank" rel="noopener noreferrer">
+                <Image src={`/icons/${link.platform}-logo.svg`} alt={`${link.platform} Logo`} width={24} height={24} />
+                <p className="text-gray-300">{link.platform.charAt(0).toUpperCase() + link.platform.slice(1)}</p>
+                <ExternalLink className="text-gray-300" width={16} height={16} />
+              </a>
+            ))}
+          </div>
+        </div>
+      }
       {/* <AdBanner classname="w-full h-[50px] sm:h-[90px] flex lg:hidden items-center justify-center mb-2"
         dataAdSlot="3904614625"
         dataFullWidthResponsive={false}
