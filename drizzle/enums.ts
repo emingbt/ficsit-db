@@ -41,3 +41,12 @@ export const categoryEnum = pgEnum('category', [
   'Pipes',
   'Supports'
 ])
+
+export const platformEnum = pgEnum('platform', [
+  'youtube',
+  'twitch',
+  'kick',
+  'discord',
+  'reddit',
+  'github'
+])

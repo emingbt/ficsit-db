@@ -9,7 +9,7 @@ import {
   real
 } from 'drizzle-orm/pg-core'
 import { InferInsertModel } from 'drizzle-orm'
-import { avatarEnum, categoryEnum, colorEnum, roleEnum } from './enums'
+import { avatarEnum, categoryEnum, colorEnum, roleEnum, platformEnum } from './enums'
 
 export const Pioneer = pgTable('Pioneer', {
   id: serial('id').primaryKey(),
@@ -19,7 +19,8 @@ export const Pioneer = pgTable('Pioneer', {
   color: colorEnum('color').default('gray').notNull(),
   kindeId: text('kinde_id').notNull(),
   role: roleEnum('role').default('user').notNull(),
-  createdAt: timestamp('created_at').defaultNow().notNull()
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull()
 })
 
 export const ApiAccessToken = pgTable('ApiAccessToken', {
@@ -60,7 +61,22 @@ export const BlueprintRating = pgTable('BlueprintRating', {
   }
 })
 
+
+export const SocialLink = pgTable('SocialLink', {
+  id: serial('id').primaryKey(),
+  pioneerId: integer('pioneer_id').references(() => Pioneer.id).notNull(),
+  platform: platformEnum('platform').notNull(),
+  url: text('url').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull()
+}, (socialLink) => {
+  return {
+    pioneerIdIdx: index('pioneerId_idx').on(socialLink.pioneerId)
+  }
+})
+
 export type Pioneer = InferInsertModel<typeof Pioneer>
 export type ApiAccessToken = InferInsertModel<typeof ApiAccessToken>
 export type Blueprint = InferInsertModel<typeof Blueprint>
 export type BlueprintRating = InferInsertModel<typeof BlueprintRating>
+export type SocialLink = InferInsertModel<typeof SocialLink>
