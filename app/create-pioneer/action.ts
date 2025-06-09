@@ -1,11 +1,11 @@
 'use server'
 
-import { redirect } from "next/navigation"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import { CreatePioneerFormSchema } from "../../utils/zod"
+import { CreatePioneerFormSchema, SocialLinksSchema } from "../../utils/zod"
 import { updateKindeUserProperties } from "../../services/kinde"
-import { createNewPioneer, getPioneerByEmail } from "../../services/pioneer"
+import { createNewPioneer, getPioneerByEmail, updatePioneerSocialLinks } from "../../services/pioneer"
 import { getPioneerByName } from "../../services/pioneer"
+import type { SocialLink } from "../../drizzle/schema"
 
 export async function createPioneer(state, formData: FormData) {
   // 1. Validate the form data
@@ -22,6 +22,30 @@ export async function createPioneer(state, formData: FormData) {
   }
 
   const { name, avatar, color } = validationResults.data
+
+  const allLinks = {
+    youtube: formData.get('social-youtube') || undefined,
+    twitch: formData.get('social-twitch') || undefined,
+    kick: formData.get('social-kick') || undefined,
+    discord: formData.get('social-discord') || undefined,
+    reddit: formData.get('social-reddit') || undefined,
+    github: formData.get('social-github') || undefined,
+  }
+
+  const validationLinkResults = SocialLinksSchema.safeParse(allLinks)
+
+  if (!validationLinkResults.success) {
+    return {
+      error: validationLinkResults.error.flatten().fieldErrors,
+    }
+  }
+
+  const socialLinks = Object.entries(validationLinkResults.data)
+    .filter(([_, url]) => url)
+    .map(([platform, url]) => ({ platform, url })) as {
+      platform: SocialLink['platform'],
+      url: SocialLink['url']
+    }[]
 
   //2. Check if the user is authenticated and get the user
   const { getUser, isAuthenticated, refreshTokens } = getKindeServerSession()
@@ -93,6 +117,9 @@ export async function createPioneer(state, formData: FormData) {
     })
 
     await refreshTokens()
+
+    // 6. After creating the pioneer, create the social links
+    await updatePioneerSocialLinks(name, socialLinks)
   } catch (error) {
     console.error('Error creating pioneer:', error)
     return {

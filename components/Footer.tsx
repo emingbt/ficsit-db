@@ -17,7 +17,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           aria-label="GitHub"
           className='group flex items-center text-sm xl:text-base p-2 rounded-full bg-main-bg'>
-          <Image src="/icons/github-mark-white.svg" alt="GitHub" width={24} height={24} className="fill-gray-600" />
+          <Image src="/icons/github-logo.svg" alt="GitHub" width={24} height={24} className="fill-gray-600" />
           <p className="ml-4 text-gray-600 font-medium group-hover:text-gray-400">Give a star!</p>
           <Star className="text-gray-600 fill-gray-600 ml-2 group-hover:text-main-orange group-hover:fill-main-orange" size={16} />
         </Link>

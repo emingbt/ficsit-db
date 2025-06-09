@@ -31,7 +31,8 @@ export async function updateBlueprint(state, formData: FormData) {
       }
       return acc
     }, []),
-    categories: formData.getAll('category')
+    categories: formData.getAll('category'),
+    videoUrl: formData.get('videoUrl')
   })
 
   if (!validationResults.success) {
@@ -45,7 +46,8 @@ export async function updateBlueprint(state, formData: FormData) {
     id,
     description,
     images,
-    categories
+    categories,
+    videoUrl
   } = validationResults.data
 
   // Check the sizes of the images
@@ -104,9 +106,10 @@ export async function updateBlueprint(state, formData: FormData) {
     const imageUrls = await updateCloudinaryImages(images, blueprint.images, pioneer.name, blueprint.title)
 
     const updatedProperties = {
-      description,
+      description: description || null,
       images: imageUrls,
       categories,
+      videoUrl: videoUrl || null,
       pioneerName: pioneer.name
     }
 

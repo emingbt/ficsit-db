@@ -23,7 +23,8 @@ export default async function createBlueprint(state, formData: FormData) {
     files: formData.getAll('files').filter(
       (file): file is File => file instanceof File && file.size > 0
     ),
-    categories: formData.getAll('category')
+    categories: formData.getAll('category'),
+    videoUrl: formData.get('videoUrl')
   })
 
   if (!validationResults.success) {
@@ -37,7 +38,8 @@ export default async function createBlueprint(state, formData: FormData) {
     description,
     images,
     files,
-    categories
+    categories,
+    videoUrl
   } = validationResults.data
 
   // Check the sizes of the images and files
@@ -107,10 +109,11 @@ export default async function createBlueprint(state, formData: FormData) {
 
     const blueprint = {
       title,
-      description,
+      description: description || null,
       images: imageUrls,
       files: fileUrls,
       categories,
+      videoUrl: videoUrl || null,
       fileSize: files[0].size,
       pioneerName: pioneer.name
     }

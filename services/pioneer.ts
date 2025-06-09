@@ -1,16 +1,15 @@
 import 'server-only'
 
 import db from '../utils/postgres'
-import { desc, eq, sql } from 'drizzle-orm'
+import { and, desc, eq, sql } from 'drizzle-orm'
 import { cache } from 'react'
-import { Blueprint, Pioneer } from '../drizzle/schema'
+import { Blueprint, Pioneer, SocialLink } from '../drizzle/schema'
 import { CreatePioneerFormSchema, UpdateAvatarFormSchema } from '../utils/zod'
 
 export const getPioneerByName = cache(async (name: string) => {
   try {
     const data = await db.query.Pioneer.findFirst({
       where: eq(Pioneer.name, name.toLowerCase()),
-
       columns: {
         name: true,
         avatar: true,
@@ -65,7 +64,7 @@ export const createNewPioneer = async (kindeData: { email: string, kindeId: stri
         email: kindeData.email,
         avatar,
         color,
-        kindeId: kindeData.kindeId,
+        kindeId: kindeData.kindeId
       })
       .returning({ name: Pioneer.name, avatar: Pioneer.avatar, color: Pioneer.color })
 
@@ -98,6 +97,109 @@ export const updatePioneerAvatar = async (email: string, newAvatar: string, newC
   } catch (error) {
     console.log(error)
     throw new Error('Failed to update the pioneer avatar.')
+  }
+}
+
+export const getPioneerSocialLinks = cache(async (pioneerName: string) => {
+  try {
+    // Check if the pioneerName is valid
+    if (!pioneerName || pioneerName.trim() === '') {
+      return []
+    }
+
+    // Fetch the pioneer by name
+    const pioneer = await db.query.Pioneer.findFirst({
+      where: eq(Pioneer.name, pioneerName.toLowerCase()),
+      columns: {
+        id: true
+      }
+    })
+
+    // If the pioneer does not exist, return an empty array
+    if (!pioneer) {
+      return []
+    }
+
+    // Fetch the social links for the pioneer using the pioneer id
+    const data = await db.query.SocialLink.findMany({
+      where: eq(SocialLink.pioneerId, pioneer.id),
+      columns: {
+        platform: true,
+        url: true
+      }
+    })
+
+    return data
+  } catch (error) {
+    console.log("Error fetching social links for pioneer:", error)
+    return []
+  }
+})
+
+export const updatePioneerSocialLinks = async (pioneerName: string, socialLinks: { platform: SocialLink["platform"], url: SocialLink['url'] }[]) => {
+  try {
+    // Check if the pioneerName is valid
+    if (!pioneerName || pioneerName.trim() === '') {
+      throw new Error('Invalid pioneer name.')
+    }
+
+    // Fetch the pioneer by name
+    const pioneer = await db.query.Pioneer.findFirst({
+      where: eq(Pioneer.name, pioneerName.toLowerCase()),
+      columns: {
+        id: true
+      }
+    })
+
+    // If the pioneer does not exist, throw an error
+    if (!pioneer) {
+      throw new Error('Pioneer not found.')
+    }
+
+    // Get the pioneer's current social links
+    let currentSocialLinks = await getPioneerSocialLinks(pioneerName)
+
+    // Update the existing social links
+    for (const link of socialLinks) {
+      const existingLink = currentSocialLinks.find(sl => sl.platform === link.platform)
+
+      if (existingLink) {
+        // Update existing link
+        await db.update(SocialLink)
+          .set({ url: link.url })
+          .where(
+            and(
+              eq(SocialLink.pioneerId, pioneer.id),
+              eq(SocialLink.platform, link.platform)
+            )
+          )
+
+        // Remove from currentSocialLinks to avoid deletion later
+        currentSocialLinks = currentSocialLinks.filter(sl => sl.platform !== link.platform)
+      } else {
+        // Insert new link
+        await db.insert(SocialLink).values({
+          pioneerId: pioneer.id,
+          platform: link.platform,
+          url: link.url
+        })
+      }
+    }
+
+    // Remove any social links that are no longer present
+    for (const existingLink of currentSocialLinks) {
+      await db.delete(SocialLink)
+        .where(
+          and(
+            eq(SocialLink.pioneerId, pioneer.id),
+            eq(SocialLink.platform, existingLink.platform)
+          )
+        )
+    }
+
+  } catch (error) {
+    console.log("Error updating social links for pioneer:", error)
+    throw new Error('Failed to update social links.')
   }
 }
 

@@ -8,7 +8,7 @@ import { getBlueprintById } from "../../../services/blueprint"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
-import { Star } from "lucide-react"
+import { ExternalLink, Star } from "lucide-react"
 
 export async function generateMetadata({ params }: { params: { blueprintId: string } }): Promise<Metadata> {
   const blueprintId = parseInt(params.blueprintId)
@@ -100,6 +100,13 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
                   ))
                 }
               </div>
+              {blueprint.videoUrl && (
+                <a href={blueprint.videoUrl} className="flex flex-row items-center gap-2 py-2 px-4 rounded-full bg-dark-bg hover:bg-main-bg text-white" target="_blank" rel="noopener noreferrer">
+                  <Image src="/icons/youtube-logo.svg" alt="Youtube Logo" width={24} height={24} />
+                  <p className="text-gray-300">Blueprint Video</p>
+                  <ExternalLink className="w-4 h-4 text-gray-300" />
+                </a>
+              )}
             </div>
             <div className="flex flex-col gap-4 font-semibold text-gray-200">
               <div className="flex flex-row flex-grow items-center justify-between gap-4">

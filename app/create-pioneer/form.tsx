@@ -6,6 +6,7 @@ import { useFormState, useFormStatus } from 'react-dom'
 import { createPioneer } from './action'
 import { usePioneerStore } from '../../utils/zustand'
 import { redirect } from 'next/navigation'
+import SocialLinksInput from '../../components/SocialLinksInput'
 
 export default function CreatePioneerForm() {
   const avatars = [
@@ -37,6 +38,14 @@ export default function CreatePioneerForm() {
   const [state, action] = useFormState(createPioneer, undefined)
 
   let nameError = state?.error?.name
+  let socialLinksError = {
+    youtube: state?.error?.youtube,
+    twitch: state?.error?.twitch,
+    kick: state?.error?.kick,
+    discord: state?.error?.discord,
+    reddit: state?.error?.reddit,
+    github: state?.error?.github
+  }
   let submitError = state?.error?.submit
   let submitSuccess = state?.success?.submit
 
@@ -77,7 +86,7 @@ export default function CreatePioneerForm() {
           id='name'
           type='text'
           name='name'
-          placeholder='pi0neer'
+          placeholder='pioneer'
           spellCheck='false'
           autoCorrect='off'
           autoCapitalize='none'
@@ -144,6 +153,9 @@ export default function CreatePioneerForm() {
             </div>
           ))}
         </div>
+        <SocialLinksInput
+          error={socialLinksError}
+        />
         <SignupButton />
         {
           submitError &&
