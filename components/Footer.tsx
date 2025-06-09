@@ -16,10 +16,22 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          className='group flex items-center text-sm xl:text-base p-2 rounded-full bg-main-bg'>
-          <Image src="/icons/github-logo.svg" alt="GitHub" width={24} height={24} className="fill-gray-600" />
-          <p className="ml-4 text-gray-600 font-medium group-hover:text-gray-400">Give a star!</p>
-          <Star className="text-gray-600 fill-gray-600 ml-2 group-hover:text-main-orange group-hover:fill-main-orange" size={16} />
+          className="group flex items-center text-sm xl:text-base p-2 rounded-full bg-main-bg transition-transform duration-300 hover:scale-105 shadow-md hover:shadow-lg outline outline-2 outline-offset-2 outline-gray-600"
+        >
+          <Image
+            src="/icons/github-logo.svg"
+            alt="GitHub"
+            width={24}
+            height={24}
+            className="fill-gray-600 transition-colors duration-300"
+          />
+          <p className="ml-4 text-gray-600 font-medium transition-colors duration-300 group-hover:text-gray-400">
+            Give a star!
+          </p>
+          <Star
+            className="text-gray-600 fill-gray-600 ml-2 transition-colors duration-300 group-hover:text-main-orange group-hover:fill-main-orange animate-pulse group-hover:animate-none"
+            size={16}
+          />
         </Link>
       </div>
       <div className="w-full mb-4">
