@@ -9,7 +9,7 @@ export default function ProfileSection({ pioneer }: { pioneer: Pioneer }) {
   const createdAt = `${day}/${month}/${year}`
 
   return (
-    <section className="w-full lg:w-2/5 h-full flex flex-col flex-grow items-start p-8 bg-main-bg">
+    <section className="w-full h-full flex flex-col flex-grow items-start p-8 bg-main-bg">
       <h1 className="w-full text-left text-2xl mb-4">Profile</h1>
       <div className="w-full h-full flex flex-col justify-center">
         <div className="w-full flex flex-col mb-4">
