@@ -6,6 +6,15 @@ import BlueprintContainer from "../../../components/BlueprintContainer"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
+const allPlatforms = [
+  { slug: 'youtube', name: 'YouTube' },
+  { slug: 'twitch', name: 'Twitch' },
+  { slug: 'kick', name: 'Kick' },
+  { slug: 'discord', name: 'Discord' },
+  { slug: 'reddit', name: 'Reddit' },
+  { slug: 'github', name: 'GitHub' },
+]
+
 export default async function PioneerPage({ params }: { params: { pioneerName: string } }) {
   const pioneerName = params.pioneerName
   const pioneer = await getPioneerByName(pioneerName)
@@ -80,7 +89,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
             {socialLinks.map((link) => (
               <a key={link.platform} href={link.url} className="flex flex-shrink-0 flex-row items-center gap-2 py-2 px-4 rounded-full bg-dark-bg hover:bg-main-bg text-white" target="_blank" rel="noopener noreferrer">
                 <Image src={`/icons/${link.platform}-logo.svg`} alt={`${link.platform} Logo`} width={24} height={24} />
-                <p className="text-gray-300">{link.platform.charAt(0).toUpperCase() + link.platform.slice(1)}</p>
+                <p className="text-gray-300">{allPlatforms.find(p => p.slug === link.platform)?.name || link.platform}</p>
                 <ExternalLink className="text-gray-300" width={16} height={16} />
               </a>
             ))}
