@@ -5,12 +5,12 @@ import { CirclePlus, Trash2 } from 'lucide-react'
 import Image from 'next/image'
 
 const allPlatforms = [
-  'youtube',
-  'twitch',
-  'kick',
-  'discord',
-  'reddit',
-  'github',
+  { slug: 'youtube', name: 'YouTube' },
+  { slug: 'twitch', name: 'Twitch' },
+  { slug: 'kick', name: 'Kick' },
+  { slug: 'discord', name: 'Discord' },
+  { slug: 'reddit', name: 'Reddit' },
+  { slug: 'github', name: 'GitHub' },
 ]
 
 export default function SocialLinksInput({ error, existingSocialLinks }: {
@@ -36,7 +36,7 @@ export default function SocialLinksInput({ error, existingSocialLinks }: {
   }
 
   const availablePlatforms = allPlatforms.filter(
-    (platform) => !socialLinks.some((link) => link.platform === platform)
+    (platform) => !socialLinks.some((link) => link.platform === platform.slug)
   )
 
   const handleAddPlatform = (platformId) => {
@@ -78,11 +78,11 @@ export default function SocialLinksInput({ error, existingSocialLinks }: {
           <ul className='absolute z-10 mt-2 w-40 bg-light-bg border border-main-orange max-h-60 overflow-y-auto'>
             {availablePlatforms.map((platform) => (
               <li
-                key={platform}
+                key={platform.slug}
                 className='p-2 hover:bg-main-orange cursor-pointer text-white'
-                onClick={() => handleAddPlatform(platform)}
+                onClick={() => handleAddPlatform(platform.slug)}
               >
-                {platform.charAt(0).toUpperCase() + platform.slice(1)}
+                {platform.name}
               </li>
             ))}
           </ul>
@@ -96,7 +96,7 @@ export default function SocialLinksInput({ error, existingSocialLinks }: {
 
       {/* Inputs */}
       {socialLinks.map(({ platform, url }) => {
-        const platformLabel = platform.charAt(0).toUpperCase() + platform.slice(1)
+        const platformLabel = allPlatforms.find(p => p.slug === platform)?.name || platform
         return (
           <div key={platform} className='w-full mb-4'>
             <label className='flex text-xs lg:text-base mb-1 text-white'>
