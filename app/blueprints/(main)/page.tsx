@@ -26,14 +26,7 @@ export default async function BlueprintsPage({ searchParams }: {
 
   return (
     <Main classname="flex flex-col items-stretch bg-dark-bg">
-      <BlueprintContainer blueprints={blueprints} title="Blueprints" filter={{ category, sort }} />
-      <Pagination
-        path="/blueprints"
-        currentPage={page}
-        pageCount={pageCount}
-        filterPath={`${category ? `&category=${category}` : ""}${sort ? `&sort=${sort}` : ""}`}
-      />
-      <div className="w-full flex flex-col sm:flex-row items-start sm:items-center p-4 bg-main-bg mt-2 lg:mt-4">
+      <div className="w-full flex flex-col sm:flex-row items-start sm:items-center p-4 bg-main-bg mb-2 lg:mb-4 text-sm sm:text-base">
         <p className="mr-4">Do you want to share your blueprint?</p>
         {
           authenticated ?
@@ -52,6 +45,13 @@ export default async function BlueprintsPage({ searchParams }: {
             </LoginLink>
         }
       </div>
+      <BlueprintContainer blueprints={blueprints} title="Blueprints" filter={{ category, sort }} />
+      <Pagination
+        path="/blueprints"
+        currentPage={page}
+        pageCount={pageCount}
+        filterPath={`${category ? `&category=${category}` : ""}${sort ? `&sort=${sort}` : ""}`}
+      />
     </Main>
   )
 }
