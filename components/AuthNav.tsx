@@ -72,6 +72,12 @@ export default function AuthNavigation() {
                 className={`rounded-full bg-avatar-${pioneer.color}`}
               />
             </Link>
+            <Link
+              href='/settings'
+              className='h-16 lg:w-10 lg:h-10 flex lg:hidden items-center justify-center gap-2 lg:ml-6'
+            >
+              <p className='text-white'>Settings</p>
+            </Link>
             <LogoutLink className='h-16 lg:w-10 lg:h-10 flex lg:hidden items-center justify-center gap-2 lg:ml-6'>
               <p className='text-rose-500'>Logout</p>
             </LogoutLink>
@@ -128,6 +134,9 @@ function AvatarDropdown({ pioneer }: {
     <div className={`absolute top-0 right-0 mt-16 w-24 bg-dark-bg rounded-b-md shadow-sm shadow-avatar-${pioneer.color} z-10`}>
       <Link href={`/pioneers/${pioneer.name}`} className='block px-4 py-2 text-gray-300 hover:bg-main-bg' >
         Profile
+      </Link>
+      <Link href='/settings' className='block px-4 py-2 text-gray-300 hover:bg-main-bg' >
+        Settings
       </Link>
       <LogoutLink className='block px-4 py-2 text-red-500 rounded-b-md hover:bg-main-bg'
         onClick={() => resetStore()}
