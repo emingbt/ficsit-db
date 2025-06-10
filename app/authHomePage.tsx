@@ -35,7 +35,7 @@ export default function AuthHomePage({ pioneer }: {
     <Main classname="bg-dark-bg" dontFill>
       <div className="w-full h-12 lg:h-24 flex items-center justify-between bg-dark-bg mb-2 lg:mb-4 gap-4">
         <div className="w-full h-full flex items-center justify-center bg-main-bg">
-          <h1 className="w-full flex-1 text-xl lg:text-2xl text-center lg:text-start font-secondary pl-4 overflow-hidden">Hi {pioneer.name}!</h1>
+          <h1 className="w-full flex-1 text-xl lg:text-2xl text-center lg:text-start font-secondary lg:pl-4 overflow-hidden">Hi {pioneer.name}!</h1>
         </div>
         {/* <AdBanner classname="w-7/12 h-full hidden lg:flex items-center justify-center"
           dataAdSlot="3454022639"
