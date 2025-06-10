@@ -8,7 +8,7 @@ import Main from "../../components/Main"
 import BlueprintContainer from "../../components/BlueprintContainer"
 import SocialLinksSection from "./socialLinksSection"
 
-export default async function ProfilePage() {
+export default async function SettingsPage() {
   const { getUser, isAuthenticated } = getKindeServerSession()
   const authenticated = await isAuthenticated()
 
