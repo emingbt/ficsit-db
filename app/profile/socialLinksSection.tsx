@@ -12,7 +12,6 @@ export default function SocialLinksSection({ socialLinks }: {
   }[]
 }) {
   const [state, action] = useFormState(updateSocialLinks, socialLinks)
-  const currentSocialLinks = socialLinks
 
   const socialLinksError = {
     youtube: state?.error?.youtube,
