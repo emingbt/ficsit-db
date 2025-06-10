@@ -60,7 +60,7 @@ export default function AuthNavigation() {
         checkIfPioneerExists(pioneer) ? (
           <div className='h-full'>
             <Link
-              href='/profile'
+              href={`/pioneers/${pioneer.name}`}
               className='h-16 lg:w-10 lg:h-10 flex lg:hidden flex-row items-center justify-center gap-2 lg:ml-6'
             >
               <p className='text-white'>{pioneer.name}</p>
@@ -71,6 +71,12 @@ export default function AuthNavigation() {
                 height={40}
                 className={`rounded-full bg-avatar-${pioneer.color}`}
               />
+            </Link>
+            <Link
+              href='/settings'
+              className='h-16 lg:w-10 lg:h-10 flex lg:hidden items-center justify-center gap-2 lg:ml-6'
+            >
+              <p className='text-white'>Settings</p>
             </Link>
             <LogoutLink className='h-16 lg:w-10 lg:h-10 flex lg:hidden items-center justify-center gap-2 lg:ml-6'>
               <p className='text-rose-500'>Logout</p>
@@ -86,7 +92,7 @@ export default function AuthNavigation() {
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               />
               {
-                isDropdownOpen && <AvatarDropdown color={pioneer.color} />
+                isDropdownOpen && <AvatarDropdown pioneer={pioneer} />
               }
             </div>
           </div>
@@ -115,13 +121,22 @@ export default function AuthNavigation() {
   )
 }
 
-function AvatarDropdown({ color }: { color: string }) {
+function AvatarDropdown({ pioneer }: {
+  pioneer: {
+    name: string
+    avatar: string
+    color: string
+  }
+}) {
   const { resetStore } = usePioneerStore((state) => state)
 
   return (
-    <div className={`absolute top-0 right-0 mt-16 w-24 bg-dark-bg rounded-b-md shadow-sm shadow-avatar-${color} z-10`}>
-      <Link href='/profile' className='block px-4 py-2 text-gray-300 hover:bg-main-bg' >
+    <div className={`absolute top-0 right-0 mt-16 w-24 bg-dark-bg rounded-b-md shadow-sm shadow-avatar-${pioneer.color} z-10`}>
+      <Link href={`/pioneers/${pioneer.name}`} className='block px-4 py-2 text-gray-300 hover:bg-main-bg' >
         Profile
+      </Link>
+      <Link href='/settings' className='block px-4 py-2 text-gray-300 hover:bg-main-bg' >
+        Settings
       </Link>
       <LogoutLink className='block px-4 py-2 text-red-500 rounded-b-md hover:bg-main-bg'
         onClick={() => resetStore()}
