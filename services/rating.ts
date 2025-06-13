@@ -1,3 +1,4 @@
+import "server-only"
 import db from "../utils/postgres"
 import { and, avg, desc, eq, gte } from 'drizzle-orm'
 import { Blueprint, BlueprintRating } from "../drizzle/schema"
