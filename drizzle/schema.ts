@@ -61,7 +61,6 @@ export const BlueprintRating = pgTable('BlueprintRating', {
   }
 })
 
-
 export const SocialLink = pgTable('SocialLink', {
   id: serial('id').primaryKey(),
   pioneerId: integer('pioneer_id').references(() => Pioneer.id).notNull(),
@@ -75,8 +74,23 @@ export const SocialLink = pgTable('SocialLink', {
   }
 })
 
+export const BlueprintComment = pgTable('BlueprintComment', {
+  id: serial('id').primaryKey(),
+  blueprintId: serial('blueprint_id').references(() => Blueprint.id).notNull(),
+  pioneerId: integer('pioneer_id').references(() => Pioneer.id).notNull(),
+  content: text('content').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull()
+}, (blueprintComment) => {
+  return {
+    comment_blueprintIdIdx: index('comment_blueprintId_idx').on(blueprintComment.blueprintId),
+    comment_pioneerIdIdx: index('comment_pioneerId_idx').on(blueprintComment.pioneerId)
+  }
+})
+
 export type Pioneer = InferInsertModel<typeof Pioneer>
 export type ApiAccessToken = InferInsertModel<typeof ApiAccessToken>
 export type Blueprint = InferInsertModel<typeof Blueprint>
 export type BlueprintRating = InferInsertModel<typeof BlueprintRating>
 export type SocialLink = InferInsertModel<typeof SocialLink>
+export type BlueprintComment = InferInsertModel<typeof BlueprintComment>
