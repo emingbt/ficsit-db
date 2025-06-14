@@ -1,4 +1,4 @@
-import { array, any, enum as enum_, object, string } from "zod"
+import { array, any, enum as enum_, object, string, number } from "zod"
 
 export const LoginFormSchema = object({
   email: string().email({ message: 'Please enter a valid email.' }).trim(),
@@ -182,4 +182,20 @@ export const SocialLinksSchema = object({
   github: string().url("Invalid URL")
     .regex(httpsRegex, "Must start with https://")
     .regex(platformPatterns.github, "Must be valid GitHub URL").optional(),
+})
+
+export const CreateCommentSchema = object({
+  content: string()
+    .min(1, { message: 'Comment cannot be empty.' })
+    .max(1000, { message: 'Comment must be at most 1000 characters long.' })
+    .trim(),
+  blueprintId: number()
+})
+
+export const UpdateCommentSchema = object({
+  content: string()
+    .min(1, { message: 'Comment cannot be empty.' })
+    .max(1000, { message: 'Comment must be at most 1000 characters long.' })
+    .trim(),
+  commentId: number()
 })
