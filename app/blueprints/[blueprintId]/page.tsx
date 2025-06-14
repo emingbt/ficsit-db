@@ -9,6 +9,9 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
 import { ExternalLink, Star } from "lucide-react"
+import CommentsSection from "./commentsSection"
+import { usePioneerStore } from "../../../utils/zustand"
+import { getCommentsByBlueprintId } from "../../../services/comment"
 
 export async function generateMetadata({ params }: { params: { blueprintId: string } }): Promise<Metadata> {
   const blueprintId = parseInt(params.blueprintId)
@@ -62,6 +65,8 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
   const { getAccessToken } = getKindeServerSession()
   const accessToken = await getAccessToken()
   const user = getPropertiesFromAccessToken(accessToken)
+
+  const initialComments = await getCommentsByBlueprintId(blueprintId)
 
   return (
     <Main classname="bg-dark-bg" dontFill>
@@ -178,10 +183,13 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4">
         {
           blueprint.description && (
-            <div className="w-full bg-light-bg text-gray-200 p-4 mt-2 lg:mt-4">
-              <h2 className="text-xl font-semibold">Description</h2>
-              <div className="w-full h-[1px] bg-gray-500 shadow-md my-1" />
-              <pre className="whitespace-pre-wrap font-main">{blueprint.description}</pre>
+            <div className="w-full mt-2 lg:mt-4">
+              <div className="w-full h-10 sm:h-12 flex items-center bg-main-bg p-4">
+                <h1 className="text-lg sm:text-xl font-medium">Description</h1>
+              </div>
+              <div className="w-full bg-light-bg text-gray-200 p-4">
+                <pre className="whitespace-pre-wrap font-main">{blueprint.description}</pre>
+              </div>
             </div>
           )
         }
@@ -191,6 +199,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           adPadding={16}
         /> */}
       </div>
+      <CommentsSection initialComments={initialComments} blueprintId={blueprintId} />
     </Main>
   )
 }
