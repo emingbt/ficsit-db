@@ -16,7 +16,7 @@ export default function AuthNavigation() {
   const pathname = usePathname()
 
   // Fetch the pioneer data from the store as pioneer
-  const { name, avatar, color, setAvatar, setName, setColor } = usePioneerStore((state) => state)
+  const { name, avatar, color, setAvatar, setName, setColor, resetStore } = usePioneerStore((state) => state)
   const pioneer = { name, avatar, color }
 
   // If the store is empty, fetch the pioneer data from the access token
@@ -78,7 +78,10 @@ export default function AuthNavigation() {
             >
               <p className='text-white'>Settings</p>
             </Link>
-            <LogoutLink className='h-16 lg:w-10 lg:h-10 flex lg:hidden items-center justify-center gap-2 lg:ml-6'>
+            <LogoutLink
+              className='h-16 lg:w-10 lg:h-10 flex lg:hidden items-center justify-center gap-2 lg:ml-6'
+              onClick={() => resetStore()}
+            >
               <p className='text-rose-500'>Logout</p>
             </LogoutLink>
 
@@ -112,7 +115,10 @@ export default function AuthNavigation() {
                 <p className='h-full text-center user-select-none lg:cursor-pointer'>Login</p>
               </LoginLink>
             </> :
-            <LogoutLink className='w-32 lg:w-16 lg:ml-6 lg:hover:text-main-orange'>
+            <LogoutLink
+              className='w-32 lg:w-16 lg:ml-6 lg:hover:text-main-orange'
+              onClick={() => resetStore()}
+            >
               <p className='h-full text-center user-select-none lg:cursor-pointer'>Logout</p>
             </LogoutLink>
         )
