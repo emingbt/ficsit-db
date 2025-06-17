@@ -124,7 +124,7 @@ This project is currently under active development (🚧). We're continuously ad
 ## 🙏 Acknowledgments
 
 - Coffee Stain Studios for creating the amazing game Satisfactory
-- The lunafoxfire/satisfactory-docs-parser for data sources
+- The [lunafoxfire/satisfactory-docs-parser](https://github.com/lunafoxfire/satisfactory-docs-parser) for parsing game data
 - All contributors who help make this project better
 
 ---
