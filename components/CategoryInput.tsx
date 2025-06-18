@@ -7,22 +7,23 @@ export default function CategoryInput({ error, existingCategories }: { error?: R
 
   const categories = [
     'Architecture',
-    'Power',
-    'Transportation',
-    'Trains',
-    'Tracks',
-    'Roads',
-    'Hypertubes',
-    'Foundations',
-    'Compact',
     'Belts',
+    'Compact',
+    'Decorations',
+    'Foundations',
+    'Hypertubes',
     'Load Balancer',
     'Logistics',
-    'Signs',
-    'Decorations',
-    'Storage',
     'Pipes',
-    'Supports'
+    'Power',
+    'Production',
+    'Roads',
+    'Signs',
+    'Storage',
+    'Supports',
+    'Tracks',
+    'Trains',
+    'Transportation'
   ]
 
   return (

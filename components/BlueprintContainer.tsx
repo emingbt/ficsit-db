@@ -13,22 +13,23 @@ type Filter = {
 
 const categories = [
   'Architecture',
-  'Power',
-  'Transportation',
-  'Trains',
-  'Tracks',
-  'Roads',
-  'Hypertubes',
-  'Foundations',
-  'Compact',
   'Belts',
+  'Compact',
+  'Decorations',
+  'Foundations',
+  'Hypertubes',
   'Load Balancer',
   'Logistics',
-  'Signs',
-  'Decorations',
-  'Storage',
   'Pipes',
-  'Supports'
+  'Power',
+  'Production',
+  'Roads',
+  'Signs',
+  'Storage',
+  'Supports',
+  'Tracks',
+  'Trains',
+  'Transportation'
 ]
 
 export default function BlueprintContainer({ blueprints, title, filter, isEdit = false }: { blueprints: BlueprintCardProps[], title: string, filter?: Filter, isEdit?: boolean }) {
