@@ -24,22 +24,23 @@ export const roleEnum = pgEnum('role', ['admin', 'user'])
 
 export const categoryEnum = pgEnum('category', [
   'Architecture',
-  'Power',
-  'Transportation',
-  'Trains',
-  'Tracks',
-  'Roads',
-  'Hypertubes',
-  'Foundations',
-  'Compact',
   'Belts',
+  'Compact',
+  'Decorations',
+  'Foundations',
+  'Hypertubes',
   'Load Balancer',
   'Logistics',
-  'Signs',
-  'Decorations',
-  'Storage',
   'Pipes',
-  'Supports'
+  'Power',
+  'Production',
+  'Roads',
+  'Signs',
+  'Storage',
+  'Supports',
+  'Tracks',
+  'Trains',
+  'Transportation'
 ])
 
 export const platformEnum = pgEnum('platform', [
