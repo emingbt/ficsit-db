@@ -68,22 +68,23 @@ export const UpdateAvatarFormSchema = object({
 // category checkboxes
 const CategoriesEnum = enum_([
   'Architecture',
-  'Power',
-  'Transportation',
-  'Trains',
-  'Tracks',
-  'Roads',
-  'Hypertubes',
-  'Foundations',
-  'Compact',
   'Belts',
+  'Compact',
+  'Decorations',
+  'Foundations',
+  'Hypertubes',
   'Load Balancer',
   'Logistics',
-  'Signs',
-  'Decorations',
-  'Storage',
   'Pipes',
-  'Supports'
+  'Power',
+  'Production',
+  'Roads',
+  'Signs',
+  'Storage',
+  'Supports',
+  'Tracks',
+  'Trains',
+  'Transportation'
 ])
 
 export const CreateBlueprintFormSchema = object({
