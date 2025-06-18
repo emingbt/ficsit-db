@@ -75,6 +75,7 @@ const CategoriesEnum = enum_([
   'Hypertubes',
   'Load Balancer',
   'Logistics',
+  'Modded',
   'Pipes',
   'Power',
   'Production',

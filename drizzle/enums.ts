@@ -31,6 +31,7 @@ export const categoryEnum = pgEnum('category', [
   'Hypertubes',
   'Load Balancer',
   'Logistics',
+  'Modded',
   'Pipes',
   'Power',
   'Production',
