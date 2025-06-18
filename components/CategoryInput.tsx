@@ -14,6 +14,7 @@ export default function CategoryInput({ error, existingCategories }: { error?: R
     'Hypertubes',
     'Load Balancer',
     'Logistics',
+    'Modded',
     'Pipes',
     'Power',
     'Production',

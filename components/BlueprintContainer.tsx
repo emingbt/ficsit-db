@@ -20,6 +20,7 @@ const categories = [
   'Hypertubes',
   'Load Balancer',
   'Logistics',
+  "Modded",
   'Pipes',
   'Power',
   'Production',
