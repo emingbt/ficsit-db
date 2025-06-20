@@ -10,7 +10,6 @@ import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
 import { ExternalLink, Star } from "lucide-react"
 import CommentsSection from "./commentsSection"
-import { usePioneerStore } from "../../../utils/zustand"
 import { getCommentsByBlueprintId } from "../../../services/comment"
 
 export async function generateMetadata({ params }: { params: { blueprintId: string } }): Promise<Metadata> {
@@ -67,6 +66,11 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
   const user = getPropertiesFromAccessToken(accessToken)
 
   const initialComments = await getCommentsByBlueprintId(blueprintId)
+
+  function linkify(text: string) {
+    if (!text) return ''
+    return text.replace(/(https:\/\/[^\s]+)/g, (url) => `<a href="${url}" class="text-main-orange underline break-all" target="_blank" rel="noopener noreferrer">${url}</a>`)
+  }
 
   return (
     <Main classname="bg-dark-bg" dontFill>
@@ -188,7 +192,10 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
                 <h1 className="text-lg sm:text-xl font-medium">Description</h1>
               </div>
               <div className="w-full bg-light-bg text-gray-200 p-4">
-                <pre className="whitespace-pre-wrap font-main">{blueprint.description}</pre>
+                <div
+                  className="whitespace-pre-wrap font-main"
+                  dangerouslySetInnerHTML={{ __html: linkify(blueprint.description) }}
+                />
               </div>
             </div>
           )
