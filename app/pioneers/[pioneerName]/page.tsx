@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Image from "next/image"
 import { getAllBlueprintsByPioneer } from "../../../services/blueprint"
 import { getPioneerByName, getPioneerSocialLinks } from "../../../services/pioneer"
@@ -14,6 +15,24 @@ const allPlatforms = [
   { slug: 'reddit', name: 'Reddit' },
   { slug: 'github', name: 'GitHub' },
 ]
+
+export async function generateMetadata({ params }: { params: { pioneerName: string } }): Promise<Metadata> {
+  const pioneerName = params.pioneerName
+  // If pioneerName is not a string or is empty, don't fetch the pioneer
+  if (typeof pioneerName !== 'string' || pioneerName.trim() === '') {
+    return {
+      title: "Invalid pioneer name - FicsitDB",
+      description: "Invalid pioneer name",
+    }
+  }
+
+  const pioneer = await getPioneerByName(pioneerName)
+
+  return {
+    title: pioneer ? `${pioneer.name} - FicsitDB` : "pioneer Not Found - FicsitDB",
+    description: pioneer ? `Explore the pioneer: ${pioneer.name} in Satisfactory.` : "Pioneer not found in FicsitDB.",
+  }
+}
 
 export default async function PioneerPage({ params }: { params: { pioneerName: string } }) {
   const pioneerName = params.pioneerName
