@@ -31,7 +31,7 @@ export default function CategoryInput({ error, existingCategories }: { error?: R
     <div>
       <label htmlFor='category'>Category</label>
       <div className={
-        `w-full h-8 lg:h-10 p-2 ${!error && 'mb-4 lg:mb-6'}  bg-light-bg text-white
+        `w-full h-10 p-2 ${!error && 'mb-4 lg:mb-6'}  bg-light-bg text-white
           rounded-none outline-none focus:border-b-2 border-${!error ? 'main-orange' : 'error'}
           ${error && 'border-b-2 border-error'} select-none`
       }>
