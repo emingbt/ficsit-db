@@ -11,9 +11,7 @@ import Main from "../../../components/Main"
 import { ExternalLink, Star } from "lucide-react"
 import CommentsSection from "./commentsSection"
 import { getCommentsByBlueprintId } from "../../../services/comment"
-import dynamic from "next/dynamic"
-
-const BlueprintOwnerSection = dynamic(() => import("../../../components/BlueprintOwnerSection"), { ssr: false })
+import BlueprintOwnerSection from "../../../components/BlueprintOwnerSection"
 
 export async function generateMetadata({ params }: { params: { blueprintId: string } }): Promise<Metadata> {
   const blueprintId = parseInt(params.blueprintId)
@@ -75,7 +73,6 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
     return text.replace(/(https:\/\/[^\s]+)/g, (url) => `<a href="${url}" class="text-main-orange underline break-all" target="_blank" rel="noopener noreferrer">${url}</a>`)
   }
 
-  // Remove old isOwner logic and section
   return (
     <Main classname="bg-dark-bg" dontFill>
       <BlueprintOwnerSection blueprintId={blueprintId} pioneerName={blueprint.pioneerName} />
