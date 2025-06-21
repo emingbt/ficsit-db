@@ -43,7 +43,7 @@ export default function ImageCarousel({
 
   return (
     <div
-      className="w-full lg:w-2/3 flex aspect-video relative overflow-hidden"
+      className="w-full lg:w-2/3 flex aspect-video relative overflow-hidden bg-main-bg"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
