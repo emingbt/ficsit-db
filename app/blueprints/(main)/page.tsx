@@ -45,7 +45,7 @@ export default async function BlueprintsPage({ searchParams }: {
             </LoginLink>
         }
       </div>
-      <BlueprintContainer blueprints={blueprints} title="Blueprints" filter={{ category, sort }} />
+      <BlueprintContainer entries={blueprints} title="Blueprints" filter={{ category, sort }} />
       <Pagination
         path="/blueprints"
         currentPage={page}

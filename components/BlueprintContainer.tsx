@@ -4,7 +4,8 @@ import { useState } from 'react'
 import { Filter, SortDesc } from 'lucide-react'
 import Link from 'next/link'
 import BlueprintCard from './BlueprintCard'
-import type { BlueprintCardProps } from '../interfaces'
+import type { BlueprintCardProps, BlueprintPackCardProps } from '../interfaces'
+import BlueprintPackCard from './BlueprintPackCard'
 
 type Filter = {
   category?: string
@@ -33,7 +34,7 @@ const categories = [
   'Transportation'
 ]
 
-export default function BlueprintContainer({ blueprints, title, filter, isEdit = false }: { blueprints: BlueprintCardProps[], title: string, filter?: Filter, isEdit?: boolean }) {
+export default function BlueprintContainer({ entries, title, filter, isEdit = false, type = "blueprint" }: { entries: BlueprintCardProps[] | BlueprintPackCardProps[], title: string, filter?: Filter, isEdit?: boolean, type?: "blueprint" | "blueprintPack" }) {
   const [isCategoriesOpened, setIsCategoriesOpened] = useState(false)
   const [isSortOpened, setIsSortOpened] = useState(false)
   const selectedCategory = filter?.category
@@ -73,7 +74,7 @@ export default function BlueprintContainer({ blueprints, title, filter, isEdit =
                     return (
                       <Link
                         key={i}
-                        href={`/blueprints${selectedCategory ? `?category=${selectedCategory}&sort=${sort}` : `?sort=${sort}`}  `}
+                        href={`/${type == "blueprint" ? "blueprints" : "blueprint-packs"}${selectedCategory ? `?category=${selectedCategory}&sort=${sort}` : `?sort=${sort}`}  `}
                         className={`${selectedSort == sort ? "bg-logo-blue text-black hover:text-white" : "bg-light-bg text-white hover:text-logo-blue"}  px-3 py-2 text-sm sm:text-base rounded-sm cursor-pointer`}
                       >
                         {sort}
@@ -96,8 +97,8 @@ export default function BlueprintContainer({ blueprints, title, filter, isEdit =
                   <Link
                     key={i}
                     href={`${selectedCategory == category ?
-                      `/blueprints` :
-                      `/blueprints/?category=${category}${selectedSort ? `&sort=${selectedSort}` : ""}`
+                      `/${type == "blueprint" ? "blueprints" : "blueprint-packs"}` :
+                      `/${type == "blueprint" ? "blueprints" : "blueprint-packs"}/?category=${category}${selectedSort ? `&sort=${selectedSort}` : ""}`
                       }`}
                     className={`${selectedCategory == category ? "bg-logo-blue text-black" : "bg-light-bg hover:text-logo-blue"} px-3 py-2 text-sm sm:text-base rounded-sm cursor-pointer`}
                   >
@@ -112,13 +113,19 @@ export default function BlueprintContainer({ blueprints, title, filter, isEdit =
       <div className='w-full h-full bg-light-bg'>
         <section className='w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 lg:gap-3 p-2 lg:p-3'>
           {
-            blueprints?.length > 0 ?
-              blueprints.map((blueprint, i: number) => {
-                return (
-                  <BlueprintCard key={i} blueprint={blueprint} isEdit={isEdit} />
-                )
+            entries?.length > 0 ?
+              entries.map((blueprint, i: number) => {
+                if (type === "blueprint") {
+                  return (
+                    <BlueprintCard key={i} blueprint={blueprint} isEdit={isEdit} />
+                  )
+                } else {
+                  return (
+                    <BlueprintPackCard key={i} blueprintPack={blueprint} isEdit={isEdit} />
+                  )
+                }
               }) :
-              <p className='text-2xl'>No blueprints found</p>
+              <p className='text-2xl'>No {type == "blueprint" ? "blueprints" : "blueprint packs"} found</p>
           }
         </section>
       </div>
