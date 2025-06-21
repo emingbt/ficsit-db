@@ -132,3 +132,12 @@ export interface Pioneer {
   'red',
   createdAt: Date
 }
+
+export interface BlueprintPackCardProps {
+  id: number
+  title: string,
+  images: string[],
+  blueprints: { id: number, title: string }[],
+  averageRating: number,
+  downloads: number
+}
