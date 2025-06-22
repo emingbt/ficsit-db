@@ -121,7 +121,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
         dataAdFormat="fixed"
         dynamicHeight={false}
       /> */}
-      <BlueprintContainer blueprints={blueprints} title="Blueprints" />
+      <BlueprintContainer entries={blueprints} title="Blueprints" />
     </Main>
   )
 }

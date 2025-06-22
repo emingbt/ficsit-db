@@ -44,7 +44,7 @@ export default async function SettingsPage() {
       </div>
       {
         blueprints?.length > 0 &&
-        <BlueprintContainer blueprints={blueprints} title="Edit your Blueprints" isEdit />
+        <BlueprintContainer entries={blueprints} title="Edit your Blueprints" isEdit />
       }
     </Main>
   )
