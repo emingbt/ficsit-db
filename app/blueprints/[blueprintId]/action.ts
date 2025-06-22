@@ -36,6 +36,7 @@ export const rateBlueprint = async (blueprintId: number, pioneerName: string, ra
     revalidatePath(`/blueprints/${blueprintId}`)
     revalidatePath('/blueprints')
     revalidatePath('/search')
+    revalidatePath(`/pioneers/${pioneerName}`)
 
     return averageRating
   } catch (error) {
