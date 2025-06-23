@@ -237,11 +237,6 @@ export const getPageCountAndBlueprintsByPage = async (
       }
     })
 
-    await db.select().from(Blueprint)
-      .orderBy(desc(Blueprint.id))
-      .limit(blueprintsPerPage)
-      .offset(offset)
-
     const pageCount = await getPageCount(category)
 
     return { pageCount, blueprints }
