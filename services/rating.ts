@@ -1,7 +1,7 @@
 import "server-only"
 import db from "../utils/postgres"
 import { and, avg, desc, eq, gte } from 'drizzle-orm'
-import { Blueprint, BlueprintRating } from "../drizzle/schema"
+import { Blueprint, BlueprintPack, BlueprintPackRating, BlueprintRating } from "../drizzle/schema"
 import { getBlueprintById } from "./blueprint"
 
 export const getBlueprintRating = async (blueprintId: number, pioneerName: string) => {
@@ -33,7 +33,7 @@ export const createOrUpdateBlueprintRating = async (blueprintId: number, pioneer
       await db.update(BlueprintRating)
         .set({
           rating,
-          createdAt: new Date()
+          updatedAt: new Date(),
         })
         .where(eq(BlueprintRating.id, existingRating.id))
     } else {
@@ -63,6 +63,73 @@ export const createOrUpdateBlueprintRating = async (blueprintId: number, pioneer
         averageRating
       })
       .where(eq(Blueprint.id, blueprintId))
+
+    return averageRating
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to rate the blueprint.')
+  }
+}
+
+export const getBlueprintPackRating = async (blueprintPackId: number, pioneerName: string) => {
+  try {
+    const blueprintPackRating = (await db.select().from(BlueprintPackRating)
+      .where(and(
+        eq(BlueprintPackRating.blueprintPackId, blueprintPackId),
+        eq(BlueprintPackRating.pioneerName, pioneerName)
+      )))[0]
+
+    return blueprintPackRating
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to get the blueprint pack rating.')
+  }
+}
+
+export const createOrUpdateBlueprintPackRating = async (blueprintPackId: number, pioneerName: string, rating: number) => {
+  if (rating < 1 || rating > 5 || rating % 1 !== 0) {
+    throw new Error('Rating must be a whole number between 1 and 5.')
+  }
+
+  try {
+    // Check if the pioneer has already rated the blueprint pack
+    const existingRating = await getBlueprintPackRating(blueprintPackId, pioneerName)
+
+    if (existingRating) {
+      // Update the existing rating
+      await db.update(BlueprintPackRating)
+        .set({
+          rating,
+          updatedAt: new Date(),
+        })
+        .where(eq(BlueprintPackRating.id, existingRating.id))
+    } else {
+      // Create a new rating
+      await db.insert(BlueprintPackRating)
+        .values({
+          blueprintPackId,
+          pioneerName,
+          rating
+        })
+    }
+
+    // Update the average rating of the blueprint
+    const averageRatingValue = (await db.select({
+      value: avg(BlueprintPackRating.rating)
+    }).from(BlueprintPackRating)
+      .where(eq(BlueprintPackRating.blueprintPackId, blueprintPackId)))[0].value
+
+    if (!averageRatingValue) {
+      throw new Error('Failed to calculate the average rating.')
+    }
+
+    const averageRating = parseFloat(averageRatingValue)
+
+    await db.update(BlueprintPack)
+      .set({
+        averageRating
+      })
+      .where(eq(BlueprintPack.id, blueprintPackId))
 
     return averageRating
   } catch (error) {
