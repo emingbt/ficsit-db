@@ -2,8 +2,8 @@ import 'server-only'
 
 import { cache } from 'react'
 import db from '../utils/postgres'
-import { count, desc, eq, avg, and, sql, AnyColumn } from 'drizzle-orm'
-import { Blueprint, BlueprintRating, Pioneer } from '../drizzle/schema'
+import { count, desc, eq, sql, AnyColumn } from 'drizzle-orm'
+import { Blueprint, BlueprintComment, BlueprintRating, Pioneer } from '../drizzle/schema'
 
 const blueprintsPerPage = 30
 
@@ -59,7 +59,7 @@ export const getBlueprintById = async (id: number) => {
   }
 }
 
-export const getAllBlueprintsByTitle = async (title: string, blueprintCount = 30) => {
+export const getAllBlueprintsByTitle = async (title: string, blueprintCount = blueprintsPerPage) => {
   if (!title || title.trim() == '') {
     return []
   }
@@ -185,7 +185,11 @@ export const deleteBlueprintById = async (blueprintId: number) => {
     await db.delete(BlueprintRating)
       .where(eq(BlueprintRating.blueprintId, blueprintId))
 
-    // 2. Delete the blueprint
+    // 2. Delete the blueprint comments (if any)
+    await db.delete(BlueprintComment)
+      .where(eq(BlueprintComment.blueprintId, blueprintId))
+
+    // 3. Delete the blueprint
     const deletedBlueprint = await db.delete(Blueprint)
       .where(eq(Blueprint.id, blueprintId))
       .returning({
