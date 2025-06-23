@@ -55,7 +55,8 @@ export const BlueprintRating = pgTable('BlueprintRating', {
   blueprintId: serial('blueprint_id').references(() => Blueprint.id).notNull(),
   pioneerName: text('pioneer_name').references(() => Pioneer.name).notNull(),
   rating: integer('rating').notNull(),
-  createdAt: timestamp('created_at').defaultNow().notNull()
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull()
 }, (blueprintRating) => {
   return {
     blueprintIdPioneerNameIdx: uniqueIndex('blueprintId_pioneerName_idx').on(blueprintRating.blueprintId, blueprintRating.pioneerName)
