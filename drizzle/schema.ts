@@ -6,7 +6,8 @@ import {
   index,
   uniqueIndex,
   integer,
-  real
+  real,
+  primaryKey
 } from 'drizzle-orm/pg-core'
 import { InferInsertModel } from 'drizzle-orm'
 import { avatarEnum, categoryEnum, colorEnum, roleEnum, platformEnum } from './enums'
@@ -88,9 +89,54 @@ export const BlueprintComment = pgTable('BlueprintComment', {
   }
 })
 
+export const BlueprintPack = pgTable('BlueprintPack', {
+  id: serial('id').primaryKey(),
+  title: text('title').unique().notNull(),
+  description: text('description'),
+  images: text('images').array().notNull(),
+  categories: categoryEnum('category').array().notNull(),
+  pioneerName: text('pioneer_name').references(() => Pioneer.name).notNull(),
+  averageRating: real('average_rating').default(0).notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+  videoUrl: text('video_url')
+}, (blueprintPack) => {
+  return {
+    blueprintPack_pioneerNameIdx: index('blueprintPack_pioneerName_idx').on(blueprintPack.pioneerName),
+  }
+})
+
+export const BlueprintPackBlueprints = pgTable('BlueprintPackBlueprints', {
+  blueprintPackId: serial('blueprint_pack_id').references(() => BlueprintPack.id).notNull(),
+  blueprintId: serial('blueprint_id').references(() => Blueprint.id).notNull()
+}, (table) => {
+  return {
+    pk: primaryKey({
+      columns: [table.blueprintPackId, table.blueprintId],
+      name: 'blueprintPackBlueprints_pk'
+    })
+  }
+})
+
+export const BlueprintPackRating = pgTable('BlueprintPackRating', {
+  id: serial('id').primaryKey(),
+  blueprintPackId: serial('blueprint_pack_id').references(() => BlueprintPack.id).notNull(),
+  pioneerName: text('pioneer_name').references(() => Pioneer.name).notNull(),
+  rating: integer('rating').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull()
+}, (blueprintPackRating) => {
+  return {
+    blueprintPackIdPioneerNameIdx: uniqueIndex('blueprintPackId_pioneerName_idx').on(blueprintPackRating.blueprintPackId, blueprintPackRating.pioneerName)
+  }
+})
+
 export type Pioneer = InferInsertModel<typeof Pioneer>
 export type ApiAccessToken = InferInsertModel<typeof ApiAccessToken>
 export type Blueprint = InferInsertModel<typeof Blueprint>
 export type BlueprintRating = InferInsertModel<typeof BlueprintRating>
 export type SocialLink = InferInsertModel<typeof SocialLink>
 export type BlueprintComment = InferInsertModel<typeof BlueprintComment>
+export type BlueprintPack = InferInsertModel<typeof BlueprintPack>
+export type BlueprintPackBlueprints = InferInsertModel<typeof BlueprintPackBlueprints>
+export type BlueprintPackRating = InferInsertModel<typeof BlueprintPackRating>
