@@ -39,7 +39,7 @@ export default function BlueprintPackCard({ blueprintPack, isEdit }: { blueprint
             </div>
             {/* Number of the blueprints in the pack */}
             <p className="text-sm sm:text-md text-center text-gray-400 mb-2">
-              {blueprintPack.blueprints.length} blueprints
+              {blueprintPack.blueprintCount} blueprints
             </p>
           </div>
         </div>
