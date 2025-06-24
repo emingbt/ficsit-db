@@ -3,11 +3,11 @@ import "server-only"
 import { cache } from 'react'
 import db from "../utils/postgres"
 import { Blueprint, BlueprintPack, BlueprintPackBlueprints, BlueprintPackRating, Pioneer } from "../drizzle/schema"
-import { count, desc, eq, sql, AnyColumn } from 'drizzle-orm'
+import { count, desc, eq, sql } from 'drizzle-orm'
 
 const blueprintPacksPerPage = 30
 
-export const getBliueprintPackById = async (blueprintPackId: number) => {
+export const getBlueprintPacksById = async (blueprintPackId: number) => {
   try {
     const blueprintPack = await db.query.BlueprintPack.findFirst({
       where: eq(BlueprintPack.id, blueprintPackId),
@@ -100,7 +100,7 @@ export const getAllBlueprintPacksByTitle = async (title: string, blueprintPackCo
   }
 }
 
-export const getAllBlueprintsByPioneer = async (pioneerName: string) => {
+export const getAllBlueprintPacksByPioneer = async (pioneerName: string) => {
   try {
     const blueprintPacks = await db.query.BlueprintPack.findMany({
       where: eq(BlueprintPack.pioneerName, pioneerName),
@@ -141,8 +141,8 @@ export const checkIfTitleIsUsed = async (title: string) => {
   }
 }
 
-export const createNewBlueprintPack = async (blueprintPack: BlueprintPack, blueprints: { id: number }[]) => {
-  if (!blueprintPack || !blueprints || blueprints.length === 0) {
+export const createNewBlueprintPack = async (blueprintPack: BlueprintPack, blueprintIds: number[]) => {
+  if (!blueprintPack || !blueprintIds || blueprintIds.length === 0) {
     throw new Error('Invalid blueprint pack or blueprints data.')
   }
 
@@ -168,9 +168,9 @@ export const createNewBlueprintPack = async (blueprintPack: BlueprintPack, bluep
       })
 
     // Insert the blueprints into the BlueprintPackBlueprints table
-    await db.insert(BlueprintPackBlueprints).values(blueprints.map(blueprint => ({
+    await db.insert(BlueprintPackBlueprints).values(blueprintIds.map(blueprintId => ({
       blueprintPackId: newBlueprintPack.id,
-      blueprintId: blueprint.id
+      blueprintId: blueprintId
     })))
 
     // Get the full blueprint pack with the blueprints included
