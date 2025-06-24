@@ -45,12 +45,6 @@ export const rateBlueprint = async (blueprintId: number, pioneerName: string, ra
   }
 }
 
-export const getRating = async (blueprintId: number, pioneerName: string) => {
-  const blueprintRating = await getBlueprintRating(blueprintId, pioneerName)
-
-  return blueprintRating
-}
-
 export const checkIfRated = async (blueprintId: number, pioneerName: string) => {
   const blueprintRating = await getBlueprintRating(blueprintId, pioneerName)
 
