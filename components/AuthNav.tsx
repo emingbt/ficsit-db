@@ -58,7 +58,7 @@ export default function AuthNavigation() {
     <>
       {
         checkIfPioneerExists(pioneer) ? (
-          <div className='h-full'>
+          <div className='h-full flex-shrink-0'>
             <Link
               href={`/pioneers/${pioneer.name}`}
               className='h-16 lg:w-10 lg:h-10 flex lg:hidden flex-row items-center justify-center gap-2 lg:ml-6'
