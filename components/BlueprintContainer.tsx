@@ -114,14 +114,14 @@ export default function BlueprintContainer({ entries, title, filter, isEdit = fa
         <section className='w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 lg:gap-3 p-2 lg:p-3'>
           {
             entries?.length > 0 ?
-              entries.map((blueprint, i: number) => {
+              entries.map((enrty, i: number) => {
                 if (type === "blueprint") {
                   return (
-                    <BlueprintCard key={i} blueprint={blueprint} isEdit={isEdit} />
+                    <BlueprintCard key={i} blueprint={enrty} isEdit={isEdit} />
                   )
                 } else {
                   return (
-                    <BlueprintPackCard key={i} blueprintPack={blueprint} isEdit={isEdit} />
+                    <BlueprintPackCard key={i} blueprintPack={enrty} isEdit={isEdit} />
                   )
                 }
               }) :
