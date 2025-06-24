@@ -302,9 +302,21 @@ export const getPageCountAndBlueprintPacksByPage = async (
       }
     })
 
+    // Get all blueprintPack ids
+    const packsWithCounts = await Promise.all(blueprintPacks.map(async (pack) => {
+      const blueprintCount = await db.select({ value: count() })
+        .from(BlueprintPackBlueprints)
+        .where(eq(BlueprintPackBlueprints.blueprintPackId, pack.id))
+
+      return {
+        blueprintCount: blueprintCount[0].value,
+        ...pack,
+      }
+    }))
+
     const pageCount = await getPageCount(category)
 
-    return { pageCount, blueprintPacks }
+    return { pageCount, blueprintPacks: packsWithCounts }
   } catch (error) {
     console.log(error)
     throw new Error('Failed to get the blueprints.')
