@@ -13,6 +13,7 @@ import { getCommentsByBlueprintId } from "../../../services/comment"
 import BlueprintOwnerSection from "../../../components/BlueprintOwnerSection"
 import BlueprintContainer from "../../../components/BlueprintContainer"
 import FicsitTips from "../../../components/FicsitTips"
+import { getAllBlueprintsByBlueprintPackId, getBlueprintPacksById } from "../../../services/blueprintPack"
 
 export async function generateMetadata({ params }: { params: { blueprintPackId: string } }): Promise<Metadata> {
   const blueprintPackId = parseInt(params.blueprintPackId)
@@ -51,24 +52,7 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
     )
   }
 
-  // const blueprintPack = await getBlueprintPackById(blueprintPackId)
-  const blueprintPack = {
-    id: blueprintPackId,
-    title: "Sample Blueprint Pack", // Placeholder, replace with actual logic to fetch blueprint pack
-    images: ["/images/sample-blueprint-pack.jpg"], // Placeholder, replace with actual images
-    blueprints: 2, // Placeholder, replace with actual number of blueprints in the pack
-    averageRating: 4.5, // Placeholder, replace with actual average rating
-    downloads: 1000, // Placeholder, replace with actual download count
-    pioneerName: "PioneerName", // Placeholder, replace with actual pioneer name
-    pioneerAvatar: "avatar1", // Placeholder, replace with actual avatar
-    pioneerAvatarColor: "blue", // Placeholder, replace with actual avatar color
-    categories: ["Category1", "Category2"], // Placeholder, replace with actual categories
-    videoUrl: "https://youtube.com/sample-video", // Placeholder, replace with actual video URL
-    description: "This is a sample blueprint pack description.", // Placeholder, replace with actual description
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    files: [] // Placeholder, replace with actual files
-  }
+  const blueprintPack = await getBlueprintPacksById(blueprintPackId)
 
   if (!blueprintPack) {
     return (
@@ -82,11 +66,7 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
     )
   }
 
-  // const blueprintsInPack = getBlueprintsByPackId(blueprintPackId)
-  const blueprintsInPack = [
-    { id: 1, title: "Blueprint 1", images: ["/images/blueprint1.jpg"], averageRating: 4.5, downloads: 500 },
-    { id: 2, title: "Blueprint 2", images: ["/images/blueprint2.jpg"], averageRating: 4.0, downloads: 300 }
-  ] // Placeholder, replace with actual logic to fetch blueprints in the pack
+  const blueprintsInPack = await getAllBlueprintsByBlueprintPackId(blueprintPackId)
 
   const { getAccessToken } = getKindeServerSession()
   const accessToken = await getAccessToken()
@@ -171,12 +151,6 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
                 <p>Updated:</p>
                 <p>{blueprintPack.updatedAt.getDate()}/{blueprintPack.updatedAt.getMonth() + 1}/{blueprintPack.updatedAt.getFullYear()}</p>
               </div>
-              <div className="flex flex-row flex-grow items-center justify-between gap-4">
-                <p>Downloads:</p>
-                <div className="flex flex-row gap-1 items-center">
-                  <p>{blueprintPack.downloads}</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -200,7 +174,7 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
         <ImageCarousel images={blueprintPack.images} title={blueprintPack.title} />
         <div className="w-full lg:w-1/3 flex flex-col flex-grow gap-2 lg:gap-4">
-          <RateBlueprint blueprintId={blueprintPackId} pioneerName={user?.name} />
+          <RateBlueprint blueprintPackId={blueprintPackId} pioneerName={user?.name} />
           {/* <AdBanner classname="w-full h-full hidden lg:flex items-center justify-center"
             dataAdSlot="9859648886"
             dataFullWidthResponsive={true}

@@ -1,7 +1,7 @@
 import Main from "../../../components/Main"
 import Pagination from "../../../components/Pagination"
 import BlueprintContainer from "../../../components/BlueprintContainer"
-import { getPageCountAndBlueprintsByPage } from "../../../services/blueprint"
+import { getPageCountAndBlueprintPacksByPage } from "../../../services/blueprintPack"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/server"
 import Link from "next/link"
@@ -19,40 +19,7 @@ export default async function BlueprintPacksPage({ searchParams }: {
   const category = searchParams?.category as Blueprint["categories"][number] | undefined
   const sort = searchParams?.sort
 
-  // const { pageCount, blueprints } = await getPageCountAndBlueprintPacksByPage(page, category, sort)
-  const { pageCount, blueprintPacks } = {
-    pageCount: 1, // Placeholder value, replace with actual logic
-    blueprintPacks: [
-      // Placeholder value, replace with actual logic
-      {
-        id: 1,
-        title: "Sample Blueprint",
-        images: [
-          "https://example.com/images/sample-blueprint.jpg"
-        ],
-        blueprints: [
-          { id: 1, title: "Blueprint 1", images: ["https://example.com/images/blueprint1.jpg"] },
-          { id: 2, title: "Blueprint 2", images: ["https://example.com/images/blueprint2.jpg"] }
-        ],
-        averageRating: 4.5,
-        downloads: 1000,
-      },
-      {
-        id: 2,
-        title: "Another Blueprint",
-        images: [
-          "https://example.com/images/another-blueprint.jpg"
-        ],
-        blueprints: [
-          { id: 1, title: "Blueprint 1", images: ["https://example.com/images/blueprint1.jpg"] },
-          { id: 2, title: "Blueprint 2", images: ["https://example.com/images/blueprint2.jpg"] },
-          { id: 3, title: "Blueprint 3", images: ["https://example.com/images/blueprint3.jpg"] }
-        ],
-        averageRating: 4.0,
-        downloads: 500,
-      }
-    ] // Placeholder value, replace with actual logic
-  }
+  const { pageCount, blueprintPacks } = await getPageCountAndBlueprintPacksByPage(page, category, sort)
 
   const { isAuthenticated } = getKindeServerSession()
   const authenticated = await isAuthenticated()
