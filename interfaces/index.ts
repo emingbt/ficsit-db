@@ -107,8 +107,7 @@ export interface BlueprintCardProps {
   id: number,
   title: string,
   images: string[],
-  averageRating: number,
-  downloads: number
+  averageRating: number
 }
 
 export interface Pioneer {
@@ -137,7 +136,6 @@ export interface BlueprintPackCardProps {
   id: number
   title: string,
   images: string[],
-  blueprints: { id: number, title: string }[],
   averageRating: number,
-  downloads: number
+  blueprintCount: number,
 }
