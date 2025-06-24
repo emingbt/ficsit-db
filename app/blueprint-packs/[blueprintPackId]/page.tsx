@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Metadata } from "next"
-import RateBlueprint from "./rateBlueprint"
+import RateBlueprint from "./rateBlueprintPack"
 import ImageCarousel from "../../../components/ImageCarousel"
 // import { getBlueprintPackById } from "../../../services/blueprintPack"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
