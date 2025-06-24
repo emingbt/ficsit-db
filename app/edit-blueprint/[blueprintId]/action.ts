@@ -189,7 +189,7 @@ export async function deleteBlueprint(blueprintId: number) {
     await deleteBlueprintById(blueprintId)
 
     revalidatePath('/blueprints')
-    revalidatePath('/profile')
+    revalidatePath('/settings')
     revalidatePath(`/pioneers/${pioneer.name}`)
     revalidatePath(`/blueprints/${blueprintId}`)
     revalidatePath('/pioneers')
@@ -201,6 +201,6 @@ export async function deleteBlueprint(blueprintId: number) {
       error: 'Failed to delete the blueprint. Try again later.'
     }
   } finally {
-    redirect('/profile')
+    redirect('/settings')
   }
 }
