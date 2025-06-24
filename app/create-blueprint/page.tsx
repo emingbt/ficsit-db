@@ -4,7 +4,7 @@ import CreateBlueprintForm from "./form"
 import Main from "../../components/Main"
 import { getPioneerByEmail } from "../../services/pioneer"
 
-export default async function CreatePioneerPage() {
+export default async function CreateBlueprintPage() {
   const { getUser, isAuthenticated } = getKindeServerSession()
   const authenticated = await isAuthenticated()
 
