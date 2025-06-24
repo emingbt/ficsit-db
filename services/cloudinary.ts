@@ -8,7 +8,7 @@ cloudinary.v2.config({
   secure: true
 })
 
-export async function uploadImageToCloudinary(image: File, index: number, pioneerName: string, blueprintTitle: string) {
+export async function uploadImageToCloudinary(image: File, index: number, pioneerName: string, title: string, type: 'blueprint' | 'blueprint-pack' = 'blueprint') {
   const cloud_name = process.env.CLOUDINARY_CLOUD_NAME
 
   if (!cloud_name) {
@@ -21,10 +21,10 @@ export async function uploadImageToCloudinary(image: File, index: number, pionee
   return new Promise<string>((resolve, reject) => {
     const uploadStream = cloudinary.v2.uploader.upload_stream(
       {
-        tags: "blueprint_image",
+        tags: `${type}_image`,
         resource_type: "image",
         public_id: `image-${index}`,
-        folder: `blueprints/${pioneerName}/${blueprintTitle}`,
+        folder: `${type}/${pioneerName}/${title}`,
         overwrite: true,
         invalidate: true,
         transformation: {
@@ -53,9 +53,9 @@ export async function uploadImageToCloudinary(image: File, index: number, pionee
   })
 }
 
-export async function uploadImagesToCloudinary(images: File[], pioneerName: string, blueprintTitle: string) {
+export async function uploadImagesToCloudinary(images: File[], pioneerName: string, title: string, type: 'blueprint' | 'blueprint-pack' = 'blueprint') {
   const uploadPromises = images.map(async (image, index) => {
-    return uploadImageToCloudinary(image, index, pioneerName, blueprintTitle)
+    return uploadImageToCloudinary(image, index, pioneerName, title, type)
   })
 
   const imageUrls = await Promise.all(uploadPromises)
