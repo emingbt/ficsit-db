@@ -1,13 +1,13 @@
 import { useState } from "react"
+import { BlueprintCardProps } from "../interfaces"
 
-interface Blueprint {
-  id: number
-  title: string
-  images: string[]
-}
-
-export default function BlueprintSelector({ blueprints, blueprintsError }: { blueprints: Blueprint[], blueprintsError?: string }) {
-  const [selectedBlueprintIds, setSelectedBlueprintIds] = useState<number[]>([])
+export default function BlueprintSelector({ blueprints, blueprintsError, selectedBlueprints }: { blueprints: BlueprintCardProps[], blueprintsError?: string, selectedBlueprints?: BlueprintCardProps[] }) {
+  const [selectedBlueprintIds, setSelectedBlueprintIds] = useState<number[]>(() => {
+    if (selectedBlueprints && selectedBlueprints.length > 0) {
+      return selectedBlueprints.map(bp => bp.id)
+    }
+    return []
+  })
 
   const handleToggle = (id: number) => {
     if (selectedBlueprintIds.includes(id)) {
