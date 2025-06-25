@@ -42,9 +42,9 @@ export const getBlueprintPackById = async (blueprintPackId: number) => {
     }
 
     return {
-      ...blueprintPack,
+      pioneerAvatarColor: pioneerAvatar.color,
       pioneerAvatar: pioneerAvatar.avatar,
-      pioneerAvatarColor: pioneerAvatar.color
+      ...blueprintPack
     }
   } catch (error) {
     console.log(error)
@@ -102,16 +102,22 @@ export const getAllBlueprintPacksByTitle = async (title: string, blueprintPackCo
 
 export const getAllBlueprintPacksByPioneer = async (pioneerName: string) => {
   try {
-    const blueprintPacks = await db.query.BlueprintPack.findMany({
-      where: eq(BlueprintPack.pioneerName, pioneerName),
-      columns: {
-        id: true,
-        title: true,
-        images: true,
-        averageRating: true
-      },
-      orderBy: desc(BlueprintPack.createdAt)
-    })
+    const blueprintPacks = await db
+      .select({
+        id: BlueprintPack.id,
+        title: BlueprintPack.title,
+        images: BlueprintPack.images,
+        averageRating: BlueprintPack.averageRating,
+        blueprintCount: count(BlueprintPackBlueprints.blueprintId)
+      })
+      .from(BlueprintPack)
+      .leftJoin(
+        BlueprintPackBlueprints,
+        eq(BlueprintPack.id, BlueprintPackBlueprints.blueprintPackId)
+      )
+      .where(eq(BlueprintPack.pioneerName, pioneerName))
+      .groupBy(BlueprintPack.id, BlueprintPack.title, BlueprintPack.images, BlueprintPack.averageRating)
+      .orderBy(desc(BlueprintPack.createdAt))
 
     return blueprintPacks
   } catch (error) {
