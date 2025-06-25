@@ -205,7 +205,8 @@ export const createNewBlueprintPack = async (blueprintPack: BlueprintPack, bluep
 export const updateBlueprintPackProperties = async (blueprintPackId: number, blueprintPack: {
   description: BlueprintPack["description"],
   images: BlueprintPack["images"],
-  categories: BlueprintPack["categories"]
+  categories: BlueprintPack["categories"],
+  videoUrl: BlueprintPack["videoUrl"],
 }) => {
   try {
     const updatedBlueprintPack = await db.update(BlueprintPack)
@@ -225,23 +226,33 @@ export const updateBlueprintPackProperties = async (blueprintPackId: number, blu
   }
 }
 
-export const updateBlueprintPackBlueprints = async (blueprintPackId: number, blueprints: { id: number }[]) => {
-  if (!blueprints || blueprints.length < 2) {
+export const updateBlueprintPackBlueprints = async (blueprintPackId: number, blueprintIds: number[]) => {
+  if (!blueprintIds || blueprintIds.length < 2) {
     throw new Error('At least 2 blueprints must be in a blueprint pack.')
   }
 
   try {
-    // Delete existing blueprints for the blueprint pack
-    await db.delete(BlueprintPackBlueprints)
+    // Delete existing blueprints for the blueprint pack, getting the array of ids of the deleted blueprints
+    const deletedBlueprints = await db.delete(BlueprintPackBlueprints)
       .where(eq(BlueprintPackBlueprints.blueprintPackId, blueprintPackId))
+      .returning({
+        blueprintId: BlueprintPackBlueprints.blueprintId
+      })
 
-    // Insert the new blueprints into the BlueprintPackBlueprints table
-    await db.insert(BlueprintPackBlueprints).values(blueprints.map(blueprint => ({
+    // Convert the deleted blueprint ids to an array of numbers
+    const deletedBlueprintIds = deletedBlueprints.map(deleted => deleted.blueprintId)
+
+    // Insert the new blueprints into the BlueprintPackBlueprints table, getting the ids of the new blueprints
+    await db.insert(BlueprintPackBlueprints).values(blueprintIds.map(blueprintId => ({
       blueprintPackId: blueprintPackId,
-      blueprintId: blueprint.id
+      blueprintId: blueprintId
     })))
 
-    return true
+    // Remove duplicates
+    const updatedBlueprintIds = [...deletedBlueprintIds, ...blueprintIds].filter((value, index, self) => self.indexOf(value) === index)
+
+    // Return the id's of the updated blueprints
+    return updatedBlueprintIds
   } catch (error) {
     console.log(error)
     throw new Error('Failed to update the blueprint pack blueprints.')
@@ -254,9 +265,15 @@ export const deleteBlueprintPackById = async (blueprintPackId: number) => {
     await db.delete(BlueprintPackRating)
       .where(eq(BlueprintPackRating.blueprintPackId, blueprintPackId))
 
-    // 2. Delete the blueprintPackBlueprints
-    await db.delete(BlueprintPackBlueprints)
+    // 2. Delete the blueprintPackBlueprints, getting the array of ids of the deleted blueprints
+    const deletedBlueprints = await db.delete(BlueprintPackBlueprints)
       .where(eq(BlueprintPackBlueprints.blueprintPackId, blueprintPackId))
+      .returning({
+        blueprintId: BlueprintPackBlueprints.blueprintId
+      })
+
+    // Convert the deleted blueprint ids to an array of numbers
+    const deletedBlueprintIds = deletedBlueprints.map(deleted => deleted.blueprintId)
 
     // 3. Delete the blueprintPack
     const [deletedBlueprintPack] = await db.delete(BlueprintPack)
@@ -265,7 +282,10 @@ export const deleteBlueprintPackById = async (blueprintPackId: number) => {
         id: BlueprintPack.id
       })
 
-    return deletedBlueprintPack
+    return {
+      id: deletedBlueprintPack.id,
+      deletedBlueprintIds: deletedBlueprintIds
+    }
   } catch (error) {
     console.log(error)
     throw new Error('Failed to delete the blueprint pack.')
