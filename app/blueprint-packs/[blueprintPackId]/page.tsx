@@ -13,7 +13,7 @@ import { getCommentsByBlueprintId } from "../../../services/comment"
 import BlueprintOwnerSection from "../../../components/BlueprintOwnerSection"
 import BlueprintContainer from "../../../components/BlueprintContainer"
 import FicsitTips from "../../../components/FicsitTips"
-import { getAllBlueprintsByBlueprintPackId, getBlueprintPacksById } from "../../../services/blueprintPack"
+import { getAllBlueprintsByBlueprintPackId, getBlueprintPackById } from "../../../services/blueprintPack"
 
 export async function generateMetadata({ params }: { params: { blueprintPackId: string } }): Promise<Metadata> {
   const blueprintPackId = parseInt(params.blueprintPackId)
@@ -25,10 +25,7 @@ export async function generateMetadata({ params }: { params: { blueprintPackId: 
     }
   }
 
-  // const blueprint = await getBlueprintPackById(blueprintPackId)
-  const blueprint = {
-    title: "Sample Blueprint Pack", // Placeholder, replace with actual logic to fetch blueprint pack
-  } // Placeholder, replace with actual logic to fetch blueprint pack
+  const blueprint = await getBlueprintPackById(blueprintPackId)
 
   return {
     title: blueprint ? `${blueprint.title} - FicsitDB` : "Blueprint Not Found - FicsitDB",
@@ -52,7 +49,7 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
     )
   }
 
-  const blueprintPack = await getBlueprintPacksById(blueprintPackId)
+  const blueprintPack = await getBlueprintPackById(blueprintPackId)
 
   if (!blueprintPack) {
     return (

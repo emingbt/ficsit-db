@@ -7,8 +7,9 @@ import CategoryInput from "../../components/CategoryInput"
 import ImageInput from "../../components/ImageInput"
 import BlueprintSelector from "../../components/BlueprintSelector"
 import { redirect } from "next/navigation"
+import { BlueprintCardProps } from "../../interfaces"
 
-export default function CreateBlueprintPackForm({ blueprints }: { blueprints: { id: number, title: string, images: string[] }[] }) {
+export default function CreateBlueprintPackForm({ blueprints }: { blueprints: BlueprintCardProps[] }) {
   const [state, action] = useFormState(createBlueprintPack, undefined)
 
   const titleError = state?.error?.title

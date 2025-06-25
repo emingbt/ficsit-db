@@ -7,7 +7,7 @@ import { count, desc, eq, sql } from 'drizzle-orm'
 
 const blueprintPacksPerPage = 30
 
-export const getBlueprintPacksById = async (blueprintPackId: number) => {
+export const getBlueprintPackById = async (blueprintPackId: number) => {
   try {
     const blueprintPack = await db.query.BlueprintPack.findFirst({
       where: eq(BlueprintPack.id, blueprintPackId),
