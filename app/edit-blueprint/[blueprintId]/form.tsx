@@ -16,7 +16,6 @@ export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint 
   const descriptionError = state?.error?.description
   const imageError = state?.error?.images
   const categoryError = state?.error?.categories
-  // const videoUrlError = "Sorry, video URL validation is not implemented yet." // state?.error?.videoUrl
   const videoUrlError = state?.error?.videoUrl
   const submitError = state?.error?.submit
   const submitSuccess = state?.success?.submit

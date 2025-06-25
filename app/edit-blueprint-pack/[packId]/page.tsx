@@ -1,6 +1,5 @@
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { redirect } from 'next/navigation'
-import { getPropertiesFromAccessToken } from '../../../utils/kinde'
 import EditBlueprintForm from './form'
 import Main from '../../../components/Main'
 import { getAllBlueprintsByBlueprintPackId, getBlueprintPackById } from '../../../services/blueprintPack'

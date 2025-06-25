@@ -1,7 +1,7 @@
 'use server'
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import { uploadFilesToCloudinary, uploadImagesToCloudinary } from "../../services/cloudinary"
+import { uploadImagesToCloudinary } from "../../services/cloudinary"
 import { CreateBlueprintPackFormSchema } from "../../utils/zod"
 import { getPioneerByEmail } from "../../services/pioneer"
 import { redirect } from "next/navigation"
