@@ -159,7 +159,8 @@ export const createNewBlueprint = async (blueprint: Blueprint) => {
 export const updateBlueprintProperties = async (blueprintId: number, blueprint: {
   description: Blueprint["description"],
   images: Blueprint["images"],
-  categories: Blueprint["categories"]
+  categories: Blueprint["categories"],
+  videoUrl: Blueprint["videoUrl"],
 }) => {
   try {
     const updatedBlueprint = await db.update(Blueprint)
