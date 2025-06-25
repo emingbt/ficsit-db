@@ -53,7 +53,7 @@ export default function RatingBlueprintPack({ blueprintPackId, pioneerName }: { 
         {
           Array.from({ length: 5 }).map((_, index) => (
             <button key={index} onClick={() => {
-              // handleOnClick(index + 1)
+              handleOnClick(index + 1)
             }}>
               <Star
                 color={index < rating ? 'bg-main-orange' : 'bg-dark-bg'}
