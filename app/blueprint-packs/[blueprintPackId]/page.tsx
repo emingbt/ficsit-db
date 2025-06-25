@@ -21,11 +21,11 @@ export async function generateMetadata({ params }: { params: { blueprintPackId: 
     }
   }
 
-  const blueprint = await getBlueprintPackById(blueprintPackId)
+  const blueprintPack = await getBlueprintPackById(blueprintPackId)
 
   return {
-    title: blueprint ? `${blueprint.title} - FicsitDB` : "Blueprint Not Found - FicsitDB",
-    description: blueprint ? `Download or explore the blueprint: ${blueprint.title} in Satisfactory.` : "Blueprint not found in FicsitDB.",
+    title: blueprintPack ? `${blueprintPack.title} - FicsitDB` : "Blueprint Pack Not Found - FicsitDB",
+    description: blueprintPack ? `Download or explore the blueprint pack: ${blueprintPack.title} in Satisfactory.` : "Blueprint Pack not found in FicsitDB.",
   }
 }
 
