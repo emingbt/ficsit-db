@@ -20,7 +20,7 @@ const BlueprintOwnerSection: React.FC<BlueprintOwnerSectionProps> = ({ blueprint
   if (!isOwner) return null
 
   return (
-    <div className="w-full flex flex-row flex-wrap items-center justify-between bg-main-bg text-white p-4 mb-4">
+    <div className="w-full flex flex-row flex-wrap items-center justify-between bg-main-bg text-white p-4 mb-2 lg:mb-4">
       <p className="text-lg font-semibold mr-2">You own this blueprint.</p>
       <Link href={`/edit-blueprint/${blueprintId}`}>
         <button className="px-2 py-1 bg-light-bg rounded-sm hover:bg-main-orange hover:text-white">Edit Blueprint</button>

@@ -42,7 +42,7 @@ export default function BlueprintContainer({ entries, title, filter, isEdit = fa
 
   return (
     <div className='w-full flex flex-col flex-grow'>
-      <div className="w-full flex flex-wrap items-center justify-between bg-main-bg p-2 pl-4 ">
+      <div className="w-full flex flex-wrap items-center justify-between bg-main-bg p-2 pl-4">
         <h1 className="text-lg sm:text-xl font-medium">{title}</h1>
         {
           filter &&
