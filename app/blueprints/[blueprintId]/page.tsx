@@ -4,7 +4,7 @@ import { Metadata } from "next"
 import RateBlueprint from "./rateBlueprint"
 import DownloadSection from "./downloadSection"
 import ImageCarousel from "../../../components/ImageCarousel"
-import { getBlueprintById } from "../../../services/blueprint"
+import { getBlueprintById, getBlueprintPacksByBlueprintId } from "../../../services/blueprint"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
@@ -65,6 +65,9 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
   const { getAccessToken } = getKindeServerSession()
   const accessToken = await getAccessToken()
   const user = getPropertiesFromAccessToken(accessToken)
+
+  // Get the blueprint packs associated with this blueprint
+  const blueprintPacks = await getBlueprintPacksByBlueprintId(blueprintId)
 
   const initialComments = await getCommentsByBlueprintId(blueprintId)
 
@@ -186,27 +189,46 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4">
-        {
-          blueprint.description && (
-            <div className="w-full mt-2 lg:mt-4">
-              <div className="w-full h-10 sm:h-12 flex items-center bg-main-bg p-4">
-                <h1 className="text-lg sm:text-xl font-medium">Description</h1>
-              </div>
-              <div className="w-full bg-light-bg text-gray-200 p-4">
-                <div
-                  className="whitespace-pre-wrap font-main"
-                  dangerouslySetInnerHTML={{ __html: linkify(blueprint.description) }}
-                />
-              </div>
+      <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4 items-stretch">
+        {blueprint.description ? (
+          <div className={`flex-1 mt-2 lg:mt-4 w-full lg:basis-2/3 flex flex-col`}>
+            <div className="w-full h-10 sm:h-12 flex items-center bg-main-bg p-4">
+              <h1 className="text-lg sm:text-xl font-medium">Description</h1>
             </div>
-          )
-        }
-        {/* <AdBanner classname={`w-full ${blueprint.description && "lg:w-1/3"} min-h-32 hidden lg:flex items-center justify-center bg-main-bg mt-2 lg:mt-4`}
-          dataAdSlot="8546567212"
-          dataFullWidthResponsive={true}
-          adPadding={16}
-        /> */}
+            <div className="w-full bg-light-bg text-gray-200 p-4 flex-1">
+              <div
+                className="whitespace-pre-wrap font-main"
+                dangerouslySetInnerHTML={{ __html: linkify(blueprint.description) }}
+              />
+            </div>
+          </div>
+        ) : blueprintPacks.length > 0 && (
+          <div className="flex-1 hidden lg:flex items-center justify-center mt-2 lg:mt-4 bg-main-bg w-full lg:basis-2/3">
+            <p className="text-lg text-gray-500 font-bold">🚧 There will be an ad here 🚧 </p>
+          </div>
+        )}
+        {blueprintPacks.length > 0 && (
+          <div className="flex-1 lg:mt-4 w-full lg:basis-1/3 flex flex-col">
+            <div className="w-full h-10 sm:h-12 flex items-center bg-main-bg p-4">
+              <h1 className="text-lg sm:text-xl font-medium">Associated Blueprint Packs</h1>
+            </div>
+            <div className="w-full flex flex-col bg-light-bg text-gray-200 p-2 lg:p-4 flex-1">
+              {blueprintPacks.map((pack, index) => (
+                <Link key={index} href={`/blueprint-packs/${pack.id}`} className="w-full flex items-center gap-2 p-2 bg-main-bg hover:bg-dark-bg rounded-md">
+                  <Image
+                    src={pack.images[0]}
+                    alt={pack.title}
+                    width={128}
+                    height={72}
+                    quality={50}
+                    className="rounded-md"
+                  />
+                  <p className="w-full text-center text-sm font-semibold">{pack.title}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
       <CommentsSection initialComments={initialComments} blueprintId={blueprintId} />
     </Main>
