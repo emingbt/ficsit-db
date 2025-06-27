@@ -253,7 +253,7 @@ export const UpdateBlueprintPackFormSchema = object({
     .refine((images) => images?.length <= 3, "At most 3 images are allowed."),
   blueprints: array(string())
     .min(2, { message: 'At least 2 blueprints are required.' })
-    .max(10, { message: 'At most 100 blueprints are allowed.' }),
+    .max(100, { message: 'At most 100 blueprints are allowed.' }),
   categories: array(CategoriesEnum)
     .min(1, { message: 'At least one category has to selected.' })
     .max(3, { message: 'At most 3 categories can be selected.' }),
