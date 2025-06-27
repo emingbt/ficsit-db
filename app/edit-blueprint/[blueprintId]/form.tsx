@@ -109,21 +109,31 @@ function SubmitButton({ success, blueprintId }: { success: boolean, blueprintId?
 
 function DeleteButton({ blueprintId }: { blueprintId?: number }) {
   const [pending, setPending] = useState(false)
+  const [deleteError, setDeleteError] = useState<string>()
 
   return (
-    <button
-      type='button'
-      className={`w-full h-10 ${pending ? 'bg-light-bg  text-red-500' : 'bg-red-600'} hover:bg-light-bg hover:text-red-500 text-white text-base`}
-      onClick={async () => {
-        if (confirm('Are you sure you want to delete this blueprint?')) {
-          if (blueprintId) {
-            setPending(true)
-            await deleteBlueprint(blueprintId)
+    <>
+      <button
+        type='button'
+        className={`w-full h-10 ${pending ? 'bg-light-bg  text-red-500' : 'bg-red-600 hover:bg-light-bg hover:text-red-500  '}  text-white text-base`}
+        aria-disabled={pending}
+        disabled={pending}
+        onClick={async () => {
+          if (confirm('Are you sure you want to delete this blueprint?')) {
+            if (blueprintId) {
+              setPending(true)
+              const result = await deleteBlueprint(blueprintId)
+              if (result && result.error) {
+                setDeleteError(result.error)
+                setPending(false)
+              }
+            }
           }
-        }
-      }}
-    >
-      {pending ? 'Deleting Blueprint...' : 'Delete Blueprint'}
-    </button>
+        }}
+      >
+        {pending ? 'Deleting Blueprint...' : 'Delete Blueprint'}
+      </button>
+      {deleteError && <p className='text-red-500 mt-2'>{deleteError}</p>}
+    </>
   )
 }

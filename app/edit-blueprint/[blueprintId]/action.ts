@@ -6,6 +6,7 @@ import { UpdateBlueprintFormSchema } from "../../../utils/zod"
 import {
   deleteBlueprintById,
   getBlueprintById,
+  getBlueprintPacksByBlueprintId,
   updateBlueprintProperties
 } from "../../../services/blueprint"
 import { revalidatePath } from "next/cache"
@@ -180,12 +181,20 @@ export async function deleteBlueprint(blueprintId: number) {
     }
   }
 
-  // 3. Delete the blueprint
+  // 3. Check if the blueprint has any associated blueprint packs
+  const associatedBlueprintPacks = await getBlueprintPacksByBlueprintId(blueprintId)
+  if (associatedBlueprintPacks.length > 0) {
+    return {
+      error: 'This blueprint is associated with one or more blueprint packs. Please remove it from the packs before deleting.'
+    }
+  }
+
+  // 4. Delete the blueprint
   try {
-    // 3.1 Delete the blueprint files and images from Cloudinary
+    // 4.1 Delete the blueprint files and images from Cloudinary
     await deleteFolder(pioneer.name, blueprint.title)
 
-    // 3.2 Delete the blueprint from the database
+    // 4.2 Delete the blueprint from the database
     await deleteBlueprintById(blueprintId)
 
     revalidatePath('/blueprints')
