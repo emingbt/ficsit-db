@@ -57,10 +57,10 @@ export default function FicsitTips() {
 
   return (
     <div className="w-full h-full border-4 border-[#e69138] bg-[#222] text-[#e69138]">
-      <div className="bg-[#e69138] text-[#222] px-3 py-1.5 font-medium tracking-wider text-lg" style={{ fontFamily: 'inherit' }}>
+      <div className="bg-[#e69138] text-[#222] px-3 py-1.5 font-medium tracking-wider text-base xl:text-lg" style={{ fontFamily: 'inherit' }}>
         FICSIT TIP NO. {tipIndex + 1}
       </div>
-      <div className="px-3 py-4 text-xl bg-[#222] text-[#e69138] font-normal" style={{ fontFamily: 'inherit' }}>
+      <div className="px-3 py-4 text-base xl:text-xl bg-[#222] text-[#e69138] font-normal" style={{ fontFamily: 'inherit' }}>
         {tip}
       </div>
     </div>
