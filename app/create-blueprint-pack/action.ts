@@ -26,8 +26,6 @@ export default async function createBlueprintPack(state, formData: FormData) {
     videoUrl: formData.get('videoUrl')
   })
 
-  console.log("Blueprints:", formData.getAll('blueprints'))
-
   if (!validationResults.success) {
     return {
       error: validationResults.error.flatten().fieldErrors,
@@ -42,15 +40,6 @@ export default async function createBlueprintPack(state, formData: FormData) {
     categories,
     videoUrl
   } = validationResults.data
-
-  console.log('Creating blueprint pack with data:', {
-    title,
-    description,
-    images,
-    blueprints,
-    categories,
-    videoUrl
-  })
 
   // Check the sizes of the images and files
   const imageSizeError = images.some((image: File) => image.size > 1000000)

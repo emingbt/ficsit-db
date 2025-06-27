@@ -33,7 +33,6 @@ export async function updateBlueprintPack(state, formData: FormData) {
   })
 
   if (!validationResults.success) {
-    console.log(validationResults.error.flatten().fieldErrors)
     return {
       error: validationResults.error.flatten().fieldErrors,
     }
