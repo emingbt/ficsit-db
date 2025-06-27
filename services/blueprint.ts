@@ -2,8 +2,8 @@ import 'server-only'
 
 import { cache } from 'react'
 import db from '../utils/postgres'
-import { count, desc, eq, sql, AnyColumn } from 'drizzle-orm'
-import { Blueprint, BlueprintComment, BlueprintRating, Pioneer } from '../drizzle/schema'
+import { count, desc, eq, sql, AnyColumn, inArray } from 'drizzle-orm'
+import { Blueprint, BlueprintComment, BlueprintPack, BlueprintPackBlueprints, BlueprintRating, Pioneer } from '../drizzle/schema'
 
 const blueprintsPerPage = 30
 
@@ -276,5 +276,43 @@ export const getPageCount = cache(async (category?: Blueprint["categories"][numb
   } catch (error) {
     console.log(error)
     throw new Error('Failed to get the page count.')
+  }
+})
+
+export const getBlueprintPacksByBlueprintId = cache(async (blueprintId: number) => {
+  try {
+    const blueprintPackIds = await db.query.BlueprintPackBlueprints.findMany({
+      where: eq(BlueprintPackBlueprints.blueprintId, blueprintId),
+      columns: {
+        blueprintPackId: true
+      }
+    })
+
+    if (blueprintPackIds.length === 0) {
+      return []
+    }
+
+    // Get the blueprint packs by their IDs with the blueprint count
+    const blueprintPacks = await db
+      .select({
+        id: BlueprintPack.id,
+        title: BlueprintPack.title,
+        images: BlueprintPack.images,
+        averageRating: BlueprintPack.averageRating,
+        blueprintCount: count(BlueprintPackBlueprints.blueprintId)
+      })
+      .from(BlueprintPack)
+      .leftJoin(
+        BlueprintPackBlueprints,
+        eq(BlueprintPack.id, BlueprintPackBlueprints.blueprintPackId)
+      )
+      .where(inArray(BlueprintPack.id, blueprintPackIds.map(bp => bp.blueprintPackId)))
+      .groupBy(BlueprintPack.id, BlueprintPack.title, BlueprintPack.images, BlueprintPack.averageRating)
+      .orderBy(desc(BlueprintPack.createdAt))
+
+    return blueprintPacks
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to get the blueprint packs by blueprint ID.')
   }
 })
