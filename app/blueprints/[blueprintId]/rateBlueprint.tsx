@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { Star } from "lucide-react"
 import { rateBlueprint, checkIfRated } from "./action"
 
-export default function RatingBlueprint({ blueprintId, pioneerName }: { blueprintId: number, pioneerName: string | undefined }) {
+export default function RatingBlueprint({ blueprintId, pioneerName, blueprintPackIds }: { blueprintId: number, pioneerName: string | undefined, blueprintPackIds?: number[] }) {
   const [rating, setRating] = useState(0)
   const [isRated, setIsRated] = useState(false)
 
@@ -32,7 +32,7 @@ export default function RatingBlueprint({ blueprintId, pioneerName }: { blueprin
     setRating(rating)
     setIsRated(true)
 
-    await rateBlueprint(blueprintId, pioneerName, rating)
+    await rateBlueprint(blueprintId, pioneerName, rating, blueprintPackIds)
   }
 
   return (

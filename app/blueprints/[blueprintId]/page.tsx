@@ -173,7 +173,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4">
         <ImageCarousel images={blueprint.images} title={blueprint.title} />
         <div className="w-full lg:w-1/3 flex flex-col flex-grow gap-2 lg:gap-4">
-          <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} />
+          <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} blueprintPackIds={blueprintPacks.map(pack => pack.id)} />
           {/* <AdBanner classname="w-full h-full hidden lg:flex items-center justify-center"
             dataAdSlot="9859648886"
             dataFullWidthResponsive={true}

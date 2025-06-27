@@ -9,7 +9,7 @@ import { getCommentsByBlueprintId, createComment, updateComment, deleteCommentBy
 import { getPioneerByEmail } from "../../../services/pioneer"
 import { CreateCommentSchema, UpdateCommentSchema } from "../../../utils/zod"
 
-export const rateBlueprint = async (blueprintId: number, pioneerName: string, rating: number) => {
+export const rateBlueprint = async (blueprintId: number, pioneerName: string, rating: number, blueprintPackIds?: number[]) => {
   try {
     const { getUser, isAuthenticated } = getKindeServerSession()
     if (!isAuthenticated()) {
@@ -37,6 +37,13 @@ export const rateBlueprint = async (blueprintId: number, pioneerName: string, ra
     revalidatePath('/blueprints')
     revalidatePath('/search')
     revalidatePath(`/pioneers/${pioneerName}`)
+
+    if (blueprintPackIds) {
+      blueprintPackIds.forEach((packId) => {
+        revalidatePath(`/blueprint-packs/${packId}`)
+      })
+    }
+
 
     return averageRating
   } catch (error) {
