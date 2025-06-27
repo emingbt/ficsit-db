@@ -2,21 +2,16 @@
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { deleteFolder, updateCloudinaryImages } from "../../../services/cloudinary"
-import { UpdateBlueprintFormSchema } from "../../../utils/zod"
-import {
-  deleteBlueprintById,
-  getBlueprintById,
-  getBlueprintPacksByBlueprintId,
-  updateBlueprintProperties
-} from "../../../services/blueprint"
+import { UpdateBlueprintPackFormSchema } from "../../../utils/zod"
 import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
+import { deleteBlueprintPackById, getBlueprintPackById, updateBlueprintPackBlueprints, updateBlueprintPackProperties } from "../../../services/blueprintPack"
 
-export async function updateBlueprint(state, formData: FormData) {
+export async function updateBlueprintPack(state, formData: FormData) {
   // 1. Validate form data
-  const validationResults = UpdateBlueprintFormSchema.safeParse({
-    id: formData.get('blueprintId'),
+  const validationResults = UpdateBlueprintPackFormSchema.safeParse({
+    id: formData.get('blueprintPackId'),
     description: formData.get('description'),
     images: [
       formData.get('image-0'),
@@ -32,6 +27,7 @@ export async function updateBlueprint(state, formData: FormData) {
       }
       return acc
     }, []),
+    blueprints: formData.getAll('blueprints'),
     categories: formData.getAll('category'),
     videoUrl: formData.get('videoUrl')
   })
@@ -47,6 +43,7 @@ export async function updateBlueprint(state, formData: FormData) {
     id,
     description,
     images,
+    blueprints,
     categories,
     videoUrl
   } = validationResults.data
@@ -84,27 +81,27 @@ export async function updateBlueprint(state, formData: FormData) {
     }
   }
 
-  // 3. Upload images and files to cloudinary, then update the blueprint
+  // 3. Upload images and files to cloudinary, then update the blueprint pack
   try {
-    const blueprint = await getBlueprintById(parseInt(id))
+    const blueprintPack = await getBlueprintPackById(parseInt(id))
 
-    if (!blueprint) {
+    if (!blueprintPack) {
       return {
         error: {
-          submit: 'Blueprint not found.'
+          submit: 'Blueprint pack not found.'
         }
       }
     }
 
-    if (blueprint.pioneerName !== pioneer.name) {
+    if (blueprintPack.pioneerName !== pioneer.name) {
       return {
         error: {
-          submit: 'Not authorized to update this blueprint.'
+          submit: 'Not authorized to update this blueprint pack.'
         }
       }
     }
 
-    const imageUrls = await updateCloudinaryImages(images, blueprint.images, pioneer.name, blueprint.title)
+    const imageUrls = await updateCloudinaryImages(images, blueprintPack.images, pioneer.name, blueprintPack.title, 'blueprint-pack')
 
     const updatedProperties = {
       description: description || null,
@@ -115,45 +112,51 @@ export async function updateBlueprint(state, formData: FormData) {
     }
 
     // 6. Update the blueprint
-    const updatedBlueprint = await updateBlueprintProperties(blueprint.id, updatedProperties)
+    const updatedBlueprintPack = await updateBlueprintPackProperties(blueprintPack.id, updatedProperties)
 
-    if (!updatedBlueprint) {
+    if (!updatedBlueprintPack) {
       return {
         error: {
-          submit: 'Failed to update the blueprint. Try again later.'
+          submit: 'Failed to update the blueprint pack. Try again later.'
         }
       }
     }
 
-    revalidatePath('/blueprints')
-    revalidatePath(`/blueprints/${blueprint.id}`)
+    // Convert the blueprint IDs to numbers
+    const blueprintIds = blueprints.map((id: string) => parseInt(id))
+
+    // 7. Update the blueprints in the blueprint pack
+    const updatedBlueprintIds = await updateBlueprintPackBlueprints(updatedBlueprintPack.id, blueprintIds)
+
+    // 8. Revalidate the paths
+    revalidatePath('/blueprint-packs')
+    revalidatePath(`/blueprint-packs/${blueprintPack.id}`)
     revalidatePath(`/pioneers/${pioneer.name}`)
     revalidatePath('/settings')
     revalidatePath('/search')
 
-    // Revalidate the blueprint packs that contain this blueprint
-    const associatedBlueprintPacks = await getBlueprintPacksByBlueprintId(blueprint.id)
-    associatedBlueprintPacks.forEach((pack) => {
-      revalidatePath(`/blueprint-packs/${pack.id}`)
+    // Revalidate the blueprints in the pack
+    updatedBlueprintIds.forEach((blueprintId) => {
+      revalidatePath(`/blueprints/${blueprintId}`)
     })
 
     return {
       success: {
-        data: updatedBlueprint.id,
-        submit: 'Blueprint updated successfully.'
+        data: updatedBlueprintPack.id,
+        submit: 'Blueprint pack updated successfully.'
       }
     }
   } catch (error) {
     console.log(error)
     return {
       error: {
-        submit: 'Failed to update the blueprint. Try again later.'
+        submit: 'Failed to update the blueprint pack. Try again later.'
       }
     }
   }
 }
 
-export async function deleteBlueprint(blueprintId: number) {
+export async function deleteBlueprintPack(blueprintPackId: number) {
   // 1. Check if the user is authenticated and get the pioneer name
   const { isAuthenticated, getAccessToken } = getKindeServerSession()
   const authenticated = await isAuthenticated()
@@ -161,7 +164,7 @@ export async function deleteBlueprint(blueprintId: number) {
 
   if (!authenticated || !accessToken) {
     return {
-      error: 'You must be logged in to delete a blueprint.'
+      error: 'You must be logged in to delete a blueprint pack.'
     }
   }
 
@@ -169,52 +172,46 @@ export async function deleteBlueprint(blueprintId: number) {
 
   if (!pioneer) {
     return {
-      error: 'You must be logged in to delete a blueprint.'
+      error: 'You must be logged in to delete a blueprint pack.'
     }
   }
 
-  // 2. Check if the pioneer is the owner of the blueprint
-  const blueprint = await getBlueprintById(blueprintId)
+  // 2. Check if the pioneer is the owner of the blueprint pack
+  const blueprintPack = await getBlueprintPackById(blueprintPackId)
 
-  if (!blueprint) {
+  if (!blueprintPack) {
     return {
-      error: 'Blueprint not found.'
+      error: 'Blueprint pack not found.'
     }
   }
 
-  if (blueprint.pioneerName !== pioneer.name) {
+  if (blueprintPack.pioneerName !== pioneer.name) {
     return {
-      error: 'Not authorized to delete this blueprint.'
+      error: 'Not authorized to delete this blueprint pack.'
     }
   }
 
-  // 3. Check if the blueprint has any associated blueprint packs
-  const associatedBlueprintPacks = await getBlueprintPacksByBlueprintId(blueprintId)
-  if (associatedBlueprintPacks.length > 0) {
-    return {
-      error: 'This blueprint is associated with one or more blueprint packs. Please remove it from the packs before deleting.'
-    }
-  }
-
-  // 4. Delete the blueprint
+  // 3. Delete the blueprint pack
   try {
-    // 4.1 Delete the blueprint files and images from Cloudinary
-    await deleteFolder(pioneer.name, blueprint.title)
+    // 3.1 Delete the images from Cloudinary
+    await deleteFolder(pioneer.name, blueprintPack.title, 'blueprint-pack')
 
-    // 4.2 Delete the blueprint from the database
-    await deleteBlueprintById(blueprintId)
+    // 3.2 Delete the blueprint from the database
+    const deletedBlueprintPack = await deleteBlueprintPackById(blueprintPackId)
 
-    revalidatePath('/blueprints')
-    revalidatePath(`/blueprints/${blueprintId}`)
-    revalidatePath('/pioneers')
+    revalidatePath('/blueprint-packs')
+    revalidatePath(`/blueprint-packs/${deletedBlueprintPack.id}`)
     revalidatePath(`/pioneers/${pioneer.name}`)
     revalidatePath('/settings')
     revalidatePath('/search')
 
+    deletedBlueprintPack.deletedBlueprintIds.forEach((blueprintId) => {
+      revalidatePath(`/blueprints/${blueprintId}`)
+    })
   } catch (error) {
     console.log(error)
     return {
-      error: 'Failed to delete the blueprint. Try again later.'
+      error: 'Failed to delete the blueprint pack. Try again later.'
     }
   } finally {
     redirect('/settings')

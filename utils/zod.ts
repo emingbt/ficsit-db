@@ -201,3 +201,74 @@ export const UpdateCommentSchema = object({
     .trim(),
   commentId: number()
 })
+
+export const CreateBlueprintPackFormSchema = object({
+  title: string()
+    .min(3, { message: 'Title must be at least 3 characters long.' })
+    .max(64, { message: 'Title must be at most 64 characters long.' })
+    // Can only include letters, numbers, -dashes, _underscores, () paranthesis, and spaces.
+    .regex(/^[a-zA-Z0-9_()-\s]*$/, {
+      message: 'Title can only include letters, numbers, -dashes, _underscores, ()paranthesis, and spaces.',
+    })
+    // Must contain at least one letter or number.
+    .regex(/^(?![-_]+$)/, {
+      message: 'Title must contain at least one letter or number.',
+    })
+    // Cannot have more than one consecutive space.
+    .regex(/^(?!.*\s{2}).*$/, {
+      message: 'Title cannot have more than one consecutive space.',
+    })
+    .trim(),
+  description: string().max(1024, { message: 'Description must be at most 1024 characters long.' }).optional(),
+  images: any()
+    .refine((images) => images?.length > 0, "At least 1 image is required.")
+    .refine((images) => images?.length <= 3, "At most 3 images are allowed."),
+  blueprints: array(string())
+    .min(2, { message: 'At least 2 blueprints are required.' })
+    .max(10, { message: 'At most 100 blueprints are allowed.' }),
+  categories: array(CategoriesEnum)
+    .min(1, { message: 'At least one category has to selected.' })
+    .max(3, { message: 'At most 3 categories can be selected.' }),
+  videoUrl: string().trim().transform((val) => (val === "" ? undefined : val))
+    .refine((url) => !url || url.startsWith("https://"), {
+      message: "Must start with https://",
+    })
+    .refine(
+      (url) =>
+        !url ||
+        url.includes("youtube.com/watch?v=") ||
+        url.includes("youtu.be/"),
+      {
+        message: "Must be a valid YouTube URL",
+      }
+    )
+    .optional()
+})
+
+export const UpdateBlueprintPackFormSchema = object({
+  id: string(),
+  description: string().max(1024, { message: 'Description must be at most 1024 characters long.' }).optional(),
+  images: any()
+    .refine((images) => images?.length > 0, "At least 1 image is required.")
+    .refine((images) => images?.length <= 3, "At most 3 images are allowed."),
+  blueprints: array(string())
+    .min(2, { message: 'At least 2 blueprints are required.' })
+    .max(100, { message: 'At most 100 blueprints are allowed.' }),
+  categories: array(CategoriesEnum)
+    .min(1, { message: 'At least one category has to selected.' })
+    .max(3, { message: 'At most 3 categories can be selected.' }),
+  videoUrl: string().trim().transform((val) => (val === "" ? undefined : val))
+    .refine((url) => !url || url.startsWith("https://"), {
+      message: "Must start with https://",
+    })
+    .refine(
+      (url) =>
+        !url ||
+        url.includes("youtube.com/watch?v=") ||
+        url.includes("youtu.be/"),
+      {
+        message: "Must be a valid YouTube URL",
+      }
+    )
+    .optional()
+})

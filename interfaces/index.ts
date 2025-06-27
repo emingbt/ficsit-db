@@ -107,8 +107,7 @@ export interface BlueprintCardProps {
   id: number,
   title: string,
   images: string[],
-  averageRating: number,
-  downloads: number
+  averageRating: number
 }
 
 export interface Pioneer {
@@ -131,4 +130,12 @@ export interface Pioneer {
   'orange' |
   'red',
   createdAt: Date
+}
+
+export interface BlueprintPackCardProps {
+  id: number
+  title: string,
+  images: string[],
+  averageRating: number,
+  blueprintCount: number,
 }

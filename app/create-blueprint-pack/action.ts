@@ -1,16 +1,17 @@
 'use server'
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import { uploadFilesToCloudinary, uploadImagesToCloudinary } from "../../services/cloudinary"
-import { CreateBlueprintFormSchema } from "../../utils/zod"
+import { uploadImagesToCloudinary } from "../../services/cloudinary"
+import { CreateBlueprintPackFormSchema } from "../../utils/zod"
 import { getPioneerByEmail } from "../../services/pioneer"
 import { redirect } from "next/navigation"
-import { checkIfTitleIsUsed, createNewBlueprint } from "../../services/blueprint"
+import { checkIfTitleIsUsed, createNewBlueprintPack } from "../../services/blueprintPack"
 import { revalidatePath } from "next/cache"
+import { getAllBlueprintsByPioneer } from "../../services/blueprint"
 
-export default async function createBlueprint(state, formData: FormData) {
+export default async function createBlueprintPack(state, formData: FormData) {
   // 1. Validate form data
-  const validationResults = CreateBlueprintFormSchema.safeParse({
+  const validationResults = CreateBlueprintPackFormSchema.safeParse({
     title: formData.get('title'),
     description: formData.get('description'),
     images: [
@@ -20,12 +21,12 @@ export default async function createBlueprint(state, formData: FormData) {
     ].filter(
       (file): file is File => file instanceof File && file.size > 0
     ),
-    files: formData.getAll('files').filter(
-      (file): file is File => file instanceof File && file.size > 0
-    ),
+    blueprints: formData.getAll('blueprints'),
     categories: formData.getAll('category'),
     videoUrl: formData.get('videoUrl')
   })
+
+  console.log("Blueprints:", formData.getAll('blueprints'))
 
   if (!validationResults.success) {
     return {
@@ -37,26 +38,27 @@ export default async function createBlueprint(state, formData: FormData) {
     title,
     description,
     images,
-    files,
+    blueprints,
     categories,
     videoUrl
   } = validationResults.data
 
+  console.log('Creating blueprint pack with data:', {
+    title,
+    description,
+    images,
+    blueprints,
+    categories,
+    videoUrl
+  })
+
   // Check the sizes of the images and files
   const imageSizeError = images.some((image: File) => image.size > 1000000)
-  const fileSizeError = files.some((file: File) => file.size > 1000000)
 
   if (imageSizeError) {
     return {
       error: {
         images: 'Each image must be less than 1MB.'
-      }
-    }
-  }
-  if (fileSizeError) {
-    return {
-      error: {
-        files: 'Each file must be less than 1MB.'
       }
     }
   }
@@ -69,7 +71,7 @@ export default async function createBlueprint(state, formData: FormData) {
   if (!authenticated) {
     return {
       error: {
-        submit: 'You must be logged in to create a blueprint.'
+        submit: 'You must be logged in to create a blueprint pack.'
       }
     }
   }
@@ -97,31 +99,49 @@ export default async function createBlueprint(state, formData: FormData) {
   if (isTitleUsed) {
     return {
       error: {
-        submit: 'There is already a blueprint with this title.'
+        submit: 'There is already a blueprint pack with this title.'
       }
     }
   }
 
   // 5. Upload images and files to cloudinary, then create the blueprint
   try {
-    const imageUrls = await uploadImagesToCloudinary(images, pioneer.name, title)
-    const fileUrls = await uploadFilesToCloudinary(files, pioneer.name, title)
+    const imageUrls = await uploadImagesToCloudinary(images, pioneer.name, title, 'blueprint-pack')
 
-    const blueprint = {
+    const blueprintPack = {
       title,
       description: description || null,
       images: imageUrls,
-      files: fileUrls,
       categories,
       videoUrl: videoUrl || null,
-      fileSize: files[0].size,
       pioneerName: pioneer.name
     }
 
-    // 6. Create the blueprint
-    const newBlueprint = await createNewBlueprint(blueprint)
+    // 6. Check if the blueprint are existing and pioneer is the owner
+    // Transform blueprint IDs from string to number
+    const blueprintIds = blueprints.map(bp => {
+      const id = Number(bp)
+      if (isNaN(id)) {
+        throw new Error('Invalid blueprint ID.')
+      }
+      return id
+    })
 
-    if (!newBlueprint) {
+    const allBlueprintsOfPioneer = await getAllBlueprintsByPioneer(pioneer.name)
+    const existingBlueprints = allBlueprintsOfPioneer.filter(bp => blueprintIds.includes(bp.id))
+
+    if (existingBlueprints.length !== blueprintIds.length) {
+      return {
+        error: {
+          submit: 'Some blueprints do not exist or you are not the owner.'
+        }
+      }
+    }
+
+    // 7. Create the blueprint
+    const newBlueprintPack = await createNewBlueprintPack(blueprintPack, blueprintIds)
+
+    if (!newBlueprintPack) {
       return {
         error: {
           submit: 'Failed to create the blueprint. Try again later.'
@@ -129,15 +149,20 @@ export default async function createBlueprint(state, formData: FormData) {
       }
     }
 
-    revalidatePath('/blueprints')
+    revalidatePath('/blueprint-packs')
+    revalidatePath(`/blueprint-packs/${newBlueprintPack.id}`)
     revalidatePath(`/pioneers/${pioneer.name}`)
     revalidatePath('/settings')
-    revalidatePath('/pioneers')
     revalidatePath('/search')
+
+    // Revalidate the blueprints in the pack
+    newBlueprintPack.blueprints.forEach((blueprintId) => {
+      revalidatePath(`/blueprints/${blueprintId}`)
+    })
 
     return {
       success: {
-        data: newBlueprint.id,
+        data: newBlueprintPack.id,
         submit: 'Blueprint created successfully.'
       }
     }

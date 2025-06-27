@@ -6,6 +6,7 @@ import Main from "../../../components/Main"
 import BlueprintContainer from "../../../components/BlueprintContainer"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
+import { getAllBlueprintPacksByPioneer } from "../../../services/blueprintPack"
 
 const allPlatforms = [
   { slug: 'youtube', name: 'YouTube' },
@@ -59,6 +60,8 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
       return acc + blueprint.downloads
     }, 0)
   }
+
+  const blueprintPacks = await getAllBlueprintPacksByPioneer(pioneer.name)
 
   return (
     <Main classname="flex flex-col bg-dark-bg">
@@ -121,7 +124,13 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
         dataAdFormat="fixed"
         dynamicHeight={false}
       /> */}
-      <BlueprintContainer blueprints={blueprints} title="Blueprints" />
+      <BlueprintContainer entries={blueprints} title="Blueprints" />
+      {
+        blueprintPacks.length > 0 &&
+        <div className="mt-2 lg:mt-4">
+          <BlueprintContainer entries={blueprintPacks} title="Blueprint Packs" isEdit type="blueprintPack" />
+        </div>
+      }
     </Main>
   )
 }

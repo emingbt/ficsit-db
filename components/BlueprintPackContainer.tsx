@@ -3,9 +3,41 @@
 import { useState } from 'react'
 import { Filter, SortDesc } from 'lucide-react'
 import Link from 'next/link'
-import BlueprintCard from './BlueprintCard'
-import type { BlueprintCardProps, BlueprintPackCardProps } from '../interfaces'
-import BlueprintPackCard from './BlueprintPackCard'
+import type { BlueprintPackCardProps } from '../interfaces'
+import BlueprintPackCard from "./BlueprintPackCard"
+
+// Sample data for demonstration
+const samplePacks = [
+  {
+    id: 23,
+    title: "Starter Factory Pack",
+    images: [
+      "https://example.com/images/starter-factory-pack.jpg",
+      "https://example.com/images/starter-factory-pack-2.jpg",
+    ],
+    blueprints: [
+      { id: 32, title: "Iron Smelter" },
+      { id: 2, title: "Copper Wire Plant" },
+      { id: 4, title: "Basic Power Grid" },
+    ],
+    averageRating: 4.8,
+    downloads: 1500,
+  },
+  {
+    id: 42,
+    title: "Advanced Automation Set",
+    images: [
+      "https://example.com/images/advanced-automation-set.jpg",
+      "https://example.com/images/advanced-automation-set-2.jpg",
+    ],
+    blueprints: [
+      { id: 231, title: "Automated Assembler" },
+      { id: 23, title: "Smart Storage" },
+    ],
+    averageRating: 4.6,
+    downloads: 1500,
+  }
+]
 
 type Filter = {
   category?: string
@@ -34,7 +66,7 @@ const categories = [
   'Transportation'
 ]
 
-export default function BlueprintContainer({ entries, title, filter, isEdit = false, type = "blueprint" }: { entries: BlueprintCardProps[] | BlueprintPackCardProps[], title: string, filter?: Filter, isEdit?: boolean, type?: "blueprint" | "blueprintPack" }) {
+export default function BlueprintContainer({ blueprintPacks, title, filter, isEdit = false }: { blueprintPacks: BlueprintPackCardProps[], title: string, filter?: Filter, isEdit?: boolean }) {
   const [isCategoriesOpened, setIsCategoriesOpened] = useState(false)
   const [isSortOpened, setIsSortOpened] = useState(false)
   const selectedCategory = filter?.category
@@ -42,7 +74,7 @@ export default function BlueprintContainer({ entries, title, filter, isEdit = fa
 
   return (
     <div className='w-full flex flex-col flex-grow'>
-      <div className="w-full flex flex-wrap items-center justify-between bg-main-bg p-2 pl-4">
+      <div className="w-full h-10 sm:h-12 flex items-center justify-between bg-main-bg p-4">
         <h1 className="text-lg sm:text-xl font-medium">{title}</h1>
         {
           filter &&
@@ -74,7 +106,7 @@ export default function BlueprintContainer({ entries, title, filter, isEdit = fa
                     return (
                       <Link
                         key={i}
-                        href={`/${type == "blueprint" ? "blueprints" : "blueprint-packs"}${selectedCategory ? `?category=${selectedCategory}&sort=${sort}` : `?sort=${sort}`}  `}
+                        href={`/blueprints${selectedCategory ? `?category=${selectedCategory}&sort=${sort}` : `?sort=${sort}`}  `}
                         className={`${selectedSort == sort ? "bg-logo-blue text-black hover:text-white" : "bg-light-bg text-white hover:text-logo-blue"}  px-3 py-2 text-sm sm:text-base rounded-sm cursor-pointer`}
                       >
                         {sort}
@@ -97,8 +129,8 @@ export default function BlueprintContainer({ entries, title, filter, isEdit = fa
                   <Link
                     key={i}
                     href={`${selectedCategory == category ?
-                      `/${type == "blueprint" ? "blueprints" : "blueprint-packs"}` :
-                      `/${type == "blueprint" ? "blueprints" : "blueprint-packs"}/?category=${category}${selectedSort ? `&sort=${selectedSort}` : ""}`
+                      `/blueprints` :
+                      `/blueprints/?category=${category}${selectedSort ? `&sort=${selectedSort}` : ""}`
                       }`}
                     className={`${selectedCategory == category ? "bg-logo-blue text-black" : "bg-light-bg hover:text-logo-blue"} px-3 py-2 text-sm sm:text-base rounded-sm cursor-pointer`}
                   >
@@ -113,19 +145,13 @@ export default function BlueprintContainer({ entries, title, filter, isEdit = fa
       <div className='w-full h-full bg-light-bg'>
         <section className='w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2 lg:gap-3 p-2 lg:p-3'>
           {
-            entries?.length > 0 ?
-              entries.map((enrty, i: number) => {
-                if (type === "blueprint") {
-                  return (
-                    <BlueprintCard key={i} blueprint={enrty} isEdit={isEdit} />
-                  )
-                } else {
-                  return (
-                    <BlueprintPackCard key={i} blueprintPack={enrty} isEdit={isEdit} />
-                  )
-                }
+            blueprintPacks?.length > 0 ?
+              blueprintPacks.map((pack, i: number) => {
+                return (
+                  <BlueprintPackCard key={i} blueprintPack={pack} isEdit={isEdit} />
+                )
               }) :
-              <p className='text-2xl'>No {type == "blueprint" ? "blueprints" : "blueprint packs"} found</p>
+              <p className='text-2xl'>No blueprint packs found</p>
           }
         </section>
       </div>

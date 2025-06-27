@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react"
 import { Star } from "lucide-react"
-import { rateBlueprint, checkIfRated } from "./action"
+import { rateBlueprintPack, checkIfRated } from "./action"
 
-export default function RatingBlueprint({ blueprintId, pioneerName, blueprintPackIds }: { blueprintId: number, pioneerName: string | undefined, blueprintPackIds?: number[] }) {
+export default function RatingBlueprintPack({ blueprintPackId, pioneerName }: { blueprintPackId: number, pioneerName: string | undefined }) {
   const [rating, setRating] = useState(0)
   const [isRated, setIsRated] = useState(false)
 
@@ -14,7 +14,7 @@ export default function RatingBlueprint({ blueprintId, pioneerName, blueprintPac
         return
       }
 
-      const rating = await checkIfRated(blueprintId, pioneerName)
+      const rating = await checkIfRated(blueprintPackId, pioneerName)
       if (rating) {
         setRating(rating)
         setIsRated(true)
@@ -22,7 +22,7 @@ export default function RatingBlueprint({ blueprintId, pioneerName, blueprintPac
     }
 
     fetchRating()
-  }, [blueprintId, pioneerName])
+  }, [blueprintPackId, pioneerName])
 
   const handleOnClick = async (rating: number) => {
     if (!pioneerName) {
@@ -32,7 +32,7 @@ export default function RatingBlueprint({ blueprintId, pioneerName, blueprintPac
     setRating(rating)
     setIsRated(true)
 
-    await rateBlueprint(blueprintId, pioneerName, rating, blueprintPackIds)
+    await rateBlueprintPack(blueprintPackId, pioneerName, rating)
   }
 
   return (
@@ -43,10 +43,10 @@ export default function RatingBlueprint({ blueprintId, pioneerName, blueprintPac
         </h3> :
         pioneerName ?
           <h3 className="xl:text-xl font-semibold text-main-orange text-center">
-            Rate this Blueprint!
+            Rate this Blueprint Pack!
           </h3> :
           <h3 className="xl:text-xl font-semibold text-main-orange text-center">
-            Login to rate Blueprint!
+            Login to rate Blueprint Pack!
           </h3>
       }
       <div className="flex flex-row gap-2">

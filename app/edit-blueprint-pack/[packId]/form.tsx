@@ -3,18 +3,25 @@
 import Link from "next/link"
 import { useState } from "react"
 import { useFormState, useFormStatus } from "react-dom"
-import { deleteBlueprint, updateBlueprint } from "./action"
+import { deleteBlueprintPack, updateBlueprintPack } from "./action"
 import ImageInput from "../../../components/ImageInput"
 import CategoryInput from "../../../components/CategoryInput"
-import { Blueprint } from "../../../drizzle/schema"
+import BlueprintSelector from "../../../components/BlueprintSelector"
+import { BlueprintPack } from "../../../drizzle/schema"
+import { BlueprintCardProps } from "../../../interfaces"
 
-export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint }) {
-  const [state, action] = useFormState(updateBlueprint, undefined)
-  const [description, setDescription] = useState(blueprint.description)
-  const [videoUrl, setVideoUrl] = useState(blueprint.videoUrl)
+export default function EditBlueprintForm({ blueprintPack, blueprints, selectedBlueprints }: {
+  blueprintPack: BlueprintPack,
+  blueprints: BlueprintCardProps[],
+  selectedBlueprints: BlueprintCardProps[]
+}) {
+  const [state, action] = useFormState(updateBlueprintPack, undefined)
+  const [description, setDescription] = useState(blueprintPack.description)
+  const [videoUrl, setVideoUrl] = useState(blueprintPack.videoUrl)
 
   const descriptionError = state?.error?.description
   const imageError = state?.error?.images
+  const blueprintsError = state?.error?.blueprints
   const categoryError = state?.error?.categories
   const videoUrlError = state?.error?.videoUrl
   const submitError = state?.error?.submit
@@ -22,7 +29,7 @@ export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint 
 
   return (
     <form action={action}>
-      <input type="hidden" value={blueprint.id} name="blueprintId" />
+      <input type="hidden" value={blueprintPack.id} name="blueprintPackId" />
       <label htmlFor="description">Description (Optional)</label>
       <textarea
         id="description"
@@ -41,8 +48,9 @@ export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint 
           <p>{descriptionError}</p>
         </div>
       }
-      <ImageInput imageError={imageError} existingImageUrls={blueprint.images} />
-      <CategoryInput error={categoryError} existingCategories={blueprint.categories} />
+      <ImageInput imageError={imageError} existingImageUrls={blueprintPack.images} />
+      <BlueprintSelector blueprints={blueprints} blueprintsError={blueprintsError} selectedBlueprints={selectedBlueprints} />
+      <CategoryInput error={categoryError} existingCategories={blueprintPack.categories} />
       <label htmlFor="videoUrl">Video Link (Optional)</label>
       <input
         id="videoUrl"
@@ -67,15 +75,15 @@ export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint 
           </ul>
         </div>
       }
-      <SubmitButton success={submitSuccess} blueprintId={blueprint.id} />
-      <DeleteButton blueprintId={blueprint.id} />
+      <SubmitButton success={submitSuccess} blueprintPackId={blueprintPack.id} />
+      <DeleteButton blueprintPackId={blueprintPack.id} />
       {submitError && <p className='text-red-500'>{submitError}</p>}
       {submitSuccess && <p className='text-green-500'>{submitSuccess}</p>}
     </form>
   )
 }
 
-function SubmitButton({ success, blueprintId }: { success: boolean, blueprintId?: number }) {
+function SubmitButton({ success, blueprintPackId }: { success: boolean, blueprintPackId?: number }) {
   const { pending } = useFormStatus()
 
   return (
@@ -84,9 +92,9 @@ function SubmitButton({ success, blueprintId }: { success: boolean, blueprintId?
         <div className="w-full h-10 bg-logo-blue cursor-pointer">
           <Link
             className="w-full h-full flex justify-center items-center text-lg font-medium"
-            href={`/blueprints/${blueprintId}`}
+            href={`/blueprint-packs/${blueprintPackId}`}
           >
-            Go to Blueprint
+            Go to Blueprint Pack
           </Link>
         </div>
       ) : (
@@ -100,40 +108,30 @@ function SubmitButton({ success, blueprintId }: { success: boolean, blueprintId?
         hover:bg-light-bg hover:text-light-orange
       `}
         >
-          {pending ? 'Updating Blueprint...' : 'Update Blueprint'}
+          {pending ? 'Updating Blueprint Pack...' : 'Update Blueprint Pack'}
         </button>
       )}
     </div>
   )
 }
 
-function DeleteButton({ blueprintId }: { blueprintId?: number }) {
+function DeleteButton({ blueprintPackId }: { blueprintPackId?: number }) {
   const [pending, setPending] = useState(false)
-  const [deleteError, setDeleteError] = useState<string>()
 
   return (
-    <>
-      <button
-        type='button'
-        className={`w-full h-10 ${pending ? 'bg-light-bg  text-red-500' : 'bg-red-600 hover:bg-light-bg hover:text-red-500  '}  text-white text-base`}
-        aria-disabled={pending}
-        disabled={pending}
-        onClick={async () => {
-          if (confirm('Are you sure you want to delete this blueprint?')) {
-            if (blueprintId) {
-              setPending(true)
-              const result = await deleteBlueprint(blueprintId)
-              if (result && result.error) {
-                setDeleteError(result.error)
-                setPending(false)
-              }
-            }
+    <button
+      type='button'
+      className={`w-full h-10 ${pending ? 'bg-light-bg  text-red-500' : 'bg-red-600'} hover:bg-light-bg hover:text-red-500 text-white text-base`}
+      onClick={async () => {
+        if (confirm('Are you sure you want to delete this blueprint pack?')) {
+          if (blueprintPackId) {
+            setPending(true)
+            await deleteBlueprintPack(blueprintPackId)
           }
-        }}
-      >
-        {pending ? 'Deleting Blueprint...' : 'Delete Blueprint'}
-      </button>
-      {deleteError && <p className='text-red-500 mt-2'>{deleteError}</p>}
-    </>
+        }
+      }}
+    >
+      {pending ? 'Deleting Blueprint Pack...' : 'Delete Blueprint Pack'}
+    </button>
   )
 }

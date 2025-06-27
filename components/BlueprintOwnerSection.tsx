@@ -5,11 +5,12 @@ import { usePioneerStore } from "../utils/zustand"
 import { useEffect, useState } from "react"
 
 interface BlueprintOwnerSectionProps {
-  blueprintId: number
+  id: number
   pioneerName: string
+  type?: "blueprint" | "blueprintPack"
 }
 
-const BlueprintOwnerSection: React.FC<BlueprintOwnerSectionProps> = ({ blueprintId, pioneerName }) => {
+export default function BlueprintOwnerSection({ id, pioneerName, type = "blueprint" }: BlueprintOwnerSectionProps) {
   const currentPioneerName = usePioneerStore((state) => state.name)
   const [isOwner, setIsOwner] = useState(false)
 
@@ -20,13 +21,11 @@ const BlueprintOwnerSection: React.FC<BlueprintOwnerSectionProps> = ({ blueprint
   if (!isOwner) return null
 
   return (
-    <div className="w-full flex flex-row flex-wrap items-center justify-between bg-main-bg text-white p-4 mb-4">
-      <p className="text-lg font-semibold mr-2">You own this blueprint.</p>
-      <Link href={`/edit-blueprint/${blueprintId}`}>
-        <button className="px-2 py-1 bg-light-bg rounded-sm hover:bg-main-orange hover:text-white">Edit Blueprint</button>
+    <div className="w-full flex flex-row flex-wrap items-center justify-between bg-main-bg text-white p-4 mb-2 lg:mb-4">
+      <p className="text-lg font-semibold mr-2">You own this {type === "blueprint" ? "blueprint" : "blueprint pack"}.</p>
+      <Link href={`/${type === "blueprint" ? "edit-blueprint" : "edit-blueprint-pack"}/${id}`} className="flex items-center">
+        <button className="px-2 py-1 bg-light-bg rounded-sm hover:bg-main-orange hover:text-white">Edit {type === "blueprint" ? "Blueprint" : "Blueprint Pack"}</button>
       </Link>
     </div>
   )
 }
-
-export default BlueprintOwnerSection

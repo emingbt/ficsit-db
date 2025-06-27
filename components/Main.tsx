@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function Main({ children, classname = "", dontFill = false, image, imagePosition }: { children: React.ReactNode, classname?: string, dontFill?: boolean, image?: string, imagePosition?: string }) {
+export default function Main({ children, classname = "", dontFill = false, image, imagePosition, isPattern }: { children: React.ReactNode, classname?: string, dontFill?: boolean, image?: string, imagePosition?: string, isPattern?: boolean }) {
   const isDivided: boolean = !!image
 
   return (
@@ -10,16 +10,29 @@ export default function Main({ children, classname = "", dontFill = false, image
       </main>
       {/* Image that fills the remaining space (flex-1) */}
       {isDivided && image && (
-        <div className="flex-1 hidden lg:block relative">
-          <Image
-            src={`/images/${image}.webp`}
-            alt={image}
-            fill
-            className="object-cover object-left w-full h-full"
-            sizes="100%"
-            priority
-            style={{ objectPosition: imagePosition || "center" }}
-          />
+        <div className={"flex-1 hidden lg:block relative bg-dark-bg"}
+          style={
+            isPattern
+              ? {
+                backgroundImage: `url(/images/${image}.webp)`,
+                backgroundRepeat: "repeat",
+                backgroundSize: "auto 36%",
+                backgroundPosition: imagePosition || "left",
+              }
+              : { position: "relative" }
+          }
+        >
+          {!isPattern &&
+            <Image
+              src={`/images/${image}.webp`}
+              alt={image}
+              fill
+              className="object-cover object-left w-full h-full"
+              sizes="100%"
+              priority
+              style={{ objectPosition: imagePosition || "center" }}
+            />
+          }
         </div>
       )}
     </div>

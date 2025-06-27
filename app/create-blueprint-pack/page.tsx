@@ -1,10 +1,11 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { redirect } from "next/navigation"
-import CreateBlueprintForm from "./form"
+import CreateBlueprintPackForm from "./form"
 import Main from "../../components/Main"
 import { getPioneerByEmail } from "../../services/pioneer"
+import { getAllBlueprintsByPioneer } from "../../services/blueprint"
 
-export default async function CreateBlueprintPage() {
+export default async function CreateBlueprintPackPage() {
   const { getUser, isAuthenticated } = getKindeServerSession()
   const authenticated = await isAuthenticated()
 
@@ -24,11 +25,13 @@ export default async function CreateBlueprintPage() {
     redirect('/')
   }
 
+  const blueprintsOfPioneer = await getAllBlueprintsByPioneer(pioneer.name)
+
   return (
-    <Main classname="p-8" image='create-blueprint-banner' imagePosition="left">
-      <h1 className='text-2xl lg:text-4xl mb-4 lg:mb-1'>Create a new blueprint</h1>
-      <p className=' text-xs lg:text-base mb-4 text-main-gray'>Share your ideas with other pioneers.</p>
-      <CreateBlueprintForm />
+    <Main classname="p-8" image='create-blueprint-pack-banner' imagePosition="left" isPattern>
+      <h1 className='text-2xl lg:text-4xl mb-4 lg:mb-1'>Create a new blueprint pack</h1>
+      <p className=' text-xs lg:text-base mb-4 text-main-gray'>Group your related blueprints.</p>
+      <CreateBlueprintPackForm blueprints={blueprintsOfPioneer} />
     </Main>
   )
 }

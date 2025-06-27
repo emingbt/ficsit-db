@@ -2,8 +2,8 @@ import 'server-only'
 
 import { cache } from 'react'
 import db from '../utils/postgres'
-import { count, desc, eq, avg, and, sql, AnyColumn } from 'drizzle-orm'
-import { Blueprint, BlueprintRating, Pioneer } from '../drizzle/schema'
+import { count, desc, eq, sql, AnyColumn, inArray } from 'drizzle-orm'
+import { Blueprint, BlueprintComment, BlueprintPack, BlueprintPackBlueprints, BlueprintRating, Pioneer } from '../drizzle/schema'
 
 const blueprintsPerPage = 30
 
@@ -59,7 +59,7 @@ export const getBlueprintById = async (id: number) => {
   }
 }
 
-export const getAllBlueprintsByTitle = async (title: string, blueprintCount = 30) => {
+export const getAllBlueprintsByTitle = async (title: string, blueprintCount = blueprintsPerPage) => {
   if (!title || title.trim() == '') {
     return []
   }
@@ -159,7 +159,8 @@ export const createNewBlueprint = async (blueprint: Blueprint) => {
 export const updateBlueprintProperties = async (blueprintId: number, blueprint: {
   description: Blueprint["description"],
   images: Blueprint["images"],
-  categories: Blueprint["categories"]
+  categories: Blueprint["categories"],
+  videoUrl: Blueprint["videoUrl"],
 }) => {
   try {
     const updatedBlueprint = await db.update(Blueprint)
@@ -185,7 +186,11 @@ export const deleteBlueprintById = async (blueprintId: number) => {
     await db.delete(BlueprintRating)
       .where(eq(BlueprintRating.blueprintId, blueprintId))
 
-    // 2. Delete the blueprint
+    // 2. Delete the blueprint comments (if any)
+    await db.delete(BlueprintComment)
+      .where(eq(BlueprintComment.blueprintId, blueprintId))
+
+    // 3. Delete the blueprint
     const deletedBlueprint = await db.delete(Blueprint)
       .where(eq(Blueprint.id, blueprintId))
       .returning({
@@ -237,11 +242,6 @@ export const getPageCountAndBlueprintsByPage = async (
       }
     })
 
-    await db.select().from(Blueprint)
-      .orderBy(desc(Blueprint.id))
-      .limit(blueprintsPerPage)
-      .offset(offset)
-
     const pageCount = await getPageCount(category)
 
     return { pageCount, blueprints }
@@ -276,5 +276,43 @@ export const getPageCount = cache(async (category?: Blueprint["categories"][numb
   } catch (error) {
     console.log(error)
     throw new Error('Failed to get the page count.')
+  }
+})
+
+export const getBlueprintPacksByBlueprintId = cache(async (blueprintId: number) => {
+  try {
+    const blueprintPackIds = await db.query.BlueprintPackBlueprints.findMany({
+      where: eq(BlueprintPackBlueprints.blueprintId, blueprintId),
+      columns: {
+        blueprintPackId: true
+      }
+    })
+
+    if (blueprintPackIds.length === 0) {
+      return []
+    }
+
+    // Get the blueprint packs by their IDs with the blueprint count
+    const blueprintPacks = await db
+      .select({
+        id: BlueprintPack.id,
+        title: BlueprintPack.title,
+        images: BlueprintPack.images,
+        averageRating: BlueprintPack.averageRating,
+        blueprintCount: count(BlueprintPackBlueprints.blueprintId)
+      })
+      .from(BlueprintPack)
+      .leftJoin(
+        BlueprintPackBlueprints,
+        eq(BlueprintPack.id, BlueprintPackBlueprints.blueprintPackId)
+      )
+      .where(inArray(BlueprintPack.id, blueprintPackIds.map(bp => bp.blueprintPackId)))
+      .groupBy(BlueprintPack.id, BlueprintPack.title, BlueprintPack.images, BlueprintPack.averageRating)
+      .orderBy(desc(BlueprintPack.createdAt))
+
+    return blueprintPacks
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to get the blueprint packs by blueprint ID.')
   }
 })

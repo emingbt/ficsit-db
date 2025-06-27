@@ -1,14 +1,14 @@
 import Main from "../../../components/Main"
 import Pagination from "../../../components/Pagination"
 import BlueprintContainer from "../../../components/BlueprintContainer"
-import { getPageCountAndBlueprintsByPage } from "../../../services/blueprint"
+import { getPageCountAndBlueprintPacksByPage } from "../../../services/blueprintPack"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/server"
-
-import type { Blueprint } from "../../../drizzle/schema"
 import Link from "next/link"
 
-export default async function BlueprintsPage({ searchParams }: {
+import type { Blueprint } from "../../../drizzle/schema"
+
+export default async function BlueprintPacksPage({ searchParams }: {
   searchParams: {
     page: string,
     category: string,
@@ -19,7 +19,7 @@ export default async function BlueprintsPage({ searchParams }: {
   const category = searchParams?.category as Blueprint["categories"][number] | undefined
   const sort = searchParams?.sort
 
-  const { pageCount, blueprints } = await getPageCountAndBlueprintsByPage(page, category, sort)
+  const { pageCount, blueprintPacks } = await getPageCountAndBlueprintPacksByPage(page, category, sort)
 
   const { isAuthenticated } = getKindeServerSession()
   const authenticated = await isAuthenticated()
@@ -27,14 +27,14 @@ export default async function BlueprintsPage({ searchParams }: {
   return (
     <Main classname="flex flex-col items-stretch bg-dark-bg">
       <div className="w-full flex flex-col sm:flex-row items-start sm:items-center p-4 bg-main-bg mb-2 lg:mb-4 text-sm sm:text-base">
-        <p className="mr-4">Do you want to share your blueprint?</p>
+        <p className="mr-4">Do you want to share your blueprint pack?</p>
         {
           authenticated ?
             <Link
-              href="/create-blueprint"
+              href="/create-blueprint-pack"
               className="px-2 py-1 bg-logo-blue text-sm lg:text-base text-black lg:hover:bg-light-bg  lg:hover:text-logo-blue lg:hover:font-semibold rounded-sm"
             >
-              Create Blueprint
+              Create Blueprint Pack
             </Link>
             :
             <LoginLink
@@ -45,9 +45,9 @@ export default async function BlueprintsPage({ searchParams }: {
             </LoginLink>
         }
       </div>
-      <BlueprintContainer entries={blueprints} title="Blueprints" filter={{ category, sort }} />
+      <BlueprintContainer entries={blueprintPacks} title="Blueprint Packs" filter={{ category, sort }} type="blueprintPack" />
       <Pagination
-        path="/blueprints"
+        path="/blueprint-packs"
         currentPage={page}
         pageCount={pageCount}
         filterPath={`${category ? `&category=${category}` : ""}${sort ? `&sort=${sort}` : ""}`}

@@ -7,6 +7,7 @@ import { getAllBlueprintsByPioneer } from "../../services/blueprint"
 import Main from "../../components/Main"
 import BlueprintContainer from "../../components/BlueprintContainer"
 import SocialLinksSection from "./socialLinksSection"
+import { getAllBlueprintPacksByPioneer } from "../../services/blueprintPack"
 
 export default async function SettingsPage() {
   const { getUser, isAuthenticated } = getKindeServerSession()
@@ -33,6 +34,9 @@ export default async function SettingsPage() {
   // Get all blueprints by the pioneer
   const blueprints = await getAllBlueprintsByPioneer(pioneer.name)
 
+  // Get all blueprint packs by the pioneer
+  const blueprintPacks = await getAllBlueprintPacksByPioneer(pioneer.name)
+
   return (
     <Main classname="flex flex-col items-stretch bg-dark-bg">
       <div className="w-full flex flex-1 flex-col lg:flex-row items-stretch gap-2 lg:gap-4 bg-dark-bg mb-2 lg:mb-4">
@@ -44,7 +48,13 @@ export default async function SettingsPage() {
       </div>
       {
         blueprints?.length > 0 &&
-        <BlueprintContainer blueprints={blueprints} title="Edit your Blueprints" isEdit />
+        <BlueprintContainer entries={blueprints} title="Edit your Blueprints" isEdit />
+      }
+      {
+        blueprintPacks?.length > 0 &&
+        <div className="mt-2 lg:mt-4">
+          <BlueprintContainer entries={blueprintPacks} title="Edit your Blueprint Packs" isEdit type="blueprintPack" />
+        </div>
       }
     </Main>
   )
