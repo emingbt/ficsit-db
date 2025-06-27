@@ -132,6 +132,7 @@ export async function updateBlueprintPack(state, formData: FormData) {
     revalidatePath('/blueprint-packs')
     revalidatePath(`/blueprint-packs/${blueprintPack.id}`)
     revalidatePath(`/pioneers/${pioneer.name}`)
+    revalidatePath('/settings')
     revalidatePath('/search')
 
     // Revalidate the blueprints in the pack
@@ -199,9 +200,9 @@ export async function deleteBlueprintPack(blueprintPackId: number) {
     const deletedBlueprintPack = await deleteBlueprintPackById(blueprintPackId)
 
     revalidatePath('/blueprint-packs')
-    revalidatePath('/settings')
-    revalidatePath(`/pioneers/${pioneer.name}`)
     revalidatePath(`/blueprint-packs/${deletedBlueprintPack.id}`)
+    revalidatePath(`/pioneers/${pioneer.name}`)
+    revalidatePath('/settings')
     revalidatePath('/search')
 
     deletedBlueprintPack.deletedBlueprintIds.forEach((blueprintId) => {

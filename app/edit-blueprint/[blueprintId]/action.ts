@@ -128,7 +128,14 @@ export async function updateBlueprint(state, formData: FormData) {
     revalidatePath('/blueprints')
     revalidatePath(`/blueprints/${blueprint.id}`)
     revalidatePath(`/pioneers/${pioneer.name}`)
+    revalidatePath('/settings')
     revalidatePath('/search')
+
+    // Revalidate the blueprint packs that contain this blueprint
+    const associatedBlueprintPacks = await getBlueprintPacksByBlueprintId(blueprint.id)
+    associatedBlueprintPacks.forEach((pack) => {
+      revalidatePath(`/blueprint-packs/${pack.id}`)
+    })
 
     return {
       success: {
@@ -198,10 +205,10 @@ export async function deleteBlueprint(blueprintId: number) {
     await deleteBlueprintById(blueprintId)
 
     revalidatePath('/blueprints')
-    revalidatePath('/settings')
-    revalidatePath(`/pioneers/${pioneer.name}`)
     revalidatePath(`/blueprints/${blueprintId}`)
     revalidatePath('/pioneers')
+    revalidatePath(`/pioneers/${pioneer.name}`)
+    revalidatePath('/settings')
     revalidatePath('/search')
 
   } catch (error) {

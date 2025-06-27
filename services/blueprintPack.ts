@@ -181,7 +181,6 @@ export const createNewBlueprintPack = async (blueprintPack: BlueprintPack, bluep
 
     // Get the full blueprint pack with the blueprints included
     const fullBlueprintPack = {
-      ...newBlueprintPack,
       blueprints: await db
         .select({
           id: Blueprint.id,
@@ -194,7 +193,8 @@ export const createNewBlueprintPack = async (blueprintPack: BlueprintPack, bluep
           BlueprintPackBlueprints,
           eq(Blueprint.id, BlueprintPackBlueprints.blueprintId)
         )
-        .where(eq(BlueprintPackBlueprints.blueprintPackId, newBlueprintPack.id))
+        .where(eq(BlueprintPackBlueprints.blueprintPackId, newBlueprintPack.id)),
+      ...newBlueprintPack
     }
 
     // Return the newly created blueprint pack with blueprints

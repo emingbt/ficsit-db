@@ -154,6 +154,12 @@ export default async function createBlueprintPack(state, formData: FormData) {
     revalidatePath(`/pioneers/${pioneer.name}`)
     revalidatePath('/settings')
     revalidatePath('/search')
+
+    // Revalidate the blueprints in the pack
+    newBlueprintPack.blueprints.forEach((blueprintId) => {
+      revalidatePath(`/blueprints/${blueprintId}`)
+    })
+
     return {
       success: {
         data: newBlueprintPack.id,
