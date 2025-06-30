@@ -106,7 +106,7 @@ export const CreateBlueprintFormSchema = object({
     })
     .trim(),
   description: string().max(1024, { message: 'Description must be at most 1024 characters long.' }).optional(),
-  images: any()
+  images: array(string())
     .refine((images) => images?.length > 0, "At least 1 image is required.")
     .refine((images) => images?.length <= 3, "At most 3 images are allowed."),
   files: any()
