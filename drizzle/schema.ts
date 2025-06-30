@@ -7,7 +7,8 @@ import {
   uniqueIndex,
   integer,
   real,
-  primaryKey
+  primaryKey,
+  pgEnum
 } from 'drizzle-orm/pg-core'
 import { InferInsertModel } from 'drizzle-orm'
 import { avatarEnum, categoryEnum, colorEnum, roleEnum, platformEnum } from './enums'
@@ -132,6 +133,25 @@ export const BlueprintPackRating = pgTable('BlueprintPackRating', {
   }
 })
 
+export const fileTypeEnum = pgEnum('file_type', ['image', 'sbpFile', 'sbpcfgFile'])
+export const fileStatusEnum = pgEnum('file_status', ['pending', 'linked'])
+
+export const File = pgTable('File', {
+  id: serial('id').primaryKey(),
+  pioneerId: integer('pioneer_id').references(() => Pioneer.id).notNull(),
+  url: text('url').notNull(),
+  type: fileTypeEnum('type').notNull(),
+  size: integer('size').notNull(),
+  status: fileStatusEnum('status').default('pending').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull()
+}, (file) => {
+  return {
+    pioneerIdIdx: index('file_pioneerId_idx').on(file.pioneerId),
+    statusIdx: index('file_status_idx').on(file.status),
+  }
+})
+
 export type Pioneer = InferInsertModel<typeof Pioneer>
 export type ApiAccessToken = InferInsertModel<typeof ApiAccessToken>
 export type Blueprint = InferInsertModel<typeof Blueprint>
@@ -141,3 +161,4 @@ export type BlueprintComment = InferInsertModel<typeof BlueprintComment>
 export type BlueprintPack = InferInsertModel<typeof BlueprintPack>
 export type BlueprintPackBlueprints = InferInsertModel<typeof BlueprintPackBlueprints>
 export type BlueprintPackRating = InferInsertModel<typeof BlueprintPackRating>
+export type File = InferInsertModel<typeof File>
