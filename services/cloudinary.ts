@@ -250,17 +250,19 @@ export async function moveCloudinaryFiles({
   urls,
   pioneerName,
   title,
+  type = 'blueprint',
   resourceType = 'image'
 }: {
   urls: string[],
   pioneerName: string,
   title: string,
+  type?: 'blueprint' | 'blueprint-pack',
   resourceType?: 'image' | 'raw'
 }) {
   const movedUrls: string[] = []
 
   for (const url of urls) {
-    const newUrl = await moveCloudinaryFile({ url, pioneerName, title, resourceType })
+    const newUrl = await moveCloudinaryFile({ url, pioneerName, title, type, resourceType })
     movedUrls.push(newUrl)
   }
 
