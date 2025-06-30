@@ -9,18 +9,23 @@ export default function ImageInput({ imageError, existingImageUrls }: {
 }) {
   const [images, setImages] = useState<(File | undefined)[]>(Array.from({ length: 3 }))
   const [imageUrls, setImageUrls] = useState<string[]>(existingImageUrls || [])
-  const [uploading, setUploading] = useState(false)
+  // Use an array to track uploading state per slot
+  const [uploading, setUploading] = useState<boolean[]>([false, false, false])
+  console.log("ImageInput component initialized")
 
   const handleOnChange = async (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
+    console.log("ALogg")
     const files = event.target.files
 
     if (files) {
       const image = files[0]
-      const newImages = [...images]
-      const newImageUrls = [...imageUrls]
+      const newUploading = [...uploading]
 
       if (image) {
-        setUploading(true)
+        newUploading[index] = true
+        setUploading(newUploading)
+        console.log(`Uploading image ${index + 1}...`)
+        console.log("Is uploading:", uploading[index])
         try {
           // 1. Get signed params from API
           const transformation = 'c_limit,w_1920,h_1080,q_auto:eco'
@@ -60,14 +65,24 @@ export default function ImageInput({ imageError, existingImageUrls }: {
           if (!fileRes.ok) throw new Error(fileData.error || 'Failed to save file metadata')
 
           // 4. Update state
-          newImages[index] = image
-          newImageUrls[index] = uploadData.secure_url
-          setImages(newImages)
-          setImageUrls(newImageUrls)
+          setImages(prev => {
+            const updated = [...prev]
+            updated[index] = image
+            return updated
+          })
+          setImageUrls(prev => {
+            const updated = [...prev]
+            updated[index] = uploadData.secure_url
+            return updated
+          })
         } catch (err: any) {
           alert(err.message || 'Image upload failed')
         } finally {
-          setUploading(false)
+          setUploading(prev => {
+            const updated = [...prev]
+            updated[index] = false
+            return updated
+          })
         }
       }
     }
@@ -121,7 +136,15 @@ export default function ImageInput({ imageError, existingImageUrls }: {
                     </div>
                 }
                 {
-                  !imageUrls[index] &&
+                  uploading[index] ? (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-dark-bg z-10 cursor-wait">
+                      <svg className="animate-spin h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="#9ca3af" d="M4 12a8 8 0 018-8v8z"></path>
+                      </svg>
+                      <p className="text-gray-400 text-center select-none">Uploading...</p>
+                    </div>
+                  ) : !imageUrls[index] &&
                   <div className="w-full h-full absolute top-0 bg-transparent">
                     <input
                       id="images"
@@ -129,6 +152,7 @@ export default function ImageInput({ imageError, existingImageUrls }: {
                       accept="image/jpeg, image/jpg, image/png, image/webp"
                       className="bg-transparent w-full h-full opacity-0 cursor-pointer"
                       onChange={(event) => handleOnChange(event, index)}
+                      disabled={uploading[index]}
                     />
                   </div>
                 }
@@ -147,7 +171,6 @@ export default function ImageInput({ imageError, existingImageUrls }: {
           <p>{imageError}</p>
         </div>
       }
-      <p className="text-main-gray">- Maximum image size: 1MB</p>
       <p className="text-main-gray mb-4">- Please upload images with 16:9 aspect ratio</p>
     </>
   )
