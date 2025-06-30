@@ -266,3 +266,19 @@ export async function moveCloudinaryFiles({
 
   return movedUrls
 }
+
+/**
+ * Delete a Cloudinary image by its URL.
+ * Extracts the public ID from the URL and deletes the image.
+ */
+export async function deleteImageByUrl(url: string, resourceType: 'image' | 'raw' = 'image') {
+  try {
+    const match = url.match(/\/upload\/(?:v\d+\/)?(.+?)(?:\.[a-zA-Z0-9]+)?$/)
+    if (!match) throw new Error('Invalid Cloudinary URL for deletion')
+    const publicId = match[1]
+    await cloudinary.v2.uploader.destroy(publicId, { resource_type: resourceType })
+  } catch (error) {
+    console.error('Failed to delete image by URL:', error)
+    throw new Error('Failed to delete the image.')
+  }
+}
