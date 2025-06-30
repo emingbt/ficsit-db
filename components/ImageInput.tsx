@@ -3,13 +3,15 @@
 import { useState } from "react"
 import ImageIcon from "../assets/imageIcon.svg"
 
-export default function ImageInput({ imageError, existingImageUrls }: { imageError: string, existingImageUrls?: string[] }) {
+export default function ImageInput({ imageError, existingImageUrls }: {
+  imageError: string,
+  existingImageUrls?: string[]
+}) {
   const [images, setImages] = useState<(File | undefined)[]>(Array.from({ length: 3 }))
   const [imageUrls, setImageUrls] = useState<string[]>(existingImageUrls || [])
+  const [uploading, setUploading] = useState(false)
 
-  const maxImageSize = 1000000 // 1MB
-
-  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
+  const handleOnChange = async (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
     const files = event.target.files
 
     if (files) {
@@ -17,16 +19,57 @@ export default function ImageInput({ imageError, existingImageUrls }: { imageErr
       const newImages = [...images]
       const newImageUrls = [...imageUrls]
 
-      if (image && image?.size > maxImageSize) {
-        alert('Image size must be less than 1MB')
-        return
+      if (image) {
+        setUploading(true)
+        try {
+          // 1. Get signed params from API
+          const transformation = 'c_limit,w_1920,h_1080,q_auto:eco'
+          const signRes = await fetch('/api/cloudinary-signature', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ folder: 'pending', transformation })
+          })
+          const signData = await signRes.json()
+          if (!signRes.ok) throw new Error(signData.error || 'Failed to get signature')
+
+          // 2. Upload to Cloudinary
+          const formData = new FormData()
+          formData.append('file', image)
+          formData.append('api_key', signData.apiKey)
+          formData.append('timestamp', signData.timestamp)
+          formData.append('signature', signData.signature)
+          formData.append('folder', 'pending')
+          formData.append('transformation', transformation)
+
+          const uploadRes = await fetch(signData.uploadUrl, {
+            method: 'POST',
+            body: formData
+          })
+          const uploadData = await uploadRes.json()
+          if (!uploadRes.ok || !uploadData.secure_url) {
+            throw new Error(uploadData.error?.message || 'Cloudinary upload failed')
+          }
+
+          // 3. Save file metadata via API route
+          const fileRes = await fetch('/api/files', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ url: uploadData.secure_url, size: image.size, type: 'image' })
+          })
+          const fileData = await fileRes.json()
+          if (!fileRes.ok) throw new Error(fileData.error || 'Failed to save file metadata')
+
+          // 4. Update state
+          newImages[index] = image
+          newImageUrls[index] = uploadData.secure_url
+          setImages(newImages)
+          setImageUrls(newImageUrls)
+        } catch (err: any) {
+          alert(err.message || 'Image upload failed')
+        } finally {
+          setUploading(false)
+        }
       }
-
-      newImages[index] = image
-      newImageUrls[index] = ''
-
-      setImages(newImages)
-      setImageUrls(newImageUrls)
     }
   }
 
@@ -83,7 +126,6 @@ export default function ImageInput({ imageError, existingImageUrls }: { imageErr
                     <input
                       id="images"
                       type="file"
-                      name={`image-${index}`}
                       accept="image/jpeg, image/jpg, image/png, image/webp"
                       className="bg-transparent w-full h-full opacity-0 cursor-pointer"
                       onChange={(event) => handleOnChange(event, index)}
@@ -95,6 +137,10 @@ export default function ImageInput({ imageError, existingImageUrls }: { imageErr
           })
         }
       </div>
+      {/* Hidden inputs for uploaded image URLs */}
+      {imageUrls.map((url, idx) => (
+        url ? <input key={idx} type="hidden" name={`uploadedImageUrl-${idx}`} value={url} /> : null
+      ))}
       {
         imageError &&
         <div className='w-full text-xs lg:text-base text-error'>
