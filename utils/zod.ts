@@ -106,9 +106,9 @@ export const CreateBlueprintFormSchema = object({
     })
     .trim(),
   description: string().max(1024, { message: 'Description must be at most 1024 characters long.' }).optional(),
-  images: array(string())
-    .refine((images) => images?.length > 0, "At least 1 image is required.")
-    .refine((images) => images?.length <= 3, "At most 3 images are allowed."),
+  images: array(string().url({ message: 'Must be a valid image URL.' }))
+    .min(1, { message: 'At least 1 image is required.' })
+    .max(3, { message: 'At most 3 images are allowed.' }),
   files: any()
     .refine((files) => files?.length == 2, "Both .sbp and .sbpcfg files are required."),
   categories: array(CategoriesEnum)
@@ -133,9 +133,9 @@ export const CreateBlueprintFormSchema = object({
 export const UpdateBlueprintFormSchema = object({
   id: string(),
   description: string().max(1024, { message: 'Description must be at most 512 characters long.' }).optional(),
-  images: any()
-    .refine((images) => images?.length > 0, "At least 1 image is required.")
-    .refine((images) => images?.length <= 3, "At most 3 images are allowed."),
+  images: array(string().url({ message: 'Must be a valid image URL.' }))
+    .min(1, { message: 'At least 1 image is required.' })
+    .max(3, { message: 'At most 3 images are allowed.' }),
   categories: array(CategoriesEnum)
     .min(1, { message: 'At least one category has to selected.' })
     .max(3, { message: 'At most 3 categories can be selected.' }),
