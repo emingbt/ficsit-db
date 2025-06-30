@@ -23,8 +23,8 @@ export async function uploadImageToCloudinary(image: File, index: number, pionee
       {
         tags: `${type}_image`,
         resource_type: "image",
-        public_id: `image-${index}`,
-        folder: `${type}/${pioneerName}/${title}`,
+        public_id: `${title}-${index}`,
+        folder: `${type}s/${pioneerName}/${title}`,
         overwrite: true,
         invalidate: true,
         transformation: {
@@ -124,7 +124,7 @@ export async function updateCloudinaryImages(images: (File | string)[], existing
 
 export async function deleteImage(pioneerName: string, title: string, index: number, type: 'blueprint' | 'blueprint-pack' = 'blueprint') {
   return new Promise<void>((resolve, reject) => {
-    cloudinary.v2.uploader.destroy(`${type}/${pioneerName}/${title}/image-${index}`, (error, result) => {
+    cloudinary.v2.uploader.destroy(`${type}s/${pioneerName}/${title}/image-${index}`, (error, result) => {
       if (error) {
         console.error(error)
         reject(new Error('Failed to delete the image.'))
@@ -137,15 +137,15 @@ export async function deleteImage(pioneerName: string, title: string, index: num
 
 export async function deleteFolder(pioneerName: string, title: string, type: 'blueprint' | 'blueprint-pack' = 'blueprint') {
   // 1. Delete all images and files in the folder
-  await cloudinary.v2.api.delete_resources_by_prefix(`${type}/${pioneerName}/${title}`)
+  await cloudinary.v2.api.delete_resources_by_prefix(`${type}s/${pioneerName}/${title}`)
   await cloudinary.v2.api.delete_resources([
-    `${type}/${pioneerName}/${title}/${title}-0.sbp`,
-    `${type}/${pioneerName}/${title}/${title}-1.sbpcfg`
+    `${type}s/${pioneerName}/${title}/${title}-0.sbp`,
+    `${type}s/${pioneerName}/${title}/${title}-1.sbpcfg`
   ], { resource_type: 'raw' })
 
   // 2. Delete the folder
   return new Promise<void>((resolve, reject) => {
-    cloudinary.v2.api.delete_folder(`${type}/${pioneerName}/${title}`, (error, result) => {
+    cloudinary.v2.api.delete_folder(`${type}s/${pioneerName}/${title}`, (error, result) => {
       if (error) {
         console.error(error)
         reject(new Error('Failed to delete the folder.'))
@@ -154,4 +154,5 @@ export async function deleteFolder(pioneerName: string, title: string, type: 'bl
       }
     })
   })
+}
 }
