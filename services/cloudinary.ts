@@ -1,5 +1,6 @@
 import 'server-only'
 import cloudinary from 'cloudinary'
+import { updateFileRecord } from './file'
 
 cloudinary.v2.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -23,8 +24,8 @@ export async function uploadImageToCloudinary(image: File, index: number, pionee
       {
         tags: `${type}_image`,
         resource_type: "image",
-        public_id: `image-${index}`,
-        folder: `${type}/${pioneerName}/${title}`,
+        public_id: `${title}-${index}`,
+        folder: `${type}s/${pioneerName}/${title}`,
         overwrite: true,
         invalidate: true,
         transformation: {
@@ -124,7 +125,7 @@ export async function updateCloudinaryImages(images: (File | string)[], existing
 
 export async function deleteImage(pioneerName: string, title: string, index: number, type: 'blueprint' | 'blueprint-pack' = 'blueprint') {
   return new Promise<void>((resolve, reject) => {
-    cloudinary.v2.uploader.destroy(`${type}/${pioneerName}/${title}/image-${index}`, (error, result) => {
+    cloudinary.v2.uploader.destroy(`${type}s/${pioneerName}/${title}/image-${index}`, (error, result) => {
       if (error) {
         console.error(error)
         reject(new Error('Failed to delete the image.'))
@@ -137,15 +138,15 @@ export async function deleteImage(pioneerName: string, title: string, index: num
 
 export async function deleteFolder(pioneerName: string, title: string, type: 'blueprint' | 'blueprint-pack' = 'blueprint') {
   // 1. Delete all images and files in the folder
-  await cloudinary.v2.api.delete_resources_by_prefix(`${type}/${pioneerName}/${title}`)
+  await cloudinary.v2.api.delete_resources_by_prefix(`${type}s/${pioneerName}/${title}`)
   await cloudinary.v2.api.delete_resources([
-    `${type}/${pioneerName}/${title}/${title}-0.sbp`,
-    `${type}/${pioneerName}/${title}/${title}-1.sbpcfg`
+    `${type}s/${pioneerName}/${title}/${title}-0.sbp`,
+    `${type}s/${pioneerName}/${title}/${title}-1.sbpcfg`
   ], { resource_type: 'raw' })
 
   // 2. Delete the folder
   return new Promise<void>((resolve, reject) => {
-    cloudinary.v2.api.delete_folder(`${type}/${pioneerName}/${title}`, (error, result) => {
+    cloudinary.v2.api.delete_folder(`${type}s/${pioneerName}/${title}`, (error, result) => {
       if (error) {
         console.error(error)
         reject(new Error('Failed to delete the folder.'))
@@ -154,4 +155,132 @@ export async function deleteFolder(pioneerName: string, title: string, type: 'bl
       }
     })
   })
+}
+
+/**
+ * Generate a signed upload params for direct-to-Cloudinary upload using the backend SDK.
+ * Returns: { signature, timestamp, apiKey, cloudName, uploadUrl, ... }
+ */
+export function getCloudinaryUploadSignature({
+  folder = 'pending',
+  public_id,
+  resource_type = 'auto',
+  eager,
+  tags,
+  transformation
+}: {
+  folder?: string
+  public_id?: string
+  resource_type?: string
+  eager?: string
+  tags?: string
+  transformation?: string
+}) {
+  const cloudName = process.env.CLOUDINARY_CLOUD_NAME
+  const apiKey = process.env.CLOUDINARY_API_KEY
+  if (!cloudName || !apiKey) throw new Error('Cloudinary env vars missing')
+
+  const timestamp = Math.floor(Date.now() / 1000)
+  const paramsToSign: Record<string, any> = {
+    timestamp,
+    folder,
+    ...(public_id && { public_id }),
+    ...(eager && { eager }),
+    ...(tags && { tags }),
+    ...(transformation && { transformation }),
+  }
+  // Use the SDK to sign
+  const signature = cloudinary.v2.utils.api_sign_request(paramsToSign, process.env.CLOUDINARY_API_SECRET!)
+  return {
+    cloudName,
+    apiKey,
+    timestamp,
+    signature,
+    folder,
+    public_id,
+    transformation,
+    uploadUrl: `https://api.cloudinary.com/v1_1/${cloudName}/${resource_type}/upload`,
+  }
+}
+
+// Move a single file in Cloudinary from 'pending' to the final folder using its URL.
+export async function moveCloudinaryFile({ url, pioneerName, title, type = 'blueprint', resourceType = 'image' }: {
+  url: string,
+  pioneerName: string,
+  title: string,
+  type?: 'blueprint' | 'blueprint-pack',
+  resourceType?: 'image' | 'raw'
+}) {
+  try {
+    // Validate URL
+    if (!url.startsWith('https://res.cloudinary.com/')) {
+      throw new Error('Invalid Cloudinary URL for moving')
+    }
+
+    // Extract publicId from URL (after /pending/)
+    const match = url.match(/\/pending\/([^\/]+)(?=\.\w+$)/)
+    if (!match) {
+      throw new Error('Invalid Cloudinary URL for moving')
+    }
+
+    const publicId = match[1]
+    const fromFolder = 'pending'
+    const toFolder = `${type}s/${pioneerName}/${title}`
+    const oldPath = `${fromFolder}/${publicId}`
+    const newPath = `${toFolder}/${publicId}`
+    const result = await cloudinary.v2.uploader.rename(oldPath, newPath, { resource_type: resourceType, overwrite: true, invalidate: true })
+
+    if (!result || !result.secure_url || typeof result.secure_url != 'string') {
+      throw new Error('Failed to move Cloudinary file.')
+    }
+
+    // Update the file record in the database
+    await updateFileRecord(url, result.secure_url, 'linked')
+
+    return result.secure_url
+  } catch (error) {
+    console.error('Error moving Cloudinary file:', error)
+    throw new Error('Failed to move Cloudinary file.')
+  }
+}
+
+
+// Move multiple files in Cloudinary from 'pending' to the final folder using their URLs.
+export async function moveCloudinaryFiles({
+  urls,
+  pioneerName,
+  title,
+  type = 'blueprint',
+  resourceType = 'image'
+}: {
+  urls: string[],
+  pioneerName: string,
+  title: string,
+  type?: 'blueprint' | 'blueprint-pack',
+  resourceType?: 'image' | 'raw'
+}) {
+  const movedUrls: string[] = []
+
+  for (const url of urls) {
+    const newUrl = await moveCloudinaryFile({ url, pioneerName, title, type, resourceType })
+    movedUrls.push(newUrl)
+  }
+
+  return movedUrls
+}
+
+/**
+ * Delete a Cloudinary image by its URL.
+ * Extracts the public ID from the URL and deletes the image.
+ */
+export async function deleteImageByUrl(url: string, resourceType: 'image' | 'raw' = 'image') {
+  try {
+    const match = url.match(/\/upload\/(?:v\d+\/)?(.+?)(?:\.[a-zA-Z0-9]+)?$/)
+    if (!match) throw new Error('Invalid Cloudinary URL for deletion')
+    const publicId = match[1]
+    await cloudinary.v2.uploader.destroy(publicId, { resource_type: resourceType })
+  } catch (error) {
+    console.error('Failed to delete image by URL:', error)
+    throw new Error('Failed to delete the image.')
+  }
 }

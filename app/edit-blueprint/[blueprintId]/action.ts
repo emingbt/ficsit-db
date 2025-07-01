@@ -1,7 +1,7 @@
 'use server'
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import { deleteFolder, updateCloudinaryImages } from "../../../services/cloudinary"
+import { deleteFolder, deleteImageByUrl, moveCloudinaryFiles, updateCloudinaryImages } from "../../../services/cloudinary"
 import { UpdateBlueprintFormSchema } from "../../../utils/zod"
 import {
   deleteBlueprintById,
@@ -19,25 +19,15 @@ export async function updateBlueprint(state, formData: FormData) {
     id: formData.get('blueprintId'),
     description: formData.get('description'),
     images: [
-      formData.get('image-0'),
-      formData.get('image-1'),
-      formData.get('image-2')
-    ].reduce((acc: any[], image) => {
-      if (image === null) {
-        acc.push("skip")
-      } else if (image instanceof File && image.size > 0) {
-        acc.push(image)
-      } else {
-        acc.push("delete")
-      }
-      return acc
-    }, []),
+      formData.get('uploadedImageUrl-0'),
+      formData.get('uploadedImageUrl-1'),
+      formData.get('uploadedImageUrl-2')
+    ].filter((url): url is string => typeof url === 'string' && url.trim() !== ''),
     categories: formData.getAll('category'),
     videoUrl: formData.get('videoUrl')
   })
 
   if (!validationResults.success) {
-    console.log(validationResults.error.flatten().fieldErrors)
     return {
       error: validationResults.error.flatten().fieldErrors,
     }
@@ -50,16 +40,6 @@ export async function updateBlueprint(state, formData: FormData) {
     categories,
     videoUrl
   } = validationResults.data
-
-  // Check the sizes of the images
-  const imageSizeError = images.some((image: File) => image.size > 1000000)
-  if (imageSizeError) {
-    return {
-      error: {
-        images: 'Each image must be less than 1MB.'
-      }
-    }
-  }
 
   // 2. Check if the user is authenticated and get the pioneer name
   const { isAuthenticated, getAccessToken } = getKindeServerSession()
@@ -104,11 +84,37 @@ export async function updateBlueprint(state, formData: FormData) {
       }
     }
 
-    const imageUrls = await updateCloudinaryImages(images, blueprint.images, pioneer.name, blueprint.title)
+    const existingImages = blueprint.images
+    const newImages = images.filter((url) => !existingImages.includes(url))
+    const imagesToDelete = existingImages.filter((url) => !images.includes(url))
+
+    // Move new images and get their final URLs
+    const newImageUrls = await moveCloudinaryFiles({
+      urls: newImages,
+      pioneerName: pioneer.name,
+      title: blueprint.title,
+      resourceType: 'image'
+    })
+
+    // Delete removed images by URL
+    for (const url of imagesToDelete) {
+      try {
+        await deleteImageByUrl(url, 'image')
+      } catch (err) {
+        console.error('Failed to delete image:', url, err)
+      }
+    }
+
+    // Build the final images array, preserving order
+    const imageUrlMap: Map<string, string> = new Map()
+    newImages.forEach((url, idx) => {
+      imageUrlMap.set(url, newImageUrls[idx])
+    })
+    const finalImageUrls = images.map((url) => imageUrlMap.get(url) || url)
 
     const updatedProperties = {
       description: description || null,
-      images: imageUrls,
+      images: finalImageUrls,
       categories,
       videoUrl: videoUrl || null,
       pioneerName: pioneer.name

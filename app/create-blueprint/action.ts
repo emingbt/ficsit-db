@@ -1,7 +1,7 @@
 'use server'
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import { uploadFilesToCloudinary, uploadImagesToCloudinary } from "../../services/cloudinary"
+import { moveCloudinaryFiles, uploadFilesToCloudinary } from "../../services/cloudinary"
 import { CreateBlueprintFormSchema } from "../../utils/zod"
 import { getPioneerByEmail } from "../../services/pioneer"
 import { redirect } from "next/navigation"
@@ -14,11 +14,11 @@ export default async function createBlueprint(state, formData: FormData) {
     title: formData.get('title'),
     description: formData.get('description'),
     images: [
-      formData.get('image-0'),
-      formData.get('image-1'),
-      formData.get('image-2')
+      formData.get('uploadedImageUrl-0'),
+      formData.get('uploadedImageUrl-1'),
+      formData.get('uploadedImageUrl-2')
     ].filter(
-      (file): file is File => file instanceof File && file.size > 0
+      (url): url is string => typeof url === 'string' && url.trim() !== ''
     ),
     files: formData.getAll('files').filter(
       (file): file is File => file instanceof File && file.size > 0
@@ -43,16 +43,8 @@ export default async function createBlueprint(state, formData: FormData) {
   } = validationResults.data
 
   // Check the sizes of the images and files
-  const imageSizeError = images.some((image: File) => image.size > 1000000)
   const fileSizeError = files.some((file: File) => file.size > 1000000)
 
-  if (imageSizeError) {
-    return {
-      error: {
-        images: 'Each image must be less than 1MB.'
-      }
-    }
-  }
   if (fileSizeError) {
     return {
       error: {
@@ -102,10 +94,16 @@ export default async function createBlueprint(state, formData: FormData) {
     }
   }
 
-  // 5. Upload images and files to cloudinary, then create the blueprint
+  // 5. Upload files to cloudinary, arrange the images, then create the blueprint
   try {
-    const imageUrls = await uploadImagesToCloudinary(images, pioneer.name, title)
     const fileUrls = await uploadFilesToCloudinary(files, pioneer.name, title)
+
+    const imageUrls = await moveCloudinaryFiles({
+      urls: images,
+      pioneerName: pioneer.name,
+      title,
+      resourceType: 'image'
+    })
 
     const blueprint = {
       title,

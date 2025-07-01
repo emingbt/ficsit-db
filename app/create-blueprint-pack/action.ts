@@ -1,7 +1,7 @@
 'use server'
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import { uploadImagesToCloudinary } from "../../services/cloudinary"
+import { moveCloudinaryFiles } from "../../services/cloudinary"
 import { CreateBlueprintPackFormSchema } from "../../utils/zod"
 import { getPioneerByEmail } from "../../services/pioneer"
 import { redirect } from "next/navigation"
@@ -15,18 +15,16 @@ export default async function createBlueprintPack(state, formData: FormData) {
     title: formData.get('title'),
     description: formData.get('description'),
     images: [
-      formData.get('image-0'),
-      formData.get('image-1'),
-      formData.get('image-2')
+      formData.get('uploadedImageUrl-0'),
+      formData.get('uploadedImageUrl-1'),
+      formData.get('uploadedImageUrl-2')
     ].filter(
-      (file): file is File => file instanceof File && file.size > 0
+      (url): url is string => typeof url === 'string' && url.trim() !== ''
     ),
     blueprints: formData.getAll('blueprints'),
     categories: formData.getAll('category'),
     videoUrl: formData.get('videoUrl')
   })
-
-  console.log("Blueprints:", formData.getAll('blueprints'))
 
   if (!validationResults.success) {
     return {
@@ -42,26 +40,6 @@ export default async function createBlueprintPack(state, formData: FormData) {
     categories,
     videoUrl
   } = validationResults.data
-
-  console.log('Creating blueprint pack with data:', {
-    title,
-    description,
-    images,
-    blueprints,
-    categories,
-    videoUrl
-  })
-
-  // Check the sizes of the images and files
-  const imageSizeError = images.some((image: File) => image.size > 1000000)
-
-  if (imageSizeError) {
-    return {
-      error: {
-        images: 'Each image must be less than 1MB.'
-      }
-    }
-  }
 
   // 2. Check if the user is authenticated and get the pioneer name
   const { isAuthenticated, getUser } = getKindeServerSession()
@@ -104,9 +82,14 @@ export default async function createBlueprintPack(state, formData: FormData) {
     }
   }
 
-  // 5. Upload images and files to cloudinary, then create the blueprint
+  // 5. Upload files to cloudinary, arrange images, then create the blueprint
   try {
-    const imageUrls = await uploadImagesToCloudinary(images, pioneer.name, title, 'blueprint-pack')
+    const imageUrls = await moveCloudinaryFiles({
+      urls: images,
+      pioneerName: pioneer.name,
+      title,
+      type: 'blueprint-pack'
+    })
 
     const blueprintPack = {
       title,

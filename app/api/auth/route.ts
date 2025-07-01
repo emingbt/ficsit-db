@@ -8,13 +8,13 @@ export async function GET(req: Request) {
   const authenticated = await isAuthenticated()
 
   if (!authenticated) {
-    return redirect('/login')
+    return redirect('/')
   }
 
   const user = await getUser()
 
   if (!user || !user.email) {
-    return redirect('/login')
+    return redirect('/')
   }
 
   // 2. Check if the user is already a pioneer

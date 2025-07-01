@@ -208,22 +208,28 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           </div>
         )}
         {blueprintPacks.length > 0 && (
-          <div className="flex-1 lg:mt-4 w-full lg:basis-1/3 flex flex-col">
+          <div className="flex-1 w-full lg:basis-1/3 flex flex-col mt-2 lg:mt-4">
             <div className="w-full h-10 sm:h-12 flex items-center bg-main-bg p-4">
               <h1 className="text-lg sm:text-xl font-medium">Associated Blueprint Packs</h1>
             </div>
-            <div className="w-full flex flex-col bg-light-bg text-gray-200 p-2 lg:p-4 flex-1">
+            <div className="w-full flex flex-col bg-light-bg text-gray-200 p-2 lg:p-4 flex-1 gap-2 lg:gap-4">
               {blueprintPacks.map((pack, index) => (
-                <Link key={index} href={`/blueprint-packs/${pack.id}`} className="w-full flex items-center gap-2 p-2 bg-main-bg hover:bg-dark-bg rounded-md">
-                  <Image
-                    src={pack.images[0]}
-                    alt={pack.title}
-                    width={128}
-                    height={72}
-                    quality={50}
-                    className="rounded-md"
-                  />
-                  <p className="w-full text-center text-sm font-semibold">{pack.title}</p>
+                <Link
+                  key={index}
+                  href={`/blueprint-packs/${pack.id}`}
+                  className="w-full flex items-center gap-2 p-2 bg-main-bg hover:bg-dark-bg rounded-md"
+                >
+                  <div className="w-[128px] h-[72px] aspect-[16/9] relative rounded-md overflow-hidden flex-shrink-0">
+                    <Image
+                      src={pack.images[0]}
+                      alt={pack.title}
+                      fill
+                      quality={50}
+                      className="object-cover w-full h-full"
+                      sizes="128px"
+                    />
+                  </div>
+                  <p className="w-full text-center text-sm xl:text-lg font-semibold">{pack.title}</p>
                 </Link>
               ))}
             </div>
