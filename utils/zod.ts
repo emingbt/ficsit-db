@@ -132,7 +132,7 @@ export const CreateBlueprintFormSchema = object({
 
 export const UpdateBlueprintFormSchema = object({
   id: string(),
-  description: string().max(1024, { message: 'Description must be at most 512 characters long.' }).optional(),
+  description: string().max(1024, { message: 'Description must be at most 1024 characters long.' }).optional(),
   images: array(string().url({ message: 'Must be a valid image URL.' }))
     .min(1, { message: 'At least 1 image is required.' })
     .max(3, { message: 'At most 3 images are allowed.' }),
