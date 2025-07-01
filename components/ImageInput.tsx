@@ -11,10 +11,8 @@ export default function ImageInput({ imageError, existingImageUrls }: {
   const [imageUrls, setImageUrls] = useState<string[]>(existingImageUrls || [])
   // Use an array to track uploading state per slot
   const [uploading, setUploading] = useState<boolean[]>([false, false, false])
-  console.log("ImageInput component initialized")
 
   const handleOnChange = async (event: React.ChangeEvent<HTMLInputElement>, index: number) => {
-    console.log("ALogg")
     const files = event.target.files
 
     if (files) {
@@ -24,8 +22,7 @@ export default function ImageInput({ imageError, existingImageUrls }: {
       if (image) {
         newUploading[index] = true
         setUploading(newUploading)
-        console.log(`Uploading image ${index + 1}...`)
-        console.log("Is uploading:", uploading[index])
+
         try {
           // 1. Get signed params from API
           const transformation = 'c_limit,w_1920,h_1080,q_auto:eco'
