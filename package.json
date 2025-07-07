@@ -23,6 +23,7 @@
     "lucide-react": "^0.482.0",
     "neo4j-driver": "^5.7.0",
     "next": "^14.2.5",
+    "posthog-js": "^1.256.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "zod": "^3.22.4",
