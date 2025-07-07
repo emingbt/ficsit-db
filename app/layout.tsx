@@ -10,6 +10,7 @@ import './global.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CookieConsent from '../components/CookieConsent'
+import { PostHogProvider } from '../utils/postHog'
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-main" })
 const inter = Inter({ subsets: ["latin"], variable: "--font-secondary" })
@@ -105,7 +106,9 @@ export default function RootLayout({ children }: {
             <Header />
           </Suspense>
           <div className='w-full h-full min-h-[calc(100vh-4rem)] flex flex-col items-center p-5 xl:p-8 lg:mt-16 bg-main-bg'>
-            {children}
+            <PostHogProvider>
+              {children}
+            </PostHogProvider>
             <SpeedInsights />
             <Analytics />
           </div>
