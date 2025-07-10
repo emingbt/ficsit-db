@@ -75,7 +75,7 @@ export default function Header() {
             <Link href='/blueprints' className='w-60 pt-6'>
               <p className='h-full text-center'>Blueprints</p>
             </Link>
-            <Link href='/blueprints-packs' className='w-60 pt-6'>
+            <Link href='/blueprint-packs' className='w-60 pt-6'>
               <p className='h-full text-center'>Blueprint Packs</p>
             </Link>
             <div className='w-full h-0.5 bg-main-orange mt-8' />
