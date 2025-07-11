@@ -5,13 +5,15 @@ import RateBlueprint from "./rateBlueprint"
 import DownloadSection from "./downloadSection"
 import ImageCarousel from "../../../components/ImageCarousel"
 import { getBlueprintById, getBlueprintPacksByBlueprintId } from "../../../services/blueprint"
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
+import { getKindeServerSession, LoginLink } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
 import { ExternalLink, Star } from "lucide-react"
 import CommentsSection from "./commentsSection"
 import { getCommentsByBlueprintId } from "../../../services/comment"
 import BlueprintOwnerSection from "../../../components/BlueprintOwnerSection"
+import { getPioneerByEmail } from "../../../services/pioneer"
+import { redirect } from "next/navigation"
 
 export async function generateMetadata({ params }: { params: { blueprintId: string } }): Promise<Metadata> {
   const blueprintId = parseInt(params.blueprintId)
@@ -62,9 +64,55 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
     )
   }
 
-  const { getAccessToken } = getKindeServerSession()
-  const accessToken = await getAccessToken()
-  const user = getPropertiesFromAccessToken(accessToken)
+
+  if (blueprint.visibility === 'private') {
+    const { getUser, isAuthenticated } = getKindeServerSession()
+    const authenticated = await isAuthenticated()
+    if (!authenticated) {
+      return (
+        <Main classname="flex flex-col items-center justify-center">
+          <p className="text-xl mb-4">This blueprint is private.</p>
+          <LoginLink>
+            <p className="text-logo-blue hover:underline">Please log in to view this blueprint</p>
+          </LoginLink>
+        </Main>
+      )
+    }
+
+    const user = await getUser()
+
+    if (!user || !user.email) {
+      return (
+        <Main classname="flex flex-col items-center justify-center">
+          <p className="text-xl mb-4">User not found</p>
+          <Link
+            href="/">
+            <p className="text-logo-blue hover:underline">This blueprint is private.</p>
+          </Link>
+        </Main>
+      )
+    }
+
+    const pioneer = await getPioneerByEmail(user.email)
+
+    if (!pioneer) {
+      return redirect('/create-pioneer')
+    }
+
+    if (pioneer.name !== blueprint.pioneerName) {
+      return (
+        <Main classname="flex flex-col items-center justify-center">
+          <p className="text-xl mb-4">You are not authorized to view this blueprint.</p>
+          <Link
+            href={`/pioneers/${pioneer.name}`}>
+            <p className="text-logo-blue hover:underline">Go to your pioneer profile</p>
+          </Link>
+        </Main>
+      )
+    }
+  }
+
+
 
   // Get the blueprint packs associated with this blueprint
   const blueprintPacks = await getBlueprintPacksByBlueprintId(blueprintId)
@@ -78,7 +126,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
 
   return (
     <Main classname="bg-dark-bg" dontFill>
-      <BlueprintOwnerSection id={blueprintId} pioneerName={blueprint.pioneerName} />
+      <BlueprintOwnerSection id={blueprintId} pioneerName={blueprint.pioneerName} visibility={blueprint.visibility} />
       <div className="w-full flex flex-col lg:flex-row items-stretch justify-stretch gap-2 lg:gap-4 mb-2 lg:mb-4">
         <section className="w-full lg:w-2/3 h-full">
           <div className="w-full p-3 lg:p-0 lg:h-20 flex items-center justify-center bg-black text-lg xl:text-2xl text-center text-white font-secondary font-semibold">
@@ -173,7 +221,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4">
         <ImageCarousel images={blueprint.images} title={blueprint.title} />
         <div className="w-full lg:w-1/3 flex flex-col flex-grow gap-2 lg:gap-4">
-          <RateBlueprint blueprintId={blueprintId} pioneerName={user?.name} blueprintPackIds={blueprintPacks.map(pack => pack.id)} />
+          <RateBlueprint blueprintId={blueprintId} blueprintPackIds={blueprintPacks.map(pack => pack.id)} />
           {/* <AdBanner classname="w-full h-full hidden lg:flex items-center justify-center"
             dataAdSlot="9859648886"
             dataFullWidthResponsive={true}
