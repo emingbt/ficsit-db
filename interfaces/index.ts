@@ -107,7 +107,8 @@ export interface BlueprintCardProps {
   id: number,
   title: string,
   images: string[],
-  averageRating: number
+  averageRating: number,
+  visibility?: 'public' | 'unlisted' | 'private',
 }
 
 export interface Pioneer {
