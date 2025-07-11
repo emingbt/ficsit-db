@@ -143,7 +143,8 @@ export const createNewBlueprint = async (blueprint: Blueprint) => {
         categories: Blueprint.categories,
         videoUrl: Blueprint.videoUrl,
         pioneerName: Blueprint.pioneerName,
-        createdAt: Blueprint.createdAt
+        createdAt: Blueprint.createdAt,
+        visibility: Blueprint.visibility
       })
 
     return newBlueprint[0]
@@ -161,6 +162,7 @@ export const updateBlueprintProperties = async (blueprintId: number, blueprint: 
   images: Blueprint["images"],
   categories: Blueprint["categories"],
   videoUrl: Blueprint["videoUrl"],
+  visibility: Blueprint["visibility"]
 }) => {
   try {
     const updatedBlueprint = await db.update(Blueprint)
