@@ -127,7 +127,8 @@ export const CreateBlueprintFormSchema = object({
         message: "Must be a valid YouTube URL",
       }
     )
-    .optional()
+    .optional(),
+  visibility: enum_(["public", "unlisted", "private"])
 })
 
 export const UpdateBlueprintFormSchema = object({
@@ -152,7 +153,8 @@ export const UpdateBlueprintFormSchema = object({
         message: "Must be a valid YouTube URL",
       }
     )
-    .optional()
+    .optional(),
+  visibility: enum_(["public", "unlisted", "private"])
 })
 
 const httpsRegex = /^https:\/\//
