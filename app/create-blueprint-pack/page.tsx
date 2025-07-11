@@ -25,7 +25,9 @@ export default async function CreateBlueprintPackPage() {
     redirect('/')
   }
 
-  const blueprintsOfPioneer = await getAllBlueprintsByPioneer(pioneer.name)
+  // Get all blueprints of the pioneer
+  // Filter out private blueprints to only show public and unlisted blueprints
+  const blueprintsOfPioneer = (await getAllBlueprintsByPioneer(pioneer.name)).filter(blueprint => blueprint.visibility !== "private")
 
   return (
     <Main classname="p-8" image='create-blueprint-pack-banner' imagePosition="left" isPattern>

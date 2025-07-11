@@ -7,6 +7,7 @@ import CategoryInput from "../../components/CategoryInput"
 import ImageInput from "../../components/ImageInput"
 import FileInput from "../../components/FileInput"
 import { redirect } from "next/navigation"
+import BlueprintVisibilityInput from "../../components/BlueprintVisibilityInput"
 
 export default function CreateBlueprintForm() {
   const [state, action] = useFormState(createBlueprint, undefined)
@@ -90,6 +91,7 @@ export default function CreateBlueprintForm() {
           </ul>
         </div>
       }
+      <BlueprintVisibilityInput />
       <SubmitButton success={submitSuccess} blueprintId={blueprintId} />
       {submitError && <p className='text-red-500'>{submitError}</p>}
       {submitSuccess && <p className='text-green-500'>{submitSuccess}</p>}

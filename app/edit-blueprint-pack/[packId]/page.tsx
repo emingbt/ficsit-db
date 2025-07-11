@@ -28,7 +28,7 @@ export default async function EditBlueprintPackPage({ params }: { params: { pack
   }
 
   const blueprintPack = await getBlueprintPackById(blueprintPackId)
-  const allBlueprintsOfPioneer = await getAllBlueprintsByPioneer(pioneer.name)
+  const allBlueprintsOfPioneer = (await getAllBlueprintsByPioneer(pioneer.name)).filter(blueprint => blueprint.visibility != "private")
   const selectedBlueprints = await getAllBlueprintsByBlueprintPackId(blueprintPackId)
 
   // If the blueprint does not exist or the user is not the pioneer of the blueprint, redirect to the home page

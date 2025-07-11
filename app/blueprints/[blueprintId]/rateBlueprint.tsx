@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react"
 import { Star } from "lucide-react"
+import { usePioneerStore } from "../../../utils/zustand"
 import { rateBlueprint, checkIfRated } from "./action"
 
-export default function RatingBlueprint({ blueprintId, pioneerName, blueprintPackIds }: { blueprintId: number, pioneerName: string | undefined, blueprintPackIds?: number[] }) {
+export default function RatingBlueprint({ blueprintId, blueprintPackIds }: { blueprintId: number, blueprintPackIds?: number[] }) {
+  const pioneerName = usePioneerStore((state) => state.name)
   const [rating, setRating] = useState(0)
   const [isRated, setIsRated] = useState(false)
 

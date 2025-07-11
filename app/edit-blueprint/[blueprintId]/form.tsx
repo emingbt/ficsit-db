@@ -7,6 +7,7 @@ import { deleteBlueprint, updateBlueprint } from "./action"
 import ImageInput from "../../../components/ImageInput"
 import CategoryInput from "../../../components/CategoryInput"
 import { Blueprint } from "../../../drizzle/schema"
+import BlueprintVisibilityInput from "../../../components/BlueprintVisibilityInput"
 
 export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint }) {
   const [state, action] = useFormState(updateBlueprint, undefined)
@@ -67,6 +68,7 @@ export default function EditBlueprintForm({ blueprint }: { blueprint: Blueprint 
           </ul>
         </div>
       }
+      <BlueprintVisibilityInput currentVisibility={blueprint.visibility} />
       <SubmitButton success={submitSuccess} blueprintId={blueprint.id} />
       <DeleteButton blueprintId={blueprint.id} />
       {submitError && <p className='text-red-500'>{submitError}</p>}

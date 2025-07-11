@@ -11,7 +11,7 @@ import {
   pgEnum
 } from 'drizzle-orm/pg-core'
 import { InferInsertModel } from 'drizzle-orm'
-import { avatarEnum, categoryEnum, colorEnum, roleEnum, platformEnum } from './enums'
+import { avatarEnum, categoryEnum, colorEnum, roleEnum, platformEnum, blueprintVisibilityEnum } from './enums'
 
 export const Pioneer = pgTable('Pioneer', {
   id: serial('id').primaryKey(),
@@ -44,7 +44,8 @@ export const Blueprint = pgTable('Blueprint', {
   fileSize: integer('file_size').default(0).notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
-  videoUrl: text('video_url')
+  videoUrl: text('video_url'),
+  visibility: blueprintVisibilityEnum('visibility').notNull().default('public')
 }, (blueprint) => {
   return {
     pioneerNameIdx: index('pioneerName_idx').on(blueprint.pioneerName)

@@ -52,7 +52,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
 
   const socialLinks = await getPioneerSocialLinks(pioneer.name)
 
-  const blueprints = await getAllBlueprintsByPioneer(pioneerName)
+  const blueprints = (await getAllBlueprintsByPioneer(pioneerName)).filter(blueprint => blueprint.visibility == 'public')
   let blueprintDownloads = 0
 
   if (blueprints.length > 0) {
@@ -128,7 +128,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
       {
         blueprintPacks.length > 0 &&
         <div className="mt-2 lg:mt-4">
-          <BlueprintContainer entries={blueprintPacks} title="Blueprint Packs" isEdit type="blueprintPack" />
+          <BlueprintContainer entries={blueprintPacks} title="Blueprint Packs" type="blueprintPack" />
         </div>
       }
     </Main>
