@@ -52,3 +52,9 @@ export const platformEnum = pgEnum('platform', [
   'reddit',
   'github'
 ])
+
+export const blueprintVisibilityEnum = pgEnum('blueprint_visibility', [
+  'public',
+  'unlisted',
+  'private'
+])
