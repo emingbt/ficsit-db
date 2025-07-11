@@ -24,7 +24,8 @@ export async function updateBlueprint(state, formData: FormData) {
       formData.get('uploadedImageUrl-2')
     ].filter((url): url is string => typeof url === 'string' && url.trim() !== ''),
     categories: formData.getAll('category'),
-    videoUrl: formData.get('videoUrl')
+    videoUrl: formData.get('videoUrl'),
+    visibility: formData.get('blueprintVisibility')
   })
 
   if (!validationResults.success) {
@@ -38,7 +39,8 @@ export async function updateBlueprint(state, formData: FormData) {
     description,
     images,
     categories,
-    videoUrl
+    videoUrl,
+    visibility
   } = validationResults.data
 
   // 2. Check if the user is authenticated and get the pioneer name
@@ -117,7 +119,7 @@ export async function updateBlueprint(state, formData: FormData) {
       images: finalImageUrls,
       categories,
       videoUrl: videoUrl || null,
-      pioneerName: pioneer.name
+      visibility
     }
 
     // 6. Update the blueprint

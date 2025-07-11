@@ -24,7 +24,8 @@ export default async function createBlueprint(state, formData: FormData) {
       (file): file is File => file instanceof File && file.size > 0
     ),
     categories: formData.getAll('category'),
-    videoUrl: formData.get('videoUrl')
+    videoUrl: formData.get('videoUrl'),
+    visibility: formData.get('blueprintVisibility')
   })
 
   if (!validationResults.success) {
@@ -39,7 +40,8 @@ export default async function createBlueprint(state, formData: FormData) {
     images,
     files,
     categories,
-    videoUrl
+    videoUrl,
+    visibility
   } = validationResults.data
 
   // Check the sizes of the images and files
@@ -113,7 +115,8 @@ export default async function createBlueprint(state, formData: FormData) {
       categories,
       videoUrl: videoUrl || null,
       fileSize: files[0].size,
-      pioneerName: pioneer.name
+      pioneerName: pioneer.name,
+      visibility
     }
 
     // 6. Create the blueprint
