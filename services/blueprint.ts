@@ -28,7 +28,8 @@ export const getBlueprintById = async (id: number) => {
         averageRating: true,
         createdAt: true,
         updatedAt: true,
-        videoUrl: true
+        videoUrl: true,
+        visibility: true
       }
     })
 
@@ -67,7 +68,7 @@ export const getAllBlueprintsByTitle = async (title: string, blueprintCount = bl
   try {
     // Check if the blueprint title includes the search term
     const blueprints = await db.query.Blueprint.findMany({
-      where: sql`${Blueprint.title} ILIKE ${`%${title}%`}`,
+      where: sql`${Blueprint.title} ILIKE ${`%${title}%`} AND ${Blueprint.visibility} = 'public'`,
       orderBy: desc(Blueprint.createdAt),
       limit: blueprintCount,
       columns: {
@@ -95,6 +96,7 @@ export const getAllBlueprintsByPioneer = async (pioneerName: string) => {
         images: true,
         averageRating: true,
         downloads: true,
+        visibility: true
       },
       orderBy: desc(Blueprint.createdAt)
     })
@@ -222,13 +224,7 @@ export const getPageCountAndBlueprintsByPage = async (
 
   try {
     const blueprints = await db.query.Blueprint.findMany({
-      // Query for multiple categories (Didn't use, it may be useful in the future)
-      // // where: and(
-      // //   categories && categories.length > 0
-      // //     ? sql`${Blueprint.categories} @> ARRAY[${sql.join(categories, sql`, `)}]::"category"[]`
-      // //     : undefined
-      // // ),
-      where: sql`${Blueprint.categories} @> ARRAY[${category}]::"category"[]`,
+      where: sql`${Blueprint.categories} @> ARRAY[${category}]::"category"[] AND ${Blueprint.visibility} = 'public'`,
       orderBy: sort === 'oldest' ? Blueprint.createdAt :
         sort === 'rating' ? desc(Blueprint.averageRating) :
           sort === 'download' ? desc(Blueprint.downloads) :
@@ -269,7 +265,7 @@ export const incrementBlueprintDownloads = async (blueprintId: number) => {
 export const getPageCount = cache(async (category?: Blueprint["categories"][number]) => {
   try {
     const totalBlueprints = (await db.select({ value: count() }).from(Blueprint).where(
-      category ? sql`${Blueprint.categories} @> ARRAY[${category}]::"category"[]` : undefined
+      category ? sql`${Blueprint.categories} @> ARRAY[${category}]::"category"[] AND ${Blueprint.visibility} = 'public'` : sql`${Blueprint.visibility} = 'public'`
     ))[0].value
 
     const pageCount = Math.ceil(totalBlueprints / blueprintsPerPage)
