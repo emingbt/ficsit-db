@@ -86,6 +86,17 @@ export async function updateBlueprint(state, formData: FormData) {
       }
     }
 
+    // 4. Check if blueprint is being used in any blueprint packs if visibility is changed to private
+    const associatedBlueprintPacks = await getBlueprintPacksByBlueprintId(blueprint.id)
+    if (visibility === 'private' && associatedBlueprintPacks.length > 0) {
+      return {
+        error: {
+          submit: 'This blueprint is associated with one or more blueprint packs. Please remove it from the packs before changing visibility to private.'
+        }
+      }
+    }
+
+
     const existingImages = blueprint.images
     const newImages = images.filter((url) => !existingImages.includes(url))
     const imagesToDelete = existingImages.filter((url) => !images.includes(url))
@@ -140,7 +151,6 @@ export async function updateBlueprint(state, formData: FormData) {
     revalidatePath('/search')
 
     // Revalidate the blueprint packs that contain this blueprint
-    const associatedBlueprintPacks = await getBlueprintPacksByBlueprintId(blueprint.id)
     associatedBlueprintPacks.forEach((pack) => {
       revalidatePath(`/blueprint-packs/${pack.id}`)
     })
