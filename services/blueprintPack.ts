@@ -26,7 +26,7 @@ export const getBlueprintPackById = async (blueprintPackId: number) => {
     })
 
     if (!blueprintPack) {
-      throw new Error('Blueprint pack not found.')
+      return undefined
     }
 
     const pioneerAvatar = await db.query.Pioneer.findFirst({
@@ -59,6 +59,7 @@ export const getAllBlueprintsByBlueprintPackId = async (blueprintPackId: number)
         id: Blueprint.id,
         title: Blueprint.title,
         images: Blueprint.images,
+        files: Blueprint.files,
         averageRating: Blueprint.averageRating
       })
       .from(Blueprint)
