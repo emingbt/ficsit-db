@@ -21,8 +21,8 @@ export default function FileInput({ fileError }: { fileError: string }) {
         return
       }
 
-      const ext = file.name.split('.').pop()?.toLowerCase()
-      if ((index === 0 && ext !== "sbp") || (index === 1 && ext !== "sbpcfg")) {
+      const ext = file.name.includes('.') ? file.name.split('.').pop()?.toLowerCase() : undefined
+      if (!ext || (index === 0 && ext !== "sbp") || (index === 1 && ext !== "sbpcfg")) {
         alert(`Please upload a ${index === 0 ? ".sbp" : ".sbpcfg"} file`)
         return
       }
