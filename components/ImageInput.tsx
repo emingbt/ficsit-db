@@ -20,6 +20,16 @@ export default function ImageInput({ imageError, existingImageUrls }: {
       const newUploading = [...uploading]
 
       if (image) {
+        // Validate extension and mime type
+        const ext = image.name.includes('.') ? image.name.split('.').pop()?.toLowerCase() : undefined
+        const mime = image.type
+        const allowedExts = ["jpg", "jpeg", "png", "webp"]
+        const allowedMimes = ["image/jpeg", "image/png", "image/webp"]
+        if (!ext || !allowedExts.includes(ext) || !allowedMimes.includes(mime)) {
+          alert("Please upload an image in JPG, JPEG, PNG, or WEBP format.")
+          return
+        }
+
         newUploading[index] = true
         setUploading(newUploading)
 
