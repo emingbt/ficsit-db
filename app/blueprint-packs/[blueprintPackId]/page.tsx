@@ -11,6 +11,7 @@ import BlueprintContainer from "../../../components/BlueprintContainer"
 import FicsitTips from "../../../components/FicsitTips"
 import { getAllBlueprintsByBlueprintPackId, getBlueprintPackById } from "../../../services/blueprintPack"
 import BlueprintOwnerSection from "../../../components/BlueprintOwnerSection"
+import DownloadSection from "./downloadSection"
 
 export async function generateMetadata({ params }: { params: { blueprintPackId: string } }): Promise<Metadata> {
   const blueprintPackId = parseInt(params.blueprintPackId)
@@ -155,15 +156,7 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
           dynamicHeight={false}
           adHeight={50}
         /> */}
-        {/* <DownloadSection
-          blueprintId={blueprintId}
-          files={blueprint.files}
-          pioneerName={blueprint.pioneerName}
-        /> */}
-
-        <div className="w-full lg:w-1/3 min-h-64 sm:min-h-48 hidden lg:block bg-main-bg p-4">
-          <FicsitTips />
-        </div>
+        <DownloadSection blueprintPackId={blueprintPackId} blueprintPackTitle={blueprintPack.title} blueprintsInPack={blueprintsInPack} pioneerName={blueprintPack.pioneerName} />
       </div>
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
         <ImageCarousel images={blueprintPack.images} title={blueprintPack.title} />

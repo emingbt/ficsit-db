@@ -21,7 +21,7 @@ export default function BlueprintSelector({ blueprints, blueprintsError, selecte
 
   return (
     <>
-      <div className={`w-full ${!blueprintsError ? 'mb-4 lg:mb-6' : 'mb-0'}`}>
+      <div className="w-full">
         <label className="block mb-2 font-semibold text-white" htmlFor="blueprints">Blueprints in this Pack<span className="text-main-orange">*</span></label>
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 3xl:grid-cols-4 gap-3 bg-light-bg p-3">
           {blueprints.map(bp => {
@@ -58,6 +58,9 @@ export default function BlueprintSelector({ blueprints, blueprintsError, selecte
           <input key={id} type="hidden" name="blueprints" value={id} />
         ))}
       </div>
+      <p className={`text-xs lg:text-base text-gray-400 ${!blueprintsError ? 'mb-4 lg:mb-6' : 'mb-0'}`}>
+        Note: Private blueprints cannot be selected for packs.
+      </p>
       {
         blueprintsError &&
         <div className='w-full text-xs lg:text-base text-error'>
