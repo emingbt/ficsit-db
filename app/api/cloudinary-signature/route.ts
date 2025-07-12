@@ -7,7 +7,8 @@ import { getCloudinaryUploadSignature } from '../../../services/cloudinary'
 
 export async function POST(req: NextRequest) {
   const body = await req.json()
-  const { folder = 'pending', public_id, resource_type = 'auto', eager, tags, transformation } = body
+  const { folder = 'pending', public_id, eager, tags, transformation } = body
+  const resource_type = 'image'
 
   // Validate required fields
   if (!folder) {
