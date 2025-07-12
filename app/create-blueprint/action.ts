@@ -44,13 +44,30 @@ export default async function createBlueprint(state, formData: FormData) {
     visibility
   } = validationResults.data
 
-  // Check the sizes of the images and files
+  // Check the sizes and extensions of the images and files
   const fileSizeError = files.some((file: File) => file.size > 1000000)
+  const fileExtensionError = files.some((file: File, idx: number) => {
+    const ext = file.name.includes('.') && !file.name.startsWith('.')
+      ? file.name.substring(file.name.lastIndexOf('.') + 1).toLowerCase()
+      : undefined
+    const mime = file.type
+    if (idx === 0 && (ext !== "sbp" || mime !== "application/octet-stream")) return true
+    if (idx === 1 && (ext !== "sbpcfg" || mime !== "application/octet-stream")) return true
+    return false
+  })
 
   if (fileSizeError) {
     return {
       error: {
         files: 'Each file must be less than 1MB.'
+      }
+    }
+  }
+
+  if (fileExtensionError) {
+    return {
+      error: {
+        files: 'Please upload a .sbp file for the first input and a .sbpcfg file for the second input.'
       }
     }
   }
