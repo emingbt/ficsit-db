@@ -71,7 +71,7 @@ export default function RootLayout({ children }: {
   return (
     <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
       <head>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57"
+        {/* <Script src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57"
           strategy='afterInteractive' />
         <Script id="consent-default" strategy="beforeInteractive">
           {`
@@ -89,6 +89,7 @@ export default function RootLayout({ children }: {
             gtag('config', 'G-JSTXP7VT57');
           `}
         </Script>
+        <GoogleAdsense /> */}
         <Script id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -98,7 +99,6 @@ export default function RootLayout({ children }: {
             gtag('config', 'G-JSTXP7VT57');
           `}
         </Script>
-        <GoogleAdsense />
       </head>
       <body className='w-full h-full min-h-screen flex flex-col justify-between margin-0 padding-0 bg-dark-bg text-white font-secondary'>
         <div className="w-full flex flex-col">
