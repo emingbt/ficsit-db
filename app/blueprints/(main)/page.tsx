@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Main from "../../../components/Main"
 import Pagination from "../../../components/Pagination"
 import BlueprintContainer from "../../../components/BlueprintContainer"
@@ -7,6 +8,15 @@ import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/server"
 
 import type { Blueprint } from "../../../drizzle/schema"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: 'Blueprints | Ficsit DB',
+  description: `
+    Discover, share, and download the best Satisfactory blueprints!
+    Ficsit DB is your hub for creative factory designs, automation ideas, and community-driven builds.
+    Join and contribute your own blueprints to help others optimize their factories.
+  `
+}
 
 export default async function BlueprintsPage({ searchParams }: {
   searchParams: {
