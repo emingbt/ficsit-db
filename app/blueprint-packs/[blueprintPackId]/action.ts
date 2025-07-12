@@ -5,6 +5,7 @@ import { redirect } from "next/navigation"
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { createOrUpdateBlueprintPackRating, getBlueprintPackRating } from "../../../services/rating"
 import { getPioneerByEmail } from "../../../services/pioneer"
+import { incrementBlueprintDownloads } from "../../../services/blueprint"
 
 export const rateBlueprintPack = async (blueprintPackId: number, pioneerName: string, rating: number) => {
   try {
@@ -46,4 +47,20 @@ export const checkIfRated = async (blueprintPackId: number, pioneerName: string)
   const blueprintPackRating = await getBlueprintPackRating(blueprintPackId, pioneerName)
 
   return blueprintPackRating?.rating
+}
+
+export const incrementDownloads = async (blueprintIds: number[], pioneerName: string) => {
+  try {
+    for (const blueprintId of blueprintIds) {
+      await incrementBlueprintDownloads(blueprintId)
+
+      revalidatePath(`/blueprints/${blueprintId}`)
+    }
+
+    revalidatePath(`/pioneers/${pioneerName}`)
+    revalidatePath('/pioneers')
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to increment the blueprint downloads.')
+  }
 }
