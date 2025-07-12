@@ -59,7 +59,7 @@ export default function BlueprintSelector({ blueprints, blueprintsError, selecte
         ))}
       </div>
       <p className={`text-xs lg:text-base text-gray-400 ${!blueprintsError ? 'mb-4 lg:mb-6' : 'mb-0'}`}>
-        Note: Private blueprints are cannot be selected for packs.
+        Note: Private blueprints cannot be selected for packs.
       </p>
       {
         blueprintsError &&
