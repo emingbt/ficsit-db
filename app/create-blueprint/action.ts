@@ -47,7 +47,9 @@ export default async function createBlueprint(state, formData: FormData) {
   // Check the sizes and extensions of the images and files
   const fileSizeError = files.some((file: File) => file.size > 1000000)
   const fileExtensionError = files.some((file: File, idx: number) => {
-    const ext = file.name.split('.').pop()?.toLowerCase()
+    const ext = file.name.includes('.') && !file.name.startsWith('.')
+      ? file.name.substring(file.name.lastIndexOf('.') + 1).toLowerCase()
+      : undefined
     const mime = file.type
     if (idx === 0 && (ext !== "sbp" || mime !== "application/octet-stream")) return true
     if (idx === 1 && (ext !== "sbpcfg" || mime !== "application/octet-stream")) return true
