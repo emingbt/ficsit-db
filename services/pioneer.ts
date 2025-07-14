@@ -239,8 +239,9 @@ export const getPioneersWithBlueprintStats = cache(async () => {
       })
       .from(Pioneer)
       .innerJoin(Blueprint, eq(Pioneer.name, Blueprint.pioneerName))
-      .groupBy(Pioneer.name, Pioneer.color, Pioneer.avatar)
+      .groupBy(Pioneer.name, Pioneer.color, Pioneer.avatar, Pioneer.createdAt)
       .having(sql`COUNT(${Blueprint.id}) > 0`)
+      .orderBy(desc(Pioneer.createdAt))
 
     return result
   } catch (error) {
