@@ -113,7 +113,7 @@ export const CreateBlueprintFormSchema = object({
     .refine((files) => files?.length == 2, "Both .sbp and .sbpcfg files are required."),
   categories: array(CategoriesEnum)
     .min(1, { message: 'At least one category has to selected.' })
-    .max(3, { message: 'At most 3 categories can be selected.' }),
+    .max(5, { message: 'At most 5 categories can be selected.' }),
   videoUrl: string().trim().transform((val) => (val === "" ? undefined : val))
     .refine((url) => !url || url.startsWith("https://"), {
       message: "Must start with https://",
@@ -139,7 +139,7 @@ export const UpdateBlueprintFormSchema = object({
     .max(3, { message: 'At most 3 images are allowed.' }),
   categories: array(CategoriesEnum)
     .min(1, { message: 'At least one category has to selected.' })
-    .max(3, { message: 'At most 3 categories can be selected.' }),
+    .max(5, { message: 'At most 5 categories can be selected.' }),
   videoUrl: string().trim().transform((val) => (val === "" ? undefined : val))
     .refine((url) => !url || url.startsWith("https://"), {
       message: "Must start with https://",
@@ -230,7 +230,7 @@ export const CreateBlueprintPackFormSchema = object({
     .max(100, { message: 'At most 100 blueprints are allowed.' }),
   categories: array(CategoriesEnum)
     .min(1, { message: 'At least one category has to selected.' })
-    .max(3, { message: 'At most 3 categories can be selected.' }),
+    .max(5, { message: 'At most 5 categories can be selected.' }),
   videoUrl: string().trim().transform((val) => (val === "" ? undefined : val))
     .refine((url) => !url || url.startsWith("https://"), {
       message: "Must start with https://",
@@ -258,7 +258,7 @@ export const UpdateBlueprintPackFormSchema = object({
     .max(100, { message: 'At most 100 blueprints are allowed.' }),
   categories: array(CategoriesEnum)
     .min(1, { message: 'At least one category has to selected.' })
-    .max(3, { message: 'At most 3 categories can be selected.' }),
+    .max(5, { message: 'At most 5 categories can be selected.' }),
   videoUrl: string().trim().transform((val) => (val === "" ? undefined : val))
     .refine((url) => !url || url.startsWith("https://"), {
       message: "Must start with https://",

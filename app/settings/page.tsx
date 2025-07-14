@@ -39,7 +39,7 @@ export default async function SettingsPage() {
 
   return (
     <Main classname="flex flex-col items-stretch bg-dark-bg">
-      <div className="w-full flex flex-1 flex-col lg:flex-row items-stretch gap-2 lg:gap-4 bg-dark-bg mb-2 lg:mb-4">
+      <div className="w-full flex flex-1 flex-col lg:flex-row items-stretch gap-2 lg:gap-4 bg-dark-bg">
         <div className="w-full lg:w-2/5 h-full flex flex-col gap-2 lg:gap-4 bg-dark-bg">
           <ProfileSection pioneer={pioneer} />
           <SocialLinksSection socialLinks={socialLinks} />
@@ -48,7 +48,9 @@ export default async function SettingsPage() {
       </div>
       {
         blueprints?.length > 0 &&
-        <BlueprintContainer entries={blueprints} title="Edit your Blueprints" isEdit />
+        <div className="mt-2 lg:mt-4">
+          <BlueprintContainer entries={blueprints} title="Edit your Blueprints" isEdit />
+        </div>
       }
       {
         blueprintPacks?.length > 0 &&
