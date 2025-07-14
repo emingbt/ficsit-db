@@ -65,7 +65,7 @@ export default function CategoryInput({ error, existingCategories }: { error?: R
                 }
               }}
             />
-            <p className={`text-sm ${selectedCategories.includes(category) ? 'text-light-orange' : 'text-main-gray'}`}>{category}</p>
+            <p className={`text-sm ${selectedCategories.includes(category) ? 'text-light-orange' : 'text-gray-200'}`}>{category}</p>
           </div>
         ))}
       </div>
