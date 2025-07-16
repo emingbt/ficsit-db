@@ -82,7 +82,7 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
           <div className="w-full p-3 lg:p-0 lg:h-20 flex items-center justify-center bg-black text-lg xl:text-2xl text-center text-white font-secondary font-semibold">
             {blueprintPack.title}
           </div>
-          <div className="w-full flex flex-col sm:flex-row justify-between bg-light-bg p-4">
+          <div className="w-full flex flex-col sm:flex-row justify-between bg-light-bg p-4 gap-8">
             <div className="flex flex-col items-start flex-1 gap-4 mb-4 sm:mb-0">
               <Link
                 href={`/pioneers/${blueprintPack.pioneerName}`}
@@ -105,7 +105,7 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
                       href={`/blueprints?category=${category}`}
                       className="text-gray-300 hover:text-logo-blue"
                     >
-                      <div className="flex items-center justify-center px-3 py-2 bg-main-bg">
+                      <div className="flex items-center justify-center px-3 py-1 bg-main-bg rounded">
                         <p className="text-sm font-semibold">{category}</p>
                       </div>
                     </Link>

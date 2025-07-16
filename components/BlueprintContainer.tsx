@@ -125,7 +125,9 @@ export default function BlueprintContainer({ entries, title, filter, isEdit = fa
                   )
                 }
               }) :
-              <p className='text-2xl'>No {type == "blueprint" ? "blueprints" : "blueprint packs"} found</p>
+              <div className='w-full h-full flex items-center justify-center col-span-5'>
+                <p className='text-base lg:text-lg xl:text-xl'>No {type == "blueprint" ? "blueprints" : "blueprint packs"} found</p>
+              </div>
           }
         </section>
       </div>
