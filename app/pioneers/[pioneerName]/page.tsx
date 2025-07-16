@@ -80,7 +80,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
           />
         </div>
         <div className="h-full w-full flex flex-1 flex-col font-medium text-sm lg:text-lg">
-          <div className="w-full h-24 hidden sm:flex items-center justify-center bg-black text-lg xl:text-2xl text-center text-white font-semibold">
+          <div className="w-full h-24 hidden sm:flex items-center justify-center bg-black text-lg sm:text-xl xl:text-2xl text-center text-white font-semibold">
             {pioneer.name}
           </div>
           <div className="w-full h-full sm:h-16 flex items-center justify-between bg-main-bg px-4">

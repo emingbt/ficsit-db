@@ -26,7 +26,7 @@ export default function BlueprintPackCard({ blueprintPack, isEdit }: { blueprint
                 {blueprintPack.title}
               </p>
             </div>
-            <div className="w-full h-3 flex flex-row justify-center items-center gap-1 mb-2">
+            <div className="w-full h-3 flex flex-row justify-center items-center gap-1 mt-3">
               {
                 Array.from({ length: 5 }).map((_, index) => (
                   <StarIcon
@@ -38,7 +38,7 @@ export default function BlueprintPackCard({ blueprintPack, isEdit }: { blueprint
               }
             </div>
             {/* Number of the blueprints in the pack */}
-            <p className="text-sm sm:text-md text-center text-gray-400 mb-2">
+            <p className="text-sm sm:text-md text-center text-gray-400 mt-1">
               {blueprintPack.blueprintCount} blueprints
             </p>
           </div>
