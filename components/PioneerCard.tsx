@@ -21,9 +21,9 @@ export default function PioneerCard({ pioneer }: {
           className={`rounded-full bg-avatar-${pioneer.color}`}
         />
       </div>
-      <h2 className="text-base sm:text-lg font-semibold">{pioneer.name}</h2>
-      {pioneer.blueprints && (<p className="text-sm text-gray-200">Blueprints: {pioneer.blueprints}</p>)}
-      {pioneer.downloads && (<p className="text-sm text-gray-200">Downloads: {pioneer.downloads}</p>)}
+      <h2 className="text-sm sm:text-base lg:text-lg font-semibold">{pioneer.name}</h2>
+      {pioneer.blueprints && (<p className="text-xs sm:text-sm text-gray-200">Blueprints: {pioneer.blueprints}</p>)}
+      {pioneer.downloads && (<p className="text-xs sm:text-sm text-gray-200">Downloads: {pioneer.downloads}</p>)}
     </Link>
   )
 }
