@@ -52,14 +52,16 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
 
   const socialLinks = await getPioneerSocialLinks(pioneer.name)
 
-  const blueprints = (await getAllBlueprintsByPioneer(pioneerName)).filter(blueprint => blueprint.visibility == 'public')
+  const allBlueprints = await getAllBlueprintsByPioneer(pioneerName)
   let blueprintDownloads = 0
 
-  if (blueprints.length > 0) {
-    blueprintDownloads = blueprints.reduce((acc, blueprint) => {
+  if (allBlueprints.length > 0) {
+    blueprintDownloads = allBlueprints.reduce((acc, blueprint) => {
       return acc + blueprint.downloads
     }, 0)
   }
+
+  const blueprints = allBlueprints.filter(blueprint => blueprint.visibility === 'public')
 
   const blueprintPacks = await getAllBlueprintPacksByPioneer(pioneer.name)
 
@@ -68,7 +70,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
       <div className="w-full h-16 bg-black flex sm:hidden items-center justify-center text-lg font-semibold">
         {pioneer.name}
       </div>
-      <div className="w-full h-28 sm:h-48 lg:h-72 flex flex-row mb-2 lg:mb-4">
+      <div className="w-full h-28 sm:h-48 lg:h-72 flex flex-row">
         <div className={`h-full aspect-square relative bg-avatar-${pioneer.color}`}>
           <Image
             src={`/images/avatars/${pioneer.avatar}.png`}
@@ -87,7 +89,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
           </div>
           <div className="w-full h-full sm:h-16 flex items-center justify-between bg-light-bg px-4">
             <p>Blueprints published:</p>
-            <p>{blueprints.length}</p>
+            <p>{allBlueprints.length}</p>
           </div>
           <div className="w-full h-full sm:h-16 flex items-center justify-between bg-main-bg px-4">
             <p>Blueprint downloads:</p>
@@ -103,7 +105,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
       </div>
       {
         socialLinks.length > 0 &&
-        <div className="w-full flex flex-col mb-2 lg:mb-4">
+        <div className="w-full flex flex-col mt-2 lg:mt-4">
           <div className="w-full h-10 sm:h-12 flex items-center justify-between bg-main-bg p-4">
             <h1 className="text-base sm:text-lg font-medium">Social Links</h1>
           </div>
@@ -124,10 +126,15 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
         dataAdFormat="fixed"
         dynamicHeight={false}
       /> */}
-      <BlueprintContainer entries={blueprints} title="Blueprints" />
+      {
+        (blueprints.length > 0 || blueprintPacks.length == 0) &&
+        <div className="mt-2 lg:mt-4 flex flex-grow">
+          <BlueprintContainer entries={blueprints} title="Blueprints" type="blueprint" />
+        </div>
+      }
       {
         blueprintPacks.length > 0 &&
-        <div className="mt-2 lg:mt-4">
+        <div className="mt-2 lg:mt-4 flex flex-grow">
           <BlueprintContainer entries={blueprintPacks} title="Blueprint Packs" type="blueprintPack" />
         </div>
       }
