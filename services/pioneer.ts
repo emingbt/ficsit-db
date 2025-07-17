@@ -91,7 +91,8 @@ export const updatePioneerAvatar = async (email: string, newAvatar: string, newC
     await db.update(Pioneer)
       .set({
         avatar,
-        color
+        color,
+        updatedAt: new Date()
       })
       .where(eq(Pioneer.email, email))
   } catch (error) {
@@ -196,6 +197,11 @@ export const updatePioneerSocialLinks = async (pioneerName: string, socialLinks:
           )
         )
     }
+
+    // Update the pioneer's updatedAt timestamp
+    await db.update(Pioneer)
+      .set({ updatedAt: new Date() })
+      .where(eq(Pioneer.id, pioneer.id))
 
   } catch (error) {
     console.log("Error updating social links for pioneer:", error)
