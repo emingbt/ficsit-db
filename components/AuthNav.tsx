@@ -21,7 +21,12 @@ export default function AuthNavigation() {
 
   // If the store is empty, fetch the pioneer data from the access token
   useEffect(() => {
-    if (!isAuthenticated) return
+    if (!isAuthenticated) {
+      setName('')
+      setAvatar('')
+      setColor('')
+      return
+    }
 
     if ((!name || !avatar || !color)) {
       const accessToken = getAccessToken()
