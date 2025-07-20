@@ -43,6 +43,9 @@ export default function FAQPage() {
           <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
             At that direction, select the folder with the name of your savegame.
           </p>
+          <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
+            For more information check out the <a href="https://satisfactory.wiki.gg/wiki/Blueprint#Save_Location" className="text-main-orange hover:underline">Satisfactory Wiki</a>.
+          </p>
         </div>
 
         <div>
@@ -63,6 +66,9 @@ export default function FAQPage() {
           </p>
           <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
             If you don&apos;t see the blueprints in-game, try restarting the game or reloading the savegame.
+          </p>
+          <p className="mt-2 text-gray-200 text-lg md:text-base sm:text-sm">
+            For more information check out the <a href="https://satisfactory.wiki.gg/wiki/Blueprint#Save_Location" className="text-main-orange hover:underline">Satisfactory Wiki</a>.
           </p>
         </div>
       </div>
