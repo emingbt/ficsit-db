@@ -2,21 +2,21 @@
 
 A comprehensive [Satisfactory](https://www.satisfactorygame.com/) Encyclopedia that helps you while building efficient factory systems. Built by pioneers, for pioneers! 🚧
 
+![banner](https://github.com/user-attachments/assets/d2df094a-e515-4d83-ac4e-4b0440fa6990)
+
+
 ## ✨ Features
 
 - **Complete Item Database**: Browse through all Satisfactory items, buildings, and resources
 - **Recipe Calculator**: Calculate optimal production ratios and resource requirements
 - **Blueprint HUB**: Share your blueprints or find other pioneers' for your factory
-- **Interactive Interface**: User-friendly design for quick access to game information
-
-![banner](https://github.com/user-attachments/assets/d2df094a-e515-4d83-ac4e-4b0440fa6990)
-
+- **Blueprint Packs**: Group your related blueprints in a pack, where pioneers can install all of them with one click
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
+- Node.js (v22 or higher)
 - Yarn package manager
 
 ### Installation
