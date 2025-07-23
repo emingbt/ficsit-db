@@ -62,6 +62,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'WZWYLdWJWsI5eWu-HQJ5TsvmE0sggGnQClIdb2nHoqQ',
+  },
+  other: {
+    'google-adsense-account': 'ca-pub-1772997678438254',
   }
 }
 
@@ -90,6 +93,12 @@ export default function RootLayout({ children }: {
           `}
         </Script>
         <GoogleAdsense /> */}
+        <Script
+          id="google-adsense"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1772997678438254"
+          strategy='afterInteractive'
+          crossOrigin="anonymous"
+        />
         <Script id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
