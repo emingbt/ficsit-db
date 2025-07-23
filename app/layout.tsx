@@ -96,7 +96,7 @@ export default function RootLayout({ children }: {
         <Script
           id="google-adsense"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1772997678438254"
-          strategy='afterInteractive'
+          strategy="afterInteractive"
           crossOrigin="anonymous"
         />
         <Script id="google-analytics">
