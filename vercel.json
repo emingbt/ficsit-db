@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/((?!ads\\.txt$).*)",
+      "source": "/(?!ads\\.txt$)(.*)",
       "has": [
         {
           "type": "host",
