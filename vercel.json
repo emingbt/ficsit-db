@@ -9,7 +9,7 @@
         }
       ],
       "destination": "/ads.txt",
-      "permanent": false
+      "continue": true
     },
     {
       "source": "/(.*)",
