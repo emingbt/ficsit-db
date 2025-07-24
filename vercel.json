@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/ads.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "ficsitdb.com"
+        }
+      ],
+      "destination": "/ads.txt",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "ficsitdb.com"
+        }
+      ],
+      "destination": "https://www.ficsitdb.com/$1",
+      "permanent": true
+    }
+  ]
+}
