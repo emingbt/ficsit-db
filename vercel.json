@@ -1,7 +1,18 @@
 {
   "redirects": [
     {
-      "source": "/((?!ads\\.txt$).*)",
+      "source": "/ads.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "ficsitdb.com"
+        }
+      ],
+      "destination": "/ads.txt",
+      "permanent": false
+    },
+    {
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
