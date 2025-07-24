@@ -1,5 +1,5 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/ads.txt",
       "has": [
@@ -8,9 +8,10 @@
           "value": "ficsitdb.com"
         }
       ],
-      "destination": "/ads.txt",
-      "continue": true
-    },
+      "destination": "/ads.txt"
+    }
+  ],
+  "redirects": [
     {
       "source": "/(.*)",
       "has": [
