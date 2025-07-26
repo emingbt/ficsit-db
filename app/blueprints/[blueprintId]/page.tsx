@@ -249,12 +249,15 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
             </div>
           </div>
         ) : blueprintPacks.length > 0 && (
-          <div className="flex-1 hidden lg:flex items-center justify-center mt-2 lg:mt-4 bg-main-bg w-full lg:basis-2/3">
-            <p className="text-lg text-gray-500 font-bold">🚧 There will be an ad here 🚧 </p>
-          </div>
+          <AdBanner classname="w-full hidden lg:flex lg:basis-1/2 xl:basis-2/3 items-center justify-center mt-2 lg:mt-4"
+            dataAdSlot="9859648886"
+            dataFullWidthResponsive={true}
+            dynamicHeight={false}
+            adPadding={16}
+          />
         )}
         {blueprintPacks.length > 0 && (
-          <div className="flex-1 w-full lg:basis-1/3 flex flex-col mt-2 lg:mt-4">
+          <div className="flex-1 w-full lg:basis-1/2 xl:basis-1/3 flex flex-col mt-2 lg:mt-4">
             <div className="w-full h-10 sm:h-12 flex items-center bg-main-bg p-4">
               <h1 className="text-lg sm:text-xl font-medium">Associated Blueprint Packs</h1>
             </div>
