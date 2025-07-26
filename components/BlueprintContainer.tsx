@@ -101,6 +101,7 @@ export default function BlueprintContainer({ entries, title, filter, isEdit = fa
                       `/${type == "blueprint" ? "blueprints" : "blueprint-packs"}/?category=${category}${selectedSort ? `&sort=${selectedSort}` : ""}`
                       }`}
                     className={`${selectedCategory == category ? "bg-logo-blue text-black" : "bg-light-bg hover:text-logo-blue"} px-3 py-2 text-sm sm:text-base rounded-sm cursor-pointer`}
+                    prefetch={false}
                   >
                     {category}
                   </Link>
