@@ -13,6 +13,7 @@ import { getCommentsByBlueprintId } from "../../../services/comment"
 import BlueprintOwnerSection from "../../../components/BlueprintOwnerSection"
 import { getPioneerByEmail } from "../../../services/pioneer"
 import { redirect } from "next/navigation"
+import AdBanner from "../../../components/AdBanner"
 
 export async function generateMetadata({ params }: { params: { blueprintId: string } }): Promise<Metadata> {
   const blueprintId = parseInt(params.blueprintId)
@@ -205,13 +206,13 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
             </div>
           </div>
         </section>
-        {/* <AdBanner classname="w-full h-14 flex lg:hidden items-center justify-center"
+        <AdBanner classname="w-full h-14 flex lg:hidden items-center justify-center"
           dataAdSlot="6097316089"
           dataFullWidthResponsive={false}
           dataAdFormat="fixed"
           dynamicHeight={false}
           adHeight={50}
-        /> */}
+        />
         <DownloadSection
           blueprintId={blueprintId}
           files={blueprint.files}
@@ -222,7 +223,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
         <ImageCarousel images={blueprint.images} title={blueprint.title} />
         <div className="w-full lg:w-1/3 flex flex-col flex-grow gap-2 lg:gap-4">
           <RateBlueprint blueprintId={blueprintId} blueprintPackIds={blueprintPacks.map(pack => pack.id)} />
-          {/* <AdBanner classname="w-full h-full hidden lg:flex items-center justify-center"
+          <AdBanner classname="w-full h-full hidden lg:flex items-center justify-center"
             dataAdSlot="9859648886"
             dataFullWidthResponsive={true}
             dynamicHeight={false}
@@ -231,10 +232,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
           <AdBanner classname="w-full min-h-64 flex lg:hidden items-center justify-center"
             dataAdSlot="9859648886"
             dataFullWidthResponsive={false}
-          /> */}
-          <div className="w-full h-full hidden lg:flex items-center justify-center bg-main-bg p-4">
-            <p className="text-lg text-gray-500 font-bold">🚧 There will be an ad here 🚧 </p>
-          </div>
+          />
         </div>
       </div>
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4 items-stretch">
@@ -286,6 +284,10 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
         )}
       </div>
       <CommentsSection initialComments={initialComments} blueprintId={blueprintId} />
+      <AdBanner classname="w-full h-64 sm:h-40 flex items-center justify-center mt-2 lg:mt-4"
+        dataAdSlot="7410397750"
+        data-full-width-responsive="true"
+      />
     </Main>
   )
 }

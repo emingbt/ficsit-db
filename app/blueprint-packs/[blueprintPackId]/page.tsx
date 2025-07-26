@@ -11,6 +11,7 @@ import BlueprintContainer from "../../../components/BlueprintContainer"
 import { getAllBlueprintsByBlueprintPackId, getBlueprintPackById } from "../../../services/blueprintPack"
 import BlueprintOwnerSection from "../../../components/BlueprintOwnerSection"
 import DownloadSection from "./downloadSection"
+import AdBanner from "../../../components/AdBanner"
 
 export async function generateMetadata({ params }: { params: { blueprintPackId: string } }): Promise<Metadata> {
   const blueprintPackId = parseInt(params.blueprintPackId)
@@ -149,32 +150,29 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
             </div>
           </div>
         </section>
-        {/* <AdBanner classname="w-full h-14 flex lg:hidden items-center justify-center"
-          dataAdSlot="6097316089"
+        <AdBanner classname="w-full h-14 flex lg:hidden items-center justify-center"
+          dataAdSlot="4581931113"
           dataFullWidthResponsive={false}
           dataAdFormat="fixed"
           dynamicHeight={false}
           adHeight={50}
-        /> */}
+        />
         <DownloadSection blueprintPackId={blueprintPackId} blueprintPackTitle={blueprintPack.title} blueprintsInPack={blueprintsInPack} pioneerName={blueprintPack.pioneerName} />
       </div>
       <div className="w-full flex flex-col lg:flex-row gap-2 lg:gap-4 mb-2 lg:mb-4">
         <ImageCarousel images={blueprintPack.images} title={blueprintPack.title} />
         <div className="w-full lg:w-1/3 flex flex-col flex-grow gap-2 lg:gap-4">
           <RateBlueprint blueprintPackId={blueprintPackId} pioneerName={user?.name} />
-          {/* <AdBanner classname="w-full h-full hidden lg:flex items-center justify-center"
-            dataAdSlot="9859648886"
+          <AdBanner classname="w-full h-full hidden lg:flex items-center justify-center"
+            dataAdSlot="9493963555"
             dataFullWidthResponsive={true}
             dynamicHeight={false}
             adPadding={16}
           />
           <AdBanner classname="w-full min-h-64 flex lg:hidden items-center justify-center"
-            dataAdSlot="9859648886"
+            dataAdSlot="9493963555"
             dataFullWidthResponsive={false}
-          /> */}
-          <div className="w-full h-full hidden lg:flex items-center justify-center bg-main-bg p-4">
-            <p className="text-lg text-gray-500 font-bold">🚧 There will be an ad here 🚧 </p>
-          </div>
+          />
         </div>
       </div>
       <BlueprintContainer entries={blueprintsInPack} title="Blueprints in this pack" />
@@ -194,13 +192,12 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
             </div>
           )
         }
-        {/* <AdBanner classname={`w-full ${blueprint.description && "lg:w-1/3"} min-h-32 hidden lg:flex items-center justify-center bg-main-bg mt-2 lg:mt-4`}
-          dataAdSlot="8546567212"
-          dataFullWidthResponsive={true}
-          adPadding={16}
-        /> */}
       </div>
       {/* <CommentsSection initialComments={initialComments} blueprintId={blueprintId} /> */}
+      <AdBanner classname="w-full h-64 sm:h-40 flex items-center justify-center mt-2 lg:mt-4"
+        dataAdSlot="4898126898"
+        data-full-width-responsive="true"
+      />
     </Main>
   )
 }
