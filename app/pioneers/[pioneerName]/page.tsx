@@ -7,6 +7,7 @@ import BlueprintContainer from "../../../components/BlueprintContainer"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 import { getAllBlueprintPacksByPioneer } from "../../../services/blueprintPack"
+import AdBanner from "../../../components/AdBanner"
 
 const allPlatforms = [
   { slug: 'youtube', name: 'YouTube' },
@@ -76,6 +77,7 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
             src={`/images/avatars/${pioneer.avatar}.png`}
             alt={pioneer?.name}
             fill
+            sizes="100%"
             priority
           />
         </div>
@@ -96,12 +98,12 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
             <p>{blueprintDownloads}</p>
           </div>
         </div>
-        {/* <AdBanner classname="h-full w-[336px] 3xl:w-[768px] hidden lg:flex items-center justify-center ml-4"
+        <AdBanner classname="h-full w-[336px] 3xl:w-[768px] hidden xl:flex items-center justify-center ml-4"
           dataAdSlot="3904614625"
           dataFullWidthResponsive={false}
           adHeight={280}
           adPadding={4}
-        /> */}
+        />
       </div>
       {
         socialLinks.length > 0 &&
@@ -120,12 +122,12 @@ export default async function PioneerPage({ params }: { params: { pioneerName: s
           </div>
         </div>
       }
-      {/* <AdBanner classname="w-full h-[50px] sm:h-[90px] flex lg:hidden items-center justify-center mb-2"
+      <AdBanner classname="w-full h-[50px] sm:h-[90px] flex lg:hidden items-center justify-center mt-2"
         dataAdSlot="3904614625"
         dataFullWidthResponsive={false}
         dataAdFormat="fixed"
         dynamicHeight={false}
-      /> */}
+      />
       {
         (blueprints.length > 0 || blueprintPacks.length == 0) &&
         <div className="mt-2 lg:mt-4 flex flex-grow">
