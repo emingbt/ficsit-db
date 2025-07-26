@@ -4,7 +4,6 @@ import Script from 'next/script'
 import { Inter, Roboto } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
-import GoogleAdsense from '../utils/googleAdsense'
 import './global.css'
 
 import Header from '../components/Header'
@@ -74,25 +73,6 @@ export default function RootLayout({ children }: {
   return (
     <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
       <head>
-        {/* <Script src="https://www.googletagmanager.com/gtag/js?id=G-JSTXP7VT57"
-          strategy='afterInteractive' />
-        <Script id="consent-default" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('consent', 'default', {
-              'ad_storage': 'denied',
-              'analytics_storage': 'denied'
-            });
-          `}
-        </Script>
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            gtag('js', new Date());
-            gtag('config', 'G-JSTXP7VT57');
-          `}
-        </Script>
-        <GoogleAdsense /> */}
         <Script
           id="google-adsense"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1772997678438254"
