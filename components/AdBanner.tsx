@@ -1,7 +1,6 @@
 "use client"
 
-// COMMENTED OUT UNTIL ADSENSE IS APPROVED
-// import { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 type AdBannerProps = {
   classname: string
@@ -13,27 +12,33 @@ type AdBannerProps = {
   dataFullWidthResponsive?: boolean
 }
 
+declare global {
+  interface Window {
+    adsbygoogle: any[]
+  }
+}
+
 export default function AdBanner({ classname, dataAdSlot, dynamicHeight = true, adHeight, adPadding, dataFullWidthResponsive = false, dataAdFormat = "auto", }: AdBannerProps) {
-  // const [adsLoaded, setAdsLoaded] = useState(false)
+  const [adsLoaded, setAdsLoaded] = useState(false)
 
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     window.adsbygoogle = window.adsbygoogle || { push: () => { } }
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.adsbygoogle !== "undefined") {
+      window.adsbygoogle = window.adsbygoogle || []
 
-  //     if (!adsLoaded) {
-  //       try {
-  //         window.adsbygoogle.push({})
-  //         setAdsLoaded(true)
-  //       } catch (error: any) {
-  //         console.error("AdSense Error:", error.message)
-  //       }
-  //     }
-  //   }
-  // }, [adsLoaded])
+      if (!adsLoaded) {
+        try {
+          window.adsbygoogle.push({})
+          setAdsLoaded(true)
+        } catch (error: any) {
+          console.error("AdSense Error:", error.message)
+        }
+      }
+    }
+  }, [adsLoaded])
 
   return (
     <div className={`${classname} relative bg-main-bg text-gray-600 text-lg lg:text-xl font-semibold`}>
-      {/* {
+      {
         dynamicHeight ? (
           <div className="w-full h-full flex justify-center items-center z-10 overflow-hidden">
             <ins
@@ -75,7 +80,7 @@ export default function AdBanner({ classname, dataAdSlot, dynamicHeight = true, 
             ></ins>
           </div>
         )
-      } */}
+      }
       <div className="absolute w-full h-full flex items-center justify-center">
         Ad
       </div>

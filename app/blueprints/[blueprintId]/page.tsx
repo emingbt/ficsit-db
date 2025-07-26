@@ -6,7 +6,6 @@ import DownloadSection from "./downloadSection"
 import ImageCarousel from "../../../components/ImageCarousel"
 import { getBlueprintById, getBlueprintPacksByBlueprintId } from "../../../services/blueprint"
 import { getKindeServerSession, LoginLink } from "@kinde-oss/kinde-auth-nextjs/server"
-import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
 import { ExternalLink, Star } from "lucide-react"
 import CommentsSection from "./commentsSection"
@@ -154,6 +153,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
                       key={index}
                       href={`/blueprints?category=${category}`}
                       className="text-gray-300 hover:text-logo-blue"
+                      prefetch={false}
                     >
                       <div className="flex items-center justify-center px-3 py-1 bg-main-bg rounded">
                         <p className="text-sm font-semibold">{category}</p>
@@ -266,6 +266,7 @@ export default async function BlueprintPage({ params }: { params: { blueprintId:
                   key={index}
                   href={`/blueprint-packs/${pack.id}`}
                   className="w-full flex items-center gap-2 p-2 bg-main-bg hover:bg-dark-bg rounded-md"
+                  prefetch={false}
                 >
                   <div className="w-[128px] h-[72px] aspect-[16/9] relative rounded-md overflow-hidden flex-shrink-0">
                     <Image

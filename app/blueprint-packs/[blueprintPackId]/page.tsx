@@ -8,7 +8,6 @@ import { getPropertiesFromAccessToken } from "../../../utils/kinde"
 import Main from "../../../components/Main"
 import { ExternalLink, Star } from "lucide-react"
 import BlueprintContainer from "../../../components/BlueprintContainer"
-import FicsitTips from "../../../components/FicsitTips"
 import { getAllBlueprintsByBlueprintPackId, getBlueprintPackById } from "../../../services/blueprintPack"
 import BlueprintOwnerSection from "../../../components/BlueprintOwnerSection"
 import DownloadSection from "./downloadSection"
@@ -104,6 +103,7 @@ export default async function BlueprintPackPage({ params }: { params: { blueprin
                       key={index}
                       href={`/blueprints?category=${category}`}
                       className="text-gray-300 hover:text-logo-blue"
+                      prefetch={false}
                     >
                       <div className="flex items-center justify-center px-3 py-1 bg-main-bg rounded">
                         <p className="text-sm font-semibold">{category}</p>
