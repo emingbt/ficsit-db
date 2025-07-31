@@ -1,7 +1,7 @@
 import 'server-only'
 
 import db from '../utils/postgres'
-import { and, desc, eq, sql } from 'drizzle-orm'
+import { and, desc, eq, ne, sql } from 'drizzle-orm'
 import { cache } from 'react'
 import { Blueprint, Pioneer, SocialLink } from '../drizzle/schema'
 import { CreatePioneerFormSchema, UpdateAvatarFormSchema } from '../utils/zod'
@@ -244,7 +244,10 @@ export const getPioneersWithBlueprintStats = cache(async () => {
         downloads: sql<number>`SUM(${Blueprint.downloads})`.as('downloads')
       })
       .from(Pioneer)
-      .innerJoin(Blueprint, eq(Pioneer.name, Blueprint.pioneerName))
+      .innerJoin(Blueprint, and(
+        eq(Pioneer.name, Blueprint.pioneerName),
+        ne(Blueprint.visibility, 'private')
+      ))
       .groupBy(Pioneer.name, Pioneer.color, Pioneer.avatar, Pioneer.createdAt)
       .having(sql`COUNT(${Blueprint.id}) > 0`)
       .orderBy(desc(Pioneer.createdAt))
