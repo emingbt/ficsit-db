@@ -7,7 +7,7 @@ export default function BuildingCategories({ selectedCategory = undefined }: { s
     'Production',
     'Power',
     'Logistics',
-    'Organisation',
+    'Organization',
     'Transportation',
     'Foundations',
     'Walls',
