@@ -306,9 +306,14 @@ export const getPageCountAndBlueprintPacksByPage = async (
 ) => {
   const offset = (page - 1) * blueprintPacksPerPage
 
-  if (page < 1) {
+  if (page < 1) { // Early return for invalid page numbers
     return {
       pageCount: 0,
+      blueprintPacks: []
+    }
+  } else if (page > 10) { // Early return for the bots. WILL BE REMOVED
+    return {
+      pageCount: 10,
       blueprintPacks: []
     }
   }
